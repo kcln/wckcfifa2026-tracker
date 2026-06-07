@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>World Cup 2026 Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,400;1,700;1,900&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Brand tokens inline so the page renders on-brand even if style.css
+       fails to load. Page background is always warm cream. */
+    :root {
+      --bg: #F5F1EB; --bg-card: #FFFFFF; --crimson: #E0001C;
+      --indigo: #1E40AF; --teal: #0F766E; --amber: #B45309; --rose: #BE185D;
+      --text: #0F0F0F; --text-muted: rgba(15,15,15,0.65);
+      --text-faint: rgba(15,15,15,0.40);
+      --shadow: 4px 4px 0 0 var(--text);
+      --shadow-crimson: 4px 4px 0 0 var(--crimson);
+      --font-hero: 'Playfair Display', serif;
+      --font-body: 'Inter', sans-serif;
+      --font-label: 'JetBrains Mono', monospace;
+    }
+    body { background: #F5F1EB; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">FIFA World Cup 2026 — Live Tracker</p>
+      <h1 class="hero-title">World <em>Cup</em> 2026 Tracker</h1>
+      <p class="hero-desc">Daily predictions, results, and title odds — machine-modelled, rebuilt every matchday.</p>
+    </header>
+
+    <h2 class="section-label">Title odds — top contenders</h2>
+    <div class="chips">
+      <span class="chip c-indigo"><span class="chip-team">Spain</span><span class="chip-pct">27.1%</span></span>
+      <span class="chip c-teal"><span class="chip-team">Argentina</span><span class="chip-pct">18.9%</span></span>
+      <span class="chip c-amber"><span class="chip-team">France</span><span class="chip-pct">11.5%</span></span>
+      <span class="chip c-rose"><span class="chip-team">England</span><span class="chip-pct">7.0%</span></span>
+      <span class="chip c-indigo"><span class="chip-team">Brazil</span><span class="chip-pct">4.8%</span></span>
+      <span class="chip c-teal"><span class="chip-team">Portugal</span><span class="chip-pct">4.7%</span></span>
+      <span class="chip c-amber"><span class="chip-team">Colombia</span><span class="chip-pct">4.3%</span></span>
+      <span class="chip c-rose"><span class="chip-team">Netherlands</span><span class="chip-pct">2.6%</span></span>
+      <span class="chip c-indigo"><span class="chip-team">Germany</span><span class="chip-pct">2.3%</span></span>
+      <span class="chip c-teal"><span class="chip-team">Ecuador</span><span class="chip-pct">2.1%</span></span>
+    </div>
+
+    <h2 class="section-label">Matchday log</h2>
+    <p class="empty">No matchdays recorded yet.</p>
+
+    <footer class="footer">Rebuilt automatically from state.json on every tracker run. FIFA World Cup 2026 Tracker.</footer>
+  </main>
+</body>
+</html>
