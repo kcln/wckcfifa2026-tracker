@@ -4,3 +4,8 @@ __pycache__/
 venv/
 .venv/
 .env
+
+# ml engine (isolated venv + large raw dataset; models are committed)
+ml/.venv/
+ml/data/historical/*
+!ml/data/historical/.gitkeep
