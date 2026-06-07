@@ -1,0 +1,20 @@
+{
+  "n_rows": 49365,
+  "n_train": 39492,
+  "n_val": 9873,
+  "classes": [
+    "away",
+    "draw",
+    "home"
+  ],
+  "features": [
+    "elo_diff",
+    "form_home",
+    "form_away",
+    "neutral"
+  ],
+  "val_accuracy": 0.5969816671730983,
+  "val_logloss": 0.8834459887239066,
+  "trained_through": "2026-06-06T00:00:00",
+  "model_type": "lightgbm-multiclass+isotonic"
+}
