@@ -1,17 +1,41 @@
-"""Bridge to the ml/ engine. Every public fn catches all and returns None on
-failure so the live tracker never depends on ML for correctness (v1: always None
-because ml/ does not exist yet; activated in a later task)."""
+"""Bridge to the ml/ engine. Reads precomputed win/draw/loss probabilities from
+ml/data/models/predictions.json using the standard library only (no sklearn /
+lightgbm in the live runtime). Every public fn catches all and returns None on
+failure so the live tracker silently degrades to the Elo fallback and is never
+broken by a missing/corrupt predictions file or an unknown team pairing."""
 from __future__ import annotations
 
+import json
+from pathlib import Path
 
-def predict_match(home: str, away: str) -> dict | None:
+PREDICTIONS_PATH = Path(__file__).resolve().parents[1] / "ml" / "data" / "models" / "predictions.json"
+
+# Module-level cache of loaded prediction files, keyed by resolved path string.
+# Caches the FILE load (not per-pair results) so the bracket Monte Carlo does
+# not re-read disk on every match lookup.
+_CACHE: dict[str, dict] = {}
+
+
+def _load(predictions_path: Path) -> dict:
+    key = str(Path(predictions_path).resolve())
+    cached = _CACHE.get(key)
+    if cached is None:
+        with open(predictions_path, encoding="utf-8") as fh:
+            cached = json.load(fh)
+        _CACHE[key] = cached
+    return cached
+
+
+def predict_match(home: str, away: str, predictions_path: Path | None = None) -> dict | None:
+    """Return {'home','draw','away'} probs for the pairing, or None on any failure
+    (missing file, bad json, unknown pairing). predictions_path is injectable;
+    when omitted it reads the module-level PREDICTIONS_PATH at call time so tests
+    can monkeypatch it."""
     try:
-        import sys, pathlib
-        root = pathlib.Path(__file__).resolve().parents[1]
-        if str(root) not in sys.path:
-            sys.path.insert(0, str(root))
-        from ml.src.predict import predict_wdl   # exists only after the ML engine is built
-        return predict_wdl(home, away)
+        if predictions_path is None:
+            predictions_path = PREDICTIONS_PATH
+        data = _load(predictions_path)
+        return data[f"{home}|{away}"]
     except Exception:
         return None
 
