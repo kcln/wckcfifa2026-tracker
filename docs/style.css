@@ -1,0 +1,189 @@
+/* KCL Editorial x Bauhaus — World Cup 2026 Tracker archive */
+
+:root {
+  --bg: #F5F1EB;
+  --bg-card: #FFFFFF;
+  --crimson: #E0001C;
+  --indigo: #1E40AF;
+  --teal: #0F766E;
+  --amber: #B45309;
+  --rose: #BE185D;
+  --text: #0F0F0F;
+  --text-muted: rgba(15, 15, 15, 0.65);
+  --text-faint: rgba(15, 15, 15, 0.40);
+  --shadow: 4px 4px 0 0 var(--text);
+  --shadow-crimson: 4px 4px 0 0 var(--crimson);
+  --font-hero: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-label: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+/* ---------- Hero ---------- */
+
+.eyebrow {
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--crimson);
+  margin: 0 0 16px;
+}
+
+.hero-title {
+  font-family: var(--font-hero);
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(40px, 8vw, 72px);
+  line-height: 1.05;
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+}
+
+.hero-title em {
+  font-style: italic;
+  font-weight: 900;
+  color: var(--crimson);
+}
+
+.hero-desc {
+  font-size: 18px;
+  color: var(--text-muted);
+  max-width: 56ch;
+  margin: 0;
+}
+
+/* ---------- Section labels ---------- */
+
+.section-label {
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 64px 0 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--crimson);
+}
+
+/* ---------- Title odds chips ---------- */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 2px solid var(--text);
+  box-shadow: var(--shadow);
+  background: var(--indigo);
+  color: #FFFFFF;
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.chip .chip-team {
+  font-weight: 500;
+}
+
+.chip .chip-pct {
+  font-weight: 500;
+  opacity: 0.92;
+}
+
+.chip.c-indigo { background: var(--indigo); color: #FFFFFF; }
+.chip.c-teal   { background: var(--teal);   color: #FFFFFF; }
+.chip.c-amber  { background: var(--amber);  color: #FFFFFF; }
+.chip.c-rose   { background: var(--rose);   color: #FFFFFF; }
+
+/* ---------- Day cards ---------- */
+
+.day-card {
+  background: var(--bg-card);
+  border: 2px solid var(--text);
+  box-shadow: var(--shadow);
+  padding: 24px 28px;
+  margin: 0 0 28px;
+}
+
+.day-date {
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--crimson);
+  margin: 0 0 16px;
+}
+
+.day-msg {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.day-msg:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.empty {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  margin-top: 80px;
+  padding-top: 24px;
+  border-top: 2px solid var(--text);
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+@media (max-width: 600px) {
+  .container { padding: 32px 18px 72px; }
+  body { font-size: 16px; }
+}
