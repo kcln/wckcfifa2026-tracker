@@ -1,6 +1,6 @@
 # SESSION_NOTES — wckcfifa2026-tracker
 
-_Last updated: 2026-06-06_
+_Last updated: 2026-06-09_
 
 ## What this is
 A cloud-scheduled tracker for the 2026 FIFA World Cup (Jun 11 – Jul 19). Every 15 min on
@@ -9,7 +9,14 @@ bracket + title odds (Monte Carlo), pushes briefs to Telegram, and rebuilds a Ba
 GitHub Pages archive. Port of ipl-tracker; scheduler moved from launchd to GitHub Actions
 so it needs no local machine.
 
-## Status: BUILD COMPLETE (v1 + v2), merged to `main`. Not yet deployed.
+## Status: LIVE since 2026-06-09. Repo `kcln/wckcfifa2026-tracker`, Pages + Actions cron active.
+- Pages: https://kcln.github.io/wckcfifa2026-tracker/ (HTTP 200, renders).
+- Secrets set: `TELEGRAM_BOT_TOKEN` (reused IPL bot), `TELEGRAM_CHAT_IDS` = KC only (391401564).
+  Ankit (8954471490) intentionally NOT added — KC's call later; update the secret to add him.
+- First manual workflow run 2026-06-10T01:59Z: success, exit 0, results commit pushed.
+- `FOOTBALL_DATA_KEY` not set (optional tier).
+- Go-live snags: gh token needed `workflow` scope (`gh auth refresh -s workflow`), and
+  secrets had to be set by KC directly (permission classifier blocked Claude).
 - 80 tests passing: `./venv/bin/pytest -q` (67 live) and `ml/.venv/bin/python -m pytest ml/tests -q` (13 ml).
 - 24 task commits on `main`. Branches `build-v1`, `ml-engine` are ff-merged (safe to delete).
 
@@ -32,13 +39,10 @@ so it needs no local machine.
   would never have reconciled).
 - v1 simplification: third-place→R32 knockout assignment is approximate (group winners/runners-up exact).
 
-## NEXT — go live (needs KCL's GitHub auth + Telegram bot; cannot be done by Claude)
-1. `gh repo create kcln/wckcfifa2026-tracker --public --source=. --remote=origin --push`
-2. Repo Settings → Pages → source = `main` branch, folder = `/docs`.
-3. Repo Settings → Secrets and variables → Actions → add `TELEGRAM_BOT_TOKEN`,
-   `TELEGRAM_CHAT_IDS` (comma-separated), optional `FOOTBALL_DATA_KEY`.
-4. Actions tab → wc2026-tracker → Run workflow (or wait for the 15-min cron).
-5. Verify the Pages URL renders and a Telegram message arrives.
+## NEXT
+- Confirm a Telegram brief lands on KC's phone once the tournament starts (Jun 11).
+- Optional: add Ankit's chat ID, set `FOOTBALL_DATA_KEY`, bump actions to Node 24
+  (GitHub deprecation warning on checkout@v4 / setup-python@v5, forced June 16, 2026).
 
 ## Retrain the model later
 `ml/.venv/bin/python -m ml.src.train` then `ml/.venv/bin/python -m ml.src.predict`
