@@ -39,6 +39,17 @@ so it needs no local machine.
   would never have reconciled).
 - v1 simplification: third-place→R32 knockout assignment is approximate (group winners/runners-up exact).
 
+## Design (2026-06-09, post go-live)
+KC rejected the original Bauhaus archive page — the Pages site must replicate the
+**ipl-tracker committed design exactly**: purple "Every match. Every prediction."
+hero, most-recent + leader cards, collapsible match-day log, Telegram CTA
+(@Kipl26bot — NO sign-up form; the form was replaced by the Telegram CTA in IPL's
+committed page), lion mark, local-time script. `src/html_archive.py` now embeds
+IPL's committed inline CSS/script verbatim; data bindings adapted to soccer.
+Tracker stores `state["last_result"]` for the hero card. `docs/style.css` is now
+unused (page inlines all CSS, like IPL) but left in place.
+NOTE: do NOT apply the KCL Bauhaus brand to this site — explicit KC override.
+
 ## NEXT
 - Confirm a Telegram brief lands on KC's phone once the tournament starts (Jun 11).
 - Optional: add Ankit's chat ID, set `FOOTBALL_DATA_KEY`, bump actions to Node 24
