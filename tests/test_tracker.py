@@ -72,7 +72,7 @@ def test_idempotent_no_duplicate_messages(tmp_path):
     assert len(hashes) == len(set(hashes))
 
 
-def test_send_newest_skips_older(tmp_path):
+def test_send_flushes_all_pending_oldest_first(tmp_path):
     # First run on day 1 (no results) -> morning brief is delivered.
     sent = []
     sender = lambda text, **k: sent.append(text) or True
@@ -80,20 +80,74 @@ def test_send_newest_skips_older(tmp_path):
     tracker.run(cfg1)
     assert len(sent) == 1  # morning brief delivered
 
-    # Now both matches finish -> several new messages queued (post_match, recap).
-    # Only the single newest should be delivered; the rest marked sent (skipped).
+    # Now both matches finish -> several new messages queued (post_match x2,
+    # recap). EVERY pending message must be delivered — no skips.
     fetch = lambda: {
         "1": {"home_goals": 2, "away_goals": 0, "status": "FT"},
         "2": {"home_goals": 1, "away_goals": 1, "status": "FT"},
     }
     cfg2 = _base_cfg(tmp_path, fetch=fetch, sender=sender)
     tracker.run(cfg2)
-    assert len(sent) == 2  # exactly one more send across the whole run
 
     saved = json.loads((tmp_path / "state.json").read_text())
     day = next(d for d in saved["days"] if d["date"] == "2026-06-11")
-    # every queued message is now marked sent (newest delivered, older skipped)
     assert all(m["sent"] for m in day["messages"])
+    # one send per queued message: brief + 2 results + recap
+    assert len(sent) == len(day["messages"])
+    # oldest first: the morning brief went out before the recap
+    assert sent.index(next(s for s in sent if "Matchday Brief" in s)) \
+        < sent.index(next(s for s in sent if "Daily Recap" in s))
+
+
+def test_send_failure_midway_keeps_rest_pending(tmp_path):
+    # Queue several messages, then fail on the second send: the first is
+    # delivered, everything from the failure on stays unsent for retry.
+    fetch = lambda: {
+        "1": {"home_goals": 2, "away_goals": 0, "status": "FT"},
+        "2": {"home_goals": 1, "away_goals": 1, "status": "FT"},
+    }
+    calls = []
+    sender = lambda text, **k: calls.append(text) or (len(calls) == 1)
+    cfg = _base_cfg(tmp_path, fetch=fetch, sender=sender)
+    code = tracker.run(cfg)
+    assert code == 2
+    assert len(calls) == 2  # stopped at first failure
+
+    saved = json.loads((tmp_path / "state.json").read_text())
+    day = next(d for d in saved["days"] if d["date"] == "2026-06-11")
+    assert sum(1 for m in day["messages"] if m["sent"]) == 1
+    assert sum(1 for m in day["messages"] if not m["sent"]) >= 2
+
+    # Next run with a healthy sender delivers the rest exactly once.
+    sent2 = []
+    cfg2 = _base_cfg(tmp_path, fetch=fetch,
+                     sender=lambda text, **k: sent2.append(text) or True)
+    assert tracker.run(cfg2) == 0
+    saved = json.loads((tmp_path / "state.json").read_text())
+    day = next(d for d in saved["days"] if d["date"] == "2026-06-11")
+    assert all(m["sent"] for m in day["messages"])
+
+
+def test_half_time_message_sent_and_deduped(tmp_path):
+    # Match 1 is at the break: a half-time update goes out once, with the
+    # frozen score, and repeat sightings across runs do not duplicate it.
+    sent = []
+    fetch = lambda: {"1": {"home_goals": 1, "away_goals": 0, "status": "HT"}}
+    cfg = _base_cfg(tmp_path, fetch=fetch,
+                    sender=lambda text, **k: sent.append(text) or True)
+    tracker.run(cfg)
+    tracker.run(cfg)  # break lasts several ticks — must not resend
+
+    ht = [s for s in sent if s.startswith("Half-time:")]
+    assert len(ht) == 1
+    assert "1-0" in ht[0]
+
+    saved = json.loads((tmp_path / "state.json").read_text())
+    day = next(d for d in saved["days"] if d["date"] == "2026-06-11")
+    types = [m["type"] for m in day["messages"]]
+    assert types.count("half_time") == 1
+    # an HT score must never be recorded as a final result
+    assert not any(m["type"] == "post_match" for m in day["messages"])
 
 
 def test_send_skipped_when_no_token(tmp_path):

@@ -102,6 +102,18 @@ def morning_brief(date_iso: str, matches: list[dict]) -> str:
     return "\n".join(lines)
 
 
+def half_time(match: dict, home_goals: int, away_goals: int) -> str:
+    """
+    Half-time score update for a live match, with the pre-match pick for
+    context (predictions are not re-run mid-match).
+    """
+    pick = _pick_label(match)
+    return (
+        f"Half-time: {match['home']} {home_goals}-{away_goals} {match['away']}\n"
+        f"Prediction: {pick}"
+    )
+
+
 def post_match(match: dict) -> str:
     """
     Single post-match result summary.

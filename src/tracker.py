@@ -217,12 +217,19 @@ def _latest_result(merged: dict) -> dict | None:
     }
 
 
-def _due_messages(stateobj: dict, merged: dict, match_prob, now_iso: str) -> None:
+def _due_messages(stateobj: dict, merged: dict, match_prob, now_iso: str,
+                  live: dict | None = None) -> None:
     """Compute and append all messages that are due for `now_iso` (deduped).
 
     Order of appends matters: morning_brief, then per-match post_match, then
-    daily_recap, then bracket_update, then (terminal) champion_recap. The newest
-    message is the last appended one in the latest day.
+    half_time (live matches at the break), then daily_recap, then
+    bracket_update, then (terminal) champion_recap. The newest message is the
+    last appended one in the latest day.
+
+    `live` is the reconciled feed {seed_id: {home_goals, away_goals, status}};
+    entries with status "HT" drive half-time updates. Half-time bodies embed
+    the frozen break score, so the (type, date, body) hash dedupes repeat
+    sightings of the same break across runs.
     """
     existing = _all_hashes(stateobj)
     todays = _matches_on(merged, now_iso)
@@ -245,6 +252,15 @@ def _due_messages(stateobj: dict, merged: dict, match_prob, now_iso: str) -> Non
             if mp.get("result"):
                 body = message_builder.post_match(mp)
                 _add_message(day, existing, "post_match", now_iso, body)
+
+        # 2.5) Half-time — per live match currently at the break.
+        for mp in todays_pred:
+            entry = (live or {}).get(mp.get("id"))
+            if (entry and entry.get("status") == "HT"
+                    and not mp.get("result")):
+                body = message_builder.half_time(
+                    mp, entry["home_goals"], entry["away_goals"])
+                _add_message(day, existing, "half_time", now_iso, body)
 
         # 3) Daily recap — once all of today's matches have results.
         if all(m.get("result") for m in todays):
@@ -291,7 +307,7 @@ def _champion_name(final_match: dict) -> str | None:
 
 
 # ---------------------------------------------------------------------------
-# Send newest, skip older
+# Send all pending (oldest first) — no skips
 # ---------------------------------------------------------------------------
 
 def _undelivered(stateobj: dict) -> list:
@@ -308,12 +324,14 @@ def _undelivered(stateobj: dict) -> list:
     return items
 
 
-def _send_newest(stateobj: dict, cfg: Config) -> int | None:
-    """Deliver only the newest undelivered message; mark older ones skipped.
+def _send_pending(stateobj: dict, cfg: Config) -> int | None:
+    """Deliver every undelivered message, oldest first — nothing is skipped.
 
-    Returns None if nothing was attempted (no pending messages, or sending is
-    skipped because token/chat_ids are empty). Returns 0 on a successful send,
-    2 if the send was attempted and failed.
+    Each message is marked sent as it is delivered. On the first failure we
+    stop and return 2; the failed message and anything after it stay unsent
+    and are retried on the next run. Returns None if nothing was attempted
+    (no pending messages, or token/chat_ids are empty), 0 if every pending
+    message was delivered.
     """
     pending = _undelivered(stateobj)
     if not pending:
@@ -323,13 +341,10 @@ def _send_newest(stateobj: dict, cfg: Config) -> int | None:
         # Sending disabled: leave messages unsent (not an error, not delivered).
         return None
 
-    newest = pending[-1]
-    ok = cfg.sender(newest["body"], token=cfg.token, chat_ids=cfg.chat_ids)
-    if not ok:
-        return 2
-
-    # Mark the delivered one and every older pending one as sent (stale-skip).
     for m in pending:
+        ok = cfg.sender(m["body"], token=cfg.token, chat_ids=cfg.chat_ids)
+        if not ok:
+            return 2
         m["sent"] = True
     return 0
 
@@ -352,7 +367,7 @@ def run(cfg: Config) -> int:
         match_prob = _build_match_prob(merged)
 
         # Compute and append all due messages for today (idempotent).
-        _due_messages(stateobj, merged, match_prob, cfg.now_iso)
+        _due_messages(stateobj, merged, match_prob, cfg.now_iso, live=live)
 
         # Recompute bracket + group state.
         try:
@@ -379,8 +394,8 @@ def run(cfg: Config) -> int:
             pass
         state.save(cfg.state_path, stateobj)
 
-        # Send newest undelivered; skip older.
-        send_code = _send_newest(stateobj, cfg)
+        # Send everything still undelivered, oldest first.
+        send_code = _send_pending(stateobj, cfg)
         state.save(cfg.state_path, stateobj)
 
         if send_code == 2:

@@ -1,7 +1,7 @@
 name: wc2026-tracker
 on:
   schedule:
-    - cron: "*/15 * * * *"   # every 15 min (UTC); tournament window Jun 11 - Jul 19 2026
+    - cron: "*/5 * * * *"   # every 5 min (UTC, best-effort); tournament window Jun 11 - Jul 19 2026
   workflow_dispatch: {}
 permissions:
   contents: write

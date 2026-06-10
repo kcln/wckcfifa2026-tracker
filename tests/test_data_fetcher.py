@@ -34,3 +34,23 @@ def test_fetch_results_writes_cache_on_success(tmp_path):
     good = {"1": {"home_goals": 1, "away_goals": 1, "status": "FT"}}
     out = df.fetch_results(sources=[lambda: good], cache_path=cache)
     assert out == good and cache.exists()
+
+
+def test_parse_espn_emits_half_time_scores():
+    sample = {"events": [{"id": "403", "date": "2026-06-11T19:00Z",
+        "status": {"type": {"completed": False, "name": "STATUS_HALFTIME"}},
+        "competitions": [{"competitors": [
+            {"homeAway": "home", "score": "1", "team": {"displayName": "Mexico"}},
+            {"homeAway": "away", "score": "0", "team": {"displayName": "South Africa"}}]}]}]}
+    out = df.parse_espn(sample)
+    assert out["403"]["status"] == "HT"
+    assert out["403"]["home_goals"] == 1 and out["403"]["away_goals"] == 0
+
+
+def test_parse_espn_still_skips_first_half_in_progress():
+    sample = {"events": [{"id": "404", "date": "2026-06-11T19:00Z",
+        "status": {"type": {"completed": False, "name": "STATUS_FIRST_HALF"}},
+        "competitions": [{"competitors": [
+            {"homeAway": "home", "score": "1", "team": {"displayName": "USA"}},
+            {"homeAway": "away", "score": "0", "team": {"displayName": "Canada"}}]}]}]}
+    assert df.parse_espn(sample) == {}

@@ -173,3 +173,11 @@ def test_champion_recap_is_celebratory():
     text = mb.champion_recap("Brazil")
     # Should be non-empty and feel like a closing message
     assert len(text) > 10
+
+
+def test_half_time_shows_score_and_pick():
+    match = {"home": "Mexico", "away": "South Africa",
+             "prediction": {"home": 0.52, "draw": 0.26, "away": 0.22}}
+    body = mb.half_time(match, 1, 0)
+    assert body.startswith("Half-time: Mexico 1-0 South Africa")
+    assert "Prediction: Mexico" in body

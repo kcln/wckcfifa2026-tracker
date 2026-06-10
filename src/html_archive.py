@@ -28,6 +28,7 @@ TOURNAMENT_DAYS = 39  # Jun 11 – Jul 19, 2026
 _TAGS = {
     "morning_brief":  ("morning", "Morning brief"),
     "post_match":     ("result",  "Match result"),
+    "half_time":      ("phase",   "Half-time"),
     "daily_recap":    ("recap",   "Day recap"),
     "bracket_update": ("phase",   "Bracket update"),
     "champion_recap": ("recap",   "Champion recap"),
@@ -366,7 +367,7 @@ SHELL = r"""<!DOCTYPE html>
 <div class="signup-pitch-inner">
 <div class="kicker">Get the messages</div>
 <h2>Match-day updates, on Telegram.</h2>
-<p>Predictions before kickoff. Results as they finish. Final recap at night.</p>
+<p>Predictions before kickoff. Half-time score at the break. Results as they finish, recap at night.</p>
 <div class="stats">
 <div><strong>~7</strong>messages / match day</div>
 <div><strong>/stop</strong>to opt out</div>

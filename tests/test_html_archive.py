@@ -104,3 +104,11 @@ def test_render_escapes_html_in_bodies(tmp_path):
     html = _render(state, tmp_path)
     assert "<script>alert(1)</script>" not in html
     assert "&lt;script&gt;" in html
+
+
+def test_render_half_time_gets_phase_tag(tmp_path):
+    state = {"days": [{"date": "2026-06-11", "messages": [
+        {"type": "half_time", "body": "Half-time: Mexico 1-0 South Africa",
+         "sent": True}]}], "bracket": {}}
+    html = _render(state, tmp_path)
+    assert 'class="tag phase">Half-time<' in html
