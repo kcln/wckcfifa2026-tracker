@@ -50,7 +50,18 @@ Tracker stores `state["last_result"]` for the hero card. `docs/style.css` is now
 unused (page inlines all CSS, like IPL) but left in place.
 NOTE: do NOT apply the KCL Bauhaus brand to this site — explicit KC override.
 
+## Messaging changes (2026-06-09 late)
+- Cron tightened `*/15` → `*/5` (free on public repo; concurrency guard was already in place).
+- NEW `half_time` message per live match at the break: `parse_espn` emits `HT` entries on
+  `STATUS_HALFTIME` with the frozen break score; deduped by body hash across ticks;
+  `merge_results` still records FT only so an HT score can never become a result.
+- Sender rewritten: `_send_pending` flushes ALL undelivered oldest-first (was newest-only
+  with stale-skip — KC: "no misses"). On failure it stops; the rest retries next run.
+- Telegram opt-in invite sent to Ankit via @Kipl26bot (msg 156); he gets added to
+  TELEGRAM_CHAT_IDS only after replying YES. Session watcher polls getUpdates.
+
 ## NEXT
+- Add Ankit's chat ID (8954471490) to TELEGRAM_CHAT_IDS if/when he replies YES.
 - Confirm a Telegram brief lands on KC's phone once the tournament starts (Jun 11).
 - Optional: add Ankit's chat ID, set `FOOTBALL_DATA_KEY`, bump actions to Node 24
   (GitHub deprecation warning on checkout@v4 / setup-python@v5, forced June 16, 2026).
