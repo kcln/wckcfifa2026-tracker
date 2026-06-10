@@ -203,6 +203,20 @@ def _final_match(merged: dict) -> dict | None:
     return None
 
 
+def _latest_result(merged: dict) -> dict | None:
+    """Most recent finished match — feeds the archive's 'Most recent' hero card."""
+    done = [m for m in merged["matches"] if m.get("result")]
+    if not done:
+        return None
+    m = max(done, key=lambda x: (x.get("date") or "", str(x.get("id") or "")))
+    r = m["result"]
+    return {
+        "home": m["home"], "away": m["away"],
+        "home_goals": r.get("home_goals"), "away_goals": r.get("away_goals"),
+        "date": m.get("date"), "venue": m.get("venue"),
+    }
+
+
 def _due_messages(stateobj: dict, merged: dict, match_prob, now_iso: str) -> None:
     """Compute and append all messages that are due for `now_iso` (deduped).
 
@@ -351,6 +365,8 @@ def run(cfg: Config) -> int:
         except Exception:
             stateobj.setdefault("bracket", {})
         stateobj["groups"] = _group_tables_for(merged)
+        stateobj["last_result"] = (_latest_result(merged)
+                                   or stateobj.get("last_result"))
 
         # Keep days ordered.
         stateobj["days"].sort(key=lambda d: d.get("date", ""))

@@ -1,6 +1,10 @@
 """
-html_archive.py — renders docs/index.html (the public GitHub Pages archive)
-from the tracker's state, styled with the KCL Editorial x Bauhaus brand.
+html_archive.py — renders docs/index.html (the public GitHub Pages archive).
+
+Replicates the ipl-tracker archive design exactly (the committed purple
+"Every match. Every prediction." page): same inline CSS, hero grid with
+most-recent + leader cards, collapsible match-day log, Telegram CTA, and
+the visitor-local-time script. Adapted from cricket to World Cup data.
 
 Public API
 ----------
@@ -8,139 +12,422 @@ render(state: dict, path) -> None
 
 `render` is a pure function of `state` (no clock calls) so output is
 deterministic and testable. The tracker rebuilds the page on every run.
+Stdlib only — the CI runtime has no third-party deps.
 """
 
 from __future__ import annotations
 
+import re
+from datetime import datetime
 from html import escape
 from pathlib import Path
 
-GOOGLE_FONTS = (
-    "https://fonts.googleapis.com/css2?"
-    "family=Inter:wght@400;500;600;700;800&"
-    "family=JetBrains+Mono:wght@400;500&"
-    "family=Playfair+Display:ital,wght@1,400;1,700;1,900&display=swap"
-)
+TOURNAMENT_DAYS = 39  # Jun 11 – Jul 19, 2026
 
-# Spectrum colours cycled across the title-odds chips (never page backgrounds).
-_CHIP_CLASSES = ("c-indigo", "c-teal", "c-amber", "c-rose")
+# type -> (tag css class, label) — mirrors the IPL tag palette
+_TAGS = {
+    "morning_brief":  ("morning", "Morning brief"),
+    "post_match":     ("result",  "Match result"),
+    "daily_recap":    ("recap",   "Day recap"),
+    "bracket_update": ("phase",   "Bracket update"),
+    "champion_recap": ("recap",   "Champion recap"),
+}
 
-_FOOTER_NOTE = (
-    "Rebuilt automatically from state.json on every tracker run. "
-    "FIFA World Cup 2026 Tracker."
-)
-
-
-def _pct(prob: float) -> str:
-    """Format a 0-1 probability as a percentage string e.g. '18.0%'."""
-    return f"{prob * 100:.1f}%"
+# "Home 2-1 Away  ✓  (Prediction: X)" — possibly indented (recap lines)
+_RESULT_RE = re.compile(r"^(\s*)(.+?) (\d+)-(\d+) (.+?)(\s\s.*)$")
+# "Prediction: PICK" terminated by "  |" or end of line (morning brief)
+_PRED_RE = re.compile(r"^(.*?Prediction: )([^|]+?)(\s*\|.*|\s*)$")
 
 
-def _esc_body(text: str) -> str:
-    """HTML-escape a plain-text message body and convert newlines to <br>."""
-    return escape(text).replace("\n", "<br>")
+def _fmt_day_long(date_iso: str) -> str:
+    return datetime.strptime(date_iso, "%Y-%m-%d").strftime("%A, %B %-d, %Y")
 
 
-def _render_title_odds(bracket: dict) -> str:
-    """Top ~10 teams by title probability as solid spectrum chips."""
-    title_odds = bracket.get("title_odds") or {}
-    if not title_odds:
-        return ""
+def _fmt_day_short(date_iso: str) -> str:
+    return datetime.strptime(date_iso, "%Y-%m-%d").strftime("%b %-d")
 
-    top = sorted(title_odds.items(), key=lambda kv: kv[1], reverse=True)[:10]
-    chips = []
-    for i, (team, prob) in enumerate(top):
-        cls = _CHIP_CLASSES[i % len(_CHIP_CLASSES)]
-        chips.append(
-            f'      <span class="chip {cls}">'
-            f'<span class="chip-team">{escape(str(team))}</span>'
-            f'<span class="chip-pct">{_pct(prob)}</span></span>'
-        )
 
+def _bold_result_line(line: str, indent: str, home: str, hg: int, ag: int,
+                      away: str, tail: str) -> str:
+    """Bold the winning team's name in a result line (IPL bolds winners)."""
+    home_html, away_html = escape(home), escape(away)
+    if hg > ag:
+        home_html = f"<strong>{home_html}</strong>"
+    elif ag > hg:
+        away_html = f"<strong>{away_html}</strong>"
+    return f"{escape(indent)}{home_html} {hg}-{ag} {away_html}{escape(tail)}"
+
+
+def _render_body(body: str, msg_type: str) -> str:
+    """Escape a message body to HTML, applying the IPL bolding rules:
+    winners bold in result lines, predicted pick bold in morning briefs."""
+    out_lines = []
+    for line in body.split("\n"):
+        if msg_type in ("post_match", "daily_recap"):
+            m = _RESULT_RE.match(line)
+            if m:
+                out_lines.append(_bold_result_line(
+                    line, m.group(1), m.group(2), int(m.group(3)),
+                    int(m.group(4)), m.group(5), m.group(6)))
+                continue
+        if msg_type == "morning_brief":
+            m = _PRED_RE.match(line)
+            if m:
+                out_lines.append(
+                    escape(m.group(1)) + f"<strong>{escape(m.group(2))}</strong>"
+                    + escape(m.group(3)))
+                continue
+        out_lines.append(escape(line))
+    return "\n".join(out_lines)
+
+
+def _render_article(date_iso: str, idx: int, msg: dict) -> str:
+    msg_type = str(msg.get("type", ""))
+    tag_cls, label = _TAGS.get(msg_type, ("morning", msg_type.replace("_", " ").title()))
+    generated = msg.get("generated_at", "")
+    gen_attr = f' data-generated="{escape(str(generated))}"' if generated else ""
+    when = ('<span class="when"></span>')
+    body_html = _render_body(str(msg.get("body", "")), msg_type)
     return (
-        '    <h2 class="section-label">Title odds — top contenders</h2>\n'
-        '    <div class="chips">\n'
-        + "\n".join(chips)
-        + "\n    </div>\n"
+        f'<article data-type="{escape(msg_type)}"{gen_attr} '
+        f'id="msg-{escape(date_iso)}-{escape(msg_type)}-{idx}">'
+        f'<div class="meta"><span class="tag {tag_cls}">{escape(label)}</span>'
+        f'{when}</div>'
+        f'<div class="body">{body_html}</div></article>'
     )
 
 
 def _render_days(days: list[dict]) -> str:
-    """Reverse-chronological (newest first) list of day cards."""
-    if not days:
-        return '    <p class="empty">No matchdays recorded yet.</p>\n'
+    """Newest day first; only the newest open; newest article first in a day."""
+    ordered = sorted(days, key=lambda d: str(d.get("date", "")), reverse=True)
+    blocks = []
+    for i, day in enumerate(ordered):
+        date_iso = str(day.get("date", ""))
+        open_attr = " open" if i == 0 else ""
+        messages = [m for m in (day.get("messages") or [])]
+        articles = "".join(
+            _render_article(date_iso, idx, m)
+            for idx, m in reversed(list(enumerate(messages)))
+        )
+        blocks.append(
+            f'<details data-day="{escape(date_iso)}"{open_attr}>'
+            f"<summary>{escape(_fmt_day_long(date_iso))}</summary>"
+            f"{articles}</details>"
+        )
+    return "".join(blocks)
 
-    ordered = sorted(days, key=lambda d: d.get("date", ""), reverse=True)
-    cards = []
-    for day in ordered:
-        date = escape(str(day.get("date", "")))
-        messages = day.get("messages") or []
-        msg_html = "".join(
-            f'      <div class="day-msg">{_esc_body(str(m.get("body", "")))}</div>\n'
-            for m in messages
-            if m.get("sent", True)
-        )
-        if not msg_html:
-            msg_html = '      <div class="day-msg empty">No messages.</div>\n'
-        cards.append(
-            f'    <article class="day-card">\n'
-            f'      <h3 class="day-date">{date}</h3>\n'
-            f"{msg_html}"
-            f"    </article>\n"
-        )
-    return "".join(cards)
+
+def _hero_tokens(state: dict) -> dict:
+    tokens = {
+        "__HERO_MATCH__":       "—",
+        "__HERO_META__":        "World Cup 2026",
+        "__HERO_WIN__":         "Match data loading…",
+        "__HERO_LEADER__":      "—",
+        "__HERO_LEADER_DESC__": "Title odds loading…",
+        "__MATCH_COUNT__":      "World Cup 2026",
+    }
+
+    last = state.get("last_result") or {}
+    if last.get("home") and last.get("away"):
+        home, away = str(last["home"]), str(last["away"])
+        hg, ag = int(last.get("home_goals", 0)), int(last.get("away_goals", 0))
+        tokens["__HERO_MATCH__"] = (
+            f'{escape(home)} <span class="vs">vs</span> {escape(away)}')
+        meta_bits = []
+        if last.get("date"):
+            meta_bits.append(_fmt_day_short(str(last["date"])))
+        if last.get("venue"):
+            meta_bits.append(str(last["venue"]))
+        tokens["__HERO_META__"] = escape(" · ".join(meta_bits)) or "World Cup 2026"
+        if hg > ag:
+            tokens["__HERO_WIN__"] = escape(f"{home} won {hg}-{ag}")
+        elif ag > hg:
+            tokens["__HERO_WIN__"] = escape(f"{away} won {ag}-{hg}")
+        else:
+            tokens["__HERO_WIN__"] = escape(f"Draw {hg}-{ag}")
+
+    title_odds = (state.get("bracket") or {}).get("title_odds") or {}
+    if title_odds:
+        leader, prob = max(title_odds.items(), key=lambda kv: kv[1])
+        tokens["__HERO_LEADER__"] = escape(str(leader))
+        tokens["__HERO_LEADER_DESC__"] = escape(
+            f"{prob * 100:.1f}% title odds · ML model + Monte Carlo bracket")
+
+    days = state.get("days") or []
+    if days:
+        tokens["__MATCH_COUNT__"] = f"Day {len(days)} of {TOURNAMENT_DAYS}"
+    return tokens
 
 
 def render(state: dict, path) -> None:
     """Render the full standalone archive page to `path`."""
-    days = state.get("days") or []
-    bracket = state.get("bracket") or {}
+    page = SHELL
+    for token, value in _hero_tokens(state).items():
+        page = page.replace(token, value)
+    page = page.replace("__DAYS__", _render_days(state.get("days") or []))
+    out = Path(path)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(page, encoding="utf-8")
 
-    odds_section = _render_title_odds(bracket)
-    days_section = _render_days(days)
 
-    html = f"""<!DOCTYPE html>
+SHELL = r"""<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>World Cup 2026 Tracker</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="{GOOGLE_FONTS}">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Brand tokens inline so the page renders on-brand even if style.css
-       fails to load. Page background is always warm cream. */
-    :root {{
-      --bg: #F5F1EB; --bg-card: #FFFFFF; --crimson: #E0001C;
-      --indigo: #1E40AF; --teal: #0F766E; --amber: #B45309; --rose: #BE185D;
-      --text: #0F0F0F; --text-muted: rgba(15,15,15,0.65);
-      --text-faint: rgba(15,15,15,0.40);
-      --shadow: 4px 4px 0 0 var(--text);
-      --shadow-crimson: 4px 4px 0 0 var(--crimson);
-      --font-hero: 'Playfair Display', serif;
-      --font-body: 'Inter', sans-serif;
-      --font-label: 'JetBrains Mono', monospace;
-    }}
-    body {{ background: #F5F1EB; }}
+<meta charset="utf-8"/>
+<title>World Cup 2026 — Daily tracker · KC Lakshminarasimham</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#F8F5F1" name="theme-color"/>
+<meta content="A machine-curated World Cup 2026 tracker — predictions before kickoff, results after each match, a recap at night. Delivered daily on Telegram." name="description"/>
+<meta content="World Cup 2026 · Daily tracker" property="og:title"/>
+<meta content="Predictions before kickoff, results after each match, a recap at night. Delivered daily on Telegram." property="og:description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg:           #F8F5F1;
+      --card:         #FFFFFF;
+      --card-2:       #FAF8F5;
+      --brown:        #3F2A26;
+      --brown-2:      #5A3E37;
+      --brown-soft:   rgba(63,42,38,0.08);
+      --brown-hair:   rgba(63,42,38,0.14);
+      --ink:          #1F1612;
+      --ink-2:        #3D2E27;
+      --ink-soft:     rgba(31,22,18,0.62);
+      --ink-faint:    rgba(31,22,18,0.40);
+      --hair:         rgba(31,22,18,0.10);
+      --hair-soft:    rgba(31,22,18,0.06);
+      --p-50:  #FAF5FF;  --p-100: #F3E8FF;  --p-200: #E9D5FF;
+      --p-300: #D8B4FE;  --p-400: #C084FC;  --p-500: #A855F7;
+      --p-600: #9333EA;  --p-700: #7E22CE;  --p-800: #6B21A8;  --p-900: #581C87;
+      --radius-lg: 24px;  --radius-md: 16px;  --radius-sm: 10px;
+      --shadow-sm: 0 1px 2px rgba(31,22,18,0.05);
+      --shadow-md: 0 1px 2px rgba(31,22,18,0.04), 0 8px 24px -8px rgba(31,22,18,0.10);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; }
+    body { background: var(--bg); color: var(--ink); font-family: 'Work Sans', system-ui, sans-serif; font-weight: 400; min-height: 100vh; }
+    a { color: inherit; text-decoration: none; }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    nav.bar { display: flex; align-items: center; justify-content: space-between; padding: 28px 0; }
+    nav .mark {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 44px; height: 44px;
+      background: linear-gradient(135deg, var(--p-400), var(--p-800));
+      border-radius: 10px;
+      padding: 6px;
+      box-shadow: 0 4px 16px rgba(126,34,206,0.25);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    nav .mark:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(126,34,206,0.35); }
+    nav .mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    nav .live { font-family: 'Work Sans', sans-serif; font-weight: 600; font-size: 13px; color: var(--ink); padding: 9px 16px; background: var(--card); border-radius: 100px; box-shadow: var(--shadow-sm); transition: all 0.15s; display: inline-flex; align-items: center; gap: 8px; }
+    nav .live .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--p-600); animation: pulse 1.6s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(147,51,234,0.6); } 50% { box-shadow: 0 0 0 6px rgba(147,51,234,0); } }
+    nav .live:hover { background: var(--brown); color: var(--card); }
+    nav .live:hover .dot { background: var(--p-400); }
+
+    .hero-grid { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: auto auto; gap: 16px; margin-top: 8px; }
+    .h-card { background: var(--card); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-md); border: 1px solid var(--hair-soft); }
+    .h-card.dark { background: var(--brown); color: var(--card); }
+    .h-card .kicker { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 18px; }
+    .h-card.dark .kicker { color: rgba(255,255,255,0.72); }
+    .h-card h1 { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(40px, 5.5vw, 64px); line-height: 1.0; letter-spacing: -0.025em; }
+    .h-card h1 .grad { background: linear-gradient(135deg, var(--p-400), var(--p-800)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .h-card .lead { margin-top: 18px; color: var(--ink-soft); font-size: 16px; line-height: 1.6; max-width: 52ch; }
+
+    .score { display: grid; grid-template-rows: auto 1fr auto; gap: 8px; height: 100%; }
+    .score .team-line { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 28px; letter-spacing: -0.02em; line-height: 1.05; margin-top: 8px; }
+    .score .team-line .vs { color: rgba(255,255,255,0.55); margin: 0 6px; font-weight: 400; }
+    .score .result { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.20em; text-transform: uppercase; color: rgba(255,255,255,0.84); margin-top: auto; }
+    .score .result .win { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0; text-transform: none; display: block; margin-top: 4px; color: var(--card); }
+
+    .stat .v { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 56px; letter-spacing: -0.03em; line-height: 1; margin: 10px 0 6px; color: var(--p-700); }
+    .stat .desc { font-size: 13px; color: var(--ink-soft); line-height: 1.5; }
+
+    .section-head { margin: 56px 0 18px; display: flex; align-items: center; justify-content: space-between; }
+    .section-head h2 { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.018em; }
+    .section-head .count { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint); }
+
+    main#days { display: block; }
+
+    details.day { background: var(--card); border-radius: var(--radius-lg); border: 1px solid var(--hair-soft); box-shadow: var(--shadow-sm); margin-bottom: 14px; overflow: hidden; transition: box-shadow 0.2s; }
+    details.day:hover { box-shadow: var(--shadow-md); }
+    details.day > summary { list-style: none; cursor: pointer; padding: 22px 28px; display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; }
+    details.day > summary::-webkit-details-marker { display: none; }
+    .day-head { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 19px; letter-spacing: -0.015em; line-height: 1.2; }
+    .day-sub { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.20em; text-transform: uppercase; color: var(--ink-faint); margin-top: 6px; }
+    details.day > summary .toggle { width: 32px; height: 32px; background: var(--bg); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: var(--ink-soft); font-family: 'JetBrains Mono', monospace; font-size: 16px; transition: transform 0.25s, background 0.15s, color 0.15s; }
+    details.day[open] > summary .toggle { transform: rotate(45deg); background: var(--p-700); color: var(--card); }
+
+    .day-body { padding: 0 28px 24px; }
+    article { padding: 18px 0; border-top: 1px solid var(--hair-soft); display: grid; grid-template-columns: 160px 1fr; gap: 22px; align-items: start; }
+    article:first-of-type { border-top: 1px solid var(--hair); }
+    article .meta { display: flex; flex-direction: column; gap: 8px; }
+    article .meta .tag { display: inline-block; align-self: flex-start; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; }
+    article .meta .tag.morning { color: var(--p-700); background: var(--p-100); }
+    article .meta .tag.phase   { color: var(--p-800); background: var(--p-200); }
+    article .meta .tag.result  { color: var(--card);  background: var(--p-700); }
+    article .meta .tag.recap   { color: var(--card);  background: var(--brown); }
+    article .meta .when { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.10em; text-transform: uppercase; color: var(--ink-faint); line-height: 1.7; }
+    article .meta .when span { display: block; }
+    article .body { font-family: 'Work Sans', sans-serif; font-size: 14.5px; line-height: 1.7; color: var(--ink-2); white-space: pre-wrap; }
+    article .body strong { font-weight: 700; color: var(--p-800); }
+
+    .signup-grid { margin-top: 56px; display: grid; grid-template-columns: 5fr 7fr; gap: 16px; }
+    .signup-pitch { background: var(--brown); color: var(--card); border-radius: var(--radius-lg); padding: 36px 32px; position: relative; overflow: hidden; }
+    .signup-pitch::before { content: ''; position: absolute; bottom: -50%; right: -30%; width: 160%; height: 200%; background: radial-gradient(circle, rgba(168,85,247,0.40) 0%, transparent 60%); pointer-events: none; }
+    .signup-pitch-inner { position: relative; }
+    .signup-pitch .kicker { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--p-300); margin-bottom: 18px; }
+    .signup-pitch h2 { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(28px, 4vw, 42px); line-height: 1.05; letter-spacing: -0.022em; }
+    .signup-pitch p { margin-top: 16px; color: rgba(255,255,255,0.72); font-size: 15px; line-height: 1.6; }
+    .signup-pitch .stats { margin-top: 28px; display: flex; gap: 28px; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.10); }
+    .signup-pitch .stats div { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+    .signup-pitch .stats strong { display: block; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.012em; color: var(--card); margin-bottom: 4px; }
+
+    .signup-cta-box { background: var(--card); border-radius: var(--radius-lg); padding: 40px 32px; box-shadow: var(--shadow-md); border: 1px solid var(--hair-soft); display: flex; flex-direction: column; justify-content: center; gap: 18px; }
+    .signup-cta-box .cta-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-faint); }
+    .signup-cta-box .cta-headline { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(22px, 2.6vw, 28px); letter-spacing: -0.018em; line-height: 1.15; color: var(--ink); }
+    .signup-cta-box .cta-headline em { font-style: italic; font-weight: 900; color: var(--p-800); }
+    .signup-cta-box .cta-sub { color: var(--ink-soft); font-size: 14.5px; line-height: 1.6; }
+    a.tg-cta { margin-top: 6px; font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 15px; background: var(--brown); color: var(--card); padding: 16px 24px; border-radius: var(--radius-sm); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: all 0.15s; text-decoration: none; }
+    a.tg-cta::before { content: ''; width: 18px; height: 18px; background: currentColor; -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M9.04 15.32 8.86 19.6c.31 0 .45-.13.61-.29l1.47-1.4 3.05 2.23c.56.31.95.15 1.11-.51l2.01-9.42c.18-.83-.3-1.15-.86-.94L4.39 13.69c-.81.31-.79.76-.14.96l3.06.96 7.1-4.47c.33-.21.64-.09.39.13'/></svg>") center/contain no-repeat; mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M9.04 15.32 8.86 19.6c.31 0 .45-.13.61-.29l1.47-1.4 3.05 2.23c.56.31.95.15 1.11-.51l2.01-9.42c.18-.83-.3-1.15-.86-.94L4.39 13.69c-.81.31-.79.76-.14.96l3.06.96 7.1-4.47c.33-.21.64-.09.39.13'/></svg>") center/contain no-repeat; }
+    a.tg-cta::after { content: '→'; font-size: 18px; transition: transform 0.2s; }
+    a.tg-cta:hover { background: var(--p-700); }
+    a.tg-cta:hover::after { transform: translateX(4px); }
+
+    .fine { margin-top: 6px; font-size: 12px; color: var(--ink-faint); line-height: 1.55; }
+    .fine code { background: var(--bg); padding: 2px 6px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+    .fine a { color: var(--brown); text-decoration: underline; text-underline-offset: 2px; }
+    .fine a:hover { color: var(--p-700); }
+    .fine a code { background: var(--p-100); color: var(--brown); }
+
+    footer.foot { margin: 64px 0 56px; padding: 24px 28px; background: var(--card); border-radius: var(--radius-lg); border: 1px solid var(--hair-soft); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+    footer .made { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 14px; letter-spacing: -0.005em; }
+    footer .made a { background: linear-gradient(120deg, var(--p-100), var(--p-200)); color: var(--p-800); padding: 3px 10px; border-radius: 100px; font-weight: 600; }
+    footer .links { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
+
+    @media (max-width: 800px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .signup-grid { grid-template-columns: 1fr; }
+      article { grid-template-columns: 1fr; gap: 10px; }
+    }
+    @media (max-width: 540px) {
+      .wrap { padding: 0 18px; }
+      .h-card { padding: 24px; }
+      .h-card h1 { font-size: 40px; }
+      details.day > summary { padding: 18px 20px; }
+      .day-body { padding: 0 20px 20px; }
+      .signup-pitch, .signup-cta-box { padding: 28px 24px; }
+    }
   </style>
 </head>
 <body>
-  <main class="container">
-    <header class="hero">
-      <p class="eyebrow">FIFA World Cup 2026 — Live Tracker</p>
-      <h1 class="hero-title">World <em>Cup</em> 2026 Tracker</h1>
-      <p class="hero-desc">Daily predictions, results, and title odds — machine-modelled, rebuilt every matchday.</p>
-    </header>
+<div class="wrap">
+<nav class="bar">
+<a aria-label="KC Lakshminarasimham" class="mark" href="https://github.com/kcln" rel="noopener" target="_blank">
+<img alt="Simham lion mark" height="44" src="assets/lion-transparent.png" width="44"/>
+</a>
+<a class="live" href="https://www.espn.com/soccer/league/_/name/fifa.world" rel="noopener" target="_blank"><span class="dot"></span> Live scores →</a>
+</nav>
+<section class="hero-grid">
+<div class="h-card" style="grid-row: span 2;">
+<div class="kicker">World Cup 2026 · Daily tracker</div>
+<h1>Every match.<br/>Every <span class="grad">prediction.</span></h1>
+<p class="lead">A machine-curated record of every match day this tournament — a prediction before kickoff, a result after each match, a recap at night. Delivered daily on Telegram.</p>
+</div>
+<div class="h-card dark">
+<div class="score">
+<div class="kicker">Most recent</div>
+<div class="team-line" id="hero-match">__HERO_MATCH__</div>
+<div class="result">
+<span id="hero-meta">__HERO_META__</span>
+<span class="win" id="hero-win">__HERO_WIN__</span>
+</div>
+</div>
+</div>
+<div class="h-card stat">
+<div class="kicker">Leader</div>
+<div class="v" id="hero-leader">__HERO_LEADER__</div>
+<div class="desc" id="hero-leader-desc">__HERO_LEADER_DESC__</div>
+</div>
+</section>
+<div class="section-head">
+<h2>Match log</h2>
+<span class="count" id="match-count">__MATCH_COUNT__</span>
+</div>
+<main id="days">__DAYS__</main>
+<section class="signup-grid" id="signup">
+<div class="signup-pitch">
+<div class="signup-pitch-inner">
+<div class="kicker">Get the messages</div>
+<h2>Match-day updates, on Telegram.</h2>
+<p>Predictions before kickoff. Results as they finish. Final recap at night.</p>
+<div class="stats">
+<div><strong>~7</strong>messages / match day</div>
+<div><strong>/stop</strong>to opt out</div>
+</div>
+</div>
+</div>
+<div class="signup-cta-box">
+<div class="cta-eyebrow">One tap</div>
+<div class="cta-headline">Tap Start on <em>@Kipl26bot</em>.</div>
+<div class="cta-sub">That's the whole signup. Telegram requires you to message the bot first so it's allowed to message you back. After you tap Start, you're on the list for the next match.</div>
+<a class="tg-cta" href="https://t.me/Kipl26bot" rel="noopener" target="_blank">Start on Telegram</a>
+<p class="fine">Send <code>/stop</code> in the chat anytime to leave, <code>/start</code> to rejoin. No phone number needed. No spam.</p>
+</div>
+</section>
+<footer class="foot">
+<span class="made">Built by <a href="https://github.com/kcln/wckcfifa2026-tracker" rel="noopener" target="_blank">KC Lakshminarasimham</a></span>
+<span class="links">fifa.com · ESPN FC</span>
+</footer>
+</div>
+<script>
+(function () {
+  // Render every time on the page in the visitor's local time zone instead
+  // of the fixed IST/ET/CT/PT list. Two passes: (1) the .when stamp next to
+  // each article tag uses the article's data-generated (an ISO timestamp);
+  // (2) the multi-TZ inline strings inside .body get rewritten by parsing
+  // the IST anchor plus the parent details[data-day].
 
-{odds_section}
-    <h2 class="section-label">Matchday log</h2>
-{days_section}
-    <footer class="footer">{escape(_FOOTER_NOTE)}</footer>
-  </main>
+  function fmtTime(d) {
+    if (isNaN(d)) return '';
+    return d.toLocaleString(undefined, {
+      hour: 'numeric', minute: '2-digit', hour12: true, timeZoneName: 'short'
+    });
+  }
+
+  document.querySelectorAll('article[data-generated]').forEach(function (art) {
+    var iso = art.getAttribute('data-generated');
+    var when = art.querySelector('.when');
+    if (!iso || !when) return;
+    var d = new Date(iso);
+    var local = fmtTime(d);
+    if (local) when.innerHTML = '<span>' + local + '</span>';
+  });
+
+  var tzPattern = /(\d{1,2}):(\d{2})\s*(am|pm)\s*IST\s*\/\s*\d{1,2}:\d{2}\s*(?:am|pm)\s*ET\s*\/\s*\d{1,2}:\d{2}\s*(?:am|pm)\s*CT\s*\/\s*\d{1,2}:\d{2}\s*(?:am|pm)\s*PT/gi;
+
+  document.querySelectorAll('details[data-day] article').forEach(function (art) {
+    var body = art.querySelector('.body');
+    if (!body) return;
+    var details = art.closest('details[data-day]');
+    var day = details && details.getAttribute('data-day');
+    if (!day) return;
+    body.innerHTML = body.innerHTML.replace(tzPattern, function (match, h, m, ampm) {
+      var hour = parseInt(h, 10) % 12;
+      if (ampm.toLowerCase() === 'pm') hour += 12;
+      var iso = day + 'T' + String(hour).padStart(2, '0') + ':' + m + ':00+05:30';
+      var local = fmtTime(new Date(iso));
+      return local || match;
+    });
+  });
+})();
+</script>
 </body>
 </html>
 """
-
-    Path(path).write_text(html, encoding="utf-8")
