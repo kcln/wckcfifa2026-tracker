@@ -12,10 +12,40 @@ champion_recap(team) -> str
 
 from __future__ import annotations
 
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
+# Kickoff times are shown in this fixed four-zone order (KC's spec).
+_KICKOFF_ZONES = (
+    ("PT",  ZoneInfo("America/Los_Angeles")),
+    ("CT",  ZoneInfo("America/Chicago")),
+    ("ET",  ZoneInfo("America/New_York")),
+    ("IST", ZoneInfo("Asia/Kolkata")),
+)
+
 
 # ---------------------------------------------------------------------------
 # Private helpers
 # ---------------------------------------------------------------------------
+
+def kickoff_stack(kickoff_utc: str, match_date: str = "") -> str:
+    """'12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)' from an ISO
+    UTC kickoff. Zones whose local date rolls past the match date get a
+    (+1d) marker. Returns '' for missing/unparseable input."""
+    if not kickoff_utc:
+        return ""
+    try:
+        dt = datetime.fromisoformat(kickoff_utc.replace("Z", "+00:00"))
+    except ValueError:
+        return ""
+    parts = []
+    for label, tz in _KICKOFF_ZONES:
+        local = dt.astimezone(tz)
+        stamp = local.strftime("%-I:%M %p").lower().replace(" ", "")
+        rolled = " (+1d)" if (match_date
+                              and local.date().isoformat() > match_date) else ""
+        parts.append(f"{stamp} {label}{rolled}")
+    return " / ".join(parts)
 
 def _argmax_outcome(prediction: dict) -> str:
     """Return 'home', 'draw', or 'away' — whichever probability is highest."""
@@ -94,11 +124,19 @@ def morning_brief(date_iso: str, matches: list[dict]) -> str:
         home_pct = _pct(pred["home"])
         draw_pct = _pct(pred["draw"])
         away_pct = _pct(pred["away"])
-        lines.append(
-            f"{m['home']} vs {m['away']}  |  "
-            f"Prediction: {pick}  |  "
-            f"Home {home_pct}  Draw {draw_pct}  Away {away_pct}"
-        )
+        ko = kickoff_stack(m.get("kickoff_utc", ""), m.get("date", ""))
+        if ko:
+            lines.append(f"{m['home']} vs {m['away']}  —  Kickoff {ko}")
+            lines.append(
+                f"  Prediction: {pick}  |  "
+                f"Home {home_pct}  Draw {draw_pct}  Away {away_pct}"
+            )
+        else:
+            lines.append(
+                f"{m['home']} vs {m['away']}  |  "
+                f"Prediction: {pick}  |  "
+                f"Home {home_pct}  Draw {draw_pct}  Away {away_pct}"
+            )
     return "\n".join(lines)
 
 

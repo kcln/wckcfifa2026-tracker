@@ -212,3 +212,15 @@ def test_reconcile_results_maps_to_seed_ids():
     assert out["1"] == {"home_goals": 3, "away_goals": 1, "status": "FT"}
     assert out["2"] == {"home_goals": 0, "away_goals": 2, "status": "FT"}
     assert all(not k.startswith("espn") for k in out)  # rekeyed to seed ids
+
+
+def test_messages_carry_match_kickoff(tmp_path):
+    fetch = lambda: {"1": {"home_goals": 2, "away_goals": 0, "status": "FT"}}
+    cfg = _base_cfg(tmp_path, fetch=fetch)
+    tracker.run(cfg)
+    saved = json.loads((tmp_path / "state.json").read_text())
+    day = next(d for d in saved["days"] if d["date"] == "2026-06-11")
+    brief = next(m for m in day["messages"] if m["type"] == "morning_brief")
+    post = next(m for m in day["messages"] if m["type"] == "post_match")
+    assert brief["kickoff_utc"]  # earliest kickoff of the day
+    assert post["kickoff_utc"] == "2026-06-11T19:00:00Z"

@@ -112,3 +112,19 @@ def test_render_half_time_gets_phase_tag(tmp_path):
          "sent": True}]}], "bracket": {}}
     html = _render(state, tmp_path)
     assert 'class="tag phase">Half-time<' in html
+
+
+def test_render_when_stack_shows_kickoff_in_four_zones(tmp_path):
+    state = {"days": [{"date": "2026-06-11", "messages": [
+        {"type": "post_match", "body": "Mexico 2-1 South Africa  ✓  (Prediction: Mexico)",
+         "sent": True, "kickoff_utc": "2026-06-11T19:00:00Z"}]}], "bracket": {}}
+    html = _render(state, tmp_path)
+    assert ("<span>12:00pm PT</span><span>2:00pm CT</span>"
+            "<span>3:00pm ET</span><span>12:30am IST</span>") in html
+
+
+def test_render_when_stack_empty_without_kickoff(tmp_path):
+    state = {"days": [{"date": "2026-06-11", "messages": [
+        {"type": "morning_brief", "body": "x", "sent": True}]}], "bracket": {}}
+    html = _render(state, tmp_path)
+    assert '<span class="when"></span>' in html

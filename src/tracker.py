@@ -158,15 +158,28 @@ def _all_hashes(stateobj: dict) -> set:
 
 
 def _add_message(day: dict, existing: set, msg_type: str, date_iso: str,
-                 body: str) -> None:
+                 body: str, kickoff_utc: str = "") -> None:
     """Append a message to `day` iff its (type,date,body) hash is new.
-    Mutates `existing` so repeated calls within one run stay deduped."""
+    Mutates `existing` so repeated calls within one run stay deduped.
+    Stamps kickoff_utc (the relevant match's start, shown as the archive's
+    PT/CT/ET/IST time stack) and generated_at (PT); neither is part of the
+    dedup hash."""
     h = state.message_hash(msg_type, date_iso, body)
     if h in existing:
         return
-    day["messages"].append({"type": msg_type, "body": body, "sent": False,
-                            "hash": h})
+    msg = {"type": msg_type, "body": body, "sent": False, "hash": h,
+           "generated_at": state.now_pt().isoformat()}
+    if kickoff_utc:
+        msg["kickoff_utc"] = kickoff_utc
+    day["messages"].append(msg)
     existing.add(h)
+
+
+def _first_kickoff(matches: list[dict]) -> str:
+    """Earliest kickoff among `matches` — the day-level messages' timestamp."""
+    kicks = sorted(m.get("kickoff_utc") or "" for m in matches)
+    kicks = [k for k in kicks if k]
+    return kicks[0] if kicks else ""
 
 
 # ---------------------------------------------------------------------------
@@ -245,13 +258,15 @@ def _due_messages(stateobj: dict, merged: dict, match_prob, now_iso: str,
 
         # 1) Morning brief — once per day with matches.
         brief = message_builder.morning_brief(now_iso, todays_pred)
-        _add_message(day, existing, "morning_brief", now_iso, brief)
+        _add_message(day, existing, "morning_brief", now_iso, brief,
+                     kickoff_utc=_first_kickoff(todays))
 
         # 2) Post-match — per finished match.
         for mp in todays_pred:
             if mp.get("result"):
                 body = message_builder.post_match(mp)
-                _add_message(day, existing, "post_match", now_iso, body)
+                _add_message(day, existing, "post_match", now_iso, body,
+                             kickoff_utc=mp.get("kickoff_utc") or "")
 
         # 2.5) Half-time — per live match currently at the break.
         for mp in todays_pred:
@@ -260,13 +275,15 @@ def _due_messages(stateobj: dict, merged: dict, match_prob, now_iso: str,
                     and not mp.get("result")):
                 body = message_builder.half_time(
                     mp, entry["home_goals"], entry["away_goals"])
-                _add_message(day, existing, "half_time", now_iso, body)
+                _add_message(day, existing, "half_time", now_iso, body,
+                             kickoff_utc=mp.get("kickoff_utc") or "")
 
         # 3) Daily recap — once all of today's matches have results.
         if all(m.get("result") for m in todays):
             tables = _group_tables_for(merged)
             recap = message_builder.daily_recap(now_iso, todays_pred, tables)
-            _add_message(day, existing, "daily_recap", now_iso, recap)
+            _add_message(day, existing, "daily_recap", now_iso, recap,
+                         kickoff_utc=_first_kickoff(todays))
 
         # 4) Bracket update — on any knockout date.
         if any(m["stage"] != "group" for m in todays):
@@ -275,7 +292,8 @@ def _due_messages(stateobj: dict, merged: dict, match_prob, now_iso: str,
                 bracket.get("title_odds") or {},
                 bracket.get("advancement") or {},
             )
-            _add_message(day, existing, "bracket_update", now_iso, body)
+            _add_message(day, existing, "bracket_update", now_iso, body,
+                         kickoff_utc=_first_kickoff(todays))
 
     # 5) Champion recap — once, after the final is done (or now past it).
     if not stateobj.get("season_ended"):
@@ -288,7 +306,8 @@ def _due_messages(stateobj: dict, merged: dict, match_prob, now_iso: str,
                 if champ:
                     cday = _get_day(stateobj, now_iso)
                     body = message_builder.champion_recap(champ)
-                    _add_message(cday, existing, "champion_recap", now_iso, body)
+                    _add_message(cday, existing, "champion_recap", now_iso, body,
+                                 kickoff_utc=fin.get("kickoff_utc") or "")
                     stateobj["season_ended"] = True
 
 

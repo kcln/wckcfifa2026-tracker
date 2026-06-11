@@ -181,3 +181,26 @@ def test_half_time_shows_score_and_pick():
     body = mb.half_time(match, 1, 0)
     assert body.startswith("Half-time: Mexico 1-0 South Africa")
     assert "Prediction: Mexico" in body
+
+
+def test_kickoff_stack_four_zones_in_order():
+    # 19:00 UTC on Jun 11 = noon PT / 2pm CT / 3pm ET / 12:30am IST next day
+    out = mb.kickoff_stack("2026-06-11T19:00:00Z", "2026-06-11")
+    assert out == "12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)"
+
+
+def test_morning_brief_includes_kickoff_times():
+    matches = [{"home": "Mexico", "away": "South Africa",
+                "date": "2026-06-11", "kickoff_utc": "2026-06-11T19:00:00Z",
+                "prediction": {"home": 0.52, "draw": 0.26, "away": 0.22}}]
+    body = mb.morning_brief("2026-06-11", matches)
+    assert "Kickoff 12:00pm PT / 2:00pm CT / 3:00pm ET" in body
+    assert "Prediction: Mexico" in body
+
+
+def test_morning_brief_without_kickoff_keeps_single_line():
+    matches = [{"home": "Mexico", "away": "South Africa",
+                "prediction": {"home": 0.52, "draw": 0.26, "away": 0.22}}]
+    body = mb.morning_brief("2026-06-11", matches)
+    assert "Kickoff" not in body
+    assert "Mexico vs South Africa  |  Prediction: Mexico" in body

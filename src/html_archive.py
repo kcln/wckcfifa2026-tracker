@@ -4,7 +4,8 @@ html_archive.py — renders docs/index.html (the public GitHub Pages archive).
 Replicates the ipl-tracker archive design exactly (the committed purple
 "Every match. Every prediction." page): same inline CSS, hero grid with
 most-recent + leader cards, collapsible match-day log, Telegram CTA, and
-the visitor-local-time script. Adapted from cricket to World Cup data.
+a fixed PT/CT/ET/IST time stack per article (KC's spec). Adapted from
+cricket to World Cup data.
 
 Public API
 ----------
@@ -21,6 +22,15 @@ import re
 from datetime import datetime
 from html import escape
 from pathlib import Path
+from zoneinfo import ZoneInfo
+
+# Per KC: article timestamps show a fixed four-zone stack, in this order.
+_WHEN_ZONES = (
+    ("PT",  ZoneInfo("America/Los_Angeles")),
+    ("CT",  ZoneInfo("America/Chicago")),
+    ("ET",  ZoneInfo("America/New_York")),
+    ("IST", ZoneInfo("Asia/Kolkata")),
+)
 
 TOURNAMENT_DAYS = 39  # Jun 11 – Jul 19, 2026
 
@@ -82,12 +92,30 @@ def _render_body(body: str, msg_type: str) -> str:
     return "\n".join(out_lines)
 
 
+def _render_when(when_iso: str) -> str:
+    """Four-zone time stack (PT/CT/ET/IST) from an ISO timestamp — the
+    relevant match's kickoff. Messages without one get an empty stack."""
+    if not when_iso:
+        return '<span class="when"></span>'
+    try:
+        dt = datetime.fromisoformat(when_iso.replace("Z", "+00:00"))
+    except ValueError:
+        return '<span class="when"></span>'
+    spans = "".join(
+        f"<span>{dt.astimezone(tz).strftime('%-I:%M %p').lower().replace(' ', '')}"
+        f" {label}</span>"
+        for label, tz in _WHEN_ZONES
+    )
+    return f'<span class="when">{spans}</span>'
+
+
 def _render_article(date_iso: str, idx: int, msg: dict) -> str:
     msg_type = str(msg.get("type", ""))
     tag_cls, label = _TAGS.get(msg_type, ("morning", msg_type.replace("_", " ").title()))
-    generated = msg.get("generated_at", "")
-    gen_attr = f' data-generated="{escape(str(generated))}"' if generated else ""
-    when = ('<span class="when"></span>')
+    generated = str(msg.get("generated_at", "") or "")
+    gen_attr = f' data-generated="{escape(generated)}"' if generated else ""
+    # The visible time is the match kickoff (KC's spec), not message time.
+    when = _render_when(str(msg.get("kickoff_utc", "") or ""))
     body_html = _render_body(str(msg.get("body", "")), msg_type)
     return (
         f'<article data-type="{escape(msg_type)}"{gen_attr} '
@@ -387,48 +415,6 @@ SHELL = r"""<!DOCTYPE html>
 <span class="links">fifa.com · ESPN FC</span>
 </footer>
 </div>
-<script>
-(function () {
-  // Render every time on the page in the visitor's local time zone instead
-  // of the fixed IST/ET/CT/PT list. Two passes: (1) the .when stamp next to
-  // each article tag uses the article's data-generated (an ISO timestamp);
-  // (2) the multi-TZ inline strings inside .body get rewritten by parsing
-  // the IST anchor plus the parent details[data-day].
-
-  function fmtTime(d) {
-    if (isNaN(d)) return '';
-    return d.toLocaleString(undefined, {
-      hour: 'numeric', minute: '2-digit', hour12: true, timeZoneName: 'short'
-    });
-  }
-
-  document.querySelectorAll('article[data-generated]').forEach(function (art) {
-    var iso = art.getAttribute('data-generated');
-    var when = art.querySelector('.when');
-    if (!iso || !when) return;
-    var d = new Date(iso);
-    var local = fmtTime(d);
-    if (local) when.innerHTML = '<span>' + local + '</span>';
-  });
-
-  var tzPattern = /(\d{1,2}):(\d{2})\s*(am|pm)\s*IST\s*\/\s*\d{1,2}:\d{2}\s*(?:am|pm)\s*ET\s*\/\s*\d{1,2}:\d{2}\s*(?:am|pm)\s*CT\s*\/\s*\d{1,2}:\d{2}\s*(?:am|pm)\s*PT/gi;
-
-  document.querySelectorAll('details[data-day] article').forEach(function (art) {
-    var body = art.querySelector('.body');
-    if (!body) return;
-    var details = art.closest('details[data-day]');
-    var day = details && details.getAttribute('data-day');
-    if (!day) return;
-    body.innerHTML = body.innerHTML.replace(tzPattern, function (match, h, m, ampm) {
-      var hour = parseInt(h, 10) % 12;
-      if (ampm.toLowerCase() === 'pm') hour += 12;
-      var iso = day + 'T' + String(hour).padStart(2, '0') + ':' + m + ':00+05:30';
-      var local = fmtTime(new Date(iso));
-      return local || match;
-    });
-  });
-})();
-</script>
 </body>
 </html>
 """
