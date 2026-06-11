@@ -188,7 +188,13 @@
 <h2>Match log</h2>
 <span class="count" id="match-count">Day 1 of 39</span>
 </div>
-<main id="days"><details data-day="2026-06-11" open><summary>Thursday, June 11, 2026</summary><article data-type="morning_brief" id="msg-2026-06-11-morning_brief-0"><div class="meta"><span class="tag morning">Morning brief</span><span class="when"></span></div><div class="body">FIFA World Cup 2026 — Matchday Brief
+<main id="days"><details data-day="2026-06-11" open><summary>Thursday, June 11, 2026</summary><article data-type="morning_brief" data-generated="2026-06-11T06:13:04.837268-07:00" id="msg-2026-06-11-morning_brief-1"><div class="meta"><span class="tag morning">Morning brief</span><span class="when"><span>12:00pm PT</span><span>2:00pm CT</span><span>3:00pm ET</span><span>12:30am IST</span></span></div><div class="body">FIFA World Cup 2026 — Matchday Brief
+Date: 2026-06-11
+
+Mexico vs South Africa  —  Kickoff 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)
+  Prediction: <strong>Mexico</strong>  |  Home 75.4%  Draw 16.5%  Away 8.1%
+South Korea vs Czech Republic  —  Kickoff 7:00pm PT / 9:00pm CT / 10:00pm ET / 7:30am IST (+1d)
+  Prediction: <strong>South Korea</strong>  |  Home 49.3%  Draw 30.8%  Away 19.9%</div></article><article data-type="morning_brief" id="msg-2026-06-11-morning_brief-0"><div class="meta"><span class="tag morning">Morning brief</span><span class="when"></span></div><div class="body">FIFA World Cup 2026 — Matchday Brief
 Date: 2026-06-11
 
 Mexico vs South Africa  |  Prediction: <strong>Mexico</strong>  |  Home 75.4%  Draw 16.5%  Away 8.1%
@@ -218,47 +224,5 @@ South Korea vs Czech Republic  |  Prediction: <strong>South Korea</strong>  |  H
 <span class="links">fifa.com · ESPN FC</span>
 </footer>
 </div>
-<script>
-(function () {
-  // Render every time on the page in the visitor's local time zone instead
-  // of the fixed IST/ET/CT/PT list. Two passes: (1) the .when stamp next to
-  // each article tag uses the article's data-generated (an ISO timestamp);
-  // (2) the multi-TZ inline strings inside .body get rewritten by parsing
-  // the IST anchor plus the parent details[data-day].
-
-  function fmtTime(d) {
-    if (isNaN(d)) return '';
-    return d.toLocaleString(undefined, {
-      hour: 'numeric', minute: '2-digit', hour12: true, timeZoneName: 'short'
-    });
-  }
-
-  document.querySelectorAll('article[data-generated]').forEach(function (art) {
-    var iso = art.getAttribute('data-generated');
-    var when = art.querySelector('.when');
-    if (!iso || !when) return;
-    var d = new Date(iso);
-    var local = fmtTime(d);
-    if (local) when.innerHTML = '<span>' + local + '</span>';
-  });
-
-  var tzPattern = /(\d{1,2}):(\d{2})\s*(am|pm)\s*IST\s*\/\s*\d{1,2}:\d{2}\s*(?:am|pm)\s*ET\s*\/\s*\d{1,2}:\d{2}\s*(?:am|pm)\s*CT\s*\/\s*\d{1,2}:\d{2}\s*(?:am|pm)\s*PT/gi;
-
-  document.querySelectorAll('details[data-day] article').forEach(function (art) {
-    var body = art.querySelector('.body');
-    if (!body) return;
-    var details = art.closest('details[data-day]');
-    var day = details && details.getAttribute('data-day');
-    if (!day) return;
-    body.innerHTML = body.innerHTML.replace(tzPattern, function (match, h, m, ampm) {
-      var hour = parseInt(h, 10) % 12;
-      if (ampm.toLowerCase() === 'pm') hour += 12;
-      var iso = day + 'T' + String(hour).padStart(2, '0') + ':' + m + ':00+05:30';
-      var local = fmtTime(new Date(iso));
-      return local || match;
-    });
-  });
-})();
-</script>
 </body>
 </html>
