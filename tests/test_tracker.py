@@ -183,11 +183,35 @@ def test_fetch_error_degrades(tmp_path):
 # ---------------------------------------------------------------------------
 
 def test_norm_aliases():
-    assert tracker._norm(" Korea Republic ") == "south korea"
-    assert tracker._norm("USA") == "usa"
-    assert tracker._norm("United States") == "usa"
-    assert tracker._norm("IR Iran") == "iran"
-    assert tracker._norm("Czechia") == "czech republic"
+    # Callers compare _norm to _norm; assert pairs unify, not literal forms.
+    assert tracker._norm(" Korea Republic ") == tracker._norm("South Korea")
+    assert tracker._norm("United States") == tracker._norm("USA")
+    assert tracker._norm("IR Iran") == tracker._norm("Iran")
+    assert tracker._norm("Czechia") == tracker._norm("Czech Republic")
+
+
+def test_norm_unifies_punctuation_variants():
+    # Day-2 live bug: ESPN 'Bosnia-Herzegovina' vs seed 'Bosnia & Herzegovina'
+    # silently dropped the Canada result. Squashing must unify these forever.
+    seed = "Bosnia & Herzegovina"
+    for feed in ("Bosnia-Herzegovina", "Bosnia Herzegovina",
+                 "Bosnia and Herzegovina"):
+        assert tracker._norm(feed) == tracker._norm(seed), feed
+    assert tracker._norm("Côte d'Ivoire") == tracker._norm("Ivory Coast")
+
+
+def test_reconcile_bosnia_hyphen_feed_maps_to_seed():
+    from src import fixtures
+    seed = fixtures.load_seed()
+    bos = next(m for m in seed["matches"]
+               if "Bosnia" in (m["home"] + m["away"]))
+    raw = {"espn-bos": {
+        "home": bos["home"].replace(" & ", "-"),
+        "away": bos["away"].replace(" & ", "-"),
+        "date": bos["date"], "home_goals": 1, "away_goals": 1, "status": "FT"}}
+    out = tracker.reconcile_results(raw, seed)
+    assert out.get(bos["id"]) == {"home_goals": 1, "away_goals": 1,
+                                  "status": "FT"}
 
 
 def test_reconcile_results_maps_to_seed_ids():

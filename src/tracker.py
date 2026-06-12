@@ -15,7 +15,9 @@ Exit codes (consumed by CI):
 from __future__ import annotations
 
 import os
+import re
 import sys
+import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable
@@ -56,23 +58,35 @@ class Config:
 # Name normalization + feed reconciliation
 # ---------------------------------------------------------------------------
 
-# Map common feed spellings to the canonical names used in data/fixtures.json.
+# Map common feed spellings to the canonical (squashed) names used in
+# data/fixtures.json. Keys and values are post-squash forms.
 _ALIASES = {
-    "korea republic": "south korea",
-    "republic of korea": "south korea",
-    "united states": "usa",
-    "united states of america": "usa",
-    "ir iran": "iran",
-    "czechia": "czech republic",
-    "côte d'ivoire": "ivory coast",
-    "cote d'ivoire": "ivory coast",
+    "korearepublic": "southkorea",
+    "republicofkorea": "southkorea",
+    "unitedstates": "usa",
+    "unitedstatesofamerica": "usa",
+    "iriran": "iran",
+    "czechia": "czechrepublic",
+    "cotedivoire": "ivorycoast",
+    # ESPN sometimes spells the ampersand out ("Bosnia and Herzegovina");
+    # squashing alone can't unify "&" with "and", so alias it explicitly.
+    "bosniaandherzegovina": "bosniaherzegovina",
 }
+
+_SQUASH_RE = re.compile(r"[^a-z0-9]+")
 
 
 def _norm(name: str) -> str:
-    """Lowercase, strip, and apply the alias table so feed names line up with seed
-    names. Returns the canonical lowercase form (callers compare _norm to _norm)."""
-    n = (name or "").strip().lower()
+    """Canonicalize a team name for feed<->seed matching: lowercase, strip
+    ALL non-alphanumerics (so 'Bosnia-Herzegovina' and 'Bosnia & Herzegovina'
+    unify), then apply the alias table. Callers compare _norm to _norm — the
+    canonical form is internal only.
+
+    Burned by punctuation on day 2: ESPN's 'Bosnia-Herzegovina' vs the seed's
+    'Bosnia & Herzegovina' silently dropped the Canada match's result."""
+    n = unicodedata.normalize("NFKD", (name or ""))
+    n = n.encode("ascii", "ignore").decode()  # ô -> o, ç -> c
+    n = _SQUASH_RE.sub("", n.strip().lower())
     return _ALIASES.get(n, n)
 
 
