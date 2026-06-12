@@ -60,6 +60,15 @@ NOTE: do NOT apply the KCL Bauhaus brand to this site — explicit KC override.
 - Telegram opt-in invite sent to Ankit via @Kipl26bot (msg 156); he gets added to
   TELEGRAM_CHAT_IDS only after replying YES. Session watcher polls getUpdates.
 
+## Incident (2026-06-12): missed Canada vs Bosnia messages
+ESPN names the team `Bosnia-Herzegovina`; the seed says `Bosnia & Herzegovina`.
+`_norm` compared raw lowercase strings -> reconcile silently dropped the match ->
+no half-time, no result, recap stalled. FIX: `_norm` now strips diacritics (NFKD)
+plus all non-alphanumerics before alias lookup (aliases re-keyed to squashed
+forms; explicit `bosniaandherzegovina` alias since squash can't unify & with
+'and'). The stale-code live run was cancelled so the queued run picks up the fix.
+Half-time for that match is permanently missed; the result sends on the next run.
+
 ## NEXT
 - Add Ankit's chat ID (8954471490) to TELEGRAM_CHAT_IDS if/when he replies YES.
 - Confirm a Telegram brief lands on KC's phone once the tournament starts (Jun 11).
