@@ -9,3 +9,6 @@ venv/
 ml/.venv/
 ml/data/historical/*
 !ml/data/historical/.gitkeep
+
+# live-mode continuation flag (consumed by the workflow, never committed)
+.live-continue

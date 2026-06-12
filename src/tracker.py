@@ -24,12 +24,12 @@ from typing import Callable
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
     from src import (bracket_sim, data_fetcher, fixtures, html_archive,
-                     message_builder, ml_predictor, predictor, state,
-                     telegram_sender)
+                     live_loop, message_builder, ml_predictor, predictor,
+                     state, telegram_sender)
 else:
     from . import (bracket_sim, data_fetcher, fixtures, html_archive,
-                   message_builder, ml_predictor, predictor, state,
-                   telegram_sender)
+                   live_loop, message_builder, ml_predictor, predictor,
+                   state, telegram_sender)
 
 
 HOSTS = {"Mexico", "USA", "Canada"}
@@ -428,8 +428,9 @@ def run(cfg: Config) -> int:
 # Entry point
 # ---------------------------------------------------------------------------
 
-def main() -> None:
-    root = Path(__file__).resolve().parents[1]
+def _build_cfg(root: Path) -> Config:
+    """Fresh Config per cycle: now_iso rolls over at PT midnight and the seed
+    is reloaded so long live-mode loops pick up rebased fixture changes."""
     token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
     chat_ids = [c for c in os.environ.get("TELEGRAM_CHAT_IDS", "").split(",") if c]
     cache_path = root / "data" / "cache" / "results.json"
@@ -437,7 +438,7 @@ def main() -> None:
 
     seed = fixtures.load_seed()
 
-    cfg = Config(
+    return Config(
         state_path=root / "state.json",
         html_path=root / "docs" / "index.html",
         cache_path=cache_path,
@@ -448,8 +449,37 @@ def main() -> None:
         sender=lambda text, **k: telegram_sender.send(text, token, chat_ids),
         now_iso=state.today_pt_iso(),
     )
+
+
+def main() -> None:
+    import argparse
+    parser = argparse.ArgumentParser(description="2026 World Cup tracker")
+    parser.add_argument("--live", action="store_true",
+                        help="poll through the matchday window instead of a "
+                             "single cycle (catches half-time breaks)")
+    args = parser.parse_args()
+
+    root = Path(__file__).resolve().parents[1]
     (root / "docs").mkdir(parents=True, exist_ok=True)
-    sys.exit(run(cfg))
+
+    if not args.live:
+        sys.exit(run(_build_cfg(root)))
+
+    autocommit = os.environ.get("GIT_AUTOCOMMIT") == "1"
+
+    def run_once() -> int:
+        code = run(_build_cfg(root))
+        if autocommit:
+            live_loop.git_sync()
+        return code
+
+    kickoffs = live_loop.kickoffs_from_matches(
+        fixtures.load_seed().get("matches", []))
+    code, cont = live_loop.live_loop(run_once, kickoffs)
+    if cont:
+        # The workflow dispatches a continuation run when this flag exists.
+        (root / ".live-continue").write_text("1\n")
+    sys.exit(code)
 
 
 if __name__ == "__main__":

@@ -5,28 +5,44 @@ on:
   workflow_dispatch: {}
 permissions:
   contents: write
+  actions: write            # lets a capped live run dispatch its continuation
 concurrency:
   group: tracker
   cancel-in-progress: false
 jobs:
   run:
     runs-on: ubuntu-latest
+    timeout-minutes: 350    # live loop self-caps at 5h20m, well inside this
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
-      - name: Run tracker
+      - name: Configure git identity
+        run: |
+          git config user.name "wc2026-tracker"
+          git config user.email "actions@users.noreply.github.com"
+      - name: Run tracker (live mode)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_IDS: ${{ secrets.TELEGRAM_CHAT_IDS }}
           FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
-        run: python -m src.tracker
+          GIT_AUTOCOMMIT: "1"   # commit+push after each live cycle so sent-state survives hard kills
+        run: python -m src.tracker --live
       - name: Commit and push results
+        if: always()
         run: |
-          git config user.name "wc2026-tracker"
-          git config user.email "actions@users.noreply.github.com"
           git add state.json docs/
           git diff --cached --quiet || git commit -m "update: tracker run $(date -u +%FT%TZ)"
+          git pull --rebase
           git push
+      - name: Chain continuation run
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f .live-continue ]; then
+            echo "Live window still open at runtime cap - dispatching continuation"
+            gh workflow run tracker.yml --ref main
+          fi
