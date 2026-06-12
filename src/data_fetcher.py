@@ -1,10 +1,25 @@
 """Tiered fetch of live results, with cache fallback."""
 from __future__ import annotations
 import json
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 import requests
 
 ESPN_URL = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard"
+
+_PT = ZoneInfo("America/Los_Angeles")
+
+
+def _pt_date(iso_utc: str) -> str:
+    """PT calendar date for an ESPN UTC timestamp. Seed fixture dates are PT,
+    so evening kickoffs (>= 17:00 PT = 00:00 UTC next day) must be converted
+    or reconcile_results drops them on the date mismatch."""
+    try:
+        dt = datetime.fromisoformat((iso_utc or "").replace("Z", "+00:00"))
+    except ValueError:
+        return (iso_utc or "")[:10]
+    return dt.astimezone(_PT).date().isoformat()
 
 
 def _team_name(competitor: dict) -> str:
@@ -37,7 +52,7 @@ def parse_espn(payload: dict) -> dict:
         out[ev["id"]] = {
             "home": _team_name(h),
             "away": _team_name(a),
-            "date": (ev.get("date") or "")[:10],  # ISO timestamp -> YYYY-MM-DD
+            "date": _pt_date(ev.get("date") or ""),
             "home_goals": int(h["score"]),
             "away_goals": int(a["score"]),
             "status": "FT" if completed else "HT",

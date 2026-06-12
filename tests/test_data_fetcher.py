@@ -54,3 +54,27 @@ def test_parse_espn_still_skips_first_half_in_progress():
             {"homeAway": "home", "score": "1", "team": {"displayName": "USA"}},
             {"homeAway": "away", "score": "0", "team": {"displayName": "Canada"}}]}]}]}
     assert df.parse_espn(sample) == {}
+
+
+def test_parse_espn_converts_utc_date_to_pt_date():
+    # Tonight's bug: South Korea vs Czechia kicked off 2026-06-12T02:00 UTC,
+    # which is 2026-06-11 19:00 PT. Seed fixture dates are PT, so the feed
+    # entry must carry the PT date or reconcile_results silently drops it.
+    sample = {"events": [{"id": "405", "date": "2026-06-12T02:00Z",
+        "status": {"type": {"completed": True}},
+        "competitions": [{"competitors": [
+            {"homeAway": "home", "score": "2", "team": {"displayName": "South Korea"}},
+            {"homeAway": "away", "score": "1", "team": {"displayName": "Czechia"}}]}]}]}
+    out = df.parse_espn(sample)
+    assert out["405"]["date"] == "2026-06-11"
+
+
+def test_parse_espn_halftime_also_uses_pt_date():
+    sample = {"events": [{"id": "406", "date": "2026-06-12T02:00Z",
+        "status": {"type": {"completed": False, "name": "STATUS_HALFTIME"}},
+        "competitions": [{"competitors": [
+            {"homeAway": "home", "score": "1", "team": {"displayName": "South Korea"}},
+            {"homeAway": "away", "score": "0", "team": {"displayName": "Czechia"}}]}]}]}
+    out = df.parse_espn(sample)
+    assert out["406"]["date"] == "2026-06-11"
+    assert out["406"]["status"] == "HT"
