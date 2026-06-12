@@ -23,6 +23,39 @@ _KICKOFF_ZONES = (
     ("IST", ZoneInfo("Asia/Kolkata")),
 )
 
+# Host country per 2026 venue city (fixtures carry city-only venue strings).
+_VENUE_COUNTRY = {
+    "Atlanta": "USA",
+    "Boston (Foxborough)": "USA",
+    "Dallas (Arlington)": "USA",
+    "Guadalajara (Zapopan)": "Mexico",
+    "Houston": "USA",
+    "Kansas City": "USA",
+    "Los Angeles (Inglewood)": "USA",
+    "Mexico City": "Mexico",
+    "Miami (Miami Gardens)": "USA",
+    "Monterrey (Guadalupe)": "Mexico",
+    "New York/New Jersey (East Rutherford)": "USA",
+    "Philadelphia": "USA",
+    "San Francisco Bay Area (Santa Clara)": "USA",
+    "Seattle": "USA",
+    "Toronto": "Canada",
+    "Vancouver": "Canada",
+}
+
+
+def place(venue: str) -> str:
+    """'Mexico City, Mexico' from a venue city; city-only when unmapped,
+    '' when missing."""
+    if not venue:
+        return ""
+    country = _VENUE_COUNTRY.get(venue)
+    return f"{venue}, {country}" if country else venue
+
+
+def _place_of(match: dict) -> str:
+    return place(match.get("venue") or "")
+
 
 # ---------------------------------------------------------------------------
 # Private helpers
@@ -98,7 +131,9 @@ def _post_match_line(match: dict) -> str:
     tick = "✓" if predicted == actual else "✗"
 
     pred_label = _pick_label(match)
-    return f"{home} {hg}-{ag} {away}  {tick}  (Prediction: {pred_label})"
+    line = f"{home} {hg}-{ag} {away}  {tick}  (Prediction: {pred_label})"
+    loc = _place_of(match)
+    return f"{line}  —  {loc}" if loc else line
 
 
 # ---------------------------------------------------------------------------
@@ -125,15 +160,19 @@ def morning_brief(date_iso: str, matches: list[dict]) -> str:
         draw_pct = _pct(pred["draw"])
         away_pct = _pct(pred["away"])
         ko = kickoff_stack(m.get("kickoff_utc", ""), m.get("date", ""))
+        loc = _place_of(m)
+        vs = f"{m['home']} vs {m['away']}"
+        if loc:
+            vs += f"  —  {loc}"
         if ko:
-            lines.append(f"{m['home']} vs {m['away']}  —  Kickoff {ko}")
+            lines.append(f"{vs}  —  Kickoff {ko}")
             lines.append(
                 f"  Prediction: {pick}  |  "
                 f"Home {home_pct}  Draw {draw_pct}  Away {away_pct}"
             )
         else:
             lines.append(
-                f"{m['home']} vs {m['away']}  |  "
+                f"{vs}  |  "
                 f"Prediction: {pick}  |  "
                 f"Home {home_pct}  Draw {draw_pct}  Away {away_pct}"
             )
@@ -146,10 +185,13 @@ def half_time(match: dict, home_goals: int, away_goals: int) -> str:
     context (predictions are not re-run mid-match).
     """
     pick = _pick_label(match)
-    return (
-        f"Half-time: {match['home']} {home_goals}-{away_goals} {match['away']}\n"
-        f"Prediction: {pick}"
-    )
+    loc = _place_of(match)
+    lines = [f"Half-time: {match['home']} {home_goals}-{away_goals} "
+             f"{match['away']}"]
+    if loc:
+        lines.append(loc)
+    lines.append(f"Prediction: {pick}")
+    return "\n".join(lines)
 
 
 def post_match(match: dict) -> str:

@@ -204,3 +204,66 @@ def test_morning_brief_without_kickoff_keeps_single_line():
     body = mb.morning_brief("2026-06-11", matches)
     assert "Kickoff" not in body
     assert "Mexico vs South Africa  |  Prediction: Mexico" in body
+
+
+# --- venue (city, country) ---
+
+def _m(venue=None, **kw):
+    m = {"home": "USA", "away": "Mexico",
+         "prediction": {"home": 0.5, "draw": 0.3, "away": 0.2}}
+    if venue is not None:
+        m["venue"] = venue
+    m.update(kw)
+    return m
+
+
+def test_morning_brief_includes_city_country():
+    text = mb.morning_brief("2026-06-11", [_m(venue="Mexico City")])
+    assert "Mexico City, Mexico" in text
+
+
+def test_half_time_includes_city_country():
+    text = mb.half_time(_m(venue="Toronto"), 1, 0)
+    assert "Toronto, Canada" in text
+
+
+def test_post_match_includes_city_country():
+    text = mb.post_match(_m(venue="Atlanta",
+                            result={"home_goals": 2, "away_goals": 0}))
+    assert "Atlanta, USA" in text
+
+
+def test_daily_recap_includes_city_country():
+    text = mb.daily_recap(
+        "2026-06-11",
+        [_m(venue="Guadalajara (Zapopan)",
+            result={"home_goals": 1, "away_goals": 1})],
+        {})
+    assert "Guadalajara (Zapopan), Mexico" in text
+
+
+def test_unknown_venue_shows_city_without_country():
+    text = mb.half_time(_m(venue="Lunar Base"), 0, 0)
+    assert "Lunar Base" in text
+    assert "Lunar Base," not in text
+
+
+def test_missing_venue_messages_still_render():
+    text = mb.half_time(_m(), 2, 1)
+    assert "Half-time" in text and "USA 2-1 Mexico" in text
+    brief = mb.morning_brief("2026-06-11", [_m()])
+    assert "USA vs Mexico" in brief
+
+
+def test_all_16_host_cities_have_countries():
+    venues = [
+        "Atlanta", "Boston (Foxborough)", "Dallas (Arlington)",
+        "Guadalajara (Zapopan)", "Houston", "Kansas City",
+        "Los Angeles (Inglewood)", "Mexico City", "Miami (Miami Gardens)",
+        "Monterrey (Guadalupe)", "New York/New Jersey (East Rutherford)",
+        "Philadelphia", "San Francisco Bay Area (Santa Clara)",
+        "Seattle", "Toronto", "Vancouver",
+    ]
+    for v in venues:
+        place = mb.place(v)
+        assert place.startswith(v) and ", " in place, place
