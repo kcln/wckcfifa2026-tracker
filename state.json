@@ -77,6 +77,14 @@
           "hash": "2eb294858adc3642",
           "generated_at": "2026-06-12T15:02:22.294247-07:00",
           "kickoff_utc": "2026-06-12T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "Half-time: USA 3-0 Paraguay\nLos Angeles (Inglewood), USA\nPrediction: Paraguay",
+          "sent": true,
+          "hash": "8c2992b5442e0415",
+          "generated_at": "2026-06-12T18:54:29.762160-07:00",
+          "kickoff_utc": "2026-06-13T01:00:00Z"
         }
       ]
     }
