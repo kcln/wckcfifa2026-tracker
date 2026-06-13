@@ -114,6 +114,14 @@
           "hash": "36954ed43a117b0d",
           "generated_at": "2026-06-13T01:14:18.491992-07:00",
           "kickoff_utc": "2026-06-13T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "Half-time: Qatar 0-1 Switzerland\nSan Francisco Bay Area (Santa Clara), USA\nPrediction: Switzerland",
+          "sent": true,
+          "hash": "6163775b66ccd6e3",
+          "generated_at": "2026-06-13T12:58:19.457414-07:00",
+          "kickoff_utc": "2026-06-13T19:00:00Z"
         }
       ]
     }
