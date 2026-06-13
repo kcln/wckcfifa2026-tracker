@@ -130,6 +130,14 @@
           "hash": "8483b46bf2b37b3c",
           "generated_at": "2026-06-13T14:08:27.427095-07:00",
           "kickoff_utc": "2026-06-13T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "Half-time: Brazil 1-1 Morocco\nNew York/New Jersey (East Rutherford), USA\nPrediction: Brazil",
+          "sent": true,
+          "hash": "5e63342ba7d79fed",
+          "generated_at": "2026-06-13T15:55:10.543935-07:00",
+          "kickoff_utc": "2026-06-13T22:00:00Z"
         }
       ]
     }
