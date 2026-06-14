@@ -42,7 +42,18 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if [ -f .live-continue ]; then
+          if [ -f .season-ended ]; then
+            echo "Tournament over - not chaining."
+          elif [ -f .live-continue ]; then
             echo "Live window still open at runtime cap - dispatching continuation"
             gh workflow run tracker.yml --ref main
+          fi
+      - name: Stop scheduled runs after the tournament
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f .season-ended ]; then
+            echo "Tournament over - disabling the scheduled workflow."
+            gh workflow disable tracker.yml --repo "${{ github.repository }}" || true
           fi

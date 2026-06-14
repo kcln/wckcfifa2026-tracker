@@ -287,3 +287,33 @@ def test_build_catchup_options():
 def test_build_catchup_empty_day_has_friendly_fallback():
     out = tracker.build_catchup({"days": []}, "2026-06-14", 1)
     assert len(out) == 1 and "live" in out[0].lower()
+
+
+def test_prev_day_iso():
+    assert tracker._prev_day_iso("2026-06-14") == "2026-06-13"
+    assert tracker._prev_day_iso("2026-07-01") == "2026-06-30"
+
+
+def test_recap_and_result_fire_for_prior_day_after_midnight():
+    # A match KICKS OFF on 06-13 (PT) but finishes after midnight; the tracker
+    # is now on 06-14. Its result AND the 06-13 recap must still fire.
+    merged = {"groups": {"A": ["X", "Y"]},
+              "matches": [
+                  {"id": "1", "home": "X", "away": "Y", "date": "2026-06-13",
+                   "stage": "group", "group": "A",
+                   "kickoff_utc": "2026-06-14T04:00:00Z",
+                   "result": {"home_goals": 2, "away_goals": 0}}]}
+    st = {"days": [], "season_ended": False}
+    mp = lambda h, a: {"home": 0.5, "draw": 0.3, "away": 0.2}
+    tracker._due_messages(st, merged, mp, "2026-06-14")
+    day = next(d for d in st["days"] if d["date"] == "2026-06-13")
+    types = [m["type"] for m in day["messages"]]
+    assert "post_match" in types and "daily_recap" in types
+
+
+def test_tournament_over():
+    merged = {"matches": [{"id": "f", "stage": "final", "date": "2026-07-19"}]}
+    assert tracker._tournament_over(merged, {"season_ended": True}, "2026-06-14")
+    assert not tracker._tournament_over(merged, {}, "2026-07-19")
+    assert not tracker._tournament_over(merged, {}, "2026-07-21")  # within 3d grace
+    assert tracker._tournament_over(merged, {}, "2026-07-23")      # past final+3d

@@ -271,45 +271,42 @@ def _latest_result(merged: dict) -> dict | None:
     }
 
 
-def _due_messages(stateobj: dict, merged: dict, match_prob, now_iso: str,
-                  live: dict | None = None) -> None:
-    """Compute and append all messages that are due for `now_iso` (deduped).
+def _prev_day_iso(now_iso: str) -> str:
+    """The PT calendar day before `now_iso` (YYYY-MM-DD)."""
+    return (datetime.strptime(now_iso, "%Y-%m-%d").date()
+            - timedelta(days=1)).isoformat()
 
-    Order of appends matters: morning_brief, then per-match post_match, then
-    half_time (live matches at the break), then daily_recap, then
-    bracket_update, then (terminal) champion_recap. The newest message is the
-    last appended one in the latest day.
 
-    `live` is the reconciled feed {seed_id: {home_goals, away_goals, status}};
-    entries with status "HT" drive half-time updates. Half-time bodies embed
-    the frozen break score, so the (type, date, body) hash dedupes repeat
-    sightings of the same break across runs.
-    """
-    existing = _all_hashes(stateobj)
-    todays = _matches_on(merged, now_iso)
+def _due_for_day(stateobj: dict, merged: dict, match_prob, date_iso: str,
+                 *, is_today: bool, live: dict | None, existing: set) -> None:
+    """Append all due messages for the matches whose PT KICKOFF date is
+    `date_iso`: morning brief, per-match results, (live-day-only) half-times,
+    the daily recap, and any knockout bracket update. All deduped by hash.
 
+    Because a day is keyed by kickoff date, a match that starts late and ends
+    after PT midnight is still handled here when this day is reprocessed the
+    next calendar day — so its result and the day's recap always land."""
+    todays = _matches_on(merged, date_iso)
     if not todays:
-        # Still handle the post-final terminal case below.
-        pass
+        return
+    day = _get_day(stateobj, date_iso)
+    todays_pred = [_with_prediction(m, match_prob) for m in todays]
 
-    day = _get_day(stateobj, now_iso) if todays else None
+    # 1) Morning brief — once per day with matches.
+    brief = message_builder.morning_brief(date_iso, todays_pred)
+    _add_message(day, existing, "morning_brief", date_iso, brief,
+                 kickoff_utc=_first_kickoff(todays))
 
-    if todays:
-        todays_pred = [_with_prediction(m, match_prob) for m in todays]
+    # 2) Post-match — per finished match (fires even when reprocessing a prior
+    #    day, so a past-midnight finish still gets its result).
+    for mp in todays_pred:
+        if mp.get("result"):
+            body = message_builder.post_match(mp)
+            _add_message(day, existing, "post_match", date_iso, body,
+                         kickoff_utc=mp.get("kickoff_utc") or "")
 
-        # 1) Morning brief — once per day with matches.
-        brief = message_builder.morning_brief(now_iso, todays_pred)
-        _add_message(day, existing, "morning_brief", now_iso, brief,
-                     kickoff_utc=_first_kickoff(todays))
-
-        # 2) Post-match — per finished match.
-        for mp in todays_pred:
-            if mp.get("result"):
-                body = message_builder.post_match(mp)
-                _add_message(day, existing, "post_match", now_iso, body,
-                             kickoff_utc=mp.get("kickoff_utc") or "")
-
-        # 2.5) Half-time — per live match currently at the break.
+    # 2.5) Half-time — only for the live (today) day; prior-day matches are done.
+    if is_today:
         for mp in todays_pred:
             entry = (live or {}).get(mp.get("id"))
             if (entry and entry.get("status") == "HT"
@@ -317,34 +314,48 @@ def _due_messages(stateobj: dict, merged: dict, match_prob, now_iso: str,
                 body = message_builder.half_time(
                     mp, entry["home_goals"], entry["away_goals"],
                     events=entry.get("events"))
-                _add_message(day, existing, "half_time", now_iso, body,
+                _add_message(day, existing, "half_time", date_iso, body,
                              kickoff_utc=mp.get("kickoff_utc") or "")
 
-        # 3) Daily recap — fire once per day when every match is resolved,
-        #    OR when the day is clock-complete (so one unreconciled match
-        #    can't silently swallow the whole recap, as Türkiye did on
-        #    June 13). Requires at least one resolved match either way.
-        already_recapped = any(mm.get("type") == "daily_recap"
-                               for mm in day["messages"])
-        any_resolved = any(m.get("result") for m in todays)
-        all_resolved = all(m.get("result") for m in todays)
-        if any_resolved and not already_recapped and (
-                all_resolved
-                or _day_clock_complete(todays, datetime.now(timezone.utc))):
-            tables = _group_tables_for(merged)
-            recap = message_builder.daily_recap(now_iso, todays_pred, tables)
-            _add_message(day, existing, "daily_recap", now_iso, recap,
-                         kickoff_utc=_first_kickoff(todays))
+    # 3) Daily recap — once per day, when every match is resolved OR the day is
+    #    clock-complete. Fires regardless of the current PT date, so the recap
+    #    lands after the last match even if that's after midnight.
+    already_recapped = any(mm.get("type") == "daily_recap"
+                           for mm in day["messages"])
+    any_resolved = any(m.get("result") for m in todays)
+    all_resolved = all(m.get("result") for m in todays)
+    if any_resolved and not already_recapped and (
+            all_resolved
+            or _day_clock_complete(todays, datetime.now(timezone.utc))):
+        tables = _group_tables_for(merged)
+        recap = message_builder.daily_recap(date_iso, todays_pred, tables)
+        _add_message(day, existing, "daily_recap", date_iso, recap,
+                     kickoff_utc=_first_kickoff(todays))
 
-        # 4) Bracket update — on any knockout date.
-        if any(m["stage"] != "group" for m in todays):
-            bracket = stateobj.get("bracket") or {}
-            body = message_builder.bracket_update(
-                bracket.get("title_odds") or {},
-                bracket.get("advancement") or {},
-            )
-            _add_message(day, existing, "bracket_update", now_iso, body,
-                         kickoff_utc=_first_kickoff(todays))
+    # 4) Bracket update — on any knockout date.
+    if any(m["stage"] != "group" for m in todays):
+        bracket = stateobj.get("bracket") or {}
+        body = message_builder.bracket_update(
+            bracket.get("title_odds") or {},
+            bracket.get("advancement") or {},
+        )
+        _add_message(day, existing, "bracket_update", date_iso, body,
+                     kickoff_utc=_first_kickoff(todays))
+
+
+def _due_messages(stateobj: dict, merged: dict, match_prob, now_iso: str,
+                  live: dict | None = None) -> None:
+    """Compute and append all due messages (deduped).
+
+    Processes today AND the immediately previous PT day, so a match that ends
+    after PT midnight still gets its result and its day's recap — the day is
+    keyed by PT KICKOFF date. No deeper history is scanned (going forward only).
+    """
+    existing = _all_hashes(stateobj)
+    _due_for_day(stateobj, merged, match_prob, _prev_day_iso(now_iso),
+                 is_today=False, live=None, existing=existing)
+    _due_for_day(stateobj, merged, match_prob, now_iso,
+                 is_today=True, live=live, existing=existing)
 
     # 5) Champion recap — once, after the final is done (or now past it).
     if not stateobj.get("season_ended"):
@@ -468,11 +479,41 @@ def run(cfg: Config) -> int:
         send_code = _send_pending(stateobj, cfg)
         state.save(cfg.state_path, stateobj)
 
+        # Stop the tracker for good once the tournament is over: the champion
+        # recap set season_ended, or we're well past the final. Drop a sentinel
+        # the workflow uses to disable its schedule (no endless empty runs).
+        if _tournament_over(merged, stateobj, cfg.now_iso):
+            try:
+                (Path(cfg.state_path).parent / ".season-ended").write_text("1\n")
+            except Exception:
+                pass
+
         if send_code == 2:
             return 2
         return 0
     except Exception:
         return 1
+
+
+# How long after the final to keep running as a failsafe if the champion recap
+# never fired (e.g. the final's result never reconciled).
+_POST_FINAL_GRACE = timedelta(days=3)
+
+
+def _tournament_over(merged: dict, stateobj: dict, now_iso: str) -> bool:
+    """True once the World Cup is done — either the champion recap has fired
+    (season_ended) or we're more than the grace period past the final's date."""
+    if stateobj.get("season_ended"):
+        return True
+    fin = _final_match(merged)
+    if fin and fin.get("date"):
+        try:
+            final_date = datetime.strptime(fin["date"], "%Y-%m-%d").date()
+            today = datetime.strptime(now_iso, "%Y-%m-%d").date()
+            return today > final_date + _POST_FINAL_GRACE
+        except ValueError:
+            return False
+    return False
 
 
 # ---------------------------------------------------------------------------
@@ -582,7 +623,8 @@ def main() -> None:
     kickoffs = live_loop.kickoffs_from_matches(
         fixtures.load_seed().get("matches", []))
     code, cont = live_loop.live_loop(run_once, kickoffs)
-    if cont:
+    # Don't chain a continuation once the tournament is over — let it wind down.
+    if cont and not (root / ".season-ended").exists():
         # The workflow dispatches a continuation run when this flag exists.
         (root / ".live-continue").write_text("1\n")
     sys.exit(code)

@@ -12,3 +12,5 @@ ml/data/historical/*
 
 # live-mode continuation flag (consumed by the workflow, never committed)
 .live-continue
+.live-continue
+.season-ended
