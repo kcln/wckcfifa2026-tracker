@@ -227,11 +227,15 @@ def post_match(match: dict) -> str:
     """
     Single post-match result summary.
 
-    Shows the scoreline and ✓/✗ for whether the pre-match argmax prediction
-    matched the actual outcome, followed by goal scorers and red cards
-    (player, country, minute) when the feed provides them.
+    Leads with a "Full time" label (soccer's final-whistle term, parallel to
+    the "Half-time:" updates), then the scoreline and ✓/✗ for whether the
+    pre-match argmax prediction matched the actual outcome, followed by goal
+    scorers and red cards (player, country, minute) when the feed provides them.
+
+    The label is its own line — kept off the score line so the archive's
+    winner-bolding still targets the team names, not the label.
     """
-    lines = [_post_match_line(match)]
+    lines = ["Full time", _post_match_line(match)]
     lines.extend(_event_lines((match.get("result") or {}).get("events")))
     return "\n".join(lines)
 

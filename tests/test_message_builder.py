@@ -314,3 +314,16 @@ def test_messages_without_events_have_no_event_lines():
              "prediction": {"home": 0.5, "draw": 0.3, "away": 0.2},
              "result": {"home_goals": 0, "away_goals": 0}}
     assert "⚽" not in mb.post_match(match)
+
+
+def test_post_match_leads_with_full_time_label():
+    m = {"home": "Brazil", "away": "Morocco",
+         "prediction": {"home": 0.6, "draw": 0.25, "away": 0.15},
+         "result": {"home_goals": 1, "away_goals": 1, "events": _EVENTS}}
+    body = mb.post_match(m)
+    assert body.startswith("Full time\n")
+    # label is its own line; score line stays intact below it
+    assert body.splitlines()[1].startswith("Brazil 1-1 Morocco")
+    # daily-recap result lines must NOT carry the label (only post_match does)
+    recap = mb.daily_recap("2026-06-13", [m], {})
+    assert "Full time" not in recap
