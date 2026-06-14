@@ -224,6 +224,15 @@
           "generated_at": "2026-06-14T16:02:28.335398-07:00",
           "kickoff_utc": "2026-06-14T20:00:00Z",
           "key": "pm-2026-06-14-31"
+        },
+        {
+          "type": "half_time",
+          "body": "Half-time: Ivory Coast 0-0 Ecuador\nPhiladelphia, USA\nPrediction: Ecuador",
+          "sent": true,
+          "hash": "6b25e82eb696b406",
+          "key": "ht-2026-06-14-26",
+          "generated_at": "2026-06-14T16:55:31.260219-07:00",
+          "kickoff_utc": "2026-06-14T23:00:00Z"
         }
       ]
     }
