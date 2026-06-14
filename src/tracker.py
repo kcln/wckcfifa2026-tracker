@@ -19,6 +19,7 @@ import re
 import sys
 import unicodedata
 from dataclasses import dataclass
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Callable
 
@@ -68,6 +69,10 @@ _ALIASES = {
     "iriran": "iran",
     "czechia": "czechrepublic",
     "cotedivoire": "ivorycoast",
+    # ESPN uses the endonyms; the seed uses common English names. Day-3 the
+    # 'Türkiye' (-> turkiye) vs seed 'Turkey' mismatch silently dropped
+    # Australia 2-0 Türkiye, which blocked the whole June-13 daily recap.
+    "turkiye": "turkey",
     # ESPN sometimes spells the ampersand out ("Bosnia and Herzegovina");
     # squashing alone can't unify "&" with "and", so alias it explicitly.
     "bosniaandherzegovina": "bosniaherzegovina",
@@ -212,6 +217,27 @@ def _with_prediction(match: dict, match_prob) -> dict:
     return out
 
 
+_DAY_DONE_AFTER = timedelta(hours=3, minutes=30)  # latest plausible final whistle
+
+
+def _day_clock_complete(matches: list[dict], now_dt: datetime) -> bool:
+    """True once every today match's kickoff + ~3.5h has passed — i.e. the
+    day is over by the clock. Used as a fallback so a match that never
+    reconciles (a feed name mismatch) can't silently block the daily recap
+    forever. Returns False if any match lacks a parseable kickoff."""
+    latest = None
+    for m in matches:
+        ko = m.get("kickoff_utc")
+        if not ko:
+            return False
+        try:
+            dt = datetime.fromisoformat(ko.replace("Z", "+00:00"))
+        except ValueError:
+            return False
+        latest = dt if latest is None else max(latest, dt)
+    return latest is not None and now_dt >= latest + _DAY_DONE_AFTER
+
+
 def _group_tables_for(merged: dict) -> dict:
     """Compute current group tables {letter: rows} from merged fixtures."""
     by_group = {g: [] for g in merged["groups"]}
@@ -294,8 +320,17 @@ def _due_messages(stateobj: dict, merged: dict, match_prob, now_iso: str,
                 _add_message(day, existing, "half_time", now_iso, body,
                              kickoff_utc=mp.get("kickoff_utc") or "")
 
-        # 3) Daily recap — once all of today's matches have results.
-        if all(m.get("result") for m in todays):
+        # 3) Daily recap — fire once per day when every match is resolved,
+        #    OR when the day is clock-complete (so one unreconciled match
+        #    can't silently swallow the whole recap, as Türkiye did on
+        #    June 13). Requires at least one resolved match either way.
+        already_recapped = any(mm.get("type") == "daily_recap"
+                               for mm in day["messages"])
+        any_resolved = any(m.get("result") for m in todays)
+        all_resolved = all(m.get("result") for m in todays)
+        if any_resolved and not already_recapped and (
+                all_resolved
+                or _day_clock_complete(todays, datetime.now(timezone.utc))):
             tables = _group_tables_for(merged)
             recap = message_builder.daily_recap(now_iso, todays_pred, tables)
             _add_message(day, existing, "daily_recap", now_iso, recap,

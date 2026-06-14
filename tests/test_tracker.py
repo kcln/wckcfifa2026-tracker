@@ -250,3 +250,22 @@ def test_messages_carry_match_kickoff(tmp_path):
     post = next(m for m in day["messages"] if m["type"] == "post_match")
     assert brief["kickoff_utc"]  # earliest kickoff of the day
     assert post["kickoff_utc"] == "2026-06-11T19:00:00Z"
+
+
+def test_norm_unifies_turkiye_endonym():
+    # June-13 live bug: ESPN 'Türkiye' vs seed 'Turkey' dropped the result
+    # and blocked the whole daily recap.
+    assert tracker._norm("Türkiye") == tracker._norm("Turkey")
+    assert tracker._norm("Turkiye") == tracker._norm("Turkey")
+
+
+def test_day_clock_complete():
+    from datetime import datetime, timezone, timedelta
+    ms = [{"kickoff_utc": "2026-06-13T19:00:00Z"},
+          {"kickoff_utc": "2026-06-14T04:00:00Z"}]  # last KO 04:00 UTC
+    before = datetime(2026, 6, 14, 6, 0, tzinfo=timezone.utc)   # +2h, not done
+    after = datetime(2026, 6, 14, 8, 0, tzinfo=timezone.utc)    # +4h, done
+    assert tracker._day_clock_complete(ms, before) is False
+    assert tracker._day_clock_complete(ms, after) is True
+    # a match with no kickoff -> cannot assert completeness
+    assert tracker._day_clock_complete(ms + [{}], after) is False

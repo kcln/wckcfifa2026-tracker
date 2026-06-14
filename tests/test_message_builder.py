@@ -327,3 +327,17 @@ def test_post_match_leads_with_full_time_label():
     # daily-recap result lines must NOT carry the label (only post_match does)
     recap = mb.daily_recap("2026-06-13", [m], {})
     assert "Full time" not in recap
+
+
+def test_daily_recap_lists_unresolved_match_as_pending():
+    matches = [
+        {"home": "Brazil", "away": "Morocco",
+         "prediction": {"home": 0.6, "draw": 0.25, "away": 0.15},
+         "result": {"home_goals": 1, "away_goals": 1}},
+        {"home": "Australia", "away": "Turkey",  # never reconciled -> no result
+         "prediction": {"home": 0.4, "draw": 0.3, "away": 0.3}},
+    ]
+    body = mb.daily_recap("2026-06-13", matches, {})
+    assert "Brazil 1-1 Morocco" in body
+    assert "No result recorded:" in body
+    assert "Australia vs Turkey" in body

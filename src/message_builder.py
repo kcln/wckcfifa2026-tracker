@@ -254,10 +254,21 @@ def daily_recap(date_iso: str, matches: list[dict], group_tables: dict) -> str:
         "Results:",
     ]
 
-    for m in matches:
+    resolved = [m for m in matches if m.get("result")]
+    pending = [m for m in matches if not m.get("result")]
+
+    for m in resolved:
         lines.append("  " + _post_match_line(m))
         lines.extend(_event_lines((m.get("result") or {}).get("events"),
                                   indent="    "))
+
+    # A match with no recorded result (e.g. a feed name we couldn't reconcile)
+    # is listed explicitly rather than silently dropped from the day.
+    if pending:
+        lines.append("")
+        lines.append("No result recorded:")
+        for m in pending:
+            lines.append(f"  {m['home']} vs {m['away']}")
 
     if group_tables:
         lines.append("")
