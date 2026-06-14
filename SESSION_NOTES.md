@@ -115,6 +115,17 @@ CONSTRAINT: poll-based (no webhook) so approval latency is minutes, not instant.
 Privacy tradeoff: numeric chat IDs are visible in the public repo (acceptable per
 KC); move to a private gist later if that changes. 135 tests pass.
 
+## Recap-by-kickoff-day + auto-stop (2026-06-14)
+- Part A: end-of-day recap (and a late match's result) are keyed to PT KICKOFF
+  date, not wall-clock. _due_messages processes today AND the previous PT day
+  (no deeper history) so a match starting late and finishing after midnight
+  still gets its result + the day's recap. _due_for_day() extracted; half-times
+  only for the live day.
+- Part B: tracker self-terminates after the World Cup. _tournament_over() (champion
+  recap fired OR >3d past the final) -> run() writes .season-ended sentinel ->
+  workflow disables its own schedule (gh workflow disable) and stops chaining live
+  continuations. PT stays hardcoded UTC-7 per KC (tournament is all PDT). 138 tests.
+
 ## NEXT
 - Add Ankit's chat ID (8954471490) to TELEGRAM_CHAT_IDS if/when he replies YES.
 - Confirm a Telegram brief lands on KC's phone once the tournament starts (Jun 11).
