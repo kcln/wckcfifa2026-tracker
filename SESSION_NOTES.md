@@ -126,6 +126,20 @@ KC); move to a private gist later if that changes. 135 tests pass.
   workflow disables its own schedule (gh workflow disable) and stops chaining live
   continuations. PT stays hardcoded UTC-7 per KC (tournament is all PDT). 138 tests.
 
+## Message UX overhaul (2026-06-14, shipped)
+- Matchday brief redesigned: win probs labelled by TEAM NAME (not Home/Away),
+  clean per-match block (teams / Prediction / odds / 🕐 kickoff / 📍 venue),
+  human-readable date header.
+- Prediction accuracy: full-time message shows 'Result: <outcome> · Prediction:
+  <pick> ✓/✗ (100%/0%)' + 'Overall prediction: x/y (n%)' cumulative THROUGH that
+  match's kickoff (stable, no re-sends). Daily recap adds 'Overall prediction —
+  today x/y · overall a/b'. Helper tracker._accuracy().
+- Every message ends with an HTML hyperlink footer '🔗 Open the live tracker'.
+  IMPORTANT: the link is added at SEND time in telegram_sender (parse_mode=HTML,
+  bodies escaped, preview suppressed) — NOT in the message body — so it changes
+  no dedup hashes and never causes re-sends. inbox messages share the footer.
+- Review loop: all four changes were tested to KC-only before 'ship it'.
+
 ## NEXT
 - Add Ankit's chat ID (8954471490) to TELEGRAM_CHAT_IDS if/when he replies YES.
 - Confirm a Telegram brief lands on KC's phone once the tournament starts (Jun 11).
