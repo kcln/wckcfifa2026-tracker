@@ -141,11 +141,14 @@ def poll(token: str, offset: int, *, get=None):
 
 
 def make_io(token: str):
-    """Build the (send, answer_cb) callables bound to the live bot token."""
+    """Build the (send, answer_cb) callables bound to the live bot token.
+    Outgoing messages carry the same HTML hyperlink footer as broadcasts."""
     import requests
+    from src.telegram_sender import _format
 
     def send(chat_id, text, reply_markup=None):
-        payload = {"chat_id": chat_id, "text": text}
+        payload = {"chat_id": chat_id, "text": _format(text),
+                   "parse_mode": "HTML", "disable_web_page_preview": "true"}
         if reply_markup is not None:
             import json as _json
             payload["reply_markup"] = _json.dumps(reply_markup)

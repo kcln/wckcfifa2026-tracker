@@ -118,7 +118,7 @@ def test_daily_recap_shows_date():
     ]
     group_tables = {}
     text = mb.daily_recap("2026-06-11", matches, group_tables)
-    assert "2026-06-11" in text
+    assert "June 11" in text   # human-readable header
 
 
 def test_daily_recap_shows_result_lines():
@@ -352,3 +352,41 @@ def test_daily_recap_lists_unresolved_match_as_pending():
     assert "Brazil 1-1 Morocco" in body
     assert "No result recorded:" in body
     assert "Australia vs Turkey" in body
+
+
+# --- prediction accuracy ---
+
+def test_fmt_accuracy():
+    assert mb.fmt_accuracy(5, 8) == "5/8 (62.5%)"
+    assert mb.fmt_accuracy(0, 0) == "0/0 (—)"
+    assert mb.fmt_accuracy(3, 3) == "3/3 (100.0%)"
+
+
+def test_post_match_shows_per_match_and_overall_accuracy():
+    # predicted Switzerland (away argmax) but it's a draw -> miss (0%)
+    match = {"home": "Qatar", "away": "Switzerland",
+             "prediction": {"home": 0.30, "draw": 0.30, "away": 0.40},
+             "result": {"home_goals": 1, "away_goals": 1}}
+    body = mb.post_match(match, overall=(5, 9))
+    assert "Result: Draw" in body
+    assert "Prediction: Switzerland  ✗ (0%)" in body
+    assert "Overall prediction: 5/9 (55.6%)" in body
+
+
+def test_post_match_hit_shows_100_percent():
+    match = {"home": "Germany", "away": "Curaçao",
+             "prediction": {"home": 0.78, "draw": 0.06, "away": 0.16},
+             "result": {"home_goals": 7, "away_goals": 1}}
+    body = mb.post_match(match, overall=(1, 1))
+    assert "Result: Germany win" in body
+    assert "Prediction: Germany  ✓ (100%)" in body
+
+
+def test_daily_recap_shows_overall_prediction_line():
+    matches = [{"home": "Brazil", "away": "Morocco",
+                "prediction": {"home": 0.6, "draw": 0.25, "away": 0.15},
+                "result": {"home_goals": 1, "away_goals": 1}}]
+    body = mb.daily_recap("2026-06-13", matches, {},
+                          day_acc=(3, 4), overall_acc=(12, 18))
+    assert "Overall prediction —" in body
+    assert "today 3/4 (75.0%)" in body and "overall 12/18 (66.7%)" in body

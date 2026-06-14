@@ -277,6 +277,36 @@ def _prev_day_iso(now_iso: str) -> str:
             - timedelta(days=1)).isoformat()
 
 
+def _result_outcome(r: dict) -> str:
+    if r["home_goals"] > r["away_goals"]:
+        return "home"
+    if r["away_goals"] > r["home_goals"]:
+        return "away"
+    return "draw"
+
+
+def _accuracy(merged: dict, match_prob, *, until_kickoff: str | None = None,
+              date_iso: str | None = None) -> tuple:
+    """(hits, total) prediction accuracy over RESOLVED matches — argmax pick vs
+    actual outcome. Filter to a single PT day with `date_iso`, or to matches
+    that kicked off at/before `until_kickoff` for a stable running cumulative."""
+    hits = total = 0
+    for m in merged["matches"]:
+        r = m.get("result")
+        if not r:
+            continue
+        if date_iso is not None and m.get("date") != date_iso:
+            continue
+        if until_kickoff is not None and (m.get("kickoff_utc") or "") > until_kickoff:
+            continue
+        pred = match_prob(m["home"], m["away"])
+        predicted = max(("home", "draw", "away"), key=lambda k: pred[k])
+        total += 1
+        if predicted == _result_outcome(r):
+            hits += 1
+    return hits, total
+
+
 def _due_for_day(stateobj: dict, merged: dict, match_prob, date_iso: str,
                  *, is_today: bool, live: dict | None, existing: set) -> None:
     """Append all due messages for the matches whose PT KICKOFF date is
@@ -298,10 +328,14 @@ def _due_for_day(stateobj: dict, merged: dict, match_prob, date_iso: str,
                  kickoff_utc=_first_kickoff(todays))
 
     # 2) Post-match — per finished match (fires even when reprocessing a prior
-    #    day, so a past-midnight finish still gets its result).
+    #    day, so a past-midnight finish still gets its result). The running
+    #    accuracy is cumulative THROUGH this match's kickoff, so the body stays
+    #    stable as later matches resolve (no spurious re-sends).
     for mp in todays_pred:
         if mp.get("result"):
-            body = message_builder.post_match(mp)
+            overall = _accuracy(merged, match_prob,
+                                until_kickoff=mp.get("kickoff_utc") or "")
+            body = message_builder.post_match(mp, overall=overall)
             _add_message(day, existing, "post_match", date_iso, body,
                          kickoff_utc=mp.get("kickoff_utc") or "")
 
@@ -328,7 +362,12 @@ def _due_for_day(stateobj: dict, merged: dict, match_prob, date_iso: str,
             all_resolved
             or _day_clock_complete(todays, datetime.now(timezone.utc))):
         tables = _group_tables_for(merged)
-        recap = message_builder.daily_recap(date_iso, todays_pred, tables)
+        day_acc = _accuracy(merged, match_prob, date_iso=date_iso)
+        last_ko = max((m.get("kickoff_utc") or "" for m in todays), default="")
+        overall_acc = _accuracy(merged, match_prob, until_kickoff=last_ko)
+        recap = message_builder.daily_recap(date_iso, todays_pred, tables,
+                                            day_acc=day_acc,
+                                            overall_acc=overall_acc)
         _add_message(day, existing, "daily_recap", date_iso, recap,
                      kickoff_utc=_first_kickoff(todays))
 

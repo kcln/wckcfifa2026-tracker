@@ -317,3 +317,22 @@ def test_tournament_over():
     assert not tracker._tournament_over(merged, {}, "2026-07-19")
     assert not tracker._tournament_over(merged, {}, "2026-07-21")  # within 3d grace
     assert tracker._tournament_over(merged, {}, "2026-07-23")      # past final+3d
+
+
+def test_accuracy_counts_hits_over_resolved():
+    merged = {"matches": [
+        {"id": "1", "home": "A", "away": "B", "date": "2026-06-14",
+         "kickoff_utc": "2026-06-14T10:00:00Z",
+         "result": {"home_goals": 2, "away_goals": 0}},   # home win
+        {"id": "2", "home": "C", "away": "D", "date": "2026-06-14",
+         "kickoff_utc": "2026-06-14T13:00:00Z",
+         "result": {"home_goals": 0, "away_goals": 1}},   # away win
+        {"id": "3", "home": "E", "away": "F", "date": "2026-06-15",
+         "kickoff_utc": "2026-06-15T10:00:00Z"}]}          # unresolved
+    # match_prob always predicts home win
+    mp = lambda h, a: {"home": 0.8, "draw": 0.1, "away": 0.1}
+    assert tracker._accuracy(merged, mp) == (1, 2)               # only match 1 hit
+    assert tracker._accuracy(merged, mp, date_iso="2026-06-14") == (1, 2)
+    # cumulative through the first kickoff only counts match 1
+    assert tracker._accuracy(merged, mp,
+                             until_kickoff="2026-06-14T10:00:00Z") == (1, 1)

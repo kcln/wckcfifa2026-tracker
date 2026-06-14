@@ -140,6 +140,21 @@ def _actual_outcome(result: dict) -> str:
     return "draw"
 
 
+def _result_word(match: dict) -> str:
+    """Human label for the actual outcome: 'Draw' or '<team> win'."""
+    actual = _actual_outcome(match["result"])
+    if actual == "draw":
+        return "Draw"
+    return f"{match['home']} win" if actual == "home" else f"{match['away']} win"
+
+
+def fmt_accuracy(hits: int, total: int) -> str:
+    """'x/y (n.n%)' — prediction accuracy. '0/0 (—)' when nothing's resolved."""
+    if not total:
+        return "0/0 (—)"
+    return f"{hits}/{total} ({hits / total * 100:.1f}%)"
+
+
 def _post_match_line(match: dict) -> str:
     """
     Format a single post-match result line:
@@ -228,33 +243,52 @@ def half_time(match: dict, home_goals: int, away_goals: int,
     return "\n".join(lines)
 
 
-def post_match(match: dict) -> str:
+def post_match(match: dict, overall=None) -> str:
     """
-    Single post-match result summary.
+    Single post-match result summary:
 
-    Leads with a "Full time" label (soccer's final-whistle term, parallel to
-    the "Half-time:" updates), then the scoreline and ✓/✗ for whether the
-    pre-match argmax prediction matched the actual outcome, followed by goal
-    scorers and red cards (player, country, minute) when the feed provides them.
+        Full time
+        Qatar 1-1 Switzerland  —  San Francisco Bay Area, USA
+        Result: Draw  ·  Prediction: Switzerland  ✗ (0%)
+        Overall prediction: 5/9 (55.6%)
+        ⚽ 23' Scorer (Qatar)
 
-    The label is its own line — kept off the score line so the archive's
-    winner-bolding still targets the team names, not the label.
+    The score line is kept clean (no label) so the archive's winner-bolding
+    still targets the team names. `overall` is an optional (hits, total) tally
+    rendered as the running cumulative accuracy through this match — passed in
+    by the tracker so it stays stable (independent of later matches).
     """
-    lines = ["Full time", _post_match_line(match)]
-    lines.extend(_event_lines((match.get("result") or {}).get("events")))
+    home, away = match["home"], match["away"]
+    r = match["result"]
+    hit = _argmax_outcome(match["prediction"]) == _actual_outcome(r)
+    mark = "✓" if hit else "✗"
+    pct = "100%" if hit else "0%"
+    loc = _place_of(match)
+    score = f"{home} {r['home_goals']}-{r['away_goals']} {away}"
+    if loc:
+        score += f"  —  {loc}"
+    lines = ["Full time", score,
+             f"Result: {_result_word(match)}  ·  "
+             f"Prediction: {_pick_label(match)}  {mark} ({pct})"]
+    if overall is not None:
+        lines.append(f"Overall prediction: {fmt_accuracy(*overall)}")
+    lines.extend(_event_lines(r.get("events")))
     return "\n".join(lines)
 
 
-def daily_recap(date_iso: str, matches: list[dict], group_tables: dict) -> str:
+def daily_recap(date_iso: str, matches: list[dict], group_tables: dict,
+                day_acc=None, overall_acc=None) -> str:
     """
-    End-of-day recap: date header, each completed result, then group standings.
+    End-of-day recap: date header, each completed result, a prediction-accuracy
+    line (today + cumulative), then group standings.
 
     `group_tables` maps group letter -> list of row dicts
     [{team, played, points, gd, gf, ga}] (already sorted by standings).
+    `day_acc` / `overall_acc` are (hits, total) tallies from the tracker.
     """
     lines: list[str] = [
-        f"FIFA World Cup 2026 — Daily Recap",
-        f"Date: {date_iso}",
+        "🏆 World Cup 2026 — Daily Recap",
+        _pretty_date(date_iso),
         "",
         "Results:",
     ]
@@ -274,6 +308,16 @@ def daily_recap(date_iso: str, matches: list[dict], group_tables: dict) -> str:
         lines.append("No result recorded:")
         for m in pending:
             lines.append(f"  {m['home']} vs {m['away']}")
+
+    # Prediction accuracy — today's and the running cumulative.
+    if day_acc is not None or overall_acc is not None:
+        lines.append("")
+        parts = []
+        if day_acc is not None:
+            parts.append(f"today {fmt_accuracy(*day_acc)}")
+        if overall_acc is not None:
+            parts.append(f"overall {fmt_accuracy(*overall_acc)}")
+        lines.append("Overall prediction — " + "  ·  ".join(parts))
 
     if group_tables:
         lines.append("")
