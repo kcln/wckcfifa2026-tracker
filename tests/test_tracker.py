@@ -336,3 +336,20 @@ def test_accuracy_counts_hits_over_resolved():
     # cumulative through the first kickoff only counts match 1
     assert tracker._accuracy(merged, mp,
                              until_kickoff="2026-06-14T10:00:00Z") == (1, 1)
+
+
+def test_results_persist_across_feed_window(tmp_path):
+    # Match 1 finishes; next cycle the feed no longer reports it (rolling
+    # window). Its result must persist so accuracy stays correct.
+    cfg1 = _base_cfg(tmp_path, token="", chat_ids=[],
+                     fetch=lambda: {"1": {"home_goals": 2, "away_goals": 0,
+                                          "status": "FT"}})
+    tracker.run(cfg1)
+    s = json.loads((tmp_path / "state.json").read_text())
+    assert s["results"]["1"]["home_goals"] == 2
+
+    # Feed drops match 1 entirely on the next cycle.
+    cfg2 = _base_cfg(tmp_path, token="", chat_ids=[], fetch=lambda: {})
+    tracker.run(cfg2)
+    s = json.loads((tmp_path / "state.json").read_text())
+    assert s["results"]["1"]["home_goals"] == 2   # still remembered

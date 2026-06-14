@@ -483,7 +483,20 @@ def run(cfg: Config) -> int:
         except Exception:
             live = {}
 
-        merged = fixtures.merge_results(seed, live)
+        # Persist every final result so the all-time record survives ESPN's
+        # rolling feed window. Without this, prediction accuracy only sees the
+        # handful of matches still in the live feed (badly understated).
+        stateobj.setdefault("results", {})
+        for m in fixtures.merge_results(seed, live)["matches"]:
+            if m.get("result"):
+                stateobj["results"][m["id"]] = m["result"]
+
+        # All-time view = every persisted result, with the current feed winning
+        # for freshness. Drives accuracy and lets past matches keep their data.
+        all_live = {mid: {**r, "status": "FT"}
+                    for mid, r in stateobj["results"].items()}
+        all_live.update(live)
+        merged = fixtures.merge_results(seed, all_live)
         match_prob = _build_match_prob(merged)
 
         # Compute and append all due messages for today (idempotent).
