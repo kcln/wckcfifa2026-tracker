@@ -146,6 +146,14 @@
           "hash": "58fc28844c4e29eb",
           "generated_at": "2026-06-13T17:12:56.109669-07:00",
           "kickoff_utc": "2026-06-13T22:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "Half-time: Haiti 0-1 Scotland\nBoston (Foxborough), USA\nPrediction: Scotland",
+          "sent": true,
+          "hash": "df87756d7033ec9e",
+          "generated_at": "2026-06-13T18:53:38.342943-07:00",
+          "kickoff_utc": "2026-06-14T01:00:00Z"
         }
       ]
     }
