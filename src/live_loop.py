@@ -90,10 +90,11 @@ def git_sync(run_cmd: Callable[[list], str] = _run_cmd) -> None:
     sent-state that dedupes Telegram deliveries (and so the GitHub Pages
     archive stays current during long matchday loops).
     """
-    dirty = run_cmd(["git", "status", "--porcelain", "state.json", "docs"])
+    dirty = run_cmd(["git", "status", "--porcelain",
+                     "state.json", "subscribers.json", "docs"])
     if not dirty.strip():
         return
-    run_cmd(["git", "add", "state.json", "docs"])
+    run_cmd(["git", "add", "state.json", "subscribers.json", "docs"])
     run_cmd(["git", "commit", "-m",
              "update: live tracker cycle"])
     run_cmd(["git", "pull", "--rebase"])

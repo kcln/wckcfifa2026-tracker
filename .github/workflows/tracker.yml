@@ -33,7 +33,7 @@ jobs:
       - name: Commit and push results
         if: always()
         run: |
-          git add state.json docs/
+          git add state.json subscribers.json docs/
           git diff --cached --quiet || git commit -m "update: tracker run $(date -u +%FT%TZ)"
           git pull --rebase
           git push

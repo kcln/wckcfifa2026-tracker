@@ -269,3 +269,21 @@ def test_day_clock_complete():
     assert tracker._day_clock_complete(ms, after) is True
     # a match with no kickoff -> cannot assert completeness
     assert tracker._day_clock_complete(ms + [{}], after) is False
+
+
+def test_build_catchup_options():
+    stateobj = {"days": [{"date": "2026-06-14", "messages": [
+        {"type": "morning_brief", "body": "BRIEF"},
+        {"type": "half_time", "body": "HT"},
+        {"type": "post_match", "body": "FT"},
+        {"type": "daily_recap", "body": "RECAP"}]}]}
+    iso = "2026-06-14"
+    assert tracker.build_catchup(stateobj, iso, 1) == ["BRIEF", "HT", "FT", "RECAP"]
+    assert tracker.build_catchup(stateobj, iso, 2) == ["BRIEF"]
+    assert tracker.build_catchup(stateobj, iso, 3) == ["HT", "FT"]
+    assert tracker.build_catchup(stateobj, iso, 4) == ["RECAP"]
+
+
+def test_build_catchup_empty_day_has_friendly_fallback():
+    out = tracker.build_catchup({"days": []}, "2026-06-14", 1)
+    assert len(out) == 1 and "live" in out[0].lower()

@@ -27,12 +27,12 @@ from typing import Callable
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
     from src import (bracket_sim, data_fetcher, fixtures, html_archive,
-                     live_loop, message_builder, ml_predictor, predictor,
-                     state, telegram_sender)
+                     inbox, live_loop, message_builder, ml_predictor,
+                     predictor, state, subscribers, telegram_sender)
 else:
     from . import (bracket_sim, data_fetcher, fixtures, html_archive,
-                   live_loop, message_builder, ml_predictor, predictor,
-                   state, telegram_sender)
+                   inbox, live_loop, message_builder, ml_predictor,
+                   predictor, state, subscribers, telegram_sender)
 
 
 HOSTS = {"Mexico", "USA", "Canada"}
@@ -476,14 +476,66 @@ def run(cfg: Config) -> int:
 
 
 # ---------------------------------------------------------------------------
+# Signup catch-up + inbox processing
+# ---------------------------------------------------------------------------
+
+def build_catchup(stateobj: dict, now_iso: str, option: int) -> list[str]:
+    """Message bodies a new member gets for onboarding choice 1-4, drawn from
+    today's already-built messages:
+      1 brief + updates so far + day summary   2 brief only
+      3 updates only                           4 day summary only
+    """
+    day = next((d for d in stateobj.get("days", []) if d.get("date") == now_iso),
+               None)
+    msgs = (day or {}).get("messages", [])
+    brief = [m["body"] for m in msgs if m["type"] == "morning_brief"]
+    updates = [m["body"] for m in msgs
+               if m["type"] in ("half_time", "post_match")]
+    recap = [m["body"] for m in msgs if m["type"] == "daily_recap"]
+    if option == 2:
+        return brief or ["No matchday brief yet for today."]
+    if option == 3:
+        return updates or ["No match updates yet today."]
+    if option == 4:
+        return recap or ["The day's summary posts after the last match — "
+                         "you'll get it live."]
+    return (brief + updates + recap) or [
+        "Today's coverage hasn't started yet — you'll get everything live."]
+
+
+def process_inbox(root: Path, token: str) -> list[str]:
+    """Poll Telegram and run the signup approval/onboarding pipeline, then
+    return the current approved broadcast list. Never raises."""
+    subs_path = root / "subscribers.json"
+    subs = subscribers.load(subs_path)
+    if not token:
+        return subs.get("approved", [])
+    try:
+        updates = inbox.poll(token, subs.get("last_update_id", 0) + 1)
+        if updates:
+            stateobj = state.load(root / "state.json")
+            now_iso = state.today_pt_iso()
+            send, answer_cb = inbox.make_io(token)
+            approver = os.environ.get("APPROVER_CHAT_ID", "391401564")
+            inbox.process_updates(
+                updates, subs, approver=approver, send=send, answer_cb=answer_cb,
+                catchup=lambda opt: build_catchup(stateobj, now_iso, opt),
+                now_ts=state.now_pt().isoformat())
+            subscribers.save(subs_path, subs)
+    except Exception:
+        pass
+    return subs.get("approved", [])
+
+
+# ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
 
-def _build_cfg(root: Path) -> Config:
+def _build_cfg(root: Path, chat_ids: list) -> Config:
     """Fresh Config per cycle: now_iso rolls over at PT midnight and the seed
-    is reloaded so long live-mode loops pick up rebased fixture changes."""
+    is reloaded so long live-mode loops pick up rebased fixture changes.
+    `chat_ids` is the approved broadcast list from subscribers.json."""
     token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
-    chat_ids = [c for c in os.environ.get("TELEGRAM_CHAT_IDS", "").split(",") if c]
     cache_path = root / "data" / "cache" / "results.json"
     cache_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -512,14 +564,17 @@ def main() -> None:
 
     root = Path(__file__).resolve().parents[1]
     (root / "docs").mkdir(parents=True, exist_ok=True)
+    token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 
     if not args.live:
-        sys.exit(run(_build_cfg(root)))
+        approved = process_inbox(root, token)
+        sys.exit(run(_build_cfg(root, approved)))
 
     autocommit = os.environ.get("GIT_AUTOCOMMIT") == "1"
 
     def run_once() -> int:
-        code = run(_build_cfg(root))
+        approved = process_inbox(root, token)
+        code = run(_build_cfg(root, approved))
         if autocommit:
             live_loop.git_sync()
         return code
