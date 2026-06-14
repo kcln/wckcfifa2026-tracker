@@ -353,3 +353,22 @@ def test_results_persist_across_feed_window(tmp_path):
     tracker.run(cfg2)
     s = json.loads((tmp_path / "state.json").read_text())
     assert s["results"]["1"]["home_goals"] == 2   # still remembered
+
+
+def test_result_not_resent_when_minute_revised(tmp_path):
+    # ESPN first reports a goal at 88', then revises it to 89'. The full-time
+    # message body changes but the result must be sent only ONCE.
+    feed88 = lambda: {"1": {"home_goals": 2, "away_goals": 2, "status": "FT",
+                            "events": [{"kind": "goal", "player": "Kamada",
+                                        "team": "Japan", "minute": "88'"}]}}
+    feed89 = lambda: {"1": {"home_goals": 2, "away_goals": 2, "status": "FT",
+                            "events": [{"kind": "goal", "player": "Kamada",
+                                        "team": "Japan", "minute": "89'"}]}}
+    sent = []
+    s = lambda text, **k: sent.append(text) or True
+    tracker.run(_base_cfg(tmp_path, fetch=feed88, sender=s))
+    tracker.run(_base_cfg(tmp_path, fetch=feed89, sender=s))
+    saved = json.loads((tmp_path / "state.json").read_text())
+    day = next(d for d in saved["days"] if d["date"] == "2026-06-11")
+    pms = [m for m in day["messages"] if m["type"] == "post_match"]
+    assert len(pms) == 1   # one result per match, minute revision ignored

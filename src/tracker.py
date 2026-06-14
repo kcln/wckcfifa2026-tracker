@@ -167,32 +167,37 @@ def _get_day(stateobj: dict, date_iso: str) -> dict:
     return day
 
 
-def _all_hashes(stateobj: dict) -> set:
-    """Every message hash already present anywhere in state."""
+def _all_keys(stateobj: dict) -> set:
+    """Every dedup key already present in state. Uses each message's stable
+    `key` (match-identity based) when set, else its legacy body `hash`."""
     return {
-        m["hash"]
+        m.get("key") or m.get("hash")
         for d in stateobj["days"]
         for m in d.get("messages", [])
-        if "hash" in m
+        if m.get("key") or m.get("hash")
     }
 
 
 def _add_message(day: dict, existing: set, msg_type: str, date_iso: str,
-                 body: str, kickoff_utc: str = "") -> None:
-    """Append a message to `day` iff its (type,date,body) hash is new.
-    Mutates `existing` so repeated calls within one run stay deduped.
-    Stamps kickoff_utc (the relevant match's start, shown as the archive's
-    PT/CT/ET/IST time stack) and generated_at (PT); neither is part of the
-    dedup hash."""
+                 body: str, *, key: str | None = None,
+                 kickoff_utc: str = "") -> None:
+    """Append a message to `day` iff its dedup key is new.
+
+    `key` is a STABLE identity for the message (e.g. one full-time result per
+    match), so the body can change — ESPN often revises a goal's minute or
+    scorer after the whistle — without re-sending. When `key` is omitted we
+    fall back to the (type,date,body) hash. Mutates `existing`. kickoff_utc and
+    generated_at are metadata, never part of dedup."""
     h = state.message_hash(msg_type, date_iso, body)
-    if h in existing:
+    dedup = key if key is not None else h
+    if dedup in existing:
         return
     msg = {"type": msg_type, "body": body, "sent": False, "hash": h,
-           "generated_at": state.now_pt().isoformat()}
+           "key": dedup, "generated_at": state.now_pt().isoformat()}
     if kickoff_utc:
         msg["kickoff_utc"] = kickoff_utc
     day["messages"].append(msg)
-    existing.add(h)
+    existing.add(dedup)
 
 
 def _first_kickoff(matches: list[dict]) -> str:
@@ -325,7 +330,7 @@ def _due_for_day(stateobj: dict, merged: dict, match_prob, date_iso: str,
     # 1) Morning brief — once per day with matches.
     brief = message_builder.morning_brief(date_iso, todays_pred)
     _add_message(day, existing, "morning_brief", date_iso, brief,
-                 kickoff_utc=_first_kickoff(todays))
+                 key=f"mb-{date_iso}", kickoff_utc=_first_kickoff(todays))
 
     # 2) Post-match — per finished match (fires even when reprocessing a prior
     #    day, so a past-midnight finish still gets its result). The running
@@ -337,6 +342,7 @@ def _due_for_day(stateobj: dict, merged: dict, match_prob, date_iso: str,
                                 until_kickoff=mp.get("kickoff_utc") or "")
             body = message_builder.post_match(mp, overall=overall)
             _add_message(day, existing, "post_match", date_iso, body,
+                         key=f"pm-{date_iso}-{mp['id']}",
                          kickoff_utc=mp.get("kickoff_utc") or "")
 
     # 2.5) Half-time — only for the live (today) day; prior-day matches are done.
@@ -349,6 +355,7 @@ def _due_for_day(stateobj: dict, merged: dict, match_prob, date_iso: str,
                     mp, entry["home_goals"], entry["away_goals"],
                     events=entry.get("events"))
                 _add_message(day, existing, "half_time", date_iso, body,
+                             key=f"ht-{date_iso}-{mp['id']}",
                              kickoff_utc=mp.get("kickoff_utc") or "")
 
     # 3) Daily recap — once per day, when every match is resolved OR the day is
@@ -369,7 +376,7 @@ def _due_for_day(stateobj: dict, merged: dict, match_prob, date_iso: str,
                                             day_acc=day_acc,
                                             overall_acc=overall_acc)
         _add_message(day, existing, "daily_recap", date_iso, recap,
-                     kickoff_utc=_first_kickoff(todays))
+                     key=f"dr-{date_iso}", kickoff_utc=_first_kickoff(todays))
 
     # 4) Bracket update — on any knockout date.
     if any(m["stage"] != "group" for m in todays):
@@ -390,7 +397,7 @@ def _due_messages(stateobj: dict, merged: dict, match_prob, now_iso: str,
     after PT midnight still gets its result and its day's recap — the day is
     keyed by PT KICKOFF date. No deeper history is scanned (going forward only).
     """
-    existing = _all_hashes(stateobj)
+    existing = _all_keys(stateobj)
     _due_for_day(stateobj, merged, match_prob, _prev_day_iso(now_iso),
                  is_today=False, live=None, existing=existing)
     _due_for_day(stateobj, merged, match_prob, now_iso,
@@ -408,6 +415,7 @@ def _due_messages(stateobj: dict, merged: dict, match_prob, now_iso: str,
                     cday = _get_day(stateobj, now_iso)
                     body = message_builder.champion_recap(champ)
                     _add_message(cday, existing, "champion_recap", now_iso, body,
+                                 key=f"cr-{now_iso}",
                                  kickoff_utc=fin.get("kickoff_utc") or "")
                     stateobj["season_ended"] = True
 
