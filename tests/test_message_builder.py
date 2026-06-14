@@ -267,3 +267,50 @@ def test_all_16_host_cities_have_countries():
     for v in venues:
         place = mb.place(v)
         assert place.startswith(v) and ", " in place, place
+
+
+_EVENTS = [
+    {"kind": "goal", "player": "Ismael Saibari", "team": "Morocco", "minute": "21'"},
+    {"kind": "penalty", "player": "Vinicius Jr", "team": "Brazil", "minute": "64'"},
+    {"kind": "red", "player": "Gabriel", "team": "Brazil", "minute": "80'"},
+]
+
+
+def test_post_match_lists_scorers_and_red_cards():
+    match = {"home": "Brazil", "away": "Morocco",
+             "prediction": {"home": 0.6, "draw": 0.25, "away": 0.15},
+             "result": {"home_goals": 1, "away_goals": 1, "events": _EVENTS}}
+    body = mb.post_match(match)
+    assert "⚽ 21' Ismael Saibari (Morocco)" in body
+    assert "⚽ 64' Vinicius Jr (Brazil, pen)" in body
+    assert "🟥 80' Gabriel (Brazil)" in body
+
+
+def test_half_time_lists_first_half_events():
+    match = {"home": "Brazil", "away": "Morocco",
+             "prediction": {"home": 0.6, "draw": 0.25, "away": 0.15}}
+    body = mb.half_time(match, 0, 1, events=[_EVENTS[0]])
+    assert "Half-time: Brazil 0-1 Morocco" in body
+    assert "⚽ 21' Ismael Saibari (Morocco)" in body
+
+
+def test_daily_recap_includes_scorers():
+    matches = [{"home": "Brazil", "away": "Morocco",
+                "prediction": {"home": 0.6, "draw": 0.25, "away": 0.15},
+                "result": {"home_goals": 1, "away_goals": 1, "events": _EVENTS}}]
+    body = mb.daily_recap("2026-06-13", matches, {})
+    assert "⚽ 21' Ismael Saibari (Morocco)" in body
+    assert "🟥 80' Gabriel (Brazil)" in body
+
+
+def test_event_lines_handle_own_goal_and_missing_player():
+    evs = [{"kind": "own_goal", "player": "", "team": "USA", "minute": "12'"}]
+    lines = mb._event_lines(evs)
+    assert lines == ["  ⚽ 12' Unknown (USA, OG)"]
+
+
+def test_messages_without_events_have_no_event_lines():
+    match = {"home": "USA", "away": "Canada",
+             "prediction": {"home": 0.5, "draw": 0.3, "away": 0.2},
+             "result": {"home_goals": 0, "away_goals": 0}}
+    assert "⚽" not in mb.post_match(match)

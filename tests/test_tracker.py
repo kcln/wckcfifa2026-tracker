@@ -211,7 +211,7 @@ def test_reconcile_bosnia_hyphen_feed_maps_to_seed():
         "date": bos["date"], "home_goals": 1, "away_goals": 1, "status": "FT"}}
     out = tracker.reconcile_results(raw, seed)
     assert out.get(bos["id"]) == {"home_goals": 1, "away_goals": 1,
-                                  "status": "FT"}
+                                  "status": "FT", "events": []}
 
 
 def test_reconcile_results_maps_to_seed_ids():
@@ -233,8 +233,10 @@ def test_reconcile_results_maps_to_seed_ids():
         },
     }
     out = tracker.reconcile_results(raw, seed)
-    assert out["1"] == {"home_goals": 3, "away_goals": 1, "status": "FT"}
-    assert out["2"] == {"home_goals": 0, "away_goals": 2, "status": "FT"}
+    assert out["1"] == {"home_goals": 3, "away_goals": 1, "status": "FT",
+                        "events": []}
+    assert out["2"] == {"home_goals": 0, "away_goals": 2, "status": "FT",
+                        "events": []}
     assert all(not k.startswith("espn") for k in out)  # rekeyed to seed ids
 
 

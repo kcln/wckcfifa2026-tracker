@@ -9,7 +9,8 @@ def test_parse_espn_scoreboard_extracts_completed_results():
             {"homeAway": "away", "score": "1", "team": {"displayName": "South Africa"}}]}]}]}
     out = df.parse_espn(sample)
     assert out["401"] == {"home": "Mexico", "away": "South Africa",
-        "date": "2026-06-11", "home_goals": 2, "away_goals": 1, "status": "FT"}
+        "date": "2026-06-11", "home_goals": 2, "away_goals": 1,
+        "status": "FT", "events": []}
 
 
 def test_parse_espn_skips_incomplete_events():
@@ -78,3 +79,50 @@ def test_parse_espn_halftime_also_uses_pt_date():
     out = df.parse_espn(sample)
     assert out["406"]["date"] == "2026-06-11"
     assert out["406"]["status"] == "HT"
+
+
+# Real ESPN scoreboard shape: competition.details carries goals + cards.
+def _sample_with_details():
+    return {"events": [{"id": "500", "date": "2026-06-13T19:00Z",
+        "status": {"type": {"completed": True}},
+        "competitions": [{
+            "competitors": [
+                {"homeAway": "home", "score": "1", "team": {"id": "BRA", "displayName": "Brazil"}},
+                {"homeAway": "away", "score": "1", "team": {"id": "MAR", "displayName": "Morocco"}}],
+            "details": [
+                {"type": {"text": "Goal"}, "scoringPlay": True, "redCard": False,
+                 "yellowCard": False, "ownGoal": False, "penaltyKick": False,
+                 "team": {"id": "MAR"}, "clock": {"displayValue": "21'"},
+                 "athletesInvolved": [{"displayName": "Ismael Saibari"}]},
+                {"type": {"text": "Yellow Card"}, "scoringPlay": False,
+                 "redCard": False, "yellowCard": True, "team": {"id": "BRA"},
+                 "clock": {"displayValue": "37'"},
+                 "athletesInvolved": [{"displayName": "Casemiro"}]},
+                {"type": {"text": "Goal - Penalty"}, "scoringPlay": True,
+                 "redCard": False, "yellowCard": False, "penaltyKick": True,
+                 "team": {"id": "BRA"}, "clock": {"displayValue": "64'"},
+                 "athletesInvolved": [{"displayName": "Vinicius Jr"}]},
+                {"type": {"text": "Red Card"}, "scoringPlay": False,
+                 "redCard": True, "yellowCard": False, "team": {"id": "BRA"},
+                 "clock": {"displayValue": "80'"},
+                 "athletesInvolved": [{"displayName": "Gabriel"}]}]}]}]}
+
+
+def test_parse_espn_extracts_goals_and_red_cards():
+    out = df.parse_espn(_sample_with_details())
+    evs = out["500"]["events"]
+    # goal, penalty goal, red card — yellow card is dropped
+    kinds = [e["kind"] for e in evs]
+    assert kinds == ["goal", "penalty", "red"]
+    assert evs[0] == {"kind": "goal", "player": "Ismael Saibari",
+                      "team": "Morocco", "minute": "21'"}
+    assert evs[1]["kind"] == "penalty" and evs[1]["team"] == "Brazil"
+    assert evs[2] == {"kind": "red", "player": "Gabriel",
+                      "team": "Brazil", "minute": "80'"}
+
+
+def test_parse_espn_skips_shootout_events():
+    sample = _sample_with_details()
+    sample["events"][0]["competitions"][0]["details"][0]["shootout"] = True
+    out = df.parse_espn(sample)
+    assert [e["kind"] for e in out["500"]["events"]] == ["penalty", "red"]

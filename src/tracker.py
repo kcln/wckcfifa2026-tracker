@@ -117,6 +117,7 @@ def reconcile_results(raw_feed: dict, seed: dict) -> dict:
             "home_goals": entry["home_goals"],
             "away_goals": entry["away_goals"],
             "status": entry.get("status", "FT"),
+            "events": entry.get("events", []),
         }
     return out
 
@@ -288,7 +289,8 @@ def _due_messages(stateobj: dict, merged: dict, match_prob, now_iso: str,
             if (entry and entry.get("status") == "HT"
                     and not mp.get("result")):
                 body = message_builder.half_time(
-                    mp, entry["home_goals"], entry["away_goals"])
+                    mp, entry["home_goals"], entry["away_goals"],
+                    events=entry.get("events"))
                 _add_message(day, existing, "half_time", now_iso, body,
                              kickoff_utc=mp.get("kickoff_utc") or "")
 

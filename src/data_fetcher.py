@@ -28,6 +28,43 @@ def _team_name(competitor: dict) -> str:
     return team.get("displayName") or team.get("name") or competitor.get("name", "")
 
 
+def _events_from_details(details, id_to_name: dict) -> list:
+    """Goals and red cards from a competition's `details` timeline.
+
+    ESPN embeds a per-match `details` list on the scoreboard payload, so no
+    extra request is needed. Each returned event is
+    {kind, player, team, minute} where kind is one of
+    'goal' | 'own_goal' | 'penalty' | 'red'. Red cards key off the `redCard`
+    boolean (covers a second yellow, which ESPN also flags red). Shootout
+    events are skipped so penalty-shootout pings don't clutter a recap.
+    """
+    out = []
+    for d in details or []:
+        if d.get("shootout"):
+            continue
+        is_red = bool(d.get("redCard"))
+        is_goal = bool(d.get("scoringPlay")) and not d.get("yellowCard") \
+            and not is_red
+        if not (is_goal or is_red):
+            continue
+        athletes = d.get("athletesInvolved") or []
+        player = athletes[0].get("displayName", "") if athletes else ""
+        team_id = (d.get("team") or {}).get("id")
+        country = id_to_name.get(team_id, "")
+        minute = (d.get("clock") or {}).get("displayValue", "")
+        if is_red:
+            kind = "red"
+        elif d.get("ownGoal"):
+            kind = "own_goal"
+        elif d.get("penaltyKick"):
+            kind = "penalty"
+        else:
+            kind = "goal"
+        out.append({"kind": kind, "player": player,
+                    "team": country, "minute": minute})
+    return out
+
+
 def parse_espn(payload: dict) -> dict:
     """Extract completed results and half-time scores from an ESPN scoreboard.
 
@@ -46,9 +83,11 @@ def parse_espn(payload: dict) -> dict:
         halftime = stype.get("name") == "STATUS_HALFTIME"
         if not completed and not halftime:
             continue
-        comp = ev["competitions"][0]["competitors"]
+        competition = ev["competitions"][0]
+        comp = competition["competitors"]
         h = next(c for c in comp if c["homeAway"] == "home")
         a = next(c for c in comp if c["homeAway"] == "away")
+        id_to_name = {c.get("team", {}).get("id"): _team_name(c) for c in comp}
         out[ev["id"]] = {
             "home": _team_name(h),
             "away": _team_name(a),
@@ -56,6 +95,8 @@ def parse_espn(payload: dict) -> dict:
             "home_goals": int(h["score"]),
             "away_goals": int(a["score"]),
             "status": "FT" if completed else "HT",
+            "events": _events_from_details(
+                competition.get("details"), id_to_name),
         }
     return out
 

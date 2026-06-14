@@ -103,6 +103,32 @@ def _pick_label(match: dict) -> str:
     return "Draw"
 
 
+def _event_lines(events, indent: str = "  ") -> list[str]:
+    """Render goal and red-card events as indented timeline lines:
+
+        ⚽ 21' Ismael Saibari (Morocco)
+        ⚽ 64' Vinícius Jr (Brazil, pen)
+        🟥 80' Casemiro (Brazil)
+
+    Goals are listed first (feed order, i.e. chronological), then red cards.
+    Own goals and penalties are annotated. Empty/missing events -> no lines."""
+    if not events:
+        return []
+    goals = [e for e in events if e.get("kind") in ("goal", "own_goal", "penalty")]
+    reds = [e for e in events if e.get("kind") == "red"]
+    lines: list[str] = []
+    for e in goals:
+        annot = {"own_goal": ", OG", "penalty": ", pen"}.get(e.get("kind"), "")
+        name = e.get("player") or "Unknown"
+        minute = e.get("minute") or ""
+        lines.append(f"{indent}⚽ {minute} {name} ({e.get('team', '')}{annot})")
+    for e in reds:
+        name = e.get("player") or "Unknown"
+        minute = e.get("minute") or ""
+        lines.append(f"{indent}🟥 {minute} {name} ({e.get('team', '')})")
+    return lines
+
+
 def _actual_outcome(result: dict) -> str:
     """Derive 'home', 'draw', or 'away' from a result dict."""
     hg = result["home_goals"]
@@ -179,10 +205,12 @@ def morning_brief(date_iso: str, matches: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def half_time(match: dict, home_goals: int, away_goals: int) -> str:
+def half_time(match: dict, home_goals: int, away_goals: int,
+              events=None) -> str:
     """
     Half-time score update for a live match, with the pre-match pick for
-    context (predictions are not re-run mid-match).
+    context (predictions are not re-run mid-match). First-half goal scorers
+    and any red cards (player, country, minute) are listed when available.
     """
     pick = _pick_label(match)
     loc = _place_of(match)
@@ -190,6 +218,7 @@ def half_time(match: dict, home_goals: int, away_goals: int) -> str:
              f"{match['away']}"]
     if loc:
         lines.append(loc)
+    lines.extend(_event_lines(events))
     lines.append(f"Prediction: {pick}")
     return "\n".join(lines)
 
@@ -199,9 +228,12 @@ def post_match(match: dict) -> str:
     Single post-match result summary.
 
     Shows the scoreline and ✓/✗ for whether the pre-match argmax prediction
-    matched the actual outcome (home win / draw / away win).
+    matched the actual outcome, followed by goal scorers and red cards
+    (player, country, minute) when the feed provides them.
     """
-    return _post_match_line(match)
+    lines = [_post_match_line(match)]
+    lines.extend(_event_lines((match.get("result") or {}).get("events")))
+    return "\n".join(lines)
 
 
 def daily_recap(date_iso: str, matches: list[dict], group_tables: dict) -> str:
@@ -220,6 +252,8 @@ def daily_recap(date_iso: str, matches: list[dict], group_tables: dict) -> str:
 
     for m in matches:
         lines.append("  " + _post_match_line(m))
+        lines.extend(_event_lines((m.get("result") or {}).get("events"),
+                                  indent="    "))
 
     if group_tables:
         lines.append("")

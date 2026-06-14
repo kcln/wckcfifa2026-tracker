@@ -11,10 +11,15 @@ def load_seed(path: Path = SEED_PATH) -> dict:
 
 
 def merge_results(seed: dict, live: dict) -> dict:
-    """live maps match id -> {home_goals, away_goals, status}. Completed only."""
+    """live maps match id -> {home_goals, away_goals, status, events}.
+    Completed only. Goal/red-card events (if present) ride onto the result so
+    the message builder can list scorers and dismissals."""
     out = copy.deepcopy(seed)
     for m in out["matches"]:
         r = live.get(m["id"])
         if r and r.get("status") == "FT":
-            m["result"] = {"home_goals": r["home_goals"], "away_goals": r["away_goals"]}
+            m["result"] = {"home_goals": r["home_goals"],
+                           "away_goals": r["away_goals"]}
+            if r.get("events"):
+                m["result"]["events"] = r["events"]
     return out
