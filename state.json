@@ -223,6 +223,14 @@
           "hash": "40c34fa11f16a199",
           "generated_at": "2026-06-14T14:58:46.439136-07:00",
           "kickoff_utc": "2026-06-14T20:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "Full time\nNetherlands 2-2 Japan  —  Dallas (Arlington), USA\nResult: Draw  ·  Prediction: Japan  ✗ (0%)\nOverall prediction: 4/10 (40.0%)\n  ⚽ 51' Virgil van Dijk (Netherlands)\n  ⚽ 57' Keito Nakamura (Japan)\n  ⚽ 64' Crysencio Summerville (Netherlands)\n  ⚽ 89' Daichi Kamada (Japan)",
+          "sent": true,
+          "hash": "1ff0cac6b48cd74f",
+          "generated_at": "2026-06-14T16:02:28.335398-07:00",
+          "kickoff_utc": "2026-06-14T20:00:00Z"
         }
       ]
     }
@@ -903,7 +911,7 @@
           "kind": "goal",
           "player": "Daichi Kamada",
           "team": "Japan",
-          "minute": "88'"
+          "minute": "89'"
         }
       ]
     }
