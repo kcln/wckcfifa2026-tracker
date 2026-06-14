@@ -166,43 +166,48 @@ def _post_match_line(match: dict) -> str:
 # Public functions
 # ---------------------------------------------------------------------------
 
+def _pretty_date(date_iso: str) -> str:
+    try:
+        from datetime import datetime as _dt
+        return _dt.strptime(date_iso, "%Y-%m-%d").strftime("%A, %B %-d")
+    except ValueError:
+        return date_iso
+
+
 def morning_brief(date_iso: str, matches: list[dict]) -> str:
     """
-    Daily pre-matchday brief.
+    Daily pre-matchday brief — one clean block per match.
 
-    Header line with the date, followed by one line per match showing the
-    teams, the Prediction (argmax pick as team name or 'Draw'), and the three
-    probabilities as percentages.
+    Win probabilities are labelled with the actual team names (not Home/Away,
+    which read as confusing) and the model's pick is called out on its own line:
+
+        Germany vs Curaçao
+          Prediction: Germany
+          Germany 77.8% · Draw 6.3% · Curaçao 15.9%
+          🕐 10:00am PT / 12:00pm CT / 1:00pm ET / 10:30pm IST
+          📍 Houston, USA
     """
     lines: list[str] = [
-        f"FIFA World Cup 2026 — Matchday Brief",
-        f"Date: {date_iso}",
+        "🏆 World Cup 2026 — Matchday Brief",
+        _pretty_date(date_iso),
         "",
     ]
     for m in matches:
         pred = m["prediction"]
-        pick = _pick_label(m)
-        home_pct = _pct(pred["home"])
-        draw_pct = _pct(pred["draw"])
-        away_pct = _pct(pred["away"])
+        home, away = m["home"], m["away"]
+        lines.append(f"{home} vs {away}")
+        lines.append(f"  Prediction: {_pick_label(m)}")
+        lines.append(
+            f"  {home} {_pct(pred['home'])} · "
+            f"Draw {_pct(pred['draw'])} · {away} {_pct(pred['away'])}")
         ko = kickoff_stack(m.get("kickoff_utc", ""), m.get("date", ""))
-        loc = _place_of(m)
-        vs = f"{m['home']} vs {m['away']}"
-        if loc:
-            vs += f"  —  {loc}"
         if ko:
-            lines.append(f"{vs}  —  Kickoff {ko}")
-            lines.append(
-                f"  Prediction: {pick}  |  "
-                f"Home {home_pct}  Draw {draw_pct}  Away {away_pct}"
-            )
-        else:
-            lines.append(
-                f"{vs}  |  "
-                f"Prediction: {pick}  |  "
-                f"Home {home_pct}  Draw {draw_pct}  Away {away_pct}"
-            )
-    return "\n".join(lines)
+            lines.append(f"  🕐 {ko}")
+        loc = _place_of(m)
+        if loc:
+            lines.append(f"  📍 {loc}")
+        lines.append("")
+    return "\n".join(lines).rstrip()
 
 
 def half_time(match: dict, home_goals: int, away_goals: int,

@@ -14,7 +14,17 @@ def test_morning_brief_shows_date():
     matches = [{"home": "Brazil", "away": "Germany",
                 "prediction": {"home": 0.55, "draw": 0.25, "away": 0.20}}]
     text = mb.morning_brief("2026-06-14", matches)
-    assert "2026-06-14" in text
+    assert "June 14" in text   # human-readable header
+
+
+def test_morning_brief_uses_team_names_not_home_away():
+    matches = [{"home": "Germany", "away": "Curaçao",
+                "prediction": {"home": 0.778, "draw": 0.063, "away": 0.159}}]
+    text = mb.morning_brief("2026-06-14", matches)
+    # probabilities are labelled by team, never "Home"/"Away"
+    assert "Germany 77.8%" in text and "Curaçao 15.9%" in text
+    assert "Draw 6.3%" in text
+    assert "Home " not in text and "Away " not in text
 
 
 def test_morning_brief_shows_prediction_label():
@@ -194,16 +204,17 @@ def test_morning_brief_includes_kickoff_times():
                 "date": "2026-06-11", "kickoff_utc": "2026-06-11T19:00:00Z",
                 "prediction": {"home": 0.52, "draw": 0.26, "away": 0.22}}]
     body = mb.morning_brief("2026-06-11", matches)
-    assert "Kickoff 12:00pm PT / 2:00pm CT / 3:00pm ET" in body
+    assert "🕐 12:00pm PT / 2:00pm CT / 3:00pm ET" in body
     assert "Prediction: Mexico" in body
 
 
-def test_morning_brief_without_kickoff_keeps_single_line():
+def test_morning_brief_without_kickoff_omits_clock_line():
     matches = [{"home": "Mexico", "away": "South Africa",
                 "prediction": {"home": 0.52, "draw": 0.26, "away": 0.22}}]
     body = mb.morning_brief("2026-06-11", matches)
-    assert "Kickoff" not in body
-    assert "Mexico vs South Africa  |  Prediction: Mexico" in body
+    assert "🕐" not in body
+    assert "Mexico vs South Africa" in body
+    assert "Prediction: Mexico" in body
 
 
 # --- venue (city, country) ---
