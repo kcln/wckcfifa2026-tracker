@@ -180,6 +180,19 @@
           "kickoff_utc": "2026-06-14T01:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-06-14",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "FIFA World Cup 2026 — Matchday Brief\nDate: 2026-06-14\n\nGermany vs Curaçao  —  Houston, USA  —  Kickoff 10:00am PT / 12:00pm CT / 1:00pm ET / 10:30pm IST\n  Prediction: Germany  |  Home 77.8%  Draw 6.3%  Away 15.9%\nIvory Coast vs Ecuador  —  Philadelphia, USA  —  Kickoff 4:00pm PT / 6:00pm CT / 7:00pm ET / 4:30am IST (+1d)\n  Prediction: Ecuador  |  Home 19.1%  Draw 29.5%  Away 51.4%\nNetherlands vs Japan  —  Dallas (Arlington), USA  —  Kickoff 1:00pm PT / 3:00pm CT / 4:00pm ET / 1:30am IST (+1d)\n  Prediction: Japan  |  Home 28.3%  Draw 32.6%  Away 39.1%\nSweden vs Tunisia  —  Monterrey (Guadalupe), Mexico  —  Kickoff 7:00pm PT / 9:00pm CT / 10:00pm ET / 7:30am IST (+1d)\n  Prediction: Sweden  |  Home 42.6%  Draw 25.8%  Away 31.6%",
+          "sent": true,
+          "hash": "d5cc9312b8ee65db",
+          "generated_at": "2026-06-14T00:00:39.667726-07:00",
+          "kickoff_utc": "2026-06-14T17:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
