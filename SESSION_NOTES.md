@@ -140,6 +140,20 @@ KC); move to a private gist later if that changes. 135 tests pass.
   no dedup hashes and never causes re-sends. inbox messages share the footer.
 - Review loop: all four changes were tested to KC-only before 'ship it'.
 
+## DEPLOY GOTCHA (operational)
+The live-mode run holds the `tracker` concurrency slot for up to 5h20m, and the
+workflow uses cancel-in-progress: false (so the 5-min cron can't kill a live
+loop mid-match). Consequence: a freshly dispatched run after a code change
+QUEUES behind the running live loop and won't take effect until that loop ends.
+ALWAYS `gh run cancel <in_progress live-loop id>` before/after dispatching a new
+run, else the old code keeps serving. Verify the active run's headSha == HEAD.
+
+## Dedup is by STABLE KEY (not body) since 2026-06-14
+_add_message keys on identity: pm-{date}-{id} / ht-{date}-{id} / mb-{date} /
+dr-{date} / cr-{date}. So ESPN revising a goal minute/scorer after the whistle
+no longer re-sends. Legacy messages fall back to body hash. _all_keys() builds
+the dedup set. (Bug that prompted this: NJP goal 88'->89' re-sent the result.)
+
 ## NEXT
 - Add Ankit's chat ID (8954471490) to TELEGRAM_CHAT_IDS if/when he replies YES.
 - Confirm a Telegram brief lands on KC's phone once the tournament starts (Jun 11).
