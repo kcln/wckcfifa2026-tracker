@@ -239,6 +239,14 @@
           "hash": "e9300f7ae75abd40",
           "generated_at": "2026-06-14T13:23:37.414280-07:00",
           "kickoff_utc": "2026-06-14T17:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "Half-time: Netherlands 0-0 Japan\nDallas (Arlington), USA\nPrediction: Japan",
+          "sent": true,
+          "hash": "cca043f14440b296",
+          "generated_at": "2026-06-14T13:52:15.706348-07:00",
+          "kickoff_utc": "2026-06-14T20:00:00Z"
         }
       ]
     }
