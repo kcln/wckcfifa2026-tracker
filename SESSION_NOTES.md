@@ -79,6 +79,27 @@ result; `message_builder._event_lines` renders '⚽ 21' Scorer (Country)' /
 '🟥 80' Player (Country)'. 119 tests. Format verified against the real
 Brazil-Morocco feed.
 
+## Incident+features (2026-06-14)
+- BUG: ESPN 'Türkiye' (norm 'turkiye') vs seed 'Turkey' dropped Australia 2-0 Türkiye
+  on June 13, which blocked the whole June-13 daily recap (gate required all 4 matches).
+  KC noticed he got no end-of-day summary. FIX: turkiye->turkey alias; recap now also
+  fires when the day is clock-complete (_day_clock_complete) and lists any unreconciled
+  match under 'No result recorded:'. Backfilled June-13 (Australia result + recap) to KC.
+- Welcome+catch-up sent to new signup Ashish Oberoi (chat 8957259477) via bot. He is NOT
+  on the broadcast secret yet (pending the approval-flow redesign below).
+
+## TODO (next build): signup approval + onboarding flow
+KC's spec: when someone presses /start, bot DMs KC to APPROVE (buttons/command); on
+approval the new member is added and gets a ONE-TIME onboarding choice asking (numbered):
+  1. Today's match brief + summary of the day + updates till now
+  2. Only match brief
+  3. Only updates
+  4. Only summary of the day
+After that one-time catch-up, they go to regular programming (all future messages).
+Constraint: GitHub Actions has no webhook -> approval is poll-latency (mins), not instant.
+Subscriber list must move off the write-only secret (e.g. private gist) for auto-persist.
+Bot currently has NO inbound handler (/start,/stop,approve) — that's the net-new module.
+
 ## NEXT
 - Add Ankit's chat ID (8954471490) to TELEGRAM_CHAT_IDS if/when he replies YES.
 - Confirm a Telegram brief lands on KC's phone once the tournament starts (Jun 11).
