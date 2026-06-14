@@ -100,6 +100,21 @@ Constraint: GitHub Actions has no webhook -> approval is poll-latency (mins), no
 Subscriber list must move off the write-only secret (e.g. private gist) for auto-persist.
 Bot currently has NO inbound handler (/start,/stop,approve) — that's the net-new module.
 
+## Signup approval + onboarding flow SHIPPED (2026-06-14)
+Built and deployed. New module `src/inbox.py` (poll getUpdates each cycle) + the
+pipeline: /start -> pending + Approve/Decline DM to KC (APPROVER_CHAT_ID, default
+391401564); KC taps Approve -> added + sent the 1-4 onboarding menu; member
+replies 1-4 -> one-time catch-up (tracker.build_catchup from today's messages)
+then onboarded; /stop -> unsubscribe. Subscriber list moved OFF the write-only
+secret into committed `subscribers.json` (chat IDs only, names never persisted;
+seeded from TELEGRAM_CHAT_IDS on first run). Broadcast now reads approved from
+that file (tracker.process_inbox -> _build_cfg chat_ids). live_loop.git_sync +
+workflow commit subscribers.json so approvals persist. Ashish + KC seeded as
+approved+onboarded -> Ashish now activated WITHOUT the blocked secret command.
+CONSTRAINT: poll-based (no webhook) so approval latency is minutes, not instant.
+Privacy tradeoff: numeric chat IDs are visible in the public repo (acceptable per
+KC); move to a private gist later if that changes. 135 tests pass.
+
 ## NEXT
 - Add Ankit's chat ID (8954471490) to TELEGRAM_CHAT_IDS if/when he replies YES.
 - Confirm a Telegram brief lands on KC's phone once the tournament starts (Jun 11).
