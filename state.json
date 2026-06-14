@@ -5,33 +5,12 @@
       "messages": [
         {
           "type": "morning_brief",
-          "body": "FIFA World Cup 2026 — Matchday Brief\nDate: 2026-06-11\n\nMexico vs South Africa  |  Prediction: Mexico  |  Home 75.4%  Draw 16.5%  Away 8.1%\nSouth Korea vs Czech Republic  |  Prediction: South Korea  |  Home 49.3%  Draw 30.8%  Away 19.9%",
-          "sent": true,
-          "hash": "29ff5d73b61eee4e"
-        },
-        {
-          "type": "morning_brief",
-          "body": "FIFA World Cup 2026 — Matchday Brief\nDate: 2026-06-11\n\nMexico vs South Africa  —  Kickoff 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  Prediction: Mexico  |  Home 75.4%  Draw 16.5%  Away 8.1%\nSouth Korea vs Czech Republic  —  Kickoff 7:00pm PT / 9:00pm CT / 10:00pm ET / 7:30am IST (+1d)\n  Prediction: South Korea  |  Home 49.3%  Draw 30.8%  Away 19.9%",
-          "sent": true,
-          "hash": "5aebe4f62e22e114",
-          "generated_at": "2026-06-11T06:13:04.837268-07:00",
-          "kickoff_utc": "2026-06-11T19:00:00Z"
-        },
-        {
-          "type": "post_match",
-          "body": "Full time\nMexico 2-0 South Africa  ✓  (Prediction: Mexico)",
-          "sent": true,
-          "hash": "5ad378c3f714b9da",
-          "generated_at": "2026-06-11T15:23:47.032234-07:00",
-          "kickoff_utc": "2026-06-11T19:00:00Z"
-        },
-        {
-          "type": "morning_brief",
           "body": "FIFA World Cup 2026 — Matchday Brief\nDate: 2026-06-11\n\nMexico vs South Africa  —  Mexico City, Mexico  —  Kickoff 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  Prediction: Mexico  |  Home 75.4%  Draw 16.5%  Away 8.1%\nSouth Korea vs Czech Republic  —  Guadalajara (Zapopan), Mexico  —  Kickoff 7:00pm PT / 9:00pm CT / 10:00pm ET / 7:30am IST (+1d)\n  Prediction: South Korea  |  Home 49.3%  Draw 30.8%  Away 19.9%",
           "sent": true,
           "hash": "98642d87b57f1bb5",
           "generated_at": "2026-06-11T19:06:44.279073-07:00",
-          "kickoff_utc": "2026-06-11T19:00:00Z"
+          "kickoff_utc": "2026-06-11T19:00:00Z",
+          "key": "mb-2026-06-11"
         },
         {
           "type": "post_match",
@@ -39,7 +18,8 @@
           "sent": true,
           "hash": "4590e29d74198e77",
           "generated_at": "2026-06-11T19:06:44.279096-07:00",
-          "kickoff_utc": "2026-06-11T19:00:00Z"
+          "kickoff_utc": "2026-06-11T19:00:00Z",
+          "key": "pm-2026-06-11-1"
         },
         {
           "type": "post_match",
@@ -47,7 +27,8 @@
           "sent": true,
           "hash": "86fa65ad3804f88d",
           "generated_at": "2026-06-11T21:10:38.446511-07:00",
-          "kickoff_utc": "2026-06-12T02:00:00Z"
+          "kickoff_utc": "2026-06-12T02:00:00Z",
+          "key": "pm-2026-06-11-2"
         },
         {
           "type": "daily_recap",
@@ -55,7 +36,8 @@
           "sent": true,
           "hash": "e9ae41151f86896f",
           "generated_at": "2026-06-11T21:10:38.446725-07:00",
-          "kickoff_utc": "2026-06-11T19:00:00Z"
+          "kickoff_utc": "2026-06-11T19:00:00Z",
+          "key": "dr-2026-06-11"
         }
       ]
     },
@@ -68,7 +50,8 @@
           "sent": true,
           "hash": "c1e28676aa0a23fb",
           "generated_at": "2026-06-12T01:43:38.384798-07:00",
-          "kickoff_utc": "2026-06-12T19:00:00Z"
+          "kickoff_utc": "2026-06-12T19:00:00Z",
+          "key": "mb-2026-06-12"
         },
         {
           "type": "post_match",
@@ -76,7 +59,8 @@
           "sent": true,
           "hash": "d073f534b6690e65",
           "generated_at": "2026-06-12T15:02:22.294247-07:00",
-          "kickoff_utc": "2026-06-12T19:00:00Z"
+          "kickoff_utc": "2026-06-12T19:00:00Z",
+          "key": "pm-2026-06-12-7"
         },
         {
           "type": "half_time",
@@ -84,7 +68,8 @@
           "sent": true,
           "hash": "8c2992b5442e0415",
           "generated_at": "2026-06-12T18:54:29.762160-07:00",
-          "kickoff_utc": "2026-06-13T01:00:00Z"
+          "kickoff_utc": "2026-06-13T01:00:00Z",
+          "key": "ht-2026-06-12-19"
         },
         {
           "type": "post_match",
@@ -92,7 +77,8 @@
           "sent": true,
           "hash": "8b7ee0396d91cc7d",
           "generated_at": "2026-06-12T20:06:31.207929-07:00",
-          "kickoff_utc": "2026-06-13T01:00:00Z"
+          "kickoff_utc": "2026-06-13T01:00:00Z",
+          "key": "pm-2026-06-12-19"
         },
         {
           "type": "daily_recap",
@@ -100,7 +86,8 @@
           "sent": true,
           "hash": "91dcdc3b2894032b",
           "generated_at": "2026-06-12T20:06:31.208125-07:00",
-          "kickoff_utc": "2026-06-12T19:00:00Z"
+          "kickoff_utc": "2026-06-12T19:00:00Z",
+          "key": "dr-2026-06-12"
         }
       ]
     },
@@ -113,7 +100,8 @@
           "sent": true,
           "hash": "7138ccd026eae065",
           "generated_at": "2026-06-14T14:08:13.535971-07:00",
-          "kickoff_utc": "2026-06-13T19:00:00Z"
+          "kickoff_utc": "2026-06-13T19:00:00Z",
+          "key": "mb-2026-06-13"
         },
         {
           "type": "post_match",
@@ -121,7 +109,8 @@
           "sent": true,
           "hash": "e1972c49068ff215",
           "generated_at": "2026-06-14T14:08:13.536525-07:00",
-          "kickoff_utc": "2026-06-13T19:00:00Z"
+          "kickoff_utc": "2026-06-13T19:00:00Z",
+          "key": "pm-2026-06-13-8"
         },
         {
           "type": "post_match",
@@ -129,7 +118,8 @@
           "sent": true,
           "hash": "bd608a15db6ee83b",
           "generated_at": "2026-06-14T14:08:13.536855-07:00",
-          "kickoff_utc": "2026-06-13T22:00:00Z"
+          "kickoff_utc": "2026-06-13T22:00:00Z",
+          "key": "pm-2026-06-13-13"
         },
         {
           "type": "post_match",
@@ -137,7 +127,8 @@
           "sent": true,
           "hash": "fe300cb09560f4de",
           "generated_at": "2026-06-14T14:08:13.537222-07:00",
-          "kickoff_utc": "2026-06-14T01:00:00Z"
+          "kickoff_utc": "2026-06-14T01:00:00Z",
+          "key": "pm-2026-06-13-14"
         },
         {
           "type": "post_match",
@@ -145,7 +136,8 @@
           "sent": true,
           "hash": "f8a57e015246b13d",
           "generated_at": "2026-06-14T14:08:13.537647-07:00",
-          "kickoff_utc": "2026-06-14T04:00:00Z"
+          "kickoff_utc": "2026-06-14T04:00:00Z",
+          "key": "pm-2026-06-13-20"
         },
         {
           "type": "half_time",
@@ -153,7 +145,8 @@
           "sent": true,
           "hash": "6163775b66ccd6e3",
           "generated_at": "2026-06-13T12:58:19.457414-07:00",
-          "kickoff_utc": "2026-06-13T19:00:00Z"
+          "kickoff_utc": "2026-06-13T19:00:00Z",
+          "key": "ht-2026-06-13-8"
         },
         {
           "type": "half_time",
@@ -161,7 +154,8 @@
           "sent": true,
           "hash": "5e63342ba7d79fed",
           "generated_at": "2026-06-13T15:55:10.543935-07:00",
-          "kickoff_utc": "2026-06-13T22:00:00Z"
+          "kickoff_utc": "2026-06-13T22:00:00Z",
+          "key": "ht-2026-06-13-13"
         },
         {
           "type": "half_time",
@@ -169,7 +163,8 @@
           "sent": true,
           "hash": "df87756d7033ec9e",
           "generated_at": "2026-06-13T18:53:38.342943-07:00",
-          "kickoff_utc": "2026-06-14T01:00:00Z"
+          "kickoff_utc": "2026-06-14T01:00:00Z",
+          "key": "ht-2026-06-13-14"
         },
         {
           "type": "daily_recap",
@@ -177,7 +172,8 @@
           "sent": true,
           "hash": "ac0fbdda5e194f70",
           "generated_at": "2026-06-14T14:08:13.538613-07:00",
-          "kickoff_utc": "2026-06-13T19:00:00Z"
+          "kickoff_utc": "2026-06-13T19:00:00Z",
+          "key": "dr-2026-06-13"
         }
       ]
     },
@@ -190,7 +186,8 @@
           "sent": true,
           "hash": "e9300f7ae75abd40",
           "generated_at": "2026-06-14T14:08:13.539126-07:00",
-          "kickoff_utc": "2026-06-14T17:00:00Z"
+          "kickoff_utc": "2026-06-14T17:00:00Z",
+          "key": "mb-2026-06-14"
         },
         {
           "type": "post_match",
@@ -198,7 +195,8 @@
           "sent": true,
           "hash": "24572bf9915aadee",
           "generated_at": "2026-06-14T14:08:13.540073-07:00",
-          "kickoff_utc": "2026-06-14T17:00:00Z"
+          "kickoff_utc": "2026-06-14T17:00:00Z",
+          "key": "pm-2026-06-14-25"
         },
         {
           "type": "half_time",
@@ -206,7 +204,8 @@
           "sent": true,
           "hash": "62fbb6eda582485a",
           "generated_at": "2026-06-14T10:56:00.006811-07:00",
-          "kickoff_utc": "2026-06-14T17:00:00Z"
+          "kickoff_utc": "2026-06-14T17:00:00Z",
+          "key": "ht-2026-06-14-25"
         },
         {
           "type": "half_time",
@@ -214,15 +213,8 @@
           "sent": true,
           "hash": "cca043f14440b296",
           "generated_at": "2026-06-14T13:52:15.706348-07:00",
-          "kickoff_utc": "2026-06-14T20:00:00Z"
-        },
-        {
-          "type": "post_match",
-          "body": "Full time\nNetherlands 2-2 Japan  —  Dallas (Arlington), USA\nResult: Draw  ·  Prediction: Japan  ✗ (0%)\nOverall prediction: 4/10 (40.0%)\n  ⚽ 51' Virgil van Dijk (Netherlands)\n  ⚽ 57' Keito Nakamura (Japan)\n  ⚽ 64' Crysencio Summerville (Netherlands)\n  ⚽ 88' Daichi Kamada (Japan)",
-          "sent": true,
-          "hash": "40c34fa11f16a199",
-          "generated_at": "2026-06-14T14:58:46.439136-07:00",
-          "kickoff_utc": "2026-06-14T20:00:00Z"
+          "kickoff_utc": "2026-06-14T20:00:00Z",
+          "key": "ht-2026-06-14-31"
         },
         {
           "type": "post_match",
@@ -230,7 +222,8 @@
           "sent": true,
           "hash": "1ff0cac6b48cd74f",
           "generated_at": "2026-06-14T16:02:28.335398-07:00",
-          "kickoff_utc": "2026-06-14T20:00:00Z"
+          "kickoff_utc": "2026-06-14T20:00:00Z",
+          "key": "pm-2026-06-14-31"
         }
       ]
     }
