@@ -191,6 +191,14 @@
           "hash": "d5cc9312b8ee65db",
           "generated_at": "2026-06-14T00:00:39.667726-07:00",
           "kickoff_utc": "2026-06-14T17:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "Half-time: Germany 3-1 Curaçao\nHouston, USA\n  ⚽ 6' Felix Nmecha (Germany)\n  ⚽ 21' Livano Comenencia (Curaçao)\n  ⚽ 38' Nico Schlotterbeck (Germany)\n  ⚽ 45'+5' Kai Havertz (Germany, pen)\nPrediction: Germany",
+          "sent": true,
+          "hash": "62fbb6eda582485a",
+          "generated_at": "2026-06-14T10:56:00.006811-07:00",
+          "kickoff_utc": "2026-06-14T17:00:00Z"
         }
       ]
     }
