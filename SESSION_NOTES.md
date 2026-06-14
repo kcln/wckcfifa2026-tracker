@@ -69,6 +69,16 @@ forms; explicit `bosniaandherzegovina` alias since squash can't unify & with
 'and'). The stale-code live run was cancelled so the queued run picks up the fix.
 Half-time for that match is permanently missed; the result sends on the next run.
 
+## Feature (2026-06-13): goal scorers + red cards in messages
+Half-time, post-match, and daily-recap messages now list goal scorers (player,
+country, minute) and red cards. Source = ESPN scoreboard's embedded
+`competition.details` (no extra HTTP). `data_fetcher._events_from_details` keys
+off the redCard/ownGoal/penaltyKick/scoringPlay flags (yellows + shootout
+skipped); events ride through reconcile_results -> merge_results onto the match
+result; `message_builder._event_lines` renders '⚽ 21' Scorer (Country)' /
+'🟥 80' Player (Country)'. 119 tests. Format verified against the real
+Brazil-Morocco feed.
+
 ## NEXT
 - Add Ankit's chat ID (8954471490) to TELEGRAM_CHAT_IDS if/when he replies YES.
 - Confirm a Telegram brief lands on KC's phone once the tournament starts (Jun 11).
