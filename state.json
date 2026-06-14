@@ -109,11 +109,43 @@
       "messages": [
         {
           "type": "morning_brief",
-          "body": "FIFA World Cup 2026 — Matchday Brief\nDate: 2026-06-13\n\nQatar vs Switzerland  —  San Francisco Bay Area (Santa Clara), USA  —  Kickoff 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  Prediction: Switzerland  |  Home 8.6%  Draw 28.2%  Away 63.2%\nBrazil vs Morocco  —  New York/New Jersey (East Rutherford), USA  —  Kickoff 3:00pm PT / 5:00pm CT / 6:00pm ET / 3:30am IST (+1d)\n  Prediction: Brazil  |  Home 47.5%  Draw 30.9%  Away 21.6%\nHaiti vs Scotland  —  Boston (Foxborough), USA  —  Kickoff 6:00pm PT / 8:00pm CT / 9:00pm ET / 6:30am IST (+1d)\n  Prediction: Scotland  |  Home 17.0%  Draw 29.8%  Away 53.2%\nAustralia vs Turkey  —  Vancouver, Canada  —  Kickoff 9:00pm PT / 11:00pm CT / 12:00am ET (+1d) / 9:30am IST (+1d)\n  Prediction: Turkey  |  Home 26.0%  Draw 28.1%  Away 45.9%",
+          "body": "🏆 World Cup 2026 — Matchday Brief\nSaturday, June 13\n\nQatar vs Switzerland\n  Prediction: Switzerland\n  Qatar 8.6% · Draw 28.2% · Switzerland 63.2%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 San Francisco Bay Area (Santa Clara), USA\n\nBrazil vs Morocco\n  Prediction: Brazil\n  Brazil 47.5% · Draw 30.9% · Morocco 21.6%\n  🕐 3:00pm PT / 5:00pm CT / 6:00pm ET / 3:30am IST (+1d)\n  📍 New York/New Jersey (East Rutherford), USA\n\nHaiti vs Scotland\n  Prediction: Scotland\n  Haiti 17.0% · Draw 29.8% · Scotland 53.2%\n  🕐 6:00pm PT / 8:00pm CT / 9:00pm ET / 6:30am IST (+1d)\n  📍 Boston (Foxborough), USA\n\nAustralia vs Turkey\n  Prediction: Turkey\n  Australia 26.0% · Draw 28.1% · Turkey 45.9%\n  🕐 9:00pm PT / 11:00pm CT / 12:00am ET (+1d) / 9:30am IST (+1d)\n  📍 Vancouver, Canada",
           "sent": true,
-          "hash": "36954ed43a117b0d",
-          "generated_at": "2026-06-13T01:14:18.491992-07:00",
+          "hash": "7138ccd026eae065",
+          "generated_at": "2026-06-14T14:08:13.535971-07:00",
           "kickoff_utc": "2026-06-13T19:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "Full time\nQatar 1-1 Switzerland  —  San Francisco Bay Area (Santa Clara), USA\nResult: Draw  ·  Prediction: Switzerland  ✗ (0%)\nOverall prediction: 2/5 (40.0%)\n  ⚽ 17' Breel Embolo (Switzerland, pen)\n  ⚽ 90'+4' Miro Muheim (Qatar, OG)",
+          "sent": true,
+          "hash": "e1972c49068ff215",
+          "generated_at": "2026-06-14T14:08:13.536525-07:00",
+          "kickoff_utc": "2026-06-13T19:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "Full time\nBrazil 1-1 Morocco  —  New York/New Jersey (East Rutherford), USA\nResult: Draw  ·  Prediction: Brazil  ✗ (0%)\nOverall prediction: 2/6 (33.3%)\n  ⚽ 21' Ismael Saibari (Morocco)\n  ⚽ 32' Vinícius Júnior (Brazil)",
+          "sent": true,
+          "hash": "bd608a15db6ee83b",
+          "generated_at": "2026-06-14T14:08:13.536855-07:00",
+          "kickoff_utc": "2026-06-13T22:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "Full time\nHaiti 0-1 Scotland  —  Boston (Foxborough), USA\nResult: Scotland win  ·  Prediction: Scotland  ✓ (100%)\nOverall prediction: 3/7 (42.9%)\n  ⚽ 28' John McGinn (Scotland)",
+          "sent": true,
+          "hash": "fe300cb09560f4de",
+          "generated_at": "2026-06-14T14:08:13.537222-07:00",
+          "kickoff_utc": "2026-06-14T01:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "Full time\nAustralia 2-0 Turkey  —  Vancouver, Canada\nResult: Australia win  ·  Prediction: Turkey  ✗ (0%)\nOverall prediction: 3/8 (37.5%)\n  ⚽ 27' Nestory Irankunda (Australia)\n  ⚽ 75' Connor Metcalfe (Australia)",
+          "sent": true,
+          "hash": "f8a57e015246b13d",
+          "generated_at": "2026-06-14T14:08:13.537647-07:00",
+          "kickoff_utc": "2026-06-14T04:00:00Z"
         },
         {
           "type": "half_time",
@@ -121,14 +153,6 @@
           "sent": true,
           "hash": "6163775b66ccd6e3",
           "generated_at": "2026-06-13T12:58:19.457414-07:00",
-          "kickoff_utc": "2026-06-13T19:00:00Z"
-        },
-        {
-          "type": "post_match",
-          "body": "Full time\nQatar 1-1 Switzerland  ✗  (Prediction: Switzerland)  —  San Francisco Bay Area (Santa Clara), USA",
-          "sent": true,
-          "hash": "5d8f91eafc19f529",
-          "generated_at": "2026-06-13T14:08:27.427095-07:00",
           "kickoff_utc": "2026-06-13T19:00:00Z"
         },
         {
@@ -140,14 +164,6 @@
           "kickoff_utc": "2026-06-13T22:00:00Z"
         },
         {
-          "type": "post_match",
-          "body": "Full time\nBrazil 1-1 Morocco  ✗  (Prediction: Brazil)  —  New York/New Jersey (East Rutherford), USA",
-          "sent": true,
-          "hash": "a6d8fe75e4261501",
-          "generated_at": "2026-06-13T17:12:56.109669-07:00",
-          "kickoff_utc": "2026-06-13T22:00:00Z"
-        },
-        {
           "type": "half_time",
           "body": "Half-time: Haiti 0-1 Scotland\nBoston (Foxborough), USA\nPrediction: Scotland",
           "sent": true,
@@ -156,60 +172,12 @@
           "kickoff_utc": "2026-06-14T01:00:00Z"
         },
         {
-          "type": "post_match",
-          "body": "Full time\nQatar 1-1 Switzerland  ✗  (Prediction: Switzerland)  —  San Francisco Bay Area (Santa Clara), USA\n  ⚽ 17' Breel Embolo (Switzerland, pen)\n  ⚽ 90'+4' Miro Muheim (Qatar, OG)",
-          "sent": true,
-          "hash": "57789dbca3cc9992",
-          "generated_at": "2026-06-13T19:52:03.725793-07:00",
-          "kickoff_utc": "2026-06-13T19:00:00Z"
-        },
-        {
-          "type": "post_match",
-          "body": "Full time\nBrazil 1-1 Morocco  ✗  (Prediction: Brazil)  —  New York/New Jersey (East Rutherford), USA\n  ⚽ 21' Ismael Saibari (Morocco)\n  ⚽ 32' Vinícius Júnior (Brazil)",
-          "sent": true,
-          "hash": "f007c945186e9feb",
-          "generated_at": "2026-06-13T19:52:03.725818-07:00",
-          "kickoff_utc": "2026-06-13T22:00:00Z"
-        },
-        {
-          "type": "post_match",
-          "body": "Full time\nHaiti 0-1 Scotland  ✓  (Prediction: Scotland)  —  Boston (Foxborough), USA\n  ⚽ 28' John McGinn (Scotland)",
-          "sent": true,
-          "hash": "19c59e322b1b19bd",
-          "generated_at": "2026-06-13T20:04:19.835624-07:00",
-          "kickoff_utc": "2026-06-14T01:00:00Z"
-        },
-        {
-          "type": "post_match",
-          "body": "Full time\nAustralia 2-0 Turkey  ✗  (Prediction: Turkey)  —  Vancouver, Canada\n  ⚽ 27' Nestory Irankunda (Australia)\n  ⚽ 75' Connor Metcalfe (Australia)",
-          "sent": true,
-          "hash": "7fb59928b9acce41",
-          "generated_at": "2026-06-14T12:09:09.201312-07:00",
-          "kickoff_utc": "2026-06-14T04:00:00Z"
-        },
-        {
           "type": "daily_recap",
-          "body": "FIFA World Cup 2026 — Daily Recap\nDate: 2026-06-13\n\nResults:\n  Qatar 1-1 Switzerland  ✗  (Prediction: Switzerland)  —  San Francisco Bay Area (Santa Clara), USA\n    ⚽ 17' Breel Embolo (Switzerland, pen)\n    ⚽ 90'+4' Miro Muheim (Qatar, OG)\n  Brazil 1-1 Morocco  ✗  (Prediction: Brazil)  —  New York/New Jersey (East Rutherford), USA\n    ⚽ 21' Ismael Saibari (Morocco)\n    ⚽ 32' Vinícius Júnior (Brazil)\n  Haiti 0-1 Scotland  ✓  (Prediction: Scotland)  —  Boston (Foxborough), USA\n    ⚽ 28' John McGinn (Scotland)\n  Australia 2-0 Turkey  ✗  (Prediction: Turkey)  —  Vancouver, Canada\n    ⚽ 27' Nestory Irankunda (Australia)\n    ⚽ 75' Connor Metcalfe (Australia)\n\nGroup Standings:\n  Group A\n  Team                  P  Pts    GD   GF   GA\n  Czech Republic        0    0    +0    0    0\n  Mexico                0    0    +0    0    0\n  South Africa          0    0    +0    0    0\n  South Korea           0    0    +0    0    0\n\n  Group B\n  Team                  P  Pts    GD   GF   GA\n  Qatar                 1    1    +0    1    1\n  Switzerland           1    1    +0    1    1\n  Bosnia & Herzegovina  0    0    +0    0    0\n  Canada                0    0    +0    0    0\n\n  Group C\n  Team                  P  Pts    GD   GF   GA\n  Scotland              1    3    +1    1    0\n  Brazil                1    1    +0    1    1\n  Morocco               1    1    +0    1    1\n  Haiti                 1    0    -1    0    1\n\n  Group D\n  Team                  P  Pts    GD   GF   GA\n  Australia             1    3    +2    2    0\n  Paraguay              0    0    +0    0    0\n  USA                   0    0    +0    0    0\n  Turkey                1    0    -2    0    2\n\n  Group E\n  Team                  P  Pts    GD   GF   GA\n  Germany               1    3    +6    7    1\n  Ecuador               0    0    +0    0    0\n  Ivory Coast           0    0    +0    0    0\n  Curaçao               1    0    -6    1    7\n\n  Group F\n  Team                  P  Pts    GD   GF   GA\n  Japan                 0    0    +0    0    0\n  Netherlands           0    0    +0    0    0\n  Sweden                0    0    +0    0    0\n  Tunisia               0    0    +0    0    0\n\n  Group G\n  Team                  P  Pts    GD   GF   GA\n  Belgium               0    0    +0    0    0\n  Egypt                 0    0    +0    0    0\n  Iran                  0    0    +0    0    0\n  New Zealand           0    0    +0    0    0\n\n  Group H\n  Team                  P  Pts    GD   GF   GA\n  Cape Verde            0    0    +0    0    0\n  Saudi Arabia          0    0    +0    0    0\n  Spain                 0    0    +0    0    0\n  Uruguay               0    0    +0    0    0\n\n  Group I\n  Team                  P  Pts    GD   GF   GA\n  France                0    0    +0    0    0\n  Iraq                  0    0    +0    0    0\n  Norway                0    0    +0    0    0\n  Senegal               0    0    +0    0    0\n\n  Group J\n  Team                  P  Pts    GD   GF   GA\n  Algeria               0    0    +0    0    0\n  Argentina             0    0    +0    0    0\n  Austria               0    0    +0    0    0\n  Jordan                0    0    +0    0    0\n\n  Group K\n  Team                  P  Pts    GD   GF   GA\n  Colombia              0    0    +0    0    0\n  DR Congo              0    0    +0    0    0\n  Portugal              0    0    +0    0    0\n  Uzbekistan            0    0    +0    0    0\n\n  Group L\n  Team                  P  Pts    GD   GF   GA\n  Croatia               0    0    +0    0    0\n  England               0    0    +0    0    0\n  Ghana                 0    0    +0    0    0\n  Panama                0    0    +0    0    0",
+          "body": "🏆 World Cup 2026 — Daily Recap\nSaturday, June 13\n\nResults:\n  Qatar 1-1 Switzerland  ✗  (Prediction: Switzerland)  —  San Francisco Bay Area (Santa Clara), USA\n    ⚽ 17' Breel Embolo (Switzerland, pen)\n    ⚽ 90'+4' Miro Muheim (Qatar, OG)\n  Brazil 1-1 Morocco  ✗  (Prediction: Brazil)  —  New York/New Jersey (East Rutherford), USA\n    ⚽ 21' Ismael Saibari (Morocco)\n    ⚽ 32' Vinícius Júnior (Brazil)\n  Haiti 0-1 Scotland  ✓  (Prediction: Scotland)  —  Boston (Foxborough), USA\n    ⚽ 28' John McGinn (Scotland)\n  Australia 2-0 Turkey  ✗  (Prediction: Turkey)  —  Vancouver, Canada\n    ⚽ 27' Nestory Irankunda (Australia)\n    ⚽ 75' Connor Metcalfe (Australia)\n\nOverall prediction — today 1/4 (25.0%)  ·  overall 3/8 (37.5%)\n\nGroup Standings:\n  Group A\n  Team                  P  Pts    GD   GF   GA\n  Mexico                1    3    +2    2    0\n  South Korea           1    3    +1    2    1\n  Czech Republic        1    0    -1    1    2\n  South Africa          1    0    -2    0    2\n\n  Group B\n  Team                  P  Pts    GD   GF   GA\n  Bosnia & Herzegovina  1    1    +0    1    1\n  Canada                1    1    +0    1    1\n  Qatar                 1    1    +0    1    1\n  Switzerland           1    1    +0    1    1\n\n  Group C\n  Team                  P  Pts    GD   GF   GA\n  Scotland              1    3    +1    1    0\n  Brazil                1    1    +0    1    1\n  Morocco               1    1    +0    1    1\n  Haiti                 1    0    -1    0    1\n\n  Group D\n  Team                  P  Pts    GD   GF   GA\n  USA                   1    3    +3    4    1\n  Australia             1    3    +2    2    0\n  Turkey                1    0    -2    0    2\n  Paraguay              1    0    -3    1    4\n\n  Group E\n  Team                  P  Pts    GD   GF   GA\n  Germany               1    3    +6    7    1\n  Ecuador               0    0    +0    0    0\n  Ivory Coast           0    0    +0    0    0\n  Curaçao               1    0    -6    1    7\n\n  Group F\n  Team                  P  Pts    GD   GF   GA\n  Japan                 0    0    +0    0    0\n  Netherlands           0    0    +0    0    0\n  Sweden                0    0    +0    0    0\n  Tunisia               0    0    +0    0    0\n\n  Group G\n  Team                  P  Pts    GD   GF   GA\n  Belgium               0    0    +0    0    0\n  Egypt                 0    0    +0    0    0\n  Iran                  0    0    +0    0    0\n  New Zealand           0    0    +0    0    0\n\n  Group H\n  Team                  P  Pts    GD   GF   GA\n  Cape Verde            0    0    +0    0    0\n  Saudi Arabia          0    0    +0    0    0\n  Spain                 0    0    +0    0    0\n  Uruguay               0    0    +0    0    0\n\n  Group I\n  Team                  P  Pts    GD   GF   GA\n  France                0    0    +0    0    0\n  Iraq                  0    0    +0    0    0\n  Norway                0    0    +0    0    0\n  Senegal               0    0    +0    0    0\n\n  Group J\n  Team                  P  Pts    GD   GF   GA\n  Algeria               0    0    +0    0    0\n  Argentina             0    0    +0    0    0\n  Austria               0    0    +0    0    0\n  Jordan                0    0    +0    0    0\n\n  Group K\n  Team                  P  Pts    GD   GF   GA\n  Colombia              0    0    +0    0    0\n  DR Congo              0    0    +0    0    0\n  Portugal              0    0    +0    0    0\n  Uzbekistan            0    0    +0    0    0\n\n  Group L\n  Team                  P  Pts    GD   GF   GA\n  Croatia               0    0    +0    0    0\n  England               0    0    +0    0    0\n  Ghana                 0    0    +0    0    0\n  Panama                0    0    +0    0    0",
           "sent": true,
-          "hash": "58375ee0e6fc0be4",
-          "generated_at": "2026-06-14T12:09:09.201395-07:00",
+          "hash": "ac0fbdda5e194f70",
+          "generated_at": "2026-06-14T14:08:13.538613-07:00",
           "kickoff_utc": "2026-06-13T19:00:00Z"
-        },
-        {
-          "type": "morning_brief",
-          "body": "🏆 World Cup 2026 — Matchday Brief\nSaturday, June 13\n\nQatar vs Switzerland\n  Prediction: Switzerland\n  Qatar 8.6% · Draw 28.2% · Switzerland 63.2%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 San Francisco Bay Area (Santa Clara), USA\n\nBrazil vs Morocco\n  Prediction: Brazil\n  Brazil 47.5% · Draw 30.9% · Morocco 21.6%\n  🕐 3:00pm PT / 5:00pm CT / 6:00pm ET / 3:30am IST (+1d)\n  📍 New York/New Jersey (East Rutherford), USA\n\nHaiti vs Scotland\n  Prediction: Scotland\n  Haiti 17.0% · Draw 29.8% · Scotland 53.2%\n  🕐 6:00pm PT / 8:00pm CT / 9:00pm ET / 6:30am IST (+1d)\n  📍 Boston (Foxborough), USA\n\nAustralia vs Turkey\n  Prediction: Turkey\n  Australia 26.0% · Draw 28.1% · Turkey 45.9%\n  🕐 9:00pm PT / 11:00pm CT / 12:00am ET (+1d) / 9:30am IST (+1d)\n  📍 Vancouver, Canada",
-          "sent": true,
-          "hash": "7138ccd026eae065",
-          "generated_at": "2026-06-14T13:23:37.413971-07:00",
-          "kickoff_utc": "2026-06-13T19:00:00Z"
-        },
-        {
-          "type": "post_match",
-          "body": "Full time\nAustralia 2-0 Turkey  —  Vancouver, Canada\nResult: Australia win  ·  Prediction: Turkey  ✗ (0%)\nOverall prediction: 0/1 (0.0%)\n  ⚽ 27' Nestory Irankunda (Australia)\n  ⚽ 75' Connor Metcalfe (Australia)",
-          "sent": true,
-          "hash": "fccba545ba163c7b",
-          "generated_at": "2026-06-14T13:55:44.414787-07:00",
-          "kickoff_utc": "2026-06-14T04:00:00Z"
         }
       ]
     },
@@ -218,10 +186,18 @@
       "messages": [
         {
           "type": "morning_brief",
-          "body": "FIFA World Cup 2026 — Matchday Brief\nDate: 2026-06-14\n\nGermany vs Curaçao  —  Houston, USA  —  Kickoff 10:00am PT / 12:00pm CT / 1:00pm ET / 10:30pm IST\n  Prediction: Germany  |  Home 77.8%  Draw 6.3%  Away 15.9%\nIvory Coast vs Ecuador  —  Philadelphia, USA  —  Kickoff 4:00pm PT / 6:00pm CT / 7:00pm ET / 4:30am IST (+1d)\n  Prediction: Ecuador  |  Home 19.1%  Draw 29.5%  Away 51.4%\nNetherlands vs Japan  —  Dallas (Arlington), USA  —  Kickoff 1:00pm PT / 3:00pm CT / 4:00pm ET / 1:30am IST (+1d)\n  Prediction: Japan  |  Home 28.3%  Draw 32.6%  Away 39.1%\nSweden vs Tunisia  —  Monterrey (Guadalupe), Mexico  —  Kickoff 7:00pm PT / 9:00pm CT / 10:00pm ET / 7:30am IST (+1d)\n  Prediction: Sweden  |  Home 42.6%  Draw 25.8%  Away 31.6%",
+          "body": "🏆 World Cup 2026 — Matchday Brief\nSunday, June 14\n\nGermany vs Curaçao\n  Prediction: Germany\n  Germany 77.8% · Draw 6.3% · Curaçao 15.9%\n  🕐 10:00am PT / 12:00pm CT / 1:00pm ET / 10:30pm IST\n  📍 Houston, USA\n\nIvory Coast vs Ecuador\n  Prediction: Ecuador\n  Ivory Coast 19.1% · Draw 29.5% · Ecuador 51.4%\n  🕐 4:00pm PT / 6:00pm CT / 7:00pm ET / 4:30am IST (+1d)\n  📍 Philadelphia, USA\n\nNetherlands vs Japan\n  Prediction: Japan\n  Netherlands 28.3% · Draw 32.6% · Japan 39.1%\n  🕐 1:00pm PT / 3:00pm CT / 4:00pm ET / 1:30am IST (+1d)\n  📍 Dallas (Arlington), USA\n\nSweden vs Tunisia\n  Prediction: Sweden\n  Sweden 42.6% · Draw 25.8% · Tunisia 31.6%\n  🕐 7:00pm PT / 9:00pm CT / 10:00pm ET / 7:30am IST (+1d)\n  📍 Monterrey (Guadalupe), Mexico",
           "sent": true,
-          "hash": "d5cc9312b8ee65db",
-          "generated_at": "2026-06-14T00:00:39.667726-07:00",
+          "hash": "e9300f7ae75abd40",
+          "generated_at": "2026-06-14T14:08:13.539126-07:00",
+          "kickoff_utc": "2026-06-14T17:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "Full time\nGermany 7-1 Curaçao  —  Houston, USA\nResult: Germany win  ·  Prediction: Germany  ✓ (100%)\nOverall prediction: 4/9 (44.4%)\n  ⚽ 6' Felix Nmecha (Germany)\n  ⚽ 21' Livano Comenencia (Curaçao)\n  ⚽ 38' Nico Schlotterbeck (Germany)\n  ⚽ 45'+5' Kai Havertz (Germany, pen)\n  ⚽ 47' Jamal Musiala (Germany)\n  ⚽ 68' Nathaniel Brown (Germany)\n  ⚽ 78' Deniz Undav (Germany)\n  ⚽ 88' Kai Havertz (Germany)",
+          "sent": true,
+          "hash": "24572bf9915aadee",
+          "generated_at": "2026-06-14T14:08:13.540073-07:00",
           "kickoff_utc": "2026-06-14T17:00:00Z"
         },
         {
@@ -233,36 +209,12 @@
           "kickoff_utc": "2026-06-14T17:00:00Z"
         },
         {
-          "type": "post_match",
-          "body": "Full time\nGermany 7-1 Curaçao  ✓  (Prediction: Germany)  —  Houston, USA\n  ⚽ 6' Felix Nmecha (Germany)\n  ⚽ 21' Livano Comenencia (Curaçao)\n  ⚽ 38' Nico Schlotterbeck (Germany)\n  ⚽ 45'+5' Kai Havertz (Germany, pen)\n  ⚽ 47' Jamal Musiala (Germany)\n  ⚽ 68' Nathaniel Brown (Germany)\n  ⚽ 78' Deniz Undav (Germany)\n  ⚽ 88' Kai Havertz (Germany)",
-          "sent": true,
-          "hash": "f4b80aed30d5b5f8",
-          "generated_at": "2026-06-14T12:02:31.287567-07:00",
-          "kickoff_utc": "2026-06-14T17:00:00Z"
-        },
-        {
-          "type": "morning_brief",
-          "body": "🏆 World Cup 2026 — Matchday Brief\nSunday, June 14\n\nGermany vs Curaçao\n  Prediction: Germany\n  Germany 77.8% · Draw 6.3% · Curaçao 15.9%\n  🕐 10:00am PT / 12:00pm CT / 1:00pm ET / 10:30pm IST\n  📍 Houston, USA\n\nIvory Coast vs Ecuador\n  Prediction: Ecuador\n  Ivory Coast 19.1% · Draw 29.5% · Ecuador 51.4%\n  🕐 4:00pm PT / 6:00pm CT / 7:00pm ET / 4:30am IST (+1d)\n  📍 Philadelphia, USA\n\nNetherlands vs Japan\n  Prediction: Japan\n  Netherlands 28.3% · Draw 32.6% · Japan 39.1%\n  🕐 1:00pm PT / 3:00pm CT / 4:00pm ET / 1:30am IST (+1d)\n  📍 Dallas (Arlington), USA\n\nSweden vs Tunisia\n  Prediction: Sweden\n  Sweden 42.6% · Draw 25.8% · Tunisia 31.6%\n  🕐 7:00pm PT / 9:00pm CT / 10:00pm ET / 7:30am IST (+1d)\n  📍 Monterrey (Guadalupe), Mexico",
-          "sent": true,
-          "hash": "e9300f7ae75abd40",
-          "generated_at": "2026-06-14T13:23:37.414280-07:00",
-          "kickoff_utc": "2026-06-14T17:00:00Z"
-        },
-        {
           "type": "half_time",
           "body": "Half-time: Netherlands 0-0 Japan\nDallas (Arlington), USA\nPrediction: Japan",
           "sent": true,
           "hash": "cca043f14440b296",
           "generated_at": "2026-06-14T13:52:15.706348-07:00",
           "kickoff_utc": "2026-06-14T20:00:00Z"
-        },
-        {
-          "type": "post_match",
-          "body": "Full time\nGermany 7-1 Curaçao  —  Houston, USA\nResult: Germany win  ·  Prediction: Germany  ✓ (100%)\nOverall prediction: 1/2 (50.0%)\n  ⚽ 6' Felix Nmecha (Germany)\n  ⚽ 21' Livano Comenencia (Curaçao)\n  ⚽ 38' Nico Schlotterbeck (Germany)\n  ⚽ 45'+5' Kai Havertz (Germany, pen)\n  ⚽ 47' Jamal Musiala (Germany)\n  ⚽ 68' Nathaniel Brown (Germany)\n  ⚽ 78' Deniz Undav (Germany)\n  ⚽ 88' Kai Havertz (Germany)",
-          "sent": true,
-          "hash": "d5f172ee87c7e2c6",
-          "generated_at": "2026-06-14T13:55:44.415312-07:00",
-          "kickoff_utc": "2026-06-14T17:00:00Z"
         }
       ]
     }
@@ -779,5 +731,143 @@
     "away_goals": 1,
     "date": "2026-06-14",
     "venue": "Houston"
+  },
+  "results": {
+    "1": {
+      "home_goals": 2,
+      "away_goals": 0
+    },
+    "2": {
+      "home_goals": 2,
+      "away_goals": 1
+    },
+    "7": {
+      "home_goals": 1,
+      "away_goals": 1
+    },
+    "19": {
+      "home_goals": 4,
+      "away_goals": 1
+    },
+    "8": {
+      "home_goals": 1,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "penalty",
+          "player": "Breel Embolo",
+          "team": "Switzerland",
+          "minute": "17'"
+        },
+        {
+          "kind": "own_goal",
+          "player": "Miro Muheim",
+          "team": "Qatar",
+          "minute": "90'+4'"
+        }
+      ]
+    },
+    "13": {
+      "home_goals": 1,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Ismael Saibari",
+          "team": "Morocco",
+          "minute": "21'"
+        },
+        {
+          "kind": "goal",
+          "player": "Vinícius Júnior",
+          "team": "Brazil",
+          "minute": "32'"
+        }
+      ]
+    },
+    "14": {
+      "home_goals": 0,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "John McGinn",
+          "team": "Scotland",
+          "minute": "28'"
+        }
+      ]
+    },
+    "20": {
+      "home_goals": 2,
+      "away_goals": 0,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Nestory Irankunda",
+          "team": "Australia",
+          "minute": "27'"
+        },
+        {
+          "kind": "goal",
+          "player": "Connor Metcalfe",
+          "team": "Australia",
+          "minute": "75'"
+        }
+      ]
+    },
+    "25": {
+      "home_goals": 7,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Felix Nmecha",
+          "team": "Germany",
+          "minute": "6'"
+        },
+        {
+          "kind": "goal",
+          "player": "Livano Comenencia",
+          "team": "Curaçao",
+          "minute": "21'"
+        },
+        {
+          "kind": "goal",
+          "player": "Nico Schlotterbeck",
+          "team": "Germany",
+          "minute": "38'"
+        },
+        {
+          "kind": "penalty",
+          "player": "Kai Havertz",
+          "team": "Germany",
+          "minute": "45'+5'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jamal Musiala",
+          "team": "Germany",
+          "minute": "47'"
+        },
+        {
+          "kind": "goal",
+          "player": "Nathaniel Brown",
+          "team": "Germany",
+          "minute": "68'"
+        },
+        {
+          "kind": "goal",
+          "player": "Deniz Undav",
+          "team": "Germany",
+          "minute": "78'"
+        },
+        {
+          "kind": "goal",
+          "player": "Kai Havertz",
+          "team": "Germany",
+          "minute": "88'"
+        }
+      ]
+    }
   }
 }
