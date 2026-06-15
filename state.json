@@ -319,6 +319,15 @@
           "key": "pm-2026-06-15-37",
           "generated_at": "2026-06-15T14:00:17.054357-07:00",
           "kickoff_utc": "2026-06-15T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "Half-time: Saudi Arabia 1-0 Uruguay\nMiami (Miami Gardens), USA\n  ⚽ 41' Abdulelah Al-Amri (Saudi Arabia)\nPrediction: Uruguay",
+          "sent": true,
+          "hash": "266c70f9eac63787",
+          "key": "ht-2026-06-15-44",
+          "generated_at": "2026-06-15T15:55:46.059919-07:00",
+          "kickoff_utc": "2026-06-15T22:00:00Z"
         }
       ]
     }
