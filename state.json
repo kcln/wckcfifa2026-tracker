@@ -242,6 +242,15 @@
           "key": "pm-2026-06-14-26",
           "generated_at": "2026-06-14T18:04:54.303581-07:00",
           "kickoff_utc": "2026-06-14T23:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "Half-time: Sweden 2-1 Tunisia\nMonterrey (Guadalupe), Mexico\n  ⚽ 7' Yasin Ayari (Sweden)\n  ⚽ 30' Alexander Isak (Sweden)\n  ⚽ 43' Omar Rekik (Tunisia)\nPrediction: Sweden",
+          "sent": true,
+          "hash": "ca85e285b9231f56",
+          "key": "ht-2026-06-14-32",
+          "generated_at": "2026-06-14T19:52:15.139874-07:00",
+          "kickoff_utc": "2026-06-15T02:00:00Z"
         }
       ]
     }
