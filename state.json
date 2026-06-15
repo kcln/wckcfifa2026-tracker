@@ -301,6 +301,15 @@
           "key": "pm-2026-06-15-43",
           "generated_at": "2026-06-15T10:59:17.104216-07:00",
           "kickoff_utc": "2026-06-15T16:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "Half-time: Belgium 0-1 Egypt\nSeattle, USA\n  ⚽ 19' Emam Ashour (Egypt)\nPrediction: Belgium",
+          "sent": true,
+          "hash": "c75bfba21dd3eaf3",
+          "key": "ht-2026-06-15-37",
+          "generated_at": "2026-06-15T12:53:47.071357-07:00",
+          "kickoff_utc": "2026-06-15T19:00:00Z"
         }
       ]
     }
