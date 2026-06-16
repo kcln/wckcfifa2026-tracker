@@ -387,6 +387,15 @@
           "key": "ht-2026-06-16-49",
           "generated_at": "2026-06-16T12:57:20.616971-07:00",
           "kickoff_utc": "2026-06-16T19:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nTuesday, June 16\n\nFull time:\nFrance 3 - 1 Senegal\nNew York/New Jersey (East Rutherford), USA\n  ⚽ 66' Kylian Mbappé (France)\n  ⚽ 82' Bradley Barcola (France)\n  ⚽ 90'+5' Ibrahim Mbaye (Senegal)\n  ⚽ 90'+6' Kylian Mbappé (France)\nOverall prediction: 6/17 (35.3%)\nPrediction ✓: France",
+          "sent": true,
+          "hash": "1a68515b0ecc642e",
+          "key": "pm-2026-06-16-49",
+          "generated_at": "2026-06-16T14:05:50.929634-07:00",
+          "kickoff_utc": "2026-06-16T19:00:00Z"
         }
       ]
     }
@@ -667,11 +676,11 @@
     "I": [
       {
         "team": "France",
-        "played": 0,
-        "points": 0,
-        "gd": 0,
-        "gf": 0,
-        "ga": 0
+        "played": 1,
+        "points": 3,
+        "gd": 2,
+        "gf": 3,
+        "ga": 1
       },
       {
         "team": "Iraq",
@@ -691,11 +700,11 @@
       },
       {
         "team": "Senegal",
-        "played": 0,
+        "played": 1,
         "points": 0,
-        "gd": 0,
-        "gf": 0,
-        "ga": 0
+        "gd": -2,
+        "gf": 1,
+        "ga": 3
       }
     ],
     "J": [
@@ -803,106 +812,106 @@
   },
   "bracket": {
     "title_odds": {
-      "Argentina": 0.2091,
-      "Brazil": 0.053,
-      "Netherlands": 0.035,
-      "Spain": 0.1476,
-      "Ecuador": 0.0238,
-      "Croatia": 0.0303,
-      "Colombia": 0.0452,
-      "Portugal": 0.0518,
-      "Germany": 0.0434,
-      "France": 0.1191,
-      "Sweden": 0.0014,
-      "Mexico": 0.0196,
-      "Japan": 0.0296,
-      "England": 0.0378,
-      "Switzerland": 0.0137,
-      "South Korea": 0.0081,
+      "Turkey": 0.0105,
+      "Brazil": 0.0501,
       "Belgium": 0.0199,
-      "Canada": 0.0064,
-      "Austria": 0.0046,
-      "Uruguay": 0.0177,
-      "Iran": 0.0058,
-      "Algeria": 0.0038,
-      "Morocco": 0.0234,
-      "Turkey": 0.0113,
-      "Norway": 0.0061,
-      "Senegal": 0.01,
-      "DR Congo": 0.0004,
+      "Netherlands": 0.0315,
+      "Argentina": 0.2084,
+      "France": 0.1304,
+      "Norway": 0.0056,
+      "England": 0.0401,
+      "Japan": 0.0277,
+      "Colombia": 0.0483,
+      "DR Congo": 0.0003,
+      "Spain": 0.1539,
+      "Algeria": 0.0051,
+      "Austria": 0.0054,
+      "Uruguay": 0.0171,
+      "Ecuador": 0.0213,
+      "Portugal": 0.0461,
+      "Canada": 0.0071,
+      "Germany": 0.0445,
+      "Switzerland": 0.0119,
+      "Uzbekistan": 0.0023,
+      "Morocco": 0.0221,
+      "South Korea": 0.0086,
+      "Croatia": 0.0288,
+      "Panama": 0.002,
+      "Mexico": 0.0168,
+      "Iran": 0.0072,
+      "Egypt": 0.0026,
       "Ivory Coast": 0.0032,
-      "Haiti": 0.0002,
-      "Uzbekistan": 0.0016,
-      "Panama": 0.0018,
-      "Egypt": 0.0032,
-      "Scotland": 0.001,
-      "Australia": 0.0059,
-      "Paraguay": 0.002,
-      "New Zealand": 0.0002,
-      "Czech Republic": 0.0021,
-      "Iraq": 0.0002,
-      "Jordan": 0.0004,
-      "Saudi Arabia": 0.0003
+      "Australia": 0.0063,
+      "Scotland": 0.0008,
+      "Czech Republic": 0.0025,
+      "Sweden": 0.0023,
+      "Senegal": 0.0081,
+      "Paraguay": 0.0006,
+      "Saudi Arabia": 0.0002,
+      "Haiti": 0.0001,
+      "New Zealand": 0.0001,
+      "Iraq": 0.0001,
+      "Jordan": 0.0001
     },
     "advancement": {
-      "Croatia": 0.915,
-      "Uruguay": 0.7716,
-      "Argentina": 0.9924,
-      "South Korea": 0.9508,
-      "Sweden": 0.9584,
-      "France": 0.936,
-      "Australia": 0.9815,
-      "DR Congo": 0.3,
-      "Czech Republic": 0.634,
+      "Croatia": 0.9168,
+      "Senegal": 0.5713,
+      "Algeria": 0.633,
+      "Uruguay": 0.7726,
+      "Argentina": 0.9919,
+      "South Korea": 0.9505,
+      "Sweden": 0.9587,
+      "France": 0.9963,
+      "Australia": 0.9823,
+      "DR Congo": 0.3086,
+      "Czech Republic": 0.6348,
       "Colombia": 0.9133,
-      "USA": 0.9169,
-      "Turkey": 0.6261,
-      "Spain": 0.9599,
-      "Iraq": 0.3138,
-      "Switzerland": 0.9041,
-      "England": 0.9367,
+      "USA": 0.9194,
+      "Turkey": 0.6262,
+      "Spain": 0.9609,
+      "Switzerland": 0.9043,
+      "England": 0.9339,
+      "Ghana": 0.1181,
       "Japan": 0.8975,
-      "Qatar": 0.4733,
-      "Ecuador": 0.7489,
-      "Norway": 0.6594,
-      "Brazil": 0.9567,
-      "Cape Verde": 0.5693,
-      "Portugal": 0.9179,
-      "Morocco": 0.9051,
-      "Netherlands": 0.9281,
-      "Austria": 0.6896,
-      "Egypt": 0.7571,
-      "Panama": 0.7106,
-      "Canada": 0.875,
-      "Germany": 0.9971,
-      "Belgium": 0.8768,
-      "Mexico": 0.9709,
-      "New Zealand": 0.2818,
-      "Senegal": 0.697,
-      "Iran": 0.6982,
-      "Ivory Coast": 0.9416,
-      "Scotland": 0.6811,
-      "Saudi Arabia": 0.3184,
-      "Uzbekistan": 0.4402,
-      "Algeria": 0.627,
-      "Jordan": 0.2241,
-      "Paraguay": 0.2934,
-      "Bosnia & Herzegovina": 0.4104,
-      "South Africa": 0.1202,
-      "Tunisia": 0.0838,
-      "Ghana": 0.1227,
-      "Curaçao": 0.0313,
-      "Haiti": 0.085
+      "Ecuador": 0.7522,
+      "Brazil": 0.957,
+      "Qatar": 0.4734,
+      "Cape Verde": 0.5697,
+      "Portugal": 0.9211,
+      "Morocco": 0.9046,
+      "Netherlands": 0.9278,
+      "Egypt": 0.7605,
+      "Austria": 0.6908,
+      "Canada": 0.876,
+      "Germany": 0.9975,
+      "Belgium": 0.8777,
+      "Mexico": 0.9718,
+      "New Zealand": 0.2809,
+      "Iran": 0.6976,
+      "Norway": 0.6698,
+      "Ivory Coast": 0.9445,
+      "Scotland": 0.6875,
+      "Saudi Arabia": 0.319,
+      "Panama": 0.7267,
+      "Uzbekistan": 0.4312,
+      "Paraguay": 0.2943,
+      "Iraq": 0.3245,
+      "Bosnia & Herzegovina": 0.4119,
+      "South Africa": 0.1216,
+      "Tunisia": 0.0836,
+      "Jordan": 0.2206,
+      "Curaçao": 0.0309,
+      "Haiti": 0.0849
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Saudi Arabia",
-    "away": "Uruguay",
-    "home_goals": 1,
+    "home": "France",
+    "away": "Senegal",
+    "home_goals": 3,
     "away_goals": 1,
-    "date": "2026-06-15",
-    "venue": "Miami (Miami Gardens)"
+    "date": "2026-06-16",
+    "venue": "New York/New Jersey (East Rutherford)"
   },
   "results": {
     "1": {
@@ -1192,6 +1201,36 @@
           "player": "Mohammad Mohebbi",
           "team": "Iran",
           "minute": "64'"
+        }
+      ]
+    },
+    "49": {
+      "home_goals": 3,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "minute": "66'"
+        },
+        {
+          "kind": "goal",
+          "player": "Bradley Barcola",
+          "team": "France",
+          "minute": "82'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ibrahim Mbaye",
+          "team": "Senegal",
+          "minute": "90'+5'"
+        },
+        {
+          "kind": "goal",
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "minute": "90'+6'"
         }
       ]
     }
@@ -1757,7 +1796,36 @@
             "away": 0.1774348040860975,
             "pick": "France"
           },
-          "status": "sched"
+          "status": "FT",
+          "hg": 3,
+          "ag": 1,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Kylian Mbappé",
+              "team": "France",
+              "minute": "66'"
+            },
+            {
+              "kind": "goal",
+              "player": "Bradley Barcola",
+              "team": "France",
+              "minute": "82'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ibrahim Mbaye",
+              "team": "Senegal",
+              "minute": "90'+5'"
+            },
+            {
+              "kind": "goal",
+              "player": "Kylian Mbappé",
+              "team": "France",
+              "minute": "90'+6'"
+            }
+          ],
+          "hit": true
         },
         {
           "id": "50",
