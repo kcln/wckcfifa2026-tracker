@@ -337,6 +337,15 @@
           "key": "pm-2026-06-15-44",
           "generated_at": "2026-06-15T17:06:04.690594-07:00",
           "kickoff_utc": "2026-06-15T22:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "Half-time: Iran 1-1 New Zealand\nLos Angeles (Inglewood), USA\n  ⚽ 7' Elijah Just (New Zealand)\n  ⚽ 32' Ramin Rezaeian (Iran)\nPrediction: Iran",
+          "sent": true,
+          "hash": "727e392c2b3c8906",
+          "key": "ht-2026-06-15-38",
+          "generated_at": "2026-06-15T18:56:42.020709-07:00",
+          "kickoff_utc": "2026-06-16T01:00:00Z"
         }
       ]
     }
