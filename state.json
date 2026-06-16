@@ -378,6 +378,15 @@
           "key": "mb-2026-06-16",
           "generated_at": "2026-06-16T11:04:33.771858-07:00",
           "kickoff_utc": "2026-06-16T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nTuesday, June 16\n\nHalf-time:\nFrance 0 - 0 Senegal\nNew York/New Jersey (East Rutherford), USA\nPrediction: France",
+          "sent": true,
+          "hash": "10d30d4db6f01480",
+          "key": "ht-2026-06-16-49",
+          "generated_at": "2026-06-16T12:57:20.616971-07:00",
+          "kickoff_utc": "2026-06-16T19:00:00Z"
         }
       ]
     }
