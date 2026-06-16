@@ -137,3 +137,56 @@ def test_render_pre_block_becomes_monospace_element(tmp_path):
     html = _render(state, tmp_path)
     assert '<pre class="mono">' in html and "Mexico  3" in html
     assert "&lt;code&gt;" not in html  # the literal tag never leaks to the page
+
+
+# --- Option 3: structured board + standings rendering ---
+
+def test_render_standings_as_real_html_table(tmp_path):
+    state = {"days": [], "bracket": {}, "groups": {
+        "A": [
+            {"team": "Mexico", "played": 1, "points": 3, "gd": 2, "gf": 2, "ga": 0},
+            {"team": "South Korea", "played": 1, "points": 3, "gd": 1, "gf": 2, "ga": 1},
+            {"team": "Czech Republic", "played": 1, "points": 0, "gd": -1, "gf": 1, "ga": 2},
+        ]}}
+    html = _render(state, tmp_path)
+    assert '<table class="gtable">' in html
+    assert "<caption>Group A</caption>" in html
+    assert '<td class="t-team">Mexico</td>' in html
+    assert '<td class="t-pts">3</td>' in html
+    assert 'class="qual"' in html              # top-2 highlighted
+    assert "&lt;code&gt;" not in html and "<pre" not in html  # no ASCII table
+
+
+def test_render_board_match_cards(tmp_path):
+    state = {"days": [], "bracket": {}, "groups": {},
+             "board": [{"date": "2026-06-15", "matches": [
+                 {"id": "1", "home": "Belgium", "away": "Egypt",
+                  "kickoff_utc": "2026-06-15T19:00:00Z", "venue": "Seattle",
+                  "stage": "group", "status": "FT", "hg": 1, "ag": 1,
+                  "events": [{"kind": "goal", "player": "Ashour",
+                              "team": "Egypt", "minute": "20'"}],
+                  "hit": False,
+                  "pred": {"home": 0.48, "draw": 0.30, "away": 0.22,
+                           "pick": "Belgium"}}]}]}
+    html = _render(state, tmp_path)
+    assert '<div class="mcard">' in html
+    assert ">Belgium<" in html and ">Egypt<" in html
+    assert '<span class="sc">1</span>' in html        # score
+    assert "Prediction: <strong>Belgium</strong>" in html
+    assert 'class="pill no">✗' in html               # missed prediction
+    assert '<div class="oddsbar"' in html            # odds bar
+    assert "Ashour" in html                          # scorer
+    assert "Seattle, USA" in html                    # venue formatted
+
+
+def test_render_board_scheduled_match_shows_upcoming(tmp_path):
+    state = {"days": [], "bracket": {}, "groups": {},
+             "board": [{"date": "2026-06-20", "matches": [
+                 {"id": "9", "home": "Brazil", "away": "Serbia",
+                  "kickoff_utc": "2026-06-20T19:00:00Z", "venue": "Atlanta",
+                  "stage": "group", "status": "sched",
+                  "pred": {"home": 0.6, "draw": 0.25, "away": 0.15,
+                           "pick": "Brazil"}}]}]}
+    html = _render(state, tmp_path)
+    assert 'class="pill soon">upcoming' in html
+    assert '<span class="vsbig">vs</span>' in html

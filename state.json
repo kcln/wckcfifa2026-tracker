@@ -1195,5 +1195,616 @@
         }
       ]
     }
-  }
+  },
+  "board": [
+    {
+      "date": "2026-06-11",
+      "matches": [
+        {
+          "id": "1",
+          "home": "Mexico",
+          "away": "South Africa",
+          "kickoff_utc": "2026-06-11T19:00:00Z",
+          "venue": "Mexico City",
+          "stage": "group",
+          "pred": {
+            "home": 0.7543827185557013,
+            "draw": 0.16501207402521256,
+            "away": 0.0806052074190863,
+            "pick": "Mexico"
+          },
+          "status": "FT",
+          "hg": 2,
+          "ag": 0,
+          "events": [],
+          "hit": true
+        },
+        {
+          "id": "2",
+          "home": "South Korea",
+          "away": "Czech Republic",
+          "kickoff_utc": "2026-06-12T02:00:00Z",
+          "venue": "Guadalajara (Zapopan)",
+          "stage": "group",
+          "pred": {
+            "home": 0.49333513415260694,
+            "draw": 0.30762475408553436,
+            "away": 0.19904011176185868,
+            "pick": "South Korea"
+          },
+          "status": "FT",
+          "hg": 2,
+          "ag": 1,
+          "events": [],
+          "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-06-12",
+      "matches": [
+        {
+          "id": "7",
+          "home": "Canada",
+          "away": "Bosnia & Herzegovina",
+          "kickoff_utc": "2026-06-12T19:00:00Z",
+          "venue": "Toronto",
+          "stage": "group",
+          "pred": {
+            "home": 0.8028364421149993,
+            "draw": 0.1624788037613689,
+            "away": 0.03468475412363188,
+            "pick": "Canada"
+          },
+          "status": "FT",
+          "hg": 1,
+          "ag": 1,
+          "events": [],
+          "hit": false
+        },
+        {
+          "id": "19",
+          "home": "USA",
+          "away": "Paraguay",
+          "kickoff_utc": "2026-06-13T01:00:00Z",
+          "venue": "Los Angeles (Inglewood)",
+          "stage": "group",
+          "pred": {
+            "home": 0.04532440558792134,
+            "draw": 0.06003031121049582,
+            "away": 0.8946452832015829,
+            "pick": "Paraguay"
+          },
+          "status": "FT",
+          "hg": 4,
+          "ag": 1,
+          "events": [],
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-13",
+      "matches": [
+        {
+          "id": "8",
+          "home": "Qatar",
+          "away": "Switzerland",
+          "kickoff_utc": "2026-06-13T19:00:00Z",
+          "venue": "San Francisco Bay Area (Santa Clara)",
+          "stage": "group",
+          "pred": {
+            "home": 0.0864208121583423,
+            "draw": 0.28190517751368865,
+            "away": 0.631674010327969,
+            "pick": "Switzerland"
+          },
+          "status": "FT",
+          "hg": 1,
+          "ag": 1,
+          "events": [
+            {
+              "kind": "penalty",
+              "player": "Breel Embolo",
+              "team": "Switzerland",
+              "minute": "17'"
+            },
+            {
+              "kind": "own_goal",
+              "player": "Miro Muheim",
+              "team": "Qatar",
+              "minute": "90'+4'"
+            }
+          ],
+          "hit": false
+        },
+        {
+          "id": "13",
+          "home": "Brazil",
+          "away": "Morocco",
+          "kickoff_utc": "2026-06-13T22:00:00Z",
+          "venue": "New York/New Jersey (East Rutherford)",
+          "stage": "group",
+          "pred": {
+            "home": 0.4749876407324148,
+            "draw": 0.3089350508828714,
+            "away": 0.2160773083847137,
+            "pick": "Brazil"
+          },
+          "status": "FT",
+          "hg": 1,
+          "ag": 1,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Ismael Saibari",
+              "team": "Morocco",
+              "minute": "21'"
+            },
+            {
+              "kind": "goal",
+              "player": "Vinícius Júnior",
+              "team": "Brazil",
+              "minute": "32'"
+            }
+          ],
+          "hit": false
+        },
+        {
+          "id": "14",
+          "home": "Haiti",
+          "away": "Scotland",
+          "kickoff_utc": "2026-06-14T01:00:00Z",
+          "venue": "Boston (Foxborough)",
+          "stage": "group",
+          "pred": {
+            "home": 0.1697546319479219,
+            "draw": 0.2984476715072609,
+            "away": 0.5317976965448172,
+            "pick": "Scotland"
+          },
+          "status": "FT",
+          "hg": 0,
+          "ag": 1,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "John McGinn",
+              "team": "Scotland",
+              "minute": "28'"
+            }
+          ],
+          "hit": true
+        },
+        {
+          "id": "20",
+          "home": "Australia",
+          "away": "Turkey",
+          "kickoff_utc": "2026-06-14T04:00:00Z",
+          "venue": "Vancouver",
+          "stage": "group",
+          "pred": {
+            "home": 0.2602466114065364,
+            "draw": 0.2811496584432385,
+            "away": 0.458603730150225,
+            "pick": "Turkey"
+          },
+          "status": "FT",
+          "hg": 2,
+          "ag": 0,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Nestory Irankunda",
+              "team": "Australia",
+              "minute": "27'"
+            },
+            {
+              "kind": "goal",
+              "player": "Connor Metcalfe",
+              "team": "Australia",
+              "minute": "75'"
+            }
+          ],
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-14",
+      "matches": [
+        {
+          "id": "25",
+          "home": "Germany",
+          "away": "Curaçao",
+          "kickoff_utc": "2026-06-14T17:00:00Z",
+          "venue": "Houston",
+          "stage": "group",
+          "pred": {
+            "home": 0.7781220589716654,
+            "draw": 0.06311551136118346,
+            "away": 0.15876242966715112,
+            "pick": "Germany"
+          },
+          "status": "FT",
+          "hg": 7,
+          "ag": 1,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Felix Nmecha",
+              "team": "Germany",
+              "minute": "6'"
+            },
+            {
+              "kind": "goal",
+              "player": "Livano Comenencia",
+              "team": "Curaçao",
+              "minute": "21'"
+            },
+            {
+              "kind": "goal",
+              "player": "Nico Schlotterbeck",
+              "team": "Germany",
+              "minute": "38'"
+            },
+            {
+              "kind": "penalty",
+              "player": "Kai Havertz",
+              "team": "Germany",
+              "minute": "45'+5'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jamal Musiala",
+              "team": "Germany",
+              "minute": "47'"
+            },
+            {
+              "kind": "goal",
+              "player": "Nathaniel Brown",
+              "team": "Germany",
+              "minute": "68'"
+            },
+            {
+              "kind": "goal",
+              "player": "Deniz Undav",
+              "team": "Germany",
+              "minute": "78'"
+            },
+            {
+              "kind": "goal",
+              "player": "Kai Havertz",
+              "team": "Germany",
+              "minute": "88'"
+            }
+          ],
+          "hit": true
+        },
+        {
+          "id": "31",
+          "home": "Netherlands",
+          "away": "Japan",
+          "kickoff_utc": "2026-06-14T20:00:00Z",
+          "venue": "Dallas (Arlington)",
+          "stage": "group",
+          "pred": {
+            "home": 0.2833231823863312,
+            "draw": 0.3256873833545244,
+            "away": 0.39098943425914434,
+            "pick": "Japan"
+          },
+          "status": "FT",
+          "hg": 2,
+          "ag": 2,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Virgil van Dijk",
+              "team": "Netherlands",
+              "minute": "51'"
+            },
+            {
+              "kind": "goal",
+              "player": "Keito Nakamura",
+              "team": "Japan",
+              "minute": "57'"
+            },
+            {
+              "kind": "goal",
+              "player": "Crysencio Summerville",
+              "team": "Netherlands",
+              "minute": "64'"
+            },
+            {
+              "kind": "goal",
+              "player": "Daichi Kamada",
+              "team": "Japan",
+              "minute": "89'"
+            }
+          ],
+          "hit": false
+        },
+        {
+          "id": "26",
+          "home": "Ivory Coast",
+          "away": "Ecuador",
+          "kickoff_utc": "2026-06-14T23:00:00Z",
+          "venue": "Philadelphia",
+          "stage": "group",
+          "pred": {
+            "home": 0.1912462251535438,
+            "draw": 0.29515307252981016,
+            "away": 0.513600702316646,
+            "pick": "Ecuador"
+          },
+          "status": "FT",
+          "hg": 1,
+          "ag": 0,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Amad Diallo",
+              "team": "Ivory Coast",
+              "minute": "90'"
+            }
+          ],
+          "hit": false
+        },
+        {
+          "id": "32",
+          "home": "Sweden",
+          "away": "Tunisia",
+          "kickoff_utc": "2026-06-15T02:00:00Z",
+          "venue": "Monterrey (Guadalupe)",
+          "stage": "group",
+          "pred": {
+            "home": 0.4263497152211726,
+            "draw": 0.25783568091129233,
+            "away": 0.31581460386753524,
+            "pick": "Sweden"
+          },
+          "status": "FT",
+          "hg": 5,
+          "ag": 1,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Yasin Ayari",
+              "team": "Sweden",
+              "minute": "7'"
+            },
+            {
+              "kind": "goal",
+              "player": "Alexander Isak",
+              "team": "Sweden",
+              "minute": "30'"
+            },
+            {
+              "kind": "goal",
+              "player": "Omar Rekik",
+              "team": "Tunisia",
+              "minute": "43'"
+            },
+            {
+              "kind": "goal",
+              "player": "Viktor Gyökeres",
+              "team": "Sweden",
+              "minute": "59'"
+            },
+            {
+              "kind": "goal",
+              "player": "Mattias Svanberg",
+              "team": "Sweden",
+              "minute": "84'"
+            },
+            {
+              "kind": "goal",
+              "player": "Yasin Ayari",
+              "team": "Sweden",
+              "minute": "90'+6'"
+            }
+          ],
+          "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-06-15",
+      "matches": [
+        {
+          "id": "43",
+          "home": "Spain",
+          "away": "Cape Verde",
+          "kickoff_utc": "2026-06-15T16:00:00Z",
+          "venue": "Atlanta",
+          "stage": "group",
+          "pred": {
+            "home": 0.9171248391522125,
+            "draw": 0.06322248572309722,
+            "away": 0.019652675124690266,
+            "pick": "Spain"
+          },
+          "status": "FT",
+          "hg": 0,
+          "ag": 0,
+          "events": [],
+          "hit": false
+        },
+        {
+          "id": "37",
+          "home": "Belgium",
+          "away": "Egypt",
+          "kickoff_utc": "2026-06-15T19:00:00Z",
+          "venue": "Seattle",
+          "stage": "group",
+          "pred": {
+            "home": 0.4811224746618109,
+            "draw": 0.30000941085837973,
+            "away": 0.21886811447980936,
+            "pick": "Belgium"
+          },
+          "status": "FT",
+          "hg": 1,
+          "ag": 1,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Emam Ashour",
+              "team": "Egypt",
+              "minute": "20'"
+            },
+            {
+              "kind": "own_goal",
+              "player": "Mohamed Hany",
+              "team": "Belgium",
+              "minute": "66'"
+            }
+          ],
+          "hit": false
+        },
+        {
+          "id": "44",
+          "home": "Saudi Arabia",
+          "away": "Uruguay",
+          "kickoff_utc": "2026-06-15T22:00:00Z",
+          "venue": "Miami (Miami Gardens)",
+          "stage": "group",
+          "pred": {
+            "home": 0.08225324408307229,
+            "draw": 0.15779830514941226,
+            "away": 0.7599484507675156,
+            "pick": "Uruguay"
+          },
+          "status": "FT",
+          "hg": 1,
+          "ag": 1,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Abdulelah Al-Amri",
+              "team": "Saudi Arabia",
+              "minute": "41'"
+            },
+            {
+              "kind": "goal",
+              "player": "Maxi Araújo",
+              "team": "Uruguay",
+              "minute": "80'"
+            }
+          ],
+          "hit": false
+        },
+        {
+          "id": "38",
+          "home": "Iran",
+          "away": "New Zealand",
+          "kickoff_utc": "2026-06-16T01:00:00Z",
+          "venue": "Los Angeles (Inglewood)",
+          "stage": "group",
+          "pred": {
+            "home": 0.6948722301733948,
+            "draw": 0.22924426717048563,
+            "away": 0.07588350265611948,
+            "pick": "Iran"
+          },
+          "status": "FT",
+          "hg": 2,
+          "ag": 2,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Elijah Just",
+              "team": "New Zealand",
+              "minute": "7'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ramin Rezaeian",
+              "team": "Iran",
+              "minute": "32'"
+            },
+            {
+              "kind": "goal",
+              "player": "Elijah Just",
+              "team": "New Zealand",
+              "minute": "54'"
+            },
+            {
+              "kind": "goal",
+              "player": "Mohammad Mohebbi",
+              "team": "Iran",
+              "minute": "64'"
+            }
+          ],
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-16",
+      "matches": [
+        {
+          "id": "49",
+          "home": "France",
+          "away": "Senegal",
+          "kickoff_utc": "2026-06-16T19:00:00Z",
+          "venue": "New York/New Jersey (East Rutherford)",
+          "stage": "group",
+          "pred": {
+            "home": 0.6265676624698789,
+            "draw": 0.19599753344402357,
+            "away": 0.1774348040860975,
+            "pick": "France"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "50",
+          "home": "Iraq",
+          "away": "Norway",
+          "kickoff_utc": "2026-06-16T22:00:00Z",
+          "venue": "Boston (Foxborough)",
+          "stage": "group",
+          "pred": {
+            "home": 0.15762677828592014,
+            "draw": 0.26015861149773917,
+            "away": 0.5822146102163407,
+            "pick": "Norway"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "55",
+          "home": "Argentina",
+          "away": "Algeria",
+          "kickoff_utc": "2026-06-17T01:00:00Z",
+          "venue": "Kansas City",
+          "stage": "group",
+          "pred": {
+            "home": 0.7543827185557013,
+            "draw": 0.16501207402521256,
+            "away": 0.0806052074190863,
+            "pick": "Argentina"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "56",
+          "home": "Austria",
+          "away": "Jordan",
+          "kickoff_utc": "2026-06-17T04:00:00Z",
+          "venue": "San Francisco Bay Area (Santa Clara)",
+          "stage": "group",
+          "pred": {
+            "home": 0.5482003640178621,
+            "draw": 0.27100168312152445,
+            "away": 0.18079795286061354,
+            "pick": "Austria"
+          },
+          "status": "sched"
+        }
+      ]
+    }
+  ]
 }

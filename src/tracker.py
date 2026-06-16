@@ -262,6 +262,44 @@ def _final_match(merged: dict) -> dict | None:
     return None
 
 
+def build_board(merged: dict, match_prob, dates: set) -> list:
+    """Structured per-day match data for the website to render from (instead of
+    re-parsing Telegram text). One entry per match in `dates` (the PT days the
+    tracker has processed), carrying teams, kickoff, venue, the ML prediction
+    (probabilities + pick), and the result + events + hit/miss when finished."""
+    by_date: dict = {}
+    for m in merged["matches"]:
+        d = m.get("date")
+        if d not in dates:
+            continue
+        pred = match_prob(m["home"], m["away"])
+        pick = max(("home", "draw", "away"), key=lambda k: pred[k])
+        pick_label = {"home": m["home"], "away": m["away"]}.get(pick, "Draw")
+        entry = {
+            "id": m["id"], "home": m["home"], "away": m["away"],
+            "kickoff_utc": m.get("kickoff_utc", ""), "venue": m.get("venue", ""),
+            "stage": m.get("stage", "group"),
+            "pred": {"home": pred["home"], "draw": pred["draw"],
+                     "away": pred["away"], "pick": pick_label},
+        }
+        r = m.get("result")
+        if r:
+            outcome = ("home" if r["home_goals"] > r["away_goals"]
+                       else "away" if r["away_goals"] > r["home_goals"] else "draw")
+            entry.update({"status": "FT", "hg": r["home_goals"],
+                          "ag": r["away_goals"], "events": r.get("events", []),
+                          "hit": pick == outcome})
+        else:
+            entry["status"] = "sched"
+        by_date.setdefault(d, []).append(entry)
+    board = [{"date": d,
+              "matches": sorted(ms, key=lambda x: (x.get("kickoff_utc") or "",
+                                                   str(x["id"])))}
+             for d, ms in by_date.items()]
+    board.sort(key=lambda x: x["date"])
+    return board
+
+
 def _latest_result(merged: dict) -> dict | None:
     """Most recent finished match — feeds the archive's 'Most recent' hero card."""
     done = [m for m in merged["matches"] if m.get("result")]
@@ -524,6 +562,10 @@ def run(cfg: Config) -> int:
         stateobj["groups"] = _group_tables_for(merged)
         stateobj["last_result"] = (_latest_result(merged)
                                    or stateobj.get("last_result"))
+
+        # Structured board the website renders from (no Telegram-text parsing).
+        processed = {d.get("date") for d in stateobj["days"]}
+        stateobj["board"] = build_board(merged, match_prob, processed)
 
         # Keep days ordered.
         stateobj["days"].sort(key=lambda d: d.get("date", ""))

@@ -203,12 +203,158 @@ def _hero_tokens(state: dict) -> dict:
     return tokens
 
 
+# ---------------------------------------------------------------------------
+# Structured rendering (Option 3): drive the page from state's board + groups,
+# not from the Telegram message text.
+# ---------------------------------------------------------------------------
+
+_VENUE_COUNTRY = {
+    "Atlanta": "USA", "Boston (Foxborough)": "USA", "Dallas (Arlington)": "USA",
+    "Guadalajara (Zapopan)": "Mexico", "Houston": "USA", "Kansas City": "USA",
+    "Los Angeles (Inglewood)": "USA", "Mexico City": "Mexico",
+    "Miami (Miami Gardens)": "USA", "Monterrey (Guadalupe)": "Mexico",
+    "New York/New Jersey (East Rutherford)": "USA", "Philadelphia": "USA",
+    "San Francisco Bay Area (Santa Clara)": "USA", "Seattle": "USA",
+    "Toronto": "Canada", "Vancouver": "Canada",
+}
+
+
+def _place(venue: str) -> str:
+    if not venue:
+        return ""
+    c = _VENUE_COUNTRY.get(venue)
+    return f"{venue}, {c}" if c else venue
+
+
+def _pct(p: float) -> str:
+    return f"{p * 100:.1f}%"
+
+
+def _kick_chips(kickoff_utc: str) -> str:
+    if not kickoff_utc:
+        return ""
+    try:
+        dt = datetime.fromisoformat(kickoff_utc.replace("Z", "+00:00"))
+    except ValueError:
+        return ""
+    chips = "".join(
+        f'<span class="chip-time">'
+        f'{dt.astimezone(tz).strftime("%-I:%M%p").lower()} {lbl}</span>'
+        for lbl, tz in _WHEN_ZONES)
+    return f'<div class="kick">{chips}</div>'
+
+
+def _events_html(events: list) -> str:
+    if not events:
+        return ""
+    rows = []
+    for e in events:
+        icon = "🟥" if e.get("kind") == "red" else "⚽"
+        annot = {"own_goal": " <span class=\"og\">OG</span>",
+                 "penalty": " <span class=\"og\">pen</span>"}.get(e.get("kind"), "")
+        rows.append(
+            f'<li><span class="ev-min">{escape(str(e.get("minute", "")))}</span> '
+            f'<span class="ev-i">{icon}</span> {escape(str(e.get("player", "")))} '
+            f'<span class="ev-team">{escape(str(e.get("team", "")))}</span>{annot}</li>')
+    return f'<ul class="scorers">{"".join(rows)}</ul>'
+
+
+def _match_card(m: dict) -> str:
+    home, away = escape(str(m["home"])), escape(str(m["away"]))
+    pred = m.get("pred") or {}
+    pick = escape(str(pred.get("pick", "")))
+    finished = m.get("status") == "FT"
+
+    if finished:
+        hg, ag = int(m.get("hg", 0)), int(m.get("ag", 0))
+        hcls = " win" if hg > ag else ""
+        acls = " win" if ag > hg else ""
+        center = (f'<span class="sc">{hg}</span>'
+                  f'<span class="dash">–</span><span class="sc">{ag}</span>')
+        hit = m.get("hit")
+        pill = (f'<span class="pill {"ok" if hit else "no"}">'
+                f'{"✓" if hit else "✗"}</span>')
+    else:
+        center = '<span class="vsbig">vs</span>'
+        hcls = acls = ""
+        pill = '<span class="pill soon">upcoming</span>'
+
+    bar = ""
+    if pred:
+        h, d, a = pred.get("home", 0), pred.get("draw", 0), pred.get("away", 0)
+        bar = (
+            f'<div class="oddsbar" title="{home} {_pct(h)} · Draw {_pct(d)} · {away} {_pct(a)}">'
+            f'<span class="seg sh" style="width:{h*100:.1f}%"></span>'
+            f'<span class="seg sd" style="width:{d*100:.1f}%"></span>'
+            f'<span class="seg sa" style="width:{a*100:.1f}%"></span></div>'
+            f'<div class="oddskey">'
+            f'<span>{home} {_pct(h)}</span><span>Draw {_pct(d)}</span>'
+            f'<span>{away} {_pct(a)}</span></div>')
+
+    foot_bits = []
+    loc = _place(str(m.get("venue", "")))
+    if loc:
+        foot_bits.append(f'📍 {escape(loc)}')
+    foot = f'<div class="mc-foot">{" · ".join(foot_bits)}</div>' if foot_bits else ""
+    kick = _kick_chips(str(m.get("kickoff_utc", "")))
+
+    return (
+        f'<div class="mcard">'
+        f'<div class="mc-top">'
+        f'<span class="tm{hcls}">{home}</span>'
+        f'<span class="mid">{center}</span>'
+        f'<span class="tm{acls}">{away}</span></div>'
+        f'<div class="mc-pred">Prediction: <strong>{pick}</strong> {pill}</div>'
+        f'{bar}{_events_html(m.get("events") or [])}{kick}{foot}</div>')
+
+
+def _render_board(state: dict) -> str:
+    board = state.get("board") or []
+    if not board:
+        return _render_days(state.get("days") or [])
+    blocks = []
+    for i, day in enumerate(sorted(board, key=lambda d: d["date"], reverse=True)):
+        open_attr = " open" if i == 0 else ""
+        cards = "".join(_match_card(m) for m in day.get("matches", []))
+        blocks.append(
+            f'<details data-day="{escape(day["date"])}"{open_attr}>'
+            f'<summary>{escape(_fmt_day_long(day["date"]))}</summary>'
+            f'<div class="cards">{cards}</div></details>')
+    return "".join(blocks)
+
+
+def _render_standings(state: dict) -> str:
+    groups = state.get("groups") or {}
+    if not groups:
+        return ""
+    tables = []
+    for g in sorted(groups):
+        rows = groups[g]
+        body = "".join(
+            f'<tr class="{"qual" if n < 2 else ""}">'
+            f'<td class="t-team">{escape(str(r["team"]))}</td>'
+            f'<td>{r["played"]}</td><td class="t-pts">{r["points"]}</td>'
+            f'<td>{r["gd"]:+d}</td><td>{r["gf"]}</td><td>{r["ga"]}</td></tr>'
+            for n, r in enumerate(rows))
+        tables.append(
+            f'<table class="gtable"><caption>Group {escape(g)}</caption>'
+            f'<thead><tr><th class="t-team">Team</th><th>P</th><th>Pts</th>'
+            f'<th>GD</th><th>GF</th><th>GA</th></tr></thead><tbody>{body}</tbody></table>')
+    return (
+        '<div class="section-head"><h2>Group standings</h2>'
+        '<span class="count">P · Pts · GD · GF · GA</span></div>'
+        f'<div class="standings">{"".join(tables)}</div>')
+
+
 def render(state: dict, path) -> None:
-    """Render the full standalone archive page to `path`."""
+    """Render the full standalone archive page to `path`. Driven by the
+    structured `board` + `groups` when present (Option 3); falls back to the
+    message-text rendering otherwise."""
     page = SHELL
     for token, value in _hero_tokens(state).items():
         page = page.replace(token, value)
-    page = page.replace("__DAYS__", _render_days(state.get("days") or []))
+    page = page.replace("__STANDINGS__", _render_standings(state))
+    page = page.replace("__DAYS__", _render_board(state))
     out = Path(path)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(page, encoding="utf-8")
@@ -296,6 +442,49 @@ SHELL = r"""<!DOCTYPE html>
     .section-head { margin: 56px 0 18px; display: flex; align-items: center; justify-content: space-between; }
     .section-head h2 { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.018em; }
     .section-head .count { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint); }
+
+    /* ---- Option 3: structured standings tables + match cards ---- */
+    .standings { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; }
+    .gtable { width: 100%; border-collapse: collapse; background: var(--card); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--hair-soft); font-size: 13px; }
+    .gtable caption { text-align: left; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 14px; padding: 13px 14px 7px; color: var(--ink); }
+    .gtable th { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); font-weight: 500; padding: 6px 8px; text-align: right; border-bottom: 1px solid var(--hair-soft); }
+    .gtable th.t-team, .gtable td.t-team { text-align: left; }
+    .gtable td { padding: 8px; text-align: right; border-bottom: 1px solid var(--hair-soft); color: var(--ink-2); font-variant-numeric: tabular-nums; }
+    .gtable tbody tr:last-child td { border-bottom: 0; }
+    .gtable td.t-team { font-weight: 600; color: var(--ink); }
+    .gtable td.t-pts { font-weight: 700; color: var(--p-700); }
+    .gtable tr.qual { background: var(--p-50); }
+    .gtable tr.qual td.t-team { box-shadow: inset 3px 0 0 var(--p-500); }
+
+    main#days .cards { display: grid; gap: 12px; padding: 6px 0 10px; }
+    .mcard { background: var(--card-2); border: 1px solid var(--hair-soft); border-radius: var(--radius-md); padding: 15px 16px; }
+    .mc-top { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px; }
+    .mc-top .tm { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 16px; letter-spacing: -0.01em; }
+    .mc-top .tm:first-child { text-align: right; }
+    .mc-top .tm.win { color: var(--p-700); }
+    .mc-top .mid { font-family: 'Outfit', sans-serif; font-weight: 800; text-align: center; white-space: nowrap; }
+    .mc-top .sc { font-size: 22px; }
+    .mc-top .dash { margin: 0 5px; color: var(--ink-faint); }
+    .mc-top .vsbig { font-size: 12px; color: var(--ink-faint); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; }
+    .mc-pred { margin-top: 10px; font-size: 13px; color: var(--ink-soft); display: flex; align-items: center; gap: 8px; }
+    .mc-pred strong { color: var(--ink); }
+    .pill { font-family: 'JetBrains Mono', monospace; font-size: 10px; padding: 2px 8px; border-radius: 100px; letter-spacing: 0.04em; }
+    .pill.ok { background: #DCFCE7; color: #15803D; }
+    .pill.no { background: #FEE2E2; color: #B91C1C; }
+    .pill.soon { background: var(--p-100); color: var(--p-700); }
+    .oddsbar { display: flex; height: 6px; border-radius: 4px; overflow: hidden; margin: 11px 0 5px; }
+    .oddsbar .seg.sh { background: var(--p-600); }
+    .oddsbar .seg.sd { background: var(--ink-faint); }
+    .oddsbar .seg.sa { background: var(--p-300); }
+    .oddskey { display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-faint); }
+    .scorers { list-style: none; margin: 11px 0 0; padding: 0; display: grid; gap: 4px; }
+    .scorers li { font-size: 13px; color: var(--ink-2); }
+    .scorers .ev-min { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-faint); display: inline-block; min-width: 38px; }
+    .scorers .ev-team { color: var(--ink-faint); font-size: 12px; }
+    .scorers .og { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--ink-faint); text-transform: uppercase; }
+    .kick { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 11px; }
+    .chip-time { font-family: 'JetBrains Mono', monospace; font-size: 10px; background: var(--bg); color: var(--ink-soft); padding: 3px 7px; border-radius: 6px; }
+    .mc-foot { margin-top: 9px; font-size: 12px; color: var(--ink-faint); }
 
     main#days { display: block; }
 
@@ -401,6 +590,7 @@ SHELL = r"""<!DOCTYPE html>
 <div class="desc" id="hero-leader-desc">__HERO_LEADER_DESC__</div>
 </div>
 </section>
+__STANDINGS__
 <div class="section-head">
 <h2>Match log</h2>
 <span class="count" id="match-count">__MATCH_COUNT__</span>
