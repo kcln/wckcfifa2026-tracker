@@ -86,7 +86,7 @@ def test_render_bolds_winner_in_result_lines(tmp_path):
     state = {"days": [{"date": "2026-06-11", "messages": [
         {"type": "post_match", "body": body, "sent": True}]}], "bracket": {}}
     html = _render(state, tmp_path)
-    assert "<strong>Mexico</strong> 2-1 South Africa" in html
+    assert "<strong>Mexico</strong> 2 - 1 South Africa" in html
 
 
 def test_render_bolds_pick_in_morning_brief(tmp_path):
@@ -128,3 +128,12 @@ def test_render_when_stack_empty_without_kickoff(tmp_path):
         {"type": "morning_brief", "body": "x", "sent": True}]}], "bracket": {}}
     html = _render(state, tmp_path)
     assert '<span class="when"></span>' in html
+
+
+def test_render_pre_block_becomes_monospace_element(tmp_path):
+    body = "Group Standings:\n<code>Group A\nMexico  3\n</code>"
+    state = {"days": [{"date": "2026-06-15", "messages": [
+        {"type": "daily_recap", "body": body, "sent": True}]}], "bracket": {}}
+    html = _render(state, tmp_path)
+    assert '<pre class="mono">' in html and "Mexico  3" in html
+    assert "&lt;code&gt;" not in html  # the literal tag never leaks to the page

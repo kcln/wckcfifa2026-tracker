@@ -69,7 +69,7 @@ def test_post_match_marks_hit_or_miss():
          "prediction": {"home": 0.5, "draw": 0.3, "away": 0.2},
          "result": {"home_goals": 2, "away_goals": 0}}
     text = mb.post_match(m)
-    assert "2-0" in text and ("✓" in text or "✗" in text)
+    assert "2 - 0" in text and ("✓" in text or "✗" in text)
 
 
 def test_post_match_marks_miss_when_wrong():
@@ -129,7 +129,7 @@ def test_daily_recap_shows_result_lines():
     ]
     group_tables = {}
     text = mb.daily_recap("2026-06-11", matches, group_tables)
-    assert "2-0" in text
+    assert "2 - 0" in text
 
 
 def test_daily_recap_renders_group_standings():
@@ -189,7 +189,7 @@ def test_half_time_shows_score_and_pick():
     match = {"home": "Mexico", "away": "South Africa",
              "prediction": {"home": 0.52, "draw": 0.26, "away": 0.22}}
     body = mb.half_time(match, 1, 0)
-    assert body.startswith("Half-time: Mexico 1-0 South Africa")
+    assert "Half-time:" in body and "Mexico 1 - 0 South Africa" in body
     assert "Prediction: Mexico" in body
 
 
@@ -261,7 +261,7 @@ def test_unknown_venue_shows_city_without_country():
 
 def test_missing_venue_messages_still_render():
     text = mb.half_time(_m(), 2, 1)
-    assert "Half-time" in text and "USA 2-1 Mexico" in text
+    assert "Half-time" in text and "USA 2 - 1 Mexico" in text
     brief = mb.morning_brief("2026-06-11", [_m()])
     assert "USA vs Mexico" in brief
 
@@ -301,7 +301,7 @@ def test_half_time_lists_first_half_events():
     match = {"home": "Brazil", "away": "Morocco",
              "prediction": {"home": 0.6, "draw": 0.25, "away": 0.15}}
     body = mb.half_time(match, 0, 1, events=[_EVENTS[0]])
-    assert "Half-time: Brazil 0-1 Morocco" in body
+    assert "Half-time:" in body and "Brazil 0 - 1 Morocco" in body
     assert "⚽ 21' Ismael Saibari (Morocco)" in body
 
 
@@ -332,12 +332,10 @@ def test_post_match_leads_with_full_time_label():
          "prediction": {"home": 0.6, "draw": 0.25, "away": 0.15},
          "result": {"home_goals": 1, "away_goals": 1, "events": _EVENTS}}
     body = mb.post_match(m)
-    assert body.startswith("Full time\n")
-    # label is its own line; score line stays intact below it
-    assert body.splitlines()[1].startswith("Brazil 1-1 Morocco")
-    # daily-recap result lines must NOT carry the label (only post_match does)
+    assert "Full time:" in body and "Brazil 1 - 1 Morocco" in body
+    # daily-recap result lines must NOT carry the Full time label
     recap = mb.daily_recap("2026-06-13", [m], {})
-    assert "Full time" not in recap
+    assert "Full time:" not in recap
 
 
 def test_daily_recap_lists_unresolved_match_as_pending():
@@ -349,7 +347,7 @@ def test_daily_recap_lists_unresolved_match_as_pending():
          "prediction": {"home": 0.4, "draw": 0.3, "away": 0.3}},
     ]
     body = mb.daily_recap("2026-06-13", matches, {})
-    assert "Brazil 1-1 Morocco" in body
+    assert "Brazil 1 - 1 Morocco" in body
     assert "No result recorded:" in body
     assert "Australia vs Turkey" in body
 
@@ -368,9 +366,10 @@ def test_post_match_shows_per_match_and_overall_accuracy():
              "prediction": {"home": 0.30, "draw": 0.30, "away": 0.40},
              "result": {"home_goals": 1, "away_goals": 1}}
     body = mb.post_match(match, overall=(5, 9))
-    assert "Result: Draw" in body
-    assert "Prediction: Switzerland  ✗ (0%)" in body
+    assert "Qatar 1 - 1 Switzerland" in body
     assert "Overall prediction: 5/9 (55.6%)" in body
+    # prediction is the LAST line, in 'Prediction ✗: <pick>' form
+    assert body.rstrip().endswith("Prediction ✗: Switzerland")
 
 
 def test_post_match_hit_shows_100_percent():
@@ -378,8 +377,8 @@ def test_post_match_hit_shows_100_percent():
              "prediction": {"home": 0.78, "draw": 0.06, "away": 0.16},
              "result": {"home_goals": 7, "away_goals": 1}}
     body = mb.post_match(match, overall=(1, 1))
-    assert "Result: Germany win" in body
-    assert "Prediction: Germany  ✓ (100%)" in body
+    assert "Germany 7 - 1 Curaçao" in body
+    assert body.rstrip().endswith("Prediction ✓: Germany")
 
 
 def test_daily_recap_shows_overall_prediction_line():
@@ -390,3 +389,54 @@ def test_daily_recap_shows_overall_prediction_line():
                           day_acc=(3, 4), overall_acc=(12, 18))
     assert "Overall prediction —" in body
     assert "today 3/4 (75.0%)" in body and "overall 12/18 (66.7%)" in body
+
+
+# --- chronological order + monospace table ---
+
+def test_morning_brief_sorted_by_kickoff():
+    matches = [
+        {"home": "Belgium", "away": "Egypt", "kickoff_utc": "2026-06-15T19:00:00Z",
+         "prediction": {"home": 0.5, "draw": 0.3, "away": 0.2}},
+        {"home": "Spain", "away": "Cape Verde", "kickoff_utc": "2026-06-15T16:00:00Z",
+         "prediction": {"home": 0.9, "draw": 0.06, "away": 0.04}},
+        {"home": "Iran", "away": "New Zealand", "kickoff_utc": "2026-06-16T01:00:00Z",
+         "prediction": {"home": 0.7, "draw": 0.2, "away": 0.1}},
+    ]
+    body = mb.morning_brief("2026-06-15", matches)
+    # earliest kickoff (Spain 16:00Z) before Belgium (19:00Z) before Iran (01:00Z+1)
+    assert body.index("Spain vs") < body.index("Belgium vs") < body.index("Iran vs")
+
+
+def test_daily_recap_standings_wrapped_in_pre_monospace():
+    tables = {"A": [
+        {"team": "Mexico", "played": 1, "points": 3, "gd": 2, "gf": 2, "ga": 0},
+        {"team": "Czech Republic", "played": 1, "points": 0, "gd": -1, "gf": 1, "ga": 2}]}
+    body = mb.daily_recap("2026-06-15", [], tables)
+    assert "<code>" in body and "</code>" in body and "<pre>" not in body
+    block = body[body.index("<code>"):body.index("</code>")]
+    assert "Mexico" in block and "Czech Republic" in block and "Group A" in block
+
+
+def test_daily_recap_results_sorted_by_kickoff():
+    matches = [
+        {"home": "B", "away": "b", "kickoff_utc": "2026-06-15T19:00:00Z",
+         "prediction": {"home": 0.5, "draw": 0.3, "away": 0.2},
+         "result": {"home_goals": 1, "away_goals": 0}},
+        {"home": "A", "away": "a", "kickoff_utc": "2026-06-15T16:00:00Z",
+         "prediction": {"home": 0.5, "draw": 0.3, "away": 0.2},
+         "result": {"home_goals": 2, "away_goals": 2}}]
+    body = mb.daily_recap("2026-06-15", matches, {})
+    assert body.index("A 2 - 2 a") < body.index("B 1 - 0 b")
+
+
+def test_daily_recap_blank_line_between_results():
+    matches = [
+        {"home": "A", "away": "a", "kickoff_utc": "2026-06-15T16:00:00Z",
+         "prediction": {"home": 0.5, "draw": 0.3, "away": 0.2},
+         "result": {"home_goals": 1, "away_goals": 0}},
+        {"home": "B", "away": "b", "kickoff_utc": "2026-06-15T19:00:00Z",
+         "prediction": {"home": 0.5, "draw": 0.3, "away": 0.2},
+         "result": {"home_goals": 2, "away_goals": 2}}]
+    body = mb.daily_recap("2026-06-15", matches, {})
+    # a blank line separates the two result blocks
+    assert "\n\n  B 2 - 2 b" in body

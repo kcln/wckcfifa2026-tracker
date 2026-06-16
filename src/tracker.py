@@ -321,7 +321,8 @@ def _due_for_day(stateobj: dict, merged: dict, match_prob, date_iso: str,
     Because a day is keyed by kickoff date, a match that starts late and ends
     after PT midnight is still handled here when this day is reprocessed the
     next calendar day — so its result and the day's recap always land."""
-    todays = _matches_on(merged, date_iso)
+    todays = sorted(_matches_on(merged, date_iso),
+                    key=lambda m: (m.get("kickoff_utc") or "", str(m.get("id") or "")))
     if not todays:
         return
     day = _get_day(stateobj, date_iso)

@@ -45,7 +45,7 @@ _TAGS = {
 }
 
 # "Home 2-1 Away  ✓  (Prediction: X)" — possibly indented (recap lines)
-_RESULT_RE = re.compile(r"^(\s*)(.+?) (\d+)-(\d+) (.+?)(\s\s.*)$")
+_RESULT_RE = re.compile(r"^(\s*)(.+?) (\d+)\s*-\s*(\d+) (.+?)(\s\s.*)?$")
 # "Prediction: PICK" terminated by "  |" or end of line (morning brief)
 _PRED_RE = re.compile(r"^(.*?Prediction: )([^|]+?)(\s*\|.*|\s*)$")
 
@@ -66,12 +66,12 @@ def _bold_result_line(line: str, indent: str, home: str, hg: int, ag: int,
         home_html = f"<strong>{home_html}</strong>"
     elif ag > hg:
         away_html = f"<strong>{away_html}</strong>"
-    return f"{escape(indent)}{home_html} {hg}-{ag} {away_html}{escape(tail)}"
+    return f"{escape(indent)}{home_html} {hg} - {ag} {away_html}{escape(tail or '')}"
 
 
-def _render_body(body: str, msg_type: str) -> str:
-    """Escape a message body to HTML, applying the IPL bolding rules:
-    winners bold in result lines, predicted pick bold in morning briefs."""
+def _render_text(body: str, msg_type: str) -> str:
+    """Escape a (non-<pre>) body segment to HTML, applying the IPL bolding
+    rules: winners bold in result lines, predicted pick bold in morning briefs."""
     out_lines = []
     for line in body.split("\n"):
         if msg_type in ("post_match", "daily_recap"):
@@ -90,6 +90,21 @@ def _render_body(body: str, msg_type: str) -> str:
                 continue
         out_lines.append(escape(line))
     return "\n".join(out_lines)
+
+
+def _render_body(body: str, msg_type: str) -> str:
+    """Render a message body, rendering any `<code>…</code>` block (the
+    monospace standings table) as a real <pre> element so columns align on the
+    page too."""
+    parts = re.split(r"(<code>.*?</code>)", body, flags=re.S)
+    out = []
+    for part in parts:
+        if part.startswith("<code>") and part.endswith("</code>"):
+            inner = part[len("<code>"):-len("</code>")].strip("\n")
+            out.append(f'<pre class="mono">{escape(inner)}</pre>')
+        elif part:
+            out.append(_render_text(part, msg_type))
+    return "".join(out)
 
 
 def _render_when(when_iso: str) -> str:
@@ -306,6 +321,7 @@ SHELL = r"""<!DOCTYPE html>
     article .meta .when span { display: block; }
     article .body { font-family: 'Work Sans', sans-serif; font-size: 14.5px; line-height: 1.7; color: var(--ink-2); white-space: pre-wrap; }
     article .body strong { font-weight: 700; color: var(--p-800); }
+    article .body pre.mono { font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1.55; white-space: pre; overflow-x: auto; background: var(--card-2); border: 1px solid var(--hair-soft); border-radius: 8px; padding: 10px 12px; margin: 8px 0; }
 
     .signup-grid { margin-top: 56px; display: grid; grid-template-columns: 5fr 7fr; gap: 16px; }
     .signup-pitch { background: var(--brown); color: var(--card); border-radius: var(--radius-lg); padding: 36px 32px; position: relative; overflow: hidden; }

@@ -155,26 +155,29 @@ def fmt_accuracy(hits: int, total: int) -> str:
     return f"{hits}/{total} ({hits / total * 100:.1f}%)"
 
 
-def _post_match_line(match: dict) -> str:
-    """
-    Format a single post-match result line:
-    'Home H-A Away   ✓' or '... ✗'
-    Includes a Prediction label showing what was called.
-    """
-    home = match["home"]
-    away = match["away"]
-    result = match["result"]
-    hg = result["home_goals"]
-    ag = result["away_goals"]
+def _result_block(match: dict, *, indent: str = "", overall=None) -> list[str]:
+    """A finished match as a multi-line block (KC's layout):
 
-    predicted = _argmax_outcome(match["prediction"])
-    actual = _actual_outcome(result)
-    tick = "✓" if predicted == actual else "✗"
+        Home H-A Away
+        City, Country
+          ⚽ scorers / 🟥 reds
+        [Overall prediction: x/y (n%)]      (full-time message only)
+        Prediction ✓: <pick>                (✓ if the model was right, else ✗)
 
-    pred_label = _pick_label(match)
-    line = f"{home} {hg}-{ag} {away}  {tick}  (Prediction: {pred_label})"
+    The city is always its own line and the prediction is always the last line.
+    """
+    r = match["result"]
+    mark = "✓" if _argmax_outcome(match["prediction"]) == _actual_outcome(r) else "✗"
+    lines = [f"{indent}{match['home']} {r['home_goals']} - {r['away_goals']} "
+             f"{match['away']}"]
     loc = _place_of(match)
-    return f"{line}  —  {loc}" if loc else line
+    if loc:
+        lines.append(f"{indent}{loc}")
+    lines.extend(_event_lines(r.get("events"), indent=indent + "  "))
+    if overall is not None:
+        lines.append(f"{indent}Overall prediction: {fmt_accuracy(*overall)}")
+    lines.append(f"{indent}Prediction {mark}: {_pick_label(match)}")
+    return lines
 
 
 # ---------------------------------------------------------------------------
@@ -187,6 +190,17 @@ def _pretty_date(date_iso: str) -> str:
         return _dt.strptime(date_iso, "%Y-%m-%d").strftime("%A, %B %-d")
     except ValueError:
         return date_iso
+
+
+def _kickoff_key(m: dict):
+    """Sort key putting matches in chronological kickoff order (id as tiebreak
+    so matches without a kickoff stay stable)."""
+    return (m.get("kickoff_utc") or "", str(m.get("id") or ""))
+
+
+def _header(date_iso: str) -> list[str]:
+    """Brand + date header used by every message — one item per line."""
+    return ["🏆 FIFA World Cup 2026", _pretty_date(date_iso), ""]
 
 
 def morning_brief(date_iso: str, matches: list[dict]) -> str:
@@ -202,12 +216,8 @@ def morning_brief(date_iso: str, matches: list[dict]) -> str:
           🕐 10:00am PT / 12:00pm CT / 1:00pm ET / 10:30pm IST
           📍 Houston, USA
     """
-    lines: list[str] = [
-        "🏆 World Cup 2026 — Matchday Brief",
-        _pretty_date(date_iso),
-        "",
-    ]
-    for m in matches:
+    lines: list[str] = _header(date_iso) + ["Matchday Brief", ""]
+    for m in sorted(matches, key=_kickoff_key):   # earliest kickoff first
         pred = m["prediction"]
         home, away = m["home"], m["away"]
         lines.append(f"{home} vs {away}")
@@ -232,14 +242,14 @@ def half_time(match: dict, home_goals: int, away_goals: int,
     context (predictions are not re-run mid-match). First-half goal scorers
     and any red cards (player, country, minute) are listed when available.
     """
-    pick = _pick_label(match)
+    lines = _header(match.get("date", "")) + [
+        "Half-time:",
+        f"{match['home']} {home_goals} - {away_goals} {match['away']}"]
     loc = _place_of(match)
-    lines = [f"Half-time: {match['home']} {home_goals}-{away_goals} "
-             f"{match['away']}"]
     if loc:
         lines.append(loc)
     lines.extend(_event_lines(events))
-    lines.append(f"Prediction: {pick}")
+    lines.append(f"Prediction: {_pick_label(match)}")
     return "\n".join(lines)
 
 
@@ -258,21 +268,8 @@ def post_match(match: dict, overall=None) -> str:
     rendered as the running cumulative accuracy through this match — passed in
     by the tracker so it stays stable (independent of later matches).
     """
-    home, away = match["home"], match["away"]
-    r = match["result"]
-    hit = _argmax_outcome(match["prediction"]) == _actual_outcome(r)
-    mark = "✓" if hit else "✗"
-    pct = "100%" if hit else "0%"
-    loc = _place_of(match)
-    score = f"{home} {r['home_goals']}-{r['away_goals']} {away}"
-    if loc:
-        score += f"  —  {loc}"
-    lines = ["Full time", score,
-             f"Result: {_result_word(match)}  ·  "
-             f"Prediction: {_pick_label(match)}  {mark} ({pct})"]
-    if overall is not None:
-        lines.append(f"Overall prediction: {fmt_accuracy(*overall)}")
-    lines.extend(_event_lines(r.get("events")))
+    lines = _header(match.get("date", "")) + ["Full time:"]
+    lines += _result_block(match, overall=overall)
     return "\n".join(lines)
 
 
@@ -286,20 +283,16 @@ def daily_recap(date_iso: str, matches: list[dict], group_tables: dict,
     [{team, played, points, gd, gf, ga}] (already sorted by standings).
     `day_acc` / `overall_acc` are (hits, total) tallies from the tracker.
     """
-    lines: list[str] = [
-        "🏆 World Cup 2026 — Daily Recap",
-        _pretty_date(date_iso),
-        "",
-        "Results:",
-    ]
+    lines: list[str] = _header(date_iso) + ["Daily Recap", "", "Results:"]
 
+    matches = sorted(matches, key=_kickoff_key)   # chronological results
     resolved = [m for m in matches if m.get("result")]
     pending = [m for m in matches if not m.get("result")]
 
-    for m in resolved:
-        lines.append("  " + _post_match_line(m))
-        lines.extend(_event_lines((m.get("result") or {}).get("events"),
-                                  indent="    "))
+    # Each result is its own block, separated by a blank line for readability.
+    blocks = ["\n".join(_result_block(m, indent="  ")) for m in resolved]
+    if blocks:
+        lines.append("\n\n".join(blocks))
 
     # A match with no recorded result (e.g. a feed name we couldn't reconcile)
     # is listed explicitly rather than silently dropped from the day.
@@ -322,16 +315,25 @@ def daily_recap(date_iso: str, matches: list[dict], group_tables: dict,
     if group_tables:
         lines.append("")
         lines.append("Group Standings:")
+        lines.append("")
+        lines.append("P Played · Pts Points · GD Goal Diff · "
+                     "GF Goals For · GA Goals Against")
+        lines.append("")
+        # Rendered MONOSPACE so the columns line up (a proportional font makes
+        # them drift — the "ugly table" bug). We use <code>, not <pre>: Telegram
+        # stamps a "</>" code badge on <pre> blocks (the stray icon KC saw);
+        # <code> is monospace without that chrome. Columns are tight for phones.
+        table: list[str] = []
         for group_letter, rows in sorted(group_tables.items()):
-            lines.append(f"  Group {group_letter}")
-            lines.append(f"  {'Team':<20} {'P':>2}  {'Pts':>3}  {'GD':>4}  {'GF':>3}  {'GA':>3}")
+            table.append(f"Group {group_letter}")
+            table.append(f"{'Team':<15}{'P':>2}{'Pts':>4}{'GD':>4}{'GF':>4}{'GA':>4}")
             for row in rows:
-                lines.append(
-                    f"  {row['team']:<20} {row['played']:>2}  "
-                    f"{row['points']:>3}  {row['gd']:>+4}  "
-                    f"{row['gf']:>3}  {row['ga']:>3}"
-                )
-            lines.append("")
+                table.append(
+                    f"{str(row['team'])[:15]:<15}{row['played']:>2}"
+                    f"{row['points']:>4}{row['gd']:>+4}"
+                    f"{row['gf']:>4}{row['ga']:>4}")
+            table.append("")
+        lines.append("<code>" + "\n".join(table).rstrip() + "</code>")
 
     return "\n".join(lines).rstrip()
 

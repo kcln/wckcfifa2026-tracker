@@ -18,8 +18,13 @@ def _default_poster(url, data):
 
 
 def _format(text: str) -> str:
-    """HTML-escape the plain body and append the hyperlink footer."""
-    return escape(text, quote=False) + _FOOTER
+    """HTML-escape the plain body and append the hyperlink footer. `<code>`
+    blocks (the monospace standings table) are preserved — their inner text is
+    still escaped, only the tags survive — so Telegram renders fixed-width
+    columns that line up, WITHOUT the "</>" badge a <pre> block would add."""
+    out = escape(text, quote=False)
+    out = out.replace("&lt;code&gt;", "<code>").replace("&lt;/code&gt;", "</code>")
+    return out + _FOOTER
 
 
 def send(text: str, token: str, chat_ids: list[str], poster=_default_poster) -> bool:

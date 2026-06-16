@@ -28,3 +28,12 @@ def test_send_noop_when_no_token():
 
 def test_send_noop_when_no_chat_ids():
     assert ts.send("hi", token="T", chat_ids=[]) is False
+
+
+def test_send_preserves_code_block_no_pre_badge():
+    calls = []
+    poster = lambda url, data: calls.append(data) or type("R", (), {"ok": True})()
+    ts.send("Standings:\n<code>Mexico & co  3</code>", token="T", chat_ids=["1"], poster=poster)
+    body = calls[0]["text"]
+    assert "<code>" in body and "</code>" in body        # code tags survive
+    assert "Mexico &amp; co" in body                     # inner text still escaped

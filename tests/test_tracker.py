@@ -138,9 +138,9 @@ def test_half_time_message_sent_and_deduped(tmp_path):
     tracker.run(cfg)
     tracker.run(cfg)  # break lasts several ticks — must not resend
 
-    ht = [s for s in sent if s.startswith("Half-time:")]
+    ht = [s for s in sent if "Half-time:" in s]
     assert len(ht) == 1
-    assert "1-0" in ht[0]
+    assert "1 - 0" in ht[0]
 
     saved = json.loads((tmp_path / "state.json").read_text())
     day = next(d for d in saved["days"] if d["date"] == "2026-06-11")
