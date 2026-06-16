@@ -5,39 +5,39 @@
       "messages": [
         {
           "type": "morning_brief",
-          "body": "FIFA World Cup 2026 — Matchday Brief\nDate: 2026-06-11\n\nMexico vs South Africa  —  Mexico City, Mexico  —  Kickoff 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  Prediction: Mexico  |  Home 75.4%  Draw 16.5%  Away 8.1%\nSouth Korea vs Czech Republic  —  Guadalajara (Zapopan), Mexico  —  Kickoff 7:00pm PT / 9:00pm CT / 10:00pm ET / 7:30am IST (+1d)\n  Prediction: South Korea  |  Home 49.3%  Draw 30.8%  Away 19.9%",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 11\n\nMatchday Brief\n\nMexico vs South Africa\n  Prediction: Mexico\n  Mexico 75.4% · Draw 16.5% · South Africa 8.1%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 Mexico City, Mexico\n\nSouth Korea vs Czech Republic\n  Prediction: South Korea\n  South Korea 49.3% · Draw 30.8% · Czech Republic 19.9%\n  🕐 7:00pm PT / 9:00pm CT / 10:00pm ET / 7:30am IST (+1d)\n  📍 Guadalajara (Zapopan), Mexico",
           "sent": true,
-          "hash": "98642d87b57f1bb5",
-          "generated_at": "2026-06-11T19:06:44.279073-07:00",
-          "kickoff_utc": "2026-06-11T19:00:00Z",
-          "key": "mb-2026-06-11"
+          "hash": "27508a954381b61d",
+          "key": "mb-2026-06-11",
+          "generated_at": "2026-06-16T11:04:33.767496-07:00",
+          "kickoff_utc": "2026-06-11T19:00:00Z"
         },
         {
           "type": "post_match",
-          "body": "Full time\nMexico 2-0 South Africa  ✓  (Prediction: Mexico)  —  Mexico City, Mexico",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 11\n\nFull time:\nMexico 2 - 0 South Africa\nMexico City, Mexico\nOverall prediction: 1/1 (100.0%)\nPrediction ✓: Mexico",
           "sent": true,
-          "hash": "4590e29d74198e77",
-          "generated_at": "2026-06-11T19:06:44.279096-07:00",
-          "kickoff_utc": "2026-06-11T19:00:00Z",
-          "key": "pm-2026-06-11-1"
+          "hash": "965babca71a8662a",
+          "key": "pm-2026-06-11-1",
+          "generated_at": "2026-06-16T11:04:33.767653-07:00",
+          "kickoff_utc": "2026-06-11T19:00:00Z"
         },
         {
           "type": "post_match",
-          "body": "Full time\nSouth Korea 2-1 Czech Republic  ✓  (Prediction: South Korea)  —  Guadalajara (Zapopan), Mexico",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 11\n\nFull time:\nSouth Korea 2 - 1 Czech Republic\nGuadalajara (Zapopan), Mexico\nOverall prediction: 2/2 (100.0%)\nPrediction ✓: South Korea",
           "sent": true,
-          "hash": "86fa65ad3804f88d",
-          "generated_at": "2026-06-11T21:10:38.446511-07:00",
-          "kickoff_utc": "2026-06-12T02:00:00Z",
-          "key": "pm-2026-06-11-2"
+          "hash": "ec59470bee77431a",
+          "key": "pm-2026-06-11-2",
+          "generated_at": "2026-06-16T11:04:33.767714-07:00",
+          "kickoff_utc": "2026-06-12T02:00:00Z"
         },
         {
           "type": "daily_recap",
-          "body": "FIFA World Cup 2026 — Daily Recap\nDate: 2026-06-11\n\nResults:\n  Mexico 2-0 South Africa  ✓  (Prediction: Mexico)  —  Mexico City, Mexico\n  South Korea 2-1 Czech Republic  ✓  (Prediction: South Korea)  —  Guadalajara (Zapopan), Mexico\n\nGroup Standings:\n  Group A\n  Team                  P  Pts    GD   GF   GA\n  Mexico                1    3    +2    2    0\n  South Korea           1    3    +1    2    1\n  Czech Republic        1    0    -1    1    2\n  South Africa          1    0    -2    0    2\n\n  Group B\n  Team                  P  Pts    GD   GF   GA\n  Bosnia & Herzegovina  0    0    +0    0    0\n  Canada                0    0    +0    0    0\n  Qatar                 0    0    +0    0    0\n  Switzerland           0    0    +0    0    0\n\n  Group C\n  Team                  P  Pts    GD   GF   GA\n  Brazil                0    0    +0    0    0\n  Haiti                 0    0    +0    0    0\n  Morocco               0    0    +0    0    0\n  Scotland              0    0    +0    0    0\n\n  Group D\n  Team                  P  Pts    GD   GF   GA\n  Australia             0    0    +0    0    0\n  Paraguay              0    0    +0    0    0\n  Turkey                0    0    +0    0    0\n  USA                   0    0    +0    0    0\n\n  Group E\n  Team                  P  Pts    GD   GF   GA\n  Curaçao               0    0    +0    0    0\n  Ecuador               0    0    +0    0    0\n  Germany               0    0    +0    0    0\n  Ivory Coast           0    0    +0    0    0\n\n  Group F\n  Team                  P  Pts    GD   GF   GA\n  Japan                 0    0    +0    0    0\n  Netherlands           0    0    +0    0    0\n  Sweden                0    0    +0    0    0\n  Tunisia               0    0    +0    0    0\n\n  Group G\n  Team                  P  Pts    GD   GF   GA\n  Belgium               0    0    +0    0    0\n  Egypt                 0    0    +0    0    0\n  Iran                  0    0    +0    0    0\n  New Zealand           0    0    +0    0    0\n\n  Group H\n  Team                  P  Pts    GD   GF   GA\n  Cape Verde            0    0    +0    0    0\n  Saudi Arabia          0    0    +0    0    0\n  Spain                 0    0    +0    0    0\n  Uruguay               0    0    +0    0    0\n\n  Group I\n  Team                  P  Pts    GD   GF   GA\n  France                0    0    +0    0    0\n  Iraq                  0    0    +0    0    0\n  Norway                0    0    +0    0    0\n  Senegal               0    0    +0    0    0\n\n  Group J\n  Team                  P  Pts    GD   GF   GA\n  Algeria               0    0    +0    0    0\n  Argentina             0    0    +0    0    0\n  Austria               0    0    +0    0    0\n  Jordan                0    0    +0    0    0\n\n  Group K\n  Team                  P  Pts    GD   GF   GA\n  Colombia              0    0    +0    0    0\n  DR Congo              0    0    +0    0    0\n  Portugal              0    0    +0    0    0\n  Uzbekistan            0    0    +0    0    0\n\n  Group L\n  Team                  P  Pts    GD   GF   GA\n  Croatia               0    0    +0    0    0\n  England               0    0    +0    0    0\n  Ghana                 0    0    +0    0    0\n  Panama                0    0    +0    0    0",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 11\n\nDaily Recap\n\nResults:\n  Mexico 2 - 0 South Africa\n  Mexico City, Mexico\n  Prediction ✓: Mexico\n\n  South Korea 2 - 1 Czech Republic\n  Guadalajara (Zapopan), Mexico\n  Prediction ✓: South Korea\n\nOverall prediction — today 2/2 (100.0%)  ·  overall 2/2 (100.0%)\n\nGroup Standings:\n\nP Played · Pts Points · GD Goal Diff · GF Goals For · GA Goals Against\n\n<code>Group A\nTeam            P Pts  GD  GF  GA\nMexico          1   3  +2   2   0\nSouth Korea     1   3  +1   2   1\nCzech Republic  1   0  -1   1   2\nSouth Africa    1   0  -2   0   2\n\nGroup B\nTeam            P Pts  GD  GF  GA\nBosnia & Herzeg 1   1  +0   1   1\nCanada          1   1  +0   1   1\nQatar           1   1  +0   1   1\nSwitzerland     1   1  +0   1   1\n\nGroup C\nTeam            P Pts  GD  GF  GA\nScotland        1   3  +1   1   0\nBrazil          1   1  +0   1   1\nMorocco         1   1  +0   1   1\nHaiti           1   0  -1   0   1\n\nGroup D\nTeam            P Pts  GD  GF  GA\nUSA             1   3  +3   4   1\nAustralia       1   3  +2   2   0\nTurkey          1   0  -2   0   2\nParaguay        1   0  -3   1   4\n\nGroup E\nTeam            P Pts  GD  GF  GA\nGermany         1   3  +6   7   1\nIvory Coast     1   3  +1   1   0\nEcuador         1   0  -1   0   1\nCuraçao         1   0  -6   1   7\n\nGroup F\nTeam            P Pts  GD  GF  GA\nSweden          1   3  +4   5   1\nJapan           1   1  +0   2   2\nNetherlands     1   1  +0   2   2\nTunisia         1   0  -4   1   5\n\nGroup G\nTeam            P Pts  GD  GF  GA\nIran            1   1  +0   2   2\nNew Zealand     1   1  +0   2   2\nBelgium         1   1  +0   1   1\nEgypt           1   1  +0   1   1\n\nGroup H\nTeam            P Pts  GD  GF  GA\nSaudi Arabia    1   1  +0   1   1\nUruguay         1   1  +0   1   1\nCape Verde      1   1  +0   0   0\nSpain           1   1  +0   0   0\n\nGroup I\nTeam            P Pts  GD  GF  GA\nFrance          0   0  +0   0   0\nIraq            0   0  +0   0   0\nNorway          0   0  +0   0   0\nSenegal         0   0  +0   0   0\n\nGroup J\nTeam            P Pts  GD  GF  GA\nAlgeria         0   0  +0   0   0\nArgentina       0   0  +0   0   0\nAustria         0   0  +0   0   0\nJordan          0   0  +0   0   0\n\nGroup K\nTeam            P Pts  GD  GF  GA\nColombia        0   0  +0   0   0\nDR Congo        0   0  +0   0   0\nPortugal        0   0  +0   0   0\nUzbekistan      0   0  +0   0   0\n\nGroup L\nTeam            P Pts  GD  GF  GA\nCroatia         0   0  +0   0   0\nEngland         0   0  +0   0   0\nGhana           0   0  +0   0   0\nPanama          0   0  +0   0   0</code>",
           "sent": true,
-          "hash": "e9ae41151f86896f",
-          "generated_at": "2026-06-11T21:10:38.446725-07:00",
-          "kickoff_utc": "2026-06-11T19:00:00Z",
-          "key": "dr-2026-06-11"
+          "hash": "8c5c37e370ee5eca",
+          "key": "dr-2026-06-11",
+          "generated_at": "2026-06-16T11:04:33.767860-07:00",
+          "kickoff_utc": "2026-06-11T19:00:00Z"
         }
       ]
     },
@@ -46,48 +46,48 @@
       "messages": [
         {
           "type": "morning_brief",
-          "body": "FIFA World Cup 2026 — Matchday Brief\nDate: 2026-06-12\n\nCanada vs Bosnia & Herzegovina  —  Toronto, Canada  —  Kickoff 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  Prediction: Canada  |  Home 80.3%  Draw 16.2%  Away 3.5%\nUSA vs Paraguay  —  Los Angeles (Inglewood), USA  —  Kickoff 6:00pm PT / 8:00pm CT / 9:00pm ET / 6:30am IST (+1d)\n  Prediction: Paraguay  |  Home 4.5%  Draw 6.0%  Away 89.5%",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 12\n\nMatchday Brief\n\nCanada vs Bosnia & Herzegovina\n  Prediction: Canada\n  Canada 80.3% · Draw 16.2% · Bosnia & Herzegovina 3.5%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 Toronto, Canada\n\nUSA vs Paraguay\n  Prediction: Paraguay\n  USA 4.5% · Draw 6.0% · Paraguay 89.5%\n  🕐 6:00pm PT / 8:00pm CT / 9:00pm ET / 6:30am IST (+1d)\n  📍 Los Angeles (Inglewood), USA",
           "sent": true,
-          "hash": "c1e28676aa0a23fb",
-          "generated_at": "2026-06-12T01:43:38.384798-07:00",
-          "kickoff_utc": "2026-06-12T19:00:00Z",
-          "key": "mb-2026-06-12"
+          "hash": "950b6050a478cffe",
+          "key": "mb-2026-06-12",
+          "generated_at": "2026-06-16T11:04:33.767959-07:00",
+          "kickoff_utc": "2026-06-12T19:00:00Z"
         },
         {
           "type": "post_match",
-          "body": "Full time\nCanada 1-1 Bosnia & Herzegovina  ✗  (Prediction: Canada)  —  Toronto, Canada",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 12\n\nFull time:\nCanada 1 - 1 Bosnia & Herzegovina\nToronto, Canada\nOverall prediction: 2/3 (66.7%)\nPrediction ✗: Canada",
           "sent": true,
-          "hash": "d073f534b6690e65",
-          "generated_at": "2026-06-12T15:02:22.294247-07:00",
-          "kickoff_utc": "2026-06-12T19:00:00Z",
-          "key": "pm-2026-06-12-7"
+          "hash": "8550128d14b1a8ba",
+          "key": "pm-2026-06-12-7",
+          "generated_at": "2026-06-16T11:04:33.768036-07:00",
+          "kickoff_utc": "2026-06-12T19:00:00Z"
         },
         {
           "type": "half_time",
-          "body": "Half-time: USA 3-0 Paraguay\nLos Angeles (Inglewood), USA\nPrediction: Paraguay",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 12\n\nHalf-time:\nUSA 3 - 0 Paraguay\nLos Angeles (Inglewood), USA\nPrediction: Paraguay",
           "sent": true,
-          "hash": "8c2992b5442e0415",
-          "generated_at": "2026-06-12T18:54:29.762160-07:00",
-          "kickoff_utc": "2026-06-13T01:00:00Z",
-          "key": "ht-2026-06-12-19"
+          "hash": "4ef1f564733703dd",
+          "key": "ht-2026-06-12-19",
+          "generated_at": "2026-06-16T11:04:33.768047-07:00",
+          "kickoff_utc": "2026-06-13T01:00:00Z"
         },
         {
           "type": "post_match",
-          "body": "Full time\nUSA 4-1 Paraguay  ✗  (Prediction: Paraguay)  —  Los Angeles (Inglewood), USA",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 12\n\nFull time:\nUSA 4 - 1 Paraguay\nLos Angeles (Inglewood), USA\nOverall prediction: 2/4 (50.0%)\nPrediction ✗: Paraguay",
           "sent": true,
-          "hash": "8b7ee0396d91cc7d",
-          "generated_at": "2026-06-12T20:06:31.207929-07:00",
-          "kickoff_utc": "2026-06-13T01:00:00Z",
-          "key": "pm-2026-06-12-19"
+          "hash": "909e08976dba8aeb",
+          "key": "pm-2026-06-12-19",
+          "generated_at": "2026-06-16T11:04:33.768126-07:00",
+          "kickoff_utc": "2026-06-13T01:00:00Z"
         },
         {
           "type": "daily_recap",
-          "body": "FIFA World Cup 2026 — Daily Recap\nDate: 2026-06-12\n\nResults:\n  Canada 1-1 Bosnia & Herzegovina  ✗  (Prediction: Canada)  —  Toronto, Canada\n  USA 4-1 Paraguay  ✗  (Prediction: Paraguay)  —  Los Angeles (Inglewood), USA\n\nGroup Standings:\n  Group A\n  Team                  P  Pts    GD   GF   GA\n  Czech Republic        0    0    +0    0    0\n  Mexico                0    0    +0    0    0\n  South Africa          0    0    +0    0    0\n  South Korea           0    0    +0    0    0\n\n  Group B\n  Team                  P  Pts    GD   GF   GA\n  Bosnia & Herzegovina  1    1    +0    1    1\n  Canada                1    1    +0    1    1\n  Qatar                 0    0    +0    0    0\n  Switzerland           0    0    +0    0    0\n\n  Group C\n  Team                  P  Pts    GD   GF   GA\n  Brazil                0    0    +0    0    0\n  Haiti                 0    0    +0    0    0\n  Morocco               0    0    +0    0    0\n  Scotland              0    0    +0    0    0\n\n  Group D\n  Team                  P  Pts    GD   GF   GA\n  USA                   1    3    +3    4    1\n  Australia             0    0    +0    0    0\n  Turkey                0    0    +0    0    0\n  Paraguay              1    0    -3    1    4\n\n  Group E\n  Team                  P  Pts    GD   GF   GA\n  Curaçao               0    0    +0    0    0\n  Ecuador               0    0    +0    0    0\n  Germany               0    0    +0    0    0\n  Ivory Coast           0    0    +0    0    0\n\n  Group F\n  Team                  P  Pts    GD   GF   GA\n  Japan                 0    0    +0    0    0\n  Netherlands           0    0    +0    0    0\n  Sweden                0    0    +0    0    0\n  Tunisia               0    0    +0    0    0\n\n  Group G\n  Team                  P  Pts    GD   GF   GA\n  Belgium               0    0    +0    0    0\n  Egypt                 0    0    +0    0    0\n  Iran                  0    0    +0    0    0\n  New Zealand           0    0    +0    0    0\n\n  Group H\n  Team                  P  Pts    GD   GF   GA\n  Cape Verde            0    0    +0    0    0\n  Saudi Arabia          0    0    +0    0    0\n  Spain                 0    0    +0    0    0\n  Uruguay               0    0    +0    0    0\n\n  Group I\n  Team                  P  Pts    GD   GF   GA\n  France                0    0    +0    0    0\n  Iraq                  0    0    +0    0    0\n  Norway                0    0    +0    0    0\n  Senegal               0    0    +0    0    0\n\n  Group J\n  Team                  P  Pts    GD   GF   GA\n  Algeria               0    0    +0    0    0\n  Argentina             0    0    +0    0    0\n  Austria               0    0    +0    0    0\n  Jordan                0    0    +0    0    0\n\n  Group K\n  Team                  P  Pts    GD   GF   GA\n  Colombia              0    0    +0    0    0\n  DR Congo              0    0    +0    0    0\n  Portugal              0    0    +0    0    0\n  Uzbekistan            0    0    +0    0    0\n\n  Group L\n  Team                  P  Pts    GD   GF   GA\n  Croatia               0    0    +0    0    0\n  England               0    0    +0    0    0\n  Ghana                 0    0    +0    0    0\n  Panama                0    0    +0    0    0",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 12\n\nDaily Recap\n\nResults:\n  Canada 1 - 1 Bosnia & Herzegovina\n  Toronto, Canada\n  Prediction ✗: Canada\n\n  USA 4 - 1 Paraguay\n  Los Angeles (Inglewood), USA\n  Prediction ✗: Paraguay\n\nOverall prediction — today 0/2 (0.0%)  ·  overall 2/4 (50.0%)\n\nGroup Standings:\n\nP Played · Pts Points · GD Goal Diff · GF Goals For · GA Goals Against\n\n<code>Group A\nTeam            P Pts  GD  GF  GA\nMexico          1   3  +2   2   0\nSouth Korea     1   3  +1   2   1\nCzech Republic  1   0  -1   1   2\nSouth Africa    1   0  -2   0   2\n\nGroup B\nTeam            P Pts  GD  GF  GA\nBosnia & Herzeg 1   1  +0   1   1\nCanada          1   1  +0   1   1\nQatar           1   1  +0   1   1\nSwitzerland     1   1  +0   1   1\n\nGroup C\nTeam            P Pts  GD  GF  GA\nScotland        1   3  +1   1   0\nBrazil          1   1  +0   1   1\nMorocco         1   1  +0   1   1\nHaiti           1   0  -1   0   1\n\nGroup D\nTeam            P Pts  GD  GF  GA\nUSA             1   3  +3   4   1\nAustralia       1   3  +2   2   0\nTurkey          1   0  -2   0   2\nParaguay        1   0  -3   1   4\n\nGroup E\nTeam            P Pts  GD  GF  GA\nGermany         1   3  +6   7   1\nIvory Coast     1   3  +1   1   0\nEcuador         1   0  -1   0   1\nCuraçao         1   0  -6   1   7\n\nGroup F\nTeam            P Pts  GD  GF  GA\nSweden          1   3  +4   5   1\nJapan           1   1  +0   2   2\nNetherlands     1   1  +0   2   2\nTunisia         1   0  -4   1   5\n\nGroup G\nTeam            P Pts  GD  GF  GA\nIran            1   1  +0   2   2\nNew Zealand     1   1  +0   2   2\nBelgium         1   1  +0   1   1\nEgypt           1   1  +0   1   1\n\nGroup H\nTeam            P Pts  GD  GF  GA\nSaudi Arabia    1   1  +0   1   1\nUruguay         1   1  +0   1   1\nCape Verde      1   1  +0   0   0\nSpain           1   1  +0   0   0\n\nGroup I\nTeam            P Pts  GD  GF  GA\nFrance          0   0  +0   0   0\nIraq            0   0  +0   0   0\nNorway          0   0  +0   0   0\nSenegal         0   0  +0   0   0\n\nGroup J\nTeam            P Pts  GD  GF  GA\nAlgeria         0   0  +0   0   0\nArgentina       0   0  +0   0   0\nAustria         0   0  +0   0   0\nJordan          0   0  +0   0   0\n\nGroup K\nTeam            P Pts  GD  GF  GA\nColombia        0   0  +0   0   0\nDR Congo        0   0  +0   0   0\nPortugal        0   0  +0   0   0\nUzbekistan      0   0  +0   0   0\n\nGroup L\nTeam            P Pts  GD  GF  GA\nCroatia         0   0  +0   0   0\nEngland         0   0  +0   0   0\nGhana           0   0  +0   0   0\nPanama          0   0  +0   0   0</code>",
           "sent": true,
-          "hash": "91dcdc3b2894032b",
-          "generated_at": "2026-06-12T20:06:31.208125-07:00",
-          "kickoff_utc": "2026-06-12T19:00:00Z",
-          "key": "dr-2026-06-12"
+          "hash": "b4d4c8dd5364529c",
+          "key": "dr-2026-06-12",
+          "generated_at": "2026-06-16T11:04:33.768288-07:00",
+          "kickoff_utc": "2026-06-12T19:00:00Z"
         }
       ]
     },
@@ -96,84 +96,84 @@
       "messages": [
         {
           "type": "morning_brief",
-          "body": "🏆 World Cup 2026 — Matchday Brief\nSaturday, June 13\n\nQatar vs Switzerland\n  Prediction: Switzerland\n  Qatar 8.6% · Draw 28.2% · Switzerland 63.2%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 San Francisco Bay Area (Santa Clara), USA\n\nBrazil vs Morocco\n  Prediction: Brazil\n  Brazil 47.5% · Draw 30.9% · Morocco 21.6%\n  🕐 3:00pm PT / 5:00pm CT / 6:00pm ET / 3:30am IST (+1d)\n  📍 New York/New Jersey (East Rutherford), USA\n\nHaiti vs Scotland\n  Prediction: Scotland\n  Haiti 17.0% · Draw 29.8% · Scotland 53.2%\n  🕐 6:00pm PT / 8:00pm CT / 9:00pm ET / 6:30am IST (+1d)\n  📍 Boston (Foxborough), USA\n\nAustralia vs Turkey\n  Prediction: Turkey\n  Australia 26.0% · Draw 28.1% · Turkey 45.9%\n  🕐 9:00pm PT / 11:00pm CT / 12:00am ET (+1d) / 9:30am IST (+1d)\n  📍 Vancouver, Canada",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 13\n\nMatchday Brief\n\nQatar vs Switzerland\n  Prediction: Switzerland\n  Qatar 8.6% · Draw 28.2% · Switzerland 63.2%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 San Francisco Bay Area (Santa Clara), USA\n\nBrazil vs Morocco\n  Prediction: Brazil\n  Brazil 47.5% · Draw 30.9% · Morocco 21.6%\n  🕐 3:00pm PT / 5:00pm CT / 6:00pm ET / 3:30am IST (+1d)\n  📍 New York/New Jersey (East Rutherford), USA\n\nHaiti vs Scotland\n  Prediction: Scotland\n  Haiti 17.0% · Draw 29.8% · Scotland 53.2%\n  🕐 6:00pm PT / 8:00pm CT / 9:00pm ET / 6:30am IST (+1d)\n  📍 Boston (Foxborough), USA\n\nAustralia vs Turkey\n  Prediction: Turkey\n  Australia 26.0% · Draw 28.1% · Turkey 45.9%\n  🕐 9:00pm PT / 11:00pm CT / 12:00am ET (+1d) / 9:30am IST (+1d)\n  📍 Vancouver, Canada",
           "sent": true,
-          "hash": "7138ccd026eae065",
-          "generated_at": "2026-06-14T14:08:13.535971-07:00",
-          "kickoff_utc": "2026-06-13T19:00:00Z",
-          "key": "mb-2026-06-13"
-        },
-        {
-          "type": "post_match",
-          "body": "Full time\nQatar 1-1 Switzerland  —  San Francisco Bay Area (Santa Clara), USA\nResult: Draw  ·  Prediction: Switzerland  ✗ (0%)\nOverall prediction: 2/5 (40.0%)\n  ⚽ 17' Breel Embolo (Switzerland, pen)\n  ⚽ 90'+4' Miro Muheim (Qatar, OG)",
-          "sent": true,
-          "hash": "e1972c49068ff215",
-          "generated_at": "2026-06-14T14:08:13.536525-07:00",
-          "kickoff_utc": "2026-06-13T19:00:00Z",
-          "key": "pm-2026-06-13-8"
-        },
-        {
-          "type": "post_match",
-          "body": "Full time\nBrazil 1-1 Morocco  —  New York/New Jersey (East Rutherford), USA\nResult: Draw  ·  Prediction: Brazil  ✗ (0%)\nOverall prediction: 2/6 (33.3%)\n  ⚽ 21' Ismael Saibari (Morocco)\n  ⚽ 32' Vinícius Júnior (Brazil)",
-          "sent": true,
-          "hash": "bd608a15db6ee83b",
-          "generated_at": "2026-06-14T14:08:13.536855-07:00",
-          "kickoff_utc": "2026-06-13T22:00:00Z",
-          "key": "pm-2026-06-13-13"
-        },
-        {
-          "type": "post_match",
-          "body": "Full time\nHaiti 0-1 Scotland  —  Boston (Foxborough), USA\nResult: Scotland win  ·  Prediction: Scotland  ✓ (100%)\nOverall prediction: 3/7 (42.9%)\n  ⚽ 28' John McGinn (Scotland)",
-          "sent": true,
-          "hash": "fe300cb09560f4de",
-          "generated_at": "2026-06-14T14:08:13.537222-07:00",
-          "kickoff_utc": "2026-06-14T01:00:00Z",
-          "key": "pm-2026-06-13-14"
-        },
-        {
-          "type": "post_match",
-          "body": "Full time\nAustralia 2-0 Turkey  —  Vancouver, Canada\nResult: Australia win  ·  Prediction: Turkey  ✗ (0%)\nOverall prediction: 3/8 (37.5%)\n  ⚽ 27' Nestory Irankunda (Australia)\n  ⚽ 75' Connor Metcalfe (Australia)",
-          "sent": true,
-          "hash": "f8a57e015246b13d",
-          "generated_at": "2026-06-14T14:08:13.537647-07:00",
-          "kickoff_utc": "2026-06-14T04:00:00Z",
-          "key": "pm-2026-06-13-20"
+          "hash": "333eabffd005803f",
+          "key": "mb-2026-06-13",
+          "generated_at": "2026-06-16T11:04:33.768428-07:00",
+          "kickoff_utc": "2026-06-13T19:00:00Z"
         },
         {
           "type": "half_time",
-          "body": "Half-time: Qatar 0-1 Switzerland\nSan Francisco Bay Area (Santa Clara), USA\nPrediction: Switzerland",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 13\n\nHalf-time:\nQatar 0 - 1 Switzerland\nSan Francisco Bay Area (Santa Clara), USA\nPrediction: Switzerland",
           "sent": true,
-          "hash": "6163775b66ccd6e3",
-          "generated_at": "2026-06-13T12:58:19.457414-07:00",
-          "kickoff_utc": "2026-06-13T19:00:00Z",
-          "key": "ht-2026-06-13-8"
+          "hash": "6a60a0a3539eab88",
+          "key": "ht-2026-06-13-8",
+          "generated_at": "2026-06-16T11:04:33.768439-07:00",
+          "kickoff_utc": "2026-06-13T19:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 13\n\nFull time:\nQatar 1 - 1 Switzerland\nSan Francisco Bay Area (Santa Clara), USA\n  ⚽ 17' Breel Embolo (Switzerland, pen)\n  ⚽ 90'+4' Miro Muheim (Qatar, OG)\nOverall prediction: 2/5 (40.0%)\nPrediction ✗: Switzerland",
+          "sent": true,
+          "hash": "994b374111ea94c0",
+          "key": "pm-2026-06-13-8",
+          "generated_at": "2026-06-16T11:04:33.768536-07:00",
+          "kickoff_utc": "2026-06-13T19:00:00Z"
         },
         {
           "type": "half_time",
-          "body": "Half-time: Brazil 1-1 Morocco\nNew York/New Jersey (East Rutherford), USA\nPrediction: Brazil",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 13\n\nHalf-time:\nBrazil 1 - 1 Morocco\nNew York/New Jersey (East Rutherford), USA\nPrediction: Brazil",
           "sent": true,
-          "hash": "5e63342ba7d79fed",
-          "generated_at": "2026-06-13T15:55:10.543935-07:00",
-          "kickoff_utc": "2026-06-13T22:00:00Z",
-          "key": "ht-2026-06-13-13"
+          "hash": "d54294d71d67e753",
+          "key": "ht-2026-06-13-13",
+          "generated_at": "2026-06-16T11:04:33.768545-07:00",
+          "kickoff_utc": "2026-06-13T22:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 13\n\nFull time:\nBrazil 1 - 1 Morocco\nNew York/New Jersey (East Rutherford), USA\n  ⚽ 21' Ismael Saibari (Morocco)\n  ⚽ 32' Vinícius Júnior (Brazil)\nOverall prediction: 2/6 (33.3%)\nPrediction ✗: Brazil",
+          "sent": true,
+          "hash": "f55e510e2e9ff81d",
+          "key": "pm-2026-06-13-13",
+          "generated_at": "2026-06-16T11:04:33.768651-07:00",
+          "kickoff_utc": "2026-06-13T22:00:00Z"
         },
         {
           "type": "half_time",
-          "body": "Half-time: Haiti 0-1 Scotland\nBoston (Foxborough), USA\nPrediction: Scotland",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 13\n\nHalf-time:\nHaiti 0 - 1 Scotland\nBoston (Foxborough), USA\nPrediction: Scotland",
           "sent": true,
-          "hash": "df87756d7033ec9e",
-          "generated_at": "2026-06-13T18:53:38.342943-07:00",
-          "kickoff_utc": "2026-06-14T01:00:00Z",
-          "key": "ht-2026-06-13-14"
+          "hash": "7493164b2d33f79d",
+          "key": "ht-2026-06-13-14",
+          "generated_at": "2026-06-16T11:04:33.768660-07:00",
+          "kickoff_utc": "2026-06-14T01:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 13\n\nFull time:\nHaiti 0 - 1 Scotland\nBoston (Foxborough), USA\n  ⚽ 28' John McGinn (Scotland)\nOverall prediction: 3/7 (42.9%)\nPrediction ✓: Scotland",
+          "sent": true,
+          "hash": "f6e1851daf7287d1",
+          "key": "pm-2026-06-13-14",
+          "generated_at": "2026-06-16T11:04:33.768780-07:00",
+          "kickoff_utc": "2026-06-14T01:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 13\n\nFull time:\nAustralia 2 - 0 Turkey\nVancouver, Canada\n  ⚽ 27' Nestory Irankunda (Australia)\n  ⚽ 75' Connor Metcalfe (Australia)\nOverall prediction: 3/8 (37.5%)\nPrediction ✗: Turkey",
+          "sent": true,
+          "hash": "d7e24c9bf4356cf7",
+          "key": "pm-2026-06-13-20",
+          "generated_at": "2026-06-16T11:04:33.768912-07:00",
+          "kickoff_utc": "2026-06-14T04:00:00Z"
         },
         {
           "type": "daily_recap",
-          "body": "🏆 World Cup 2026 — Daily Recap\nSaturday, June 13\n\nResults:\n  Qatar 1-1 Switzerland  ✗  (Prediction: Switzerland)  —  San Francisco Bay Area (Santa Clara), USA\n    ⚽ 17' Breel Embolo (Switzerland, pen)\n    ⚽ 90'+4' Miro Muheim (Qatar, OG)\n  Brazil 1-1 Morocco  ✗  (Prediction: Brazil)  —  New York/New Jersey (East Rutherford), USA\n    ⚽ 21' Ismael Saibari (Morocco)\n    ⚽ 32' Vinícius Júnior (Brazil)\n  Haiti 0-1 Scotland  ✓  (Prediction: Scotland)  —  Boston (Foxborough), USA\n    ⚽ 28' John McGinn (Scotland)\n  Australia 2-0 Turkey  ✗  (Prediction: Turkey)  —  Vancouver, Canada\n    ⚽ 27' Nestory Irankunda (Australia)\n    ⚽ 75' Connor Metcalfe (Australia)\n\nOverall prediction — today 1/4 (25.0%)  ·  overall 3/8 (37.5%)\n\nGroup Standings:\n  Group A\n  Team                  P  Pts    GD   GF   GA\n  Mexico                1    3    +2    2    0\n  South Korea           1    3    +1    2    1\n  Czech Republic        1    0    -1    1    2\n  South Africa          1    0    -2    0    2\n\n  Group B\n  Team                  P  Pts    GD   GF   GA\n  Bosnia & Herzegovina  1    1    +0    1    1\n  Canada                1    1    +0    1    1\n  Qatar                 1    1    +0    1    1\n  Switzerland           1    1    +0    1    1\n\n  Group C\n  Team                  P  Pts    GD   GF   GA\n  Scotland              1    3    +1    1    0\n  Brazil                1    1    +0    1    1\n  Morocco               1    1    +0    1    1\n  Haiti                 1    0    -1    0    1\n\n  Group D\n  Team                  P  Pts    GD   GF   GA\n  USA                   1    3    +3    4    1\n  Australia             1    3    +2    2    0\n  Turkey                1    0    -2    0    2\n  Paraguay              1    0    -3    1    4\n\n  Group E\n  Team                  P  Pts    GD   GF   GA\n  Germany               1    3    +6    7    1\n  Ecuador               0    0    +0    0    0\n  Ivory Coast           0    0    +0    0    0\n  Curaçao               1    0    -6    1    7\n\n  Group F\n  Team                  P  Pts    GD   GF   GA\n  Japan                 0    0    +0    0    0\n  Netherlands           0    0    +0    0    0\n  Sweden                0    0    +0    0    0\n  Tunisia               0    0    +0    0    0\n\n  Group G\n  Team                  P  Pts    GD   GF   GA\n  Belgium               0    0    +0    0    0\n  Egypt                 0    0    +0    0    0\n  Iran                  0    0    +0    0    0\n  New Zealand           0    0    +0    0    0\n\n  Group H\n  Team                  P  Pts    GD   GF   GA\n  Cape Verde            0    0    +0    0    0\n  Saudi Arabia          0    0    +0    0    0\n  Spain                 0    0    +0    0    0\n  Uruguay               0    0    +0    0    0\n\n  Group I\n  Team                  P  Pts    GD   GF   GA\n  France                0    0    +0    0    0\n  Iraq                  0    0    +0    0    0\n  Norway                0    0    +0    0    0\n  Senegal               0    0    +0    0    0\n\n  Group J\n  Team                  P  Pts    GD   GF   GA\n  Algeria               0    0    +0    0    0\n  Argentina             0    0    +0    0    0\n  Austria               0    0    +0    0    0\n  Jordan                0    0    +0    0    0\n\n  Group K\n  Team                  P  Pts    GD   GF   GA\n  Colombia              0    0    +0    0    0\n  DR Congo              0    0    +0    0    0\n  Portugal              0    0    +0    0    0\n  Uzbekistan            0    0    +0    0    0\n\n  Group L\n  Team                  P  Pts    GD   GF   GA\n  Croatia               0    0    +0    0    0\n  England               0    0    +0    0    0\n  Ghana                 0    0    +0    0    0\n  Panama                0    0    +0    0    0",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 13\n\nDaily Recap\n\nResults:\n  Qatar 1 - 1 Switzerland\n  San Francisco Bay Area (Santa Clara), USA\n    ⚽ 17' Breel Embolo (Switzerland, pen)\n    ⚽ 90'+4' Miro Muheim (Qatar, OG)\n  Prediction ✗: Switzerland\n\n  Brazil 1 - 1 Morocco\n  New York/New Jersey (East Rutherford), USA\n    ⚽ 21' Ismael Saibari (Morocco)\n    ⚽ 32' Vinícius Júnior (Brazil)\n  Prediction ✗: Brazil\n\n  Haiti 0 - 1 Scotland\n  Boston (Foxborough), USA\n    ⚽ 28' John McGinn (Scotland)\n  Prediction ✓: Scotland\n\n  Australia 2 - 0 Turkey\n  Vancouver, Canada\n    ⚽ 27' Nestory Irankunda (Australia)\n    ⚽ 75' Connor Metcalfe (Australia)\n  Prediction ✗: Turkey\n\nOverall prediction — today 1/4 (25.0%)  ·  overall 3/8 (37.5%)\n\nGroup Standings:\n\nP Played · Pts Points · GD Goal Diff · GF Goals For · GA Goals Against\n\n<code>Group A\nTeam            P Pts  GD  GF  GA\nMexico          1   3  +2   2   0\nSouth Korea     1   3  +1   2   1\nCzech Republic  1   0  -1   1   2\nSouth Africa    1   0  -2   0   2\n\nGroup B\nTeam            P Pts  GD  GF  GA\nBosnia & Herzeg 1   1  +0   1   1\nCanada          1   1  +0   1   1\nQatar           1   1  +0   1   1\nSwitzerland     1   1  +0   1   1\n\nGroup C\nTeam            P Pts  GD  GF  GA\nScotland        1   3  +1   1   0\nBrazil          1   1  +0   1   1\nMorocco         1   1  +0   1   1\nHaiti           1   0  -1   0   1\n\nGroup D\nTeam            P Pts  GD  GF  GA\nUSA             1   3  +3   4   1\nAustralia       1   3  +2   2   0\nTurkey          1   0  -2   0   2\nParaguay        1   0  -3   1   4\n\nGroup E\nTeam            P Pts  GD  GF  GA\nGermany         1   3  +6   7   1\nIvory Coast     1   3  +1   1   0\nEcuador         1   0  -1   0   1\nCuraçao         1   0  -6   1   7\n\nGroup F\nTeam            P Pts  GD  GF  GA\nSweden          1   3  +4   5   1\nJapan           1   1  +0   2   2\nNetherlands     1   1  +0   2   2\nTunisia         1   0  -4   1   5\n\nGroup G\nTeam            P Pts  GD  GF  GA\nIran            1   1  +0   2   2\nNew Zealand     1   1  +0   2   2\nBelgium         1   1  +0   1   1\nEgypt           1   1  +0   1   1\n\nGroup H\nTeam            P Pts  GD  GF  GA\nSaudi Arabia    1   1  +0   1   1\nUruguay         1   1  +0   1   1\nCape Verde      1   1  +0   0   0\nSpain           1   1  +0   0   0\n\nGroup I\nTeam            P Pts  GD  GF  GA\nFrance          0   0  +0   0   0\nIraq            0   0  +0   0   0\nNorway          0   0  +0   0   0\nSenegal         0   0  +0   0   0\n\nGroup J\nTeam            P Pts  GD  GF  GA\nAlgeria         0   0  +0   0   0\nArgentina       0   0  +0   0   0\nAustria         0   0  +0   0   0\nJordan          0   0  +0   0   0\n\nGroup K\nTeam            P Pts  GD  GF  GA\nColombia        0   0  +0   0   0\nDR Congo        0   0  +0   0   0\nPortugal        0   0  +0   0   0\nUzbekistan      0   0  +0   0   0\n\nGroup L\nTeam            P Pts  GD  GF  GA\nCroatia         0   0  +0   0   0\nEngland         0   0  +0   0   0\nGhana           0   0  +0   0   0\nPanama          0   0  +0   0   0</code>",
           "sent": true,
-          "hash": "ac0fbdda5e194f70",
-          "generated_at": "2026-06-14T14:08:13.538613-07:00",
-          "kickoff_utc": "2026-06-13T19:00:00Z",
-          "key": "dr-2026-06-13"
+          "hash": "2c282eb34b413d06",
+          "key": "dr-2026-06-13",
+          "generated_at": "2026-06-16T11:04:33.769204-07:00",
+          "kickoff_utc": "2026-06-13T19:00:00Z"
         }
       ]
     },
@@ -182,92 +182,92 @@
       "messages": [
         {
           "type": "morning_brief",
-          "body": "🏆 World Cup 2026 — Matchday Brief\nSunday, June 14\n\nGermany vs Curaçao\n  Prediction: Germany\n  Germany 77.8% · Draw 6.3% · Curaçao 15.9%\n  🕐 10:00am PT / 12:00pm CT / 1:00pm ET / 10:30pm IST\n  📍 Houston, USA\n\nIvory Coast vs Ecuador\n  Prediction: Ecuador\n  Ivory Coast 19.1% · Draw 29.5% · Ecuador 51.4%\n  🕐 4:00pm PT / 6:00pm CT / 7:00pm ET / 4:30am IST (+1d)\n  📍 Philadelphia, USA\n\nNetherlands vs Japan\n  Prediction: Japan\n  Netherlands 28.3% · Draw 32.6% · Japan 39.1%\n  🕐 1:00pm PT / 3:00pm CT / 4:00pm ET / 1:30am IST (+1d)\n  📍 Dallas (Arlington), USA\n\nSweden vs Tunisia\n  Prediction: Sweden\n  Sweden 42.6% · Draw 25.8% · Tunisia 31.6%\n  🕐 7:00pm PT / 9:00pm CT / 10:00pm ET / 7:30am IST (+1d)\n  📍 Monterrey (Guadalupe), Mexico",
+          "body": "🏆 FIFA World Cup 2026\nSunday, June 14\n\nMatchday Brief\n\nGermany vs Curaçao\n  Prediction: Germany\n  Germany 77.8% · Draw 6.3% · Curaçao 15.9%\n  🕐 10:00am PT / 12:00pm CT / 1:00pm ET / 10:30pm IST\n  📍 Houston, USA\n\nNetherlands vs Japan\n  Prediction: Japan\n  Netherlands 28.3% · Draw 32.6% · Japan 39.1%\n  🕐 1:00pm PT / 3:00pm CT / 4:00pm ET / 1:30am IST (+1d)\n  📍 Dallas (Arlington), USA\n\nIvory Coast vs Ecuador\n  Prediction: Ecuador\n  Ivory Coast 19.1% · Draw 29.5% · Ecuador 51.4%\n  🕐 4:00pm PT / 6:00pm CT / 7:00pm ET / 4:30am IST (+1d)\n  📍 Philadelphia, USA\n\nSweden vs Tunisia\n  Prediction: Sweden\n  Sweden 42.6% · Draw 25.8% · Tunisia 31.6%\n  🕐 7:00pm PT / 9:00pm CT / 10:00pm ET / 7:30am IST (+1d)\n  📍 Monterrey (Guadalupe), Mexico",
           "sent": true,
-          "hash": "e9300f7ae75abd40",
-          "generated_at": "2026-06-14T14:08:13.539126-07:00",
-          "kickoff_utc": "2026-06-14T17:00:00Z",
-          "key": "mb-2026-06-14"
+          "hash": "80de8c7d2753ba04",
+          "key": "mb-2026-06-14",
+          "generated_at": "2026-06-16T11:04:33.769350-07:00",
+          "kickoff_utc": "2026-06-14T17:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nSunday, June 14\n\nHalf-time:\nGermany 3 - 1 Curaçao\nHouston, USA\n  ⚽ 6' Felix Nmecha (Germany)\n  ⚽ 21' Livano Comenencia (Curaçao)\n  ⚽ 38' Nico Schlotterbeck (Germany)\n  ⚽ 45'+5' Kai Havertz (Germany, pen)\nPrediction: Germany",
+          "sent": true,
+          "hash": "3896b268eab9f127",
+          "key": "ht-2026-06-14-25",
+          "generated_at": "2026-06-16T11:04:33.769362-07:00",
+          "kickoff_utc": "2026-06-14T17:00:00Z"
         },
         {
           "type": "post_match",
-          "body": "Full time\nGermany 7-1 Curaçao  —  Houston, USA\nResult: Germany win  ·  Prediction: Germany  ✓ (100%)\nOverall prediction: 4/9 (44.4%)\n  ⚽ 6' Felix Nmecha (Germany)\n  ⚽ 21' Livano Comenencia (Curaçao)\n  ⚽ 38' Nico Schlotterbeck (Germany)\n  ⚽ 45'+5' Kai Havertz (Germany, pen)\n  ⚽ 47' Jamal Musiala (Germany)\n  ⚽ 68' Nathaniel Brown (Germany)\n  ⚽ 78' Deniz Undav (Germany)\n  ⚽ 88' Kai Havertz (Germany)",
+          "body": "🏆 FIFA World Cup 2026\nSunday, June 14\n\nFull time:\nGermany 7 - 1 Curaçao\nHouston, USA\n  ⚽ 6' Felix Nmecha (Germany)\n  ⚽ 21' Livano Comenencia (Curaçao)\n  ⚽ 38' Nico Schlotterbeck (Germany)\n  ⚽ 45'+5' Kai Havertz (Germany, pen)\n  ⚽ 47' Jamal Musiala (Germany)\n  ⚽ 68' Nathaniel Brown (Germany)\n  ⚽ 78' Deniz Undav (Germany)\n  ⚽ 88' Kai Havertz (Germany)\nOverall prediction: 4/9 (44.4%)\nPrediction ✓: Germany",
           "sent": true,
-          "hash": "24572bf9915aadee",
-          "generated_at": "2026-06-14T14:08:13.540073-07:00",
-          "kickoff_utc": "2026-06-14T17:00:00Z",
-          "key": "pm-2026-06-14-25"
+          "hash": "e4480b6672661dc7",
+          "key": "pm-2026-06-14-25",
+          "generated_at": "2026-06-16T11:04:33.769518-07:00",
+          "kickoff_utc": "2026-06-14T17:00:00Z"
         },
         {
           "type": "half_time",
-          "body": "Half-time: Germany 3-1 Curaçao\nHouston, USA\n  ⚽ 6' Felix Nmecha (Germany)\n  ⚽ 21' Livano Comenencia (Curaçao)\n  ⚽ 38' Nico Schlotterbeck (Germany)\n  ⚽ 45'+5' Kai Havertz (Germany, pen)\nPrediction: Germany",
+          "body": "🏆 FIFA World Cup 2026\nSunday, June 14\n\nHalf-time:\nNetherlands 0 - 0 Japan\nDallas (Arlington), USA\nPrediction: Japan",
           "sent": true,
-          "hash": "62fbb6eda582485a",
-          "generated_at": "2026-06-14T10:56:00.006811-07:00",
-          "kickoff_utc": "2026-06-14T17:00:00Z",
-          "key": "ht-2026-06-14-25"
-        },
-        {
-          "type": "half_time",
-          "body": "Half-time: Netherlands 0-0 Japan\nDallas (Arlington), USA\nPrediction: Japan",
-          "sent": true,
-          "hash": "cca043f14440b296",
-          "generated_at": "2026-06-14T13:52:15.706348-07:00",
-          "kickoff_utc": "2026-06-14T20:00:00Z",
-          "key": "ht-2026-06-14-31"
+          "hash": "1688cac952a6f80a",
+          "key": "ht-2026-06-14-31",
+          "generated_at": "2026-06-16T11:04:33.769527-07:00",
+          "kickoff_utc": "2026-06-14T20:00:00Z"
         },
         {
           "type": "post_match",
-          "body": "Full time\nNetherlands 2-2 Japan  —  Dallas (Arlington), USA\nResult: Draw  ·  Prediction: Japan  ✗ (0%)\nOverall prediction: 4/10 (40.0%)\n  ⚽ 51' Virgil van Dijk (Netherlands)\n  ⚽ 57' Keito Nakamura (Japan)\n  ⚽ 64' Crysencio Summerville (Netherlands)\n  ⚽ 89' Daichi Kamada (Japan)",
+          "body": "🏆 FIFA World Cup 2026\nSunday, June 14\n\nFull time:\nNetherlands 2 - 2 Japan\nDallas (Arlington), USA\n  ⚽ 51' Virgil van Dijk (Netherlands)\n  ⚽ 57' Keito Nakamura (Japan)\n  ⚽ 64' Crysencio Summerville (Netherlands)\n  ⚽ 89' Daichi Kamada (Japan)\nOverall prediction: 4/10 (40.0%)\nPrediction ✗: Japan",
           "sent": true,
-          "hash": "1ff0cac6b48cd74f",
-          "generated_at": "2026-06-14T16:02:28.335398-07:00",
-          "kickoff_utc": "2026-06-14T20:00:00Z",
-          "key": "pm-2026-06-14-31"
+          "hash": "1c752f9c07375c96",
+          "key": "pm-2026-06-14-31",
+          "generated_at": "2026-06-16T11:04:33.769684-07:00",
+          "kickoff_utc": "2026-06-14T20:00:00Z"
         },
         {
           "type": "half_time",
-          "body": "Half-time: Ivory Coast 0-0 Ecuador\nPhiladelphia, USA\nPrediction: Ecuador",
+          "body": "🏆 FIFA World Cup 2026\nSunday, June 14\n\nHalf-time:\nIvory Coast 0 - 0 Ecuador\nPhiladelphia, USA\nPrediction: Ecuador",
           "sent": true,
-          "hash": "6b25e82eb696b406",
+          "hash": "e5a8df17f1f7bbc9",
           "key": "ht-2026-06-14-26",
-          "generated_at": "2026-06-14T16:55:31.260219-07:00",
+          "generated_at": "2026-06-16T11:04:33.769692-07:00",
           "kickoff_utc": "2026-06-14T23:00:00Z"
         },
         {
           "type": "post_match",
-          "body": "Full time\nIvory Coast 1-0 Ecuador  —  Philadelphia, USA\nResult: Ivory Coast win  ·  Prediction: Ecuador  ✗ (0%)\nOverall prediction: 4/11 (36.4%)\n  ⚽ 90' Amad Diallo (Ivory Coast)",
+          "body": "🏆 FIFA World Cup 2026\nSunday, June 14\n\nFull time:\nIvory Coast 1 - 0 Ecuador\nPhiladelphia, USA\n  ⚽ 90' Amad Diallo (Ivory Coast)\nOverall prediction: 4/11 (36.4%)\nPrediction ✗: Ecuador",
           "sent": true,
-          "hash": "abfc0825be3390d7",
+          "hash": "e571f42c2cb3316c",
           "key": "pm-2026-06-14-26",
-          "generated_at": "2026-06-14T18:04:54.303581-07:00",
+          "generated_at": "2026-06-16T11:04:33.769863-07:00",
           "kickoff_utc": "2026-06-14T23:00:00Z"
         },
         {
           "type": "half_time",
-          "body": "Half-time: Sweden 2-1 Tunisia\nMonterrey (Guadalupe), Mexico\n  ⚽ 7' Yasin Ayari (Sweden)\n  ⚽ 30' Alexander Isak (Sweden)\n  ⚽ 43' Omar Rekik (Tunisia)\nPrediction: Sweden",
+          "body": "🏆 FIFA World Cup 2026\nSunday, June 14\n\nHalf-time:\nSweden 2 - 1 Tunisia\nMonterrey (Guadalupe), Mexico\n  ⚽ 7' Yasin Ayari (Sweden)\n  ⚽ 30' Alexander Isak (Sweden)\n  ⚽ 43' Omar Rekik (Tunisia)\nPrediction: Sweden",
           "sent": true,
-          "hash": "ca85e285b9231f56",
+          "hash": "4416da5177235cba",
           "key": "ht-2026-06-14-32",
-          "generated_at": "2026-06-14T19:52:15.139874-07:00",
+          "generated_at": "2026-06-16T11:04:33.769873-07:00",
           "kickoff_utc": "2026-06-15T02:00:00Z"
         },
         {
           "type": "post_match",
-          "body": "Full time\nSweden 5-1 Tunisia  —  Monterrey (Guadalupe), Mexico\nResult: Sweden win  ·  Prediction: Sweden  ✓ (100%)\nOverall prediction: 5/12 (41.7%)\n  ⚽ 7' Yasin Ayari (Sweden)\n  ⚽ 30' Alexander Isak (Sweden)\n  ⚽ 43' Omar Rekik (Tunisia)\n  ⚽ 59' Viktor Gyökeres (Sweden)\n  ⚽ 84' Mattias Svanberg (Sweden)\n  ⚽ 90'+6' Yasin Ayari (Sweden)",
+          "body": "🏆 FIFA World Cup 2026\nSunday, June 14\n\nFull time:\nSweden 5 - 1 Tunisia\nMonterrey (Guadalupe), Mexico\n  ⚽ 7' Yasin Ayari (Sweden)\n  ⚽ 30' Alexander Isak (Sweden)\n  ⚽ 43' Omar Rekik (Tunisia)\n  ⚽ 59' Viktor Gyökeres (Sweden)\n  ⚽ 84' Mattias Svanberg (Sweden)\n  ⚽ 90'+6' Yasin Ayari (Sweden)\nOverall prediction: 5/12 (41.7%)\nPrediction ✓: Sweden",
           "sent": true,
-          "hash": "b9892a0e81141489",
+          "hash": "b9426c2f3c73d102",
           "key": "pm-2026-06-14-32",
-          "generated_at": "2026-06-14T21:01:17.148816-07:00",
+          "generated_at": "2026-06-16T11:04:33.770058-07:00",
           "kickoff_utc": "2026-06-15T02:00:00Z"
         },
         {
           "type": "daily_recap",
-          "body": "🏆 World Cup 2026 — Daily Recap\nSunday, June 14\n\nResults:\n  Germany 7-1 Curaçao  ✓  (Prediction: Germany)  —  Houston, USA\n    ⚽ 6' Felix Nmecha (Germany)\n    ⚽ 21' Livano Comenencia (Curaçao)\n    ⚽ 38' Nico Schlotterbeck (Germany)\n    ⚽ 45'+5' Kai Havertz (Germany, pen)\n    ⚽ 47' Jamal Musiala (Germany)\n    ⚽ 68' Nathaniel Brown (Germany)\n    ⚽ 78' Deniz Undav (Germany)\n    ⚽ 88' Kai Havertz (Germany)\n  Ivory Coast 1-0 Ecuador  ✗  (Prediction: Ecuador)  —  Philadelphia, USA\n    ⚽ 90' Amad Diallo (Ivory Coast)\n  Netherlands 2-2 Japan  ✗  (Prediction: Japan)  —  Dallas (Arlington), USA\n    ⚽ 51' Virgil van Dijk (Netherlands)\n    ⚽ 57' Keito Nakamura (Japan)\n    ⚽ 64' Crysencio Summerville (Netherlands)\n    ⚽ 89' Daichi Kamada (Japan)\n  Sweden 5-1 Tunisia  ✓  (Prediction: Sweden)  —  Monterrey (Guadalupe), Mexico\n    ⚽ 7' Yasin Ayari (Sweden)\n    ⚽ 30' Alexander Isak (Sweden)\n    ⚽ 43' Omar Rekik (Tunisia)\n    ⚽ 59' Viktor Gyökeres (Sweden)\n    ⚽ 84' Mattias Svanberg (Sweden)\n    ⚽ 90'+6' Yasin Ayari (Sweden)\n\nOverall prediction — today 2/4 (50.0%)  ·  overall 5/12 (41.7%)\n\nGroup Standings:\n  Group A\n  Team                  P  Pts    GD   GF   GA\n  Mexico                1    3    +2    2    0\n  South Korea           1    3    +1    2    1\n  Czech Republic        1    0    -1    1    2\n  South Africa          1    0    -2    0    2\n\n  Group B\n  Team                  P  Pts    GD   GF   GA\n  Bosnia & Herzegovina  1    1    +0    1    1\n  Canada                1    1    +0    1    1\n  Qatar                 1    1    +0    1    1\n  Switzerland           1    1    +0    1    1\n\n  Group C\n  Team                  P  Pts    GD   GF   GA\n  Scotland              1    3    +1    1    0\n  Brazil                1    1    +0    1    1\n  Morocco               1    1    +0    1    1\n  Haiti                 1    0    -1    0    1\n\n  Group D\n  Team                  P  Pts    GD   GF   GA\n  USA                   1    3    +3    4    1\n  Australia             1    3    +2    2    0\n  Turkey                1    0    -2    0    2\n  Paraguay              1    0    -3    1    4\n\n  Group E\n  Team                  P  Pts    GD   GF   GA\n  Germany               1    3    +6    7    1\n  Ivory Coast           1    3    +1    1    0\n  Ecuador               1    0    -1    0    1\n  Curaçao               1    0    -6    1    7\n\n  Group F\n  Team                  P  Pts    GD   GF   GA\n  Sweden                1    3    +4    5    1\n  Japan                 1    1    +0    2    2\n  Netherlands           1    1    +0    2    2\n  Tunisia               1    0    -4    1    5\n\n  Group G\n  Team                  P  Pts    GD   GF   GA\n  Belgium               0    0    +0    0    0\n  Egypt                 0    0    +0    0    0\n  Iran                  0    0    +0    0    0\n  New Zealand           0    0    +0    0    0\n\n  Group H\n  Team                  P  Pts    GD   GF   GA\n  Cape Verde            0    0    +0    0    0\n  Saudi Arabia          0    0    +0    0    0\n  Spain                 0    0    +0    0    0\n  Uruguay               0    0    +0    0    0\n\n  Group I\n  Team                  P  Pts    GD   GF   GA\n  France                0    0    +0    0    0\n  Iraq                  0    0    +0    0    0\n  Norway                0    0    +0    0    0\n  Senegal               0    0    +0    0    0\n\n  Group J\n  Team                  P  Pts    GD   GF   GA\n  Algeria               0    0    +0    0    0\n  Argentina             0    0    +0    0    0\n  Austria               0    0    +0    0    0\n  Jordan                0    0    +0    0    0\n\n  Group K\n  Team                  P  Pts    GD   GF   GA\n  Colombia              0    0    +0    0    0\n  DR Congo              0    0    +0    0    0\n  Portugal              0    0    +0    0    0\n  Uzbekistan            0    0    +0    0    0\n\n  Group L\n  Team                  P  Pts    GD   GF   GA\n  Croatia               0    0    +0    0    0\n  England               0    0    +0    0    0\n  Ghana                 0    0    +0    0    0\n  Panama                0    0    +0    0    0",
+          "body": "🏆 FIFA World Cup 2026\nSunday, June 14\n\nDaily Recap\n\nResults:\n  Germany 7 - 1 Curaçao\n  Houston, USA\n    ⚽ 6' Felix Nmecha (Germany)\n    ⚽ 21' Livano Comenencia (Curaçao)\n    ⚽ 38' Nico Schlotterbeck (Germany)\n    ⚽ 45'+5' Kai Havertz (Germany, pen)\n    ⚽ 47' Jamal Musiala (Germany)\n    ⚽ 68' Nathaniel Brown (Germany)\n    ⚽ 78' Deniz Undav (Germany)\n    ⚽ 88' Kai Havertz (Germany)\n  Prediction ✓: Germany\n\n  Netherlands 2 - 2 Japan\n  Dallas (Arlington), USA\n    ⚽ 51' Virgil van Dijk (Netherlands)\n    ⚽ 57' Keito Nakamura (Japan)\n    ⚽ 64' Crysencio Summerville (Netherlands)\n    ⚽ 89' Daichi Kamada (Japan)\n  Prediction ✗: Japan\n\n  Ivory Coast 1 - 0 Ecuador\n  Philadelphia, USA\n    ⚽ 90' Amad Diallo (Ivory Coast)\n  Prediction ✗: Ecuador\n\n  Sweden 5 - 1 Tunisia\n  Monterrey (Guadalupe), Mexico\n    ⚽ 7' Yasin Ayari (Sweden)\n    ⚽ 30' Alexander Isak (Sweden)\n    ⚽ 43' Omar Rekik (Tunisia)\n    ⚽ 59' Viktor Gyökeres (Sweden)\n    ⚽ 84' Mattias Svanberg (Sweden)\n    ⚽ 90'+6' Yasin Ayari (Sweden)\n  Prediction ✓: Sweden\n\nOverall prediction — today 2/4 (50.0%)  ·  overall 5/12 (41.7%)\n\nGroup Standings:\n\nP Played · Pts Points · GD Goal Diff · GF Goals For · GA Goals Against\n\n<code>Group A\nTeam            P Pts  GD  GF  GA\nMexico          1   3  +2   2   0\nSouth Korea     1   3  +1   2   1\nCzech Republic  1   0  -1   1   2\nSouth Africa    1   0  -2   0   2\n\nGroup B\nTeam            P Pts  GD  GF  GA\nBosnia & Herzeg 1   1  +0   1   1\nCanada          1   1  +0   1   1\nQatar           1   1  +0   1   1\nSwitzerland     1   1  +0   1   1\n\nGroup C\nTeam            P Pts  GD  GF  GA\nScotland        1   3  +1   1   0\nBrazil          1   1  +0   1   1\nMorocco         1   1  +0   1   1\nHaiti           1   0  -1   0   1\n\nGroup D\nTeam            P Pts  GD  GF  GA\nUSA             1   3  +3   4   1\nAustralia       1   3  +2   2   0\nTurkey          1   0  -2   0   2\nParaguay        1   0  -3   1   4\n\nGroup E\nTeam            P Pts  GD  GF  GA\nGermany         1   3  +6   7   1\nIvory Coast     1   3  +1   1   0\nEcuador         1   0  -1   0   1\nCuraçao         1   0  -6   1   7\n\nGroup F\nTeam            P Pts  GD  GF  GA\nSweden          1   3  +4   5   1\nJapan           1   1  +0   2   2\nNetherlands     1   1  +0   2   2\nTunisia         1   0  -4   1   5\n\nGroup G\nTeam            P Pts  GD  GF  GA\nIran            1   1  +0   2   2\nNew Zealand     1   1  +0   2   2\nBelgium         1   1  +0   1   1\nEgypt           1   1  +0   1   1\n\nGroup H\nTeam            P Pts  GD  GF  GA\nSaudi Arabia    1   1  +0   1   1\nUruguay         1   1  +0   1   1\nCape Verde      1   1  +0   0   0\nSpain           1   1  +0   0   0\n\nGroup I\nTeam            P Pts  GD  GF  GA\nFrance          0   0  +0   0   0\nIraq            0   0  +0   0   0\nNorway          0   0  +0   0   0\nSenegal         0   0  +0   0   0\n\nGroup J\nTeam            P Pts  GD  GF  GA\nAlgeria         0   0  +0   0   0\nArgentina       0   0  +0   0   0\nAustria         0   0  +0   0   0\nJordan          0   0  +0   0   0\n\nGroup K\nTeam            P Pts  GD  GF  GA\nColombia        0   0  +0   0   0\nDR Congo        0   0  +0   0   0\nPortugal        0   0  +0   0   0\nUzbekistan      0   0  +0   0   0\n\nGroup L\nTeam            P Pts  GD  GF  GA\nCroatia         0   0  +0   0   0\nEngland         0   0  +0   0   0\nGhana           0   0  +0   0   0\nPanama          0   0  +0   0   0</code>",
           "sent": true,
-          "hash": "9522ff4206b942ba",
+          "hash": "00be4769bfe892b7",
           "key": "dr-2026-06-14",
-          "generated_at": "2026-06-14T21:01:17.149840-07:00",
+          "generated_at": "2026-06-16T11:04:33.770353-07:00",
           "kickoff_utc": "2026-06-14T17:00:00Z"
         }
       ]
@@ -277,92 +277,92 @@
       "messages": [
         {
           "type": "morning_brief",
-          "body": "🏆 World Cup 2026 — Matchday Brief\nMonday, June 15\n\nBelgium vs Egypt\n  Prediction: Belgium\n  Belgium 48.1% · Draw 30.0% · Egypt 21.9%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 Seattle, USA\n\nIran vs New Zealand\n  Prediction: Iran\n  Iran 69.5% · Draw 22.9% · New Zealand 7.6%\n  🕐 6:00pm PT / 8:00pm CT / 9:00pm ET / 6:30am IST (+1d)\n  📍 Los Angeles (Inglewood), USA\n\nSpain vs Cape Verde\n  Prediction: Spain\n  Spain 91.7% · Draw 6.3% · Cape Verde 2.0%\n  🕐 9:00am PT / 11:00am CT / 12:00pm ET / 9:30pm IST\n  📍 Atlanta, USA\n\nSaudi Arabia vs Uruguay\n  Prediction: Uruguay\n  Saudi Arabia 8.2% · Draw 15.8% · Uruguay 76.0%\n  🕐 3:00pm PT / 5:00pm CT / 6:00pm ET / 3:30am IST (+1d)\n  📍 Miami (Miami Gardens), USA",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 15\n\nMatchday Brief\n\nSpain vs Cape Verde\n  Prediction: Spain\n  Spain 91.7% · Draw 6.3% · Cape Verde 2.0%\n  🕐 9:00am PT / 11:00am CT / 12:00pm ET / 9:30pm IST\n  📍 Atlanta, USA\n\nBelgium vs Egypt\n  Prediction: Belgium\n  Belgium 48.1% · Draw 30.0% · Egypt 21.9%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 Seattle, USA\n\nSaudi Arabia vs Uruguay\n  Prediction: Uruguay\n  Saudi Arabia 8.2% · Draw 15.8% · Uruguay 76.0%\n  🕐 3:00pm PT / 5:00pm CT / 6:00pm ET / 3:30am IST (+1d)\n  📍 Miami (Miami Gardens), USA\n\nIran vs New Zealand\n  Prediction: Iran\n  Iran 69.5% · Draw 22.9% · New Zealand 7.6%\n  🕐 6:00pm PT / 8:00pm CT / 9:00pm ET / 6:30am IST (+1d)\n  📍 Los Angeles (Inglewood), USA",
           "sent": true,
-          "hash": "846f2736ea61aa1d",
+          "hash": "d7dde931dd51aa00",
           "key": "mb-2026-06-15",
-          "generated_at": "2026-06-15T04:27:01.818015-07:00",
+          "generated_at": "2026-06-16T11:04:33.770489-07:00",
           "kickoff_utc": "2026-06-15T16:00:00Z"
         },
         {
           "type": "half_time",
-          "body": "Half-time: Spain 0-0 Cape Verde\nAtlanta, USA\nPrediction: Spain",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 15\n\nHalf-time:\nSpain 0 - 0 Cape Verde\nAtlanta, USA\nPrediction: Spain",
           "sent": true,
-          "hash": "e0d7607613c7b92e",
+          "hash": "ea1161dbff79df68",
           "key": "ht-2026-06-15-43",
-          "generated_at": "2026-06-15T09:52:25.376228-07:00",
+          "generated_at": "2026-06-16T11:04:33.770498-07:00",
           "kickoff_utc": "2026-06-15T16:00:00Z"
         },
         {
           "type": "post_match",
-          "body": "Full time\nSpain 0-0 Cape Verde  —  Atlanta, USA\nResult: Draw  ·  Prediction: Spain  ✗ (0%)\nOverall prediction: 5/13 (38.5%)",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 15\n\nFull time:\nSpain 0 - 0 Cape Verde\nAtlanta, USA\nOverall prediction: 5/13 (38.5%)\nPrediction ✗: Spain",
           "sent": true,
-          "hash": "40de267fc1f15758",
+          "hash": "b04e7a6017cfdbce",
           "key": "pm-2026-06-15-43",
-          "generated_at": "2026-06-15T10:59:17.104216-07:00",
+          "generated_at": "2026-06-16T11:04:33.770696-07:00",
           "kickoff_utc": "2026-06-15T16:00:00Z"
         },
         {
           "type": "half_time",
-          "body": "Half-time: Belgium 0-1 Egypt\nSeattle, USA\n  ⚽ 19' Emam Ashour (Egypt)\nPrediction: Belgium",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 15\n\nHalf-time:\nBelgium 0 - 1 Egypt\nSeattle, USA\n  ⚽ 19' Emam Ashour (Egypt)\nPrediction: Belgium",
           "sent": true,
-          "hash": "c75bfba21dd3eaf3",
+          "hash": "65c6371a3785c310",
           "key": "ht-2026-06-15-37",
-          "generated_at": "2026-06-15T12:53:47.071357-07:00",
+          "generated_at": "2026-06-16T11:04:33.770705-07:00",
           "kickoff_utc": "2026-06-15T19:00:00Z"
         },
         {
           "type": "post_match",
-          "body": "Full time\nBelgium 1-1 Egypt  —  Seattle, USA\nResult: Draw  ·  Prediction: Belgium  ✗ (0%)\nOverall prediction: 5/14 (35.7%)\n  ⚽ 19' Emam Ashour (Egypt)\n  ⚽ 66' Mohamed Hany (Belgium, OG)",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 15\n\nFull time:\nBelgium 1 - 1 Egypt\nSeattle, USA\n  ⚽ 20' Emam Ashour (Egypt)\n  ⚽ 66' Mohamed Hany (Belgium, OG)\nOverall prediction: 5/14 (35.7%)\nPrediction ✗: Belgium",
           "sent": true,
-          "hash": "1272fbc743a6f0ae",
+          "hash": "092560268b8ade8d",
           "key": "pm-2026-06-15-37",
-          "generated_at": "2026-06-15T14:00:17.054357-07:00",
+          "generated_at": "2026-06-16T11:04:33.770914-07:00",
           "kickoff_utc": "2026-06-15T19:00:00Z"
         },
         {
           "type": "half_time",
-          "body": "Half-time: Saudi Arabia 1-0 Uruguay\nMiami (Miami Gardens), USA\n  ⚽ 41' Abdulelah Al-Amri (Saudi Arabia)\nPrediction: Uruguay",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 15\n\nHalf-time:\nSaudi Arabia 1 - 0 Uruguay\nMiami (Miami Gardens), USA\n  ⚽ 41' Abdulelah Al-Amri (Saudi Arabia)\nPrediction: Uruguay",
           "sent": true,
-          "hash": "266c70f9eac63787",
+          "hash": "d2f2b9a4436f0598",
           "key": "ht-2026-06-15-44",
-          "generated_at": "2026-06-15T15:55:46.059919-07:00",
+          "generated_at": "2026-06-16T11:04:33.770922-07:00",
           "kickoff_utc": "2026-06-15T22:00:00Z"
         },
         {
           "type": "post_match",
-          "body": "Full time\nSaudi Arabia 1-1 Uruguay  —  Miami (Miami Gardens), USA\nResult: Draw  ·  Prediction: Uruguay  ✗ (0%)\nOverall prediction: 5/15 (33.3%)\n  ⚽ 41' Abdulelah Al-Amri (Saudi Arabia)\n  ⚽ 80' Maxi Araújo (Uruguay)",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 15\n\nFull time:\nSaudi Arabia 1 - 1 Uruguay\nMiami (Miami Gardens), USA\n  ⚽ 41' Abdulelah Al-Amri (Saudi Arabia)\n  ⚽ 80' Maxi Araújo (Uruguay)\nOverall prediction: 5/15 (33.3%)\nPrediction ✗: Uruguay",
           "sent": true,
-          "hash": "c56c9c1065376568",
+          "hash": "c07f3f1535def1cc",
           "key": "pm-2026-06-15-44",
-          "generated_at": "2026-06-15T17:06:04.690594-07:00",
+          "generated_at": "2026-06-16T11:04:33.771147-07:00",
           "kickoff_utc": "2026-06-15T22:00:00Z"
         },
         {
           "type": "half_time",
-          "body": "Half-time: Iran 1-1 New Zealand\nLos Angeles (Inglewood), USA\n  ⚽ 7' Elijah Just (New Zealand)\n  ⚽ 32' Ramin Rezaeian (Iran)\nPrediction: Iran",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 15\n\nHalf-time:\nIran 1 - 1 New Zealand\nLos Angeles (Inglewood), USA\n  ⚽ 7' Elijah Just (New Zealand)\n  ⚽ 32' Ramin Rezaeian (Iran)\nPrediction: Iran",
           "sent": true,
-          "hash": "727e392c2b3c8906",
+          "hash": "d5ffc5cca06913cf",
           "key": "ht-2026-06-15-38",
-          "generated_at": "2026-06-15T18:56:42.020709-07:00",
+          "generated_at": "2026-06-16T11:04:33.771156-07:00",
           "kickoff_utc": "2026-06-16T01:00:00Z"
         },
         {
           "type": "post_match",
-          "body": "Full time\nIran 2-2 New Zealand  —  Los Angeles (Inglewood), USA\nResult: Draw  ·  Prediction: Iran  ✗ (0%)\nOverall prediction: 5/16 (31.2%)\n  ⚽ 7' Elijah Just (New Zealand)\n  ⚽ 32' Ramin Rezaeian (Iran)\n  ⚽ 54' Elijah Just (New Zealand)\n  ⚽ 64' Mohammad Mohebbi (Iran)",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 15\n\nFull time:\nIran 2 - 2 New Zealand\nLos Angeles (Inglewood), USA\n  ⚽ 7' Elijah Just (New Zealand)\n  ⚽ 32' Ramin Rezaeian (Iran)\n  ⚽ 54' Elijah Just (New Zealand)\n  ⚽ 64' Mohammad Mohebbi (Iran)\nOverall prediction: 5/16 (31.2%)\nPrediction ✗: Iran",
           "sent": true,
-          "hash": "f17c0fa60a967e89",
+          "hash": "9457fba66b911a79",
           "key": "pm-2026-06-15-38",
-          "generated_at": "2026-06-15T20:04:38.794667-07:00",
+          "generated_at": "2026-06-16T11:04:33.771393-07:00",
           "kickoff_utc": "2026-06-16T01:00:00Z"
         },
         {
           "type": "daily_recap",
-          "body": "🏆 World Cup 2026 — Daily Recap\nMonday, June 15\n\nResults:\n  Belgium 1-1 Egypt  ✗  (Prediction: Belgium)  —  Seattle, USA\n    ⚽ 20' Emam Ashour (Egypt)\n    ⚽ 66' Mohamed Hany (Belgium, OG)\n  Iran 2-2 New Zealand  ✗  (Prediction: Iran)  —  Los Angeles (Inglewood), USA\n    ⚽ 7' Elijah Just (New Zealand)\n    ⚽ 32' Ramin Rezaeian (Iran)\n    ⚽ 54' Elijah Just (New Zealand)\n    ⚽ 64' Mohammad Mohebbi (Iran)\n  Spain 0-0 Cape Verde  ✗  (Prediction: Spain)  —  Atlanta, USA\n  Saudi Arabia 1-1 Uruguay  ✗  (Prediction: Uruguay)  —  Miami (Miami Gardens), USA\n    ⚽ 41' Abdulelah Al-Amri (Saudi Arabia)\n    ⚽ 80' Maxi Araújo (Uruguay)\n\nOverall prediction — today 0/4 (0.0%)  ·  overall 5/16 (31.2%)\n\nGroup Standings:\n  Group A\n  Team                  P  Pts    GD   GF   GA\n  Mexico                1    3    +2    2    0\n  South Korea           1    3    +1    2    1\n  Czech Republic        1    0    -1    1    2\n  South Africa          1    0    -2    0    2\n\n  Group B\n  Team                  P  Pts    GD   GF   GA\n  Bosnia & Herzegovina  1    1    +0    1    1\n  Canada                1    1    +0    1    1\n  Qatar                 1    1    +0    1    1\n  Switzerland           1    1    +0    1    1\n\n  Group C\n  Team                  P  Pts    GD   GF   GA\n  Scotland              1    3    +1    1    0\n  Brazil                1    1    +0    1    1\n  Morocco               1    1    +0    1    1\n  Haiti                 1    0    -1    0    1\n\n  Group D\n  Team                  P  Pts    GD   GF   GA\n  USA                   1    3    +3    4    1\n  Australia             1    3    +2    2    0\n  Turkey                1    0    -2    0    2\n  Paraguay              1    0    -3    1    4\n\n  Group E\n  Team                  P  Pts    GD   GF   GA\n  Germany               1    3    +6    7    1\n  Ivory Coast           1    3    +1    1    0\n  Ecuador               1    0    -1    0    1\n  Curaçao               1    0    -6    1    7\n\n  Group F\n  Team                  P  Pts    GD   GF   GA\n  Sweden                1    3    +4    5    1\n  Japan                 1    1    +0    2    2\n  Netherlands           1    1    +0    2    2\n  Tunisia               1    0    -4    1    5\n\n  Group G\n  Team                  P  Pts    GD   GF   GA\n  Iran                  1    1    +0    2    2\n  New Zealand           1    1    +0    2    2\n  Belgium               1    1    +0    1    1\n  Egypt                 1    1    +0    1    1\n\n  Group H\n  Team                  P  Pts    GD   GF   GA\n  Saudi Arabia          1    1    +0    1    1\n  Uruguay               1    1    +0    1    1\n  Cape Verde            1    1    +0    0    0\n  Spain                 1    1    +0    0    0\n\n  Group I\n  Team                  P  Pts    GD   GF   GA\n  France                0    0    +0    0    0\n  Iraq                  0    0    +0    0    0\n  Norway                0    0    +0    0    0\n  Senegal               0    0    +0    0    0\n\n  Group J\n  Team                  P  Pts    GD   GF   GA\n  Algeria               0    0    +0    0    0\n  Argentina             0    0    +0    0    0\n  Austria               0    0    +0    0    0\n  Jordan                0    0    +0    0    0\n\n  Group K\n  Team                  P  Pts    GD   GF   GA\n  Colombia              0    0    +0    0    0\n  DR Congo              0    0    +0    0    0\n  Portugal              0    0    +0    0    0\n  Uzbekistan            0    0    +0    0    0\n\n  Group L\n  Team                  P  Pts    GD   GF   GA\n  Croatia               0    0    +0    0    0\n  England               0    0    +0    0    0\n  Ghana                 0    0    +0    0    0\n  Panama                0    0    +0    0    0",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 15\n\nDaily Recap\n\nResults:\n  Spain 0 - 0 Cape Verde\n  Atlanta, USA\n  Prediction ✗: Spain\n\n  Belgium 1 - 1 Egypt\n  Seattle, USA\n    ⚽ 20' Emam Ashour (Egypt)\n    ⚽ 66' Mohamed Hany (Belgium, OG)\n  Prediction ✗: Belgium\n\n  Saudi Arabia 1 - 1 Uruguay\n  Miami (Miami Gardens), USA\n    ⚽ 41' Abdulelah Al-Amri (Saudi Arabia)\n    ⚽ 80' Maxi Araújo (Uruguay)\n  Prediction ✗: Uruguay\n\n  Iran 2 - 2 New Zealand\n  Los Angeles (Inglewood), USA\n    ⚽ 7' Elijah Just (New Zealand)\n    ⚽ 32' Ramin Rezaeian (Iran)\n    ⚽ 54' Elijah Just (New Zealand)\n    ⚽ 64' Mohammad Mohebbi (Iran)\n  Prediction ✗: Iran\n\nOverall prediction — today 0/4 (0.0%)  ·  overall 5/16 (31.2%)\n\nGroup Standings:\n\nP Played · Pts Points · GD Goal Diff · GF Goals For · GA Goals Against\n\n<code>Group A\nTeam            P Pts  GD  GF  GA\nMexico          1   3  +2   2   0\nSouth Korea     1   3  +1   2   1\nCzech Republic  1   0  -1   1   2\nSouth Africa    1   0  -2   0   2\n\nGroup B\nTeam            P Pts  GD  GF  GA\nBosnia & Herzeg 1   1  +0   1   1\nCanada          1   1  +0   1   1\nQatar           1   1  +0   1   1\nSwitzerland     1   1  +0   1   1\n\nGroup C\nTeam            P Pts  GD  GF  GA\nScotland        1   3  +1   1   0\nBrazil          1   1  +0   1   1\nMorocco         1   1  +0   1   1\nHaiti           1   0  -1   0   1\n\nGroup D\nTeam            P Pts  GD  GF  GA\nUSA             1   3  +3   4   1\nAustralia       1   3  +2   2   0\nTurkey          1   0  -2   0   2\nParaguay        1   0  -3   1   4\n\nGroup E\nTeam            P Pts  GD  GF  GA\nGermany         1   3  +6   7   1\nIvory Coast     1   3  +1   1   0\nEcuador         1   0  -1   0   1\nCuraçao         1   0  -6   1   7\n\nGroup F\nTeam            P Pts  GD  GF  GA\nSweden          1   3  +4   5   1\nJapan           1   1  +0   2   2\nNetherlands     1   1  +0   2   2\nTunisia         1   0  -4   1   5\n\nGroup G\nTeam            P Pts  GD  GF  GA\nIran            1   1  +0   2   2\nNew Zealand     1   1  +0   2   2\nBelgium         1   1  +0   1   1\nEgypt           1   1  +0   1   1\n\nGroup H\nTeam            P Pts  GD  GF  GA\nSaudi Arabia    1   1  +0   1   1\nUruguay         1   1  +0   1   1\nCape Verde      1   1  +0   0   0\nSpain           1   1  +0   0   0\n\nGroup I\nTeam            P Pts  GD  GF  GA\nFrance          0   0  +0   0   0\nIraq            0   0  +0   0   0\nNorway          0   0  +0   0   0\nSenegal         0   0  +0   0   0\n\nGroup J\nTeam            P Pts  GD  GF  GA\nAlgeria         0   0  +0   0   0\nArgentina       0   0  +0   0   0\nAustria         0   0  +0   0   0\nJordan          0   0  +0   0   0\n\nGroup K\nTeam            P Pts  GD  GF  GA\nColombia        0   0  +0   0   0\nDR Congo        0   0  +0   0   0\nPortugal        0   0  +0   0   0\nUzbekistan      0   0  +0   0   0\n\nGroup L\nTeam            P Pts  GD  GF  GA\nCroatia         0   0  +0   0   0\nEngland         0   0  +0   0   0\nGhana           0   0  +0   0   0\nPanama          0   0  +0   0   0</code>",
           "sent": true,
-          "hash": "08e837a984539548",
+          "hash": "9fb050eac8f3108e",
           "key": "dr-2026-06-15",
-          "generated_at": "2026-06-15T20:04:38.797243-07:00",
+          "generated_at": "2026-06-16T11:04:33.771739-07:00",
           "kickoff_utc": "2026-06-15T16:00:00Z"
         }
       ]
@@ -372,11 +372,11 @@
       "messages": [
         {
           "type": "morning_brief",
-          "body": "🏆 World Cup 2026 — Matchday Brief\nTuesday, June 16\n\nFrance vs Senegal\n  Prediction: France\n  France 62.7% · Draw 19.6% · Senegal 17.7%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 New York/New Jersey (East Rutherford), USA\n\nIraq vs Norway\n  Prediction: Norway\n  Iraq 15.8% · Draw 26.0% · Norway 58.2%\n  🕐 3:00pm PT / 5:00pm CT / 6:00pm ET / 3:30am IST (+1d)\n  📍 Boston (Foxborough), USA\n\nArgentina vs Algeria\n  Prediction: Argentina\n  Argentina 75.4% · Draw 16.5% · Algeria 8.1%\n  🕐 6:00pm PT / 8:00pm CT / 9:00pm ET / 6:30am IST (+1d)\n  📍 Kansas City, USA\n\nAustria vs Jordan\n  Prediction: Austria\n  Austria 54.8% · Draw 27.1% · Jordan 18.1%\n  🕐 9:00pm PT / 11:00pm CT / 12:00am ET (+1d) / 9:30am IST (+1d)\n  📍 San Francisco Bay Area (Santa Clara), USA",
+          "body": "🏆 FIFA World Cup 2026\nTuesday, June 16\n\nMatchday Brief\n\nFrance vs Senegal\n  Prediction: France\n  France 62.7% · Draw 19.6% · Senegal 17.7%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 New York/New Jersey (East Rutherford), USA\n\nIraq vs Norway\n  Prediction: Norway\n  Iraq 15.8% · Draw 26.0% · Norway 58.2%\n  🕐 3:00pm PT / 5:00pm CT / 6:00pm ET / 3:30am IST (+1d)\n  📍 Boston (Foxborough), USA\n\nArgentina vs Algeria\n  Prediction: Argentina\n  Argentina 75.4% · Draw 16.5% · Algeria 8.1%\n  🕐 6:00pm PT / 8:00pm CT / 9:00pm ET / 6:30am IST (+1d)\n  📍 Kansas City, USA\n\nAustria vs Jordan\n  Prediction: Austria\n  Austria 54.8% · Draw 27.1% · Jordan 18.1%\n  🕐 9:00pm PT / 11:00pm CT / 12:00am ET (+1d) / 9:30am IST (+1d)\n  📍 San Francisco Bay Area (Santa Clara), USA",
           "sent": true,
-          "hash": "df788f7d257d94e6",
+          "hash": "8da6f9c294c98d62",
           "key": "mb-2026-06-16",
-          "generated_at": "2026-06-16T03:27:23.360374-07:00",
+          "generated_at": "2026-06-16T11:04:33.771858-07:00",
           "kickoff_utc": "2026-06-16T19:00:00Z"
         }
       ]
