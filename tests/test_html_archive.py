@@ -172,7 +172,7 @@ def test_render_board_match_cards(tmp_path):
     assert '<div class="mcard">' in html
     assert ">Belgium<" in html and ">Egypt<" in html
     assert '<span class="sc">1</span>' in html        # score
-    assert "Prediction: <strong>Belgium</strong>" in html
+    assert 'Prediction: <span class="miss">Belgium</span>' in html
     assert 'class="pill no">✗' in html               # missed prediction
     assert '<div class="oddsbar"' in html            # odds bar
     assert "Ashour" in html                          # scorer
@@ -190,3 +190,20 @@ def test_render_board_scheduled_match_shows_upcoming(tmp_path):
     html = _render(state, tmp_path)
     assert 'class="pill soon">upcoming' in html
     assert '<span class="vsbig">vs</span>' in html
+
+
+def test_card_bolds_pick_only_on_correct_prediction(tmp_path):
+    base = {"id": "1", "home": "Germany", "away": "Curaçao",
+            "kickoff_utc": "2026-06-14T17:00:00Z", "venue": "Houston",
+            "stage": "group", "status": "FT",
+            "pred": {"home": 0.778, "draw": 0.063, "away": 0.159, "pick": "Germany"}}
+    hit = {**base, "hg": 7, "ag": 1, "events": [], "hit": True}
+    miss = {**base, "hg": 0, "ag": 1, "events": [], "hit": False}
+    html_hit = _render({"days": [], "bracket": {}, "groups": {},
+                        "board": [{"date": "2026-06-14", "matches": [hit]}]}, tmp_path)
+    assert '<strong class="hit">Germany</strong>' in html_hit
+    html_miss = _render({"days": [], "bracket": {}, "groups": {},
+                         "board": [{"date": "2026-06-14", "matches": [miss]}]}, tmp_path)
+    assert '<span class="miss">Germany</span>' in html_miss
+    # odds labels are sized to their segment so they centre over it
+    assert 'flex-basis:77.8%' in html_hit and 'flex-basis:15.9%' in html_hit

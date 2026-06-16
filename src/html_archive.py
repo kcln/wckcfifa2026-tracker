@@ -282,14 +282,17 @@ def _match_card(m: dict) -> str:
     bar = ""
     if pred:
         h, d, a = pred.get("home", 0), pred.get("draw", 0), pred.get("away", 0)
+        # Each label box is as wide as its bar segment and centre-aligned, so
+        # the label sits centred over its own segment.
         bar = (
             f'<div class="oddsbar" title="{home} {_pct(h)} · Draw {_pct(d)} · {away} {_pct(a)}">'
             f'<span class="seg sh" style="width:{h*100:.1f}%"></span>'
             f'<span class="seg sd" style="width:{d*100:.1f}%"></span>'
             f'<span class="seg sa" style="width:{a*100:.1f}%"></span></div>'
             f'<div class="oddskey">'
-            f'<span>{home} {_pct(h)}</span><span>Draw {_pct(d)}</span>'
-            f'<span>{away} {_pct(a)}</span></div>')
+            f'<span style="flex-basis:{h*100:.1f}%">{home} {_pct(h)}</span>'
+            f'<span style="flex-basis:{d*100:.1f}%">Draw {_pct(d)}</span>'
+            f'<span style="flex-basis:{a*100:.1f}%">{away} {_pct(a)}</span></div>')
 
     foot_bits = []
     loc = _place(str(m.get("venue", "")))
@@ -298,13 +301,17 @@ def _match_card(m: dict) -> str:
     foot = f'<div class="mc-foot">{" · ".join(foot_bits)}</div>' if foot_bits else ""
     kick = _kick_chips(str(m.get("kickoff_utc", "")))
 
+    # Bold the pick only when the prediction turned out right.
+    pick_html = (f'<strong class="hit">{pick}</strong>'
+                 if (finished and m.get("hit")) else f'<span class="miss">{pick}</span>')
+
     return (
         f'<div class="mcard">'
         f'<div class="mc-top">'
         f'<span class="tm{hcls}">{home}</span>'
         f'<span class="mid">{center}</span>'
         f'<span class="tm{acls}">{away}</span></div>'
-        f'<div class="mc-pred">Prediction: <strong>{pick}</strong> {pill}</div>'
+        f'<div class="mc-pred">Prediction: {pick_html} {pill}</div>'
         f'{bar}{_events_html(m.get("events") or [])}{kick}{foot}</div>')
 
 
@@ -467,7 +474,8 @@ SHELL = r"""<!DOCTYPE html>
     .mc-top .dash { margin: 0 5px; color: var(--ink-faint); }
     .mc-top .vsbig { font-size: 12px; color: var(--ink-faint); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; }
     .mc-pred { margin-top: 10px; font-size: 13px; color: var(--ink-soft); display: flex; align-items: center; gap: 8px; }
-    .mc-pred strong { color: var(--ink); }
+    .mc-pred .hit { color: var(--ink); font-weight: 700; }
+    .mc-pred .miss { color: var(--ink-soft); font-weight: 400; }
     .pill { font-family: 'JetBrains Mono', monospace; font-size: 10px; padding: 2px 8px; border-radius: 100px; letter-spacing: 0.04em; }
     .pill.ok { background: #DCFCE7; color: #15803D; }
     .pill.no { background: #FEE2E2; color: #B91C1C; }
@@ -476,7 +484,8 @@ SHELL = r"""<!DOCTYPE html>
     .oddsbar .seg.sh { background: var(--p-600); }
     .oddsbar .seg.sd { background: var(--ink-faint); }
     .oddsbar .seg.sa { background: var(--p-300); }
-    .oddskey { display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-faint); }
+    .oddskey { display: flex; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-faint); }
+    .oddskey span { flex-grow: 0; flex-shrink: 0; min-width: 0; text-align: center; white-space: nowrap; overflow: visible; }
     .scorers { list-style: none; margin: 11px 0 0; padding: 0; display: grid; gap: 4px; }
     .scorers li { font-size: 13px; color: var(--ink-2); }
     .scorers .ev-min { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-faint); display: inline-block; min-width: 38px; }
