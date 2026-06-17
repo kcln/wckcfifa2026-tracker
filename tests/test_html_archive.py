@@ -53,9 +53,9 @@ def test_render_hero_most_recent_from_last_result(tmp_path):
                              "home_goals": 2, "away_goals": 1,
                              "date": "2026-06-11", "venue": "Mexico City"}}
     html = _render(state, tmp_path)
-    assert 'Mexico <span class="vs">vs</span> South Africa' in html
+    assert 'Mexico 2 <span class="vs">–</span> 1 South Africa' in html
     assert "Jun 11 · Mexico City" in html
-    assert "Mexico won 2-1" in html
+    assert "Mexico won" not in html   # old separate result line killed
 
 
 def test_render_days_newest_first_only_newest_open(tmp_path):
@@ -279,9 +279,8 @@ def test_hero_features_live_match_and_autorefresh(tmp_path):
              "last_result": {"home": "Iraq", "away": "Norway", "home_goals": 1,
                              "away_goals": 4, "date": "2026-06-16"}}
     html = _render(state, tmp_path)
-    assert 'Argentina <span class="vs">vs</span> Algeria' in html   # live, not Iraq
-    assert "Argentina 1-0 Algeria" in html   # live score in hero
-    assert "Live now" in html
+    assert 'Argentina 1 <span class="vs">–</span> 0 Algeria' in html  # score in headline
+    assert "Live now" in html and "50&#x27;" in html   # clock in the kicker
     assert '<meta http-equiv="refresh"' in html
 
 

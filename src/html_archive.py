@@ -186,8 +186,11 @@ def _hero_tokens(state: dict) -> dict:
         home, away = str(featured["home"]), str(featured["away"])
         hg = int(featured.get("hg", featured.get("home_goals", 0)))
         ag = int(featured.get("ag", featured.get("away_goals", 0)))
+        # Score lives in the headline team line; the old separate result line
+        # is dropped (KC).
         tokens["__HERO_MATCH__"] = (
-            f'{escape(home)} <span class="vs">vs</span> {escape(away)}')
+            f'{escape(home)} {hg} <span class="vs">–</span> {ag} {escape(away)}')
+        tokens["__HERO_WIN__"] = ""
         meta_bits = []
         if featured.get("date"):
             meta_bits.append(_fmt_day_short(str(featured["date"])))
@@ -195,21 +198,12 @@ def _hero_tokens(state: dict) -> dict:
             meta_bits.append(str(featured["venue"]))
         tokens["__HERO_META__"] = escape(" · ".join(meta_bits)) or "World Cup 2026"
         if featured["_live"]:
-            tokens["__HERO_KICKER__"] = '<span class="livedot"></span> Live now'
-            if featured.get("status") == "HT":
-                tokens["__HERO_WIN__"] = escape(f"Half-time · {home} {hg}-{ag} {away}")
-            else:
-                clk = str(featured.get("clock", "")).strip()
-                head = f"{clk} · " if clk else ""
-                tokens["__HERO_WIN__"] = escape(f"{head}{home} {hg}-{ag} {away}")
-            # auto-refresh the page while a match is live
+            clk = ("Half-time" if featured.get("status") == "HT"
+                   else str(featured.get("clock", "")).strip())
+            suffix = f" · {escape(clk)}" if clk else ""
+            tokens["__HERO_KICKER__"] = (
+                f'<span class="livedot"></span> Live now{suffix}')
             tokens["__REFRESH__"] = '<meta http-equiv="refresh" content="90">'
-        elif hg > ag:
-            tokens["__HERO_WIN__"] = escape(f"{home} won {hg}-{ag}")
-        elif ag > hg:
-            tokens["__HERO_WIN__"] = escape(f"{away} won {ag}-{hg}")
-        else:
-            tokens["__HERO_WIN__"] = escape(f"Draw {hg}-{ag}")
 
     title_odds = (state.get("bracket") or {}).get("title_odds") or {}
     if title_odds:
