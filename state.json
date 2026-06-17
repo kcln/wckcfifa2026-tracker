@@ -1952,9 +1952,9 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 0,
-          "clock": "76'",
+          "clock": "80'",
           "ht": false,
           "events": [
             {
@@ -1968,6 +1968,12 @@
               "player": "Lionel Messi",
               "team": "Argentina",
               "minute": "60'"
+            },
+            {
+              "kind": "goal",
+              "player": "Lionel Messi",
+              "team": "Argentina",
+              "minute": "76'"
             }
           ]
         },
@@ -1997,10 +2003,10 @@
       "date": "2026-06-16",
       "venue": "Kansas City",
       "kickoff_utc": "2026-06-17T01:00:00Z",
-      "hg": 2,
+      "hg": 3,
       "ag": 0,
       "status": "LIVE",
-      "clock": "76'"
+      "clock": "80'"
     }
   ]
 }
