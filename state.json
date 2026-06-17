@@ -2218,10 +2218,10 @@
             "pick": "Croatia"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 2,
-          "clock": "45'+6'",
-          "ht": true,
+          "clock": "48'",
+          "ht": false,
           "events": [
             {
               "kind": "penalty",
@@ -2246,6 +2246,12 @@
               "player": "Petar Musa",
               "team": "Croatia",
               "minute": "45'+5'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jude Bellingham",
+              "team": "England",
+              "minute": "47'"
             }
           ]
         },
@@ -2290,10 +2296,10 @@
       "date": "2026-06-17",
       "venue": "Dallas (Arlington)",
       "kickoff_utc": "2026-06-17T20:00:00Z",
-      "hg": 2,
+      "hg": 3,
       "ag": 2,
-      "status": "HT",
-      "clock": "45'+6'",
+      "status": "LIVE",
+      "clock": "48'",
       "events": [
         {
           "kind": "penalty",
@@ -2318,6 +2324,12 @@
           "player": "Petar Musa",
           "team": "Croatia",
           "minute": "45'+5'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jude Bellingham",
+          "team": "England",
+          "minute": "47'"
         }
       ]
     }
