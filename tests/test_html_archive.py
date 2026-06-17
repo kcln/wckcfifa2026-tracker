@@ -1,4 +1,5 @@
 import json
+import re
 
 from src import html_archive as ha
 
@@ -249,35 +250,46 @@ def _sched_state():
              "status": "sched"}]}]}
 
 
-def test_schedule_section_has_status_subsections(tmp_path):
+def test_schedule_is_by_day_strip(tmp_path):
     html = _render(_sched_state(), tmp_path)
     assert '<span class="sec-h">Schedule</span>' in html
-    for sub in ("Today", "Upcoming", "Finished", "Bracket"):
-        assert f'<span class="sub-h">{sub}</span>' in html
-    # subsection order: Today < Upcoming < Finished < Bracket
-    i = [html.index(f'>{s}</span>') for s in ("Today", "Upcoming", "Finished", "Bracket")]
+    assert '<div class="daystrip">' in html
+    # one column per fixture day, in ascending date order
+    for date in ("2026-06-15", "2026-06-17", "2026-06-20", "2026-06-28"):
+        assert f'data-date="{date}"' in html
+    i = [html.index(f'data-date="{d}"')
+         for d in ("2026-06-15", "2026-06-17", "2026-06-20", "2026-06-28")]
     assert i == sorted(i)
+    # old status sub-sections are gone
+    for gone in ("Today", "Upcoming", "Finished", "Bracket"):
+        assert f'<span class="sub-h">{gone}</span>' not in html
 
 
-def test_schedule_partitions_by_status(tmp_path):
+def test_schedule_today_column_highlighted(tmp_path):
+    # current day = latest day with a live match (Jun 17, England live)
     html = _render(_sched_state(), tmp_path)
-    today = html.index('class="sub-h">Today')
-    upcoming = html.index('class="sub-h">Upcoming')
-    finished = html.index('class="sub-h">Finished')
-    bracket = html.index('class="sub-h">Bracket')
-    # England (live) sits under Today; Spain-England (sched) under Upcoming;
-    # Spain-Japan (FT) under Finished.
-    assert today < html.index("Croatia") < upcoming
-    assert finished < html.index("Japan") < bracket
+    assert '<div class="daycol is-today" data-date="2026-06-17">' in html
 
 
-def test_schedule_bracket_renders_round_columns_and_slots(tmp_path):
+def test_schedule_box_shows_score_live_minute_and_location_no_scorers(tmp_path):
     html = _render(_sched_state(), tmp_path)
-    assert '<div class="bracket">' in html
-    assert "Round of 32" in html
-    # placeholder knockout slots render as-is until groups resolve
-    assert '<span class="bnm">2A</span>' in html
-    assert '<span class="bnm">2B</span>' in html
+    # live box: score + live dot + minute, location, but no scorer list/odds bar
+    assert '<span class="dsc">3</span>' in html and '<span class="dsc">2</span>' in html
+    assert 'class="dbox-meta"><span class="livedot"></span>84' in html
+    assert 'Dallas (Arlington), USA' in html
+    # the strip carries no scorer lists, odds bars, or round-bracket columns
+    strip = re.search(r'<div class="daystrip">.*?</div></div></details>', html, re.S)
+    assert strip is not None
+    assert '<ul class="scorers">' not in strip.group(0)
+    assert '<div class="oddsbar"' not in strip.group(0)
+    assert '<div class="bracket">' not in html
+
+
+def test_schedule_box_upcoming_shows_kickoff_and_knockout_slots(tmp_path):
+    html = _render(_sched_state(), tmp_path)
+    assert "pm PT" in html                       # compact kickoff label
+    # knockout placeholder slots appear in their own day column box
+    assert "2A" in html and "2B" in html and 'data-date="2026-06-28"' in html
 
 
 def test_no_schedule_state_renders_no_section(tmp_path):
@@ -403,10 +415,10 @@ def test_render_writes_live_json_for_live_match(tmp_path):
                        "hg": 1, "ag": 0, "status": "LIVE", "clock": "50'"}]}
     _render(state, tmp_path)
     payload = json.loads((tmp_path / "live.json").read_text())
-    assert payload == {"live": True, "home": "Argentina", "away": "Algeria",
-                       "hg": 1, "ag": 0, "status": "LIVE", "clock": "50'",
-                       "date": "2026-06-16", "venue": "Boston (Foxborough)",
-                       "events": []}
+    assert payload == {"live": True, "id": "9", "home": "Argentina",
+                       "away": "Algeria", "hg": 1, "ag": 0, "status": "LIVE",
+                       "clock": "50'", "date": "2026-06-16",
+                       "venue": "Boston (Foxborough)", "events": []}
 
 
 def test_render_writes_live_json_fallback_to_last_result(tmp_path):

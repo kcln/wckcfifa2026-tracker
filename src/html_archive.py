@@ -183,6 +183,7 @@ def _live_payload(state: dict) -> dict:
         return {"live": False}
     return {
         "live":   bool(f["_live"]),
+        "id":     str(f.get("id", "")),
         "home":   str(f["home"]),
         "away":   str(f["away"]),
         "hg":     int(f.get("hg", f.get("home_goals", 0))),
@@ -439,115 +440,91 @@ def _render_board_days(state: dict) -> str:
     return "".join(blocks)
 
 
-_ROUND_LABELS = [
-    ("R32", "Round of 32"), ("R16", "Round of 16"), ("QF", "Quarter-finals"),
-    ("SF", "Semi-finals"), ("3rd", "Third place"), ("final", "Final"),
-]
+def _kick_pt_short(kickoff_utc: str) -> str:
+    """Compact single-zone kickoff label for a schedule box, e.g. '1:00pm PT'."""
+    if not kickoff_utc:
+        return ""
+    try:
+        dt = datetime.fromisoformat(kickoff_utc.replace("Z", "+00:00"))
+    except ValueError:
+        return ""
+    pt = dt.astimezone(_WHEN_ZONES[0][1])              # America/Los_Angeles
+    hour = (pt.hour % 12) or 12
+    return f'{hour}:{pt.strftime("%M")}{pt.strftime("%p").lower()} PT'
 
 
-def _cards_by_day(matches: list, *, reverse: bool) -> str:
-    """Match cards grouped under open day sub-headers; days by date asc/desc."""
-    by_date: dict = {}
-    for m in matches:
-        by_date.setdefault(m.get("date") or "", []).append(m)
-    out = []
-    for d in sorted(by_date, reverse=reverse):
-        cards = "".join(_match_card(x) for x in _order_day_matches(by_date[d]))
-        out.append(
-            f'<details class="day" data-day="{escape(d)}" open>'
-            f'<summary>{escape(_fmt_day_long(d))}</summary>'
-            f'<div class="cards">{cards}</div></details>')
-    return "".join(out)
+def _fmt_day_col(date_iso: str) -> str:
+    """Short day-column header, e.g. 'Wed Jun 17'."""
+    try:
+        return datetime.strptime(date_iso, "%Y-%m-%d").strftime("%a %b %-d")
+    except ValueError:
+        return date_iso
 
 
-def _render_bracket(matches: list) -> str:
-    """Knockout tree as round columns (R32→Final), horizontally scrollable.
-    Slots show placeholder descriptors ('2A', '1E') until groups resolve, with
-    scores once a tie is played."""
-    by_stage: dict = {}
-    for m in matches:
-        by_stage.setdefault(m.get("stage"), []).append(m)
-    cols = []
-    for key, label in _ROUND_LABELS:
-        ties = by_stage.get(key)
-        if not ties:
-            continue
-        ties = sorted(ties, key=lambda x: (x.get("kickoff_utc") or "",
-                                           str(x.get("id", ""))))
-        boxes = []
-        for m in ties:
-            st = m.get("status")
-            played = st in ("FT", "live")
-            hg, ag = int(m.get("hg") or 0), int(m.get("ag") or 0)
-            hw = " bwin" if st == "FT" and hg > ag else ""
-            aw = " bwin" if st == "FT" and ag > hg else ""
+def _sched_box(m: dict) -> str:
+    """One compact match box for the by-day Schedule strip: teams, score-or-
+    kickoff, live dot + minute while in progress, and the venue. No scorers,
+    no prediction bar (KC)."""
+    home, away = escape(str(m["home"])), escape(str(m["away"]))
+    st = m.get("status")
+    if st in ("FT", "live"):
+        hg, ag = int(m.get("hg") or 0), int(m.get("ag") or 0)
+        teams = (f'{home}<span class="dsc">{hg}</span>'
+                 f'<span class="dvs">–</span><span class="dsc">{ag}</span>{away}')
+    else:
+        teams = f'{home}<span class="dvs">vs</span>{away}'
 
-            def row(name, sc, wc):
-                s = f'<span class="bsc">{sc}</span>' if played else ""
-                return (f'<div class="bteam{wc}">'
-                        f'<span class="bnm">{escape(str(name))}</span>{s}</div>')
-
-            dot = '<span class="livedot"></span>' if st == "live" else ""
-            boxes.append(f'<div class="btie">{dot}'
-                         f'{row(m.get("home"), hg, hw)}'
-                         f'{row(m.get("away"), ag, aw)}</div>')
-        cols.append(f'<div class="bcol"><div class="bcol-head">{escape(label)}'
-                    f'</div>{"".join(boxes)}</div>')
-    return f'<div class="bracket">{"".join(cols)}</div>' if cols else ""
-
-
-def _sched_sub(title: str, body: str, *, open_: bool = False) -> str:
-    op = " open" if open_ else ""
-    return (f'<details class="subsec"{op}>'
-            f'<summary><span class="sub-h">{escape(title)}</span></summary>'
-            f'<div class="subsec-body">{body}</div></details>')
+    if st == "live":
+        clk = escape(str(m.get("clock", "")).strip() or "Live")
+        meta = f'<span class="livedot"></span>{clk}'
+    elif st == "FT":
+        meta = "Full time"
+    else:
+        meta = escape(_kick_pt_short(str(m.get("kickoff_utc", ""))))
+    loc = escape(_place(str(m.get("venue", ""))))
+    loc_html = f'<div class="dbox-loc">📍 {loc}</div>' if loc else ""
+    cls = {"FT": "done", "live": "live"}.get(st, "soon")
+    return (
+        f'<div class="dbox {cls}" data-mid="{escape(str(m.get("id", "")))}">'
+        f'<div class="dbox-teams">{teams}</div>'
+        f'<div class="dbox-meta">{meta}</div>{loc_html}</div>')
 
 
 def _render_schedule(state: dict) -> str:
-    """Full-tournament Schedule (every fixture): today/live on top, then
-    upcoming, a finished sub-section, and the scrollable knockout bracket."""
+    """Full tournament as one horizontally-scrollable strip of day columns
+    (Jun 11 → Final), every fixture incl. knockout slots. The current day is
+    highlighted and auto-centred on load (see the strip script)."""
     sched = state.get("schedule") or []
-    # The date lives on the day, not the match entry — carry it onto each match
-    # so we can group/partition by status and date below.
-    all_m = [{**m, "date": day.get("date")}
-             for day in sched for m in day.get("matches", [])]
-    if not all_m:
+    days = sorted((d for d in sched if d.get("matches")),
+                  key=lambda d: d.get("date") or "")
+    if not days:
         return ""
-    # Real teams = the 48 group entrants; knockout slots are still placeholders.
-    real = ({m["home"] for m in all_m if m.get("stage") == "group"}
-            | {m["away"] for m in all_m if m.get("stage") == "group"})
-    cards = [m for m in all_m if m.get("home") in real and m.get("away") in real]
-    ko = [m for m in all_m if m.get("stage") not in ("group", None)]
+    # Current day = latest day with a live match, else latest finished day,
+    # else the first day. (render() is clockless, so derive it from the data.)
+    def has(day, st):
+        return any(m.get("status") == st for m in day["matches"])
+    live_days = [d["date"] for d in days if has(d, "live")]
+    ft_days = [d["date"] for d in days if has(d, "FT")]
+    cur = (max(live_days) if live_days
+           else max(ft_days) if ft_days else days[0]["date"])
 
-    # "Today" = the most recent day with a live/finished match; its games (incl.
-    # later kickoffs that day) sit on top. Upcoming/finished are the other days.
-    active = max((m.get("date") or "" for m in cards
-                  if m.get("status") in ("FT", "live")), default="")
-    today = [m for m in cards if active and (m.get("date") or "") == active]
-    upcoming = [m for m in cards if m.get("status") == "sched"
-                and (m.get("date") or "") > active]
-    finished = [m for m in cards if m.get("status") == "FT"
-                and (m.get("date") or "") != active]
-
-    subs = []
-    if today:
-        body = ('<div class="cards">'
-                + "".join(_match_card(m) for m in _order_day_matches(today))
-                + '</div>')
-        subs.append(_sched_sub("Today", body, open_=True))
-    if upcoming:
-        subs.append(_sched_sub("Upcoming", _cards_by_day(upcoming, reverse=False)))
-    if finished:
-        subs.append(_sched_sub("Finished", _cards_by_day(finished, reverse=True)))
-    if ko:
-        subs.append(_sched_sub("Bracket", _render_bracket(ko), open_=True))
-    if not subs:
-        return ""
+    cols = []
+    for d in days:
+        date = d.get("date") or ""
+        today = " is-today" if date == cur else ""
+        boxes = "".join(_sched_box(m) for m in sorted(
+            d["matches"], key=lambda x: (x.get("kickoff_utc") or "",
+                                         str(x.get("id", "")))))
+        cols.append(
+            f'<div class="daycol{today}" data-date="{escape(date)}">'
+            f'<div class="daycol-head">{escape(_fmt_day_col(date))}</div>'
+            f'{boxes}</div>')
     return (
-        '<details class="section">'
+        '<details class="section" id="schedule">'
         '<summary><span class="sec-h">Schedule</span>'
         '<span class="sec-count">Full tournament</span></summary>'
-        f'<div class="sec-body">{"".join(subs)}</div></details>')
+        f'<div class="sec-body"><div class="daystrip">{"".join(cols)}</div>'
+        '</div></details>')
 
 
 def _render_matchlog(state: dict) -> str:
@@ -762,26 +739,20 @@ __REFRESH__
     .sec-tools { display: flex; gap: 8px; margin: 6px 0 14px; }
     .sec-tools button { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); background: var(--bg); border: 1px solid var(--hair); border-radius: 100px; padding: 6px 13px; cursor: pointer; transition: all 0.12s; }
     .sec-tools button:hover { background: var(--p-100); color: var(--p-700); border-color: transparent; }
-    /* Schedule sub-sections (Today / Upcoming / Finished / Bracket) */
-    details.subsec { border: 1px solid var(--hair-soft); border-radius: var(--radius-md); margin-bottom: 12px; overflow: hidden; background: var(--card-2); }
-    details.subsec > summary { list-style: none; cursor: pointer; display: flex; align-items: center; padding: 14px 18px; }
-    details.subsec > summary::-webkit-details-marker { display: none; }
-    details.subsec > summary::after { content: '+'; font-family: 'JetBrains Mono', monospace; font-size: 16px; color: var(--ink-soft); margin-left: auto; }
-    details.subsec[open] > summary::after { content: '\2013'; }
-    .sub-h { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 16px; letter-spacing: -0.01em; color: var(--ink); }
-    .subsec-body { padding: 2px 16px 16px; }
-    .subsec-body .cards { display: grid; gap: 12px; padding: 6px 0 4px; }
-    /* Knockout bracket — round columns, horizontally scrollable */
-    .bracket { display: flex; gap: 18px; overflow-x: auto; padding: 8px 2px 14px; }
-    .bcol { flex: 0 0 auto; min-width: 178px; display: flex; flex-direction: column; justify-content: space-around; gap: 12px; }
-    .bcol-head { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 2px; position: sticky; top: 0; }
-    .btie { background: var(--card); border: 1px solid var(--hair-soft); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); overflow: hidden; position: relative; }
-    .btie .livedot { position: absolute; top: 7px; right: 8px; }
-    .bteam { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--ink-soft); }
-    .bteam + .bteam { border-top: 1px solid var(--hair-soft); }
-    .bteam.bwin { color: var(--p-700); font-weight: 700; }
-    .bteam .bnm { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .bteam .bsc { font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--ink); }
+    /* Schedule — full tournament as a by-day, horizontally-scrollable strip */
+    .daystrip { display: flex; gap: 14px; overflow-x: auto; padding: 8px 2px 16px; scroll-behavior: smooth; }
+    .daycol { flex: 0 0 auto; width: 212px; display: flex; flex-direction: column; gap: 10px; padding: 0 8px 10px; border-radius: var(--radius-md); }
+    .daycol-head { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); padding: 4px 0 8px; border-bottom: 1px solid var(--hair-soft); margin-bottom: 2px; }
+    .daycol.is-today { background: rgba(168,85,247,0.06); }
+    .daycol.is-today .daycol-head { color: var(--p-700); border-color: var(--p-400); }
+    .dbox { background: var(--card); border: 1px solid var(--hair-soft); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); padding: 11px 13px; }
+    .dbox.live { border-color: var(--p-400); box-shadow: 0 0 0 1px var(--p-400); }
+    .dbox-teams { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 13px; color: var(--ink); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 6px; line-height: 1.35; }
+    .dbox-teams .dsc { font-weight: 800; }
+    .dbox-teams .dvs { color: var(--ink-faint); font-weight: 400; font-size: 11px; }
+    .dbox-meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; color: var(--ink-soft); margin-top: 6px; display: flex; align-items: center; gap: 6px; }
+    .dbox.live .dbox-meta { color: var(--p-700); }
+    .dbox-loc { font-size: 11px; color: var(--ink-faint); margin-top: 4px; }
     .legend { font-size: 12.5px; color: var(--ink-soft); margin: 4px 0 2px; line-height: 1.6; }
     details.grp { border: 1px solid var(--hair-soft); border-radius: var(--radius-md); overflow: hidden; background: var(--card); height: fit-content; }
     details.grp > summary { list-style: none; cursor: pointer; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 14px; padding: 13px 14px; display: flex; align-items: center; justify-content: space-between; color: var(--ink); }
@@ -975,6 +946,21 @@ __SIGNUP_BOTTOM__
       if (d.venue) bits.push(esc(d.venue));
       set('hero-meta', bits.join(' &middot; ') || 'World Cup 2026');
       set('hero-win', '');
+      // Reuse the same poll to keep the live match's Schedule-strip box current
+      // — no extra request, so the strip ticks live with zero added overhead.
+      if (d.live && d.id) {
+        var box = document.querySelector('.dbox[data-mid="' + d.id + '"]');
+        if (box) {
+          box.classList.remove('soon', 'done'); box.classList.add('live');
+          var t = box.querySelector('.dbox-teams');
+          if (t) t.innerHTML = esc(d.home) + '<span class="dsc">' + d.hg +
+            '</span><span class="dvs">&ndash;</span><span class="dsc">' + d.ag +
+            '</span>' + esc(d.away);
+          var mt = box.querySelector('.dbox-meta');
+          if (mt) mt.innerHTML = '<span class="livedot"></span>' +
+            esc(d.status === 'HT' ? 'HT' : (d.clock || 'Live'));
+        }
+      }
     }
     function poll() {
       fetch('live.json?t=' + Date.now(), { cache: 'no-store' })
@@ -984,6 +970,22 @@ __SIGNUP_BOTTOM__
     }
     poll();
     setInterval(poll, 30000);
+  })();
+  // Schedule strip: centre the highlighted current day on load and whenever
+  // the (collapsed-by-default) section is opened.
+  (function () {
+    function centre() {
+      var strip = document.querySelector('.daystrip');
+      if (!strip) return;
+      var t = strip.querySelector('.daycol.is-today');
+      if (t) strip.scrollLeft =
+        t.offsetLeft - strip.clientWidth / 2 + t.clientWidth / 2;
+    }
+    centre();
+    var sec = document.getElementById('schedule');
+    if (sec) sec.addEventListener('toggle', function () {
+      if (sec.open) centre();
+    });
   })();
 </script>
 </body>
