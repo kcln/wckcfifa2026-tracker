@@ -290,16 +290,21 @@ def build_board(merged: dict, match_prob, dates: set, live: dict | None = None) 
         d = m.get("date")
         if d not in dates:
             continue
-        pred = match_prob(m["home"], m["away"])
-        pick = max(("home", "draw", "away"), key=lambda k: pred[k])
-        pick_label = {"home": m["home"], "away": m["away"]}.get(pick, "Draw")
         entry = {
             "id": m["id"], "home": m["home"], "away": m["away"],
             "kickoff_utc": m.get("kickoff_utc", ""), "venue": m.get("venue", ""),
             "stage": m.get("stage", "group"),
-            "pred": {"home": pred["home"], "draw": pred["draw"],
-                     "away": pred["away"], "pick": pick_label},
         }
+        # Knockout fixtures carry placeholder slots ("2A", "1E") until groups
+        # resolve; the model can't price those, so the prediction is optional.
+        try:
+            pred = match_prob(m["home"], m["away"])
+            pick = max(("home", "draw", "away"), key=lambda k: pred[k])
+            pick_label = {"home": m["home"], "away": m["away"]}.get(pick, "Draw")
+            entry["pred"] = {"home": pred["home"], "draw": pred["draw"],
+                             "away": pred["away"], "pick": pick_label}
+        except Exception:
+            pick = None
         r = m.get("result")
         lv = live.get(m["id"])
         if r:
@@ -614,6 +619,10 @@ def run(cfg: Config) -> int:
         # plus a transient snapshot of in-progress matches for live scores.
         processed = {d.get("date") for d in stateobj["days"]}
         stateobj["board"] = build_board(merged, match_prob, processed, live)
+        # Full-tournament board (every fixture, not just processed days) drives
+        # the Schedule section + bracket. Match log keeps using `board`.
+        all_dates = {m.get("date") for m in merged["matches"]}
+        stateobj["schedule"] = build_board(merged, match_prob, all_dates, live)
         stateobj["live"] = build_live(seed, live)
 
         # Keep days ordered.

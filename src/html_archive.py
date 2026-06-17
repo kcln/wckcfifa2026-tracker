@@ -439,6 +439,117 @@ def _render_board_days(state: dict) -> str:
     return "".join(blocks)
 
 
+_ROUND_LABELS = [
+    ("R32", "Round of 32"), ("R16", "Round of 16"), ("QF", "Quarter-finals"),
+    ("SF", "Semi-finals"), ("3rd", "Third place"), ("final", "Final"),
+]
+
+
+def _cards_by_day(matches: list, *, reverse: bool) -> str:
+    """Match cards grouped under open day sub-headers; days by date asc/desc."""
+    by_date: dict = {}
+    for m in matches:
+        by_date.setdefault(m.get("date") or "", []).append(m)
+    out = []
+    for d in sorted(by_date, reverse=reverse):
+        cards = "".join(_match_card(x) for x in _order_day_matches(by_date[d]))
+        out.append(
+            f'<details class="day" data-day="{escape(d)}" open>'
+            f'<summary>{escape(_fmt_day_long(d))}</summary>'
+            f'<div class="cards">{cards}</div></details>')
+    return "".join(out)
+
+
+def _render_bracket(matches: list) -> str:
+    """Knockout tree as round columns (R32→Final), horizontally scrollable.
+    Slots show placeholder descriptors ('2A', '1E') until groups resolve, with
+    scores once a tie is played."""
+    by_stage: dict = {}
+    for m in matches:
+        by_stage.setdefault(m.get("stage"), []).append(m)
+    cols = []
+    for key, label in _ROUND_LABELS:
+        ties = by_stage.get(key)
+        if not ties:
+            continue
+        ties = sorted(ties, key=lambda x: (x.get("kickoff_utc") or "",
+                                           str(x.get("id", ""))))
+        boxes = []
+        for m in ties:
+            st = m.get("status")
+            played = st in ("FT", "live")
+            hg, ag = int(m.get("hg") or 0), int(m.get("ag") or 0)
+            hw = " bwin" if st == "FT" and hg > ag else ""
+            aw = " bwin" if st == "FT" and ag > hg else ""
+
+            def row(name, sc, wc):
+                s = f'<span class="bsc">{sc}</span>' if played else ""
+                return (f'<div class="bteam{wc}">'
+                        f'<span class="bnm">{escape(str(name))}</span>{s}</div>')
+
+            dot = '<span class="livedot"></span>' if st == "live" else ""
+            boxes.append(f'<div class="btie">{dot}'
+                         f'{row(m.get("home"), hg, hw)}'
+                         f'{row(m.get("away"), ag, aw)}</div>')
+        cols.append(f'<div class="bcol"><div class="bcol-head">{escape(label)}'
+                    f'</div>{"".join(boxes)}</div>')
+    return f'<div class="bracket">{"".join(cols)}</div>' if cols else ""
+
+
+def _sched_sub(title: str, body: str, *, open_: bool = False) -> str:
+    op = " open" if open_ else ""
+    return (f'<details class="subsec"{op}>'
+            f'<summary><span class="sub-h">{escape(title)}</span></summary>'
+            f'<div class="subsec-body">{body}</div></details>')
+
+
+def _render_schedule(state: dict) -> str:
+    """Full-tournament Schedule (every fixture): today/live on top, then
+    upcoming, a finished sub-section, and the scrollable knockout bracket."""
+    sched = state.get("schedule") or []
+    # The date lives on the day, not the match entry — carry it onto each match
+    # so we can group/partition by status and date below.
+    all_m = [{**m, "date": day.get("date")}
+             for day in sched for m in day.get("matches", [])]
+    if not all_m:
+        return ""
+    # Real teams = the 48 group entrants; knockout slots are still placeholders.
+    real = ({m["home"] for m in all_m if m.get("stage") == "group"}
+            | {m["away"] for m in all_m if m.get("stage") == "group"})
+    cards = [m for m in all_m if m.get("home") in real and m.get("away") in real]
+    ko = [m for m in all_m if m.get("stage") not in ("group", None)]
+
+    # "Today" = the most recent day with a live/finished match; its games (incl.
+    # later kickoffs that day) sit on top. Upcoming/finished are the other days.
+    active = max((m.get("date") or "" for m in cards
+                  if m.get("status") in ("FT", "live")), default="")
+    today = [m for m in cards if active and (m.get("date") or "") == active]
+    upcoming = [m for m in cards if m.get("status") == "sched"
+                and (m.get("date") or "") > active]
+    finished = [m for m in cards if m.get("status") == "FT"
+                and (m.get("date") or "") != active]
+
+    subs = []
+    if today:
+        body = ('<div class="cards">'
+                + "".join(_match_card(m) for m in _order_day_matches(today))
+                + '</div>')
+        subs.append(_sched_sub("Today", body, open_=True))
+    if upcoming:
+        subs.append(_sched_sub("Upcoming", _cards_by_day(upcoming, reverse=False)))
+    if finished:
+        subs.append(_sched_sub("Finished", _cards_by_day(finished, reverse=True)))
+    if ko:
+        subs.append(_sched_sub("Bracket", _render_bracket(ko), open_=True))
+    if not subs:
+        return ""
+    return (
+        '<details class="section">'
+        '<summary><span class="sec-h">Schedule</span>'
+        '<span class="sec-count">Full tournament</span></summary>'
+        f'<div class="sec-body">{"".join(subs)}</div></details>')
+
+
 def _render_matchlog(state: dict) -> str:
     """The whole Match-log section. Open on first render (with today's day
     expanded inside); expand/collapse-all toggles every day."""
@@ -491,6 +602,7 @@ def render(state: dict, path) -> None:
         page = page.replace(token, value)
     page = page.replace("__STANDINGS__", _render_standings(state))
     page = page.replace("__MATCHLOG__", _render_matchlog(state))
+    page = page.replace("__SCHEDULE__", _render_schedule(state))
     page = page.replace("__SIGNUP_TOP__", _signup("signup-top"))
     page = page.replace("__SIGNUP_BOTTOM__", _signup("signup"))
     out = Path(path)
@@ -650,6 +762,26 @@ __REFRESH__
     .sec-tools { display: flex; gap: 8px; margin: 6px 0 14px; }
     .sec-tools button { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); background: var(--bg); border: 1px solid var(--hair); border-radius: 100px; padding: 6px 13px; cursor: pointer; transition: all 0.12s; }
     .sec-tools button:hover { background: var(--p-100); color: var(--p-700); border-color: transparent; }
+    /* Schedule sub-sections (Today / Upcoming / Finished / Bracket) */
+    details.subsec { border: 1px solid var(--hair-soft); border-radius: var(--radius-md); margin-bottom: 12px; overflow: hidden; background: var(--card-2); }
+    details.subsec > summary { list-style: none; cursor: pointer; display: flex; align-items: center; padding: 14px 18px; }
+    details.subsec > summary::-webkit-details-marker { display: none; }
+    details.subsec > summary::after { content: '+'; font-family: 'JetBrains Mono', monospace; font-size: 16px; color: var(--ink-soft); margin-left: auto; }
+    details.subsec[open] > summary::after { content: '\2013'; }
+    .sub-h { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 16px; letter-spacing: -0.01em; color: var(--ink); }
+    .subsec-body { padding: 2px 16px 16px; }
+    .subsec-body .cards { display: grid; gap: 12px; padding: 6px 0 4px; }
+    /* Knockout bracket — round columns, horizontally scrollable */
+    .bracket { display: flex; gap: 18px; overflow-x: auto; padding: 8px 2px 14px; }
+    .bcol { flex: 0 0 auto; min-width: 178px; display: flex; flex-direction: column; justify-content: space-around; gap: 12px; }
+    .bcol-head { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 2px; position: sticky; top: 0; }
+    .btie { background: var(--card); border: 1px solid var(--hair-soft); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); overflow: hidden; position: relative; }
+    .btie .livedot { position: absolute; top: 7px; right: 8px; }
+    .bteam { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--ink-soft); }
+    .bteam + .bteam { border-top: 1px solid var(--hair-soft); }
+    .bteam.bwin { color: var(--p-700); font-weight: 700; }
+    .bteam .bnm { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .bteam .bsc { font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--ink); }
     .legend { font-size: 12.5px; color: var(--ink-soft); margin: 4px 0 2px; line-height: 1.6; }
     details.grp { border: 1px solid var(--hair-soft); border-radius: var(--radius-md); overflow: hidden; background: var(--card); height: fit-content; }
     details.grp > summary { list-style: none; cursor: pointer; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 14px; padding: 13px 14px; display: flex; align-items: center; justify-content: space-between; color: var(--ink); }
@@ -767,6 +899,7 @@ __REFRESH__
 __SIGNUP_TOP__
 __STANDINGS__
 __MATCHLOG__
+__SCHEDULE__
 __SIGNUP_BOTTOM__
 <footer class="foot">
 <span class="made">Built by <a href="https://github.com/kcln/wckcfifa2026-tracker" rel="noopener" target="_blank">KC Lakshminarasimham</a></span>

@@ -226,6 +226,65 @@ def test_board_day_live_match_pinned_then_upcoming_soonest_then_done(tmp_path):
             < html.index("Uzbekistan") < html.index("Portugal"))
 
 
+def _sched_state():
+    return {"days": [], "bracket": {}, "groups": {}, "schedule": [
+        {"date": "2026-06-15", "matches": [
+            {"id": "1", "home": "Spain", "away": "Japan", "stage": "group",
+             "kickoff_utc": "2026-06-15T19:00:00Z", "venue": "Atlanta",
+             "status": "FT", "hg": 2, "ag": 0, "events": [], "hit": True,
+             "pred": {"home": .6, "draw": .25, "away": .15, "pick": "Spain"}}]},
+        {"date": "2026-06-17", "matches": [
+            {"id": "2", "home": "England", "away": "Croatia", "stage": "group",
+             "kickoff_utc": "2026-06-17T20:00:00Z", "venue": "Dallas (Arlington)",
+             "status": "live", "hg": 3, "ag": 2, "clock": "84'", "events": [],
+             "pred": {"home": .29, "draw": .28, "away": .43, "pick": "Croatia"}}]},
+        {"date": "2026-06-20", "matches": [
+            {"id": "3", "home": "Spain", "away": "England", "stage": "group",
+             "kickoff_utc": "2026-06-20T19:00:00Z", "venue": "Seattle",
+             "status": "sched",
+             "pred": {"home": .4, "draw": .3, "away": .3, "pick": "Spain"}}]},
+        {"date": "2026-06-28", "matches": [
+            {"id": "73", "home": "2A", "away": "2B", "stage": "R32",
+             "kickoff_utc": "2026-06-28T19:00:00Z", "venue": "Boston (Foxborough)",
+             "status": "sched"}]}]}
+
+
+def test_schedule_section_has_status_subsections(tmp_path):
+    html = _render(_sched_state(), tmp_path)
+    assert '<span class="sec-h">Schedule</span>' in html
+    for sub in ("Today", "Upcoming", "Finished", "Bracket"):
+        assert f'<span class="sub-h">{sub}</span>' in html
+    # subsection order: Today < Upcoming < Finished < Bracket
+    i = [html.index(f'>{s}</span>') for s in ("Today", "Upcoming", "Finished", "Bracket")]
+    assert i == sorted(i)
+
+
+def test_schedule_partitions_by_status(tmp_path):
+    html = _render(_sched_state(), tmp_path)
+    today = html.index('class="sub-h">Today')
+    upcoming = html.index('class="sub-h">Upcoming')
+    finished = html.index('class="sub-h">Finished')
+    bracket = html.index('class="sub-h">Bracket')
+    # England (live) sits under Today; Spain-England (sched) under Upcoming;
+    # Spain-Japan (FT) under Finished.
+    assert today < html.index("Croatia") < upcoming
+    assert finished < html.index("Japan") < bracket
+
+
+def test_schedule_bracket_renders_round_columns_and_slots(tmp_path):
+    html = _render(_sched_state(), tmp_path)
+    assert '<div class="bracket">' in html
+    assert "Round of 32" in html
+    # placeholder knockout slots render as-is until groups resolve
+    assert '<span class="bnm">2A</span>' in html
+    assert '<span class="bnm">2B</span>' in html
+
+
+def test_no_schedule_state_renders_no_section(tmp_path):
+    html = _render({"days": [], "bracket": {}, "groups": {}}, tmp_path)
+    assert '<span class="sec-h">Schedule</span>' not in html
+
+
 def test_render_board_scheduled_match_shows_upcoming(tmp_path):
     state = {"days": [], "bracket": {}, "groups": {},
              "board": [{"date": "2026-06-20", "matches": [
