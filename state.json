@@ -2209,9 +2209,9 @@
             "pick": "Croatia"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "39'",
+          "clock": "43'",
           "ht": false,
           "events": [
             {
@@ -2225,6 +2225,12 @@
               "player": "Martin Baturina",
               "team": "Croatia",
               "minute": "36'"
+            },
+            {
+              "kind": "goal",
+              "player": "Harry Kane",
+              "team": "England",
+              "minute": "42'"
             }
           ]
         },
@@ -2269,10 +2275,10 @@
       "date": "2026-06-17",
       "venue": "Dallas (Arlington)",
       "kickoff_utc": "2026-06-17T20:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 1,
       "status": "LIVE",
-      "clock": "39'",
+      "clock": "43'",
       "events": [
         {
           "kind": "penalty",
@@ -2285,6 +2291,12 @@
           "player": "Martin Baturina",
           "team": "Croatia",
           "minute": "36'"
+        },
+        {
+          "kind": "goal",
+          "player": "Harry Kane",
+          "team": "England",
+          "minute": "42'"
         }
       ]
     }
