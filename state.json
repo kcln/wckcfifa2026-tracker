@@ -482,6 +482,15 @@
           "key": "ht-2026-06-17-67",
           "generated_at": "2026-06-17T13:54:13.354616-07:00",
           "kickoff_utc": "2026-06-17T20:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 17\n\nFull time:\nEngland 4 - 2 Croatia\nDallas (Arlington), USA\n  ⚽ 12' Harry Kane (England, pen)\n  ⚽ 36' Martin Baturina (Croatia)\n  ⚽ 42' Harry Kane (England)\n  ⚽ 45'+5' Petar Musa (Croatia)\n  ⚽ 47' Jude Bellingham (England)\n  ⚽ 85' Marcus Rashford (England)\nOverall prediction: 9/22 (40.9%)\nPrediction ✗: Croatia",
+          "sent": true,
+          "hash": "ab202b212a514c59",
+          "key": "pm-2026-06-17-67",
+          "generated_at": "2026-06-17T15:02:53.054072-07:00",
+          "kickoff_utc": "2026-06-17T20:00:00Z"
         }
       ]
     }
@@ -863,20 +872,12 @@
     ],
     "L": [
       {
-        "team": "Croatia",
-        "played": 0,
-        "points": 0,
-        "gd": 0,
-        "gf": 0,
-        "ga": 0
-      },
-      {
         "team": "England",
-        "played": 0,
-        "points": 0,
-        "gd": 0,
-        "gf": 0,
-        "ga": 0
+        "played": 1,
+        "points": 3,
+        "gd": 2,
+        "gf": 4,
+        "ga": 2
       },
       {
         "team": "Ghana",
@@ -893,123 +894,152 @@
         "gd": 0,
         "gf": 0,
         "ga": 0
+      },
+      {
+        "team": "Croatia",
+        "played": 1,
+        "points": 0,
+        "gd": -2,
+        "gf": 2,
+        "ga": 4
       }
     ]
   },
   "bracket": {
     "title_odds": {
-      "Spain": 0.1451,
-      "France": 0.1263,
-      "Brazil": 0.0509,
-      "England": 0.0444,
-      "Argentina": 0.2141,
-      "Iran": 0.0082,
-      "Germany": 0.046,
-      "Mexico": 0.0201,
-      "Croatia": 0.0298,
-      "Japan": 0.0276,
-      "Netherlands": 0.0332,
-      "Portugal": 0.0377,
-      "Panama": 0.002,
-      "Colombia": 0.051,
-      "Belgium": 0.0197,
-      "Morocco": 0.0229,
-      "South Korea": 0.0082,
-      "Ecuador": 0.023,
-      "Uruguay": 0.0184,
-      "Austria": 0.006,
-      "Algeria": 0.0027,
-      "Senegal": 0.0076,
-      "Canada": 0.0057,
-      "Iraq": 0.0002,
-      "Egypt": 0.0022,
-      "Sweden": 0.0019,
-      "Uzbekistan": 0.0013,
-      "Ivory Coast": 0.0035,
-      "Norway": 0.008,
-      "Switzerland": 0.0111,
+      "Spain": 0.1435,
+      "Croatia": 0.0265,
+      "Argentina": 0.2077,
+      "Uruguay": 0.0199,
+      "France": 0.1311,
+      "Turkey": 0.0113,
+      "Switzerland": 0.011,
+      "England": 0.047,
+      "Portugal": 0.0386,
+      "Brazil": 0.0488,
+      "Germany": 0.0477,
+      "Colombia": 0.0456,
+      "South Korea": 0.008,
+      "Egypt": 0.0039,
+      "Ecuador": 0.0223,
+      "Netherlands": 0.034,
+      "Belgium": 0.0218,
+      "Japan": 0.0286,
+      "Morocco": 0.0218,
+      "Mexico": 0.0197,
+      "Senegal": 0.0103,
+      "Norway": 0.0084,
+      "Canada": 0.0072,
+      "Australia": 0.0067,
       "Paraguay": 0.0019,
+      "Iran": 0.0082,
+      "Ivory Coast": 0.003,
+      "Austria": 0.0059,
       "Czech Republic": 0.0016,
-      "DR Congo": 0.0004,
-      "Turkey": 0.0097,
-      "Australia": 0.0064,
-      "Scotland": 0.0007,
-      "Haiti": 0.0001,
-      "Cape Verde": 0.0002,
+      "Algeria": 0.0019,
+      "Sweden": 0.0022,
+      "Uzbekistan": 0.0012,
+      "Scotland": 0.0008,
+      "Panama": 0.0015,
       "New Zealand": 0.0001,
-      "Saudi Arabia": 0.0001
+      "DR Congo": 0.0002,
+      "Tunisia": 0.0001
     },
     "advancement": {
-      "Algeria": 0.4632,
-      "Switzerland": 0.9027,
-      "Mexico": 0.9702,
+      "Algeria": 0.4637,
+      "Switzerland": 0.9038,
+      "Mexico": 0.9705,
       "Argentina": 0.9998,
-      "Portugal": 0.8563,
-      "Australia": 0.9809,
-      "England": 0.9294,
-      "Austria": 0.9303,
-      "Egypt": 0.756,
-      "Czech Republic": 0.6285,
-      "Ivory Coast": 0.9454,
-      "Netherlands": 0.9275,
-      "Colombia": 0.9126,
-      "Germany": 0.9971,
-      "Turkey": 0.6274,
-      "Croatia": 0.9108,
-      "Uruguay": 0.7722,
+      "Portugal": 0.8565,
+      "Australia": 0.9816,
+      "England": 0.9988,
+      "Austria": 0.932,
+      "Egypt": 0.7572,
+      "Czech Republic": 0.6329,
+      "Ivory Coast": 0.946,
+      "Netherlands": 0.9284,
+      "Colombia": 0.9139,
+      "Germany": 0.9973,
+      "Turkey": 0.6294,
+      "Panama": 0.7172,
+      "Uruguay": 0.7723,
       "France": 0.9973,
-      "Norway": 0.9695,
-      "Ecuador": 0.7481,
-      "Canada": 0.8741,
-      "South Korea": 0.9503,
+      "Norway": 0.9706,
+      "Ecuador": 0.7531,
+      "Canada": 0.8743,
+      "South Korea": 0.9512,
       "Brazil": 0.9563,
-      "Sweden": 0.9582,
-      "DR Congo": 0.3872,
-      "USA": 0.9144,
-      "Qatar": 0.471,
-      "Japan": 0.8968,
-      "Belgium": 0.8769,
-      "Spain": 0.9603,
-      "Morocco": 0.9041,
-      "Cape Verde": 0.568,
-      "Iran": 0.6962,
-      "Senegal": 0.5755,
-      "Scotland": 0.6887,
-      "New Zealand": 0.2799,
-      "Panama": 0.7241,
-      "Uzbekistan": 0.4359,
-      "Saudi Arabia": 0.3184,
-      "Paraguay": 0.2953,
-      "Jordan": 0.0727,
-      "Iraq": 0.1252,
-      "Bosnia & Herzegovina": 0.4091,
-      "South Africa": 0.119,
-      "Tunisia": 0.0852,
-      "Ghana": 0.1172,
-      "Curaçao": 0.0303,
-      "Haiti": 0.0845
+      "Sweden": 0.9588,
+      "DR Congo": 0.3874,
+      "USA": 0.9181,
+      "Qatar": 0.4715,
+      "Japan": 0.8972,
+      "Belgium": 0.878,
+      "Spain": 0.9604,
+      "Morocco": 0.9053,
+      "Cape Verde": 0.569,
+      "Iran": 0.697,
+      "Senegal": 0.5767,
+      "Scotland": 0.6913,
+      "Croatia": 0.7929,
+      "New Zealand": 0.2796,
+      "Uzbekistan": 0.439,
+      "Saudi Arabia": 0.3188,
+      "Paraguay": 0.2957,
+      "Jordan": 0.0724,
+      "Bosnia & Herzegovina": 0.4094,
+      "Iraq": 0.1247,
+      "South Africa": 0.1197,
+      "Ghana": 0.1323,
+      "Tunisia": 0.0842,
+      "Curaçao": 0.0305,
+      "Haiti": 0.086
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Portugal",
-    "away": "DR Congo",
-    "home_goals": 1,
-    "away_goals": 1,
+    "home": "England",
+    "away": "Croatia",
+    "home_goals": 4,
+    "away_goals": 2,
     "date": "2026-06-17",
-    "venue": "Houston",
+    "venue": "Dallas (Arlington)",
     "events": [
       {
-        "kind": "goal",
-        "player": "João Neves",
-        "team": "Portugal",
-        "minute": "6'"
+        "kind": "penalty",
+        "player": "Harry Kane",
+        "team": "England",
+        "minute": "12'"
       },
       {
         "kind": "goal",
-        "player": "Yoane Wissa",
-        "team": "DR Congo",
+        "player": "Martin Baturina",
+        "team": "Croatia",
+        "minute": "36'"
+      },
+      {
+        "kind": "goal",
+        "player": "Harry Kane",
+        "team": "England",
+        "minute": "42'"
+      },
+      {
+        "kind": "goal",
+        "player": "Petar Musa",
+        "team": "Croatia",
         "minute": "45'+5'"
+      },
+      {
+        "kind": "goal",
+        "player": "Jude Bellingham",
+        "team": "England",
+        "minute": "47'"
+      },
+      {
+        "kind": "goal",
+        "player": "Marcus Rashford",
+        "team": "England",
+        "minute": "85'"
       }
     ]
   },
@@ -1439,6 +1469,48 @@
           "player": "Yoane Wissa",
           "team": "DR Congo",
           "minute": "45'+5'"
+        }
+      ]
+    },
+    "67": {
+      "home_goals": 4,
+      "away_goals": 2,
+      "events": [
+        {
+          "kind": "penalty",
+          "player": "Harry Kane",
+          "team": "England",
+          "minute": "12'"
+        },
+        {
+          "kind": "goal",
+          "player": "Martin Baturina",
+          "team": "Croatia",
+          "minute": "36'"
+        },
+        {
+          "kind": "goal",
+          "player": "Harry Kane",
+          "team": "England",
+          "minute": "42'"
+        },
+        {
+          "kind": "goal",
+          "player": "Petar Musa",
+          "team": "Croatia",
+          "minute": "45'+5'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jude Bellingham",
+          "team": "England",
+          "minute": "47'"
+        },
+        {
+          "kind": "goal",
+          "player": "Marcus Rashford",
+          "team": "England",
+          "minute": "85'"
         }
       ]
     }
@@ -2217,11 +2289,9 @@
             "away": 0.42737620904039014,
             "pick": "Croatia"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 4,
           "ag": 2,
-          "clock": "90'+5'",
-          "ht": false,
           "events": [
             {
               "kind": "penalty",
@@ -2259,7 +2329,8 @@
               "team": "England",
               "minute": "85'"
             }
-          ]
+          ],
+          "hit": false
         },
         {
           "id": "68",
@@ -2294,58 +2365,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "67",
-      "home": "England",
-      "away": "Croatia",
-      "date": "2026-06-17",
-      "venue": "Dallas (Arlington)",
-      "kickoff_utc": "2026-06-17T20:00:00Z",
-      "hg": 4,
-      "ag": 2,
-      "status": "LIVE",
-      "clock": "90'+5'",
-      "events": [
-        {
-          "kind": "penalty",
-          "player": "Harry Kane",
-          "team": "England",
-          "minute": "12'"
-        },
-        {
-          "kind": "goal",
-          "player": "Martin Baturina",
-          "team": "Croatia",
-          "minute": "36'"
-        },
-        {
-          "kind": "goal",
-          "player": "Harry Kane",
-          "team": "England",
-          "minute": "42'"
-        },
-        {
-          "kind": "goal",
-          "player": "Petar Musa",
-          "team": "Croatia",
-          "minute": "45'+5'"
-        },
-        {
-          "kind": "goal",
-          "player": "Jude Bellingham",
-          "team": "England",
-          "minute": "47'"
-        },
-        {
-          "kind": "goal",
-          "player": "Marcus Rashford",
-          "team": "England",
-          "minute": "85'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -3120,11 +3140,9 @@
             "away": 0.42737620904039014,
             "pick": "Croatia"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 4,
           "ag": 2,
-          "clock": "90'+5'",
-          "ht": false,
           "events": [
             {
               "kind": "penalty",
@@ -3162,7 +3180,8 @@
               "team": "England",
               "minute": "85'"
             }
-          ]
+          ],
+          "hit": false
         },
         {
           "id": "68",
