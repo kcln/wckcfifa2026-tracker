@@ -2194,7 +2194,12 @@
             "away": 0.42737620904039014,
             "pick": "Croatia"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "2'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "68",
@@ -2229,5 +2234,18 @@
       ]
     }
   ],
-  "live": []
+  "live": [
+    {
+      "id": "67",
+      "home": "England",
+      "away": "Croatia",
+      "date": "2026-06-17",
+      "venue": "Dallas (Arlington)",
+      "kickoff_utc": "2026-06-17T20:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "2'"
+    }
+  ]
 }
