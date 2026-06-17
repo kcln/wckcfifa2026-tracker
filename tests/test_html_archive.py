@@ -268,3 +268,30 @@ def test_today_status_open_on_first_render(tmp_path):
     assert '<details class="section" open>' in html
     assert '<details class="day" data-day="2026-06-16" open>' in html
     assert '<details class="day" data-day="2026-06-15">' in html  # no open
+
+
+def test_hero_features_live_match_and_autorefresh(tmp_path):
+    state = {"days": [], "bracket": {}, "groups": {},
+             "live": [{"id": "9", "home": "Argentina", "away": "Algeria",
+                       "date": "2026-06-16", "venue": "Boston (Foxborough)",
+                       "kickoff_utc": "2026-06-16T22:00:00Z",
+                       "hg": 1, "ag": 0, "status": "LIVE", "clock": "50'"}],
+             "last_result": {"home": "Iraq", "away": "Norway", "home_goals": 1,
+                             "away_goals": 4, "date": "2026-06-16"}}
+    html = _render(state, tmp_path)
+    assert 'Argentina <span class="vs">vs</span> Algeria' in html   # live, not Iraq
+    assert "Argentina 1-0 Algeria" in html   # live score in hero
+    assert "Live now" in html
+    assert '<meta http-equiv="refresh"' in html
+
+
+def test_card_shows_live_score_and_pill(tmp_path):
+    state = {"days": [], "bracket": {}, "groups": {},
+             "board": [{"date": "2026-06-16", "matches": [
+                 {"id": "9", "home": "Argentina", "away": "Algeria",
+                  "status": "live", "hg": 1, "ag": 0, "clock": "50'", "ht": False,
+                  "kickoff_utc": "", "venue": "Boston (Foxborough)", "events": [],
+                  "pred": {"home": 0.7, "draw": 0.2, "away": 0.1, "pick": "Argentina"}}]}]}
+    html = _render(state, tmp_path)
+    assert 'class="pill live"' in html and "50&#x27;" in html
+    assert '<span class="sc">1</span>' in html

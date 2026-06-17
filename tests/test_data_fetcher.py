@@ -10,7 +10,7 @@ def test_parse_espn_scoreboard_extracts_completed_results():
     out = df.parse_espn(sample)
     assert out["401"] == {"home": "Mexico", "away": "South Africa",
         "date": "2026-06-11", "home_goals": 2, "away_goals": 1,
-        "status": "FT", "events": []}
+        "status": "FT", "clock": "", "events": []}
 
 
 def test_parse_espn_skips_incomplete_events():
@@ -126,3 +126,17 @@ def test_parse_espn_skips_shootout_events():
     sample["events"][0]["competitions"][0]["details"][0]["shootout"] = True
     out = df.parse_espn(sample)
     assert [e["kind"] for e in out["500"]["events"]] == ["penalty", "red"]
+
+
+def test_parse_espn_captures_live_in_progress_with_clock():
+    sample = {"events": [{"id": "700", "date": "2026-06-16T19:00Z",
+        "status": {"displayClock": "50'",
+                   "type": {"completed": False, "state": "in",
+                            "name": "STATUS_SECOND_HALF"}},
+        "competitions": [{"competitors": [
+            {"homeAway": "home", "score": "1", "team": {"displayName": "Argentina"}},
+            {"homeAway": "away", "score": "0", "team": {"displayName": "Algeria"}}]}]}]}
+    out = df.parse_espn(sample)
+    assert out["700"]["status"] == "LIVE"
+    assert out["700"]["clock"] == "50'"
+    assert out["700"]["home_goals"] == 1 and out["700"]["away_goals"] == 0

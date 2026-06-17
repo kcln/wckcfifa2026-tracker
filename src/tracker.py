@@ -122,6 +122,7 @@ def reconcile_results(raw_feed: dict, seed: dict) -> dict:
             "home_goals": entry["home_goals"],
             "away_goals": entry["away_goals"],
             "status": entry.get("status", "FT"),
+            "clock": entry.get("clock", ""),
             "events": entry.get("events", []),
         }
     return out
@@ -262,11 +263,13 @@ def _final_match(merged: dict) -> dict | None:
     return None
 
 
-def build_board(merged: dict, match_prob, dates: set) -> list:
+def build_board(merged: dict, match_prob, dates: set, live: dict | None = None) -> list:
     """Structured per-day match data for the website to render from (instead of
     re-parsing Telegram text). One entry per match in `dates` (the PT days the
     tracker has processed), carrying teams, kickoff, venue, the ML prediction
-    (probabilities + pick), and the result + events + hit/miss when finished."""
+    (probabilities + pick), the result + events + hit/miss when finished, and
+    the live score + clock while a match is in progress (`live`)."""
+    live = live or {}
     by_date: dict = {}
     for m in merged["matches"]:
         d = m.get("date")
@@ -283,12 +286,18 @@ def build_board(merged: dict, match_prob, dates: set) -> list:
                      "away": pred["away"], "pick": pick_label},
         }
         r = m.get("result")
+        lv = live.get(m["id"])
         if r:
             outcome = ("home" if r["home_goals"] > r["away_goals"]
                        else "away" if r["away_goals"] > r["home_goals"] else "draw")
             entry.update({"status": "FT", "hg": r["home_goals"],
                           "ag": r["away_goals"], "events": r.get("events", []),
                           "hit": pick == outcome})
+        elif lv and lv.get("status") in ("LIVE", "HT"):
+            entry.update({"status": "live", "hg": lv["home_goals"],
+                          "ag": lv["away_goals"], "clock": lv.get("clock", ""),
+                          "ht": lv["status"] == "HT",
+                          "events": lv.get("events", [])})
         else:
             entry["status"] = "sched"
         by_date.setdefault(d, []).append(entry)
@@ -298,6 +307,27 @@ def build_board(merged: dict, match_prob, dates: set) -> list:
              for d, ms in by_date.items()]
     board.sort(key=lambda x: x["date"])
     return board
+
+
+def build_live(seed: dict, live_feed: dict) -> list:
+    """Currently in-progress matches (LIVE/HT) with full detail for the hero —
+    newest kickoff last. Transient: rebuilt each cycle from the live feed."""
+    by_id = {m["id"]: m for m in seed.get("matches", [])}
+    out = []
+    for sid, e in (live_feed or {}).items():
+        if e.get("status") not in ("LIVE", "HT"):
+            continue
+        m = by_id.get(sid)
+        if not m:
+            continue
+        out.append({
+            "id": sid, "home": m["home"], "away": m["away"],
+            "date": m.get("date"), "venue": m.get("venue", ""),
+            "kickoff_utc": m.get("kickoff_utc", ""),
+            "hg": e["home_goals"], "ag": e["away_goals"],
+            "status": e["status"], "clock": e.get("clock", "")})
+    out.sort(key=lambda x: (x.get("kickoff_utc") or "", str(x["id"])))
+    return out
 
 
 def _latest_result(merged: dict) -> dict | None:
@@ -563,9 +593,11 @@ def run(cfg: Config) -> int:
         stateobj["last_result"] = (_latest_result(merged)
                                    or stateobj.get("last_result"))
 
-        # Structured board the website renders from (no Telegram-text parsing).
+        # Structured board the website renders from (no Telegram-text parsing),
+        # plus a transient snapshot of in-progress matches for live scores.
         processed = {d.get("date") for d in stateobj["days"]}
-        stateobj["board"] = build_board(merged, match_prob, processed)
+        stateobj["board"] = build_board(merged, match_prob, processed, live)
+        stateobj["live"] = build_live(seed, live)
 
         # Keep days ordered.
         stateobj["days"].sort(key=lambda d: d.get("date", ""))

@@ -163,27 +163,48 @@ def _render_days(days: list[dict]) -> str:
 
 def _hero_tokens(state: dict) -> dict:
     tokens = {
+        "__HERO_KICKER__":      "Most recent",
         "__HERO_MATCH__":       "—",
         "__HERO_META__":        "World Cup 2026",
         "__HERO_WIN__":         "Match data loading…",
         "__HERO_LEADER__":      "—",
         "__HERO_LEADER_DESC__": "Title odds loading…",
         "__MATCH_COUNT__":      "World Cup 2026",
+        "__REFRESH__":          "",
     }
 
-    last = state.get("last_result") or {}
-    if last.get("home") and last.get("away"):
-        home, away = str(last["home"]), str(last["away"])
-        hg, ag = int(last.get("home_goals", 0)), int(last.get("away_goals", 0))
+    # Feature the most relevant match: a LIVE one (latest kickoff) if any is in
+    # progress, otherwise the most recent finished result.
+    live = state.get("live") or []
+    featured = dict(live[-1], _live=True) if live else None
+    if featured is None:
+        last = state.get("last_result") or {}
+        if last.get("home") and last.get("away"):
+            featured = {**last, "_live": False}
+
+    if featured:
+        home, away = str(featured["home"]), str(featured["away"])
+        hg = int(featured.get("hg", featured.get("home_goals", 0)))
+        ag = int(featured.get("ag", featured.get("away_goals", 0)))
         tokens["__HERO_MATCH__"] = (
             f'{escape(home)} <span class="vs">vs</span> {escape(away)}')
         meta_bits = []
-        if last.get("date"):
-            meta_bits.append(_fmt_day_short(str(last["date"])))
-        if last.get("venue"):
-            meta_bits.append(str(last["venue"]))
+        if featured.get("date"):
+            meta_bits.append(_fmt_day_short(str(featured["date"])))
+        if featured.get("venue"):
+            meta_bits.append(str(featured["venue"]))
         tokens["__HERO_META__"] = escape(" · ".join(meta_bits)) or "World Cup 2026"
-        if hg > ag:
+        if featured["_live"]:
+            tokens["__HERO_KICKER__"] = '<span class="livedot"></span> Live now'
+            if featured.get("status") == "HT":
+                tokens["__HERO_WIN__"] = escape(f"Half-time · {home} {hg}-{ag} {away}")
+            else:
+                clk = str(featured.get("clock", "")).strip()
+                head = f"{clk} · " if clk else ""
+                tokens["__HERO_WIN__"] = escape(f"{head}{home} {hg}-{ag} {away}")
+            # auto-refresh the page while a match is live
+            tokens["__REFRESH__"] = '<meta http-equiv="refresh" content="90">'
+        elif hg > ag:
             tokens["__HERO_WIN__"] = escape(f"{home} won {hg}-{ag}")
         elif ag > hg:
             tokens["__HERO_WIN__"] = escape(f"{away} won {ag}-{hg}")
@@ -264,16 +285,22 @@ def _match_card(m: dict) -> str:
     pred = m.get("pred") or {}
     pick = escape(str(pred.get("pick", "")))
     finished = m.get("status") == "FT"
+    is_live = m.get("status") == "live"
 
-    if finished:
+    if finished or is_live:
         hg, ag = int(m.get("hg", 0)), int(m.get("ag", 0))
-        hcls = " win" if hg > ag else ""
-        acls = " win" if ag > hg else ""
         center = (f'<span class="sc">{hg}</span>'
                   f'<span class="dash">–</span><span class="sc">{ag}</span>')
+    if finished:
+        hcls = " win" if hg > ag else ""
+        acls = " win" if ag > hg else ""
         hit = m.get("hit")
         pill = (f'<span class="pill {"ok" if hit else "no"}">'
                 f'{"✓" if hit else "✗"}</span>')
+    elif is_live:
+        hcls = acls = ""
+        label = "Half-time" if m.get("ht") else (escape(str(m.get("clock", ""))) or "Live")
+        pill = f'<span class="pill live"><span class="livedot"></span>{label}</span>'
     else:
         center = '<span class="vsbig">vs</span>'
         hcls = acls = ""
@@ -423,6 +450,7 @@ SHELL = r"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
+__REFRESH__
 <title>World Cup 2026 — Daily tracker · KC Lakshminarasimham</title>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#F8F5F1" name="theme-color"/>
@@ -531,6 +559,10 @@ SHELL = r"""<!DOCTYPE html>
     .pill.ok { background: #DCFCE7; color: #15803D; }
     .pill.no { background: #FEE2E2; color: #B91C1C; }
     .pill.soon { background: var(--p-100); color: var(--p-700); }
+    .pill.live { background: #FEE2E2; color: #B91C1C; display: inline-flex; align-items: center; gap: 5px; }
+    .livedot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #DC2626; animation: livepulse 1.4s ease-in-out infinite; }
+    #hero-kicker .livedot { background: #F87171; vertical-align: middle; margin-right: 4px; }
+    @keyframes livepulse { 0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(220,38,38,0.5); } 50% { opacity: 0.6; box-shadow: 0 0 0 5px rgba(220,38,38,0); } }
     .oddsbar { display: flex; height: 6px; border-radius: 4px; overflow: hidden; margin: 11px 0 5px; }
     .oddsbar .seg.sh { background: var(--p-600); }
     .oddsbar .seg.sd { background: var(--ink-faint); }
@@ -657,7 +689,7 @@ SHELL = r"""<!DOCTYPE html>
 </div>
 <div class="h-card dark">
 <div class="score">
-<div class="kicker">Most recent</div>
+<div class="kicker" id="hero-kicker">__HERO_KICKER__</div>
 <div class="team-line" id="hero-match">__HERO_MATCH__</div>
 <div class="result">
 <span id="hero-meta">__HERO_META__</span>

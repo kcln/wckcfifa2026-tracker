@@ -211,7 +211,7 @@ def test_reconcile_bosnia_hyphen_feed_maps_to_seed():
         "date": bos["date"], "home_goals": 1, "away_goals": 1, "status": "FT"}}
     out = tracker.reconcile_results(raw, seed)
     assert out.get(bos["id"]) == {"home_goals": 1, "away_goals": 1,
-                                  "status": "FT", "events": []}
+                                  "status": "FT", "clock": "", "events": []}
 
 
 def test_reconcile_results_maps_to_seed_ids():
@@ -234,9 +234,9 @@ def test_reconcile_results_maps_to_seed_ids():
     }
     out = tracker.reconcile_results(raw, seed)
     assert out["1"] == {"home_goals": 3, "away_goals": 1, "status": "FT",
-                        "events": []}
+                        "clock": "", "events": []}
     assert out["2"] == {"home_goals": 0, "away_goals": 2, "status": "FT",
-                        "events": []}
+                        "clock": "", "events": []}
     assert all(not k.startswith("espn") for k in out)  # rekeyed to seed ids
 
 
@@ -372,3 +372,19 @@ def test_result_not_resent_when_minute_revised(tmp_path):
     day = next(d for d in saved["days"] if d["date"] == "2026-06-11")
     pms = [m for m in day["messages"] if m["type"] == "post_match"]
     assert len(pms) == 1   # one result per match, minute revision ignored
+
+
+def test_build_live_and_board_overlay_in_progress():
+    from src import fixtures
+    seed = fixtures.load_seed()
+    m = seed["matches"][0]               # any real fixture
+    feed = {m["id"]: {"home_goals": 1, "away_goals": 0, "status": "LIVE",
+                      "clock": "50'", "events": []}}
+    live = tracker.build_live(seed, feed)
+    assert live and live[-1]["home"] == m["home"] and live[-1]["clock"] == "50'"
+
+    merged = fixtures.merge_results(seed, {})   # nothing finished
+    mp = lambda h, a: {"home": 0.5, "draw": 0.3, "away": 0.2}
+    board = tracker.build_board(merged, mp, {m["date"]}, live=feed)
+    entry = next(x for d in board for x in d["matches"] if x["id"] == m["id"])
+    assert entry["status"] == "live" and entry["hg"] == 1 and entry["clock"] == "50'"

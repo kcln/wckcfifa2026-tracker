@@ -72,17 +72,22 @@ def parse_espn(payload: dict) -> dict:
     the tracker can reconcile feed events to our seed fixtures by (home, away, date)
     — ESPN's event ids do not match our seed ids.
 
-    Status mapping: completed events -> "FT"; events paused at the break
-    (STATUS_HALFTIME) -> "HT" with the current score. Other in-progress or
-    pre-match events are skipped.
+    Status mapping: completed -> "FT"; paused at the break (STATUS_HALFTIME) ->
+    "HT"; any other in-progress match -> "LIVE" (with the running clock). Only
+    pre-match (not yet kicked off) events are skipped, so the website can show
+    live scores continuously. Each entry carries `clock` (e.g. "50'").
     """
     out = {}
     for ev in payload.get("events", []):
         stype = ev.get("status", {}).get("type", {})
-        completed = bool(stype.get("completed"))
-        halftime = stype.get("name") == "STATUS_HALFTIME"
-        if not completed and not halftime:
-            continue
+        if bool(stype.get("completed")):
+            status = "FT"
+        elif stype.get("name") == "STATUS_HALFTIME":
+            status = "HT"
+        elif stype.get("state") == "in":    # any other in-progress phase
+            status = "LIVE"
+        else:
+            continue                        # pre-match (not started yet)
         competition = ev["competitions"][0]
         comp = competition["competitors"]
         h = next(c for c in comp if c["homeAway"] == "home")
@@ -94,7 +99,8 @@ def parse_espn(payload: dict) -> dict:
             "date": _pt_date(ev.get("date") or ""),
             "home_goals": int(h["score"]),
             "away_goals": int(a["score"]),
-            "status": "FT" if completed else "HT",
+            "status": status,
+            "clock": ev.get("status", {}).get("displayClock", ""),
             "events": _events_from_details(
                 competition.get("details"), id_to_name),
         }
