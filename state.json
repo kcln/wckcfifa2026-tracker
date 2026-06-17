@@ -1954,7 +1954,7 @@
           "status": "live",
           "hg": 2,
           "ag": 0,
-          "clock": "72'",
+          "clock": "76'",
           "ht": false,
           "events": [
             {
@@ -2000,7 +2000,7 @@
       "hg": 2,
       "ag": 0,
       "status": "LIVE",
-      "clock": "72'"
+      "clock": "76'"
     }
   ]
 }
