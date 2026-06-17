@@ -400,6 +400,28 @@ def _tools(scope: str) -> str:
         '</div>')
 
 
+def _order_day_matches(matches: list) -> list:
+    """Order a day's match cards by relevance (KC's spec):
+
+    - while any match is live: live first (earliest kickoff = closest to the
+      final whistle on top), then upcoming soonest-first, then finished at the
+      bottom (most recent first);
+    - when nothing is live (gaps between games, and every past day): pure
+      reverse chronological, latest kickoff on top.
+    """
+    def ko(m):
+        return (m.get("kickoff_utc") or "", str(m.get("id", "")))
+
+    live = [m for m in matches if m.get("status") == "live"]
+    if not live:
+        return sorted(matches, key=ko, reverse=True)
+    done = [m for m in matches if m.get("status") == "FT"]
+    upcoming = [m for m in matches if m.get("status") not in ("live", "FT")]
+    return (sorted(live, key=ko)                    # closest to finishing on top
+            + sorted(upcoming, key=ko)              # soonest next first
+            + sorted(done, key=ko, reverse=True))   # most recently finished first
+
+
 def _render_board_days(state: dict) -> str:
     """Day cards (board), newest first. The newest day (today's status) is open
     on first render; the rest are collapsed."""
@@ -409,11 +431,7 @@ def _render_board_days(state: dict) -> str:
     blocks = []
     for i, day in enumerate(sorted(board, key=lambda d: d["date"], reverse=True)):
         open_attr = " open" if i == 0 else ""   # today's status opens by default
-        # Within a day, latest kickoff on top (reverse chronological) — KC.
-        matches = sorted(day.get("matches", []),
-                         key=lambda x: (x.get("kickoff_utc") or "", str(x.get("id", ""))),
-                         reverse=True)
-        cards = "".join(_match_card(m) for m in matches)
+        cards = "".join(_match_card(m) for m in _order_day_matches(day.get("matches", [])))
         blocks.append(
             f'<details class="day" data-day="{escape(day["date"])}"{open_attr}>'
             f'<summary>{escape(_fmt_day_long(day["date"]))}</summary>'

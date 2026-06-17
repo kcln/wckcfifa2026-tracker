@@ -185,25 +185,45 @@ def test_render_board_match_cards(tmp_path):
     assert "Seattle, USA" in html                    # venue formatted
 
 
-def test_board_day_matches_reverse_chronological(tmp_path):
-    # Within a day, the latest kickoff renders on top (reverse chronological).
+def _day17():
+    return [
+        {"id": "a", "home": "Portugal", "away": "DR Congo",
+         "kickoff_utc": "2026-06-17T17:00:00Z", "venue": "Houston",
+         "status": "FT", "hg": 1, "ag": 1, "events": [],
+         "pred": {"home": .6, "draw": .25, "away": .15, "pick": "Portugal"}},
+        {"id": "d", "home": "England", "away": "Croatia",
+         "kickoff_utc": "2026-06-17T20:00:00Z", "venue": "Dallas (Arlington)",
+         "status": "sched", "hg": 2, "ag": 2,
+         "pred": {"home": .29, "draw": .28, "away": .43, "pick": "Croatia"}},
+        {"id": "b", "home": "Ghana", "away": "Panama",
+         "kickoff_utc": "2026-06-17T23:00:00Z", "venue": "Toronto",
+         "status": "sched",
+         "pred": {"home": .3, "draw": .2, "away": .5, "pick": "Panama"}},
+        {"id": "c", "home": "Uzbekistan", "away": "Colombia",
+         "kickoff_utc": "2026-06-18T02:00:00Z", "venue": "Mexico City",
+         "status": "sched",
+         "pred": {"home": .2, "draw": .25, "away": .55, "pick": "Colombia"}}]
+
+
+def test_board_day_no_live_is_reverse_chronological(tmp_path):
+    # No live match: pure reverse chronological, latest kickoff on top.
     state = {"days": [], "bracket": {}, "groups": {},
-             "board": [{"date": "2026-06-17", "matches": [
-                 {"id": "a", "home": "Portugal", "away": "DR Congo",
-                  "kickoff_utc": "2026-06-17T17:00:00Z", "venue": "Houston",
-                  "status": "FT", "hg": 1, "ag": 1, "events": [],
-                  "pred": {"home": .6, "draw": .25, "away": .15, "pick": "Portugal"}},
-                 {"id": "b", "home": "Ghana", "away": "Panama",
-                  "kickoff_utc": "2026-06-17T23:00:00Z", "venue": "Toronto",
-                  "status": "sched",
-                  "pred": {"home": .3, "draw": .2, "away": .5, "pick": "Panama"}},
-                 {"id": "c", "home": "Uzbekistan", "away": "Colombia",
-                  "kickoff_utc": "2026-06-18T02:00:00Z", "venue": "Mexico City",
-                  "status": "sched",
-                  "pred": {"home": .2, "draw": .25, "away": .55, "pick": "Colombia"}}]}]}
+             "board": [{"date": "2026-06-17", "matches": _day17()}]}
     html = _render(state, tmp_path)
-    # latest kickoff (Uzbekistan 02:00Z+1) above Ghana (23:00Z) above Portugal (17:00Z)
-    assert html.index("Uzbekistan") < html.index("Ghana") < html.index("Portugal")
+    assert (html.index("Uzbekistan") < html.index("Ghana")
+            < html.index("England") < html.index("Portugal"))
+
+
+def test_board_day_live_match_pinned_then_upcoming_soonest_then_done(tmp_path):
+    # England live: pinned on top, then upcoming soonest-first (Ghana 4pm before
+    # Uzbekistan 7pm), then the finished match (Portugal) at the bottom.
+    day = _day17()
+    next(m for m in day if m["id"] == "d")["status"] = "live"
+    state = {"days": [], "bracket": {}, "groups": {},
+             "board": [{"date": "2026-06-17", "matches": day}]}
+    html = _render(state, tmp_path)
+    assert (html.index("England") < html.index("Ghana")
+            < html.index("Uzbekistan") < html.index("Portugal"))
 
 
 def test_render_board_scheduled_match_shows_upcoming(tmp_path):
