@@ -2194,7 +2194,19 @@
             "away": 0.42737620904039014,
             "pick": "Croatia"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 1,
+          "ag": 0,
+          "clock": "16'",
+          "ht": false,
+          "events": [
+            {
+              "kind": "penalty",
+              "player": "Harry Kane",
+              "team": "England",
+              "minute": "12'"
+            }
+          ]
         },
         {
           "id": "68",
@@ -2229,5 +2241,18 @@
       ]
     }
   ],
-  "live": []
+  "live": [
+    {
+      "id": "67",
+      "home": "England",
+      "away": "Croatia",
+      "date": "2026-06-17",
+      "venue": "Dallas (Arlington)",
+      "kickoff_utc": "2026-06-17T20:00:00Z",
+      "hg": 1,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "16'"
+    }
+  ]
 }
