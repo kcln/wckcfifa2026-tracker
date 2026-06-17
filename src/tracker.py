@@ -110,7 +110,7 @@ def reconcile_results(raw_feed: dict, seed: dict) -> dict:
     index = {}
     for m in seed.get("matches", []):
         key = (_norm(m["home"]), _norm(m["away"]), m.get("date"))
-        index[key] = m["id"]
+        index[key] = m
 
     out = {}
     for entry in raw_feed.values():
@@ -118,17 +118,29 @@ def reconcile_results(raw_feed: dict, seed: dict) -> dict:
             continue
         key = (_norm(entry.get("home", "")), _norm(entry.get("away", "")),
                entry.get("date"))
-        seed_id = index.get(key)
-        if seed_id is None:
+        m = index.get(key)
+        if m is None:
             continue
-        out[seed_id] = {
+        out[m["id"]] = {
             "home_goals": entry["home_goals"],
             "away_goals": entry["away_goals"],
             "status": entry.get("status", "FT"),
             "clock": entry.get("clock", ""),
-            "events": entry.get("events", []),
+            # Normalize each scorer's team to the seed's spelling so a card never
+            # shows "Congo DR" in the scorer line under a "DR Congo" headline.
+            "events": [_canon_event_team(ev, m) for ev in entry.get("events", [])],
         }
     return out
+
+
+def _canon_event_team(ev: dict, match: dict) -> dict:
+    """Rewrite an event's team label to the seed fixture's home/away spelling."""
+    t = ev.get("team", "")
+    if _norm(t) == _norm(match["home"]):
+        t = match["home"]
+    elif _norm(t) == _norm(match["away"]):
+        t = match["away"]
+    return {**ev, "team": t}
 
 
 # ---------------------------------------------------------------------------
@@ -328,7 +340,8 @@ def build_live(seed: dict, live_feed: dict) -> list:
             "date": m.get("date"), "venue": m.get("venue", ""),
             "kickoff_utc": m.get("kickoff_utc", ""),
             "hg": e["home_goals"], "ag": e["away_goals"],
-            "status": e["status"], "clock": e.get("clock", "")})
+            "status": e["status"], "clock": e.get("clock", ""),
+            "events": e.get("events", [])})
     out.sort(key=lambda x: (x.get("kickoff_utc") or "", str(x["id"])))
     return out
 
@@ -344,6 +357,7 @@ def _latest_result(merged: dict) -> dict | None:
         "home": m["home"], "away": m["away"],
         "home_goals": r.get("home_goals"), "away_goals": r.get("away_goals"),
         "date": m.get("date"), "venue": m.get("venue"),
+        "events": r.get("events", []),
     }
 
 

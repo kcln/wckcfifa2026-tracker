@@ -69,9 +69,13 @@
     .h-card h1 .grad { background: linear-gradient(135deg, var(--p-400), var(--p-800)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
     .h-card .lead { margin-top: 18px; color: var(--ink-soft); font-size: 16px; line-height: 1.6; max-width: 52ch; }
 
-    .score { display: grid; grid-template-rows: auto 1fr auto; gap: 8px; height: 100%; }
-    .score .team-line { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 28px; letter-spacing: -0.02em; line-height: 1.05; margin-top: 8px; }
-    .score .team-line .vs { color: rgba(255,255,255,0.55); margin: 0 6px; font-weight: 400; }
+    .score { display: flex; flex-direction: column; gap: 8px; height: 100%; }
+    .score .team-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.34em; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 28px; letter-spacing: -0.02em; line-height: 1.15; margin-top: 8px; }
+    .score .team-line .sc { font-variant-numeric: tabular-nums; }
+    .score .team-line .vs { color: rgba(255,255,255,0.55); font-weight: 400; }
+    .score .scorers { margin: 2px 0 0; }
+    .score .scorers li { color: rgba(255,255,255,0.82); font-size: 12px; }
+    .score .scorers .ev-min, .score .scorers .ev-team, .score .scorers .og { color: rgba(255,255,255,0.5); }
     .score .result { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.20em; text-transform: uppercase; color: rgba(255,255,255,0.84); margin-top: auto; }
     .score .result .win { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0; text-transform: none; display: block; margin-top: 4px; color: var(--card); }
 
@@ -298,6 +302,19 @@
       var el = document.getElementById(id);
       if (el) el.innerHTML = html;
     }
+    function scorers(events) {
+      if (!events || !events.length) return '';
+      var rows = events.map(function (e) {
+        var icon = e.kind === 'red' ? '🟥' : '⚽';
+        var annot = e.kind === 'own_goal' ? ' <span class="og">OG</span>'
+                  : e.kind === 'penalty' ? ' <span class="og">pen</span>' : '';
+        return '<li><span class="ev-min">' + esc(e.minute || '') +
+          '</span> <span class="ev-i">' + icon + '</span> ' +
+          esc(e.player || '') + ' <span class="ev-team">' +
+          esc(e.team || '') + '</span>' + annot + '</li>';
+      });
+      return '<ul class="scorers">' + rows.join('') + '</ul>';
+    }
     function paint(d) {
       if (!d || !d.home || !d.away) return;
       if (d.live) {
@@ -307,8 +324,15 @@
       } else {
         set('hero-kicker', 'Most recent');
       }
-      set('hero-match', esc(d.home) + ' ' + d.hg +
-          ' <span class="vs">&ndash;</span> ' + d.ag + ' ' + esc(d.away));
+      // Each piece is its own span so the flex `gap` spaces both sides of every
+      // score evenly (no bare-whitespace hugging the team name).
+      set('hero-match',
+          '<span class="tm">' + esc(d.home) + '</span>' +
+          '<span class="sc">' + d.hg + '</span>' +
+          '<span class="vs">&ndash;</span>' +
+          '<span class="sc">' + d.ag + '</span>' +
+          '<span class="tm">' + esc(d.away) + '</span>');
+      set('hero-scorers', scorers(d.events));
       var bits = [];
       if (d.date)  bits.push(fmtDay(d.date));
       if (d.venue) bits.push(esc(d.venue));
