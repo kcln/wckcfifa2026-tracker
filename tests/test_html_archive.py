@@ -185,6 +185,27 @@ def test_render_board_match_cards(tmp_path):
     assert "Seattle, USA" in html                    # venue formatted
 
 
+def test_board_day_matches_reverse_chronological(tmp_path):
+    # Within a day, the latest kickoff renders on top (reverse chronological).
+    state = {"days": [], "bracket": {}, "groups": {},
+             "board": [{"date": "2026-06-17", "matches": [
+                 {"id": "a", "home": "Portugal", "away": "DR Congo",
+                  "kickoff_utc": "2026-06-17T17:00:00Z", "venue": "Houston",
+                  "status": "FT", "hg": 1, "ag": 1, "events": [],
+                  "pred": {"home": .6, "draw": .25, "away": .15, "pick": "Portugal"}},
+                 {"id": "b", "home": "Ghana", "away": "Panama",
+                  "kickoff_utc": "2026-06-17T23:00:00Z", "venue": "Toronto",
+                  "status": "sched",
+                  "pred": {"home": .3, "draw": .2, "away": .5, "pick": "Panama"}},
+                 {"id": "c", "home": "Uzbekistan", "away": "Colombia",
+                  "kickoff_utc": "2026-06-18T02:00:00Z", "venue": "Mexico City",
+                  "status": "sched",
+                  "pred": {"home": .2, "draw": .25, "away": .55, "pick": "Colombia"}}]}]}
+    html = _render(state, tmp_path)
+    # latest kickoff (Uzbekistan 02:00Z+1) above Ghana (23:00Z) above Portugal (17:00Z)
+    assert html.index("Uzbekistan") < html.index("Ghana") < html.index("Portugal")
+
+
 def test_render_board_scheduled_match_shows_upcoming(tmp_path):
     state = {"days": [], "bracket": {}, "groups": {},
              "board": [{"date": "2026-06-20", "matches": [

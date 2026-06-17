@@ -409,7 +409,11 @@ def _render_board_days(state: dict) -> str:
     blocks = []
     for i, day in enumerate(sorted(board, key=lambda d: d["date"], reverse=True)):
         open_attr = " open" if i == 0 else ""   # today's status opens by default
-        cards = "".join(_match_card(m) for m in day.get("matches", []))
+        # Within a day, latest kickoff on top (reverse chronological) — KC.
+        matches = sorted(day.get("matches", []),
+                         key=lambda x: (x.get("kickoff_utc") or "", str(x.get("id", ""))),
+                         reverse=True)
+        cards = "".join(_match_card(m) for m in matches)
         blocks.append(
             f'<details class="day" data-day="{escape(day["date"])}"{open_attr}>'
             f'<summary>{escape(_fmt_day_long(day["date"]))}</summary>'
