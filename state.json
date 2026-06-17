@@ -2345,7 +2345,12 @@
             "away": 0.7694602339456007,
             "pick": "Panama"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "5'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "62",
@@ -2365,7 +2370,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "68",
+      "home": "Ghana",
+      "away": "Panama",
+      "date": "2026-06-17",
+      "venue": "Toronto",
+      "kickoff_utc": "2026-06-17T23:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "5'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -3196,7 +3215,12 @@
             "away": 0.7694602339456007,
             "pick": "Panama"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "5'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "62",
