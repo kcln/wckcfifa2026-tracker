@@ -473,6 +473,15 @@
           "key": "pm-2026-06-17-61",
           "generated_at": "2026-06-17T12:01:58.358883-07:00",
           "kickoff_utc": "2026-06-17T17:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 17\n\nHalf-time:\nEngland 2 - 2 Croatia\nDallas (Arlington), USA\n  ⚽ 12' Harry Kane (England, pen)\n  ⚽ 36' Martin Baturina (Croatia)\n  ⚽ 42' Harry Kane (England)\n  ⚽ 45'+5' Petar Musa (Croatia)\nPrediction: Croatia",
+          "sent": true,
+          "hash": "4540e6d0715c4d5e",
+          "key": "ht-2026-06-17-67",
+          "generated_at": "2026-06-17T13:54:13.354616-07:00",
+          "kickoff_utc": "2026-06-17T20:00:00Z"
         }
       ]
     }
@@ -2210,9 +2219,9 @@
           },
           "status": "live",
           "hg": 2,
-          "ag": 1,
-          "clock": "45'+5'",
-          "ht": false,
+          "ag": 2,
+          "clock": "45'+6'",
+          "ht": true,
           "events": [
             {
               "kind": "penalty",
@@ -2231,6 +2240,12 @@
               "player": "Harry Kane",
               "team": "England",
               "minute": "42'"
+            },
+            {
+              "kind": "goal",
+              "player": "Petar Musa",
+              "team": "Croatia",
+              "minute": "45'+5'"
             }
           ]
         },
@@ -2276,9 +2291,9 @@
       "venue": "Dallas (Arlington)",
       "kickoff_utc": "2026-06-17T20:00:00Z",
       "hg": 2,
-      "ag": 1,
-      "status": "LIVE",
-      "clock": "45'+5'",
+      "ag": 2,
+      "status": "HT",
+      "clock": "45'+6'",
       "events": [
         {
           "kind": "penalty",
@@ -2297,6 +2312,12 @@
           "player": "Harry Kane",
           "team": "England",
           "minute": "42'"
+        },
+        {
+          "kind": "goal",
+          "player": "Petar Musa",
+          "team": "Croatia",
+          "minute": "45'+5'"
         }
       ]
     }
