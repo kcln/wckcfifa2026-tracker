@@ -414,6 +414,15 @@
           "key": "pm-2026-06-16-50",
           "generated_at": "2026-06-16T17:04:18.018772-07:00",
           "kickoff_utc": "2026-06-16T22:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nTuesday, June 16\n\nHalf-time:\nArgentina 1 - 0 Algeria\nKansas City, USA\n  ⚽ 17' Lionel Messi (Argentina)\nPrediction: Argentina",
+          "sent": true,
+          "hash": "fefe9fea35fe6ccd",
+          "key": "ht-2026-06-16-55",
+          "generated_at": "2026-06-16T18:53:00.658395-07:00",
+          "kickoff_utc": "2026-06-17T01:00:00Z"
         }
       ]
     }
