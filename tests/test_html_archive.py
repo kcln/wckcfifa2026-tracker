@@ -20,9 +20,12 @@ def test_render_replicates_ipl_archive_design(tmp_path):
 
 def test_render_has_telegram_cta_and_no_signup_form(tmp_path):
     html = _render({"days": [], "bracket": {}}, tmp_path)
-    assert "Match-day updates, on Telegram." in html
+    assert "Tap Start on" in html and "WcFifa2026tracker" in html
     assert "https://t.me/Kipl26bot" in html
     assert "Start on Telegram" in html
+    # the dark "Match-day updates" pitch panel was removed
+    assert "Match-day updates, on Telegram." not in html
+    assert '<div class="signup-pitch">' not in html
     # The phone sign-up form must NOT exist (Telegram CTA replaced it)
     assert "<form" not in html
     assert "Sign up" not in html
@@ -218,13 +221,14 @@ def test_sections_and_groups_are_collapsible_and_default_collapsed(tmp_path):
                   "kickoff_utc": "", "venue": "",
                   "pred": {"home": 0.5, "draw": 0.3, "away": 0.2, "pick": "A"}}]}]}
     html = _render(state, tmp_path)
-    # whole sections are collapsible, and collapsed by default (no open attr)
-    assert '<details class="section">' in html and '<details class="section" open' not in html
+    # whole sections are collapsible; Group standings collapsed, Match log open
+    assert '<details class="section">' in html        # standings (collapsed)
+    assert '<details class="section" open>' in html   # match log (open)
     assert '<span class="sec-h">Group standings</span>' in html
     assert '<span class="sec-h">Match log</span>' in html
-    # per-group + per-day collapsibles, also default collapsed
+    # per-group collapsed; the single (today's) day opens by default
     assert '<details class="grp">' in html
-    assert '<details class="day"' in html and '<details class="day" data-day="2026-06-15">' in html
+    assert '<details class="day" data-day="2026-06-15" open>' in html
     # expand/collapse-all controls for each scope + the toggle script
     assert 'data-act="expand" data-scope="groups"' in html
     assert 'data-act="collapse" data-scope="days"' in html
@@ -238,3 +242,29 @@ def test_standings_has_definitions_legend_not_abbreviation_chip(tmp_path):
     assert "P = Played · Pts = Points · GD = Goal Difference" in html
     assert "GF = Goals For · GA = Goals Against" in html
     assert '<span class="count">P · Pts · GD' not in html   # old chip removed
+
+
+def test_signup_cta_duplicated_top_and_bottom(tmp_path):
+    html = _render({"days": [], "bracket": {}, "groups": {}}, tmp_path)
+    assert html.count("Tap Start on") == 2          # top + bottom
+    assert 'id="signup-top"' in html and 'id="signup"' in html
+
+
+def test_today_status_open_on_first_render(tmp_path):
+    state = {"days": [{"date": "2026-06-15", "messages": []},
+                      {"date": "2026-06-16", "messages": []}],
+             "bracket": {}, "groups": {},
+             "board": [
+                 {"date": "2026-06-15", "matches": [
+                     {"id": "1", "home": "A", "away": "B", "status": "sched",
+                      "kickoff_utc": "", "venue": "",
+                      "pred": {"home": 0.5, "draw": 0.3, "away": 0.2, "pick": "A"}}]},
+                 {"date": "2026-06-16", "matches": [
+                     {"id": "2", "home": "C", "away": "D", "status": "sched",
+                      "kickoff_utc": "", "venue": "",
+                      "pred": {"home": 0.5, "draw": 0.3, "away": 0.2, "pick": "C"}}]}]}
+    html = _render(state, tmp_path)
+    # Match log section open, and today's (newest) day open; older day collapsed
+    assert '<details class="section" open>' in html
+    assert '<details class="day" data-day="2026-06-16" open>' in html
+    assert '<details class="day" data-day="2026-06-15">' in html  # no open

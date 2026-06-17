@@ -315,6 +315,24 @@ def _match_card(m: dict) -> str:
         f'{bar}{_events_html(m.get("events") or [])}{kick}{foot}</div>')
 
 
+def _signup(sec_id: str) -> str:
+    """The Telegram sign-up CTA — just the call-to-action box (the dark
+    "Match-day updates" pitch panel was removed per KC). Rendered both at the
+    top of the page and the bottom; `sec_id` keeps the two ids unique."""
+    return (
+        f'<section class="signup-grid solo" id="{sec_id}">'
+        '<div class="signup-cta-box"><div class="cta-eyebrow">One tap</div>'
+        '<div class="cta-headline">Tap Start on <em>WcFifa2026tracker</em>.</div>'
+        "<div class=\"cta-sub\">That's the whole signup. Telegram requires you "
+        'to message the bot first so it\'s allowed to message you back. After '
+        "you tap Start, you're on the list for the next match.</div>"
+        '<a class="tg-cta" href="https://t.me/Kipl26bot" rel="noopener" '
+        'target="_blank">Start on Telegram</a>'
+        '<p class="fine">Send <code>/stop</code> in the chat anytime to leave, '
+        '<code>/start</code> to rejoin. No phone number needed. No spam.</p>'
+        '</div></section>')
+
+
 def _tools(scope: str) -> str:
     """Expand-all / Collapse-all buttons for a section's collapsibles."""
     return (
@@ -325,29 +343,31 @@ def _tools(scope: str) -> str:
 
 
 def _render_board_days(state: dict) -> str:
-    """Day cards (board) — every day collapsed by default."""
+    """Day cards (board), newest first. The newest day (today's status) is open
+    on first render; the rest are collapsed."""
     board = state.get("board") or []
     if not board:
         return _render_days(state.get("days") or [])
     blocks = []
-    for day in sorted(board, key=lambda d: d["date"], reverse=True):
+    for i, day in enumerate(sorted(board, key=lambda d: d["date"], reverse=True)):
+        open_attr = " open" if i == 0 else ""   # today's status opens by default
         cards = "".join(_match_card(m) for m in day.get("matches", []))
         blocks.append(
-            f'<details class="day" data-day="{escape(day["date"])}">'
+            f'<details class="day" data-day="{escape(day["date"])}"{open_attr}>'
             f'<summary>{escape(_fmt_day_long(day["date"]))}</summary>'
             f'<div class="cards">{cards}</div></details>')
     return "".join(blocks)
 
 
 def _render_matchlog(state: dict) -> str:
-    """The whole Match-log section: collapsible, with expand/collapse-all and
-    per-day collapsibles inside (all collapsed by default)."""
+    """The whole Match-log section. Open on first render (with today's day
+    expanded inside); expand/collapse-all toggles every day."""
     count = ""
     if state.get("days"):
         count = (f'<span class="sec-count">Day {len(state["days"])} '
                  f'of {TOURNAMENT_DAYS}</span>')
     return (
-        '<details class="section">'
+        '<details class="section" open>'
         f'<summary><span class="sec-h">Match log</span>{count}</summary>'
         f'<div class="sec-body">{_tools("days")}'
         f'<main id="days">{_render_board_days(state)}</main></div></details>')
@@ -391,6 +411,8 @@ def render(state: dict, path) -> None:
         page = page.replace(token, value)
     page = page.replace("__STANDINGS__", _render_standings(state))
     page = page.replace("__MATCHLOG__", _render_matchlog(state))
+    page = page.replace("__SIGNUP_TOP__", _signup("signup-top"))
+    page = page.replace("__SIGNUP_BOTTOM__", _signup("signup"))
     out = Path(path)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(page, encoding="utf-8")
@@ -571,6 +593,7 @@ SHELL = r"""<!DOCTYPE html>
     article .body pre.mono { font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1.55; white-space: pre; overflow-x: auto; background: var(--card-2); border: 1px solid var(--hair-soft); border-radius: 8px; padding: 10px 12px; margin: 8px 0; }
 
     .signup-grid { margin-top: 56px; display: grid; grid-template-columns: 5fr 7fr; gap: 16px; }
+    .signup-grid.solo { grid-template-columns: 1fr; margin-top: 24px; }
     .signup-pitch { background: var(--brown); color: var(--card); border-radius: var(--radius-lg); padding: 36px 32px; position: relative; overflow: hidden; }
     .signup-pitch::before { content: ''; position: absolute; bottom: -50%; right: -30%; width: 160%; height: 200%; background: radial-gradient(circle, rgba(168,85,247,0.40) 0%, transparent 60%); pointer-events: none; }
     .signup-pitch-inner { position: relative; }
@@ -648,28 +671,10 @@ SHELL = r"""<!DOCTYPE html>
 <div class="desc" id="hero-leader-desc">__HERO_LEADER_DESC__</div>
 </div>
 </section>
+__SIGNUP_TOP__
 __STANDINGS__
 __MATCHLOG__
-<section class="signup-grid" id="signup">
-<div class="signup-pitch">
-<div class="signup-pitch-inner">
-<div class="kicker">Get the messages</div>
-<h2>Match-day updates, on Telegram.</h2>
-<p>Predictions before kickoff. Half-time score at the break. Results as they finish, recap at night.</p>
-<div class="stats">
-<div><strong>~7</strong>messages / match day</div>
-<div><strong>/stop</strong>to opt out</div>
-</div>
-</div>
-</div>
-<div class="signup-cta-box">
-<div class="cta-eyebrow">One tap</div>
-<div class="cta-headline">Tap Start on <em>WcFifa2026tracker</em>.</div>
-<div class="cta-sub">That's the whole signup. Telegram requires you to message the bot first so it's allowed to message you back. After you tap Start, you're on the list for the next match.</div>
-<a class="tg-cta" href="https://t.me/Kipl26bot" rel="noopener" target="_blank">Start on Telegram</a>
-<p class="fine">Send <code>/stop</code> in the chat anytime to leave, <code>/start</code> to rejoin. No phone number needed. No spam.</p>
-</div>
-</section>
+__SIGNUP_BOTTOM__
 <footer class="foot">
 <span class="made">Built by <a href="https://github.com/kcln/wckcfifa2026-tracker" rel="noopener" target="_blank">KC Lakshminarasimham</a></span>
 <span class="links">fifa.com · ESPN FC</span>
