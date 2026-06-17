@@ -155,7 +155,12 @@ def test_git_sync_commits_and_pushes_when_dirty():
     joined = [" ".join(a) for a in seen]
     assert any(j.startswith("git add") for j in joined)
     assert any(j.startswith("git commit") for j in joined)
-    assert any(j.startswith("git push") for j in joined)
+    # Detached-HEAD-proof, non-wedging persist: clear any stale rebase, then
+    # reconcile with merge -X ours and push explicitly to main.
+    assert "git rebase --abort" in joined
+    assert any(j.startswith("git merge -X ours") for j in joined)
+    assert "git push origin HEAD:main" in joined
+    assert not any("pull --rebase" in j for j in joined)
 
 
 def test_git_sync_noop_when_clean():

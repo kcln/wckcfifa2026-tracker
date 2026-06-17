@@ -89,13 +89,23 @@ def git_sync(run_cmd: Callable[[list], str] = _run_cmd) -> None:
     Called after each live cycle so a hard-killed job never loses the
     sent-state that dedupes Telegram deliveries (and so the GitHub Pages
     archive stays current during long matchday loops).
+
+    Must be detached-HEAD-proof and must never wedge the repo. The CI runner
+    can be in detached HEAD, and the old `git pull --rebase` would stop on the
+    first conflict (docs/index.html is regenerated every cycle) leaving the repo
+    mid-rebase in detached HEAD — after which every later commit/push failed and
+    sent-state stopped persisting, re-sending messages on the next run. So:
+    clear any leftover rebase, reconcile with `merge -X ours` (prefers our just
+    -written state for the machine-owned files, never conflict-stops), and push
+    explicitly to main so it works regardless of HEAD being detached.
     """
     dirty = run_cmd(["git", "status", "--porcelain",
                      "state.json", "subscribers.json", "docs"])
     if not dirty.strip():
         return
+    run_cmd(["git", "rebase", "--abort"])   # no-op if no rebase in progress
     run_cmd(["git", "add", "state.json", "subscribers.json", "docs"])
-    run_cmd(["git", "commit", "-m",
-             "update: live tracker cycle"])
-    run_cmd(["git", "pull", "--rebase"])
-    run_cmd(["git", "push"])
+    run_cmd(["git", "commit", "-m", "update: live tracker cycle"])
+    run_cmd(["git", "fetch", "origin", "main"])
+    run_cmd(["git", "merge", "-X", "ours", "--no-edit", "origin/main"])
+    run_cmd(["git", "push", "origin", "HEAD:main"])

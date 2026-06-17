@@ -33,23 +33,27 @@ jobs:
       - name: Commit and push results
         if: always()
         run: |
+          # Telegram messages were already sent in the run step; this push is
+          # what persists the sent-state that dedupes them. If it fails, the
+          # next run sees the message as unsent and delivers it AGAIN (the
+          # 2026-06-17 duplicate match-day briefs). The old `git pull --rebase`
+          # was the culprit: the CI runner can be in detached HEAD and a rebase
+          # conflict (docs/index.html regenerates every cycle) left the repo
+          # wedged mid-rebase, so every later commit/push failed. So: clear any
+          # leftover rebase, commit, then reconcile with `merge -X ours` (keeps
+          # our just-written sent-flags, never conflict-stops) and push straight
+          # to main so it works regardless of detached HEAD. Retry the
+          # fetch/merge/push for transient non-fast-forwards.
+          git rebase --abort 2>/dev/null || true
           git add state.json subscribers.json docs/
           git diff --cached --quiet || git commit -m "update: tracker run $(date -u +%FT%TZ)"
-          # Telegram messages were already sent in the run step; this push is
-          # what persists the sent-state that dedupes them. A lost push means
-          # the next run sees the message as unsent and delivers it AGAIN —
-          # that caused duplicate match-day briefs on 2026-06-17 when a push
-          # raced a concurrent one and the run failed after sending. Always run
-          # the retry loop (not just on a fresh commit) because an in-loop
-          # git_sync may have committed locally but failed to push, leaving an
-          # unpushed commit a staged-only check would miss. pull --rebase + push
-          # is a no-op when already in sync, so this is safe to always run.
           for attempt in 1 2 3 4 5; do
-            if git pull --rebase --no-edit && git push; then
+            git fetch origin main || { sleep $((attempt * 3)); continue; }
+            git merge -X ours --no-edit origin/main || { git merge --abort 2>/dev/null || true; sleep $((attempt * 3)); continue; }
+            if git push origin HEAD:main; then
               echo "persisted on attempt $attempt"; exit 0
             fi
-            echo "push attempt $attempt failed; resetting and retrying"
-            git rebase --abort 2>/dev/null || true
+            echo "push attempt $attempt failed; retrying"
             sleep $((attempt * 3))
           done
           echo "ERROR: could not persist sent-state after 5 attempts"; exit 1
