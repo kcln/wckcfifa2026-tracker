@@ -76,6 +76,9 @@ _ALIASES = {
     # ESPN sometimes spells the ampersand out ("Bosnia and Herzegovina");
     # squashing alone can't unify "&" with "and", so alias it explicitly.
     "bosniaandherzegovina": "bosniaherzegovina",
+    # ESPN orders it "Congo DR", the seed "DR Congo"; squashing keeps word order
+    # so "congodr" != "drcongo" — silently dropped the live + FT Portugal match.
+    "congodr": "drcongo",
 }
 
 _SQUASH_RE = re.compile(r"[^a-z0-9]+")

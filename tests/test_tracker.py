@@ -188,6 +188,8 @@ def test_norm_aliases():
     assert tracker._norm("United States") == tracker._norm("USA")
     assert tracker._norm("IR Iran") == tracker._norm("Iran")
     assert tracker._norm("Czechia") == tracker._norm("Czech Republic")
+    # Word-order variant: squashing keeps order, so this needs an explicit alias.
+    assert tracker._norm("Congo DR") == tracker._norm("DR Congo")
 
 
 def test_norm_unifies_punctuation_variants():
@@ -212,6 +214,23 @@ def test_reconcile_bosnia_hyphen_feed_maps_to_seed():
     out = tracker.reconcile_results(raw, seed)
     assert out.get(bos["id"]) == {"home_goals": 1, "away_goals": 1,
                                   "status": "FT", "clock": "", "events": []}
+
+
+def test_reconcile_congo_word_order_feed_maps_to_seed_live():
+    # Jun-17 live bug: ESPN's "Congo DR" vs seed "DR Congo" failed to reconcile,
+    # so the live hero never populated (and the FT result would have dropped too).
+    from src import fixtures
+    seed = fixtures.load_seed()
+    drc = next(m for m in seed["matches"]
+               if "Congo" in (m["home"] + m["away"]))
+    feed_home = "Congo DR" if drc["home"] == "DR Congo" else drc["home"]
+    feed_away = "Congo DR" if drc["away"] == "DR Congo" else drc["away"]
+    raw = {"espn-drc": {
+        "home": feed_home, "away": feed_away, "date": drc["date"],
+        "home_goals": 1, "away_goals": 1, "status": "LIVE", "clock": "64'"}}
+    out = tracker.reconcile_results(raw, seed)
+    assert out.get(drc["id"], {}).get("status") == "LIVE"
+    assert tracker.build_live(seed, out)[0]["id"] == drc["id"]
 
 
 def test_reconcile_results_maps_to_seed_ids():
