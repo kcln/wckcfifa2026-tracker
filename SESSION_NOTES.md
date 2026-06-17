@@ -154,6 +154,17 @@ dr-{date} / cr-{date}. So ESPN revising a goal minute/scorer after the whistle
 no longer re-sends. Legacy messages fall back to body hash. _all_keys() builds
 the dedup set. (Bug that prompted this: NJP goal 88'->89' re-sent the result.)
 
+## Late-PT match dropped + recap stalled (fixed 2026-06-17)
+ESPN buckets a fixture by its US-local date, so a 9pm-PT kickoff (04:00 UTC next
+day) lands in ESPN's NEXT UTC date bucket. The default single-day scoreboard
+returned the day's three earlier games but NOT the late one (Austria-Jordan
+Jun 16). Result: no ht/pm for it AND the daily recap never fired (the day-clock
+gate waits for every match to read FT). Fix: `data_fetcher._espn_source` now
+fetches a yesterday/today/tomorrow UTC window via `?dates=YYYYMMDD` and merges
+events deduped by id (`_scoreboard_urls` + `_merge_events`). Any last-slot match
+would have been dropped before this. Backfilled the missing pm + recap by
+running the tracker on the new code.
+
 ## NEXT
 - Add Ankit's chat ID (8954471490) to TELEGRAM_CHAT_IDS if/when he replies YES.
 - Confirm a Telegram brief lands on KC's phone once the tournament starts (Jun 11).
