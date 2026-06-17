@@ -452,6 +452,20 @@
           "kickoff_utc": "2026-06-16T19:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-06-17",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 17\n\nMatchday Brief\n\nPortugal vs DR Congo\n  Prediction: Portugal\n  Portugal 63.9% · Draw 27.1% · DR Congo 8.9%\n  🕐 10:00am PT / 12:00pm CT / 1:00pm ET / 10:30pm IST\n  📍 Houston, USA\n\nEngland vs Croatia\n  Prediction: Croatia\n  England 29.2% · Draw 28.0% · Croatia 42.7%\n  🕐 1:00pm PT / 3:00pm CT / 4:00pm ET / 1:30am IST (+1d)\n  📍 Dallas (Arlington), USA\n\nGhana vs Panama\n  Prediction: Panama\n  Ghana 8.3% · Draw 14.8% · Panama 76.9%\n  🕐 4:00pm PT / 6:00pm CT / 7:00pm ET / 4:30am IST (+1d)\n  📍 Toronto, Canada\n\nUzbekistan vs Colombia\n  Prediction: Colombia\n  Uzbekistan 11.7% · Draw 24.9% · Colombia 63.4%\n  🕐 7:00pm PT / 9:00pm CT / 10:00pm ET / 7:30am IST (+1d)\n  📍 Mexico City, Mexico",
+          "sent": true,
+          "hash": "5b4a30ac0e60d22f",
+          "key": "mb-2026-06-17",
+          "generated_at": "2026-06-17T00:02:15.391473-07:00",
+          "kickoff_utc": "2026-06-17T17:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -2102,6 +2116,71 @@
             }
           ],
           "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-06-17",
+      "matches": [
+        {
+          "id": "61",
+          "home": "Portugal",
+          "away": "DR Congo",
+          "kickoff_utc": "2026-06-17T17:00:00Z",
+          "venue": "Houston",
+          "stage": "group",
+          "pred": {
+            "home": 0.6393875529740177,
+            "draw": 0.2711836505755111,
+            "away": 0.08942879645047122,
+            "pick": "Portugal"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "67",
+          "home": "England",
+          "away": "Croatia",
+          "kickoff_utc": "2026-06-17T20:00:00Z",
+          "venue": "Dallas (Arlington)",
+          "stage": "group",
+          "pred": {
+            "home": 0.2924193436047386,
+            "draw": 0.2802044473548712,
+            "away": 0.42737620904039014,
+            "pick": "Croatia"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "68",
+          "home": "Ghana",
+          "away": "Panama",
+          "kickoff_utc": "2026-06-17T23:00:00Z",
+          "venue": "Toronto",
+          "stage": "group",
+          "pred": {
+            "home": 0.08279701226100439,
+            "draw": 0.14774275379339505,
+            "away": 0.7694602339456007,
+            "pick": "Panama"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "62",
+          "home": "Uzbekistan",
+          "away": "Colombia",
+          "kickoff_utc": "2026-06-18T02:00:00Z",
+          "venue": "Mexico City",
+          "stage": "group",
+          "pred": {
+            "home": 0.11687968810961928,
+            "draw": 0.2487965290754469,
+            "away": 0.6343237828149338,
+            "pick": "Colombia"
+          },
+          "status": "sched"
         }
       ]
     }
