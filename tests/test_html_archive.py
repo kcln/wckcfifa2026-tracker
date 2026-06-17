@@ -150,7 +150,7 @@ def test_render_standings_as_real_html_table(tmp_path):
         ]}}
     html = _render(state, tmp_path)
     assert '<table class="gtable">' in html
-    assert "<caption>Group A</caption>" in html
+    assert "<summary>Group A</summary>" in html
     assert '<td class="t-team">Mexico</td>' in html
     assert '<td class="t-pts">3</td>' in html
     assert 'class="qual"' in html              # top-2 highlighted
@@ -207,3 +207,34 @@ def test_card_bolds_pick_only_on_correct_prediction(tmp_path):
     assert '<span class="miss">Germany</span>' in html_miss
     # odds labels are sized to their segment so they centre over it
     assert 'flex-basis:77.8%' in html_hit and 'flex-basis:15.9%' in html_hit
+
+
+def test_sections_and_groups_are_collapsible_and_default_collapsed(tmp_path):
+    state = {"days": [{"date": "2026-06-15", "messages": []}], "bracket": {},
+             "groups": {"A": [{"team": "Mexico", "played": 1, "points": 3,
+                               "gd": 2, "gf": 2, "ga": 0}]},
+             "board": [{"date": "2026-06-15", "matches": [
+                 {"id": "1", "home": "A", "away": "B", "status": "sched",
+                  "kickoff_utc": "", "venue": "",
+                  "pred": {"home": 0.5, "draw": 0.3, "away": 0.2, "pick": "A"}}]}]}
+    html = _render(state, tmp_path)
+    # whole sections are collapsible, and collapsed by default (no open attr)
+    assert '<details class="section">' in html and '<details class="section" open' not in html
+    assert '<span class="sec-h">Group standings</span>' in html
+    assert '<span class="sec-h">Match log</span>' in html
+    # per-group + per-day collapsibles, also default collapsed
+    assert '<details class="grp">' in html
+    assert '<details class="day"' in html and '<details class="day" data-day="2026-06-15">' in html
+    # expand/collapse-all controls for each scope + the toggle script
+    assert 'data-act="expand" data-scope="groups"' in html
+    assert 'data-act="collapse" data-scope="days"' in html
+    assert "querySelectorAll(sel)" in html
+
+
+def test_standings_has_definitions_legend_not_abbreviation_chip(tmp_path):
+    state = {"days": [], "bracket": {}, "groups": {"A": [
+        {"team": "Mexico", "played": 1, "points": 3, "gd": 2, "gf": 2, "ga": 0}]}}
+    html = _render(state, tmp_path)
+    assert "P = Played · Pts = Points · GD = Goal Difference" in html
+    assert "GF = Goals For · GA = Goals Against" in html
+    assert '<span class="count">P · Pts · GD' not in html   # old chip removed

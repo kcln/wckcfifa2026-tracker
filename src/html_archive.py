@@ -315,42 +315,71 @@ def _match_card(m: dict) -> str:
         f'{bar}{_events_html(m.get("events") or [])}{kick}{foot}</div>')
 
 
-def _render_board(state: dict) -> str:
+def _tools(scope: str) -> str:
+    """Expand-all / Collapse-all buttons for a section's collapsibles."""
+    return (
+        '<div class="sec-tools">'
+        f'<button type="button" data-act="expand" data-scope="{scope}">Expand all</button>'
+        f'<button type="button" data-act="collapse" data-scope="{scope}">Collapse all</button>'
+        '</div>')
+
+
+def _render_board_days(state: dict) -> str:
+    """Day cards (board) — every day collapsed by default."""
     board = state.get("board") or []
     if not board:
         return _render_days(state.get("days") or [])
     blocks = []
-    for i, day in enumerate(sorted(board, key=lambda d: d["date"], reverse=True)):
-        open_attr = " open" if i == 0 else ""
+    for day in sorted(board, key=lambda d: d["date"], reverse=True):
         cards = "".join(_match_card(m) for m in day.get("matches", []))
         blocks.append(
-            f'<details data-day="{escape(day["date"])}"{open_attr}>'
+            f'<details class="day" data-day="{escape(day["date"])}">'
             f'<summary>{escape(_fmt_day_long(day["date"]))}</summary>'
             f'<div class="cards">{cards}</div></details>')
     return "".join(blocks)
 
 
+def _render_matchlog(state: dict) -> str:
+    """The whole Match-log section: collapsible, with expand/collapse-all and
+    per-day collapsibles inside (all collapsed by default)."""
+    count = ""
+    if state.get("days"):
+        count = (f'<span class="sec-count">Day {len(state["days"])} '
+                 f'of {TOURNAMENT_DAYS}</span>')
+    return (
+        '<details class="section">'
+        f'<summary><span class="sec-h">Match log</span>{count}</summary>'
+        f'<div class="sec-body">{_tools("days")}'
+        f'<main id="days">{_render_board_days(state)}</main></div></details>')
+
+
 def _render_standings(state: dict) -> str:
+    """The whole Group-standings section: collapsible, definitions legend,
+    expand/collapse-all, and per-group collapsible tables (all collapsed)."""
     groups = state.get("groups") or {}
     if not groups:
         return ""
-    tables = []
+    grps = []
     for g in sorted(groups):
-        rows = groups[g]
         body = "".join(
             f'<tr class="{"qual" if n < 2 else ""}">'
             f'<td class="t-team">{escape(str(r["team"]))}</td>'
             f'<td>{r["played"]}</td><td class="t-pts">{r["points"]}</td>'
             f'<td>{r["gd"]:+d}</td><td>{r["gf"]}</td><td>{r["ga"]}</td></tr>'
-            for n, r in enumerate(rows))
-        tables.append(
-            f'<table class="gtable"><caption>Group {escape(g)}</caption>'
+            for n, r in enumerate(groups[g]))
+        grps.append(
+            f'<details class="grp"><summary>Group {escape(g)}</summary>'
+            f'<table class="gtable">'
             f'<thead><tr><th class="t-team">Team</th><th>P</th><th>Pts</th>'
-            f'<th>GD</th><th>GF</th><th>GA</th></tr></thead><tbody>{body}</tbody></table>')
+            f'<th>GD</th><th>GF</th><th>GA</th></tr></thead>'
+            f'<tbody>{body}</tbody></table></details>')
+    legend = ('<div class="legend">P = Played · Pts = Points · '
+              'GD = Goal Difference · GF = Goals For · GA = Goals Against</div>')
     return (
-        '<div class="section-head"><h2>Group standings</h2>'
-        '<span class="count">P · Pts · GD · GF · GA</span></div>'
-        f'<div class="standings">{"".join(tables)}</div>')
+        '<details class="section">'
+        '<summary><span class="sec-h">Group standings</span></summary>'
+        f'<div class="sec-body">{legend}{_tools("groups")}'
+        f'<div class="standings">{"".join(grps)}</div></div></details>')
 
 
 def render(state: dict, path) -> None:
@@ -361,7 +390,7 @@ def render(state: dict, path) -> None:
     for token, value in _hero_tokens(state).items():
         page = page.replace(token, value)
     page = page.replace("__STANDINGS__", _render_standings(state))
-    page = page.replace("__DAYS__", _render_board(state))
+    page = page.replace("__MATCHLOG__", _render_matchlog(state))
     out = Path(path)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(page, encoding="utf-8")
@@ -495,6 +524,26 @@ SHELL = r"""<!DOCTYPE html>
     .chip-time { font-family: 'JetBrains Mono', monospace; font-size: 10px; background: var(--bg); color: var(--ink-soft); padding: 3px 7px; border-radius: 6px; }
     .mc-foot { margin-top: 9px; font-size: 12px; color: var(--ink-faint); }
 
+    /* ---- collapsible sections + groups (default collapsed) ---- */
+    details.section { background: var(--card); border: 1px solid var(--hair-soft); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); margin: 22px 0; overflow: hidden; }
+    details.section > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 20px 24px; }
+    details.section > summary::-webkit-details-marker { display: none; }
+    details.section > summary::after { content: '+'; font-family: 'JetBrains Mono', monospace; font-size: 18px; color: var(--ink-soft); margin-left: 14px; }
+    details.section[open] > summary::after { content: '\2013'; }
+    .sec-h { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.018em; color: var(--ink); margin-right: auto; }
+    .sec-count { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); }
+    .sec-body { padding: 0 24px 22px; }
+    .sec-tools { display: flex; gap: 8px; margin: 6px 0 14px; }
+    .sec-tools button { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); background: var(--bg); border: 1px solid var(--hair); border-radius: 100px; padding: 6px 13px; cursor: pointer; transition: all 0.12s; }
+    .sec-tools button:hover { background: var(--p-100); color: var(--p-700); border-color: transparent; }
+    .legend { font-size: 12.5px; color: var(--ink-soft); margin: 4px 0 2px; line-height: 1.6; }
+    details.grp { border: 1px solid var(--hair-soft); border-radius: var(--radius-md); overflow: hidden; background: var(--card); height: fit-content; }
+    details.grp > summary { list-style: none; cursor: pointer; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 14px; padding: 13px 14px; display: flex; align-items: center; justify-content: space-between; color: var(--ink); }
+    details.grp > summary::-webkit-details-marker { display: none; }
+    details.grp > summary::after { content: '+'; font-family: 'JetBrains Mono', monospace; color: var(--ink-faint); }
+    details.grp[open] > summary::after { content: '\2013'; }
+    details.grp .gtable { border: 0; border-radius: 0; box-shadow: none; border-top: 1px solid var(--hair-soft); }
+
     main#days { display: block; }
 
     details.day { background: var(--card); border-radius: var(--radius-lg); border: 1px solid var(--hair-soft); box-shadow: var(--shadow-sm); margin-bottom: 14px; overflow: hidden; transition: box-shadow 0.2s; }
@@ -600,11 +649,7 @@ SHELL = r"""<!DOCTYPE html>
 </div>
 </section>
 __STANDINGS__
-<div class="section-head">
-<h2>Match log</h2>
-<span class="count" id="match-count">__MATCH_COUNT__</span>
-</div>
-<main id="days">__DAYS__</main>
+__MATCHLOG__
 <section class="signup-grid" id="signup">
 <div class="signup-pitch">
 <div class="signup-pitch-inner">
@@ -630,6 +675,17 @@ __STANDINGS__
 <span class="links">fifa.com · ESPN FC</span>
 </footer>
 </div>
+<script>
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-act]');
+    if (!b) return;
+    var open = b.getAttribute('data-act') === 'expand';
+    var sel = b.getAttribute('data-scope') === 'groups'
+      ? 'details.grp' : 'details[data-day]';
+    var root = b.closest('.section') || document;
+    root.querySelectorAll(sel).forEach(function (d) { d.open = open; });
+  });
+</script>
 </body>
 </html>
 """
