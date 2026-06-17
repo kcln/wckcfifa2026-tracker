@@ -2211,7 +2211,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "28'",
+          "clock": "32'",
           "ht": false,
           "events": [
             {
@@ -2266,7 +2266,7 @@
       "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "28'",
+      "clock": "32'",
       "events": [
         {
           "kind": "penalty",
