@@ -1,4 +1,28 @@
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
 from src import data_fetcher as df
+
+
+def test_scoreboard_urls_span_pt_day_boundary():
+    # A 9pm PT kickoff is 04:00 UTC the next day, so covering a PT day needs
+    # both the current and adjacent UTC date buckets, not just the default feed.
+    now = datetime(2026, 6, 17, 6, 0, tzinfo=ZoneInfo("UTC"))
+    urls = df._scoreboard_urls(now)
+    assert df.ESPN_URL in urls
+    assert any("dates=20260616" in u for u in urls)
+    assert any("dates=20260617" in u for u in urls)
+    assert any("dates=20260618" in u for u in urls)
+
+
+def test_merge_events_dedups_by_id_across_payloads():
+    # The late match (id 4) appears only in the explicit date bucket, not the
+    # default feed; the merge must surface it. Shared ids dedup (later wins).
+    default = {"events": [{"id": "1"}, {"id": "2"}]}
+    bucket = {"events": [{"id": "2"}, {"id": "4"}]}
+    merged = df._merge_events([default, bucket])
+    ids = sorted(e["id"] for e in merged["events"])
+    assert ids == ["1", "2", "4"]
 
 
 def test_parse_espn_scoreboard_extracts_completed_results():

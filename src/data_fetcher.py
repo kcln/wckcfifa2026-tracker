@@ -1,7 +1,7 @@
 """Tiered fetch of live results, with cache fallback."""
 from __future__ import annotations
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 import requests
@@ -9,6 +9,7 @@ import requests
 ESPN_URL = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard"
 
 _PT = ZoneInfo("America/Los_Angeles")
+_UTC = ZoneInfo("UTC")
 
 
 def _pt_date(iso_utc: str) -> str:
@@ -107,8 +108,37 @@ def parse_espn(payload: dict) -> dict:
     return out
 
 
+def _scoreboard_urls(now: datetime) -> list:
+    """ESPN buckets a fixture by its US-local date, so a late-PT kickoff (>= 9pm
+    PT = >= 04:00 UTC) lands in the NEXT UTC date bucket and is absent from the
+    default single-day scoreboard. That silently dropped the last match of the
+    night and stalled the daily recap (it waits for every match to read FT).
+    Fetch a yesterday/today/tomorrow window so any PT day is fully covered."""
+    urls = [ESPN_URL]
+    for delta in (-1, 0, 1):
+        d = (now + timedelta(days=delta)).strftime("%Y%m%d")
+        urls.append(f"{ESPN_URL}?dates={d}")
+    return urls
+
+
+def _merge_events(payloads) -> dict:
+    """Merge several scoreboard payloads into one, deduping events by id (a
+    later payload wins, so explicit date buckets override the default feed)."""
+    events = {}
+    for p in payloads:
+        for ev in p.get("events", []):
+            events[ev["id"]] = ev
+    return {"events": list(events.values())}
+
+
 def _espn_source() -> dict:
-    return parse_espn(requests.get(ESPN_URL, timeout=15).json())
+    payloads = []
+    for url in _scoreboard_urls(datetime.now(_UTC)):
+        try:
+            payloads.append(requests.get(url, timeout=15).json())
+        except Exception:
+            continue
+    return parse_espn(_merge_events(payloads))
 
 
 def fetch_results(sources=None, cache_path: Path | None = None) -> dict:
