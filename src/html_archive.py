@@ -345,8 +345,9 @@ def _signup(sec_id: str) -> str:
         '<div class="signup-cta-box"><div class="cta-eyebrow">One tap</div>'
         '<div class="cta-headline">Tap Start on <em>WcFifa2026tracker</em>.</div>'
         "<div class=\"cta-sub\">That's the whole signup. Telegram requires you "
-        'to message the bot first so it\'s allowed to message you back. After '
-        "you tap Start, you're on the list for the next match.</div>"
+        'to message the bot first so it\'s allowed to message you back. New '
+        "sign-ups are approved, then match updates start with the next match."
+        "</div>"
         '<a class="tg-cta" href="https://t.me/Kipl26bot" rel="noopener" '
         'target="_blank">Start on Telegram</a>'
         '<p class="fine">Send <code>/stop</code> in the chat anytime to leave, '
