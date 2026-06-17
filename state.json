@@ -2220,7 +2220,7 @@
           "status": "live",
           "hg": 3,
           "ag": 2,
-          "clock": "76'",
+          "clock": "80'",
           "ht": false,
           "events": [
             {
@@ -2299,7 +2299,7 @@
       "hg": 3,
       "ag": 2,
       "status": "LIVE",
-      "clock": "76'",
+      "clock": "80'",
       "events": [
         {
           "kind": "penalty",
