@@ -423,6 +423,15 @@
           "key": "ht-2026-06-16-55",
           "generated_at": "2026-06-16T18:53:00.658395-07:00",
           "kickoff_utc": "2026-06-17T01:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nTuesday, June 16\n\nFull time:\nArgentina 3 - 0 Algeria\nKansas City, USA\n  ⚽ 17' Lionel Messi (Argentina)\n  ⚽ 60' Lionel Messi (Argentina)\n  ⚽ 76' Lionel Messi (Argentina)\nOverall prediction: 8/19 (42.1%)\nPrediction ✓: Argentina",
+          "sent": true,
+          "hash": "93ddab58eebc6f21",
+          "key": "pm-2026-06-16-55",
+          "generated_at": "2026-06-16T20:01:57.596216-07:00",
+          "kickoff_utc": "2026-06-17T01:00:00Z"
         }
       ]
     }
@@ -736,19 +745,11 @@
     ],
     "J": [
       {
-        "team": "Algeria",
-        "played": 0,
-        "points": 0,
-        "gd": 0,
-        "gf": 0,
-        "ga": 0
-      },
-      {
         "team": "Argentina",
-        "played": 0,
-        "points": 0,
-        "gd": 0,
-        "gf": 0,
+        "played": 1,
+        "points": 3,
+        "gd": 3,
+        "gf": 3,
         "ga": 0
       },
       {
@@ -766,6 +767,14 @@
         "gd": 0,
         "gf": 0,
         "ga": 0
+      },
+      {
+        "team": "Algeria",
+        "played": 1,
+        "points": 0,
+        "gd": -3,
+        "gf": 0,
+        "ga": 3
       }
     ],
     "K": [
@@ -839,104 +848,108 @@
   },
   "bracket": {
     "title_odds": {
-      "Turkey": 0.0123,
-      "Brazil": 0.0517,
-      "Belgium": 0.0215,
-      "Spain": 0.15,
-      "France": 0.1261,
-      "Argentina": 0.2074,
-      "Japan": 0.0269,
-      "Germany": 0.0439,
-      "Ecuador": 0.0213,
-      "Czech Republic": 0.0014,
-      "Austria": 0.0046,
-      "England": 0.0403,
-      "Uruguay": 0.015,
+      "France": 0.123,
+      "Brazil": 0.0496,
+      "Spain": 0.1491,
+      "Argentina": 0.2108,
+      "Croatia": 0.033,
+      "Uruguay": 0.0178,
+      "Austria": 0.0034,
+      "South Korea": 0.0077,
+      "Iran": 0.0062,
+      "Belgium": 0.0188,
+      "Norway": 0.0087,
+      "England": 0.0375,
+      "Morocco": 0.0241,
+      "Japan": 0.0298,
+      "Egypt": 0.003,
       "Netherlands": 0.0333,
-      "Colombia": 0.048,
-      "Egypt": 0.0021,
-      "Portugal": 0.05,
-      "Uzbekistan": 0.0009,
-      "Morocco": 0.0247,
-      "Croatia": 0.0294,
-      "Mexico": 0.0204,
-      "Algeria": 0.0032,
-      "Iran": 0.006,
-      "South Korea": 0.0079,
-      "Australia": 0.0068,
-      "Norway": 0.0085,
-      "Canada": 0.0075,
-      "Switzerland": 0.0126,
-      "Sweden": 0.002,
-      "Scotland": 0.0006,
-      "DR Congo": 0.0004,
-      "Cape Verde": 0.0004,
+      "Colombia": 0.0502,
+      "Germany": 0.0425,
+      "Mexico": 0.0177,
+      "Ecuador": 0.0234,
+      "Portugal": 0.0435,
+      "Switzerland": 0.0137,
+      "Turkey": 0.0103,
       "New Zealand": 0.0001,
-      "Paraguay": 0.0012,
-      "Senegal": 0.0064,
-      "Ivory Coast": 0.0034,
-      "Panama": 0.0017,
-      "Saudi Arabia": 0.0001
+      "Canada": 0.0096,
+      "Paraguay": 0.0014,
+      "Sweden": 0.0021,
+      "Algeria": 0.0026,
+      "Czech Republic": 0.0015,
+      "Ivory Coast": 0.0035,
+      "Senegal": 0.0089,
+      "Panama": 0.0019,
+      "Uzbekistan": 0.002,
+      "Australia": 0.0074,
+      "DR Congo": 0.0004,
+      "Scotland": 0.0005,
+      "Saudi Arabia": 0.0004,
+      "Iraq": 0.0002,
+      "Jordan": 0.0001,
+      "USA": 0.0001,
+      "Qatar": 0.0001,
+      "Cape Verde": 0.0001
     },
     "advancement": {
       "Switzerland": 0.9029,
-      "Morocco": 0.9041,
-      "South Korea": 0.95,
-      "Brazil": 0.9546,
-      "Norway": 0.9702,
-      "Austria": 0.6931,
-      "England": 0.9338,
-      "Cape Verde": 0.5683,
-      "DR Congo": 0.3063,
-      "Croatia": 0.9114,
+      "Morocco": 0.9043,
+      "South Korea": 0.9508,
+      "Brazil": 0.9568,
+      "Norway": 0.9729,
+      "Algeria": 0.4569,
+      "England": 0.9328,
+      "Cape Verde": 0.5702,
+      "Austria": 0.7017,
       "Japan": 0.8967,
-      "Turkey": 0.6264,
-      "Portugal": 0.9232,
-      "Ghana": 0.1165,
-      "Ivory Coast": 0.9426,
-      "Belgium": 0.8754,
-      "Colombia": 0.9082,
-      "Australia": 0.9801,
-      "Uruguay": 0.7717,
-      "Qatar": 0.4718,
-      "Sweden": 0.9571,
-      "USA": 0.9134,
-      "Egypt": 0.7578,
-      "Argentina": 0.9917,
-      "Ecuador": 0.7462,
-      "Czech Republic": 0.6276,
-      "Germany": 0.9972,
-      "France": 0.9968,
-      "Canada": 0.8741,
+      "Croatia": 0.9161,
+      "DR Congo": 0.3066,
+      "Turkey": 0.6294,
+      "Portugal": 0.9221,
+      "Belgium": 0.8775,
+      "Colombia": 0.9194,
+      "Australia": 0.9813,
+      "Uruguay": 0.7721,
+      "Qatar": 0.4729,
+      "Sweden": 0.96,
+      "USA": 0.9175,
+      "Egypt": 0.7581,
+      "Argentina": 0.9999,
+      "Ecuador": 0.7569,
+      "Czech Republic": 0.6361,
+      "Panama": 0.725,
+      "Germany": 0.9974,
+      "France": 0.997,
+      "Canada": 0.8748,
       "Netherlands": 0.9277,
-      "Spain": 0.9611,
-      "Mexico": 0.9704,
-      "Senegal": 0.5725,
-      "New Zealand": 0.2811,
-      "Iran": 0.6957,
-      "Saudi Arabia": 0.3183,
-      "Panama": 0.7165,
-      "Scotland": 0.6798,
-      "Paraguay": 0.2938,
-      "Jordan": 0.213,
-      "Algeria": 0.6254,
-      "Bosnia & Herzegovina": 0.4102,
-      "Uzbekistan": 0.426,
-      "Iraq": 0.1212,
-      "South Africa": 0.1189,
-      "Tunisia": 0.083,
-      "Curaçao": 0.0315,
-      "Haiti": 0.0847
+      "Spain": 0.9604,
+      "Mexico": 0.9701,
+      "Senegal": 0.5808,
+      "Ivory Coast": 0.9448,
+      "New Zealand": 0.2805,
+      "Iran": 0.6972,
+      "Saudi Arabia": 0.3195,
+      "Scotland": 0.6947,
+      "Uzbekistan": 0.4433,
+      "Ghana": 0.1239,
+      "Bosnia & Herzegovina": 0.4108,
+      "Paraguay": 0.2966,
+      "Iraq": 0.1258,
+      "South Africa": 0.1215,
+      "Jordan": 0.2348,
+      "Tunisia": 0.0854,
+      "Curaçao": 0.0309,
+      "Haiti": 0.0852
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Iraq",
-    "away": "Norway",
-    "home_goals": 1,
-    "away_goals": 4,
+    "home": "Argentina",
+    "away": "Algeria",
+    "home_goals": 3,
+    "away_goals": 0,
     "date": "2026-06-16",
-    "venue": "Boston (Foxborough)"
+    "venue": "Kansas City"
   },
   "results": {
     "1": {
@@ -1292,6 +1305,30 @@
           "player": "Aymen Hussein",
           "team": "Norway",
           "minute": "90'+6'"
+        }
+      ]
+    },
+    "55": {
+      "home_goals": 3,
+      "away_goals": 0,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Lionel Messi",
+          "team": "Argentina",
+          "minute": "17'"
+        },
+        {
+          "kind": "goal",
+          "player": "Lionel Messi",
+          "team": "Argentina",
+          "minute": "60'"
+        },
+        {
+          "kind": "goal",
+          "player": "Lionel Messi",
+          "team": "Argentina",
+          "minute": "76'"
         }
       ]
     }
@@ -1951,11 +1988,9 @@
             "away": 0.0806052074190863,
             "pick": "Argentina"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 3,
           "ag": 0,
-          "clock": "90'+4'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -1975,7 +2010,8 @@
               "team": "Argentina",
               "minute": "76'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "56",
@@ -1995,18 +2031,5 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "55",
-      "home": "Argentina",
-      "away": "Algeria",
-      "date": "2026-06-16",
-      "venue": "Kansas City",
-      "kickoff_utc": "2026-06-17T01:00:00Z",
-      "hg": 3,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "90'+4'"
-    }
-  ]
+  "live": []
 }
