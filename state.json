@@ -405,6 +405,15 @@
           "key": "ht-2026-06-16-50",
           "generated_at": "2026-06-16T15:55:07.466935-07:00",
           "kickoff_utc": "2026-06-16T22:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nTuesday, June 16\n\nFull time:\nIraq 1 - 4 Norway\nBoston (Foxborough), USA\n  ⚽ 29' Erling Haaland (Norway)\n  ⚽ 39' Aymen Hussein (Iraq)\n  ⚽ 43' Erling Haaland (Norway)\n  ⚽ 76' Leo Østigard (Norway)\n  ⚽ 90'+6' Aymen Hussein (Norway, OG)\nOverall prediction: 7/18 (38.9%)\nPrediction ✓: Norway",
+          "sent": true,
+          "hash": "8ff9f72fb1110af0",
+          "key": "pm-2026-06-16-50",
+          "generated_at": "2026-06-16T17:04:18.018772-07:00",
+          "kickoff_utc": "2026-06-16T22:00:00Z"
         }
       ]
     }
@@ -684,6 +693,14 @@
     ],
     "I": [
       {
+        "team": "Norway",
+        "played": 1,
+        "points": 3,
+        "gd": 3,
+        "gf": 4,
+        "ga": 1
+      },
+      {
         "team": "France",
         "played": 1,
         "points": 3,
@@ -692,28 +709,20 @@
         "ga": 1
       },
       {
-        "team": "Iraq",
-        "played": 0,
-        "points": 0,
-        "gd": 0,
-        "gf": 0,
-        "ga": 0
-      },
-      {
-        "team": "Norway",
-        "played": 0,
-        "points": 0,
-        "gd": 0,
-        "gf": 0,
-        "ga": 0
-      },
-      {
         "team": "Senegal",
         "played": 1,
         "points": 0,
         "gd": -2,
         "gf": 1,
         "ga": 3
+      },
+      {
+        "team": "Iraq",
+        "played": 1,
+        "points": 0,
+        "gd": -3,
+        "gf": 1,
+        "ga": 4
       }
     ],
     "J": [
@@ -821,106 +830,104 @@
   },
   "bracket": {
     "title_odds": {
-      "Turkey": 0.0105,
-      "Brazil": 0.0501,
-      "Belgium": 0.0199,
-      "Netherlands": 0.0315,
-      "Argentina": 0.2084,
-      "France": 0.1304,
-      "Norway": 0.0056,
-      "England": 0.0401,
-      "Japan": 0.0277,
-      "Colombia": 0.0483,
-      "DR Congo": 0.0003,
-      "Spain": 0.1539,
-      "Algeria": 0.0051,
-      "Austria": 0.0054,
-      "Uruguay": 0.0171,
+      "Turkey": 0.0123,
+      "Brazil": 0.0517,
+      "Belgium": 0.0215,
+      "Spain": 0.15,
+      "France": 0.1261,
+      "Argentina": 0.2074,
+      "Japan": 0.0269,
+      "Germany": 0.0439,
       "Ecuador": 0.0213,
-      "Portugal": 0.0461,
-      "Canada": 0.0071,
-      "Germany": 0.0445,
-      "Switzerland": 0.0119,
-      "Uzbekistan": 0.0023,
-      "Morocco": 0.0221,
-      "South Korea": 0.0086,
-      "Croatia": 0.0288,
-      "Panama": 0.002,
-      "Mexico": 0.0168,
-      "Iran": 0.0072,
-      "Egypt": 0.0026,
-      "Ivory Coast": 0.0032,
-      "Australia": 0.0063,
-      "Scotland": 0.0008,
-      "Czech Republic": 0.0025,
-      "Sweden": 0.0023,
-      "Senegal": 0.0081,
-      "Paraguay": 0.0006,
-      "Saudi Arabia": 0.0002,
-      "Haiti": 0.0001,
+      "Czech Republic": 0.0014,
+      "Austria": 0.0046,
+      "England": 0.0403,
+      "Uruguay": 0.015,
+      "Netherlands": 0.0333,
+      "Colombia": 0.048,
+      "Egypt": 0.0021,
+      "Portugal": 0.05,
+      "Uzbekistan": 0.0009,
+      "Morocco": 0.0247,
+      "Croatia": 0.0294,
+      "Mexico": 0.0204,
+      "Algeria": 0.0032,
+      "Iran": 0.006,
+      "South Korea": 0.0079,
+      "Australia": 0.0068,
+      "Norway": 0.0085,
+      "Canada": 0.0075,
+      "Switzerland": 0.0126,
+      "Sweden": 0.002,
+      "Scotland": 0.0006,
+      "DR Congo": 0.0004,
+      "Cape Verde": 0.0004,
       "New Zealand": 0.0001,
-      "Iraq": 0.0001,
-      "Jordan": 0.0001
+      "Paraguay": 0.0012,
+      "Senegal": 0.0064,
+      "Ivory Coast": 0.0034,
+      "Panama": 0.0017,
+      "Saudi Arabia": 0.0001
     },
     "advancement": {
-      "Croatia": 0.9168,
-      "Senegal": 0.5713,
-      "Algeria": 0.633,
-      "Uruguay": 0.7726,
-      "Argentina": 0.9919,
-      "South Korea": 0.9505,
-      "Sweden": 0.9587,
-      "France": 0.9963,
-      "Australia": 0.9823,
-      "DR Congo": 0.3086,
-      "Czech Republic": 0.6348,
-      "Colombia": 0.9133,
-      "USA": 0.9194,
-      "Turkey": 0.6262,
-      "Spain": 0.9609,
-      "Switzerland": 0.9043,
-      "England": 0.9339,
-      "Ghana": 0.1181,
-      "Japan": 0.8975,
-      "Ecuador": 0.7522,
-      "Brazil": 0.957,
-      "Qatar": 0.4734,
-      "Cape Verde": 0.5697,
-      "Portugal": 0.9211,
-      "Morocco": 0.9046,
-      "Netherlands": 0.9278,
-      "Egypt": 0.7605,
-      "Austria": 0.6908,
-      "Canada": 0.876,
-      "Germany": 0.9975,
-      "Belgium": 0.8777,
-      "Mexico": 0.9718,
-      "New Zealand": 0.2809,
-      "Iran": 0.6976,
-      "Norway": 0.6698,
-      "Ivory Coast": 0.9445,
-      "Scotland": 0.6875,
-      "Saudi Arabia": 0.319,
-      "Panama": 0.7267,
-      "Uzbekistan": 0.4312,
-      "Paraguay": 0.2943,
-      "Iraq": 0.3245,
-      "Bosnia & Herzegovina": 0.4119,
-      "South Africa": 0.1216,
-      "Tunisia": 0.0836,
-      "Jordan": 0.2206,
-      "Curaçao": 0.0309,
-      "Haiti": 0.0849
+      "Croatia": 0.9114,
+      "Uruguay": 0.7717,
+      "Argentina": 0.9917,
+      "South Korea": 0.95,
+      "Sweden": 0.9571,
+      "France": 0.9968,
+      "Australia": 0.9801,
+      "DR Congo": 0.3063,
+      "Czech Republic": 0.6276,
+      "Colombia": 0.9082,
+      "USA": 0.9134,
+      "Turkey": 0.6264,
+      "Spain": 0.9611,
+      "Switzerland": 0.9029,
+      "England": 0.9338,
+      "Ghana": 0.1165,
+      "Japan": 0.8967,
+      "Ecuador": 0.7462,
+      "Norway": 0.9702,
+      "Brazil": 0.9546,
+      "Qatar": 0.4718,
+      "Ivory Coast": 0.9426,
+      "Cape Verde": 0.5683,
+      "Portugal": 0.9232,
+      "Morocco": 0.9041,
+      "Netherlands": 0.9277,
+      "Austria": 0.6931,
+      "Egypt": 0.7578,
+      "Canada": 0.8741,
+      "Germany": 0.9972,
+      "Belgium": 0.8754,
+      "Mexico": 0.9704,
+      "New Zealand": 0.2811,
+      "Senegal": 0.5725,
+      "Iran": 0.6957,
+      "Scotland": 0.6798,
+      "Saudi Arabia": 0.3183,
+      "Panama": 0.7165,
+      "Paraguay": 0.2938,
+      "Jordan": 0.213,
+      "Algeria": 0.6254,
+      "Iraq": 0.1212,
+      "Uzbekistan": 0.426,
+      "Bosnia & Herzegovina": 0.4102,
+      "South Africa": 0.1189,
+      "Tunisia": 0.083,
+      "Curaçao": 0.0315,
+      "Haiti": 0.0847
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "France",
-    "away": "Senegal",
-    "home_goals": 3,
-    "away_goals": 1,
+    "home": "Iraq",
+    "away": "Norway",
+    "home_goals": 1,
+    "away_goals": 4,
     "date": "2026-06-16",
-    "venue": "New York/New Jersey (East Rutherford)"
+    "venue": "Boston (Foxborough)"
   },
   "results": {
     "1": {
@@ -1239,6 +1246,42 @@
           "kind": "goal",
           "player": "Kylian Mbappé",
           "team": "France",
+          "minute": "90'+6'"
+        }
+      ]
+    },
+    "50": {
+      "home_goals": 1,
+      "away_goals": 4,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Erling Haaland",
+          "team": "Norway",
+          "minute": "29'"
+        },
+        {
+          "kind": "goal",
+          "player": "Aymen Hussein",
+          "team": "Iraq",
+          "minute": "39'"
+        },
+        {
+          "kind": "goal",
+          "player": "Erling Haaland",
+          "team": "Norway",
+          "minute": "43'"
+        },
+        {
+          "kind": "goal",
+          "player": "Leo Østigard",
+          "team": "Norway",
+          "minute": "76'"
+        },
+        {
+          "kind": "own_goal",
+          "player": "Aymen Hussein",
+          "team": "Norway",
           "minute": "90'+6'"
         }
       ]
@@ -1849,7 +1892,42 @@
             "away": 0.5822146102163407,
             "pick": "Norway"
           },
-          "status": "sched"
+          "status": "FT",
+          "hg": 1,
+          "ag": 4,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Erling Haaland",
+              "team": "Norway",
+              "minute": "29'"
+            },
+            {
+              "kind": "goal",
+              "player": "Aymen Hussein",
+              "team": "Iraq",
+              "minute": "39'"
+            },
+            {
+              "kind": "goal",
+              "player": "Erling Haaland",
+              "team": "Norway",
+              "minute": "43'"
+            },
+            {
+              "kind": "goal",
+              "player": "Leo Østigard",
+              "team": "Norway",
+              "minute": "76'"
+            },
+            {
+              "kind": "own_goal",
+              "player": "Aymen Hussein",
+              "team": "Norway",
+              "minute": "90'+6'"
+            }
+          ],
+          "hit": true
         },
         {
           "id": "55",
