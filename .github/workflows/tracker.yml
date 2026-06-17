@@ -35,8 +35,24 @@ jobs:
         run: |
           git add state.json subscribers.json docs/
           git diff --cached --quiet || git commit -m "update: tracker run $(date -u +%FT%TZ)"
-          git pull --rebase
-          git push
+          # Telegram messages were already sent in the run step; this push is
+          # what persists the sent-state that dedupes them. A lost push means
+          # the next run sees the message as unsent and delivers it AGAIN —
+          # that caused duplicate match-day briefs on 2026-06-17 when a push
+          # raced a concurrent one and the run failed after sending. Always run
+          # the retry loop (not just on a fresh commit) because an in-loop
+          # git_sync may have committed locally but failed to push, leaving an
+          # unpushed commit a staged-only check would miss. pull --rebase + push
+          # is a no-op when already in sync, so this is safe to always run.
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase --no-edit && git push; then
+              echo "persisted on attempt $attempt"; exit 0
+            fi
+            echo "push attempt $attempt failed; resetting and retrying"
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 3))
+          done
+          echo "ERROR: could not persist sent-state after 5 attempts"; exit 1
       - name: Chain continuation run
         if: always()
         env:
