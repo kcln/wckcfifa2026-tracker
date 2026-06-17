@@ -37,3 +37,53 @@ def test_send_preserves_code_block_no_pre_badge():
     body = calls[0]["text"]
     assert "<code>" in body and "</code>" in body        # code tags survive
     assert "Mexico &amp; co" in body                     # inner text still escaped
+
+
+def _resp(ok, status=200):
+    return type("R", (), {"ok": ok, "status_code": status})()
+
+
+def test_send_attempts_all_recipients_even_if_one_is_blocked():
+    # B blocked the bot (403). A and C must STILL be attempted (the old code
+    # aborted at B, dropping C and re-spamming A forever).
+    attempted = []
+
+    def poster(url, data):
+        cid = data["chat_id"]
+        attempted.append(cid)
+        return _resp(cid != "B", 200 if cid != "B" else 403)
+
+    dead = []
+    res = ts.send("hi", token="T", chat_ids=["A", "B", "C"],
+                  poster=poster, on_dead=dead.append)
+    assert attempted == ["A", "B", "C"]   # never aborted
+    assert dead == ["B"]                   # B flagged permanently dead
+    assert res is True                     # no transient failure → mark sent
+
+
+def test_send_transient_failure_returns_false_but_tries_everyone():
+    attempted = []
+
+    def poster(url, data):
+        cid = data["chat_id"]
+        attempted.append(cid)
+        return _resp(cid != "B", 200 if cid != "B" else 500)   # 500 = transient
+
+    res = ts.send("hi", token="T", chat_ids=["A", "B", "C"], poster=poster)
+    assert attempted == ["A", "B", "C"]   # still attempted all
+    assert res is False                    # transient → retry next cycle
+
+
+def test_send_network_error_on_one_does_not_skip_the_rest():
+    attempted = []
+
+    def poster(url, data):
+        cid = data["chat_id"]
+        attempted.append(cid)
+        if cid == "B":
+            raise RuntimeError("network blip")
+        return _resp(True)
+
+    res = ts.send("hi", token="T", chat_ids=["A", "B", "C"], poster=poster)
+    assert attempted == ["A", "B", "C"]   # B's exception didn't abort the loop
+    assert res is False                    # transient → retry

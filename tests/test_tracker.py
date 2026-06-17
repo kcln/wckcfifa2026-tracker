@@ -407,3 +407,29 @@ def test_build_live_and_board_overlay_in_progress():
     board = tracker.build_board(merged, mp, {m["date"]}, live=feed)
     entry = next(x for d in board for x in d["matches"] if x["id"] == m["id"])
     assert entry["status"] == "live" and entry["hg"] == 1 and entry["clock"] == "50'"
+
+
+def test_send_pending_prunes_blocked_chat_and_still_marks_sent(tmp_path):
+    # One subscriber blocked the bot: the message must still mark sent (no
+    # perpetual re-send) and the dead chat must be pruned from subscribers.json.
+    from src import subscribers
+    subs_path = tmp_path / "subscribers.json"
+    subscribers.save(subs_path, {"approved": ["A", "B", "C"], "pending": {},
+                                 "onboarded": ["A", "B", "C"],
+                                 "last_update_id": 0})
+    stateobj = {"days": [{"date": "2026-06-11", "messages": [
+        {"type": "morning_brief", "body": "Brief", "sent": False,
+         "hash": "h", "key": "mb-2026-06-11"}]}], "results": {}}
+
+    def sender(text, token=None, chat_ids=None, on_dead=None):
+        if on_dead:
+            on_dead("B")          # B is permanently dead
+        return True               # A and C delivered → safe to mark sent
+
+    cfg = _base_cfg(tmp_path, chat_ids=["A", "B", "C"], sender=sender)
+    code = tracker._send_pending(stateobj, cfg)
+    assert code == 0
+    assert stateobj["days"][0]["messages"][0]["sent"] is True
+    subs = subscribers.load(subs_path)
+    assert subs["approved"] == ["A", "C"]      # B pruned
+    assert subs["onboarded"] == ["A", "C"]

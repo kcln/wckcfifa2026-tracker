@@ -27,18 +27,42 @@ def _format(text: str) -> str:
     return out + _FOOTER
 
 
-def send(text: str, token: str, chat_ids: list[str], poster=_default_poster) -> bool:
+def send(text: str, token: str, chat_ids: list[str], poster=_default_poster,
+         on_dead=None) -> bool:
+    """Broadcast `text` to every chat id. ALWAYS attempts all recipients — a
+    failure for one must never skip the rest (that silently dropped later
+    subscribers and, because the message then never marked sent, re-spammed the
+    earlier ones every cycle).
+
+    Failures are classified:
+      * permanent (HTTP 400/403 — user blocked the bot, deactivated, or chat
+        not found): that chat can never receive, so it does NOT hold up the
+        broadcast; `on_dead(chat_id)` is invoked so the caller can prune it.
+      * transient (network error, 429 rate-limit, 5xx): worth retrying.
+
+    Returns True when the message is delivered as well as it ever will be (every
+    chat either succeeded or is permanently dead) — i.e. safe to mark sent.
+    Returns False only when a transient failure remains, so the caller retries
+    next cycle (without skipping anyone).
+    """
     if not token or not chat_ids:
         return False
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     body = _format(text)
-    try:
-        for cid in chat_ids:
+    transient = False
+    for cid in chat_ids:
+        try:
             r = poster(url, {"chat_id": cid, "text": body,
                              "parse_mode": "HTML",
                              "disable_web_page_preview": "true"})
-            if not getattr(r, "ok", False):
-                return False
-        return True
-    except Exception:
-        return False
+        except Exception:
+            transient = True          # network blip → retry, don't skip others
+            continue
+        if getattr(r, "ok", False):
+            continue                  # delivered
+        if getattr(r, "status_code", None) in (400, 403):
+            if on_dead is not None:   # blocked/deactivated/not-found → permanent
+                on_dead(cid)
+        else:
+            transient = True          # 429 / 5xx / unknown → retry later
+    return not transient

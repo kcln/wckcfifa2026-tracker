@@ -560,12 +560,36 @@ def _send_pending(stateobj: dict, cfg: Config) -> int | None:
         # Sending disabled: leave messages unsent (not an error, not delivered).
         return None
 
+    dead: set = set()
+    code = 0
     for m in pending:
-        ok = cfg.sender(m["body"], token=cfg.token, chat_ids=cfg.chat_ids)
-        if not ok:
-            return 2
+        ok = cfg.sender(m["body"], token=cfg.token, chat_ids=cfg.chat_ids,
+                        on_dead=dead.add)
+        if not ok:                    # transient failure → retry this + the rest
+            code = 2
+            break
         m["sent"] = True
-    return 0
+    if dead:                          # drop chats that blocked/deleted the bot
+        _prune_dead_subscribers(cfg, dead)
+    return code
+
+
+def _prune_dead_subscribers(cfg: Config, dead: set) -> None:
+    """Remove permanently-undeliverable chats (blocked the bot / deactivated /
+    chat not found) from subscribers.json so one dead chat can't keep failing
+    every broadcast. No-op (and never raises) if the store isn't present."""
+    subs_path = Path(cfg.state_path).parent / "subscribers.json"
+    if not subs_path.exists():
+        return
+    try:
+        subs = subscribers.load(subs_path)
+        for grp in ("approved", "onboarded"):
+            subs[grp] = [c for c in subs.get(grp, []) if c not in dead]
+        for c in dead:
+            subs.get("pending", {}).pop(c, None)
+        subscribers.save(subs_path, subs)
+    except Exception:
+        pass
 
 
 # ---------------------------------------------------------------------------
@@ -751,7 +775,8 @@ def _build_cfg(root: Path, chat_ids: list) -> Config:
         chat_ids=chat_ids,
         fetch=lambda: reconcile_results(
             data_fetcher.fetch_results(cache_path=cache_path), seed),
-        sender=lambda text, **k: telegram_sender.send(text, token, chat_ids),
+        sender=lambda text, on_dead=None, **k: telegram_sender.send(
+            text, token, chat_ids, on_dead=on_dead),
         now_iso=state.today_pt_iso(),
     )
 
