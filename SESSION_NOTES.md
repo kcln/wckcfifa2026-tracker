@@ -165,16 +165,23 @@ events deduped by id (`_scoreboard_urls` + `_merge_events`). Any last-slot match
 would have been dropped before this. Backfilled the missing pm + recap by
 running the tracker on the new code.
 
-## Duplicate match-day brief (fixed 2026-06-17)
-Telegram sends happen in the run step; the dedup "sent" flags only persist when
-the subsequent `git push` succeeds. On Jun 17 a scheduled run sent the brief
-(00:02 PT) then FAILED at "Commit and push results" — its push lost a race
-against concurrent manual pushes during the prior maintenance turn. The unsaved
-sent-flag meant the next run saw the brief as unsent and re-sent it. Fix: the
-persist step now retries `pull --rebase + push` up to 5x and runs unconditionally
-(so an in-loop git_sync's unpushed commit is reconciled too). Lesson: never push
-to the repo by hand while a scheduled/live run may be pushing — it can fail their
-push and trigger a re-send.
+## Detached-HEAD wedge → failed pushes → duplicate sends (fixed 2026-06-17)
+TRUE root cause (corrected — first guess "lost race vs my manual push" was
+wrong). Telegram sends happen in the run step; the dedup "sent" flags persist
+only if the follow-up push succeeds. The CI runner often ends up in DETACHED
+HEAD, and the old `git pull --rebase` stopped on the first conflict
+(docs/index.html regenerates every cycle) leaving the repo wedged mid-rebase.
+After that, every commit landed on a detached HEAD and every push failed with
+"You are not currently on a branch" — so sent-state stopped persisting and the
+next run re-sent (the duplicate match-day briefs). The clean path (nothing to
+commit) still worked, which is why it looked intermittent.
+Fix: `live_loop.git_sync` AND the workflow persist step now abort any stale
+rebase, commit, reconcile with `git merge -X ours --no-edit origin/main` (keeps
+our just-written sent-flags, never conflict-stops), and push with
+`git push origin HEAD:main` (works in detached HEAD). Workflow retries 5x for
+transient non-fast-forwards. Verified: persist step prints "persisted on
+attempt 1".
+Lesson still holds: avoid manual pushes while a run may be pushing.
 
 ## NEXT
 - Add Ankit's chat ID (8954471490) to TELEGRAM_CHAT_IDS if/when he replies YES.
