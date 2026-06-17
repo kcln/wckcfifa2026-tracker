@@ -165,6 +165,17 @@ events deduped by id (`_scoreboard_urls` + `_merge_events`). Any last-slot match
 would have been dropped before this. Backfilled the missing pm + recap by
 running the tracker on the new code.
 
+## Duplicate match-day brief (fixed 2026-06-17)
+Telegram sends happen in the run step; the dedup "sent" flags only persist when
+the subsequent `git push` succeeds. On Jun 17 a scheduled run sent the brief
+(00:02 PT) then FAILED at "Commit and push results" — its push lost a race
+against concurrent manual pushes during the prior maintenance turn. The unsaved
+sent-flag meant the next run saw the brief as unsent and re-sent it. Fix: the
+persist step now retries `pull --rebase + push` up to 5x and runs unconditionally
+(so an in-loop git_sync's unpushed commit is reconciled too). Lesson: never push
+to the repo by hand while a scheduled/live run may be pushing — it can fail their
+push and trigger a re-send.
+
 ## NEXT
 - Add Ankit's chat ID (8954471490) to TELEGRAM_CHAT_IDS if/when he replies YES.
 - Confirm a Telegram brief lands on KC's phone once the tournament starts (Jun 11).
