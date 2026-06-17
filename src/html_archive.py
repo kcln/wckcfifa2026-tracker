@@ -18,6 +18,7 @@ Stdlib only — the CI runtime has no third-party deps.
 
 from __future__ import annotations
 
+import json
 import re
 from datetime import datetime
 from html import escape
@@ -161,6 +162,38 @@ def _render_days(days: list[dict]) -> str:
     return "".join(blocks)
 
 
+def _featured_match(state: dict):
+    """The match the hero should show: the LIVE one (latest kickoff) if any is
+    in progress, otherwise the most recent finished result. Returns a dict with
+    a `_live` flag, or None when there's nothing to show yet."""
+    live = state.get("live") or []
+    if live:
+        return dict(live[-1], _live=True)
+    last = state.get("last_result") or {}
+    if last.get("home") and last.get("away"):
+        return {**last, "_live": False}
+    return None
+
+
+def _live_payload(state: dict) -> dict:
+    """Compact JSON the page polls (docs/live.json) to refresh the hero card in
+    place without a full reload. Mirrors the fields _hero_tokens renders."""
+    f = _featured_match(state)
+    if not f:
+        return {"live": False}
+    return {
+        "live":   bool(f["_live"]),
+        "home":   str(f["home"]),
+        "away":   str(f["away"]),
+        "hg":     int(f.get("hg", f.get("home_goals", 0))),
+        "ag":     int(f.get("ag", f.get("away_goals", 0))),
+        "status": str(f.get("status", "")),
+        "clock":  str(f.get("clock", "")).strip(),
+        "date":   str(f.get("date", "")),
+        "venue":  str(f.get("venue", "")),
+    }
+
+
 def _hero_tokens(state: dict) -> dict:
     tokens = {
         "__HERO_KICKER__":      "Most recent",
@@ -173,15 +206,7 @@ def _hero_tokens(state: dict) -> dict:
         "__REFRESH__":          "",
     }
 
-    # Feature the most relevant match: a LIVE one (latest kickoff) if any is in
-    # progress, otherwise the most recent finished result.
-    live = state.get("live") or []
-    featured = dict(live[-1], _live=True) if live else None
-    if featured is None:
-        last = state.get("last_result") or {}
-        if last.get("home") and last.get("away"):
-            featured = {**last, "_live": False}
-
+    featured = _featured_match(state)
     if featured:
         home, away = str(featured["home"]), str(featured["away"])
         hg = int(featured.get("hg", featured.get("home_goals", 0)))
@@ -203,7 +228,9 @@ def _hero_tokens(state: dict) -> dict:
             suffix = f" · {escape(clk)}" if clk else ""
             tokens["__HERO_KICKER__"] = (
                 f'<span class="livedot"></span> Live now{suffix}')
-            tokens["__REFRESH__"] = '<meta http-equiv="refresh" content="90">'
+            # No <meta refresh>: the hero polls live.json client-side (see the
+            # poll script) and updates in place, so the page is never frozen
+            # between matches and never does a jarring full reload mid-match.
 
     title_odds = (state.get("bracket") or {}).get("title_odds") or {}
     if title_odds:
@@ -438,6 +465,9 @@ def render(state: dict, path) -> None:
     out = Path(path)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(page, encoding="utf-8")
+    # Sibling payload the hero polls to refresh in place (see the poll script).
+    (out.parent / "live.json").write_text(
+        json.dumps(_live_payload(state)), encoding="utf-8")
 
 
 SHELL = r"""<!DOCTYPE html>
@@ -717,6 +747,55 @@ __SIGNUP_BOTTOM__
     var root = b.closest('.section') || document;
     root.querySelectorAll(sel).forEach(function (d) { d.open = open; });
   });
+</script>
+<script>
+  // Live hero: poll live.json and update the score card in place, so the slot
+  // always shows the current live match (or the most recent result) and is
+  // never frozen between page loads. live.json is a tiny static file on the
+  // Pages CDN — cheap, same-origin, no API quota to exhaust.
+  (function () {
+    var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun',
+                  'Jul','Aug','Sep','Oct','Nov','Dec'];
+    function esc(s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+      });
+    }
+    function fmtDay(iso) {
+      var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
+      if (!m) return '';
+      return MONTHS[parseInt(m[2], 10) - 1] + ' ' + parseInt(m[3], 10);
+    }
+    function set(id, html) {
+      var el = document.getElementById(id);
+      if (el) el.innerHTML = html;
+    }
+    function paint(d) {
+      if (!d || !d.home || !d.away) return;
+      if (d.live) {
+        var clk = d.status === 'HT' ? 'Half-time' : (d.clock || '');
+        set('hero-kicker', '<span class="livedot"></span> Live now' +
+            (clk ? ' &middot; ' + esc(clk) : ''));
+      } else {
+        set('hero-kicker', 'Most recent');
+      }
+      set('hero-match', esc(d.home) + ' ' + d.hg +
+          ' <span class="vs">&ndash;</span> ' + d.ag + ' ' + esc(d.away));
+      var bits = [];
+      if (d.date)  bits.push(fmtDay(d.date));
+      if (d.venue) bits.push(esc(d.venue));
+      set('hero-meta', bits.join(' &middot; ') || 'World Cup 2026');
+      set('hero-win', '');
+    }
+    function poll() {
+      fetch('live.json?t=' + Date.now(), { cache: 'no-store' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(paint)
+        .catch(function () { /* keep last good render */ });
+    }
+    poll();
+    setInterval(poll, 30000);
+  })();
 </script>
 </body>
 </html>

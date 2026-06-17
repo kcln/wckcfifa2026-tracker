@@ -1,3 +1,5 @@
+import json
+
 from src import html_archive as ha
 
 
@@ -281,7 +283,39 @@ def test_hero_features_live_match_and_autorefresh(tmp_path):
     html = _render(state, tmp_path)
     assert 'Argentina 1 <span class="vs">–</span> 0 Algeria' in html  # score in headline
     assert "Live now" in html and "50&#x27;" in html   # clock in the kicker
-    assert '<meta http-equiv="refresh"' in html
+    # The hero refreshes client-side by polling live.json (no full-page meta
+    # reload), so the slot is never frozen between page loads.
+    assert '<meta http-equiv="refresh"' not in html
+    assert "live.json?t=" in html and "setInterval(poll, 30000)" in html
+
+
+def test_render_writes_live_json_for_live_match(tmp_path):
+    state = {"days": [], "bracket": {}, "groups": {},
+             "live": [{"id": "9", "home": "Argentina", "away": "Algeria",
+                       "date": "2026-06-16", "venue": "Boston (Foxborough)",
+                       "hg": 1, "ag": 0, "status": "LIVE", "clock": "50'"}]}
+    _render(state, tmp_path)
+    payload = json.loads((tmp_path / "live.json").read_text())
+    assert payload == {"live": True, "home": "Argentina", "away": "Algeria",
+                       "hg": 1, "ag": 0, "status": "LIVE", "clock": "50'",
+                       "date": "2026-06-16", "venue": "Boston (Foxborough)"}
+
+
+def test_render_writes_live_json_fallback_to_last_result(tmp_path):
+    state = {"days": [], "bracket": {}, "groups": {}, "live": [],
+             "last_result": {"home": "Austria", "away": "Jordan",
+                             "home_goals": 3, "away_goals": 1,
+                             "date": "2026-06-16",
+                             "venue": "San Francisco Bay Area (Santa Clara)"}}
+    _render(state, tmp_path)
+    payload = json.loads((tmp_path / "live.json").read_text())
+    assert payload["live"] is False
+    assert payload["home"] == "Austria" and payload["hg"] == 3 and payload["ag"] == 1
+
+
+def test_render_writes_empty_live_json_when_no_match(tmp_path):
+    _render({"days": [], "bracket": {}, "groups": {}}, tmp_path)
+    assert json.loads((tmp_path / "live.json").read_text()) == {"live": False}
 
 
 def test_card_shows_live_score_and_pill(tmp_path):
