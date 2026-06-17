@@ -55,7 +55,8 @@ def test_render_hero_most_recent_from_last_result(tmp_path):
                              "home_goals": 2, "away_goals": 1,
                              "date": "2026-06-11", "venue": "Mexico City"}}
     html = _render(state, tmp_path)
-    assert 'Mexico 2 <span class="vs">–</span> 1 South Africa' in html
+    assert '<span class="tm">Mexico</span><span class="sc">2</span>' in html
+    assert '<span class="sc">1</span><span class="tm">South Africa</span>' in html
     assert "Jun 11 · Mexico City" in html
     assert "Mexico won" not in html   # old separate result line killed
 
@@ -277,12 +278,18 @@ def test_hero_features_live_match_and_autorefresh(tmp_path):
              "live": [{"id": "9", "home": "Argentina", "away": "Algeria",
                        "date": "2026-06-16", "venue": "Boston (Foxborough)",
                        "kickoff_utc": "2026-06-16T22:00:00Z",
-                       "hg": 1, "ag": 0, "status": "LIVE", "clock": "50'"}],
+                       "hg": 1, "ag": 0, "status": "LIVE", "clock": "50'",
+                       "events": [{"kind": "goal", "player": "Lionel Messi",
+                                   "team": "Argentina", "minute": "23'"}]}],
              "last_result": {"home": "Iraq", "away": "Norway", "home_goals": 1,
                              "away_goals": 4, "date": "2026-06-16"}}
     html = _render(state, tmp_path)
-    assert 'Argentina 1 <span class="vs">–</span> 0 Algeria' in html  # score in headline
+    # Score is rendered as discrete spans so flex gap spaces both sides evenly.
+    assert '<span class="tm">Argentina</span><span class="sc">1</span>' in html
+    assert '<span class="sc">0</span><span class="tm">Algeria</span>' in html
     assert "Live now" in html and "50&#x27;" in html   # clock in the kicker
+    # Goal scorers (player + minute) appear in the hero, like the recap.
+    assert "Lionel Messi" in html and "23&#x27;" in html
     # The hero refreshes client-side by polling live.json (no full-page meta
     # reload), so the slot is never frozen between page loads.
     assert '<meta http-equiv="refresh"' not in html
@@ -298,7 +305,8 @@ def test_render_writes_live_json_for_live_match(tmp_path):
     payload = json.loads((tmp_path / "live.json").read_text())
     assert payload == {"live": True, "home": "Argentina", "away": "Algeria",
                        "hg": 1, "ag": 0, "status": "LIVE", "clock": "50'",
-                       "date": "2026-06-16", "venue": "Boston (Foxborough)"}
+                       "date": "2026-06-16", "venue": "Boston (Foxborough)",
+                       "events": []}
 
 
 def test_render_writes_live_json_fallback_to_last_result(tmp_path):

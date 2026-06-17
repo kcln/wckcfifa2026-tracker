@@ -191,6 +191,7 @@ def _live_payload(state: dict) -> dict:
         "clock":  str(f.get("clock", "")).strip(),
         "date":   str(f.get("date", "")),
         "venue":  str(f.get("venue", "")),
+        "events": f.get("events") or [],
     }
 
 
@@ -203,6 +204,7 @@ def _hero_tokens(state: dict) -> dict:
         "__HERO_LEADER__":      "—",
         "__HERO_LEADER_DESC__": "Title odds loading…",
         "__MATCH_COUNT__":      "World Cup 2026",
+        "__HERO_SCORERS__":     "",
         "__REFRESH__":          "",
     }
 
@@ -212,9 +214,16 @@ def _hero_tokens(state: dict) -> dict:
         hg = int(featured.get("hg", featured.get("home_goals", 0)))
         ag = int(featured.get("ag", featured.get("away_goals", 0)))
         # Score lives in the headline team line; the old separate result line
-        # is dropped (KC).
+        # is dropped (KC). Each token is its own span so the flex `gap` gives
+        # even spacing on BOTH sides of every score — bare whitespace let the
+        # score hug the team name while the dash had margin (lopsided).
         tokens["__HERO_MATCH__"] = (
-            f'{escape(home)} {hg} <span class="vs">–</span> {ag} {escape(away)}')
+            f'<span class="tm">{escape(home)}</span>'
+            f'<span class="sc">{hg}</span>'
+            f'<span class="vs">–</span>'
+            f'<span class="sc">{ag}</span>'
+            f'<span class="tm">{escape(away)}</span>')
+        tokens["__HERO_SCORERS__"] = _events_html(featured.get("events") or [])
         tokens["__HERO_WIN__"] = ""
         meta_bits = []
         if featured.get("date"):
@@ -541,9 +550,13 @@ __REFRESH__
     .h-card h1 .grad { background: linear-gradient(135deg, var(--p-400), var(--p-800)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
     .h-card .lead { margin-top: 18px; color: var(--ink-soft); font-size: 16px; line-height: 1.6; max-width: 52ch; }
 
-    .score { display: grid; grid-template-rows: auto 1fr auto; gap: 8px; height: 100%; }
-    .score .team-line { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 28px; letter-spacing: -0.02em; line-height: 1.05; margin-top: 8px; }
-    .score .team-line .vs { color: rgba(255,255,255,0.55); margin: 0 6px; font-weight: 400; }
+    .score { display: flex; flex-direction: column; gap: 8px; height: 100%; }
+    .score .team-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.34em; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 28px; letter-spacing: -0.02em; line-height: 1.15; margin-top: 8px; }
+    .score .team-line .sc { font-variant-numeric: tabular-nums; }
+    .score .team-line .vs { color: rgba(255,255,255,0.55); font-weight: 400; }
+    .score .scorers { margin: 2px 0 0; }
+    .score .scorers li { color: rgba(255,255,255,0.82); font-size: 12px; }
+    .score .scorers .ev-min, .score .scorers .ev-team, .score .scorers .og { color: rgba(255,255,255,0.5); }
     .score .result { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.20em; text-transform: uppercase; color: rgba(255,255,255,0.84); margin-top: auto; }
     .score .result .win { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0; text-transform: none; display: block; margin-top: 4px; color: var(--card); }
 
@@ -716,6 +729,7 @@ __REFRESH__
 <div class="score">
 <div class="kicker" id="hero-kicker">__HERO_KICKER__</div>
 <div class="team-line" id="hero-match">__HERO_MATCH__</div>
+<div id="hero-scorers">__HERO_SCORERS__</div>
 <div class="result">
 <span id="hero-meta">__HERO_META__</span>
 <span class="win" id="hero-win">__HERO_WIN__</span>
@@ -770,6 +784,19 @@ __SIGNUP_BOTTOM__
       var el = document.getElementById(id);
       if (el) el.innerHTML = html;
     }
+    function scorers(events) {
+      if (!events || !events.length) return '';
+      var rows = events.map(function (e) {
+        var icon = e.kind === 'red' ? '🟥' : '⚽';
+        var annot = e.kind === 'own_goal' ? ' <span class="og">OG</span>'
+                  : e.kind === 'penalty' ? ' <span class="og">pen</span>' : '';
+        return '<li><span class="ev-min">' + esc(e.minute || '') +
+          '</span> <span class="ev-i">' + icon + '</span> ' +
+          esc(e.player || '') + ' <span class="ev-team">' +
+          esc(e.team || '') + '</span>' + annot + '</li>';
+      });
+      return '<ul class="scorers">' + rows.join('') + '</ul>';
+    }
     function paint(d) {
       if (!d || !d.home || !d.away) return;
       if (d.live) {
@@ -779,8 +806,15 @@ __SIGNUP_BOTTOM__
       } else {
         set('hero-kicker', 'Most recent');
       }
-      set('hero-match', esc(d.home) + ' ' + d.hg +
-          ' <span class="vs">&ndash;</span> ' + d.ag + ' ' + esc(d.away));
+      // Each piece is its own span so the flex `gap` spaces both sides of every
+      // score evenly (no bare-whitespace hugging the team name).
+      set('hero-match',
+          '<span class="tm">' + esc(d.home) + '</span>' +
+          '<span class="sc">' + d.hg + '</span>' +
+          '<span class="vs">&ndash;</span>' +
+          '<span class="sc">' + d.ag + '</span>' +
+          '<span class="tm">' + esc(d.away) + '</span>');
+      set('hero-scorers', scorers(d.events));
       var bits = [];
       if (d.date)  bits.push(fmtDay(d.date));
       if (d.venue) bits.push(esc(d.venue));
