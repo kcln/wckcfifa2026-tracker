@@ -464,6 +464,15 @@
           "key": "mb-2026-06-17",
           "generated_at": "2026-06-17T00:02:15.391473-07:00",
           "kickoff_utc": "2026-06-17T17:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 17\n\nFull time:\nPortugal 1 - 1 DR Congo\nHouston, USA\n  ⚽ 6' João Neves (Portugal)\n  ⚽ 45'+5' Yoane Wissa (Congo DR)\nOverall prediction: 9/21 (42.9%)\nPrediction ✗: Portugal",
+          "sent": true,
+          "hash": "b8ebb0dbd2de1585",
+          "key": "pm-2026-06-17-61",
+          "generated_at": "2026-06-17T12:01:58.358883-07:00",
+          "kickoff_utc": "2026-06-17T17:00:00Z"
         }
       ]
     }
@@ -811,23 +820,23 @@
     ],
     "K": [
       {
-        "team": "Colombia",
-        "played": 0,
-        "points": 0,
-        "gd": 0,
-        "gf": 0,
-        "ga": 0
-      },
-      {
         "team": "DR Congo",
-        "played": 0,
-        "points": 0,
+        "played": 1,
+        "points": 1,
         "gd": 0,
-        "gf": 0,
-        "ga": 0
+        "gf": 1,
+        "ga": 1
       },
       {
         "team": "Portugal",
+        "played": 1,
+        "points": 1,
+        "gd": 0,
+        "gf": 1,
+        "ga": 1
+      },
+      {
+        "team": "Colombia",
         "played": 0,
         "points": 0,
         "gd": 0,
@@ -880,106 +889,106 @@
   },
   "bracket": {
     "title_odds": {
-      "France": 0.1257,
-      "Brazil": 0.0527,
-      "Ecuador": 0.0223,
-      "Colombia": 0.0468,
-      "Argentina": 0.2161,
-      "Croatia": 0.0322,
-      "England": 0.0402,
-      "Spain": 0.1398,
-      "Switzerland": 0.0103,
-      "Germany": 0.047,
-      "Iran": 0.0074,
-      "Uruguay": 0.0173,
-      "Morocco": 0.0221,
-      "Netherlands": 0.0325,
-      "Turkey": 0.013,
-      "Portugal": 0.0429,
-      "Belgium": 0.0204,
-      "Japan": 0.0281,
-      "Austria": 0.0066,
-      "Norway": 0.0101,
-      "Mexico": 0.0157,
-      "Uzbekistan": 0.0015,
-      "Egypt": 0.0043,
-      "Canada": 0.0093,
-      "Sweden": 0.0021,
+      "Spain": 0.1451,
+      "France": 0.1263,
+      "Brazil": 0.0509,
+      "England": 0.0444,
+      "Argentina": 0.2141,
+      "Iran": 0.0082,
+      "Germany": 0.046,
+      "Mexico": 0.0201,
+      "Croatia": 0.0298,
+      "Japan": 0.0276,
+      "Netherlands": 0.0332,
+      "Portugal": 0.0377,
+      "Panama": 0.002,
+      "Colombia": 0.051,
+      "Belgium": 0.0197,
+      "Morocco": 0.0229,
+      "South Korea": 0.0082,
+      "Ecuador": 0.023,
+      "Uruguay": 0.0184,
+      "Austria": 0.006,
       "Algeria": 0.0027,
-      "South Korea": 0.0071,
-      "Senegal": 0.0088,
-      "Australia": 0.0055,
-      "Scotland": 0.0006,
-      "Paraguay": 0.0017,
-      "Panama": 0.0014,
-      "Czech Republic": 0.0018,
-      "Ivory Coast": 0.0032,
+      "Senegal": 0.0076,
+      "Canada": 0.0057,
+      "Iraq": 0.0002,
+      "Egypt": 0.0022,
+      "Sweden": 0.0019,
+      "Uzbekistan": 0.0013,
+      "Ivory Coast": 0.0035,
+      "Norway": 0.008,
+      "Switzerland": 0.0111,
+      "Paraguay": 0.0019,
+      "Czech Republic": 0.0016,
+      "DR Congo": 0.0004,
+      "Turkey": 0.0097,
+      "Australia": 0.0064,
+      "Scotland": 0.0007,
       "Haiti": 0.0001,
-      "Saudi Arabia": 0.0002,
-      "DR Congo": 0.0002,
+      "Cape Verde": 0.0002,
       "New Zealand": 0.0001,
-      "Tunisia": 0.0001,
-      "Cape Verde": 0.0001
+      "Saudi Arabia": 0.0001
     },
     "advancement": {
-      "Ecuador": 0.7464,
-      "France": 0.9974,
-      "Belgium": 0.8751,
-      "USA": 0.9159,
-      "Austria": 0.9292,
-      "Czech Republic": 0.6321,
-      "Canada": 0.8733,
-      "Argentina": 0.9997,
-      "Croatia": 0.9153,
-      "DR Congo": 0.3107,
+      "Ecuador": 0.7481,
+      "France": 0.9973,
+      "Belgium": 0.8769,
+      "USA": 0.9144,
+      "Austria": 0.9303,
+      "Czech Republic": 0.6285,
+      "Canada": 0.8741,
+      "Argentina": 0.9998,
+      "Croatia": 0.9108,
+      "DR Congo": 0.3872,
       "Turkey": 0.6274,
       "Sweden": 0.9582,
-      "Switzerland": 0.9031,
-      "Japan": 0.8953,
-      "Qatar": 0.4727,
-      "Algeria": 0.4616,
-      "Ivory Coast": 0.9438,
-      "Morocco": 0.9056,
-      "Colombia": 0.9132,
-      "Germany": 0.9974,
-      "England": 0.9295,
-      "Egypt": 0.7562,
-      "Norway": 0.9693,
-      "Brazil": 0.9566,
-      "Cape Verde": 0.5691,
-      "Mexico": 0.9693,
-      "Australia": 0.9812,
-      "Panama": 0.7195,
-      "South Korea": 0.9519,
-      "Netherlands": 0.928,
-      "Spain": 0.9598,
-      "Uruguay": 0.7715,
-      "Saudi Arabia": 0.3198,
-      "Scotland": 0.6876,
-      "Iran": 0.6972,
+      "Switzerland": 0.9027,
+      "Japan": 0.8968,
+      "Portugal": 0.8563,
+      "Qatar": 0.471,
+      "Algeria": 0.4632,
+      "Ivory Coast": 0.9454,
+      "Morocco": 0.9041,
+      "Egypt": 0.756,
+      "Germany": 0.9971,
+      "England": 0.9294,
+      "Norway": 0.9695,
+      "Colombia": 0.9126,
+      "Brazil": 0.9563,
+      "Cape Verde": 0.568,
+      "Mexico": 0.9702,
+      "Australia": 0.9809,
+      "South Korea": 0.9503,
+      "Netherlands": 0.9275,
+      "Spain": 0.9603,
+      "Uruguay": 0.7722,
+      "Saudi Arabia": 0.3184,
+      "Scotland": 0.6887,
+      "Iran": 0.6962,
       "New Zealand": 0.2799,
-      "Portugal": 0.9236,
+      "Uzbekistan": 0.4359,
+      "Panama": 0.7241,
       "Senegal": 0.5755,
-      "Ghana": 0.1258,
-      "Uzbekistan": 0.4338,
-      "Jordan": 0.0718,
-      "Iraq": 0.1236,
-      "Paraguay": 0.2942,
-      "Bosnia & Herzegovina": 0.4103,
-      "South Africa": 0.1215,
-      "Tunisia": 0.0853,
-      "Curaçao": 0.0306,
-      "Haiti": 0.0842
+      "Paraguay": 0.2953,
+      "Jordan": 0.0727,
+      "Iraq": 0.1252,
+      "Bosnia & Herzegovina": 0.4091,
+      "South Africa": 0.119,
+      "Tunisia": 0.0852,
+      "Curaçao": 0.0303,
+      "Ghana": 0.1172,
+      "Haiti": 0.0845
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Austria",
-    "away": "Jordan",
-    "home_goals": 3,
+    "home": "Portugal",
+    "away": "DR Congo",
+    "home_goals": 1,
     "away_goals": 1,
-    "date": "2026-06-16",
-    "venue": "San Francisco Bay Area (Santa Clara)"
+    "date": "2026-06-17",
+    "venue": "Houston"
   },
   "results": {
     "1": {
@@ -1389,6 +1398,24 @@
           "player": "Marko Arnautovic",
           "team": "Austria",
           "minute": "90'+12'"
+        }
+      ]
+    },
+    "61": {
+      "home_goals": 1,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "João Neves",
+          "team": "Portugal",
+          "minute": "6'"
+        },
+        {
+          "kind": "goal",
+          "player": "Yoane Wissa",
+          "team": "Congo DR",
+          "minute": "45'+5'"
         }
       ]
     }
@@ -2135,11 +2162,9 @@
             "away": 0.08942879645047122,
             "pick": "Portugal"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 1,
-          "clock": "90'+4'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -2153,7 +2178,8 @@
               "team": "Congo DR",
               "minute": "45'+5'"
             }
-          ]
+          ],
+          "hit": false
         },
         {
           "id": "67",
@@ -2203,18 +2229,5 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "61",
-      "home": "Portugal",
-      "away": "DR Congo",
-      "date": "2026-06-17",
-      "venue": "Houston",
-      "kickoff_utc": "2026-06-17T17:00:00Z",
-      "hg": 1,
-      "ag": 1,
-      "status": "LIVE",
-      "clock": "90'+4'"
-    }
-  ]
+  "live": []
 }
