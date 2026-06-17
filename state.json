@@ -931,53 +931,53 @@
       "Saudi Arabia": 0.0001
     },
     "advancement": {
-      "Ecuador": 0.7481,
-      "France": 0.9973,
-      "Belgium": 0.8769,
-      "USA": 0.9144,
-      "Austria": 0.9303,
-      "Czech Republic": 0.6285,
-      "Canada": 0.8741,
-      "Argentina": 0.9998,
-      "Croatia": 0.9108,
-      "DR Congo": 0.3872,
-      "Turkey": 0.6274,
-      "Sweden": 0.9582,
-      "Switzerland": 0.9027,
-      "Japan": 0.8968,
-      "Portugal": 0.8563,
-      "Qatar": 0.471,
-      "Algeria": 0.4632,
-      "Ivory Coast": 0.9454,
-      "Morocco": 0.9041,
-      "Egypt": 0.756,
-      "Germany": 0.9971,
-      "England": 0.9294,
       "Norway": 0.9695,
+      "Qatar": 0.471,
+      "Switzerland": 0.9027,
+      "DR Congo": 0.3872,
+      "USA": 0.9144,
+      "Croatia": 0.9108,
+      "Ivory Coast": 0.9454,
+      "Belgium": 0.8769,
       "Colombia": 0.9126,
-      "Brazil": 0.9563,
-      "Cape Verde": 0.568,
-      "Mexico": 0.9702,
-      "Australia": 0.9809,
-      "South Korea": 0.9503,
+      "Austria": 0.9303,
+      "Ecuador": 0.7481,
       "Netherlands": 0.9275,
+      "Cape Verde": 0.568,
+      "Sweden": 0.9582,
+      "Japan": 0.8968,
+      "Canada": 0.8741,
+      "Australia": 0.9809,
+      "Brazil": 0.9563,
+      "Mexico": 0.9702,
       "Spain": 0.9603,
+      "Portugal": 0.8563,
+      "Turkey": 0.6274,
+      "Morocco": 0.9041,
+      "France": 0.9973,
+      "Algeria": 0.4632,
       "Uruguay": 0.7722,
-      "Saudi Arabia": 0.3184,
-      "Scotland": 0.6887,
-      "Iran": 0.6962,
-      "New Zealand": 0.2799,
+      "Argentina": 0.9998,
+      "Germany": 0.9971,
+      "Czech Republic": 0.6285,
+      "South Korea": 0.9503,
+      "Egypt": 0.756,
+      "England": 0.9294,
       "Uzbekistan": 0.4359,
-      "Panama": 0.7241,
+      "Saudi Arabia": 0.3184,
       "Senegal": 0.5755,
+      "New Zealand": 0.2799,
+      "Scotland": 0.6887,
+      "Panama": 0.7241,
+      "Iran": 0.6962,
       "Paraguay": 0.2953,
       "Jordan": 0.0727,
       "Iraq": 0.1252,
       "Bosnia & Herzegovina": 0.4091,
       "South Africa": 0.119,
       "Tunisia": 0.0852,
-      "Curaçao": 0.0303,
       "Ghana": 0.1172,
+      "Curaçao": 0.0303,
       "Haiti": 0.0845
     }
   },
@@ -988,7 +988,21 @@
     "home_goals": 1,
     "away_goals": 1,
     "date": "2026-06-17",
-    "venue": "Houston"
+    "venue": "Houston",
+    "events": [
+      {
+        "kind": "goal",
+        "player": "João Neves",
+        "team": "Portugal",
+        "minute": "6'"
+      },
+      {
+        "kind": "goal",
+        "player": "Yoane Wissa",
+        "team": "DR Congo",
+        "minute": "45'+5'"
+      }
+    ]
   },
   "results": {
     "1": {
@@ -1414,7 +1428,7 @@
         {
           "kind": "goal",
           "player": "Yoane Wissa",
-          "team": "Congo DR",
+          "team": "DR Congo",
           "minute": "45'+5'"
         }
       ]
@@ -2175,7 +2189,7 @@
             {
               "kind": "goal",
               "player": "Yoane Wissa",
-              "team": "Congo DR",
+              "team": "DR Congo",
               "minute": "45'+5'"
             }
           ],
@@ -2197,7 +2211,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "16'",
+          "clock": "20'",
           "ht": false,
           "events": [
             {
@@ -2252,7 +2266,15 @@
       "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "16'"
+      "clock": "20'",
+      "events": [
+        {
+          "kind": "penalty",
+          "player": "Harry Kane",
+          "team": "England",
+          "minute": "12'"
+        }
+      ]
     }
   ]
 }
