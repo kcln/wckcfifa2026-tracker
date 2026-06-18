@@ -2579,7 +2579,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "78'",
+          "clock": "81'",
           "ht": false,
           "events": [
             {
@@ -2587,6 +2587,12 @@
               "player": "Johan Manzambi",
               "team": "Switzerland",
               "minute": "74'"
+            },
+            {
+              "kind": "red",
+              "player": "Tarik Muharemovic",
+              "team": "Bosnia & Herzegovina",
+              "minute": "80'"
             }
           ]
         },
@@ -2634,13 +2640,19 @@
       "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "78'",
+      "clock": "81'",
       "events": [
         {
           "kind": "goal",
           "player": "Johan Manzambi",
           "team": "Switzerland",
           "minute": "74'"
+        },
+        {
+          "kind": "red",
+          "player": "Tarik Muharemovic",
+          "team": "Bosnia & Herzegovina",
+          "minute": "80'"
         }
       ]
     }
@@ -3585,7 +3597,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "78'",
+          "clock": "81'",
           "ht": false,
           "events": [
             {
@@ -3593,6 +3605,12 @@
               "player": "Johan Manzambi",
               "team": "Switzerland",
               "minute": "74'"
+            },
+            {
+              "kind": "red",
+              "player": "Tarik Muharemovic",
+              "team": "Bosnia & Herzegovina",
+              "minute": "80'"
             }
           ]
         },
