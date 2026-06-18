@@ -2577,11 +2577,18 @@
             "pick": "Switzerland"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "74'",
+          "clock": "78'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Johan Manzambi",
+              "team": "Switzerland",
+              "minute": "74'"
+            }
+          ]
         },
         {
           "id": "10",
@@ -2624,11 +2631,18 @@
       "date": "2026-06-18",
       "venue": "Los Angeles (Inglewood)",
       "kickoff_utc": "2026-06-18T19:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "74'",
-      "events": []
+      "clock": "78'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Johan Manzambi",
+          "team": "Switzerland",
+          "minute": "74'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -3569,11 +3583,18 @@
             "pick": "Switzerland"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "74'",
+          "clock": "78'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Johan Manzambi",
+              "team": "Switzerland",
+              "minute": "74'"
+            }
+          ]
         },
         {
           "id": "10",
