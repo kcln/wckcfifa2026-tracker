@@ -2710,7 +2710,7 @@
           "status": "live",
           "hg": 2,
           "ag": 0,
-          "clock": "30'",
+          "clock": "34'",
           "ht": false,
           "events": [
             {
@@ -2724,6 +2724,12 @@
               "player": "Jonathan David",
               "team": "Canada",
               "minute": "29'"
+            },
+            {
+              "kind": "red",
+              "player": "Homam Ahmed",
+              "team": "Qatar",
+              "minute": "33'"
             }
           ]
         },
@@ -2756,7 +2762,7 @@
       "hg": 2,
       "ag": 0,
       "status": "LIVE",
-      "clock": "30'",
+      "clock": "34'",
       "events": [
         {
           "kind": "goal",
@@ -2769,6 +2775,12 @@
           "player": "Jonathan David",
           "team": "Canada",
           "minute": "29'"
+        },
+        {
+          "kind": "red",
+          "player": "Homam Ahmed",
+          "team": "Qatar",
+          "minute": "33'"
         }
       ]
     }
@@ -3769,7 +3781,7 @@
           "status": "live",
           "hg": 2,
           "ag": 0,
-          "clock": "30'",
+          "clock": "34'",
           "ht": false,
           "events": [
             {
@@ -3783,6 +3795,12 @@
               "player": "Jonathan David",
               "team": "Canada",
               "minute": "29'"
+            },
+            {
+              "kind": "red",
+              "player": "Homam Ahmed",
+              "team": "Qatar",
+              "minute": "33'"
             }
           ]
         },
