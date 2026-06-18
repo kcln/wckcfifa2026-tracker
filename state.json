@@ -2384,8 +2384,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 1,
-          "clock": "64'",
+          "ag": 2,
+          "clock": "68'",
           "ht": false,
           "events": [
             {
@@ -2399,6 +2399,12 @@
               "player": "Abbosbek Fayzullaev",
               "team": "Uzbekistan",
               "minute": "60'"
+            },
+            {
+              "kind": "goal",
+              "player": "Luis Díaz",
+              "team": "Colombia",
+              "minute": "65'"
             }
           ]
         }
@@ -2414,9 +2420,9 @@
       "venue": "Mexico City",
       "kickoff_utc": "2026-06-18T02:00:00Z",
       "hg": 1,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "64'",
+      "clock": "68'",
       "events": [
         {
           "kind": "goal",
@@ -2429,6 +2435,12 @@
           "player": "Abbosbek Fayzullaev",
           "team": "Uzbekistan",
           "minute": "60'"
+        },
+        {
+          "kind": "goal",
+          "player": "Luis Díaz",
+          "team": "Colombia",
+          "minute": "65'"
         }
       ]
     }
@@ -3291,8 +3303,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 1,
-          "clock": "64'",
+          "ag": 2,
+          "clock": "68'",
           "ht": false,
           "events": [
             {
@@ -3306,6 +3318,12 @@
               "player": "Abbosbek Fayzullaev",
               "team": "Uzbekistan",
               "minute": "60'"
+            },
+            {
+              "kind": "goal",
+              "player": "Luis Díaz",
+              "team": "Colombia",
+              "minute": "65'"
             }
           ]
         }
