@@ -2495,11 +2495,18 @@
             "pick": "Czech Republic"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "4'",
+          "clock": "8'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Michal Sadílek",
+              "team": "Czech Republic",
+              "minute": "6'"
+            }
+          ]
         },
         {
           "id": "9",
@@ -2557,11 +2564,18 @@
       "date": "2026-06-18",
       "venue": "Atlanta",
       "kickoff_utc": "2026-06-18T16:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "4'",
-      "events": []
+      "clock": "8'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Michal Sadílek",
+          "team": "Czech Republic",
+          "minute": "6'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -3470,11 +3484,18 @@
             "pick": "Czech Republic"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "4'",
+          "clock": "8'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Michal Sadílek",
+              "team": "Czech Republic",
+              "minute": "6'"
+            }
+          ]
         },
         {
           "id": "9",
