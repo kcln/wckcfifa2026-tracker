@@ -2717,9 +2717,9 @@
             "pick": "Canada"
           },
           "status": "live",
-          "hg": 5,
+          "hg": 6,
           "ag": 0,
-          "clock": "88'",
+          "clock": "90'+2'",
           "ht": false,
           "events": [
             {
@@ -2763,6 +2763,12 @@
               "player": "Mohamed Manai",
               "team": "Canada",
               "minute": "75'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jonathan David",
+              "team": "Canada",
+              "minute": "90'+2'"
             }
           ]
         },
@@ -2792,10 +2798,10 @@
       "date": "2026-06-18",
       "venue": "Vancouver",
       "kickoff_utc": "2026-06-18T22:00:00Z",
-      "hg": 5,
+      "hg": 6,
       "ag": 0,
       "status": "LIVE",
-      "clock": "88'",
+      "clock": "90'+2'",
       "events": [
         {
           "kind": "goal",
@@ -2838,6 +2844,12 @@
           "player": "Mohamed Manai",
           "team": "Canada",
           "minute": "75'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jonathan David",
+          "team": "Canada",
+          "minute": "90'+2'"
         }
       ]
     }
@@ -3836,9 +3848,9 @@
             "pick": "Canada"
           },
           "status": "live",
-          "hg": 5,
+          "hg": 6,
           "ag": 0,
-          "clock": "88'",
+          "clock": "90'+2'",
           "ht": false,
           "events": [
             {
@@ -3882,6 +3894,12 @@
               "player": "Mohamed Manai",
               "team": "Canada",
               "minute": "75'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jonathan David",
+              "team": "Canada",
+              "minute": "90'+2'"
             }
           ]
         },
