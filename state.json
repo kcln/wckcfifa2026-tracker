@@ -2708,9 +2708,9 @@
             "pick": "Canada"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 0,
-          "clock": "45'+1'",
+          "clock": "45'+5'",
           "ht": false,
           "events": [
             {
@@ -2730,6 +2730,12 @@
               "player": "Homam Ahmed",
               "team": "Qatar",
               "minute": "33'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jonathan David",
+              "team": "Canada",
+              "minute": "45'+3'"
             }
           ]
         },
@@ -2759,10 +2765,10 @@
       "date": "2026-06-18",
       "venue": "Vancouver",
       "kickoff_utc": "2026-06-18T22:00:00Z",
-      "hg": 2,
+      "hg": 3,
       "ag": 0,
       "status": "LIVE",
-      "clock": "45'+1'",
+      "clock": "45'+5'",
       "events": [
         {
           "kind": "goal",
@@ -2781,6 +2787,12 @@
           "player": "Homam Ahmed",
           "team": "Qatar",
           "minute": "33'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jonathan David",
+          "team": "Canada",
+          "minute": "45'+3'"
         }
       ]
     }
@@ -3779,9 +3791,9 @@
             "pick": "Canada"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 0,
-          "clock": "45'+1'",
+          "clock": "45'+5'",
           "ht": false,
           "events": [
             {
@@ -3801,6 +3813,12 @@
               "player": "Homam Ahmed",
               "team": "Qatar",
               "minute": "33'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jonathan David",
+              "team": "Canada",
+              "minute": "45'+3'"
             }
           ]
         },
