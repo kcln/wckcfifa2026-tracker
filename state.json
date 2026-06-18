@@ -586,6 +586,15 @@
           "key": "pm-2026-06-18-9",
           "generated_at": "2026-06-18T13:58:36.788177-07:00",
           "kickoff_utc": "2026-06-18T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 18\n\nHalf-time:\nCanada 3 - 0 Qatar\nVancouver, Canada\n  ⚽ 16' Cyle Larin (Canada)\n  ⚽ 29' Jonathan David (Canada)\n  ⚽ 45'+3' Jonathan David (Canada)\n  🟥 33' Homam Ahmed (Qatar)\nPrediction: Canada",
+          "sent": true,
+          "hash": "9ab4640632f39a12",
+          "key": "ht-2026-06-18-10",
+          "generated_at": "2026-06-18T15:55:35.746213-07:00",
+          "kickoff_utc": "2026-06-18T22:00:00Z"
         }
       ]
     }
@@ -2710,8 +2719,8 @@
           "status": "live",
           "hg": 3,
           "ag": 0,
-          "clock": "45'+5'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -2767,8 +2776,8 @@
       "kickoff_utc": "2026-06-18T22:00:00Z",
       "hg": 3,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+5'",
+      "status": "HT",
+      "clock": "45'+6'",
       "events": [
         {
           "kind": "goal",
@@ -3793,8 +3802,8 @@
           "status": "live",
           "hg": 3,
           "ag": 0,
-          "clock": "45'+5'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
