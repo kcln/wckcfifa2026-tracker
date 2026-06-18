@@ -2578,8 +2578,8 @@
           },
           "status": "live",
           "hg": 3,
-          "ag": 0,
-          "clock": "90'+1'",
+          "ag": 1,
+          "clock": "90'+5'",
           "ht": false,
           "events": [
             {
@@ -2605,6 +2605,12 @@
               "player": "Johan Manzambi",
               "team": "Switzerland",
               "minute": "90'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ermin Mahmic",
+              "team": "Bosnia & Herzegovina",
+              "minute": "90'+3'"
             }
           ]
         },
@@ -2650,9 +2656,9 @@
       "venue": "Los Angeles (Inglewood)",
       "kickoff_utc": "2026-06-18T19:00:00Z",
       "hg": 3,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "90'+1'",
+      "clock": "90'+5'",
       "events": [
         {
           "kind": "goal",
@@ -2677,6 +2683,12 @@
           "player": "Johan Manzambi",
           "team": "Switzerland",
           "minute": "90'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ermin Mahmic",
+          "team": "Bosnia & Herzegovina",
+          "minute": "90'+3'"
         }
       ]
     }
@@ -3620,8 +3632,8 @@
           },
           "status": "live",
           "hg": 3,
-          "ag": 0,
-          "clock": "90'+1'",
+          "ag": 1,
+          "clock": "90'+5'",
           "ht": false,
           "events": [
             {
@@ -3647,6 +3659,12 @@
               "player": "Johan Manzambi",
               "team": "Switzerland",
               "minute": "90'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ermin Mahmic",
+              "team": "Bosnia & Herzegovina",
+              "minute": "90'+3'"
             }
           ]
         },
