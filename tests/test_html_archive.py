@@ -254,13 +254,14 @@ def test_schedule_is_by_day_strip(tmp_path):
     html = _render(_sched_state(), tmp_path)
     assert '<span class="sec-h">Schedule</span>' in html
     assert '<div class="daystrip">' in html
-    # one column per fixture day, in ascending date order
-    for date in ("2026-06-15", "2026-06-17", "2026-06-20", "2026-06-28"):
+    # strip = group-stage days only, ascending; Jun 28+ knockouts go in the bracket
+    for date in ("2026-06-15", "2026-06-17", "2026-06-20"):
         assert f'data-date="{date}"' in html
     i = [html.index(f'data-date="{d}"')
-         for d in ("2026-06-15", "2026-06-17", "2026-06-20", "2026-06-28")]
+         for d in ("2026-06-15", "2026-06-17", "2026-06-20")]
     assert i == sorted(i)
-    # old status sub-sections are gone
+    assert 'data-date="2026-06-28"' not in html   # knockout day not a strip column
+    assert '<div class="bk">' in html             # bracket appended to the right
     for gone in ("Today", "Upcoming", "Finished", "Bracket"):
         assert f'<span class="sub-h">{gone}</span>' not in html
 
@@ -285,11 +286,13 @@ def test_schedule_box_shows_score_live_minute_and_location_no_scorers(tmp_path):
     assert '<div class="bracket">' not in html
 
 
-def test_schedule_box_upcoming_shows_kickoff_and_knockout_slots(tmp_path):
+def test_schedule_strip_upcoming_kickoff_and_knockout_in_bracket(tmp_path):
     html = _render(_sched_state(), tmp_path)
-    assert "pm PT" in html                       # compact kickoff label
-    # knockout placeholder slots appear in their own day column box
-    assert "2A" in html and "2B" in html and 'data-date="2026-06-28"' in html
+    assert "pm PT" in html                       # strip upcoming kickoff label
+    # knockout slots now render in the bracket (unresolved here: no groups data)
+    assert '<div class="bk">' in html
+    assert '<span class="bkm-nm">2A</span>' in html
+    assert '<span class="bkm-nm">2B</span>' in html
 
 
 def test_no_schedule_state_renders_no_section(tmp_path):
@@ -474,25 +477,28 @@ def _ko_state():
                      "status": "sched"}]}]}
 
 
-def test_schedule_shows_strip_during_group_stage(tmp_path):
+def test_schedule_shows_strip_and_bracket_together(tmp_path):
+    # Both visible at once now (no date gate): group strip + knockout bracket,
+    # with the divider between them.
     out = tmp_path / "index.html"
     ha.render(_ko_state(), out, today="2026-06-20")
     html = out.read_text()
-    assert '<div class="daystrip">' in html
-    assert '<div class="bk">' not in html
+    assert '<div class="daystrip">' in html        # group strip
+    assert '<div class="bk">' in html              # AND the bracket
+    assert '<div class="sched-div">' in html       # divider between them
+    assert 'data-date="2026-06-20"' in html        # group day is a strip column
 
 
-def test_schedule_switches_to_bracket_from_jun28(tmp_path):
+def test_schedule_bracket_resolves_slots_and_shows_location(tmp_path):
     out = tmp_path / "index.html"
     ha.render(_ko_state(), out, today="2026-06-28")
     html = out.read_text()
     assert '<div class="bk">' in html
-    assert '<div class="daystrip">' not in html
-    assert "Knockout bracket" in html
     # group-slot tokens resolve to live country codes
     assert '<span class="bkm-nm">KOR</span>' in html   # 2A -> South Korea
     assert "Round of 32" in html and "Final" in html
-    # location is shown in bracket boxes
+    # location shown in bracket boxes
     assert "Los Angeles (Inglewood), USA" in html
-    # raw 2A token no longer shown for resolved slots
-    assert '<span class="bkm-nm">2A</span>' not in html
+    # the knockout day is NOT a strip column (it's only in the bracket)
+    assert 'data-date="2026-06-28"' not in html
+    assert '<span class="bkm-nm">2A</span>' not in html   # resolved, not raw token
