@@ -568,6 +568,15 @@
           "key": "pm-2026-06-18-3",
           "generated_at": "2026-06-18T11:00:56.051639-07:00",
           "kickoff_utc": "2026-06-18T16:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 18\n\nHalf-time:\nSwitzerland 0 - 0 Bosnia & Herzegovina\nLos Angeles (Inglewood), USA\nPrediction: Switzerland",
+          "sent": true,
+          "hash": "42be9bdf694d3f6f",
+          "key": "ht-2026-06-18-9",
+          "generated_at": "2026-06-18T12:51:17.320203-07:00",
+          "kickoff_utc": "2026-06-18T19:00:00Z"
         }
       ]
     }
@@ -2570,8 +2579,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+2'",
-          "ht": false,
+          "clock": "45'+3'",
+          "ht": true,
           "events": []
         },
         {
@@ -2617,8 +2626,8 @@
       "kickoff_utc": "2026-06-18T19:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+2'",
+      "status": "HT",
+      "clock": "45'+3'",
       "events": []
     }
   ],
@@ -3562,8 +3571,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+2'",
-          "ht": false,
+          "clock": "45'+3'",
+          "ht": true,
           "events": []
         },
         {
