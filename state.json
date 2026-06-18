@@ -2719,7 +2719,7 @@
           "status": "live",
           "hg": 4,
           "ag": 0,
-          "clock": "71'",
+          "clock": "75'",
           "ht": false,
           "events": [
             {
@@ -2757,6 +2757,12 @@
               "player": "Nathan Saliba",
               "team": "Canada",
               "minute": "64'"
+            },
+            {
+              "kind": "own_goal",
+              "player": "Mohamed Manai",
+              "team": "Canada",
+              "minute": "75'"
             }
           ]
         },
@@ -2789,7 +2795,7 @@
       "hg": 4,
       "ag": 0,
       "status": "LIVE",
-      "clock": "71'",
+      "clock": "75'",
       "events": [
         {
           "kind": "goal",
@@ -2826,6 +2832,12 @@
           "player": "Nathan Saliba",
           "team": "Canada",
           "minute": "64'"
+        },
+        {
+          "kind": "own_goal",
+          "player": "Mohamed Manai",
+          "team": "Canada",
+          "minute": "75'"
         }
       ]
     }
@@ -3826,7 +3838,7 @@
           "status": "live",
           "hg": 4,
           "ag": 0,
-          "clock": "71'",
+          "clock": "75'",
           "ht": false,
           "events": [
             {
@@ -3864,6 +3876,12 @@
               "player": "Nathan Saliba",
               "team": "Canada",
               "minute": "64'"
+            },
+            {
+              "kind": "own_goal",
+              "player": "Mohamed Manai",
+              "team": "Canada",
+              "minute": "75'"
             }
           ]
         },
