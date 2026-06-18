@@ -2505,8 +2505,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 0,
-          "clock": "82'",
+          "ag": 1,
+          "clock": "86'",
           "ht": false,
           "events": [
             {
@@ -2514,6 +2514,12 @@
               "player": "Michal Sadílek",
               "team": "Czech Republic",
               "minute": "6'"
+            },
+            {
+              "kind": "penalty",
+              "player": "Teboho Mokoena",
+              "team": "South Africa",
+              "minute": "83'"
             }
           ]
         },
@@ -2574,15 +2580,21 @@
       "venue": "Atlanta",
       "kickoff_utc": "2026-06-18T16:00:00Z",
       "hg": 1,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "82'",
+      "clock": "86'",
       "events": [
         {
           "kind": "goal",
           "player": "Michal Sadílek",
           "team": "Czech Republic",
           "minute": "6'"
+        },
+        {
+          "kind": "penalty",
+          "player": "Teboho Mokoena",
+          "team": "South Africa",
+          "minute": "83'"
         }
       ]
     }
@@ -3494,8 +3506,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 0,
-          "clock": "82'",
+          "ag": 1,
+          "clock": "86'",
           "ht": false,
           "events": [
             {
@@ -3503,6 +3515,12 @@
               "player": "Michal Sadílek",
               "team": "Czech Republic",
               "minute": "6'"
+            },
+            {
+              "kind": "penalty",
+              "player": "Teboho Mokoena",
+              "team": "South Africa",
+              "minute": "83'"
             }
           ]
         },
