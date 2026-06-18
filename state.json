@@ -509,6 +509,15 @@
           "key": "pm-2026-06-17-68",
           "generated_at": "2026-06-17T18:06:51.129903-07:00",
           "kickoff_utc": "2026-06-17T23:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 17\n\nHalf-time:\nUzbekistan 0 - 1 Colombia\nMexico City, Mexico\n  ⚽ 40' Daniel Muñoz (Colombia)\nPrediction: Colombia",
+          "sent": true,
+          "hash": "87168ef6d1e025fb",
+          "key": "ht-2026-06-17-62",
+          "generated_at": "2026-06-17T19:52:01.408373-07:00",
+          "kickoff_utc": "2026-06-18T02:00:00Z"
         }
       ]
     }
@@ -2376,8 +2385,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+3'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -2400,8 +2409,8 @@
       "kickoff_utc": "2026-06-18T02:00:00Z",
       "hg": 0,
       "ag": 1,
-      "status": "LIVE",
-      "clock": "45'+3'",
+      "status": "HT",
+      "clock": "45'+5'",
       "events": [
         {
           "kind": "goal",
@@ -3271,8 +3280,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+3'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
