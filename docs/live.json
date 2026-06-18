@@ -1,1 +1,1 @@
-{"live": true, "id": "10", "home": "Canada", "away": "Qatar", "hg": 0, "ag": 0, "status": "LIVE", "clock": "12'", "date": "2026-06-18", "venue": "Vancouver", "events": []}
+{"live": true, "id": "10", "home": "Canada", "away": "Qatar", "hg": 1, "ag": 0, "status": "LIVE", "clock": "17'", "date": "2026-06-18", "venue": "Vancouver", "events": [{"kind": "goal", "player": "Cyle Larin", "team": "Canada", "minute": "16'"}]}

@@ -2708,11 +2708,18 @@
             "pick": "Canada"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "12'",
+          "clock": "17'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Cyle Larin",
+              "team": "Canada",
+              "minute": "16'"
+            }
+          ]
         },
         {
           "id": "4",
@@ -2740,11 +2747,18 @@
       "date": "2026-06-18",
       "venue": "Vancouver",
       "kickoff_utc": "2026-06-18T22:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "12'",
-      "events": []
+      "clock": "17'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Cyle Larin",
+          "team": "Canada",
+          "minute": "16'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -3741,11 +3755,18 @@
             "pick": "Canada"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "12'",
+          "clock": "17'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Cyle Larin",
+              "team": "Canada",
+              "minute": "16'"
+            }
+          ]
         },
         {
           "id": "4",
