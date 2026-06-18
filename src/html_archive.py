@@ -705,7 +705,7 @@ def _render_standings(state: dict) -> str:
     legend = ('<div class="legend">P = Played · Pts = Points · '
               'GD = Goal Difference · GF = Goals For · GA = Goals Against</div>')
     return (
-        '<details class="section">'
+        '<details class="section" id="standings">'
         '<summary><span class="sec-h">Group standings</span></summary>'
         f'<div class="sec-body">{legend}{_tools("groups")}'
         f'<div class="standings">{"".join(grps)}</div></div></details>')
@@ -1022,7 +1022,7 @@ __REFRESH__
 <h1>Every match.<br/>Every <span class="grad">prediction.</span></h1>
 <p class="lead">A machine-curated record of every match day this tournament — a prediction before kickoff, a result after each match, a recap at night. Delivered daily on Telegram.</p>
 </div>
-<div class="h-card dark">
+<div class="h-card dark" id="live">
 <div class="score">
 <div class="kicker" id="hero-kicker">__HERO_KICKER__</div>
 <div class="team-line" id="hero-match">__HERO_MATCH__</div>

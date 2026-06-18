@@ -340,7 +340,7 @@ def test_sections_and_groups_are_collapsible_and_default_collapsed(tmp_path):
                   "pred": {"home": 0.5, "draw": 0.3, "away": 0.2, "pick": "A"}}]}]}
     html = _render(state, tmp_path)
     # whole sections are collapsible; Group standings collapsed, Match log open
-    assert '<details class="section">' in html        # standings (collapsed)
+    assert '<details class="section" id="standings">' in html  # standings (collapsed)
     assert '<details class="section" open>' in html   # match log (open)
     assert '<span class="sec-h">Group standings</span>' in html
     assert '<span class="sec-h">Match log</span>' in html
@@ -536,3 +536,17 @@ def test_bracket_collapses_to_qualifier_when_group_decided(tmp_path):
                     html)
     assert kor is not None and "proj" not in kor.group(0)
     assert 'MEX / KOR' not in html        # no longer the projected group list
+
+
+def test_sections_have_deeplink_anchors(tmp_path):
+    state = {"days": [], "bracket": {},
+             "groups": {"A": [{"team": "Mexico", "played": 1, "points": 3,
+                               "gd": 1, "gf": 1, "ga": 0}]},
+             "schedule": [{"date": "2026-06-20", "matches": [
+                 {"id": "1", "home": "Mexico", "away": "Korea", "stage": "group",
+                  "kickoff_utc": "2026-06-20T19:00:00Z", "venue": "Atlanta",
+                  "status": "sched"}]}]}
+    html = _render(state, tmp_path)
+    assert 'id="live"' in html        # hero live-score card
+    assert 'id="standings"' in html   # group standings section
+    assert 'id="schedule"' in html    # schedule section
