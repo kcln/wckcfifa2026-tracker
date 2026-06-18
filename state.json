@@ -509,6 +509,65 @@
           "key": "pm-2026-06-17-68",
           "generated_at": "2026-06-17T18:06:51.129903-07:00",
           "kickoff_utc": "2026-06-17T23:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 17\n\nHalf-time:\nUzbekistan 0 - 1 Colombia\nMexico City, Mexico\n  ⚽ 40' Daniel Muñoz (Colombia)\nPrediction: Colombia",
+          "sent": true,
+          "hash": "87168ef6d1e025fb",
+          "key": "ht-2026-06-17-62",
+          "generated_at": "2026-06-17T19:52:01.408373-07:00",
+          "kickoff_utc": "2026-06-18T02:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 17\n\nFull time:\nUzbekistan 1 - 3 Colombia\nMexico City, Mexico\n  ⚽ 40' Daniel Muñoz (Colombia)\n  ⚽ 60' Abbosbek Fayzullaev (Uzbekistan)\n  ⚽ 65' Luis Díaz (Colombia)\n  ⚽ 90'+9' Jáminton Campaz (Colombia)\nOverall prediction: 10/24 (41.7%)\nPrediction ✓: Colombia",
+          "sent": true,
+          "hash": "ab5a8529e1cbab88",
+          "key": "pm-2026-06-17-62",
+          "generated_at": "2026-06-17T21:06:06.100942-07:00",
+          "kickoff_utc": "2026-06-18T02:00:00Z"
+        },
+        {
+          "type": "daily_recap",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 17\n\nDaily Recap\n\nResults:\n  Portugal 1 - 1 DR Congo\n  Houston, USA\n    ⚽ 6' João Neves (Portugal)\n    ⚽ 45'+5' Yoane Wissa (DR Congo)\n  Prediction ✗: Portugal\n\n  England 4 - 2 Croatia\n  Dallas (Arlington), USA\n    ⚽ 12' Harry Kane (England, pen)\n    ⚽ 36' Martin Baturina (Croatia)\n    ⚽ 42' Harry Kane (England)\n    ⚽ 45'+5' Petar Musa (Croatia)\n    ⚽ 47' Jude Bellingham (England)\n    ⚽ 85' Marcus Rashford (England)\n  Prediction ✗: Croatia\n\n  Ghana 1 - 0 Panama\n  Toronto, Canada\n    ⚽ 90'+5' Caleb Yirenkyi (Ghana)\n  Prediction ✗: Panama\n\n  Uzbekistan 1 - 3 Colombia\n  Mexico City, Mexico\n    ⚽ 40' Daniel Muñoz (Colombia)\n    ⚽ 60' Abbosbek Fayzullaev (Uzbekistan)\n    ⚽ 65' Luis Díaz (Colombia)\n    ⚽ 90'+9' Jáminton Campaz (Colombia)\n  Prediction ✓: Colombia\n\nOverall prediction — today 1/4 (25.0%)  ·  overall 10/24 (41.7%)\n\nGroup Standings:\n\nP Played · Pts Points · GD Goal Diff · GF Goals For · GA Goals Against\n\n<code>Group A\nTeam            P Pts  GD  GF  GA\nMexico          1   3  +2   2   0\nSouth Korea     1   3  +1   2   1\nCzech Republic  1   0  -1   1   2\nSouth Africa    1   0  -2   0   2\n\nGroup B\nTeam            P Pts  GD  GF  GA\nBosnia & Herzeg 1   1  +0   1   1\nCanada          1   1  +0   1   1\nQatar           1   1  +0   1   1\nSwitzerland     1   1  +0   1   1\n\nGroup C\nTeam            P Pts  GD  GF  GA\nScotland        1   3  +1   1   0\nBrazil          1   1  +0   1   1\nMorocco         1   1  +0   1   1\nHaiti           1   0  -1   0   1\n\nGroup D\nTeam            P Pts  GD  GF  GA\nUSA             1   3  +3   4   1\nAustralia       1   3  +2   2   0\nTurkey          1   0  -2   0   2\nParaguay        1   0  -3   1   4\n\nGroup E\nTeam            P Pts  GD  GF  GA\nGermany         1   3  +6   7   1\nIvory Coast     1   3  +1   1   0\nEcuador         1   0  -1   0   1\nCuraçao         1   0  -6   1   7\n\nGroup F\nTeam            P Pts  GD  GF  GA\nSweden          1   3  +4   5   1\nJapan           1   1  +0   2   2\nNetherlands     1   1  +0   2   2\nTunisia         1   0  -4   1   5\n\nGroup G\nTeam            P Pts  GD  GF  GA\nIran            1   1  +0   2   2\nNew Zealand     1   1  +0   2   2\nBelgium         1   1  +0   1   1\nEgypt           1   1  +0   1   1\n\nGroup H\nTeam            P Pts  GD  GF  GA\nSaudi Arabia    1   1  +0   1   1\nUruguay         1   1  +0   1   1\nCape Verde      1   1  +0   0   0\nSpain           1   1  +0   0   0\n\nGroup I\nTeam            P Pts  GD  GF  GA\nNorway          1   3  +3   4   1\nFrance          1   3  +2   3   1\nSenegal         1   0  -2   1   3\nIraq            1   0  -3   1   4\n\nGroup J\nTeam            P Pts  GD  GF  GA\nArgentina       1   3  +3   3   0\nAustria         1   3  +2   3   1\nJordan          1   0  -2   1   3\nAlgeria         1   0  -3   0   3\n\nGroup K\nTeam            P Pts  GD  GF  GA\nColombia        1   3  +2   3   1\nDR Congo        1   1  +0   1   1\nPortugal        1   1  +0   1   1\nUzbekistan      1   0  -2   1   3\n\nGroup L\nTeam            P Pts  GD  GF  GA\nEngland         1   3  +2   4   2\nGhana           1   3  +1   1   0\nPanama          1   0  -1   0   1\nCroatia         1   0  -2   2   4</code>",
+          "sent": true,
+          "hash": "a1ece10932a31658",
+          "key": "dr-2026-06-17",
+          "generated_at": "2026-06-17T21:06:06.102531-07:00",
+          "kickoff_utc": "2026-06-17T17:00:00Z"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-18",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 18\n\nMatchday Brief\n\nCzech Republic vs South Africa\n  Prediction: Czech Republic\n  Czech Republic 63.4% · Draw 24.4% · South Africa 12.3%\n  🕐 9:00am PT / 11:00am CT / 12:00pm ET / 9:30pm IST\n  📍 Atlanta, USA\n\nSwitzerland vs Bosnia & Herzegovina\n  Prediction: Switzerland\n  Switzerland 78.4% · Draw 19.6% · Bosnia & Herzegovina 2.0%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 Los Angeles (Inglewood), USA\n\nCanada vs Qatar\n  Prediction: Canada\n  Canada 71.7% · Draw 20.4% · Qatar 7.9%\n  🕐 3:00pm PT / 5:00pm CT / 6:00pm ET / 3:30am IST (+1d)\n  📍 Vancouver, Canada\n\nMexico vs South Korea\n  Prediction: Mexico\n  Mexico 45.0% · Draw 28.1% · South Korea 26.9%\n  🕐 6:00pm PT / 8:00pm CT / 9:00pm ET / 6:30am IST (+1d)\n  📍 Guadalajara (Zapopan), Mexico",
+          "sent": true,
+          "hash": "9867cff7294d94a5",
+          "key": "mb-2026-06-18",
+          "generated_at": "2026-06-18T00:05:21.897945-07:00",
+          "kickoff_utc": "2026-06-18T16:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 18\n\nHalf-time:\nCzech Republic 1 - 0 South Africa\nAtlanta, USA\n  ⚽ 6' Michal Sadílek (Czech Republic)\nPrediction: Czech Republic",
+          "sent": true,
+          "hash": "f29a3519fcd7cf7c",
+          "key": "ht-2026-06-18-3",
+          "generated_at": "2026-06-18T09:53:56.477270-07:00",
+          "kickoff_utc": "2026-06-18T16:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 18\n\nFull time:\nCzech Republic 1 - 1 South Africa\nAtlanta, USA\n  ⚽ 6' Michal Sadílek (Czech Republic)\n  ⚽ 83' Teboho Mokoena (South Africa, pen)\nOverall prediction: 10/25 (40.0%)\nPrediction ✗: Czech Republic",
+          "sent": true,
+          "hash": "b155950d62947161",
+          "key": "pm-2026-06-18-3",
+          "generated_at": "2026-06-18T11:00:56.051639-07:00",
+          "kickoff_utc": "2026-06-18T16:00:00Z"
         }
       ]
     }
@@ -533,19 +592,19 @@
       },
       {
         "team": "Czech Republic",
-        "played": 1,
-        "points": 0,
+        "played": 2,
+        "points": 1,
         "gd": -1,
-        "gf": 1,
-        "ga": 2
+        "gf": 2,
+        "ga": 3
       },
       {
         "team": "South Africa",
-        "played": 1,
-        "points": 0,
+        "played": 2,
+        "points": 1,
         "gd": -2,
-        "gf": 0,
-        "ga": 2
+        "gf": 1,
+        "ga": 3
       }
     ],
     "B": [
@@ -856,6 +915,14 @@
     ],
     "K": [
       {
+        "team": "Colombia",
+        "played": 1,
+        "points": 3,
+        "gd": 2,
+        "gf": 3,
+        "ga": 1
+      },
+      {
         "team": "DR Congo",
         "played": 1,
         "points": 1,
@@ -872,20 +939,12 @@
         "ga": 1
       },
       {
-        "team": "Colombia",
-        "played": 0,
-        "points": 0,
-        "gd": 0,
-        "gf": 0,
-        "ga": 0
-      },
-      {
         "team": "Uzbekistan",
-        "played": 0,
+        "played": 1,
         "points": 0,
-        "gd": 0,
-        "gf": 0,
-        "ga": 0
+        "gd": -2,
+        "gf": 1,
+        "ga": 3
       }
     ],
     "L": [
@@ -925,111 +984,117 @@
   },
   "bracket": {
     "title_odds": {
-      "France": 0.1323,
-      "Croatia": 0.0211,
-      "Iran": 0.0063,
-      "Germany": 0.0422,
-      "Belgium": 0.0212,
-      "Egypt": 0.0041,
-      "Mexico": 0.0167,
-      "Morocco": 0.0257,
-      "Spain": 0.1462,
-      "Japan": 0.0265,
-      "Portugal": 0.0417,
-      "Netherlands": 0.0327,
-      "Argentina": 0.214,
-      "Senegal": 0.008,
-      "Uruguay": 0.0157,
-      "Colombia": 0.0508,
-      "Ecuador": 0.0219,
-      "Canada": 0.0086,
-      "Brazil": 0.0498,
-      "Switzerland": 0.0117,
-      "England": 0.0459,
-      "Norway": 0.0088,
-      "Jordan": 0.0001,
-      "Austria": 0.007,
-      "Turkey": 0.011,
-      "Sweden": 0.0018,
-      "South Korea": 0.0071,
-      "Paraguay": 0.0015,
-      "Czech Republic": 0.0026,
-      "Australia": 0.0061,
-      "Uzbekistan": 0.002,
-      "Ivory Coast": 0.0034,
-      "Algeria": 0.0032,
-      "Cape Verde": 0.0006,
-      "Panama": 0.0004,
-      "Scotland": 0.0007,
-      "DR Congo": 0.0004,
-      "New Zealand": 0.0001,
-      "Saudi Arabia": 0.0001
+      "Brazil": 0.0471,
+      "Senegal": 0.0103,
+      "Argentina": 0.2099,
+      "France": 0.131,
+      "Spain": 0.1425,
+      "Turkey": 0.012,
+      "England": 0.0464,
+      "Ecuador": 0.0227,
+      "Morocco": 0.0225,
+      "Mexico": 0.0183,
+      "Iran": 0.006,
+      "Netherlands": 0.0302,
+      "Croatia": 0.0261,
+      "Canada": 0.0069,
+      "Uruguay": 0.0174,
+      "Australia": 0.0077,
+      "Japan": 0.0288,
+      "Paraguay": 0.0019,
+      "Algeria": 0.003,
+      "Belgium": 0.0192,
+      "Egypt": 0.0027,
+      "Colombia": 0.0592,
+      "Portugal": 0.0423,
+      "Germany": 0.0436,
+      "Austria": 0.0052,
+      "Switzerland": 0.0115,
+      "Scotland": 0.0009,
+      "Uzbekistan": 0.0016,
+      "Norway": 0.009,
+      "South Korea": 0.0084,
+      "Panama": 0.0006,
+      "Ivory Coast": 0.0028,
+      "Sweden": 0.0009,
+      "Saudi Arabia": 0.0002,
+      "Czech Republic": 0.0006,
+      "Cape Verde": 0.0002,
+      "Iraq": 0.0001,
+      "DR Congo": 0.0002,
+      "Qatar": 0.0001
     },
     "advancement": {
-      "Switzerland": 0.9048,
-      "Germany": 0.9982,
-      "Sweden": 0.963,
-      "Portugal": 0.8592,
-      "Brazil": 0.9575,
-      "Netherlands": 0.9287,
-      "Canada": 0.8754,
-      "Belgium": 0.878,
-      "Algeria": 0.4682,
-      "Croatia": 0.7788,
-      "Panama": 0.2276,
-      "Colombia": 0.9143,
-      "France": 0.9977,
-      "Spain": 0.9624,
-      "Japan": 0.8978,
-      "Austria": 0.9404,
-      "Morocco": 0.9069,
-      "Ecuador": 0.7628,
-      "DR Congo": 0.3878,
-      "England": 0.998,
-      "Turkey": 0.6318,
-      "Mexico": 0.9739,
-      "Uruguay": 0.7735,
-      "Australia": 0.983,
-      "South Korea": 0.9536,
-      "Egypt": 0.758,
-      "Czech Republic": 0.6475,
-      "USA": 0.9265,
-      "Argentina": 0.9998,
-      "Qatar": 0.4727,
-      "Norway": 0.976,
-      "Cape Verde": 0.5698,
-      "Senegal": 0.5844,
-      "Uzbekistan": 0.4446,
-      "Saudi Arabia": 0.3188,
-      "Iran": 0.6976,
-      "Scotland": 0.6963,
-      "Ivory Coast": 0.9474,
+      "Scotland": 0.7387,
+      "Senegal": 0.6161,
+      "Egypt": 0.7711,
+      "Ivory Coast": 0.9567,
+      "Germany": 0.9985,
+      "Netherlands": 0.9321,
+      "Czech Republic": 0.2819,
+      "Ecuador": 0.7939,
+      "Brazil": 0.9623,
+      "Australia": 0.9833,
+      "Colombia": 0.9876,
+      "Japan": 0.9014,
+      "France": 0.9975,
       "New Zealand": 0.2785,
-      "Ghana": 0.5221,
-      "Paraguay": 0.298,
-      "Jordan": 0.0778,
-      "Iraq": 0.1265,
-      "Bosnia & Herzegovina": 0.4096,
-      "South Africa": 0.1221,
-      "Tunisia": 0.0834,
-      "Curaçao": 0.0306,
-      "Haiti": 0.0887
+      "Iran": 0.7052,
+      "Morocco": 0.9153,
+      "Mexico": 0.9746,
+      "USA": 0.9318,
+      "Canada": 0.8799,
+      "South Korea": 0.9455,
+      "Norway": 0.9828,
+      "Croatia": 0.7927,
+      "Austria": 0.9578,
+      "Sweden": 0.9655,
+      "Turkey": 0.6394,
+      "Switzerland": 0.9054,
+      "England": 0.9986,
+      "Uruguay": 0.7812,
+      "Spain": 0.9616,
+      "Argentina": 0.9996,
+      "Cape Verde": 0.5704,
+      "Uzbekistan": 0.3293,
+      "Qatar": 0.4697,
+      "Belgium": 0.8808,
+      "Algeria": 0.4894,
+      "Portugal": 0.8743,
+      "Saudi Arabia": 0.3163,
+      "Bosnia & Herzegovina": 0.4304,
+      "DR Congo": 0.3935,
+      "Panama": 0.235,
+      "Paraguay": 0.3055,
+      "Jordan": 0.0921,
+      "Iraq": 0.1359,
+      "Curaçao": 0.0317,
+      "Ghana": 0.5805,
+      "Tunisia": 0.0876,
+      "Haiti": 0.0885,
+      "South Africa": 0.1526
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Ghana",
-    "away": "Panama",
+    "home": "Czech Republic",
+    "away": "South Africa",
     "home_goals": 1,
-    "away_goals": 0,
-    "date": "2026-06-17",
-    "venue": "Toronto",
+    "away_goals": 1,
+    "date": "2026-06-18",
+    "venue": "Atlanta",
     "events": [
       {
         "kind": "goal",
-        "player": "Caleb Yirenkyi",
-        "team": "Ghana",
-        "minute": "90'+5'"
+        "player": "Michal Sadílek",
+        "team": "Czech Republic",
+        "minute": "6'"
+      },
+      {
+        "kind": "penalty",
+        "player": "Teboho Mokoena",
+        "team": "South Africa",
+        "minute": "83'"
       }
     ]
   },
@@ -1513,6 +1578,54 @@
           "player": "Caleb Yirenkyi",
           "team": "Ghana",
           "minute": "90'+5'"
+        }
+      ]
+    },
+    "62": {
+      "home_goals": 1,
+      "away_goals": 3,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Daniel Muñoz",
+          "team": "Colombia",
+          "minute": "40'"
+        },
+        {
+          "kind": "goal",
+          "player": "Abbosbek Fayzullaev",
+          "team": "Uzbekistan",
+          "minute": "60'"
+        },
+        {
+          "kind": "goal",
+          "player": "Luis Díaz",
+          "team": "Colombia",
+          "minute": "65'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jáminton Campaz",
+          "team": "Colombia",
+          "minute": "90'+9'"
+        }
+      ]
+    },
+    "3": {
+      "home_goals": 1,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Michal Sadílek",
+          "team": "Czech Republic",
+          "minute": "6'"
+        },
+        {
+          "kind": "penalty",
+          "player": "Teboho Mokoena",
+          "team": "South Africa",
+          "minute": "83'"
         }
       ]
     }
@@ -2372,6 +2485,117 @@
             "draw": 0.2487965290754469,
             "away": 0.6343237828149338,
             "pick": "Colombia"
+          },
+          "status": "FT",
+          "hg": 1,
+          "ag": 3,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Daniel Muñoz",
+              "team": "Colombia",
+              "minute": "40'"
+            },
+            {
+              "kind": "goal",
+              "player": "Abbosbek Fayzullaev",
+              "team": "Uzbekistan",
+              "minute": "60'"
+            },
+            {
+              "kind": "goal",
+              "player": "Luis Díaz",
+              "team": "Colombia",
+              "minute": "65'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jáminton Campaz",
+              "team": "Colombia",
+              "minute": "90'+9'"
+            }
+          ],
+          "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-06-18",
+      "matches": [
+        {
+          "id": "3",
+          "home": "Czech Republic",
+          "away": "South Africa",
+          "kickoff_utc": "2026-06-18T16:00:00Z",
+          "venue": "Atlanta",
+          "stage": "group",
+          "pred": {
+            "home": 0.6338411398451104,
+            "draw": 0.24361567075607127,
+            "away": 0.12254318939881832,
+            "pick": "Czech Republic"
+          },
+          "status": "FT",
+          "hg": 1,
+          "ag": 1,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Michal Sadílek",
+              "team": "Czech Republic",
+              "minute": "6'"
+            },
+            {
+              "kind": "penalty",
+              "player": "Teboho Mokoena",
+              "team": "South Africa",
+              "minute": "83'"
+            }
+          ],
+          "hit": false
+        },
+        {
+          "id": "9",
+          "home": "Switzerland",
+          "away": "Bosnia & Herzegovina",
+          "kickoff_utc": "2026-06-18T19:00:00Z",
+          "venue": "Los Angeles (Inglewood)",
+          "stage": "group",
+          "pred": {
+            "home": 0.7837865516522919,
+            "draw": 0.19645120269945907,
+            "away": 0.019762245648249105,
+            "pick": "Switzerland"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "10",
+          "home": "Canada",
+          "away": "Qatar",
+          "kickoff_utc": "2026-06-18T22:00:00Z",
+          "venue": "Vancouver",
+          "stage": "group",
+          "pred": {
+            "home": 0.7168882072072752,
+            "draw": 0.2038125662478724,
+            "away": 0.07929922654485254,
+            "pick": "Canada"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "4",
+          "home": "Mexico",
+          "away": "South Korea",
+          "kickoff_utc": "2026-06-19T01:00:00Z",
+          "venue": "Guadalajara (Zapopan)",
+          "stage": "group",
+          "pred": {
+            "home": 0.4499852907240818,
+            "draw": 0.2805934643979418,
+            "away": 0.2694212448779764,
+            "pick": "Mexico"
           },
           "status": "sched"
         }
@@ -3235,7 +3459,36 @@
             "away": 0.6343237828149338,
             "pick": "Colombia"
           },
-          "status": "sched"
+          "status": "FT",
+          "hg": 1,
+          "ag": 3,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Daniel Muñoz",
+              "team": "Colombia",
+              "minute": "40'"
+            },
+            {
+              "kind": "goal",
+              "player": "Abbosbek Fayzullaev",
+              "team": "Uzbekistan",
+              "minute": "60'"
+            },
+            {
+              "kind": "goal",
+              "player": "Luis Díaz",
+              "team": "Colombia",
+              "minute": "65'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jáminton Campaz",
+              "team": "Colombia",
+              "minute": "90'+9'"
+            }
+          ],
+          "hit": true
         }
       ]
     },
@@ -3255,7 +3508,24 @@
             "away": 0.12254318939881832,
             "pick": "Czech Republic"
           },
-          "status": "sched"
+          "status": "FT",
+          "hg": 1,
+          "ag": 1,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Michal Sadílek",
+              "team": "Czech Republic",
+              "minute": "6'"
+            },
+            {
+              "kind": "penalty",
+              "player": "Teboho Mokoena",
+              "team": "South Africa",
+              "minute": "83'"
+            }
+          ],
+          "hit": false
         },
         {
           "id": "9",
