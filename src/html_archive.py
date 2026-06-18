@@ -25,6 +25,11 @@ from html import escape
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+try:
+    from src import knockout
+except ImportError:  # pragma: no cover
+    from . import knockout
+
 # Per KC: article timestamps show a fixed four-zone stack, in this order.
 _WHEN_ZONES = (
     ("PT",  ZoneInfo("America/Los_Angeles")),
@@ -490,7 +495,26 @@ def _sched_box(m: dict) -> str:
         f'<div class="dbox-meta">{meta}</div>{loc_html}</div>')
 
 
-def _render_schedule(state: dict) -> str:
+KO_START = "2026-06-28"   # knockouts begin; the Schedule flips strip -> bracket
+
+
+def _render_schedule(state: dict, today: str | None = None) -> str:
+    """The Schedule section. Group stage (through Jun 27) shows the by-day strip
+    unchanged; from Jun 28 it shows the knockout bracket. `today` is the current
+    PT date (passed by the tracker); when absent it's derived from the data."""
+    if today is None:
+        played = [m for d in (state.get("schedule") or [])
+                  for m in d.get("matches", [])
+                  if m.get("status") in ("FT", "live")]
+        today = max((d.get("date") or "" for d in (state.get("schedule") or [])
+                     for m in d.get("matches", [])
+                     if m.get("status") in ("FT", "live")), default="")
+    if today and today >= KO_START:
+        return _render_bracket_section(state)
+    return _render_strip(state)
+
+
+def _render_strip(state: dict) -> str:
     """Full tournament as one horizontally-scrollable strip of day columns
     (Jun 11 → Final), every fixture incl. knockout slots. The current day is
     highlighted and auto-centred on load (see the strip script)."""
@@ -525,6 +549,121 @@ def _render_schedule(state: dict) -> str:
         '<span class="sec-count">Full tournament</span></summary>'
         f'<div class="sec-body"><div class="daystrip">{"".join(cols)}</div>'
         '</div></details>')
+
+
+def _bracket_positions(by_id: dict) -> dict:
+    """Vertical position per knockout match from the feeder tree, so the bracket
+    columns line up (each tie sits between the two it's fed by). Leaves (R32) get
+    sequential slots; an internal tie sits at the mean of its feeders."""
+    pos: dict = {}
+    counter = [0]
+
+    def feeders(mid):
+        m = by_id[mid]
+        out = []
+        for tok in (str(m.get("home", "")), str(m.get("away", ""))):
+            if tok[:1] == "W" and tok[1:].isdigit() and tok[1:] in by_id:
+                out.append(tok[1:])
+        return out
+
+    def visit(mid):
+        ks = feeders(mid)
+        if not ks:
+            pos[mid] = counter[0]
+            counter[0] += 1
+            return pos[mid]
+        ps = [visit(k) for k in ks]
+        pos[mid] = sum(ps) / len(ps)
+        return pos[mid]
+
+    final = next((mid for mid, m in by_id.items()
+                  if m.get("stage") == "final"), None)
+    if final:
+        visit(final)
+    for mid in by_id:                      # 3rd place / anything disconnected
+        pos.setdefault(mid, 1e9)
+    return pos
+
+
+def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict) -> str:
+    hl = knockout.slot_label(str(m.get("home", "")), groups, winners, losers)
+    al = knockout.slot_label(str(m.get("away", "")), groups, winners, losers)
+    st = m.get("status")
+    played = st in ("FT", "live")
+    hg, ag = int(m.get("hg") or 0), int(m.get("ag") or 0)
+    if st == "live":
+        clk = escape(str(m.get("clock", "")).strip() or "Live")
+        tag = f'<div class="bkm-tag livet"><span class="livedot"></span>{clk}</div>'
+    elif st == "FT":
+        tag = '<div class="bkm-tag">Full time</div>'
+    else:
+        tag = (f'<div class="bkm-tag">'
+               f'{escape(_kick_pt_short(str(m.get("kickoff_utc", ""))))}</div>')
+
+    def row(label, sc, win):
+        s = f'<span class="bkm-sc">{sc}</span>' if played else ""
+        wc = " win" if win else ""
+        return (f'<div class="bkm-row{wc}">'
+                f'<span class="bkm-nm">{escape(label)}</span>{s}</div>')
+
+    loc = escape(_place(str(m.get("venue", ""))))
+    loc_html = f'<div class="bkm-loc">📍 {loc}</div>' if loc else ""
+    cls = " live" if st == "live" else ""
+    return (f'<div class="bkm{cls}">{tag}'
+            f'{row(hl, hg, st == "FT" and hg > ag)}'
+            f'{row(al, ag, st == "FT" and ag > hg)}{loc_html}</div>')
+
+
+def _render_bracket_section(state: dict) -> str:
+    """Classic horizontal knockout bracket (R32 → Final), shown from Jun 28.
+    Slot tokens resolve to live country codes; each tie shows its venue."""
+    sched = state.get("schedule") or []
+    groups = state.get("groups") or {}
+    ko = [{**m, "date": d.get("date")} for d in sched
+          for m in d.get("matches", []) if m.get("stage") not in ("group", None)]
+    if not ko:
+        return _render_strip(state)
+    by_id = {str(m["id"]): m for m in ko}
+    pos = _bracket_positions(by_id)
+    winners, losers = {}, {}                # resolved as knockout results land
+
+    rounds: dict = {}
+    for m in ko:
+        rounds.setdefault(m.get("stage"), []).append(m)
+    for st in rounds:
+        rounds[st].sort(key=lambda x: pos.get(str(x["id"]), 0))
+
+    def box(m):
+        return _bracket_box(m, groups, winners, losers)
+
+    def feeder_round(label, ms):
+        pairs = ""
+        for i in range(0, len(ms) - 1, 2):
+            pairs += (f'<div class="bk-pair"><div class="bk-cell">{box(ms[i])}'
+                      f'</div><div class="bk-cell">{box(ms[i + 1])}</div></div>')
+        if len(ms) % 2:
+            pairs += f'<div class="bk-pair"><div class="bk-cell">{box(ms[-1])}</div></div>'
+        return (f'<div class="bk-rnd bk-feeder"><div class="rlabel">{label}</div>'
+                f'{pairs}</div>')
+
+    def plain_round(label, ms):
+        cells = "".join(f'<div class="bk-cell">{box(m)}</div>' for m in ms)
+        return f'<div class="bk-rnd"><div class="rlabel">{label}</div>{cells}</div>'
+
+    cols = (feeder_round("Round of 32", rounds.get("R32", []))
+            + feeder_round("Round of 16", rounds.get("R16", []))
+            + feeder_round("Quarter-finals", rounds.get("QF", []))
+            + feeder_round("Semi-finals", rounds.get("SF", []))
+            + plain_round("Final", rounds.get("final", [])))
+    third = rounds.get("3rd", [])
+    third_html = (f'<div class="bk-third"><div class="rlabel">Third place</div>'
+                  f'{box(third[0])}</div>') if third else ""
+    return (
+        '<details class="section" id="schedule" open>'
+        '<summary><span class="sec-h">Schedule</span>'
+        '<span class="sec-count">Knockout bracket</span></summary>'
+        f'<div class="sec-body"><div class="bk">{cols}</div>{third_html}</div>'
+        '</details>')
 
 
 def _render_matchlog(state: dict) -> str:
@@ -570,16 +709,17 @@ def _render_standings(state: dict) -> str:
         f'<div class="standings">{"".join(grps)}</div></div></details>')
 
 
-def render(state: dict, path) -> None:
+def render(state: dict, path, today: str | None = None) -> None:
     """Render the full standalone archive page to `path`. Driven by the
     structured `board` + `groups` when present (Option 3); falls back to the
-    message-text rendering otherwise."""
+    message-text rendering otherwise. `today` (PT date) flips the Schedule from
+    the group-stage strip to the knockout bracket on Jun 28."""
     page = SHELL
     for token, value in _hero_tokens(state).items():
         page = page.replace(token, value)
     page = page.replace("__STANDINGS__", _render_standings(state))
     page = page.replace("__MATCHLOG__", _render_matchlog(state))
-    page = page.replace("__SCHEDULE__", _render_schedule(state))
+    page = page.replace("__SCHEDULE__", _render_schedule(state, today))
     page = page.replace("__SIGNUP_TOP__", _signup("signup-top"))
     page = page.replace("__SIGNUP_BOTTOM__", _signup("signup"))
     out = Path(path)
@@ -753,6 +893,30 @@ __REFRESH__
     .dbox-meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; color: var(--ink-soft); margin-top: 6px; display: flex; align-items: center; gap: 6px; }
     .dbox.live .dbox-meta { color: var(--p-700); }
     .dbox-loc { font-size: 11px; color: var(--ink-faint); margin-top: 4px; }
+    /* Knockout bracket (Schedule, from Jun 28) — classic horizontal tree */
+    .bk { display: flex; overflow-x: auto; padding: 6px 4px 12px; }
+    .bk-rnd { display: flex; flex-direction: column; justify-content: space-around; min-width: 124px; padding-top: 22px; position: relative; }
+    .bk-rnd + .bk-rnd { margin-left: 42px; }
+    .bk-rnd > .rlabel { position: absolute; top: 0; left: 2px; white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); }
+    .bk-cell { flex: 1; display: flex; align-items: center; position: relative; }
+    .bk-cell .bkm { width: 100%; }
+    .bk-rnd:not(:last-child) .bk-cell::after { content: ''; position: absolute; right: -21px; top: 50%; width: 21px; height: 2px; background: var(--hair-soft); }
+    .bk-rnd:not(:first-child) .bk-cell::before { content: ''; position: absolute; left: -21px; top: 50%; width: 21px; height: 2px; background: var(--hair-soft); }
+    .bk-pair { flex: 1; display: flex; flex-direction: column; justify-content: space-around; position: relative; }
+    .bk-feeder .bk-pair::after { content: ''; position: absolute; right: -21px; top: 25%; bottom: 25%; width: 2px; background: var(--hair-soft); }
+    .bk-feeder .bk-pair::before { content: ''; position: absolute; right: -42px; top: 50%; width: 21px; height: 2px; background: var(--hair-soft); }
+    .bkm { background: var(--card); border: 1px solid var(--hair-soft); border-radius: 9px; box-shadow: var(--shadow-sm); overflow: hidden; }
+    .bkm.live { border-color: var(--p-400); box-shadow: 0 0 0 1px var(--p-400); }
+    .bkm-tag { font-family: 'JetBrains Mono', monospace; font-size: 8px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); padding: 3px 9px; border-bottom: 1px solid var(--hair-soft); background: var(--card-2); }
+    .bkm-tag.livet { color: var(--p-700); display: flex; align-items: center; gap: 5px; }
+    .bkm-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 9px; font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 12.5px; color: var(--ink-soft); }
+    .bkm-row + .bkm-row { border-top: 1px solid var(--hair-soft); }
+    .bkm-row.win { color: var(--p-700); font-weight: 800; }
+    .bkm-nm { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .bkm-sc { font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--ink); }
+    .bkm-loc { font-size: 10px; color: var(--ink-faint); padding: 5px 9px 7px; border-top: 1px solid var(--hair-soft); }
+    .bk-third { margin-top: 14px; max-width: 210px; }
+    .bk-third > .rlabel { display: block; margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); }
     .legend { font-size: 12.5px; color: var(--ink-soft); margin: 4px 0 2px; line-height: 1.6; }
     details.grp { border: 1px solid var(--hair-soft); border-radius: var(--radius-md); overflow: hidden; background: var(--card); height: fit-content; }
     details.grp > summary { list-style: none; cursor: pointer; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 14px; padding: 13px 14px; display: flex; align-items: center; justify-content: space-between; color: var(--ink); }

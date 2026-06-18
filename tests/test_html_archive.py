@@ -448,3 +448,51 @@ def test_card_shows_live_score_and_pill(tmp_path):
     html = _render(state, tmp_path)
     assert 'class="pill live"' in html and "50&#x27;" in html
     assert '<span class="sc">1</span>' in html
+
+
+def _ko_state():
+    return {"days": [], "bracket": {},
+            "groups": {"A": [{"team": "Mexico", "played": 3, "points": 9,
+                              "gd": 5, "gf": 6, "ga": 1},
+                             {"team": "South Korea", "played": 3, "points": 6,
+                              "gd": 2, "gf": 4, "ga": 2}]},
+            "schedule": [
+                {"date": "2026-06-20", "matches": [
+                    {"id": "30", "home": "Mexico", "away": "South Korea",
+                     "stage": "group", "kickoff_utc": "2026-06-20T19:00:00Z",
+                     "venue": "Atlanta", "status": "FT", "hg": 2, "ag": 0,
+                     "events": [], "pred": {"home": .6, "draw": .2, "away": .2,
+                                            "pick": "Mexico"}}]},
+                {"date": "2026-06-28", "matches": [
+                    {"id": "73", "home": "2A", "away": "2B", "stage": "R32",
+                     "kickoff_utc": "2026-06-28T19:00:00Z",
+                     "venue": "Los Angeles (Inglewood)", "status": "sched"}]},
+                {"date": "2026-07-19", "matches": [
+                    {"id": "104", "home": "W101", "away": "W102",
+                     "stage": "final", "kickoff_utc": "2026-07-19T19:00:00Z",
+                     "venue": "New York/New Jersey (East Rutherford)",
+                     "status": "sched"}]}]}
+
+
+def test_schedule_shows_strip_during_group_stage(tmp_path):
+    out = tmp_path / "index.html"
+    ha.render(_ko_state(), out, today="2026-06-20")
+    html = out.read_text()
+    assert '<div class="daystrip">' in html
+    assert '<div class="bk">' not in html
+
+
+def test_schedule_switches_to_bracket_from_jun28(tmp_path):
+    out = tmp_path / "index.html"
+    ha.render(_ko_state(), out, today="2026-06-28")
+    html = out.read_text()
+    assert '<div class="bk">' in html
+    assert '<div class="daystrip">' not in html
+    assert "Knockout bracket" in html
+    # group-slot tokens resolve to live country codes
+    assert '<span class="bkm-nm">KOR</span>' in html   # 2A -> South Korea
+    assert "Round of 32" in html and "Final" in html
+    # location is shown in bracket boxes
+    assert "Los Angeles (Inglewood), USA" in html
+    # raw 2A token no longer shown for resolved slots
+    assert '<span class="bkm-nm">2A</span>' not in html

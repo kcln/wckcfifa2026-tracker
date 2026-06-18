@@ -655,7 +655,7 @@ def run(cfg: Config) -> int:
         # Render + persist before sending so the archive is up to date even if a
         # send fails.
         try:
-            html_archive.render(stateobj, cfg.html_path)
+            html_archive.render(stateobj, cfg.html_path, today=cfg.now_iso)
         except Exception:
             pass
         state.save(cfg.state_path, stateobj)
