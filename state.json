@@ -2719,7 +2719,7 @@
           "status": "live",
           "hg": 3,
           "ag": 0,
-          "clock": "50'",
+          "clock": "54'",
           "ht": false,
           "events": [
             {
@@ -2745,6 +2745,12 @@
               "player": "Jonathan David",
               "team": "Canada",
               "minute": "45'+3'"
+            },
+            {
+              "kind": "red",
+              "player": "Assim Madibo",
+              "team": "Qatar",
+              "minute": "53'"
             }
           ]
         },
@@ -2777,7 +2783,7 @@
       "hg": 3,
       "ag": 0,
       "status": "LIVE",
-      "clock": "50'",
+      "clock": "54'",
       "events": [
         {
           "kind": "goal",
@@ -2802,6 +2808,12 @@
           "player": "Jonathan David",
           "team": "Canada",
           "minute": "45'+3'"
+        },
+        {
+          "kind": "red",
+          "player": "Assim Madibo",
+          "team": "Qatar",
+          "minute": "53'"
         }
       ]
     }
@@ -3802,7 +3814,7 @@
           "status": "live",
           "hg": 3,
           "ag": 0,
-          "clock": "50'",
+          "clock": "54'",
           "ht": false,
           "events": [
             {
@@ -3828,6 +3840,12 @@
               "player": "Jonathan David",
               "team": "Canada",
               "minute": "45'+3'"
+            },
+            {
+              "kind": "red",
+              "player": "Assim Madibo",
+              "team": "Qatar",
+              "minute": "53'"
             }
           ]
         },
