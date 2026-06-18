@@ -2577,9 +2577,9 @@
             "pick": "Switzerland"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "81'",
+          "clock": "87'",
           "ht": false,
           "events": [
             {
@@ -2593,6 +2593,12 @@
               "player": "Tarik Muharemovic",
               "team": "Bosnia & Herzegovina",
               "minute": "80'"
+            },
+            {
+              "kind": "goal",
+              "player": "Rubén Vargas",
+              "team": "Switzerland",
+              "minute": "84'"
             }
           ]
         },
@@ -2637,10 +2643,10 @@
       "date": "2026-06-18",
       "venue": "Los Angeles (Inglewood)",
       "kickoff_utc": "2026-06-18T19:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 0,
       "status": "LIVE",
-      "clock": "81'",
+      "clock": "87'",
       "events": [
         {
           "kind": "goal",
@@ -2653,6 +2659,12 @@
           "player": "Tarik Muharemovic",
           "team": "Bosnia & Herzegovina",
           "minute": "80'"
+        },
+        {
+          "kind": "goal",
+          "player": "Rubén Vargas",
+          "team": "Switzerland",
+          "minute": "84'"
         }
       ]
     }
@@ -3595,9 +3607,9 @@
             "pick": "Switzerland"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "81'",
+          "clock": "87'",
           "ht": false,
           "events": [
             {
@@ -3611,6 +3623,12 @@
               "player": "Tarik Muharemovic",
               "team": "Bosnia & Herzegovina",
               "minute": "80'"
+            },
+            {
+              "kind": "goal",
+              "player": "Rubén Vargas",
+              "team": "Switzerland",
+              "minute": "84'"
             }
           ]
         },
