@@ -2717,9 +2717,9 @@
             "pick": "Canada"
           },
           "status": "live",
-          "hg": 3,
+          "hg": 4,
           "ag": 0,
-          "clock": "62'",
+          "clock": "67'",
           "ht": false,
           "events": [
             {
@@ -2751,6 +2751,12 @@
               "player": "Assim Madibo",
               "team": "Qatar",
               "minute": "53'"
+            },
+            {
+              "kind": "goal",
+              "player": "Nathan Saliba",
+              "team": "Canada",
+              "minute": "64'"
             }
           ]
         },
@@ -2780,10 +2786,10 @@
       "date": "2026-06-18",
       "venue": "Vancouver",
       "kickoff_utc": "2026-06-18T22:00:00Z",
-      "hg": 3,
+      "hg": 4,
       "ag": 0,
       "status": "LIVE",
-      "clock": "62'",
+      "clock": "67'",
       "events": [
         {
           "kind": "goal",
@@ -2814,6 +2820,12 @@
           "player": "Assim Madibo",
           "team": "Qatar",
           "minute": "53'"
+        },
+        {
+          "kind": "goal",
+          "player": "Nathan Saliba",
+          "team": "Canada",
+          "minute": "64'"
         }
       ]
     }
@@ -3812,9 +3824,9 @@
             "pick": "Canada"
           },
           "status": "live",
-          "hg": 3,
+          "hg": 4,
           "ag": 0,
-          "clock": "62'",
+          "clock": "67'",
           "ht": false,
           "events": [
             {
@@ -3846,6 +3858,12 @@
               "player": "Assim Madibo",
               "team": "Qatar",
               "minute": "53'"
+            },
+            {
+              "kind": "goal",
+              "player": "Nathan Saliba",
+              "team": "Canada",
+              "minute": "64'"
             }
           ]
         },
