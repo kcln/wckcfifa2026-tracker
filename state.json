@@ -2707,7 +2707,12 @@
             "away": 0.07929922654485254,
             "pick": "Canada"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "4",
@@ -2727,7 +2732,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "10",
+      "home": "Canada",
+      "away": "Qatar",
+      "date": "2026-06-18",
+      "venue": "Vancouver",
+      "kickoff_utc": "2026-06-18T22:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "4'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -3721,7 +3740,12 @@
             "away": 0.07929922654485254,
             "pick": "Canada"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "4",
