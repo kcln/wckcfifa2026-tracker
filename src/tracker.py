@@ -806,9 +806,18 @@ def main() -> None:
             live_loop.git_sync()
         return code
 
+    def inbox_tick() -> None:
+        # Lightweight between-cycle Telegram poll: process signups/approvals and
+        # persist immediately so an approval is live within ~a minute, any time.
+        process_inbox(root, token)
+        if autocommit:
+            live_loop.git_sync()
+
     kickoffs = live_loop.kickoffs_from_matches(
         fixtures.load_seed().get("matches", []))
-    code, cont = live_loop.live_loop(run_once, kickoffs)
+    code, cont = live_loop.live_loop(
+        run_once, kickoffs, inbox_tick=inbox_tick,
+        stop=lambda: (root / ".season-ended").exists())
     # Don't chain a continuation once the tournament is over — let it wind down.
     if cont and not (root / ".season-ended").exists():
         # The workflow dispatches a continuation run when this flag exists.

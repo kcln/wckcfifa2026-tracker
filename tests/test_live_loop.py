@@ -76,54 +76,60 @@ class FakeClock:
         self.now += timedelta(seconds=seconds)
 
 
-def test_runs_once_and_exits_when_no_window():
+def test_inbox_ticked_every_tick_even_with_no_live_match():
+    # No match for 11h (action 'exit'/idle). The loop must NOT stop — it keeps
+    # polling the inbox every INBOX_TICK_S so signups/approvals are processed.
     clock = FakeClock(_t(10))
-    calls = []
+    full, ticks = [], []
     code, cont = live_loop.live_loop(
-        lambda: calls.append(1) or 0, [_t(21)],
-        clock=clock, sleep=clock.sleep)
-    assert calls == [1]
-    assert clock.sleeps == []
-    assert code == 0
-    assert cont is False
+        lambda: full.append(1) or 0, [_t(21)],
+        inbox_tick=lambda: ticks.append(1),
+        clock=clock, sleep=clock.sleep, max_runtime=timedelta(minutes=10))
+    assert full == [1]                 # only the initial full cycle while idle
+    assert len(ticks) > 5              # inbox polled repeatedly despite no match
+    assert set(clock.sleeps) == {live_loop.INBOX_TICK_S}
+    assert cont is True               # hit cap -> chain, never exits on its own
 
 
-def test_polls_through_live_window_then_exits():
-    # Start mid-match at 21:10; only kickoff 21:00. Loop should poll every
-    # POLL_LIVE_S until the live span ends, then exit without continuation.
+def test_full_cycle_at_live_cadence_with_inbox_ticks_between():
+    # Mid-match: full cycle every POLL_LIVE_S, inbox ticked every INBOX_TICK_S
+    # in between (so the inbox is far more frequent than the full cycle).
     clock = FakeClock(_t(21, 10))
-    calls = []
+    full, ticks = [], []
     code, cont = live_loop.live_loop(
-        lambda: calls.append(1) or 0, [_t(21)],
-        clock=clock, sleep=clock.sleep)
-    # ~110 minutes of live span left at POLL_LIVE_S cadence.
-    assert len(calls) > 10
-    assert set(clock.sleeps) == {live_loop.POLL_LIVE_S}
+        lambda: full.append(1) or 0, [_t(21)],
+        inbox_tick=lambda: ticks.append(1),
+        clock=clock, sleep=clock.sleep, max_runtime=timedelta(minutes=10))
+    assert len(full) >= 3              # ~ every 150s across 10 min
+    assert len(ticks) > len(full)     # inbox ticked more often than full cycles
+    assert cont is True
+
+
+def test_stops_without_continuation_when_stop_predicate_true():
+    # Season over -> stop() True -> wind down, no continuation chained.
+    clock = FakeClock(_t(21, 10))
+    n = {"c": 0}
+
+    def stop():
+        n["c"] += 1
+        return n["c"] > 3
+
+    code, cont = live_loop.live_loop(
+        lambda: 0, [_t(21)], stop=stop, clock=clock, sleep=clock.sleep)
     assert cont is False
-
-
-def test_holds_with_idle_interval_before_kickoff():
-    # 20:30, kickoff 21:00 -> at least one idle sleep before live polling.
-    clock = FakeClock(_t(20, 30))
-    live_loop.live_loop(lambda: 0, [_t(21)], clock=clock, sleep=clock.sleep)
-    assert clock.sleeps[0] == live_loop.POLL_IDLE_S
-    assert live_loop.POLL_LIVE_S in clock.sleeps
 
 
 def test_requests_continuation_at_max_runtime():
-    # Two kickoffs 3h apart keep the window active beyond a tiny max_runtime;
-    # the loop must stop and signal that a follow-up run is needed.
     clock = FakeClock(_t(21, 10))
     code, cont = live_loop.live_loop(
         lambda: 0, [_t(21), _t(23, 30)],
-        clock=clock, sleep=clock.sleep,
-        max_runtime=timedelta(minutes=30))
+        clock=clock, sleep=clock.sleep, max_runtime=timedelta(minutes=30))
     assert cont is True
-    assert clock.now - _t(21, 10) <= timedelta(minutes=35)
+    assert clock.now - _t(21, 10) <= timedelta(minutes=31)
 
 
-def test_returns_last_nonzero_send_failure_code():
-    # A send failure (2) on the last cycle must surface to CI.
+def test_returns_last_nonzero_full_cycle_code():
+    # A send failure (2) on a full cycle must surface to CI.
     clock = FakeClock(_t(21, 10))
     codes = iter([0] * 5 + [2])
 
@@ -134,7 +140,8 @@ def test_returns_last_nonzero_send_failure_code():
             return 2
 
     code, _ = live_loop.live_loop(
-        run_once, [_t(21)], clock=clock, sleep=clock.sleep)
+        run_once, [_t(21)], clock=clock, sleep=clock.sleep,
+        max_runtime=timedelta(hours=2))
     assert code == 2
 
 

@@ -72,11 +72,15 @@ def process_updates(updates, subs, *, approver, send, answer_cb, catchup,
             if frm == approver and ":" in data:
                 action, target = data.split(":", 1)
                 if action == "approve":
-                    pending.pop(target, None)
+                    info = pending.pop(target, None)
                     if target not in approved:
                         approved.append(target)
                     answer_cb(cq_id, "Approved ✅")
                     send(target, ONBOARD_MENU)
+                    nm = (info or {}).get("name") or f"Chat {target}"
+                    send(approver,
+                         f"✅ {nm} added — they'll get match updates from "
+                         "now on.")
                 elif action == "deny":
                     pending.pop(target, None)
                     answer_cb(cq_id, "Declined")
@@ -95,9 +99,10 @@ def process_updates(updates, subs, *, approver, send, answer_cb, catchup,
         if text.startswith("/start"):
             if chat_id in approved or chat_id in pending:
                 continue
-            pending[chat_id] = {"ts": now_ts}
             name = " ".join(x for x in (chat.get("first_name"),
                                         chat.get("last_name")) if x)
+            # Store the name so the approval confirmation can show it later.
+            pending[chat_id] = {"ts": now_ts, "name": name}
             ptext, kb = _approval_prompt(name, chat_id)
             send(approver, ptext, kb)
             continue

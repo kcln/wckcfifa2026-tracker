@@ -98,3 +98,30 @@ def test_start_ignored_when_already_known():
     run, sent, _ = _harness(subs)
     run([_start(12, "777")])
     assert sent == []   # no duplicate approval prompt
+
+
+def test_start_stores_name_in_pending():
+    subs = {"approved": [], "pending": {}, "onboarded": [], "last_update_id": 0}
+    run, _, _ = _harness(subs)
+    run([_start(5, "777", "Ravi Kumar")])
+    assert subs["pending"]["777"].get("name") == "Ravi Kumar"
+
+
+def test_approve_dms_approver_a_confirmation_with_name():
+    subs = {"approved": [], "pending": {"777": {"ts": "T", "name": "Ravi Kumar"}},
+            "onboarded": [], "last_update_id": 5}
+    run, sent, _ = _harness(subs)            # approver == "99"
+    run([{"update_id": 6, "callback_query": {
+        "id": "cq1", "from": {"id": 99}, "data": "approve:777"}}])
+    # approver got a plain confirmation naming the new member
+    assert any(c == "99" and "Ravi Kumar" in t and "added" in t
+               and m is False for c, t, m in sent)
+
+
+def test_approve_confirmation_falls_back_to_chat_id_without_name():
+    subs = {"approved": [], "pending": {}, "onboarded": [], "last_update_id": 5}
+    run, sent, _ = _harness(subs)
+    run([{"update_id": 6, "callback_query": {
+        "id": "cq1", "from": {"id": 99}, "data": "approve:777"}}])
+    assert "777" in subs["approved"]
+    assert any(c == "99" and "777" in t and "added" in t for c, t, _ in sent)
