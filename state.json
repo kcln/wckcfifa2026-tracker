@@ -2384,8 +2384,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 2,
-          "clock": "90'+6'",
+          "ag": 3,
+          "clock": "90'+11'",
           "ht": false,
           "events": [
             {
@@ -2405,6 +2405,12 @@
               "player": "Luis Díaz",
               "team": "Colombia",
               "minute": "65'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jáminton Campaz",
+              "team": "Colombia",
+              "minute": "90'+9'"
             }
           ]
         }
@@ -2420,9 +2426,9 @@
       "venue": "Mexico City",
       "kickoff_utc": "2026-06-18T02:00:00Z",
       "hg": 1,
-      "ag": 2,
+      "ag": 3,
       "status": "LIVE",
-      "clock": "90'+6'",
+      "clock": "90'+11'",
       "events": [
         {
           "kind": "goal",
@@ -2441,6 +2447,12 @@
           "player": "Luis Díaz",
           "team": "Colombia",
           "minute": "65'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jáminton Campaz",
+          "team": "Colombia",
+          "minute": "90'+9'"
         }
       ]
     }
@@ -3303,8 +3315,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 2,
-          "clock": "90'+6'",
+          "ag": 3,
+          "clock": "90'+11'",
           "ht": false,
           "events": [
             {
@@ -3324,6 +3336,12 @@
               "player": "Luis Díaz",
               "team": "Colombia",
               "minute": "65'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jáminton Campaz",
+              "team": "Colombia",
+              "minute": "90'+9'"
             }
           ]
         }
