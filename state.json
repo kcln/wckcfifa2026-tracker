@@ -559,6 +559,15 @@
           "key": "ht-2026-06-18-3",
           "generated_at": "2026-06-18T09:53:56.477270-07:00",
           "kickoff_utc": "2026-06-18T16:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 18\n\nFull time:\nCzech Republic 1 - 1 South Africa\nAtlanta, USA\n  ⚽ 6' Michal Sadílek (Czech Republic)\n  ⚽ 83' Teboho Mokoena (South Africa, pen)\nOverall prediction: 10/25 (40.0%)\nPrediction ✗: Czech Republic",
+          "sent": true,
+          "hash": "b155950d62947161",
+          "key": "pm-2026-06-18-3",
+          "generated_at": "2026-06-18T11:00:56.051639-07:00",
+          "kickoff_utc": "2026-06-18T16:00:00Z"
         }
       ]
     }
@@ -583,19 +592,19 @@
       },
       {
         "team": "Czech Republic",
-        "played": 1,
-        "points": 0,
+        "played": 2,
+        "points": 1,
         "gd": -1,
-        "gf": 1,
-        "ga": 2
+        "gf": 2,
+        "ga": 3
       },
       {
         "team": "South Africa",
-        "played": 1,
-        "points": 0,
+        "played": 2,
+        "points": 1,
         "gd": -2,
-        "gf": 0,
-        "ga": 2
+        "gf": 1,
+        "ga": 3
       }
     ],
     "B": [
@@ -975,112 +984,117 @@
   },
   "bracket": {
     "title_odds": {
-      "Spain": 0.1481,
-      "Japan": 0.029,
-      "Germany": 0.0452,
-      "Belgium": 0.0196,
-      "Netherlands": 0.0327,
-      "Ecuador": 0.019,
-      "France": 0.1316,
-      "Argentina": 0.2134,
-      "Colombia": 0.0565,
-      "Uruguay": 0.0188,
-      "Norway": 0.0078,
-      "Morocco": 0.0229,
-      "Portugal": 0.0436,
-      "Egypt": 0.003,
-      "England": 0.0443,
-      "Brazil": 0.0476,
-      "Canada": 0.007,
-      "Croatia": 0.0244,
-      "South Korea": 0.0063,
-      "Mexico": 0.0176,
-      "Austria": 0.0063,
-      "Uzbekistan": 0.001,
-      "Australia": 0.0076,
-      "Switzerland": 0.0097,
-      "New Zealand": 0.0002,
-      "Senegal": 0.0091,
-      "Ivory Coast": 0.0027,
-      "Scotland": 0.0007,
-      "Paraguay": 0.0016,
-      "Sweden": 0.0022,
-      "Turkey": 0.0087,
-      "Iran": 0.0065,
-      "Czech Republic": 0.0019,
-      "Algeria": 0.0021,
-      "Panama": 0.0005,
-      "Ghana": 0.0001,
-      "DR Congo": 0.0004,
-      "Haiti": 0.0001,
-      "Cape Verde": 0.0001,
-      "Iraq": 0.0001
+      "Brazil": 0.0471,
+      "Senegal": 0.0103,
+      "Argentina": 0.2099,
+      "France": 0.131,
+      "Spain": 0.1425,
+      "Turkey": 0.012,
+      "England": 0.0464,
+      "Ecuador": 0.0227,
+      "Morocco": 0.0225,
+      "Mexico": 0.0183,
+      "Iran": 0.006,
+      "Netherlands": 0.0302,
+      "Croatia": 0.0261,
+      "Canada": 0.0069,
+      "Uruguay": 0.0174,
+      "Australia": 0.0077,
+      "Japan": 0.0288,
+      "Paraguay": 0.0019,
+      "Algeria": 0.003,
+      "Belgium": 0.0192,
+      "Egypt": 0.0027,
+      "Colombia": 0.0592,
+      "Portugal": 0.0423,
+      "Germany": 0.0436,
+      "Austria": 0.0052,
+      "Switzerland": 0.0115,
+      "Scotland": 0.0009,
+      "Uzbekistan": 0.0016,
+      "Norway": 0.009,
+      "South Korea": 0.0084,
+      "Panama": 0.0006,
+      "Ivory Coast": 0.0028,
+      "Sweden": 0.0009,
+      "Saudi Arabia": 0.0002,
+      "Czech Republic": 0.0006,
+      "Cape Verde": 0.0002,
+      "Iraq": 0.0001,
+      "DR Congo": 0.0002,
+      "Qatar": 0.0001
     },
     "advancement": {
-      "Egypt": 0.7592,
-      "Ivory Coast": 0.9485,
-      "Germany": 0.9982,
-      "Netherlands": 0.929,
-      "Czech Republic": 0.6523,
-      "Ecuador": 0.7705,
-      "Qatar": 0.4734,
+      "Scotland": 0.7387,
+      "Senegal": 0.6161,
+      "Egypt": 0.7711,
+      "Ivory Coast": 0.9567,
+      "Germany": 0.9985,
+      "Netherlands": 0.9321,
+      "Czech Republic": 0.2819,
+      "Ecuador": 0.7939,
+      "Brazil": 0.9623,
       "Australia": 0.9833,
-      "Brazil": 0.9573,
-      "Morocco": 0.9084,
-      "France": 0.9986,
-      "Colombia": 0.9878,
-      "Japan": 0.8979,
-      "Belgium": 0.8781,
-      "Algeria": 0.4662,
-      "Mexico": 0.9754,
-      "Portugal": 0.8699,
-      "Canada": 0.875,
-      "USA": 0.9285,
-      "South Korea": 0.954,
-      "Norway": 0.9802,
-      "Croatia": 0.7815,
-      "Sweden": 0.9638,
-      "Turkey": 0.6328,
-      "Austria": 0.9444,
-      "Switzerland": 0.9064,
-      "England": 0.9984,
-      "Uruguay": 0.7745,
-      "Spain": 0.9618,
-      "Argentina": 0.9998,
-      "Cape Verde": 0.5713,
-      "Uzbekistan": 0.299,
-      "Scotland": 0.7038,
-      "Senegal": 0.5865,
-      "New Zealand": 0.2798,
-      "Iran": 0.6971,
-      "Saudi Arabia": 0.3192,
-      "DR Congo": 0.3894,
-      "Ghana": 0.5258,
-      "Paraguay": 0.2978,
-      "Jordan": 0.0807,
-      "Iraq": 0.1256,
-      "Bosnia & Herzegovina": 0.4093,
-      "Panama": 0.2318,
-      "South Africa": 0.1247,
-      "Tunisia": 0.0829,
-      "Curaçao": 0.031,
-      "Haiti": 0.0892
+      "Colombia": 0.9876,
+      "Japan": 0.9014,
+      "France": 0.9975,
+      "New Zealand": 0.2785,
+      "Iran": 0.7052,
+      "Morocco": 0.9153,
+      "Mexico": 0.9746,
+      "USA": 0.9318,
+      "Canada": 0.8799,
+      "South Korea": 0.9455,
+      "Norway": 0.9828,
+      "Croatia": 0.7927,
+      "Austria": 0.9578,
+      "Sweden": 0.9655,
+      "Turkey": 0.6394,
+      "Switzerland": 0.9054,
+      "England": 0.9986,
+      "Uruguay": 0.7812,
+      "Spain": 0.9616,
+      "Argentina": 0.9996,
+      "Cape Verde": 0.5704,
+      "Uzbekistan": 0.3293,
+      "Qatar": 0.4697,
+      "Belgium": 0.8808,
+      "Algeria": 0.4894,
+      "Portugal": 0.8743,
+      "Saudi Arabia": 0.3163,
+      "Bosnia & Herzegovina": 0.4304,
+      "DR Congo": 0.3935,
+      "Panama": 0.235,
+      "Paraguay": 0.3055,
+      "Jordan": 0.0921,
+      "Iraq": 0.1359,
+      "Curaçao": 0.0317,
+      "Ghana": 0.5805,
+      "Tunisia": 0.0876,
+      "Haiti": 0.0885,
+      "South Africa": 0.1526
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Ghana",
-    "away": "Panama",
+    "home": "Czech Republic",
+    "away": "South Africa",
     "home_goals": 1,
-    "away_goals": 0,
-    "date": "2026-06-17",
-    "venue": "Toronto",
+    "away_goals": 1,
+    "date": "2026-06-18",
+    "venue": "Atlanta",
     "events": [
       {
         "kind": "goal",
-        "player": "Caleb Yirenkyi",
-        "team": "Ghana",
-        "minute": "90'+5'"
+        "player": "Michal Sadílek",
+        "team": "Czech Republic",
+        "minute": "6'"
+      },
+      {
+        "kind": "penalty",
+        "player": "Teboho Mokoena",
+        "team": "South Africa",
+        "minute": "83'"
       }
     ]
   },
@@ -1594,6 +1608,24 @@
           "player": "Jáminton Campaz",
           "team": "Colombia",
           "minute": "90'+9'"
+        }
+      ]
+    },
+    "3": {
+      "home_goals": 1,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Michal Sadílek",
+          "team": "Czech Republic",
+          "minute": "6'"
+        },
+        {
+          "kind": "penalty",
+          "player": "Teboho Mokoena",
+          "team": "South Africa",
+          "minute": "83'"
         }
       ]
     }
@@ -2503,11 +2535,9 @@
             "away": 0.12254318939881832,
             "pick": "Czech Republic"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 1,
-          "clock": "90'+5'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -2521,7 +2551,8 @@
               "team": "South Africa",
               "minute": "83'"
             }
-          ]
+          ],
+          "hit": false
         },
         {
           "id": "9",
@@ -2571,34 +2602,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "3",
-      "home": "Czech Republic",
-      "away": "South Africa",
-      "date": "2026-06-18",
-      "venue": "Atlanta",
-      "kickoff_utc": "2026-06-18T16:00:00Z",
-      "hg": 1,
-      "ag": 1,
-      "status": "LIVE",
-      "clock": "90'+5'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Michal Sadílek",
-          "team": "Czech Republic",
-          "minute": "6'"
-        },
-        {
-          "kind": "penalty",
-          "player": "Teboho Mokoena",
-          "team": "South Africa",
-          "minute": "83'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -3504,11 +3508,9 @@
             "away": 0.12254318939881832,
             "pick": "Czech Republic"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 1,
-          "clock": "90'+5'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -3522,7 +3524,8 @@
               "team": "South Africa",
               "minute": "83'"
             }
-          ]
+          ],
+          "hit": false
         },
         {
           "id": "9",
