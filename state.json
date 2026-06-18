@@ -2355,11 +2355,18 @@
             "pick": "Panama"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "90'+4'",
+          "clock": "90'+7'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Caleb Yirenkyi",
+              "team": "Ghana",
+              "minute": "90'+5'"
+            }
+          ]
         },
         {
           "id": "62",
@@ -2387,11 +2394,18 @@
       "date": "2026-06-17",
       "venue": "Toronto",
       "kickoff_utc": "2026-06-17T23:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "90'+4'",
-      "events": []
+      "clock": "90'+7'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Caleb Yirenkyi",
+          "team": "Ghana",
+          "minute": "90'+5'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -3225,11 +3239,18 @@
             "pick": "Panama"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "90'+4'",
+          "clock": "90'+7'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Caleb Yirenkyi",
+              "team": "Ghana",
+              "minute": "90'+5'"
+            }
+          ]
         },
         {
           "id": "62",
