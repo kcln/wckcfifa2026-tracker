@@ -508,12 +508,15 @@ def _render_schedule(state: dict, today: str | None = None) -> str:
         return ""
     divider = ('<div class="sched-div"><span>Knockouts</span></div>'
                if strip and bracket else "")
+    note = ('<div class="sched-note"><em>Italic</em> bracket teams are projected '
+            'from the live table — they lock in when the group is decided.</div>'
+            if bracket else "")
     return (
         '<details class="section" id="schedule">'
         '<summary><span class="sec-h">Schedule</span>'
         '<span class="sec-count">Full tournament</span></summary>'
         f'<div class="sec-body"><div class="daystrip">'
-        f'{strip}{divider}{bracket}</div></div></details>')
+        f'{strip}{divider}{bracket}</div>{note}</div></details>')
 
 
 def _strip_columns(state: dict) -> str:
@@ -582,8 +585,12 @@ def _bracket_positions(by_id: dict) -> dict:
 
 
 def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict) -> str:
-    hl = knockout.slot_label(str(m.get("home", "")), groups, winners, losers)
-    al = knockout.slot_label(str(m.get("away", "")), groups, winners, losers)
+    ht, at = str(m.get("home", "")), str(m.get("away", ""))
+    hl = knockout.slot_label(ht, groups, winners, losers)
+    al = knockout.slot_label(at, groups, winners, losers)
+    # Projected (live table) vs locked (group decided / feeder played).
+    h_proj = not knockout.slot_locked(ht, groups, winners, losers)
+    a_proj = not knockout.slot_locked(at, groups, winners, losers)
     st = m.get("status")
     played = st in ("FT", "live")
     hg, ag = int(m.get("hg") or 0), int(m.get("ag") or 0)
@@ -596,18 +603,19 @@ def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict) -> str:
         tag = (f'<div class="bkm-tag">'
                f'{escape(_kick_pt_short(str(m.get("kickoff_utc", ""))))}</div>')
 
-    def row(label, sc, win):
+    def row(label, sc, win, proj):
         s = f'<span class="bkm-sc">{sc}</span>' if played else ""
         wc = " win" if win else ""
-        return (f'<div class="bkm-row{wc}">'
+        pc = " proj" if proj else ""
+        return (f'<div class="bkm-row{wc}{pc}">'
                 f'<span class="bkm-nm">{escape(label)}</span>{s}</div>')
 
     loc = escape(_place(str(m.get("venue", ""))))
     loc_html = f'<div class="bkm-loc">📍 {loc}</div>' if loc else ""
     cls = " live" if st == "live" else ""
     return (f'<div class="bkm{cls}">{tag}'
-            f'{row(hl, hg, st == "FT" and hg > ag)}'
-            f'{row(al, ag, st == "FT" and ag > hg)}{loc_html}</div>')
+            f'{row(hl, hg, st == "FT" and hg > ag, h_proj)}'
+            f'{row(al, ag, st == "FT" and ag > hg, a_proj)}{loc_html}</div>')
 
 
 def _bracket_html(state: dict) -> str:
@@ -909,10 +917,13 @@ __REFRESH__
     .bkm-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 9px; font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 12.5px; color: var(--ink-soft); }
     .bkm-row + .bkm-row { border-top: 1px solid var(--hair-soft); }
     .bkm-row.win { color: var(--p-700); font-weight: 800; }
+    .bkm-row.proj .bkm-nm { color: var(--ink-faint); font-style: italic; font-weight: 500; }
     .bkm-nm { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .bkm-sc { font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--ink); }
     .bkm-loc { font-size: 10px; color: var(--ink-faint); padding: 5px 9px 7px; border-top: 1px solid var(--hair-soft); }
     .bk-third { justify-content: flex-start; }
+    .sched-note { font-size: 11.5px; color: var(--ink-faint); margin: 8px 2px 0; }
+    .sched-note em { font-style: italic; color: var(--ink-soft); }
     .bk-third > .rlabel { display: block; margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); }
     .legend { font-size: 12.5px; color: var(--ink-soft); margin: 4px 0 2px; line-height: 1.6; }
     details.grp { border: 1px solid var(--hair-soft); border-radius: var(--radius-md); overflow: hidden; background: var(--card); height: fit-content; }

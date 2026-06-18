@@ -45,6 +45,30 @@ def _group_pos(token: str, groups: dict) -> str | None:
     return None
 
 
+def _group_complete(grp: str, groups: dict) -> bool:
+    """A group is decided once every team has played all its group games (a
+    4-team round-robin = 3 each), so 1st/2nd are final."""
+    rows = groups.get(grp) or []
+    if not rows:
+        return False
+    games = len(rows) - 1
+    return all(r.get("played", 0) >= games for r in rows)
+
+
+def slot_locked(token: str, groups: dict, winners: dict | None = None,
+                losers: dict | None = None) -> bool:
+    """True when a slot's team is FINAL (not a live projection): a group
+    winner/runner-up whose group has finished, or a feeder that's been decided.
+    Best-third slots and unplayed feeders are never locked here."""
+    t = (token or "").strip()
+    if len(t) >= 2 and t[0] in "12" and t[1:].isalpha() and "/" not in t:
+        return _group_complete(t[1:], groups)
+    if t[:1] in ("W", "L") and t[1:].isdigit():
+        table = (winners if t[0] == "W" else losers) or {}
+        return t[1:] in table
+    return False
+
+
 def slot_label(token: str, groups: dict, winners: dict | None = None,
                losers: dict | None = None) -> str:
     """Best available label for a knockout slot token.

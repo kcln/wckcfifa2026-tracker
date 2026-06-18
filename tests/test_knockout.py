@@ -33,3 +33,20 @@ def test_slot_label_winner_feeder_resolves_when_known():
 
 def test_slot_label_unknown_group_returns_token():
     assert k.slot_label("2Z", GROUPS) == "2Z"
+
+
+def test_slot_locked_only_when_group_complete():
+    incomplete = {"A": [{"team": "Mexico", "played": 1},
+                        {"team": "South Korea", "played": 1},
+                        {"team": "Czechia", "played": 1},
+                        {"team": "RSA", "played": 1}]}
+    complete = {"A": [{"team": "Mexico", "played": 3},
+                      {"team": "South Korea", "played": 3},
+                      {"team": "Czechia", "played": 3},
+                      {"team": "RSA", "played": 3}]}
+    assert k.slot_locked("1A", incomplete) is False     # projected
+    assert k.slot_locked("1A", complete) is True        # decided
+    assert k.slot_locked("2A", complete) is True
+    assert k.slot_locked("3A/B/C/D/F", complete) is False
+    assert k.slot_locked("W73", complete) is False
+    assert k.slot_locked("W73", complete, winners={"73": "Spain"}) is True

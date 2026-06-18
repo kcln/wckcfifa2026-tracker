@@ -502,3 +502,34 @@ def test_schedule_bracket_resolves_slots_and_shows_location(tmp_path):
     # the knockout day is NOT a strip column (it's only in the bracket)
     assert 'data-date="2026-06-28"' not in html
     assert '<span class="bkm-nm">2A</span>' not in html   # resolved, not raw token
+
+
+def _proj_state(played):
+    def r(team):
+        return {"team": team, "played": played, "points": 0,
+                "gd": 0, "gf": 0, "ga": 0}
+    return {"days": [], "bracket": {},
+            "groups": {"A": [r("Mexico"), r("South Korea"),
+                             r("Czechia"), r("RSA")]},
+            "schedule": [{"date": "2026-06-28", "matches": [
+                {"id": "73", "home": "2A", "away": "2B", "stage": "R32",
+                 "kickoff_utc": "2026-06-28T19:00:00Z", "venue": "Atlanta",
+                 "status": "sched"}]}]}
+
+
+def test_bracket_fades_projected_teams(tmp_path):
+    out = tmp_path / "i.html"
+    ha.render(_proj_state(1), out)        # group A incomplete -> projected
+    html = out.read_text()
+    assert '<span class="bkm-nm">KOR</span>' in html      # 2A -> S.Korea
+    assert 'class="bkm-row proj"' in html                 # faded/projected
+    assert "projected" in html                            # explanatory caption
+
+
+def test_bracket_locks_team_once_group_decided(tmp_path):
+    out = tmp_path / "i.html"
+    ha.render(_proj_state(3), out)        # group A complete -> locked
+    html = out.read_text()
+    kor = re.search(r'<div class="bkm-row[^"]*"><span class="bkm-nm">KOR</span>',
+                    html)
+    assert kor is not None and "proj" not in kor.group(0)  # solid, not faded
