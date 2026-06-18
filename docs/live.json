@@ -1,1 +1,1 @@
-{"live": false, "id": "", "home": "Czech Republic", "away": "South Africa", "hg": 1, "ag": 1, "status": "", "clock": "", "date": "2026-06-18", "venue": "Atlanta", "events": [{"kind": "goal", "player": "Michal Sad\u00edlek", "team": "Czech Republic", "minute": "6'"}, {"kind": "penalty", "player": "Teboho Mokoena", "team": "South Africa", "minute": "83'"}]}
+{"live": true, "id": "9", "home": "Switzerland", "away": "Bosnia & Herzegovina", "hg": 0, "ag": 0, "status": "LIVE", "clock": "13'", "date": "2026-06-18", "venue": "Los Angeles (Inglewood)", "events": []}
