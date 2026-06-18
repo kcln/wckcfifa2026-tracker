@@ -2717,9 +2717,9 @@
             "pick": "Canada"
           },
           "status": "live",
-          "hg": 4,
+          "hg": 5,
           "ag": 0,
-          "clock": "75'",
+          "clock": "79'",
           "ht": false,
           "events": [
             {
@@ -2792,10 +2792,10 @@
       "date": "2026-06-18",
       "venue": "Vancouver",
       "kickoff_utc": "2026-06-18T22:00:00Z",
-      "hg": 4,
+      "hg": 5,
       "ag": 0,
       "status": "LIVE",
-      "clock": "75'",
+      "clock": "79'",
       "events": [
         {
           "kind": "goal",
@@ -3836,9 +3836,9 @@
             "pick": "Canada"
           },
           "status": "live",
-          "hg": 4,
+          "hg": 5,
           "ag": 0,
-          "clock": "75'",
+          "clock": "79'",
           "ht": false,
           "events": [
             {
