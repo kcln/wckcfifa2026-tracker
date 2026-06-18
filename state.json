@@ -2708,9 +2708,9 @@
             "pick": "Canada"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "25'",
+          "clock": "30'",
           "ht": false,
           "events": [
             {
@@ -2718,6 +2718,12 @@
               "player": "Cyle Larin",
               "team": "Canada",
               "minute": "16'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jonathan David",
+              "team": "Canada",
+              "minute": "29'"
             }
           ]
         },
@@ -2747,16 +2753,22 @@
       "date": "2026-06-18",
       "venue": "Vancouver",
       "kickoff_utc": "2026-06-18T22:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 0,
       "status": "LIVE",
-      "clock": "25'",
+      "clock": "30'",
       "events": [
         {
           "kind": "goal",
           "player": "Cyle Larin",
           "team": "Canada",
           "minute": "16'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jonathan David",
+          "team": "Canada",
+          "minute": "29'"
         }
       ]
     }
@@ -3755,9 +3767,9 @@
             "pick": "Canada"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "25'",
+          "clock": "30'",
           "ht": false,
           "events": [
             {
@@ -3765,6 +3777,12 @@
               "player": "Cyle Larin",
               "team": "Canada",
               "minute": "16'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jonathan David",
+              "team": "Canada",
+              "minute": "29'"
             }
           ]
         },
