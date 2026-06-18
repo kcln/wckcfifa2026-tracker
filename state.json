@@ -2494,7 +2494,12 @@
             "away": 0.12254318939881832,
             "pick": "Czech Republic"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "9",
@@ -2544,7 +2549,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "3",
+      "home": "Czech Republic",
+      "away": "South Africa",
+      "date": "2026-06-18",
+      "venue": "Atlanta",
+      "kickoff_utc": "2026-06-18T16:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "4'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -3450,7 +3469,12 @@
             "away": 0.12254318939881832,
             "pick": "Czech Republic"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "9",
