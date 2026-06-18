@@ -161,6 +161,30 @@
     .dbox-meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; color: var(--ink-soft); margin-top: 6px; display: flex; align-items: center; gap: 6px; }
     .dbox.live .dbox-meta { color: var(--p-700); }
     .dbox-loc { font-size: 11px; color: var(--ink-faint); margin-top: 4px; }
+    /* Knockout bracket (Schedule, from Jun 28) — classic horizontal tree */
+    .bk { display: flex; overflow-x: auto; padding: 6px 4px 12px; }
+    .bk-rnd { display: flex; flex-direction: column; justify-content: space-around; min-width: 124px; padding-top: 22px; position: relative; }
+    .bk-rnd + .bk-rnd { margin-left: 42px; }
+    .bk-rnd > .rlabel { position: absolute; top: 0; left: 2px; white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); }
+    .bk-cell { flex: 1; display: flex; align-items: center; position: relative; }
+    .bk-cell .bkm { width: 100%; }
+    .bk-rnd:not(:last-child) .bk-cell::after { content: ''; position: absolute; right: -21px; top: 50%; width: 21px; height: 2px; background: var(--hair-soft); }
+    .bk-rnd:not(:first-child) .bk-cell::before { content: ''; position: absolute; left: -21px; top: 50%; width: 21px; height: 2px; background: var(--hair-soft); }
+    .bk-pair { flex: 1; display: flex; flex-direction: column; justify-content: space-around; position: relative; }
+    .bk-feeder .bk-pair::after { content: ''; position: absolute; right: -21px; top: 25%; bottom: 25%; width: 2px; background: var(--hair-soft); }
+    .bk-feeder .bk-pair::before { content: ''; position: absolute; right: -42px; top: 50%; width: 21px; height: 2px; background: var(--hair-soft); }
+    .bkm { background: var(--card); border: 1px solid var(--hair-soft); border-radius: 9px; box-shadow: var(--shadow-sm); overflow: hidden; }
+    .bkm.live { border-color: var(--p-400); box-shadow: 0 0 0 1px var(--p-400); }
+    .bkm-tag { font-family: 'JetBrains Mono', monospace; font-size: 8px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); padding: 3px 9px; border-bottom: 1px solid var(--hair-soft); background: var(--card-2); }
+    .bkm-tag.livet { color: var(--p-700); display: flex; align-items: center; gap: 5px; }
+    .bkm-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 9px; font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 12.5px; color: var(--ink-soft); }
+    .bkm-row + .bkm-row { border-top: 1px solid var(--hair-soft); }
+    .bkm-row.win { color: var(--p-700); font-weight: 800; }
+    .bkm-nm { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .bkm-sc { font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--ink); }
+    .bkm-loc { font-size: 10px; color: var(--ink-faint); padding: 5px 9px 7px; border-top: 1px solid var(--hair-soft); }
+    .bk-third { margin-top: 14px; max-width: 210px; }
+    .bk-third > .rlabel { display: block; margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); }
     .legend { font-size: 12.5px; color: var(--ink-soft); margin: 4px 0 2px; line-height: 1.6; }
     details.grp { border: 1px solid var(--hair-soft); border-radius: var(--radius-md); overflow: hidden; background: var(--card); height: fit-content; }
     details.grp > summary { list-style: none; cursor: pointer; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 14px; padding: 13px 14px; display: flex; align-items: center; justify-content: space-between; color: var(--ink); }
