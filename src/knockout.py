@@ -36,13 +36,11 @@ def abbr(team: str) -> str:
     return ABBR.get(team, "".join(c for c in team if c.isalpha())[:3].upper())
 
 
-def _group_pos(token: str, groups: dict) -> str | None:
-    """Resolve a '1A'/'2C' slot to the country currently in that position."""
-    pos = int(token[0]) - 1               # '1' -> 0 (winner), '2' -> 1 (r-up)
-    rows = groups.get(token[1:]) or []
-    if len(rows) > pos and rows[pos].get("team"):
-        return abbr(rows[pos]["team"])
-    return None
+def group_order(grp: str, groups: dict) -> str:
+    """All of a group's teams as codes in current standings order, e.g.
+    'GER / CIV / ECU / CUW' — the projected contenders for that slot."""
+    rows = groups.get(grp) or []
+    return " / ".join(abbr(r["team"]) for r in rows if r.get("team"))
 
 
 def _group_complete(grp: str, groups: dict) -> bool:
@@ -73,13 +71,22 @@ def slot_label(token: str, groups: dict, winners: dict | None = None,
                losers: dict | None = None) -> str:
     """Best available label for a knockout slot token.
 
-    '1A'/'2C' -> country code from live standings; 'W73'/'L101' -> the
-    winner/loser code once that match is decided; best-third ('3A/B/.../F') and
-    still-undecided feeders are returned unchanged until they resolve.
+    Group slots ('1A'/'2C') show the WHOLE group as codes in current standings
+    order ('GER / CIV / ECU / CUW') while the group is undecided, and collapse
+    to the single qualifier once it finishes. 'W73'/'L101' -> the winner/loser
+    code once that match is decided; best-third ('3A/B/.../F') and undecided
+    feeders are returned unchanged.
     """
     t = (token or "").strip()
     if (len(t) >= 2 and t[0] in "12" and t[1:].isalpha() and "/" not in t):
-        return _group_pos(t, groups) or t
+        grp = t[1:]
+        rows = groups.get(grp) or []
+        if not rows:
+            return t
+        if _group_complete(grp, groups):              # decided -> the qualifier
+            pos = int(t[0]) - 1
+            return abbr(rows[pos]["team"]) if len(rows) > pos else t
+        return group_order(grp, groups)               # projected -> whole group
     if t[:1] in ("W", "L") and t[1:].isdigit():
         table = (winners if t[0] == "W" else losers) or {}
         return abbr(table[t[1:]]) if t[1:] in table else t

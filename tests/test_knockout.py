@@ -9,16 +9,30 @@ def test_abbr_known_and_fallback():
     assert k.abbr("Narnia") == "NAR"
 
 
-GROUPS = {
-    "A": [{"team": "Mexico"}, {"team": "South Korea"}, {"team": "Czechia"}],
-    "E": [{"team": "Germany"}, {"team": "Ecuador"}],
+def _grp(*teams, played):
+    return [{"team": t, "played": played} for t in teams]
+
+
+GROUPS = {  # undecided (played 1): group slots project the whole group
+    "A": _grp("Mexico", "South Korea", "Czechia", "South Africa", played=1),
+    "E": _grp("Germany", "Ivory Coast", "Ecuador", "Curaçao", played=1),
+}
+GROUPS_DONE = {  # decided (played 3): group slots collapse to the qualifier
+    "A": _grp("Mexico", "South Korea", "Czechia", "South Africa", played=3),
 }
 
 
-def test_slot_label_group_winner_and_runner_up():
-    assert k.slot_label("1A", GROUPS) == "MEX"   # group A winner
-    assert k.slot_label("2A", GROUPS) == "KOR"   # group A runner-up
-    assert k.slot_label("1E", GROUPS) == "GER"
+def test_group_slot_projects_whole_group_in_order_while_undecided():
+    # the circled-box case: 1E -> all of group E in standings order
+    assert k.slot_label("1E", GROUPS) == "GER / CIV / ECU / CUW"
+    # both winner and runner-up slots show the full group
+    assert k.slot_label("2A", GROUPS) == "MEX / KOR / CZE / RSA"
+    assert k.slot_label("1A", GROUPS) == "MEX / KOR / CZE / RSA"
+
+
+def test_group_slot_collapses_to_qualifier_when_decided():
+    assert k.slot_label("1A", GROUPS_DONE) == "MEX"   # group A winner
+    assert k.slot_label("2A", GROUPS_DONE) == "KOR"   # group A runner-up
 
 
 def test_slot_label_best_third_stays_until_resolved():

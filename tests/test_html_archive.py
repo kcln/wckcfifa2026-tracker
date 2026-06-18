@@ -517,19 +517,22 @@ def _proj_state(played):
                  "status": "sched"}]}]}
 
 
-def test_bracket_fades_projected_teams(tmp_path):
+def test_bracket_projects_whole_group_in_order_when_undecided(tmp_path):
     out = tmp_path / "i.html"
     ha.render(_proj_state(1), out)        # group A incomplete -> projected
     html = out.read_text()
-    assert '<span class="bkm-nm">KOR</span>' in html      # 2A -> S.Korea
+    # 2A slot shows all of group A in standings order, faded
+    assert '<span class="bkm-nm">MEX / KOR / CZE / RSA</span>' in html
     assert 'class="bkm-row proj"' in html                 # faded/projected
     assert "projected" in html                            # explanatory caption
 
 
-def test_bracket_locks_team_once_group_decided(tmp_path):
+def test_bracket_collapses_to_qualifier_when_group_decided(tmp_path):
     out = tmp_path / "i.html"
     ha.render(_proj_state(3), out)        # group A complete -> locked
     html = out.read_text()
+    # collapses to the single runner-up, solid (not faded)
     kor = re.search(r'<div class="bkm-row[^"]*"><span class="bkm-nm">KOR</span>',
                     html)
-    assert kor is not None and "proj" not in kor.group(0)  # solid, not faded
+    assert kor is not None and "proj" not in kor.group(0)
+    assert 'MEX / KOR' not in html        # no longer the projected group list

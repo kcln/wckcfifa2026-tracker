@@ -900,7 +900,7 @@ __REFRESH__
     .dbox-loc { font-size: 11px; color: var(--ink-faint); margin-top: 4px; }
     /* Knockout bracket (Schedule, from Jun 28) — classic horizontal tree */
     .bk { display: flex; flex: 0 0 auto; overflow: visible; padding: 6px 4px 12px; }
-    .bk-rnd { display: flex; flex-direction: column; justify-content: space-around; min-width: 124px; padding-top: 22px; position: relative; }
+    .bk-rnd { display: flex; flex-direction: column; justify-content: space-around; min-width: 156px; padding-top: 22px; position: relative; }
     .bk-rnd + .bk-rnd { margin-left: 42px; }
     .bk-rnd > .rlabel { position: absolute; top: 0; left: 2px; white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); }
     .bk-cell { flex: 1; display: flex; align-items: center; position: relative; }
@@ -918,7 +918,7 @@ __REFRESH__
     .bkm-row + .bkm-row { border-top: 1px solid var(--hair-soft); }
     .bkm-row.win { color: var(--p-700); font-weight: 800; }
     .bkm-row.proj .bkm-nm { color: var(--ink-faint); font-style: italic; font-weight: 500; }
-    .bkm-nm { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .bkm-nm { line-height: 1.3; word-spacing: -1px; }
     .bkm-sc { font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--ink); }
     .bkm-loc { font-size: 10px; color: var(--ink-faint); padding: 5px 9px 7px; border-top: 1px solid var(--hair-soft); }
     .bk-third { justify-content: flex-start; }
