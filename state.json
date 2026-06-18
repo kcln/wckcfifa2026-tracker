@@ -568,6 +568,15 @@
           "key": "pm-2026-06-18-3",
           "generated_at": "2026-06-18T11:00:56.051639-07:00",
           "kickoff_utc": "2026-06-18T16:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 18\n\nHalf-time:\nSwitzerland 0 - 0 Bosnia & Herzegovina\nLos Angeles (Inglewood), USA\nPrediction: Switzerland",
+          "sent": true,
+          "hash": "42be9bdf694d3f6f",
+          "key": "ht-2026-06-18-9",
+          "generated_at": "2026-06-18T12:51:17.320203-07:00",
+          "kickoff_utc": "2026-06-18T19:00:00Z"
         }
       ]
     }
@@ -1025,51 +1034,51 @@
       "Qatar": 0.0001
     },
     "advancement": {
-      "Austria": 0.9578,
-      "Uzbekistan": 0.3293,
-      "England": 0.9986,
-      "Ivory Coast": 0.9567,
-      "Uruguay": 0.7812,
-      "New Zealand": 0.2785,
-      "Japan": 0.9014,
-      "Spain": 0.9616,
-      "Turkey": 0.6394,
-      "Sweden": 0.9655,
       "Senegal": 0.6161,
-      "Switzerland": 0.9054,
-      "Czech Republic": 0.2819,
-      "Norway": 0.9828,
-      "Germany": 0.9985,
-      "Scotland": 0.7387,
+      "Turkey": 0.6394,
       "Morocco": 0.9153,
-      "Egypt": 0.7711,
-      "Cape Verde": 0.5704,
-      "Iran": 0.7052,
-      "France": 0.9975,
-      "South Korea": 0.9455,
-      "Canada": 0.8799,
+      "England": 0.9986,
       "Colombia": 0.9876,
+      "Ivory Coast": 0.9567,
+      "New Zealand": 0.2785,
+      "Uruguay": 0.7812,
       "Ecuador": 0.7939,
-      "Croatia": 0.7927,
-      "USA": 0.9318,
-      "Mexico": 0.9746,
-      "Argentina": 0.9996,
+      "Japan": 0.9014,
       "Australia": 0.9833,
-      "Brazil": 0.9623,
+      "Mexico": 0.9746,
+      "Croatia": 0.7927,
+      "Austria": 0.9578,
+      "Switzerland": 0.9054,
+      "USA": 0.9318,
+      "Spain": 0.9616,
       "Netherlands": 0.9321,
-      "Algeria": 0.4894,
-      "Portugal": 0.8743,
+      "Sweden": 0.9655,
+      "South Korea": 0.9455,
+      "Uzbekistan": 0.3293,
+      "Scotland": 0.7387,
+      "France": 0.9975,
+      "Czech Republic": 0.2819,
+      "Germany": 0.9985,
+      "Cape Verde": 0.5704,
+      "Egypt": 0.7711,
+      "Iran": 0.7052,
+      "Brazil": 0.9623,
+      "Norway": 0.9828,
+      "Argentina": 0.9996,
+      "Canada": 0.8799,
       "Belgium": 0.8808,
-      "Qatar": 0.4697,
       "Saudi Arabia": 0.3163,
-      "Bosnia & Herzegovina": 0.4304,
+      "Algeria": 0.4894,
+      "Qatar": 0.4697,
+      "Portugal": 0.8743,
       "DR Congo": 0.3935,
+      "Bosnia & Herzegovina": 0.4304,
       "Panama": 0.235,
       "Paraguay": 0.3055,
-      "Iraq": 0.1359,
       "Jordan": 0.0921,
-      "Curaçao": 0.0317,
+      "Iraq": 0.1359,
       "Ghana": 0.5805,
+      "Curaçao": 0.0317,
       "Tunisia": 0.0876,
       "Haiti": 0.0885,
       "South Africa": 0.1526
@@ -2568,11 +2577,18 @@
             "pick": "Switzerland"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "13'",
+          "clock": "78'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Johan Manzambi",
+              "team": "Switzerland",
+              "minute": "74'"
+            }
+          ]
         },
         {
           "id": "10",
@@ -2615,11 +2631,18 @@
       "date": "2026-06-18",
       "venue": "Los Angeles (Inglewood)",
       "kickoff_utc": "2026-06-18T19:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "13'",
-      "events": []
+      "clock": "78'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Johan Manzambi",
+          "team": "Switzerland",
+          "minute": "74'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -3560,11 +3583,18 @@
             "pick": "Switzerland"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "13'",
+          "clock": "78'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Johan Manzambi",
+              "team": "Switzerland",
+              "minute": "74'"
+            }
+          ]
         },
         {
           "id": "10",
