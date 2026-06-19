@@ -663,6 +663,15 @@
           "key": "pm-2026-06-19-21",
           "generated_at": "2026-06-19T14:04:48.437579-07:00",
           "kickoff_utc": "2026-06-19T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 19\n\nHalf-time:\nScotland 0 - 1 Morocco\nBoston (Foxborough), USA\n  ⚽ 2' Ismael Saibari (Morocco)\nPrediction: Morocco",
+          "sent": true,
+          "hash": "479b64dc1b4d2752",
+          "key": "ht-2026-06-19-15",
+          "generated_at": "2026-06-19T15:53:41.532102-07:00",
+          "kickoff_utc": "2026-06-19T22:00:00Z"
         }
       ]
     }
@@ -2978,8 +2987,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -3032,8 +3041,8 @@
       "kickoff_utc": "2026-06-19T22:00:00Z",
       "hg": 0,
       "ag": 1,
-      "status": "LIVE",
-      "clock": "45'+4'",
+      "status": "HT",
+      "clock": "45'+5'",
       "events": [
         {
           "kind": "goal",
@@ -4171,8 +4180,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
