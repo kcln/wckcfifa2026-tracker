@@ -645,6 +645,15 @@
           "key": "mb-2026-06-19",
           "generated_at": "2026-06-19T00:09:11.755812-07:00",
           "kickoff_utc": "2026-06-19T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 19\n\nHalf-time:\nUSA 2 - 0 Australia\nSeattle, USA\n  ⚽ 11' Cameron Burgess (USA, OG)\n  ⚽ 43' Alex Freeman (USA)\nPrediction: Australia",
+          "sent": true,
+          "hash": "6d68ecaa6d442ac5",
+          "key": "ht-2026-06-19-21",
+          "generated_at": "2026-06-19T12:55:50.769319-07:00",
+          "kickoff_utc": "2026-06-19T19:00:00Z"
         }
       ]
     }
@@ -2936,8 +2945,8 @@
           "status": "live",
           "hg": 2,
           "ag": 0,
-          "clock": "45'+6'",
-          "ht": false,
+          "clock": "45'+8'",
+          "ht": true,
           "events": [
             {
               "kind": "own_goal",
@@ -3011,8 +3020,8 @@
       "kickoff_utc": "2026-06-19T19:00:00Z",
       "hg": 2,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+6'",
+      "status": "HT",
+      "clock": "45'+8'",
       "events": [
         {
           "kind": "own_goal",
@@ -4124,8 +4133,8 @@
           "status": "live",
           "hg": 2,
           "ag": 0,
-          "clock": "45'+6'",
-          "ht": false,
+          "clock": "45'+8'",
+          "ht": true,
           "events": [
             {
               "kind": "own_goal",
