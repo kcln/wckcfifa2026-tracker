@@ -604,6 +604,15 @@
           "key": "pm-2026-06-18-10",
           "generated_at": "2026-06-18T17:02:35.486458-07:00",
           "kickoff_utc": "2026-06-18T22:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 18\n\nHalf-time:\nMexico 0 - 0 South Korea\nGuadalajara (Zapopan), Mexico\nPrediction: Mexico",
+          "sent": true,
+          "hash": "d62345ffcb3fa453",
+          "key": "ht-2026-06-18-4",
+          "generated_at": "2026-06-18T18:53:35.873341-07:00",
+          "kickoff_utc": "2026-06-19T01:00:00Z"
         }
       ]
     }
@@ -2854,8 +2863,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+3'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": []
         }
       ]
@@ -2871,8 +2880,8 @@
       "kickoff_utc": "2026-06-19T01:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+3'",
+      "status": "HT",
+      "clock": "45'+4'",
       "events": []
     }
   ],
@@ -3940,8 +3949,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+3'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": []
         }
       ]
