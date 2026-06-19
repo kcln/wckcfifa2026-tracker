@@ -2863,9 +2863,16 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "46'",
+          "clock": "51'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Luis Romo",
+              "team": "Mexico",
+              "minute": "50'"
+            }
+          ]
         }
       ]
     }
@@ -2881,8 +2888,15 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "46'",
-      "events": []
+      "clock": "51'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Luis Romo",
+          "team": "Mexico",
+          "minute": "50'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -3949,9 +3963,16 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "46'",
+          "clock": "51'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Luis Romo",
+              "team": "Mexico",
+              "minute": "50'"
+            }
+          ]
         }
       ]
     },
