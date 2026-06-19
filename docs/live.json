@@ -1,1 +1,1 @@
-{"live": true, "id": "21", "home": "USA", "away": "Australia", "hg": 0, "ag": 0, "status": "LIVE", "clock": "10'", "date": "2026-06-19", "venue": "Seattle", "events": []}
+{"live": true, "id": "21", "home": "USA", "away": "Australia", "hg": 1, "ag": 0, "status": "LIVE", "clock": "15'", "date": "2026-06-19", "venue": "Seattle", "events": [{"kind": "own_goal", "player": "Cameron Burgess", "team": "USA", "minute": "11'"}]}

@@ -2934,11 +2934,18 @@
             "pick": "Australia"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "10'",
+          "clock": "15'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "own_goal",
+              "player": "Cameron Burgess",
+              "team": "USA",
+              "minute": "11'"
+            }
+          ]
         },
         {
           "id": "15",
@@ -2996,11 +3003,18 @@
       "date": "2026-06-19",
       "venue": "Seattle",
       "kickoff_utc": "2026-06-19T19:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "10'",
-      "events": []
+      "clock": "15'",
+      "events": [
+        {
+          "kind": "own_goal",
+          "player": "Cameron Burgess",
+          "team": "USA",
+          "minute": "11'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -4096,11 +4110,18 @@
             "pick": "Australia"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "10'",
+          "clock": "15'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "own_goal",
+              "player": "Cameron Burgess",
+              "team": "USA",
+              "minute": "11'"
+            }
+          ]
         },
         {
           "id": "15",
