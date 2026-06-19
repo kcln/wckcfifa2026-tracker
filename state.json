@@ -633,6 +633,20 @@
           "kickoff_utc": "2026-06-18T16:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-06-19",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 19\n\nMatchday Brief\n\nUSA vs Australia\n  Prediction: Australia\n  USA 11.2% · Draw 16.3% · Australia 72.5%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 Seattle, USA\n\nScotland vs Morocco\n  Prediction: Morocco\n  Scotland 16.2% · Draw 19.7% · Morocco 64.0%\n  🕐 3:00pm PT / 5:00pm CT / 6:00pm ET / 3:30am IST (+1d)\n  📍 Boston (Foxborough), USA\n\nBrazil vs Haiti\n  Prediction: Brazil\n  Brazil 73.6% · Draw 23.0% · Haiti 3.4%\n  🕐 5:30pm PT / 7:30pm CT / 8:30pm ET / 6:00am IST (+1d)\n  📍 Philadelphia, USA\n\nTurkey vs Paraguay\n  Prediction: Turkey\n  Turkey 45.2% · Draw 24.6% · Paraguay 30.2%\n  🕐 8:00pm PT / 10:00pm CT / 11:00pm ET / 8:30am IST (+1d)\n  📍 San Francisco Bay Area (Santa Clara), USA",
+          "sent": true,
+          "hash": "15ace645a924df96",
+          "key": "mb-2026-06-19",
+          "generated_at": "2026-06-19T00:09:11.755812-07:00",
+          "kickoff_utc": "2026-06-19T19:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -2900,6 +2914,71 @@
             }
           ],
           "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-06-19",
+      "matches": [
+        {
+          "id": "21",
+          "home": "USA",
+          "away": "Australia",
+          "kickoff_utc": "2026-06-19T19:00:00Z",
+          "venue": "Seattle",
+          "stage": "group",
+          "pred": {
+            "home": 0.11163213654948417,
+            "draw": 0.1631064443287964,
+            "away": 0.7252614191217195,
+            "pick": "Australia"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "15",
+          "home": "Scotland",
+          "away": "Morocco",
+          "kickoff_utc": "2026-06-19T22:00:00Z",
+          "venue": "Boston (Foxborough)",
+          "stage": "group",
+          "pred": {
+            "home": 0.1624762217061045,
+            "draw": 0.19745546321164517,
+            "away": 0.6400683150822504,
+            "pick": "Morocco"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "16",
+          "home": "Brazil",
+          "away": "Haiti",
+          "kickoff_utc": "2026-06-20T00:30:00Z",
+          "venue": "Philadelphia",
+          "stage": "group",
+          "pred": {
+            "home": 0.7356489947686746,
+            "draw": 0.23033755583215823,
+            "away": 0.03401344939916725,
+            "pick": "Brazil"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "22",
+          "home": "Turkey",
+          "away": "Paraguay",
+          "kickoff_utc": "2026-06-20T03:00:00Z",
+          "venue": "San Francisco Bay Area (Santa Clara)",
+          "stage": "group",
+          "pred": {
+            "home": 0.45175894393518334,
+            "draw": 0.24641512389120182,
+            "away": 0.30182593217361486,
+            "pick": "Turkey"
+          },
+          "status": "sched"
         }
       ]
     }
