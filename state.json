@@ -2861,9 +2861,9 @@
             "pick": "Mexico"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "51'",
+          "clock": "54'",
           "ht": false,
           "events": [
             {
@@ -2885,10 +2885,10 @@
       "date": "2026-06-18",
       "venue": "Guadalajara (Zapopan)",
       "kickoff_utc": "2026-06-19T01:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "51'",
+      "clock": "54'",
       "events": [
         {
           "kind": "goal",
@@ -3961,9 +3961,9 @@
             "pick": "Mexico"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "51'",
+          "clock": "54'",
           "ht": false,
           "events": [
             {
