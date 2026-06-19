@@ -595,6 +595,15 @@
           "key": "ht-2026-06-18-10",
           "generated_at": "2026-06-18T15:55:35.746213-07:00",
           "kickoff_utc": "2026-06-18T22:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 18\n\nFull time:\nCanada 6 - 0 Qatar\nVancouver, Canada\n  ⚽ 16' Cyle Larin (Canada)\n  ⚽ 29' Jonathan David (Canada)\n  ⚽ 45'+3' Jonathan David (Canada)\n  ⚽ 64' Nathan Saliba (Canada)\n  ⚽ 75' Mohamed Manai (Canada, OG)\n  ⚽ 90'+2' Jonathan David (Canada)\n  🟥 33' Homam Ahmed (Qatar)\n  🟥 53' Assim Madibo (Qatar)\nOverall prediction: 12/27 (44.4%)\nPrediction ✓: Canada",
+          "sent": true,
+          "hash": "e252249d0e8ed06b",
+          "key": "pm-2026-06-18-10",
+          "generated_at": "2026-06-18T17:02:35.486458-07:00",
+          "kickoff_utc": "2026-06-18T22:00:00Z"
         }
       ]
     }
@@ -636,6 +645,14 @@
     ],
     "B": [
       {
+        "team": "Canada",
+        "played": 2,
+        "points": 4,
+        "gd": 6,
+        "gf": 7,
+        "ga": 1
+      },
+      {
         "team": "Switzerland",
         "played": 2,
         "points": 4,
@@ -644,28 +661,20 @@
         "ga": 2
       },
       {
-        "team": "Canada",
-        "played": 1,
-        "points": 1,
-        "gd": 0,
-        "gf": 1,
-        "ga": 1
-      },
-      {
-        "team": "Qatar",
-        "played": 1,
-        "points": 1,
-        "gd": 0,
-        "gf": 1,
-        "ga": 1
-      },
-      {
         "team": "Bosnia & Herzegovina",
         "played": 2,
         "points": 1,
         "gd": -3,
         "gf": 2,
         "ga": 5
+      },
+      {
+        "team": "Qatar",
+        "played": 2,
+        "points": 1,
+        "gd": -6,
+        "gf": 1,
+        "ga": 7
       }
     ],
     "C": [
@@ -1011,95 +1020,99 @@
   },
   "bracket": {
     "title_odds": {
-      "Morocco": 0.023,
-      "Canada": 0.0054,
-      "England": 0.0475,
-      "Croatia": 0.0251,
-      "Argentina": 0.2193,
-      "Spain": 0.1429,
-      "France": 0.1331,
-      "Senegal": 0.0095,
-      "Netherlands": 0.0334,
-      "Ecuador": 0.0234,
-      "Germany": 0.043,
-      "Mexico": 0.0159,
+      "Brazil": 0.048,
+      "Canada": 0.0092,
+      "England": 0.0531,
+      "Croatia": 0.0241,
+      "Argentina": 0.214,
+      "Spain": 0.1422,
+      "France": 0.1254,
+      "Japan": 0.0249,
       "South Korea": 0.0073,
-      "Brazil": 0.0466,
-      "Colombia": 0.0544,
-      "Australia": 0.0062,
-      "Ivory Coast": 0.0027,
-      "Japan": 0.0276,
-      "Algeria": 0.0028,
-      "Turkey": 0.0107,
-      "Belgium": 0.0177,
-      "Portugal": 0.0418,
-      "Norway": 0.0085,
-      "Uruguay": 0.0152,
-      "Austria": 0.0059,
-      "Switzerland": 0.0134,
-      "Iran": 0.0071,
-      "Scotland": 0.0009,
+      "Germany": 0.0434,
+      "Switzerland": 0.0145,
+      "Mexico": 0.0176,
+      "Portugal": 0.0411,
+      "Colombia": 0.0562,
+      "Morocco": 0.0228,
+      "Ivory Coast": 0.0033,
+      "Australia": 0.0078,
+      "Senegal": 0.0093,
+      "Netherlands": 0.032,
+      "Ecuador": 0.0221,
+      "Turkey": 0.0106,
+      "Algeria": 0.0032,
+      "Norway": 0.0092,
+      "Uruguay": 0.0153,
+      "Belgium": 0.0193,
+      "Panama": 0.0005,
+      "Iran": 0.0068,
+      "Haiti": 0.0001,
+      "Uzbekistan": 0.0011,
+      "Austria": 0.0068,
+      "Scotland": 0.001,
+      "South Africa": 0.0001,
+      "Egypt": 0.0034,
+      "DR Congo": 0.0003,
+      "Paraguay": 0.0014,
+      "New Zealand": 0.0001,
+      "Sweden": 0.0014,
+      "Czech Republic": 0.0005,
+      "Tunisia": 0.0001,
       "Iraq": 0.0002,
-      "Egypt": 0.0031,
-      "Uzbekistan": 0.0012,
-      "Sweden": 0.0016,
-      "Paraguay": 0.0016,
-      "Saudi Arabia": 0.0002,
-      "DR Congo": 0.0004,
-      "Panama": 0.0004,
-      "Czech Republic": 0.0006,
-      "Cape Verde": 0.0003,
-      "Jordan": 0.0001
+      "Cape Verde": 0.0001,
+      "Jordan": 0.0001,
+      "Saudi Arabia": 0.0001
     },
     "advancement": {
-      "Turkey": 0.6309,
-      "Brazil": 0.9614,
-      "Morocco": 0.9157,
-      "England": 0.9987,
-      "Colombia": 0.99,
-      "New Zealand": 0.2807,
-      "Canada": 0.8795,
-      "Uruguay": 0.7805,
-      "Ecuador": 0.7867,
-      "Australia": 0.986,
-      "Japan": 0.8986,
-      "Mexico": 0.9733,
-      "Austria": 0.9567,
+      "Belgium": 0.8815,
+      "Turkey": 0.6298,
+      "Morocco": 0.917,
+      "England": 0.9989,
+      "Ivory Coast": 0.9533,
+      "Colombia": 0.9881,
+      "Canada": 1.0,
+      "Ecuador": 0.7911,
+      "Australia": 0.9856,
+      "Japan": 0.8953,
+      "Mexico": 0.9726,
+      "Croatia": 0.791,
+      "Austria": 0.9577,
       "Switzerland": 1.0,
-      "USA": 0.9355,
-      "Spain": 0.9636,
-      "Netherlands": 0.9321,
-      "Sweden": 0.9664,
-      "South Korea": 0.9452,
-      "Uzbekistan": 0.3214,
-      "Scotland": 0.7468,
-      "Qatar": 0.4866,
-      "France": 0.9978,
+      "USA": 0.9323,
+      "Algeria": 0.4856,
+      "Spain": 0.9642,
+      "Sweden": 0.9635,
+      "Tunisia": 0.0876,
+      "South Korea": 0.9433,
+      "Uzbekistan": 0.3203,
+      "France": 0.9976,
       "Czech Republic": 0.2832,
-      "Germany": 0.9985,
-      "Cape Verde": 0.5798,
-      "Egypt": 0.7745,
-      "Iran": 0.6976,
-      "Croatia": 0.7909,
-      "Norway": 0.9807,
-      "Argentina": 0.9997,
-      "Senegal": 0.6103,
-      "Ghana": 0.583,
-      "Belgium": 0.8828,
-      "Ivory Coast": 0.9543,
-      "Jordan": 0.0912,
-      "Portugal": 0.8777,
-      "Paraguay": 0.3103,
-      "Algeria": 0.4798,
-      "DR Congo": 0.3942,
-      "Haiti": 0.0888,
-      "Panama": 0.2362,
-      "Iraq": 0.1376,
-      "Saudi Arabia": 0.3127,
-      "Bosnia & Herzegovina": 0.3331,
-      "South Africa": 0.1529,
-      "Tunisia": 0.0839,
-      "Curaçao": 0.0322
+      "Cape Verde": 0.5802,
+      "Egypt": 0.7774,
+      "Germany": 0.9979,
+      "Bosnia & Herzegovina": 0.3454,
+      "Iran": 0.6969,
+      "Brazil": 0.9603,
+      "Norway": 0.9805,
+      "Argentina": 0.9999,
+      "Uruguay": 0.7839,
+      "Ghana": 0.5832,
+      "Jordan": 0.0886,
+      "Netherlands": 0.9339,
+      "Scotland": 0.7386,
+      "Portugal": 0.8769,
+      "Paraguay": 0.3142,
+      "Senegal": 0.6096,
+      "Qatar": 0.3621,
+      "DR Congo": 0.3949,
+      "Panama": 0.236,
+      "Saudi Arabia": 0.3146,
+      "Haiti": 0.0885,
+      "New Zealand": 0.2768,
+      "South Africa": 0.1534,
+      "Iraq": 0.1332,
+      "Curaçao": 0.0336
     }
   },
   "season_ended": false,
@@ -1719,6 +1732,60 @@
           "player": "Granit Xhaka",
           "team": "Switzerland",
           "minute": "90'+7'"
+        }
+      ]
+    },
+    "10": {
+      "home_goals": 6,
+      "away_goals": 0,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Cyle Larin",
+          "team": "Canada",
+          "minute": "16'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jonathan David",
+          "team": "Canada",
+          "minute": "29'"
+        },
+        {
+          "kind": "red",
+          "player": "Homam Ahmed",
+          "team": "Qatar",
+          "minute": "33'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jonathan David",
+          "team": "Canada",
+          "minute": "45'+3'"
+        },
+        {
+          "kind": "red",
+          "player": "Assim Madibo",
+          "team": "Qatar",
+          "minute": "53'"
+        },
+        {
+          "kind": "goal",
+          "player": "Nathan Saliba",
+          "team": "Canada",
+          "minute": "64'"
+        },
+        {
+          "kind": "own_goal",
+          "player": "Mohamed Manai",
+          "team": "Canada",
+          "minute": "75'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jonathan David",
+          "team": "Canada",
+          "minute": "90'+2'"
         }
       ]
     }
@@ -2716,11 +2783,9 @@
             "away": 0.07929922654485254,
             "pick": "Canada"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 6,
           "ag": 0,
-          "clock": "90'+6'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -2770,7 +2835,8 @@
               "team": "Canada",
               "minute": "90'+2'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "4",
@@ -2790,70 +2856,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "10",
-      "home": "Canada",
-      "away": "Qatar",
-      "date": "2026-06-18",
-      "venue": "Vancouver",
-      "kickoff_utc": "2026-06-18T22:00:00Z",
-      "hg": 6,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "90'+6'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Cyle Larin",
-          "team": "Canada",
-          "minute": "16'"
-        },
-        {
-          "kind": "goal",
-          "player": "Jonathan David",
-          "team": "Canada",
-          "minute": "29'"
-        },
-        {
-          "kind": "red",
-          "player": "Homam Ahmed",
-          "team": "Qatar",
-          "minute": "33'"
-        },
-        {
-          "kind": "goal",
-          "player": "Jonathan David",
-          "team": "Canada",
-          "minute": "45'+3'"
-        },
-        {
-          "kind": "red",
-          "player": "Assim Madibo",
-          "team": "Qatar",
-          "minute": "53'"
-        },
-        {
-          "kind": "goal",
-          "player": "Nathan Saliba",
-          "team": "Canada",
-          "minute": "64'"
-        },
-        {
-          "kind": "own_goal",
-          "player": "Mohamed Manai",
-          "team": "Canada",
-          "minute": "75'"
-        },
-        {
-          "kind": "goal",
-          "player": "Jonathan David",
-          "team": "Canada",
-          "minute": "90'+2'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -3847,11 +3850,9 @@
             "away": 0.07929922654485254,
             "pick": "Canada"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 6,
           "ag": 0,
-          "clock": "90'+6'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -3901,7 +3902,8 @@
               "team": "Canada",
               "minute": "90'+2'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "4",
