@@ -2933,7 +2933,12 @@
             "away": 0.7252614191217195,
             "pick": "Australia"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "15",
@@ -2983,7 +2988,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "21",
+      "home": "USA",
+      "away": "Australia",
+      "date": "2026-06-19",
+      "venue": "Seattle",
+      "kickoff_utc": "2026-06-19T19:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -4076,7 +4095,12 @@
             "away": 0.7252614191217195,
             "pick": "Australia"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "15",
