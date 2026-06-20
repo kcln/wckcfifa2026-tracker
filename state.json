@@ -3033,7 +3033,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "31'",
+          "clock": "35'",
           "ht": false,
           "events": [
             {
@@ -3073,7 +3073,7 @@
       "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "31'",
+      "clock": "35'",
       "events": [
         {
           "kind": "goal",
@@ -4237,7 +4237,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "31'",
+          "clock": "35'",
           "ht": false,
           "events": [
             {
