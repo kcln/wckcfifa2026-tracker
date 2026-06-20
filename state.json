@@ -3033,7 +3033,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "7'",
+          "clock": "11'",
           "ht": false,
           "events": []
         },
@@ -3066,7 +3066,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "7'",
+      "clock": "11'",
       "events": []
     }
   ],
@@ -4223,7 +4223,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "7'",
+          "clock": "11'",
           "ht": false,
           "events": []
         },
