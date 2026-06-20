@@ -3030,7 +3030,12 @@
             "away": 0.03401344939916725,
             "pick": "Brazil"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "22",
@@ -3050,7 +3055,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "16",
+      "home": "Brazil",
+      "away": "Haiti",
+      "date": "2026-06-19",
+      "venue": "Philadelphia",
+      "kickoff_utc": "2026-06-20T00:30:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -4201,7 +4220,12 @@
             "away": 0.03401344939916725,
             "pick": "Brazil"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "22",

@@ -1,1 +1,1 @@
-{"live": false, "id": "", "home": "USA", "away": "Australia", "hg": 2, "ag": 0, "status": "", "clock": "", "date": "2026-06-19", "venue": "Seattle", "events": [{"kind": "own_goal", "player": "Cameron Burgess", "team": "USA", "minute": "11'"}, {"kind": "goal", "player": "Alex Freeman", "team": "USA", "minute": "43'"}]}
+{"live": true, "id": "16", "home": "Brazil", "away": "Haiti", "hg": 0, "ag": 0, "status": "LIVE", "clock": "3'", "date": "2026-06-19", "venue": "Philadelphia", "events": []}
