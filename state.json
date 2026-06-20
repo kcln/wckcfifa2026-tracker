@@ -3348,7 +3348,12 @@
             "away": 0.15755115390396687,
             "pick": "Germany"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "28",
@@ -3383,7 +3388,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "27",
+      "home": "Germany",
+      "away": "Ivory Coast",
+      "date": "2026-06-20",
+      "venue": "Toronto",
+      "kickoff_utc": "2026-06-20T20:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "1'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -4665,7 +4684,12 @@
             "away": 0.15755115390396687,
             "pick": "Germany"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "28",
