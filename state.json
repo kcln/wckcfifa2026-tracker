@@ -3220,7 +3220,7 @@
           "status": "live",
           "hg": 3,
           "ag": 0,
-          "clock": "50'",
+          "clock": "55'",
           "ht": false,
           "events": [
             {
@@ -3240,6 +3240,12 @@
               "player": "Cody Gakpo",
               "team": "Netherlands",
               "minute": "47'"
+            },
+            {
+              "kind": "goal",
+              "player": "Cody Gakpo",
+              "team": "Netherlands",
+              "minute": "54'"
             }
           ]
         },
@@ -3302,7 +3308,7 @@
       "hg": 3,
       "ag": 0,
       "status": "LIVE",
-      "clock": "50'",
+      "clock": "55'",
       "events": [
         {
           "kind": "goal",
@@ -3321,6 +3327,12 @@
           "player": "Cody Gakpo",
           "team": "Netherlands",
           "minute": "47'"
+        },
+        {
+          "kind": "goal",
+          "player": "Cody Gakpo",
+          "team": "Netherlands",
+          "minute": "54'"
         }
       ]
     }
@@ -4553,7 +4565,7 @@
           "status": "live",
           "hg": 3,
           "ag": 0,
-          "clock": "50'",
+          "clock": "55'",
           "ht": false,
           "events": [
             {
@@ -4573,6 +4585,12 @@
               "player": "Cody Gakpo",
               "team": "Netherlands",
               "minute": "47'"
+            },
+            {
+              "kind": "goal",
+              "player": "Cody Gakpo",
+              "team": "Netherlands",
+              "minute": "54'"
             }
           ]
         },
