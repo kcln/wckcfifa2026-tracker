@@ -681,6 +681,15 @@
           "key": "pm-2026-06-19-15",
           "generated_at": "2026-06-19T17:03:00.580335-07:00",
           "kickoff_utc": "2026-06-19T22:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 19\n\nHalf-time:\nBrazil 3 - 0 Haiti\nPhiladelphia, USA\n  ⚽ 23' Matheus Cunha (Brazil)\n  ⚽ 36' Matheus Cunha (Brazil)\n  ⚽ 45'+3' Vinícius Júnior (Brazil)\nPrediction: Brazil",
+          "sent": true,
+          "hash": "6cba8e4c6e7ac5a9",
+          "key": "ht-2026-06-19-16",
+          "generated_at": "2026-06-19T18:28:11.936342-07:00",
+          "kickoff_utc": "2026-06-20T00:30:00Z"
         }
       ]
     }
@@ -3034,7 +3043,7 @@
           "hg": 3,
           "ag": 0,
           "clock": "45'+6'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -3084,7 +3093,7 @@
       "kickoff_utc": "2026-06-20T00:30:00Z",
       "hg": 3,
       "ag": 0,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+6'",
       "events": [
         {
@@ -4262,7 +4271,7 @@
           "hg": 3,
           "ag": 0,
           "clock": "45'+6'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
