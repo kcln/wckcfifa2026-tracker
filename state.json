@@ -3031,11 +3031,18 @@
             "pick": "Brazil"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "23'",
+          "clock": "27'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Matheus Cunha",
+              "team": "Brazil",
+              "minute": "23'"
+            }
+          ]
         },
         {
           "id": "22",
@@ -3063,11 +3070,18 @@
       "date": "2026-06-19",
       "venue": "Philadelphia",
       "kickoff_utc": "2026-06-20T00:30:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "23'",
-      "events": []
+      "clock": "27'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Matheus Cunha",
+          "team": "Brazil",
+          "minute": "23'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -4221,11 +4235,18 @@
             "pick": "Brazil"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "23'",
+          "clock": "27'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Matheus Cunha",
+              "team": "Brazil",
+              "minute": "23'"
+            }
+          ]
         },
         {
           "id": "22",
