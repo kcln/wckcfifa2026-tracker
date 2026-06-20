@@ -64,3 +64,46 @@ def test_slot_locked_only_when_group_complete():
     assert k.slot_locked("3A/B/C/D/F", complete) is False
     assert k.slot_locked("W73", complete) is False
     assert k.slot_locked("W73", complete, winners={"73": "Spain"}) is True
+
+
+# --- clinched_qualifiers: FIFA/ESPN-style points-secure Round-of-32 berths ---
+
+def _rows(*pairs):
+    return [{"team": t, "played": p, "points": pt} for t, p, pt in pairs]
+
+
+def _sched(*fixtures):
+    """fixtures: (home, away) tuples -> a one-day schedule of unplayed group
+    matches (no status/hg => treated as remaining)."""
+    return [{"date": "2026-06-24",
+             "matches": [{"stage": "group", "home": h, "away": a}
+                         for h, a in fixtures]}]
+
+
+def test_clinched_top2_basic_group_a():
+    # Mexico 6, SK 3, CZE 1, RSA 1 (each played 2); remaining: CZEvMEX, SKvRSA.
+    # Mexico's floor is 6; only SK can reach 6 -> at most one rival -> clinched.
+    groups = {"A": _rows(("Mexico", 2, 6), ("South Korea", 2, 3),
+                         ("Czech Republic", 2, 1), ("South Africa", 2, 1))}
+    sched = _sched(("Czech Republic", "Mexico"), ("South Korea", "South Africa"))
+    clinched = k.clinched_qualifiers(groups, sched)
+    assert clinched.get("A") == {"Mexico"}
+    assert k.clinched_set(groups, sched) == {"Mexico"}
+
+
+def test_no_clinch_early_in_group():
+    # Everyone has played one; two fixtures left each -> nothing is secure yet.
+    groups = {"A": _rows(("Mexico", 1, 3), ("South Korea", 1, 3),
+                         ("Czech Republic", 1, 0), ("South Africa", 1, 0))}
+    sched = _sched(("Mexico", "Czech Republic"), ("South Korea", "South Africa"),
+                   ("Mexico", "South Korea"), ("Czech Republic", "South Africa"))
+    assert k.clinched_qualifiers(groups, sched) == {}
+
+
+def test_clinch_requires_points_security_not_goal_difference():
+    # A=6 but two rivals can still reach 6 (B beats D, C beats A), so A could be
+    # squeezed to 3rd on the tie -> FIFA would NOT mark A qualified yet.
+    groups = {"I": _rows(("Argentina", 2, 6), ("Norway", 2, 3),
+                         ("France", 2, 3), ("Senegal", 2, 0))}
+    sched = _sched(("Norway", "Senegal"), ("France", "Argentina"))
+    assert "Argentina" not in k.clinched_set(groups, sched)

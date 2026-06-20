@@ -11,6 +11,8 @@ qualifier once a group finishes). Tokens that aren't yet determinable
 """
 from __future__ import annotations
 
+import itertools
+
 # 48-team FIFA-style 3-letter codes.
 ABBR = {
     "Mexico": "MEX", "South Korea": "KOR", "Czech Republic": "CZE",
@@ -41,6 +43,76 @@ def group_order(grp: str, groups: dict) -> str:
     'GER / CIV / ECU / CUW' — the projected contenders for that slot."""
     rows = groups.get(grp) or []
     return " / ".join(abbr(r["team"]) for r in rows if r.get("team"))
+
+
+def _remaining_group_fixtures(groups: dict, schedule: list) -> dict:
+    """Per group letter, the (home, away) of every group match not yet played.
+    A match counts as played once it has a full-time score recorded."""
+    team2grp = {t["team"]: g for g, rows in (groups or {}).items()
+                for t in rows if t.get("team")}
+    rem: dict = {g: [] for g in (groups or {})}
+    for day in schedule or []:
+        for m in day.get("matches", []):
+            if m.get("stage") != "group":
+                continue
+            if m.get("status") == "FT" and m.get("hg") is not None:
+                continue                                   # already played
+            grp = team2grp.get(m.get("home"))
+            if grp is not None:
+                rem[grp].append((m.get("home"), m.get("away")))
+    return rem
+
+
+def clinched_qualifiers(groups: dict, schedule: list) -> dict:
+    """Group letter -> set of teams that have mathematically secured a top-2
+    (Round-of-32) finish, the way FIFA/ESPN mark qualification: POINTS-secure
+    only. Goal difference is treated as reversible (future margins are
+    unbounded), so a GD-only lead never counts as clinched.
+
+    A team is clinched iff in EVERY completion of its group's remaining
+    fixtures, at most one rival finishes on greater-or-equal points (a tie
+    counts as a threat, since GD or the drawing of lots could drop the team to
+    3rd). Best-third qualification is cross-group and out of scope here."""
+    rem = _remaining_group_fixtures(groups, schedule)
+    out: dict = {}
+    for grp, rows in (groups or {}).items():
+        base = {t["team"]: t.get("points", 0) for t in rows if t.get("team")}
+        teams = list(base)
+        fixtures = [(h, a) for h, a in rem.get(grp, [])
+                    if h in base and a in base]
+        # Only trust a clinch when played + known-remaining games account for the
+        # full round-robin; otherwise the schedule is incomplete and an empty
+        # remaining list would falsely read as "group over".
+        n = len(teams)
+        expected = n * (n - 1) // 2
+        games_played = sum(t.get("played", 0) for t in rows) // 2
+        if games_played + len(fixtures) != expected:
+            continue
+        safe = set(teams)
+        for combo in itertools.product((0, 1, 2), repeat=len(fixtures)):
+            pts = dict(base)
+            for (h, a), o in zip(fixtures, combo):
+                if o == 0:
+                    pts[h] += 3
+                elif o == 1:
+                    pts[h] += 1
+                    pts[a] += 1
+                else:
+                    pts[a] += 3
+            for t in list(safe):
+                if sum(1 for j in teams if j != t and pts[j] >= pts[t]) > 1:
+                    safe.discard(t)
+            if not safe:
+                break
+        if safe:
+            out[grp] = safe
+    return out
+
+
+def clinched_set(groups: dict, schedule: list) -> set:
+    """Flat set of all teams that have clinched a Round-of-32 berth."""
+    return {t for teams in clinched_qualifiers(groups, schedule).values()
+            for t in teams}
 
 
 def _group_complete(grp: str, groups: dict) -> bool:

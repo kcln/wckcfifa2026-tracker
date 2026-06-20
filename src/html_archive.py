@@ -509,8 +509,9 @@ def _render_schedule(state: dict, today: str | None = None) -> str:
     divider = ('<div class="sched-div"><span>Knockouts</span></div>'
                if strip and bracket else "")
     note = ('<div class="sched-note"><em>Italic</em> bracket teams are projected '
-            'from the live table — they lock in when the group is decided.</div>'
-            if bracket else "")
+            'from the live table; <span class="qlk">bold</span> teams have '
+            'clinched a Round-of-32 berth. Slots lock fully when the group is '
+            'decided.</div>' if bracket else "")
     return (
         '<details class="section" id="schedule">'
         '<summary><span class="sec-h">Schedule</span>'
@@ -584,10 +585,32 @@ def _bracket_positions(by_id: dict) -> dict:
     return pos
 
 
-def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict) -> str:
+def _slot_html(token: str, groups: dict, clinched: set,
+               winners: dict, losers: dict) -> str:
+    """Safe HTML label for a knockout slot. A still-projected group slot shows
+    the whole group order, with each clinched team's code locked solid (.qlk);
+    everything else falls back to the plain escaped slot_label."""
+    t = (token or "").strip()
+    is_group_slot = (len(t) >= 2 and t[0] in "12" and t[1:].isalpha()
+                     and "/" not in t)
+    if is_group_slot and not knockout.slot_locked(t, groups, winners, losers):
+        rows = groups.get(t[1:]) or []
+        if rows:
+            parts = []
+            for r in rows:
+                code = escape(knockout.abbr(r.get("team", "")))
+                parts.append(f'<span class="qlk">{code}</span>'
+                             if r.get("team") in (clinched or set()) else code)
+            return " / ".join(parts)
+    return escape(knockout.slot_label(t, groups, winners, losers))
+
+
+def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict,
+                 clinched: set | None = None) -> str:
+    clinched = clinched or set()
     ht, at = str(m.get("home", "")), str(m.get("away", ""))
-    hl = knockout.slot_label(ht, groups, winners, losers)
-    al = knockout.slot_label(at, groups, winners, losers)
+    hl = _slot_html(ht, groups, clinched, winners, losers)
+    al = _slot_html(at, groups, clinched, winners, losers)
     # Projected (live table) vs locked (group decided / feeder played).
     h_proj = not knockout.slot_locked(ht, groups, winners, losers)
     a_proj = not knockout.slot_locked(at, groups, winners, losers)
@@ -603,12 +626,12 @@ def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict) -> str:
         tag = (f'<div class="bkm-tag">'
                f'{escape(_kick_pt_short(str(m.get("kickoff_utc", ""))))}</div>')
 
-    def row(label, sc, win, proj):
+    def row(label_html, sc, win, proj):
         s = f'<span class="bkm-sc">{sc}</span>' if played else ""
         wc = " win" if win else ""
         pc = " proj" if proj else ""
         return (f'<div class="bkm-row{wc}{pc}">'
-                f'<span class="bkm-nm">{escape(label)}</span>{s}</div>')
+                f'<span class="bkm-nm">{label_html}</span>{s}</div>')
 
     loc = escape(_place(str(m.get("venue", ""))))
     loc_html = f'<div class="bkm-loc">📍 {loc}</div>' if loc else ""
@@ -632,6 +655,7 @@ def _bracket_html(state: dict) -> str:
     by_id = {str(m["id"]): m for m in ko}
     pos = _bracket_positions(by_id)
     winners, losers = {}, {}                # resolved as knockout results land
+    clinched = knockout.clinched_set(groups, sched)
 
     rounds: dict = {}
     for m in ko:
@@ -640,7 +664,7 @@ def _bracket_html(state: dict) -> str:
         rounds[st].sort(key=lambda x: pos.get(str(x["id"]), 0))
 
     def box(m):
-        return _bracket_box(m, groups, winners, losers)
+        return _bracket_box(m, groups, winners, losers, clinched)
 
     def feeder_round(label, ms):
         pairs = ""
@@ -688,11 +712,13 @@ def _render_standings(state: dict) -> str:
     groups = state.get("groups") or {}
     if not groups:
         return ""
+    clinched = knockout.clinched_set(groups, state.get("schedule") or [])
     grps = []
     for g in sorted(groups):
         body = "".join(
             f'<tr class="{"qual" if n < 2 else ""}">'
-            f'<td class="t-team">{escape(str(r["team"]))}</td>'
+            f'<td class="t-team">{escape(str(r["team"]))}'
+            f'{" <span class=\"qb\">Q</span>" if r["team"] in clinched else ""}</td>'
             f'<td>{r["played"]}</td><td class="t-pts">{r["points"]}</td>'
             f'<td>{r["gd"]:+d}</td><td>{r["gf"]}</td><td>{r["ga"]}</td></tr>'
             for n, r in enumerate(groups[g]))
@@ -703,7 +729,8 @@ def _render_standings(state: dict) -> str:
             f'<th>GD</th><th>GF</th><th>GA</th></tr></thead>'
             f'<tbody>{body}</tbody></table></details>')
     legend = ('<div class="legend">P = Played · Pts = Points · '
-              'GD = Goal Difference · GF = Goals For · GA = Goals Against</div>')
+              'GD = Goal Difference · GF = Goals For · GA = Goals Against · '
+              '<span class="qb">Q</span> = Qualified for Round of 32</div>')
     return (
         '<details class="section" id="standings">'
         '<summary><span class="sec-h">Group standings</span></summary>'
@@ -832,6 +859,8 @@ __REFRESH__
     .gtable td.t-pts { font-weight: 700; color: var(--p-700); }
     .gtable tr.qual { background: var(--p-50); }
     .gtable tr.qual td.t-team { box-shadow: inset 3px 0 0 var(--p-500); }
+    .qb { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 600; letter-spacing: 0.06em; line-height: 1; color: var(--card); background: var(--p-600); border-radius: 4px; padding: 2px 5px; margin-left: 7px; vertical-align: middle; }
+    .legend .qb { margin-left: 0; }
 
     main#days .cards { display: grid; gap: 12px; padding: 6px 0 10px; }
     .mcard { background: var(--card-2); border: 1px solid var(--hair-soft); border-radius: var(--radius-md); padding: 15px 16px; }
@@ -919,6 +948,8 @@ __REFRESH__
     .bkm-row.win { color: var(--p-700); font-weight: 800; }
     .bkm-row.proj .bkm-nm { color: var(--ink-faint); font-style: italic; font-weight: 500; }
     .bkm-nm { line-height: 1.3; word-spacing: -1px; }
+    .qlk { font-style: normal; font-weight: 800; color: var(--p-700); }
+    .qlk::after { content: " ✓"; font-size: 0.85em; }
     .bkm-sc { font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--ink); }
     .bkm-loc { font-size: 10px; color: var(--ink-faint); padding: 5px 9px 7px; border-top: 1px solid var(--hair-soft); }
     .bk-third { justify-content: flex-start; }

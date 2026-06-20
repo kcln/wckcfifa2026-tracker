@@ -550,3 +550,41 @@ def test_sections_have_deeplink_anchors(tmp_path):
     assert 'id="live"' in html        # hero live-score card
     assert 'id="standings"' in html   # group standings section
     assert 'id="schedule"' in html    # schedule section
+
+
+def _clinch_state():
+    """Group A with Mexico already points-secure for the Round of 32, plus a
+    schedule whose remaining group fixtures drive the clinch and an R32 slot
+    that projects the group order."""
+    return {"days": [], "bracket": {}, "groups": {
+        "A": [
+            {"team": "Mexico", "played": 2, "points": 6, "gd": 3, "gf": 3, "ga": 0},
+            {"team": "South Korea", "played": 2, "points": 3, "gd": 0, "gf": 2, "ga": 2},
+            {"team": "Czech Republic", "played": 2, "points": 1, "gd": -1, "gf": 2, "ga": 3},
+            {"team": "South Africa", "played": 2, "points": 1, "gd": -2, "gf": 1, "ga": 3},
+        ]}, "schedule": [
+        {"date": "2026-06-24", "matches": [
+            {"id": "20", "home": "Czech Republic", "away": "Mexico", "stage": "group",
+             "kickoff_utc": "2026-06-24T19:00:00Z", "venue": "Mexico City", "status": "sched"},
+            {"id": "21", "home": "South Korea", "away": "South Africa", "stage": "group",
+             "kickoff_utc": "2026-06-24T19:00:00Z", "venue": "Guadalajara", "status": "sched"}]},
+        {"date": "2026-06-28", "matches": [
+            {"id": "73", "home": "1A", "away": "2B", "stage": "R32",
+             "kickoff_utc": "2026-06-28T19:00:00Z", "venue": "Boston (Foxborough)",
+             "status": "sched"}]}]}
+
+
+def test_standings_marks_clinched_team_with_q_badge(tmp_path):
+    html = _render(_clinch_state(), tmp_path)
+    # Mexico has clinched -> gets a Q badge; South Korea (not secure) does not.
+    assert '<td class="t-team">Mexico <span class="qb">Q</span></td>' in html
+    assert '<td class="t-team">South Korea</td>' in html
+    assert "Qualified" in html                     # legend explains the badge
+
+
+def test_bracket_locks_clinched_team_solid(tmp_path):
+    html = _render(_clinch_state(), tmp_path)
+    # In the projected 1A slot, the clinched Mexico code is locked solid (.qlk),
+    # while still-contesting teams stay in the plain projected order.
+    assert '<span class="qlk">MEX</span>' in html
+    assert ".qlk" in html                          # styling present
