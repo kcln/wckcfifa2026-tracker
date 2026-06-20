@@ -699,6 +699,15 @@
           "key": "pm-2026-06-19-16",
           "generated_at": "2026-06-19T19:33:11.709700-07:00",
           "kickoff_utc": "2026-06-20T00:30:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 19\n\nHalf-time:\nTurkey 0 - 1 Paraguay\nSan Francisco Bay Area (Santa Clara), USA\n  ⚽ 2' Matías Galarza (Paraguay)\n  🟥 45'+3' Miguel Almirón (Paraguay)\nPrediction: Turkey",
+          "sent": true,
+          "hash": "ee573de1013ca990",
+          "key": "ht-2026-06-19-22",
+          "generated_at": "2026-06-19T20:56:59.986610-07:00",
+          "kickoff_utc": "2026-06-20T03:00:00Z"
         }
       ]
     }
@@ -3115,8 +3124,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+8'",
-          "ht": false,
+          "clock": "45'+11'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -3145,8 +3154,8 @@
       "kickoff_utc": "2026-06-20T03:00:00Z",
       "hg": 0,
       "ag": 1,
-      "status": "LIVE",
-      "clock": "45'+8'",
+      "status": "HT",
+      "clock": "45'+11'",
       "events": [
         {
           "kind": "goal",
@@ -4354,8 +4363,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+8'",
-          "ht": false,
+          "clock": "45'+11'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
