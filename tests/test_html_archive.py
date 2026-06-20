@@ -584,7 +584,9 @@ def test_standings_marks_clinched_team_with_q_badge(tmp_path):
 
 def test_bracket_locks_clinched_team_solid(tmp_path):
     html = _render(_clinch_state(), tmp_path)
-    # In the projected 1A slot, the clinched Mexico code is locked solid (.qlk),
-    # while still-contesting teams stay in the plain projected order.
+    # Once Mexico clinches, the 1A slot collapses to just MEX (locked solid) and
+    # the still-contesting group-mates are dropped entirely.
     assert '<span class="qlk">MEX</span>' in html
     assert ".qlk" in html                          # styling present
+    assert "KOR / CZE / RSA" not in html           # contenders removed
+    assert ">KOR<" not in html and "/ CZE" not in html

@@ -509,9 +509,10 @@ def _render_schedule(state: dict, today: str | None = None) -> str:
     divider = ('<div class="sched-div"><span>Knockouts</span></div>'
                if strip and bracket else "")
     note = ('<div class="sched-note"><em>Italic</em> bracket teams are projected '
-            'from the live table; <span class="qlk">bold</span> teams have '
-            'clinched a Round-of-32 berth. Slots lock fully when the group is '
-            'decided.</div>' if bracket else "")
+            'from the live table; once a team <span class="qlk">clinches</span> '
+            'a Round-of-32 berth the slot drops the others and shows only the '
+            'qualified team. Slots lock fully when the group is decided.</div>'
+            if bracket else "")
     return (
         '<details class="section" id="schedule">'
         '<summary><span class="sec-h">Schedule</span>'
@@ -588,20 +589,24 @@ def _bracket_positions(by_id: dict) -> dict:
 def _slot_html(token: str, groups: dict, clinched: set,
                winners: dict, losers: dict) -> str:
     """Safe HTML label for a knockout slot. A still-projected group slot shows
-    the whole group order, with each clinched team's code locked solid (.qlk);
-    everything else falls back to the plain escaped slot_label."""
+    the whole group order in standings order — but once any team in that group
+    clinches, it collapses to just the qualified team(s), locked solid (.qlk),
+    dropping the still-contending names. Everything else falls back to the plain
+    escaped slot_label."""
     t = (token or "").strip()
     is_group_slot = (len(t) >= 2 and t[0] in "12" and t[1:].isalpha()
                      and "/" not in t)
     if is_group_slot and not knockout.slot_locked(t, groups, winners, losers):
         rows = groups.get(t[1:]) or []
         if rows:
-            parts = []
-            for r in rows:
-                code = escape(knockout.abbr(r.get("team", "")))
-                parts.append(f'<span class="qlk">{code}</span>'
-                             if r.get("team") in (clinched or set()) else code)
-            return " / ".join(parts)
+            qualified = [r for r in rows
+                         if r.get("team") in (clinched or set())]
+            if qualified:                  # someone's through -> show only them
+                return " / ".join(
+                    f'<span class="qlk">{escape(knockout.abbr(r.get("team", "")))}'
+                    f'</span>' for r in qualified)
+            return " / ".join(             # nobody yet -> full projected order
+                escape(knockout.abbr(r.get("team", ""))) for r in rows)
     return escape(knockout.slot_label(t, groups, winners, losers))
 
 
