@@ -3114,10 +3114,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "1'",
+          "ag": 1,
+          "clock": "5'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Matías Galarza",
+              "team": "Paraguay",
+              "minute": "2'"
+            }
+          ]
         }
       ]
     }
@@ -3131,10 +3138,17 @@
       "venue": "San Francisco Bay Area (Santa Clara)",
       "kickoff_utc": "2026-06-20T03:00:00Z",
       "hg": 0,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "1'",
-      "events": []
+      "clock": "5'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Matías Galarza",
+          "team": "Paraguay",
+          "minute": "2'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -4327,10 +4341,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "1'",
+          "ag": 1,
+          "clock": "5'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Matías Galarza",
+              "team": "Paraguay",
+              "minute": "2'"
+            }
+          ]
         }
       ]
     },
