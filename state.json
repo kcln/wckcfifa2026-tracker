@@ -690,6 +690,15 @@
           "key": "ht-2026-06-19-16",
           "generated_at": "2026-06-19T18:28:11.936342-07:00",
           "kickoff_utc": "2026-06-20T00:30:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 19\n\nFull time:\nBrazil 3 - 0 Haiti\nPhiladelphia, USA\n  ⚽ 23' Matheus Cunha (Brazil)\n  ⚽ 36' Matheus Cunha (Brazil)\n  ⚽ 45'+3' Vinícius Júnior (Brazil)\nOverall prediction: 15/31 (48.4%)\nPrediction ✓: Brazil",
+          "sent": true,
+          "hash": "2608d81c4e607c3f",
+          "key": "pm-2026-06-19-16",
+          "generated_at": "2026-06-19T19:33:11.709700-07:00",
+          "kickoff_utc": "2026-06-20T00:30:00Z"
         }
       ]
     }
@@ -765,6 +774,14 @@
     ],
     "C": [
       {
+        "team": "Brazil",
+        "played": 2,
+        "points": 4,
+        "gd": 3,
+        "gf": 4,
+        "ga": 1
+      },
+      {
         "team": "Morocco",
         "played": 2,
         "points": 4,
@@ -781,20 +798,12 @@
         "ga": 1
       },
       {
-        "team": "Brazil",
-        "played": 1,
-        "points": 1,
-        "gd": 0,
-        "gf": 1,
-        "ga": 1
-      },
-      {
         "team": "Haiti",
-        "played": 1,
+        "played": 2,
         "points": 0,
-        "gd": -1,
+        "gd": -4,
         "gf": 0,
-        "ga": 1
+        "ga": 4
       }
     ],
     "D": [
@@ -1106,94 +1115,96 @@
   },
   "bracket": {
     "title_odds": {
-      "Portugal": 0.0455,
-      "Argentina": 0.2146,
-      "France": 0.1184,
-      "Germany": 0.0437,
-      "Norway": 0.01,
-      "Spain": 0.1467,
-      "England": 0.047,
-      "Mexico": 0.0181,
-      "Belgium": 0.0225,
-      "Canada": 0.0096,
-      "Ecuador": 0.0223,
-      "Uruguay": 0.017,
-      "Colombia": 0.0545,
-      "Japan": 0.0247,
-      "Brazil": 0.0478,
-      "Morocco": 0.025,
-      "Switzerland": 0.0143,
-      "Australia": 0.0042,
-      "Netherlands": 0.0323,
-      "Croatia": 0.0254,
-      "Turkey": 0.0095,
-      "DR Congo": 0.0002,
-      "South Korea": 0.0083,
-      "Egypt": 0.0022,
-      "Ivory Coast": 0.0036,
-      "Austria": 0.0052,
-      "Senegal": 0.0098,
-      "Paraguay": 0.0017,
-      "Uzbekistan": 0.0014,
-      "Iran": 0.0068,
-      "Sweden": 0.0022,
-      "Panama": 0.0004,
-      "Czech Republic": 0.0011,
-      "Scotland": 0.0009,
-      "Algeria": 0.0027,
-      "Tunisia": 0.0001,
-      "Cape Verde": 0.0002,
-      "Iraq": 0.0001
+      "Portugal": 0.0459,
+      "Spain": 0.1454,
+      "Colombia": 0.0609,
+      "France": 0.1223,
+      "Argentina": 0.2121,
+      "England": 0.0451,
+      "Uruguay": 0.0176,
+      "Brazil": 0.0532,
+      "Mexico": 0.0175,
+      "Switzerland": 0.0132,
+      "Norway": 0.0079,
+      "Croatia": 0.0227,
+      "Senegal": 0.0096,
+      "Japan": 0.0258,
+      "Cape Verde": 0.0003,
+      "Belgium": 0.0221,
+      "Germany": 0.0432,
+      "Canada": 0.0078,
+      "Netherlands": 0.0278,
+      "Iran": 0.0071,
+      "Morocco": 0.0266,
+      "Ecuador": 0.0218,
+      "Australia": 0.0038,
+      "Algeria": 0.0029,
+      "South Korea": 0.007,
+      "Paraguay": 0.0021,
+      "Uzbekistan": 0.0009,
+      "Ivory Coast": 0.0033,
+      "Austria": 0.0061,
+      "DR Congo": 0.0003,
+      "Turkey": 0.0099,
+      "Egypt": 0.0035,
+      "Sweden": 0.0011,
+      "Scotland": 0.0008,
+      "Saudi Arabia": 0.0003,
+      "Panama": 0.0007,
+      "Czech Republic": 0.0008,
+      "Iraq": 0.0004,
+      "New Zealand": 0.0001,
+      "Tunisia": 0.0001
     },
     "advancement": {
-      "France": 0.9978,
-      "New Zealand": 0.2741,
-      "Japan": 0.8923,
-      "South Africa": 0.1657,
+      "France": 0.9974,
+      "New Zealand": 0.2807,
+      "Japan": 0.8924,
+      "South Africa": 0.1655,
       "Morocco": 1.0,
-      "Norway": 0.9849,
-      "Brazil": 0.9603,
-      "Portugal": 0.8808,
-      "Germany": 0.9981,
-      "Ecuador": 0.7974,
-      "Austria": 0.9668,
-      "Iran": 0.7005,
-      "Turkey": 0.6391,
+      "Norway": 0.9854,
+      "Brazil": 1.0,
+      "Germany": 0.9978,
+      "Portugal": 0.8772,
+      "Austria": 0.9658,
+      "Iran": 0.697,
+      "Turkey": 0.6588,
       "Switzerland": 1.0,
-      "Spain": 0.9633,
-      "Sweden": 0.9668,
-      "Ivory Coast": 0.9583,
+      "Spain": 0.9645,
+      "Sweden": 0.9623,
       "USA": 1.0,
+      "Ivory Coast": 0.9547,
       "Canada": 1.0,
-      "Saudi Arabia": 0.3135,
-      "Scotland": 0.6609,
-      "Argentina": 0.9999,
-      "Croatia": 0.7949,
-      "Tunisia": 0.0902,
-      "Iraq": 0.1402,
+      "Saudi Arabia": 0.3133,
+      "Scotland": 0.6854,
+      "Argentina": 1.0,
+      "Croatia": 0.7902,
+      "Tunisia": 0.0913,
+      "Ghana": 0.5942,
+      "Iraq": 0.14,
       "Colombia": 0.9907,
-      "Czech Republic": 0.2875,
-      "England": 0.9986,
-      "Australia": 0.8185,
-      "Algeria": 0.4825,
+      "Czech Republic": 0.2872,
+      "England": 0.9979,
+      "Australia": 0.8218,
+      "Algeria": 0.4844,
       "Mexico": 1.0,
-      "Ghana": 0.58,
-      "Bosnia & Herzegovina": 0.3436,
-      "Belgium": 0.8802,
-      "Egypt": 0.7745,
-      "South Korea": 0.9021,
-      "Senegal": 0.6166,
-      "Netherlands": 0.9345,
-      "Cape Verde": 0.5792,
-      "Uruguay": 0.7808,
-      "Uzbekistan": 0.3245,
-      "Paraguay": 0.3488,
-      "Qatar": 0.3621,
-      "DR Congo": 0.3977,
-      "Panama": 0.2454,
-      "Haiti": 0.0802,
-      "Jordan": 0.0923,
-      "Curaçao": 0.0339
+      "Ecuador": 0.8026,
+      "Uruguay": 0.7792,
+      "Bosnia & Herzegovina": 0.3413,
+      "Belgium": 0.8804,
+      "Egypt": 0.775,
+      "South Korea": 0.9049,
+      "Netherlands": 0.9289,
+      "DR Congo": 0.4016,
+      "Paraguay": 0.3365,
+      "Senegal": 0.6149,
+      "Cape Verde": 0.5826,
+      "Qatar": 0.3611,
+      "Uzbekistan": 0.3219,
+      "Panama": 0.2408,
+      "Jordan": 0.0919,
+      "Curaçao": 0.0306,
+      "Haiti": 0.0099
     }
   },
   "season_ended": false,
@@ -1885,6 +1896,30 @@
           "player": "Ismael Saibari",
           "team": "Morocco",
           "minute": "2'"
+        }
+      ]
+    },
+    "16": {
+      "home_goals": 3,
+      "away_goals": 0,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Matheus Cunha",
+          "team": "Brazil",
+          "minute": "23'"
+        },
+        {
+          "kind": "goal",
+          "player": "Matheus Cunha",
+          "team": "Brazil",
+          "minute": "36'"
+        },
+        {
+          "kind": "goal",
+          "player": "Vinícius Júnior",
+          "team": "Brazil",
+          "minute": "45'+3'"
         }
       ]
     }
@@ -3039,11 +3074,9 @@
             "away": 0.03401344939916725,
             "pick": "Brazil"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 3,
           "ag": 0,
-          "clock": "90'+3'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -3063,7 +3096,8 @@
               "team": "Brazil",
               "minute": "45'+3'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "22",
@@ -3083,40 +3117,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "16",
-      "home": "Brazil",
-      "away": "Haiti",
-      "date": "2026-06-19",
-      "venue": "Philadelphia",
-      "kickoff_utc": "2026-06-20T00:30:00Z",
-      "hg": 3,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "90'+3'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Matheus Cunha",
-          "team": "Brazil",
-          "minute": "23'"
-        },
-        {
-          "kind": "goal",
-          "player": "Matheus Cunha",
-          "team": "Brazil",
-          "minute": "36'"
-        },
-        {
-          "kind": "goal",
-          "player": "Vinícius Júnior",
-          "team": "Brazil",
-          "minute": "45'+3'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -4267,11 +4268,9 @@
             "away": 0.03401344939916725,
             "pick": "Brazil"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 3,
           "ag": 0,
-          "clock": "90'+3'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -4291,7 +4290,8 @@
               "team": "Brazil",
               "minute": "45'+3'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "22",
