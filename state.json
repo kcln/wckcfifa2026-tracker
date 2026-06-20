@@ -767,6 +767,15 @@
           "key": "ht-2026-06-20-27",
           "generated_at": "2026-06-20T13:52:37.447642-07:00",
           "kickoff_utc": "2026-06-20T20:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 20\n\nFull time:\nGermany 2 - 1 Ivory Coast\nToronto, Canada\n  ⚽ 30' Franck Kessié (Ivory Coast)\n  ⚽ 68' Deniz Undav (Germany)\n  ⚽ 90'+4' Deniz Undav (Germany)\nOverall prediction: 17/34 (50.0%)\nPrediction ✓: Germany",
+          "sent": true,
+          "hash": "decb4e0859df4fe3",
+          "key": "pm-2026-06-20-27",
+          "generated_at": "2026-06-20T15:04:07.316981-07:00",
+          "kickoff_utc": "2026-06-20T20:00:00Z"
         }
       ]
     }
@@ -911,19 +920,19 @@
     "E": [
       {
         "team": "Germany",
-        "played": 1,
-        "points": 3,
-        "gd": 6,
-        "gf": 7,
-        "ga": 1
+        "played": 2,
+        "points": 6,
+        "gd": 7,
+        "gf": 9,
+        "ga": 2
       },
       {
         "team": "Ivory Coast",
-        "played": 1,
+        "played": 2,
         "points": 3,
-        "gd": 1,
-        "gf": 1,
-        "ga": 0
+        "gd": 0,
+        "gf": 2,
+        "ga": 2
       },
       {
         "team": "Ecuador",
@@ -1183,96 +1192,98 @@
   },
   "bracket": {
     "title_odds": {
-      "Argentina": 0.2072,
-      "Mexico": 0.0188,
-      "Colombia": 0.0581,
-      "Ivory Coast": 0.0022,
-      "Australia": 0.0039,
-      "Uruguay": 0.0165,
-      "Portugal": 0.0459,
-      "Morocco": 0.0267,
-      "France": 0.1263,
-      "Spain": 0.1456,
-      "Germany": 0.0419,
-      "South Korea": 0.0064,
-      "Ecuador": 0.0234,
-      "Japan": 0.0244,
-      "Netherlands": 0.0352,
+      "Algeria": 0.0025,
+      "Scotland": 0.0016,
+      "England": 0.0452,
+      "Ivory Coast": 0.0023,
+      "Croatia": 0.0261,
+      "Argentina": 0.2083,
+      "France": 0.1248,
       "Brazil": 0.0504,
-      "Sweden": 0.0021,
-      "Egypt": 0.0024,
-      "Belgium": 0.023,
-      "Switzerland": 0.0159,
-      "England": 0.0468,
-      "Canada": 0.0084,
-      "Croatia": 0.0225,
-      "Iran": 0.0072,
-      "Paraguay": 0.0031,
-      "Senegal": 0.0095,
-      "DR Congo": 0.0004,
-      "Norway": 0.0082,
-      "Turkey": 0.0031,
-      "Austria": 0.007,
-      "Algeria": 0.0027,
-      "Scotland": 0.0009,
+      "Colombia": 0.0549,
+      "Germany": 0.0457,
+      "Turkey": 0.0046,
+      "Spain": 0.1378,
+      "Austria": 0.0071,
+      "South Korea": 0.0071,
+      "Belgium": 0.0202,
+      "Netherlands": 0.0356,
+      "Morocco": 0.0279,
+      "Mexico": 0.0227,
+      "Ecuador": 0.0237,
+      "Portugal": 0.0459,
+      "Switzerland": 0.0142,
+      "Canada": 0.009,
+      "Norway": 0.009,
+      "Sweden": 0.0019,
+      "Japan": 0.0238,
+      "Iran": 0.0052,
+      "Egypt": 0.0029,
+      "Uruguay": 0.0171,
+      "Australia": 0.0044,
+      "Paraguay": 0.0036,
+      "Senegal": 0.0099,
+      "Uzbekistan": 0.0011,
+      "DR Congo": 0.0007,
+      "Panama": 0.001,
+      "New Zealand": 0.0003,
+      "Czech Republic": 0.0004,
+      "Cape Verde": 0.0004,
       "South Africa": 0.0001,
-      "Uzbekistan": 0.0012,
-      "Cape Verde": 0.0007,
-      "Panama": 0.0007,
-      "Czech Republic": 0.0009,
-      "Tunisia": 0.0001,
-      "New Zealand": 0.0001,
-      "Iraq": 0.0001
+      "Jordan": 0.0002,
+      "Saudi Arabia": 0.0002,
+      "Iraq": 0.0001,
+      "Tunisia": 0.0001
     },
     "advancement": {
-      "Czech Republic": 0.2836,
-      "France": 0.9983,
-      "Sweden": 0.8776,
-      "Australia": 0.8547,
-      "Algeria": 0.4907,
-      "Argentina": 0.9998,
-      "Spain": 0.9658,
-      "England": 0.9983,
-      "Japan": 0.8922,
-      "Senegal": 0.6159,
+      "Czech Republic": 0.286,
+      "France": 0.9976,
+      "Algeria": 0.4892,
+      "Australia": 0.8588,
+      "Sweden": 0.8754,
+      "Argentina": 0.9997,
+      "Spain": 0.9637,
+      "England": 0.9984,
+      "Japan": 0.8899,
+      "Senegal": 0.6192,
       "USA": 1.0,
-      "Norway": 0.9917,
-      "South Africa": 0.1656,
+      "Norway": 0.9909,
+      "South Africa": 0.1653,
       "Brazil": 1.0,
       "Morocco": 1.0,
-      "Ghana": 0.6005,
-      "Portugal": 0.8776,
-      "Scotland": 0.7105,
-      "Cape Verde": 0.5837,
+      "Ghana": 0.6011,
+      "Scotland": 0.7127,
+      "Portugal": 0.8771,
+      "DR Congo": 0.3954,
+      "Cape Verde": 0.5792,
+      "Iran": 0.6907,
       "Netherlands": 1.0,
-      "Uruguay": 0.7861,
-      "Egypt": 0.7784,
-      "Paraguay": 0.6641,
-      "Germany": 0.9986,
+      "Uruguay": 0.7847,
+      "Egypt": 0.7714,
+      "Paraguay": 0.6624,
       "Mexico": 1.0,
-      "Ivory Coast": 0.9555,
-      "New Zealand": 0.2763,
-      "Austria": 0.9724,
-      "Colombia": 0.9915,
+      "Ivory Coast": 0.9532,
+      "Austria": 0.97,
+      "Colombia": 0.9907,
       "Switzerland": 1.0,
       "Canada": 1.0,
-      "Ecuador": 0.8152,
-      "Croatia": 0.7991,
-      "Belgium": 0.8809,
+      "Germany": 1.0,
+      "Croatia": 0.7938,
+      "Ecuador": 0.8106,
+      "Belgium": 0.8844,
       "Bosnia & Herzegovina": 0.3439,
-      "Saudi Arabia": 0.3126,
-      "DR Congo": 0.3975,
-      "Iran": 0.6931,
-      "South Korea": 0.91,
-      "Turkey": 0.2106,
-      "Panama": 0.2536,
-      "Qatar": 0.3635,
-      "Uzbekistan": 0.3347,
-      "Tunisia": 0.0787,
-      "Iraq": 0.1397,
-      "Curaçao": 0.0304,
-      "Jordan": 0.0976,
-      "Haiti": 0.0095
+      "South Korea": 0.9107,
+      "Panama": 0.2539,
+      "Uzbekistan": 0.3426,
+      "Turkey": 0.2078,
+      "New Zealand": 0.2816,
+      "Qatar": 0.3632,
+      "Saudi Arabia": 0.3194,
+      "Tunisia": 0.0862,
+      "Jordan": 0.0972,
+      "Curaçao": 0.0341,
+      "Iraq": 0.1387,
+      "Haiti": 0.0092
     }
   },
   "season_ended": false,
@@ -2072,6 +2083,30 @@
           "player": "Crysencio Summerville",
           "team": "Netherlands",
           "minute": "89'"
+        }
+      ]
+    },
+    "27": {
+      "home_goals": 2,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Franck Kessié",
+          "team": "Ivory Coast",
+          "minute": "30'"
+        },
+        {
+          "kind": "goal",
+          "player": "Deniz Undav",
+          "team": "Germany",
+          "minute": "68'"
+        },
+        {
+          "kind": "goal",
+          "player": "Deniz Undav",
+          "team": "Germany",
+          "minute": "90'+4'"
         }
       ]
     }
@@ -3357,11 +3392,9 @@
             "away": 0.15755115390396687,
             "pick": "Germany"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 1,
-          "clock": "90'+7'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -3381,7 +3414,8 @@
               "team": "Germany",
               "minute": "90'+4'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "28",
@@ -3416,40 +3450,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "27",
-      "home": "Germany",
-      "away": "Ivory Coast",
-      "date": "2026-06-20",
-      "venue": "Toronto",
-      "kickoff_utc": "2026-06-20T20:00:00Z",
-      "hg": 2,
-      "ag": 1,
-      "status": "LIVE",
-      "clock": "90'+7'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Franck Kessié",
-          "team": "Ivory Coast",
-          "minute": "30'"
-        },
-        {
-          "kind": "goal",
-          "player": "Deniz Undav",
-          "team": "Germany",
-          "minute": "68'"
-        },
-        {
-          "kind": "goal",
-          "player": "Deniz Undav",
-          "team": "Germany",
-          "minute": "90'+4'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -4731,11 +4732,9 @@
             "away": 0.15755115390396687,
             "pick": "Germany"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 1,
-          "clock": "90'+7'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -4755,7 +4754,8 @@
               "team": "Germany",
               "minute": "90'+4'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "28",
