@@ -749,6 +749,15 @@
           "key": "ht-2026-06-20-33",
           "generated_at": "2026-06-20T10:51:58.251882-07:00",
           "kickoff_utc": "2026-06-20T17:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 20\n\nFull time:\nNetherlands 5 - 1 Sweden\nHouston, USA\n  ⚽ 5' Brian Brobbey (Netherlands)\n  ⚽ 17' Brian Brobbey (Netherlands)\n  ⚽ 47' Cody Gakpo (Netherlands)\n  ⚽ 54' Cody Gakpo (Netherlands)\n  ⚽ 59' Anthony Elanga (Sweden)\n  ⚽ 89' Crysencio Summerville (Netherlands)\nOverall prediction: 16/33 (48.5%)\nPrediction ✓: Netherlands",
+          "sent": true,
+          "hash": "e356660cc33be8a9",
+          "key": "pm-2026-06-20-33",
+          "generated_at": "2026-06-20T11:59:35.941740-07:00",
+          "kickoff_utc": "2026-06-20T17:00:00Z"
         }
       ]
     }
@@ -926,23 +935,23 @@
     ],
     "F": [
       {
-        "team": "Sweden",
-        "played": 1,
-        "points": 3,
+        "team": "Netherlands",
+        "played": 2,
+        "points": 4,
         "gd": 4,
-        "gf": 5,
-        "ga": 1
+        "gf": 7,
+        "ga": 3
+      },
+      {
+        "team": "Sweden",
+        "played": 2,
+        "points": 3,
+        "gd": 0,
+        "gf": 6,
+        "ga": 6
       },
       {
         "team": "Japan",
-        "played": 1,
-        "points": 1,
-        "gd": 0,
-        "gf": 2,
-        "ga": 2
-      },
-      {
-        "team": "Netherlands",
         "played": 1,
         "points": 1,
         "gd": 0,
@@ -1165,118 +1174,142 @@
   },
   "bracket": {
     "title_odds": {
-      "Portugal": 0.0464,
-      "Spain": 0.1473,
-      "Cape Verde": 0.0004,
-      "Ecuador": 0.0236,
-      "France": 0.1224,
-      "Argentina": 0.2062,
-      "England": 0.0482,
-      "Netherlands": 0.0289,
-      "Germany": 0.0425,
-      "Japan": 0.0249,
-      "Mexico": 0.0184,
-      "Australia": 0.003,
-      "Colombia": 0.0604,
+      "Argentina": 0.2072,
+      "Mexico": 0.0188,
+      "Colombia": 0.0581,
+      "Ivory Coast": 0.0022,
+      "Australia": 0.0039,
+      "Uruguay": 0.0165,
+      "Portugal": 0.0459,
+      "Morocco": 0.0267,
+      "France": 0.1263,
+      "Spain": 0.1456,
+      "Germany": 0.0419,
       "South Korea": 0.0064,
-      "Brazil": 0.0507,
-      "Croatia": 0.0281,
-      "Sweden": 0.0014,
-      "Morocco": 0.0258,
-      "Egypt": 0.0041,
-      "Belgium": 0.0231,
-      "Iran": 0.0062,
-      "Switzerland": 0.0134,
-      "Canada": 0.0083,
-      "Turkey": 0.005,
-      "Norway": 0.0069,
-      "Uruguay": 0.0183,
-      "DR Congo": 0.0007,
-      "Paraguay": 0.0048,
-      "Algeria": 0.0025,
-      "Scotland": 0.0012,
+      "Ecuador": 0.0234,
+      "Japan": 0.0244,
+      "Netherlands": 0.0352,
+      "Brazil": 0.0504,
+      "Sweden": 0.0021,
+      "Egypt": 0.0024,
+      "Belgium": 0.023,
+      "Switzerland": 0.0159,
+      "England": 0.0468,
+      "Canada": 0.0084,
+      "Croatia": 0.0225,
+      "Iran": 0.0072,
+      "Paraguay": 0.0031,
       "Senegal": 0.0095,
-      "Ivory Coast": 0.0023,
-      "Austria": 0.0057,
-      "Uzbekistan": 0.0008,
-      "Panama": 0.0004,
-      "Saudi Arabia": 0.0003,
-      "New Zealand": 0.0003,
+      "DR Congo": 0.0004,
+      "Norway": 0.0082,
+      "Turkey": 0.0031,
+      "Austria": 0.007,
+      "Algeria": 0.0027,
+      "Scotland": 0.0009,
+      "South Africa": 0.0001,
+      "Uzbekistan": 0.0012,
+      "Cape Verde": 0.0007,
+      "Panama": 0.0007,
       "Czech Republic": 0.0009,
-      "Qatar": 0.0002,
+      "Tunisia": 0.0001,
+      "New Zealand": 0.0001,
       "Iraq": 0.0001
     },
     "advancement": {
       "USA": 1.0,
       "Morocco": 1.0,
-      "Austria": 0.972,
-      "Uruguay": 0.7883,
+      "Austria": 0.9724,
+      "Uruguay": 0.7861,
       "Switzerland": 1.0,
       "New Zealand": 0.2763,
-      "Saudi Arabia": 0.3125,
-      "Sweden": 0.9661,
-      "Ghana": 0.5959,
-      "Argentina": 0.9997,
+      "Sweden": 0.8776,
+      "Ghana": 0.6005,
+      "Senegal": 0.6159,
+      "Japan": 0.8922,
+      "Netherlands": 1.0,
+      "Argentina": 0.9998,
       "Canada": 1.0,
-      "Algeria": 0.4844,
-      "England": 0.9982,
-      "Paraguay": 0.6664,
-      "Spain": 0.9657,
-      "Czech Republic": 0.2833,
-      "France": 0.9978,
-      "Iran": 0.694,
-      "Australia": 0.852,
-      "DR Congo": 0.3944,
-      "Colombia": 0.9921,
-      "Ivory Coast": 0.9574,
-      "Portugal": 0.8782,
-      "Croatia": 0.7984,
-      "Germany": 0.9985,
+      "Algeria": 0.4907,
+      "England": 0.9983,
+      "Paraguay": 0.6641,
+      "Spain": 0.9658,
+      "Egypt": 0.7784,
+      "Cape Verde": 0.5837,
+      "Czech Republic": 0.2836,
+      "France": 0.9983,
+      "Australia": 0.8547,
+      "Germany": 0.9986,
+      "Colombia": 0.9915,
+      "Ivory Coast": 0.9555,
+      "Portugal": 0.8776,
       "Brazil": 1.0,
-      "South Africa": 0.1653,
-      "Tunisia": 0.0878,
-      "Scotland": 0.7044,
-      "Ecuador": 0.8099,
-      "Norway": 0.9873,
+      "South Africa": 0.1656,
+      "Scotland": 0.7105,
+      "Ecuador": 0.8152,
+      "Norway": 0.9917,
       "Mexico": 1.0,
-      "Bosnia & Herzegovina": 0.3437,
-      "Belgium": 0.8823,
-      "Senegal": 0.6234,
-      "South Korea": 0.907,
-      "Netherlands": 0.9298,
-      "Egypt": 0.7794,
-      "Japan": 0.895,
-      "Cape Verde": 0.5847,
-      "Turkey": 0.205,
-      "Qatar": 0.3623,
-      "Uzbekistan": 0.3346,
-      "Iraq": 0.1415,
-      "Panama": 0.248,
-      "Curaçao": 0.0299,
-      "Jordan": 0.0978,
-      "Haiti": 0.0093
+      "Bosnia & Herzegovina": 0.3439,
+      "Saudi Arabia": 0.3126,
+      "Belgium": 0.8809,
+      "South Korea": 0.91,
+      "Iran": 0.6931,
+      "Croatia": 0.7991,
+      "DR Congo": 0.3975,
+      "Turkey": 0.2106,
+      "Qatar": 0.3635,
+      "Panama": 0.2536,
+      "Uzbekistan": 0.3347,
+      "Tunisia": 0.0787,
+      "Curaçao": 0.0304,
+      "Iraq": 0.1397,
+      "Jordan": 0.0976,
+      "Haiti": 0.0095
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Turkey",
-    "away": "Paraguay",
-    "home_goals": 0,
+    "home": "Netherlands",
+    "away": "Sweden",
+    "home_goals": 5,
     "away_goals": 1,
-    "date": "2026-06-19",
-    "venue": "San Francisco Bay Area (Santa Clara)",
+    "date": "2026-06-20",
+    "venue": "Houston",
     "events": [
       {
         "kind": "goal",
-        "player": "Matías Galarza",
-        "team": "Paraguay",
-        "minute": "2'"
+        "player": "Brian Brobbey",
+        "team": "Netherlands",
+        "minute": "5'"
       },
       {
-        "kind": "red",
-        "player": "Miguel Almirón",
-        "team": "Paraguay",
-        "minute": "45'+3'"
+        "kind": "goal",
+        "player": "Brian Brobbey",
+        "team": "Netherlands",
+        "minute": "17'"
+      },
+      {
+        "kind": "goal",
+        "player": "Cody Gakpo",
+        "team": "Netherlands",
+        "minute": "47'"
+      },
+      {
+        "kind": "goal",
+        "player": "Cody Gakpo",
+        "team": "Netherlands",
+        "minute": "54'"
+      },
+      {
+        "kind": "goal",
+        "player": "Anthony Elanga",
+        "team": "Sweden",
+        "minute": "59'"
+      },
+      {
+        "kind": "goal",
+        "player": "Crysencio Summerville",
+        "team": "Netherlands",
+        "minute": "89'"
       }
     ]
   },
@@ -1988,6 +2021,48 @@
           "player": "Miguel Almirón",
           "team": "Paraguay",
           "minute": "45'+3'"
+        }
+      ]
+    },
+    "33": {
+      "home_goals": 5,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Brian Brobbey",
+          "team": "Netherlands",
+          "minute": "5'"
+        },
+        {
+          "kind": "goal",
+          "player": "Brian Brobbey",
+          "team": "Netherlands",
+          "minute": "17'"
+        },
+        {
+          "kind": "goal",
+          "player": "Cody Gakpo",
+          "team": "Netherlands",
+          "minute": "47'"
+        },
+        {
+          "kind": "goal",
+          "player": "Cody Gakpo",
+          "team": "Netherlands",
+          "minute": "54'"
+        },
+        {
+          "kind": "goal",
+          "player": "Anthony Elanga",
+          "team": "Sweden",
+          "minute": "59'"
+        },
+        {
+          "kind": "goal",
+          "player": "Crysencio Summerville",
+          "team": "Netherlands",
+          "minute": "89'"
         }
       ]
     }
@@ -3217,11 +3292,9 @@
             "away": 0.12206577668083037,
             "pick": "Netherlands"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 5,
           "ag": 1,
-          "clock": "90'+4'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -3259,7 +3332,8 @@
               "team": "Netherlands",
               "minute": "89'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "27",
@@ -3309,58 +3383,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "33",
-      "home": "Netherlands",
-      "away": "Sweden",
-      "date": "2026-06-20",
-      "venue": "Houston",
-      "kickoff_utc": "2026-06-20T17:00:00Z",
-      "hg": 5,
-      "ag": 1,
-      "status": "LIVE",
-      "clock": "90'+4'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Brian Brobbey",
-          "team": "Netherlands",
-          "minute": "5'"
-        },
-        {
-          "kind": "goal",
-          "player": "Brian Brobbey",
-          "team": "Netherlands",
-          "minute": "17'"
-        },
-        {
-          "kind": "goal",
-          "player": "Cody Gakpo",
-          "team": "Netherlands",
-          "minute": "47'"
-        },
-        {
-          "kind": "goal",
-          "player": "Cody Gakpo",
-          "team": "Netherlands",
-          "minute": "54'"
-        },
-        {
-          "kind": "goal",
-          "player": "Anthony Elanga",
-          "team": "Sweden",
-          "minute": "59'"
-        },
-        {
-          "kind": "goal",
-          "player": "Crysencio Summerville",
-          "team": "Netherlands",
-          "minute": "89'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -4586,11 +4609,9 @@
             "away": 0.12206577668083037,
             "pick": "Netherlands"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 5,
           "ag": 1,
-          "clock": "90'+4'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -4628,7 +4649,8 @@
               "team": "Netherlands",
               "minute": "89'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "27",
