@@ -167,6 +167,21 @@ def _render_days(days: list[dict]) -> str:
     return "".join(blocks)
 
 
+def _most_recent_finished(state: dict) -> dict | None:
+    """The finished match with the latest kickoff across the whole schedule.
+    Derived here (not read from state['last_result']) so the hero always tracks
+    the genuinely most-recent result even when last_result lags behind."""
+    best = None
+    best_key = ""
+    for day in state.get("schedule") or []:
+        for m in day.get("matches", []):
+            if m.get("status") == "FT" and m.get("hg") is not None:
+                key = (m.get("kickoff_utc") or "", str(m.get("id", "")))
+                if best is None or key > best_key:
+                    best, best_key = {**m, "date": day.get("date")}, key
+    return best
+
+
 def _featured_match(state: dict):
     """The match the hero should show: the LIVE one (latest kickoff) if any is
     in progress, otherwise the most recent finished result. Returns a dict with
@@ -174,7 +189,10 @@ def _featured_match(state: dict):
     live = state.get("live") or []
     if live:
         return dict(live[-1], _live=True)
-    last = state.get("last_result") or {}
+    recent = _most_recent_finished(state)        # derived, never stale
+    if recent:
+        return {**recent, "_live": False}
+    last = state.get("last_result") or {}         # fallback if no schedule
     if last.get("home") and last.get("away"):
         return {**last, "_live": False}
     return None
@@ -353,9 +371,9 @@ def _match_card(m: dict) -> str:
             f'<span class="seg sd" style="width:{d*100:.1f}%"></span>'
             f'<span class="seg sa" style="width:{a*100:.1f}%"></span></div>'
             f'<div class="oddskey">'
-            f'<span style="flex-basis:{h*100:.1f}%">{home} {_pct(h)}</span>'
-            f'<span style="flex-basis:{d*100:.1f}%">Draw {_pct(d)}</span>'
-            f'<span style="flex-basis:{a*100:.1f}%">{away} {_pct(a)}</span></div>')
+            f'<span class="k-h">{home} {_pct(h)}</span>'
+            f'<span class="k-d">Draw {_pct(d)}</span>'
+            f'<span class="k-a">{away} {_pct(a)}</span></div>')
 
     foot_bits = []
     loc = _place(str(m.get("venue", "")))
@@ -407,25 +425,21 @@ def _tools(scope: str) -> str:
 
 
 def _order_day_matches(matches: list) -> list:
-    """Order a day's match cards by relevance (KC's spec):
-
-    - while any match is live: live first (earliest kickoff = closest to the
-      final whistle on top), then upcoming soonest-first, then finished at the
-      bottom (most recent first);
-    - when nothing is live (gaps between games, and every past day): pure
-      reverse chronological, latest kickoff on top.
-    """
+    """Order a day's match cards (KC's spec): live first (earliest kickoff =
+    closest to the final whistle on top), then the upcoming matches soonest-next
+    first (next match, the one after, …), then finished results in order of
+    completion — most recently finished at the top of that block, earliest at
+    the bottom. Soonest-first upcoming was the broken bit (it used to list the
+    latest kickoff first)."""
     def ko(m):
         return (m.get("kickoff_utc") or "", str(m.get("id", "")))
 
     live = [m for m in matches if m.get("status") == "live"]
-    if not live:
-        return sorted(matches, key=ko, reverse=True)
     done = [m for m in matches if m.get("status") == "FT"]
     upcoming = [m for m in matches if m.get("status") not in ("live", "FT")]
     return (sorted(live, key=ko)                    # closest to finishing on top
-            + sorted(upcoming, key=ko)              # soonest next first
-            + sorted(done, key=ko, reverse=True))   # most recently finished first
+            + sorted(upcoming, key=ko)              # next up, soonest first
+            + sorted(done, key=ko, reverse=True))   # finished, most recent first
 
 
 def _render_board_days(state: dict) -> str:
@@ -892,8 +906,11 @@ __REFRESH__
     .oddsbar .seg.sh { background: var(--p-600); }
     .oddsbar .seg.sd { background: var(--ink-faint); }
     .oddsbar .seg.sa { background: var(--p-300); }
-    .oddskey { display: flex; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-faint); }
-    .oddskey span { flex-grow: 0; flex-shrink: 0; min-width: 0; text-align: center; white-space: nowrap; overflow: visible; }
+    .oddskey { display: flex; justify-content: space-between; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-faint); }
+    .oddskey span { flex: 0 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .oddskey .k-h { text-align: left; }
+    .oddskey .k-d { text-align: center; flex-shrink: 0; }
+    .oddskey .k-a { text-align: right; }
     .scorers { list-style: none; margin: 11px 0 0; padding: 0; display: grid; gap: 4px; }
     .scorers li { font-size: 13px; color: var(--ink-2); }
     .scorers .ev-min { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-faint); display: inline-block; min-width: 38px; }

@@ -62,6 +62,27 @@ def test_render_hero_most_recent_from_last_result(tmp_path):
     assert "Mexico won" not in html   # old separate result line killed
 
 
+def test_render_hero_uses_latest_finished_when_last_result_stale(tmp_path):
+    # last_result lags (Netherlands, 17:00Z) but Germany finished later (20:00Z);
+    # the hero must show the genuinely most-recent result, not the stale field.
+    state = {"days": [], "bracket": {},
+             "last_result": {"home": "Netherlands", "away": "Sweden",
+                             "home_goals": 5, "away_goals": 1,
+                             "date": "2026-06-20", "venue": "Houston"},
+             "schedule": [{"date": "2026-06-20", "matches": [
+                 {"id": "30", "home": "Netherlands", "away": "Sweden", "stage": "group",
+                  "kickoff_utc": "2026-06-20T17:00:00Z", "venue": "Houston",
+                  "status": "FT", "hg": 5, "ag": 1, "events": []},
+                 {"id": "31", "home": "Germany", "away": "Ivory Coast", "stage": "group",
+                  "kickoff_utc": "2026-06-20T20:00:00Z", "venue": "Toronto",
+                  "status": "FT", "hg": 2, "ag": 1, "events": []}]}]}
+    html = _render(state, tmp_path)
+    assert '<span class="tm">Germany</span><span class="sc">2</span>' in html
+    assert '<span class="sc">1</span><span class="tm">Ivory Coast</span>' in html
+    assert "Jun 20 · Toronto" in html
+    assert '<span class="tm">Netherlands</span>' not in html   # stale one dropped
+
+
 def test_render_days_newest_first_only_newest_open(tmp_path):
     state = {"days": [
         {"date": "2026-06-11", "messages": [
@@ -206,18 +227,20 @@ def _day17():
          "pred": {"home": .2, "draw": .25, "away": .55, "pick": "Colombia"}}]
 
 
-def test_board_day_no_live_is_reverse_chronological(tmp_path):
-    # No live match: pure reverse chronological, latest kickoff on top.
+def test_board_day_no_live_upcoming_soonest_first_then_finished(tmp_path):
+    # No live match: upcoming soonest-first (England 8pm, Ghana 11pm, Uzbekistan
+    # 2am), then the finished result (Portugal) at the bottom.
     state = {"days": [], "bracket": {}, "groups": {},
              "board": [{"date": "2026-06-17", "matches": _day17()}]}
     html = _render(state, tmp_path)
-    assert (html.index("Uzbekistan") < html.index("Ghana")
-            < html.index("England") < html.index("Portugal"))
+    assert (html.index("England") < html.index("Ghana")
+            < html.index("Uzbekistan")                # upcoming, soonest first
+            < html.index("Portugal"))                 # finished, at the bottom
 
 
-def test_board_day_live_match_pinned_then_upcoming_soonest_then_done(tmp_path):
+def test_board_day_live_pinned_then_upcoming_then_finished(tmp_path):
     # England live: pinned on top, then upcoming soonest-first (Ghana 4pm before
-    # Uzbekistan 7pm), then the finished match (Portugal) at the bottom.
+    # Uzbekistan 7pm), then the finished result (Portugal) at the bottom.
     day = _day17()
     next(m for m in day if m["id"] == "d")["status"] = "live"
     state = {"days": [], "bracket": {}, "groups": {},
@@ -326,8 +349,12 @@ def test_card_bolds_pick_only_on_correct_prediction(tmp_path):
     html_miss = _render({"days": [], "bracket": {}, "groups": {},
                          "board": [{"date": "2026-06-14", "matches": [miss]}]}, tmp_path)
     assert '<span class="miss">Germany</span>' in html_miss
-    # odds labels are sized to their segment so they centre over it
-    assert 'flex-basis:77.8%' in html_hit and 'flex-basis:15.9%' in html_hit
+    # odds labels are positional (left/centre/right), never sized to the segment
+    # (segment-width labels overflowed and overlapped on narrow screens)
+    assert '<span class="k-h">Germany 77.8%</span>' in html_hit
+    assert '<span class="k-d">Draw 6.3%</span>' in html_hit
+    assert '<span class="k-a">Curaçao 15.9%</span>' in html_hit
+    assert 'flex-basis:' not in html_hit
 
 
 def test_sections_and_groups_are_collapsible_and_default_collapsed(tmp_path):
