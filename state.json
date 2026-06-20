@@ -3218,9 +3218,9 @@
             "pick": "Netherlands"
           },
           "status": "live",
-          "hg": 4,
+          "hg": 5,
           "ag": 1,
-          "clock": "86'",
+          "clock": "90'",
           "ht": false,
           "events": [
             {
@@ -3252,6 +3252,12 @@
               "player": "Anthony Elanga",
               "team": "Sweden",
               "minute": "59'"
+            },
+            {
+              "kind": "goal",
+              "player": "Crysencio Summerville",
+              "team": "Netherlands",
+              "minute": "89'"
             }
           ]
         },
@@ -3311,10 +3317,10 @@
       "date": "2026-06-20",
       "venue": "Houston",
       "kickoff_utc": "2026-06-20T17:00:00Z",
-      "hg": 4,
+      "hg": 5,
       "ag": 1,
       "status": "LIVE",
-      "clock": "86'",
+      "clock": "90'",
       "events": [
         {
           "kind": "goal",
@@ -3345,6 +3351,12 @@
           "player": "Anthony Elanga",
           "team": "Sweden",
           "minute": "59'"
+        },
+        {
+          "kind": "goal",
+          "player": "Crysencio Summerville",
+          "team": "Netherlands",
+          "minute": "89'"
         }
       ]
     }
@@ -4575,9 +4587,9 @@
             "pick": "Netherlands"
           },
           "status": "live",
-          "hg": 4,
+          "hg": 5,
           "ag": 1,
-          "clock": "86'",
+          "clock": "90'",
           "ht": false,
           "events": [
             {
@@ -4609,6 +4621,12 @@
               "player": "Anthony Elanga",
               "team": "Sweden",
               "minute": "59'"
+            },
+            {
+              "kind": "goal",
+              "player": "Crysencio Summerville",
+              "team": "Netherlands",
+              "minute": "89'"
             }
           ]
         },
