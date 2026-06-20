@@ -3219,8 +3219,8 @@
           },
           "status": "live",
           "hg": 4,
-          "ag": 0,
-          "clock": "58'",
+          "ag": 1,
+          "clock": "62'",
           "ht": false,
           "events": [
             {
@@ -3246,6 +3246,12 @@
               "player": "Cody Gakpo",
               "team": "Netherlands",
               "minute": "54'"
+            },
+            {
+              "kind": "goal",
+              "player": "Anthony Elanga",
+              "team": "Sweden",
+              "minute": "59'"
             }
           ]
         },
@@ -3306,9 +3312,9 @@
       "venue": "Houston",
       "kickoff_utc": "2026-06-20T17:00:00Z",
       "hg": 4,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "58'",
+      "clock": "62'",
       "events": [
         {
           "kind": "goal",
@@ -3333,6 +3339,12 @@
           "player": "Cody Gakpo",
           "team": "Netherlands",
           "minute": "54'"
+        },
+        {
+          "kind": "goal",
+          "player": "Anthony Elanga",
+          "team": "Sweden",
+          "minute": "59'"
         }
       ]
     }
@@ -4564,8 +4576,8 @@
           },
           "status": "live",
           "hg": 4,
-          "ag": 0,
-          "clock": "58'",
+          "ag": 1,
+          "clock": "62'",
           "ht": false,
           "events": [
             {
@@ -4591,6 +4603,12 @@
               "player": "Cody Gakpo",
               "team": "Netherlands",
               "minute": "54'"
+            },
+            {
+              "kind": "goal",
+              "player": "Anthony Elanga",
+              "team": "Sweden",
+              "minute": "59'"
             }
           ]
         },
