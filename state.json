@@ -740,6 +740,15 @@
           "key": "mb-2026-06-20",
           "generated_at": "2026-06-20T00:08:49.061015-07:00",
           "kickoff_utc": "2026-06-20T17:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 20\n\nHalf-time:\nNetherlands 2 - 0 Sweden\nHouston, USA\n  ⚽ 5' Brian Brobbey (Netherlands)\n  ⚽ 17' Brian Brobbey (Netherlands)\nPrediction: Netherlands",
+          "sent": true,
+          "hash": "450b12e6b300e6d3",
+          "key": "ht-2026-06-20-33",
+          "generated_at": "2026-06-20T10:51:58.251882-07:00",
+          "kickoff_utc": "2026-06-20T17:00:00Z"
         }
       ]
     }
@@ -3211,8 +3220,8 @@
           "status": "live",
           "hg": 2,
           "ag": 0,
-          "clock": "45'+3'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -3286,8 +3295,8 @@
       "kickoff_utc": "2026-06-20T17:00:00Z",
       "hg": 2,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+3'",
+      "status": "HT",
+      "clock": "45'+5'",
       "events": [
         {
           "kind": "goal",
@@ -4532,8 +4541,8 @@
           "status": "live",
           "hg": 2,
           "ag": 0,
-          "clock": "45'+3'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
