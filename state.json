@@ -758,6 +758,15 @@
           "key": "pm-2026-06-20-33",
           "generated_at": "2026-06-20T11:59:35.941740-07:00",
           "kickoff_utc": "2026-06-20T17:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 20\n\nHalf-time:\nGermany 0 - 1 Ivory Coast\nToronto, Canada\n  ⚽ 30' Franck Kessié (Ivory Coast)\nPrediction: Germany",
+          "sent": true,
+          "hash": "3e6d32d90947cf98",
+          "key": "ht-2026-06-20-27",
+          "generated_at": "2026-06-20T13:52:37.447642-07:00",
+          "kickoff_utc": "2026-06-20T20:00:00Z"
         }
       ]
     }
@@ -3351,8 +3360,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+7'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -3405,8 +3414,8 @@
       "kickoff_utc": "2026-06-20T20:00:00Z",
       "hg": 0,
       "ag": 1,
-      "status": "LIVE",
-      "clock": "45'+4'",
+      "status": "HT",
+      "clock": "45'+7'",
       "events": [
         {
           "kind": "goal",
@@ -4701,8 +4710,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+7'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
