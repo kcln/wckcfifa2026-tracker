@@ -728,6 +728,20 @@
           "kickoff_utc": "2026-06-19T19:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-06-20",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 20\n\nMatchday Brief\n\nNetherlands vs Sweden\n  Prediction: Netherlands\n  Netherlands 61.0% · Draw 26.8% · Sweden 12.2%\n  🕐 10:00am PT / 12:00pm CT / 1:00pm ET / 10:30pm IST\n  📍 Houston, USA\n\nGermany vs Ivory Coast\n  Prediction: Germany\n  Germany 56.4% · Draw 27.9% · Ivory Coast 15.8%\n  🕐 1:00pm PT / 3:00pm CT / 4:00pm ET / 1:30am IST (+1d)\n  📍 Toronto, Canada\n\nEcuador vs Curaçao\n  Prediction: Ecuador\n  Ecuador 81.8% · Draw 16.3% · Curaçao 1.9%\n  🕐 5:00pm PT / 7:00pm CT / 8:00pm ET / 5:30am IST (+1d)\n  📍 Kansas City, USA\n\nTunisia vs Japan\n  Prediction: Japan\n  Tunisia 15.0% · Draw 25.7% · Japan 59.3%\n  🕐 9:00pm PT / 11:00pm CT / 12:00am ET (+1d) / 9:30am IST (+1d)\n  📍 Monterrey (Guadalupe), Mexico",
+          "sent": true,
+          "hash": "f90f1870604b3f4b",
+          "key": "mb-2026-06-20",
+          "generated_at": "2026-06-20T00:08:49.061015-07:00",
+          "kickoff_utc": "2026-06-20T17:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -3175,6 +3189,71 @@
             }
           ],
           "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-20",
+      "matches": [
+        {
+          "id": "33",
+          "home": "Netherlands",
+          "away": "Sweden",
+          "kickoff_utc": "2026-06-20T17:00:00Z",
+          "venue": "Houston",
+          "stage": "group",
+          "pred": {
+            "home": 0.6101503071819577,
+            "draw": 0.267783916137212,
+            "away": 0.12206577668083037,
+            "pick": "Netherlands"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "27",
+          "home": "Germany",
+          "away": "Ivory Coast",
+          "kickoff_utc": "2026-06-20T20:00:00Z",
+          "venue": "Toronto",
+          "stage": "group",
+          "pred": {
+            "home": 0.563756848153595,
+            "draw": 0.2786919979424382,
+            "away": 0.15755115390396687,
+            "pick": "Germany"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "28",
+          "home": "Ecuador",
+          "away": "Curaçao",
+          "kickoff_utc": "2026-06-21T00:00:00Z",
+          "venue": "Kansas City",
+          "stage": "group",
+          "pred": {
+            "home": 0.81799681373657,
+            "draw": 0.16319210971060305,
+            "away": 0.01881107655282704,
+            "pick": "Ecuador"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "34",
+          "home": "Tunisia",
+          "away": "Japan",
+          "kickoff_utc": "2026-06-21T04:00:00Z",
+          "venue": "Monterrey (Guadalupe)",
+          "stage": "group",
+          "pred": {
+            "home": 0.1504995791495254,
+            "draw": 0.2566135907943742,
+            "away": 0.5928868300561004,
+            "pick": "Japan"
+          },
+          "status": "sched"
         }
       ]
     }
