@@ -3218,9 +3218,9 @@
             "pick": "Netherlands"
           },
           "status": "live",
-          "hg": 3,
+          "hg": 4,
           "ag": 0,
-          "clock": "55'",
+          "clock": "58'",
           "ht": false,
           "events": [
             {
@@ -3305,10 +3305,10 @@
       "date": "2026-06-20",
       "venue": "Houston",
       "kickoff_utc": "2026-06-20T17:00:00Z",
-      "hg": 3,
+      "hg": 4,
       "ag": 0,
       "status": "LIVE",
-      "clock": "55'",
+      "clock": "58'",
       "events": [
         {
           "kind": "goal",
@@ -4563,9 +4563,9 @@
             "pick": "Netherlands"
           },
           "status": "live",
-          "hg": 3,
+          "hg": 4,
           "ag": 0,
-          "clock": "55'",
+          "clock": "58'",
           "ht": false,
           "events": [
             {
