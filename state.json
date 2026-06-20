@@ -3358,9 +3358,9 @@
             "pick": "Germany"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "65'",
+          "clock": "69'",
           "ht": false,
           "events": [
             {
@@ -3368,6 +3368,12 @@
               "player": "Franck Kessié",
               "team": "Ivory Coast",
               "minute": "30'"
+            },
+            {
+              "kind": "goal",
+              "player": "Deniz Undav",
+              "team": "Germany",
+              "minute": "68'"
             }
           ]
         },
@@ -3412,16 +3418,22 @@
       "date": "2026-06-20",
       "venue": "Toronto",
       "kickoff_utc": "2026-06-20T20:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 1,
       "status": "LIVE",
-      "clock": "65'",
+      "clock": "69'",
       "events": [
         {
           "kind": "goal",
           "player": "Franck Kessié",
           "team": "Ivory Coast",
           "minute": "30'"
+        },
+        {
+          "kind": "goal",
+          "player": "Deniz Undav",
+          "team": "Germany",
+          "minute": "68'"
         }
       ]
     }
@@ -4708,9 +4720,9 @@
             "pick": "Germany"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "65'",
+          "clock": "69'",
           "ht": false,
           "events": [
             {
@@ -4718,6 +4730,12 @@
               "player": "Franck Kessié",
               "team": "Ivory Coast",
               "minute": "30'"
+            },
+            {
+              "kind": "goal",
+              "player": "Deniz Undav",
+              "team": "Germany",
+              "minute": "68'"
             }
           ]
         },
