@@ -3209,9 +3209,9 @@
             "pick": "Netherlands"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "16'",
+          "clock": "20'",
           "ht": false,
           "events": [
             {
@@ -3219,6 +3219,12 @@
               "player": "Brian Brobbey",
               "team": "Netherlands",
               "minute": "5'"
+            },
+            {
+              "kind": "goal",
+              "player": "Brian Brobbey",
+              "team": "Netherlands",
+              "minute": "17'"
             }
           ]
         },
@@ -3278,16 +3284,22 @@
       "date": "2026-06-20",
       "venue": "Houston",
       "kickoff_utc": "2026-06-20T17:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 0,
       "status": "LIVE",
-      "clock": "16'",
+      "clock": "20'",
       "events": [
         {
           "kind": "goal",
           "player": "Brian Brobbey",
           "team": "Netherlands",
           "minute": "5'"
+        },
+        {
+          "kind": "goal",
+          "player": "Brian Brobbey",
+          "team": "Netherlands",
+          "minute": "17'"
         }
       ]
     }
@@ -4518,9 +4530,9 @@
             "pick": "Netherlands"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "16'",
+          "clock": "20'",
           "ht": false,
           "events": [
             {
@@ -4528,6 +4540,12 @@
               "player": "Brian Brobbey",
               "team": "Netherlands",
               "minute": "5'"
+            },
+            {
+              "kind": "goal",
+              "player": "Brian Brobbey",
+              "team": "Netherlands",
+              "minute": "17'"
             }
           ]
         },
