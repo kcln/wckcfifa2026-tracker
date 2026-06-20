@@ -3112,12 +3112,31 @@
             "away": 0.30182593217361486,
             "pick": "Turkey"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "22",
+      "home": "Turkey",
+      "away": "Paraguay",
+      "date": "2026-06-19",
+      "venue": "San Francisco Bay Area (Santa Clara)",
+      "kickoff_utc": "2026-06-20T03:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "1'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -4306,7 +4325,12 @@
             "away": 0.30182593217361486,
             "pick": "Turkey"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         }
       ]
     },
