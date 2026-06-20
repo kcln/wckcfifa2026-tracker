@@ -3208,7 +3208,12 @@
             "away": 0.12206577668083037,
             "pick": "Netherlands"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "27",
@@ -3258,7 +3263,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "33",
+      "home": "Netherlands",
+      "away": "Sweden",
+      "date": "2026-06-20",
+      "venue": "Houston",
+      "kickoff_utc": "2026-06-20T17:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "4'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -4484,7 +4503,12 @@
             "away": 0.12206577668083037,
             "pick": "Netherlands"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "27",
