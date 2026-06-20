@@ -3115,7 +3115,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'",
+          "clock": "45'+4'",
           "ht": false,
           "events": [
             {
@@ -3123,6 +3123,12 @@
               "player": "Matías Galarza",
               "team": "Paraguay",
               "minute": "2'"
+            },
+            {
+              "kind": "red",
+              "player": "Miguel Almirón",
+              "team": "Paraguay",
+              "minute": "45'+3'"
             }
           ]
         }
@@ -3140,13 +3146,19 @@
       "hg": 0,
       "ag": 1,
       "status": "LIVE",
-      "clock": "45'",
+      "clock": "45'+4'",
       "events": [
         {
           "kind": "goal",
           "player": "Matías Galarza",
           "team": "Paraguay",
           "minute": "2'"
+        },
+        {
+          "kind": "red",
+          "player": "Miguel Almirón",
+          "team": "Paraguay",
+          "minute": "45'+3'"
         }
       ]
     }
@@ -4342,7 +4354,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'",
+          "clock": "45'+4'",
           "ht": false,
           "events": [
             {
@@ -4350,6 +4362,12 @@
               "player": "Matías Galarza",
               "team": "Paraguay",
               "minute": "2'"
+            },
+            {
+              "kind": "red",
+              "player": "Miguel Almirón",
+              "team": "Paraguay",
+              "minute": "45'+3'"
             }
           ]
         }
