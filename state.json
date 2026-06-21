@@ -3575,9 +3575,9 @@
             "pick": "Spain"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "19'",
+          "clock": "23'",
           "ht": false,
           "events": [
             {
@@ -3585,6 +3585,12 @@
               "player": "Lamine Yamal",
               "team": "Spain",
               "minute": "10'"
+            },
+            {
+              "kind": "goal",
+              "player": "Mikel Oyarzabal",
+              "team": "Spain",
+              "minute": "21'"
             }
           ]
         },
@@ -3644,16 +3650,22 @@
       "date": "2026-06-21",
       "venue": "Atlanta",
       "kickoff_utc": "2026-06-21T16:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 0,
       "status": "LIVE",
-      "clock": "19'",
+      "clock": "23'",
       "events": [
         {
           "kind": "goal",
           "player": "Lamine Yamal",
           "team": "Spain",
           "minute": "10'"
+        },
+        {
+          "kind": "goal",
+          "player": "Mikel Oyarzabal",
+          "team": "Spain",
+          "minute": "21'"
         }
       ]
     }
@@ -5046,9 +5058,9 @@
             "pick": "Spain"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "19'",
+          "clock": "23'",
           "ht": false,
           "events": [
             {
@@ -5056,6 +5068,12 @@
               "player": "Lamine Yamal",
               "team": "Spain",
               "minute": "10'"
+            },
+            {
+              "kind": "goal",
+              "player": "Mikel Oyarzabal",
+              "team": "Spain",
+              "minute": "21'"
             }
           ]
         },
