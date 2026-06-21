@@ -776,6 +776,15 @@
           "key": "pm-2026-06-20-27",
           "generated_at": "2026-06-20T15:04:07.316981-07:00",
           "kickoff_utc": "2026-06-20T20:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 20\n\nHalf-time:\nEcuador 0 - 0 Curaçao\nKansas City, USA\nPrediction: Ecuador",
+          "sent": true,
+          "hash": "7dc98ed4b962a163",
+          "key": "ht-2026-06-20-28",
+          "generated_at": "2026-06-20T17:50:12.973744-07:00",
+          "kickoff_utc": "2026-06-21T00:00:00Z"
         }
       ]
     }
@@ -3433,8 +3442,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+1'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": []
         },
         {
@@ -3465,8 +3474,8 @@
       "kickoff_utc": "2026-06-21T00:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+1'",
+      "status": "HT",
+      "clock": "45'+4'",
       "events": []
     }
   ],
@@ -4792,8 +4801,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+1'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": []
         },
         {
