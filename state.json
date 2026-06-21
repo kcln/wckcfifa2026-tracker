@@ -3732,8 +3732,8 @@
           },
           "status": "live",
           "hg": 2,
-          "ag": 1,
-          "clock": "58'",
+          "ag": 2,
+          "clock": "61'",
           "ht": false,
           "events": [
             {
@@ -3753,6 +3753,12 @@
               "player": "Agustín Cano",
               "team": "Uruguay",
               "minute": "45'+6'"
+            },
+            {
+              "kind": "goal",
+              "player": "Hélio Varela",
+              "team": "Cape Verde",
+              "minute": "61'"
             }
           ]
         },
@@ -3783,9 +3789,9 @@
       "venue": "Miami (Miami Gardens)",
       "kickoff_utc": "2026-06-21T22:00:00Z",
       "hg": 2,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "58'",
+      "clock": "61'",
       "events": [
         {
           "kind": "goal",
@@ -3804,6 +3810,12 @@
           "player": "Agustín Cano",
           "team": "Uruguay",
           "minute": "45'+6'"
+        },
+        {
+          "kind": "goal",
+          "player": "Hélio Varela",
+          "team": "Cape Verde",
+          "minute": "61'"
         }
       ]
     }
@@ -5267,8 +5279,8 @@
           },
           "status": "live",
           "hg": 2,
-          "ag": 1,
-          "clock": "58'",
+          "ag": 2,
+          "clock": "61'",
           "ht": false,
           "events": [
             {
@@ -5288,6 +5300,12 @@
               "player": "Agustín Cano",
               "team": "Uruguay",
               "minute": "45'+6'"
+            },
+            {
+              "kind": "goal",
+              "player": "Hélio Varela",
+              "team": "Cape Verde",
+              "minute": "61'"
             }
           ]
         },
