@@ -3584,9 +3584,9 @@
             "pick": "Spain"
           },
           "status": "live",
-          "hg": 4,
+          "hg": 5,
           "ag": 0,
-          "clock": "89'",
+          "clock": "90'+3'",
           "ht": false,
           "events": [
             {
@@ -3612,6 +3612,12 @@
               "player": "Hassan Al-Tambakti",
               "team": "Spain",
               "minute": "49'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ferran Torres",
+              "team": "Spain",
+              "minute": "90'+2'"
             }
           ]
         },
@@ -3671,10 +3677,10 @@
       "date": "2026-06-21",
       "venue": "Atlanta",
       "kickoff_utc": "2026-06-21T16:00:00Z",
-      "hg": 4,
+      "hg": 5,
       "ag": 0,
       "status": "LIVE",
-      "clock": "89'",
+      "clock": "90'+3'",
       "events": [
         {
           "kind": "goal",
@@ -3699,6 +3705,12 @@
           "player": "Hassan Al-Tambakti",
           "team": "Spain",
           "minute": "49'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ferran Torres",
+          "team": "Spain",
+          "minute": "90'+2'"
         }
       ]
     }
@@ -5091,9 +5103,9 @@
             "pick": "Spain"
           },
           "status": "live",
-          "hg": 4,
+          "hg": 5,
           "ag": 0,
-          "clock": "89'",
+          "clock": "90'+3'",
           "ht": false,
           "events": [
             {
@@ -5119,6 +5131,12 @@
               "player": "Hassan Al-Tambakti",
               "team": "Spain",
               "minute": "49'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ferran Torres",
+              "team": "Spain",
+              "minute": "90'+2'"
             }
           ]
         },
