@@ -3678,9 +3678,16 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "65'",
+          "clock": "69'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "red",
+              "player": "Nathan Ngoy",
+              "team": "Belgium",
+              "minute": "66'"
+            }
+          ]
         },
         {
           "id": "46",
@@ -3726,8 +3733,15 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "65'",
-      "events": []
+      "clock": "69'",
+      "events": [
+        {
+          "kind": "red",
+          "player": "Nathan Ngoy",
+          "team": "Belgium",
+          "minute": "66'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -5164,9 +5178,16 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "65'",
+          "clock": "69'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "red",
+              "player": "Nathan Ngoy",
+              "team": "Belgium",
+              "minute": "66'"
+            }
+          ]
         },
         {
           "id": "46",
