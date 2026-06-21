@@ -862,6 +862,15 @@
           "key": "ht-2026-06-21-39",
           "generated_at": "2026-06-21T12:55:28.346486-07:00",
           "kickoff_utc": "2026-06-21T19:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nSunday, June 21\n\nFull time:\nBelgium 0 - 0 Iran\nLos Angeles (Inglewood), USA\n  🟥 66' Nathan Ngoy (Belgium)\nOverall prediction: 19/38 (50.0%)\nPrediction ✗: Belgium",
+          "sent": true,
+          "hash": "fd0200d052e5f105",
+          "key": "pm-2026-06-21-39",
+          "generated_at": "2026-06-21T14:03:07.300161-07:00",
+          "kickoff_utc": "2026-06-21T19:00:00Z"
         }
       ]
     }
@@ -1074,11 +1083,19 @@
     "G": [
       {
         "team": "Iran",
-        "played": 1,
-        "points": 1,
+        "played": 2,
+        "points": 2,
         "gd": 0,
         "gf": 2,
         "ga": 2
+      },
+      {
+        "team": "Belgium",
+        "played": 2,
+        "points": 2,
+        "gd": 0,
+        "gf": 1,
+        "ga": 1
       },
       {
         "team": "New Zealand",
@@ -1087,14 +1104,6 @@
         "gd": 0,
         "gf": 2,
         "ga": 2
-      },
-      {
-        "team": "Belgium",
-        "played": 1,
-        "points": 1,
-        "gd": 0,
-        "gf": 1,
-        "ga": 1
       },
       {
         "team": "Egypt",
@@ -1278,93 +1287,92 @@
   },
   "bracket": {
     "title_odds": {
-      "England": 0.0503,
-      "Colombia": 0.0539,
-      "Japan": 0.03,
-      "Belgium": 0.0224,
-      "France": 0.1294,
-      "Spain": 0.1539,
-      "Argentina": 0.2138,
-      "Paraguay": 0.0035,
-      "Netherlands": 0.0295,
-      "Croatia": 0.0227,
-      "Brazil": 0.0522,
-      "Uruguay": 0.0168,
-      "Switzerland": 0.0137,
-      "Morocco": 0.0245,
-      "Canada": 0.0068,
-      "Germany": 0.0442,
-      "Portugal": 0.0418,
-      "Austria": 0.0061,
-      "Mexico": 0.0213,
-      "Senegal": 0.0103,
-      "Iran": 0.0062,
-      "Algeria": 0.0029,
-      "Norway": 0.0101,
-      "Uzbekistan": 0.001,
-      "Ecuador": 0.008,
+      "Colombia": 0.0588,
+      "Spain": 0.149,
+      "Belgium": 0.0218,
+      "Austria": 0.0054,
+      "France": 0.1289,
+      "Iran": 0.0067,
+      "Brazil": 0.0481,
+      "Argentina": 0.215,
+      "Portugal": 0.0424,
+      "Canada": 0.0057,
+      "Germany": 0.048,
+      "England": 0.0505,
+      "Croatia": 0.0243,
+      "Switzerland": 0.0135,
       "South Korea": 0.006,
-      "Turkey": 0.0044,
-      "Scotland": 0.0008,
-      "Ivory Coast": 0.0022,
-      "DR Congo": 0.0007,
+      "Mexico": 0.0196,
+      "Egypt": 0.0033,
+      "Japan": 0.0322,
+      "Uruguay": 0.0161,
+      "Morocco": 0.0233,
+      "Algeria": 0.0026,
+      "Netherlands": 0.0308,
+      "Ecuador": 0.0083,
+      "Senegal": 0.0094,
+      "Czech Republic": 0.0006,
+      "Sweden": 0.0021,
+      "Turkey": 0.0035,
+      "DR Congo": 0.0005,
+      "Norway": 0.0094,
       "Australia": 0.0049,
-      "Sweden": 0.002,
-      "Egypt": 0.0023,
-      "Czech Republic": 0.0007,
-      "Panama": 0.0004,
-      "Iraq": 0.0001,
-      "New Zealand": 0.0001,
-      "Cape Verde": 0.0001
+      "Ivory Coast": 0.0027,
+      "Paraguay": 0.004,
+      "Uzbekistan": 0.0004,
+      "Panama": 0.0007,
+      "Scotland": 0.001,
+      "Jordan": 0.0002,
+      "Cape Verde": 0.0003
     },
     "advancement": {
       "Japan": 1.0,
       "Brazil": 1.0,
-      "Austria": 0.9786,
+      "Austria": 0.9773,
+      "Argentina": 0.9999,
       "Spain": 1.0,
-      "Argentina": 0.9997,
-      "Croatia": 0.8077,
-      "Uruguay": 0.7978,
-      "Iran": 0.7073,
+      "Panama": 0.2484,
+      "Uruguay": 0.8014,
+      "Iran": 0.7141,
       "Morocco": 1.0,
-      "Portugal": 0.8845,
-      "Norway": 0.9937,
+      "Portugal": 0.8813,
+      "Norway": 0.9919,
       "England": 0.999,
-      "Scotland": 0.7701,
-      "Australia": 0.8713,
-      "Sweden": 0.944,
-      "Uzbekistan": 0.3723,
+      "Scotland": 0.766,
+      "Australia": 0.8702,
+      "Sweden": 0.94,
       "Canada": 1.0,
       "Netherlands": 1.0,
-      "Senegal": 0.6379,
-      "Belgium": 0.8849,
-      "Czech Republic": 0.2998,
-      "Ivory Coast": 0.9212,
+      "Belgium": 0.8959,
+      "Czech Republic": 0.2994,
+      "Ivory Coast": 0.9166,
+      "Algeria": 0.5069,
       "USA": 1.0,
-      "Colombia": 0.9933,
-      "France": 0.9975,
+      "Colombia": 0.9917,
+      "France": 0.9988,
       "Switzerland": 1.0,
-      "Ghana": 0.646,
-      "South Africa": 0.1665,
+      "DR Congo": 0.401,
+      "South Africa": 0.166,
       "Mexico": 1.0,
-      "Cape Verde": 0.5907,
-      "Paraguay": 0.68,
+      "Cape Verde": 0.5823,
+      "Paraguay": 0.6791,
       "Germany": 1.0,
-      "Panama": 0.2523,
-      "South Korea": 0.9171,
-      "Egypt": 0.7764,
-      "Bosnia & Herzegovina": 0.3454,
-      "Algeria": 0.5047,
-      "Ecuador": 0.3069,
-      "Turkey": 0.2335,
-      "DR Congo": 0.3918,
-      "Curaçao": 0.1631,
-      "New Zealand": 0.2835,
-      "Qatar": 0.3636,
-      "Saudi Arabia": 0.255,
-      "Jordan": 0.1081,
-      "Iraq": 0.1434,
-      "Haiti": 0.0114
+      "New Zealand": 0.2881,
+      "Saudi Arabia": 0.2551,
+      "South Korea": 0.9174,
+      "Egypt": 0.7915,
+      "Bosnia & Herzegovina": 0.3448,
+      "Senegal": 0.6206,
+      "Ecuador": 0.3053,
+      "Ghana": 0.6543,
+      "Croatia": 0.8025,
+      "Uzbekistan": 0.3668,
+      "Turkey": 0.228,
+      "Curaçao": 0.1632,
+      "Qatar": 0.3648,
+      "Iraq": 0.1524,
+      "Jordan": 0.106,
+      "Haiti": 0.012
     }
   },
   "season_ended": false,
@@ -2240,6 +2248,18 @@
           "player": "Hassan Al-Tambakti",
           "team": "Spain",
           "minute": "49'"
+        }
+      ]
+    },
+    "39": {
+      "home_goals": 0,
+      "away_goals": 0,
+      "events": [
+        {
+          "kind": "red",
+          "player": "Nathan Ngoy",
+          "team": "Belgium",
+          "minute": "66'"
         }
       ]
     }
@@ -3675,11 +3695,9 @@
             "away": 0.3261398278730464,
             "pick": "Belgium"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 0,
-          "clock": "90'+3'",
-          "ht": false,
           "events": [
             {
               "kind": "red",
@@ -3687,7 +3705,8 @@
               "team": "Belgium",
               "minute": "66'"
             }
-          ]
+          ],
+          "hit": false
         },
         {
           "id": "46",
@@ -3722,28 +3741,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "39",
-      "home": "Belgium",
-      "away": "Iran",
-      "date": "2026-06-21",
-      "venue": "Los Angeles (Inglewood)",
-      "kickoff_utc": "2026-06-21T19:00:00Z",
-      "hg": 0,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "90'+3'",
-      "events": [
-        {
-          "kind": "red",
-          "player": "Nathan Ngoy",
-          "team": "Belgium",
-          "minute": "66'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -5175,11 +5173,9 @@
             "away": 0.3261398278730464,
             "pick": "Belgium"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 0,
-          "clock": "90'+3'",
-          "ht": false,
           "events": [
             {
               "kind": "red",
@@ -5187,7 +5183,8 @@
               "team": "Belgium",
               "minute": "66'"
             }
-          ]
+          ],
+          "hit": false
         },
         {
           "id": "46",
