@@ -3586,8 +3586,8 @@
           "status": "live",
           "hg": 3,
           "ag": 0,
-          "clock": "45'+5'",
-          "ht": true,
+          "clock": "49'",
+          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -3606,6 +3606,12 @@
               "player": "Mikel Oyarzabal",
               "team": "Spain",
               "minute": "24'"
+            },
+            {
+              "kind": "own_goal",
+              "player": "Hassan Al-Tambakti",
+              "team": "Spain",
+              "minute": "49'"
             }
           ]
         },
@@ -3667,8 +3673,8 @@
       "kickoff_utc": "2026-06-21T16:00:00Z",
       "hg": 3,
       "ag": 0,
-      "status": "HT",
-      "clock": "45'+5'",
+      "status": "LIVE",
+      "clock": "49'",
       "events": [
         {
           "kind": "goal",
@@ -3687,6 +3693,12 @@
           "player": "Mikel Oyarzabal",
           "team": "Spain",
           "minute": "24'"
+        },
+        {
+          "kind": "own_goal",
+          "player": "Hassan Al-Tambakti",
+          "team": "Spain",
+          "minute": "49'"
         }
       ]
     }
@@ -5081,8 +5093,8 @@
           "status": "live",
           "hg": 3,
           "ag": 0,
-          "clock": "45'+5'",
-          "ht": true,
+          "clock": "49'",
+          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -5101,6 +5113,12 @@
               "player": "Mikel Oyarzabal",
               "team": "Spain",
               "minute": "24'"
+            },
+            {
+              "kind": "own_goal",
+              "player": "Hassan Al-Tambakti",
+              "team": "Spain",
+              "minute": "49'"
             }
           ]
         },
