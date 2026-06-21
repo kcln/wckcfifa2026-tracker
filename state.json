@@ -3470,10 +3470,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "4'",
+          "ag": 1,
+          "clock": "8'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Daichi Kamada",
+              "team": "Japan",
+              "minute": "4'"
+            }
+          ]
         }
       ]
     }
@@ -3487,10 +3494,17 @@
       "venue": "Monterrey (Guadalupe)",
       "kickoff_utc": "2026-06-21T04:00:00Z",
       "hg": 0,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "4'",
-      "events": []
+      "clock": "8'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Daichi Kamada",
+          "team": "Japan",
+          "minute": "4'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -4833,10 +4847,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "4'",
+          "ag": 1,
+          "clock": "8'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Daichi Kamada",
+              "team": "Japan",
+              "minute": "4'"
+            }
+          ]
         }
       ]
     },
