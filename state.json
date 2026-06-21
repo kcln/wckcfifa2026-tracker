@@ -3574,7 +3574,12 @@
             "away": 0.03431788972803489,
             "pick": "Spain"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "39",
@@ -3624,7 +3629,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "45",
+      "home": "Spain",
+      "away": "Saudi Arabia",
+      "date": "2026-06-21",
+      "venue": "Atlanta",
+      "kickoff_utc": "2026-06-21T16:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -5012,7 +5031,12 @@
             "away": 0.03431788972803489,
             "pick": "Spain"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "39",
