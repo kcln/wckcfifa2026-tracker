@@ -823,6 +823,20 @@
           "kickoff_utc": "2026-06-20T17:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-06-21",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026\nSunday, June 21\n\nMatchday Brief\n\nSpain vs Saudi Arabia\n  Prediction: Spain\n  Spain 85.9% · Draw 10.7% · Saudi Arabia 3.4%\n  🕐 9:00am PT / 11:00am CT / 12:00pm ET / 9:30pm IST\n  📍 Atlanta, USA\n\nBelgium vs Iran\n  Prediction: Belgium\n  Belgium 39.0% · Draw 28.3% · Iran 32.6%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 Los Angeles (Inglewood), USA\n\nUruguay vs Cape Verde\n  Prediction: Uruguay\n  Uruguay 68.5% · Draw 23.6% · Cape Verde 7.9%\n  🕐 3:00pm PT / 5:00pm CT / 6:00pm ET / 3:30am IST (+1d)\n  📍 Miami (Miami Gardens), USA\n\nNew Zealand vs Egypt\n  Prediction: Egypt\n  New Zealand 15.2% · Draw 25.0% · Egypt 59.8%\n  🕐 6:00pm PT / 8:00pm CT / 9:00pm ET / 6:30am IST (+1d)\n  📍 Vancouver, Canada",
+          "sent": true,
+          "hash": "c388776138482d6c",
+          "key": "mb-2026-06-21",
+          "generated_at": "2026-06-21T00:10:14.477101-07:00",
+          "kickoff_utc": "2026-06-21T16:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -3541,6 +3555,71 @@
             }
           ],
           "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-06-21",
+      "matches": [
+        {
+          "id": "45",
+          "home": "Spain",
+          "away": "Saudi Arabia",
+          "kickoff_utc": "2026-06-21T16:00:00Z",
+          "venue": "Atlanta",
+          "stage": "group",
+          "pred": {
+            "home": 0.8587510856629703,
+            "draw": 0.10693102460899485,
+            "away": 0.03431788972803489,
+            "pick": "Spain"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "39",
+          "home": "Belgium",
+          "away": "Iran",
+          "kickoff_utc": "2026-06-21T19:00:00Z",
+          "venue": "Los Angeles (Inglewood)",
+          "stage": "group",
+          "pred": {
+            "home": 0.39045672774957335,
+            "draw": 0.28340344437738024,
+            "away": 0.3261398278730464,
+            "pick": "Belgium"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "46",
+          "home": "Uruguay",
+          "away": "Cape Verde",
+          "kickoff_utc": "2026-06-21T22:00:00Z",
+          "venue": "Miami (Miami Gardens)",
+          "stage": "group",
+          "pred": {
+            "home": 0.6847392583186119,
+            "draw": 0.2360986186027313,
+            "away": 0.07916212307865665,
+            "pick": "Uruguay"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "40",
+          "home": "New Zealand",
+          "away": "Egypt",
+          "kickoff_utc": "2026-06-22T01:00:00Z",
+          "venue": "Vancouver",
+          "stage": "group",
+          "pred": {
+            "home": 0.1517466671225876,
+            "draw": 0.2504536516404102,
+            "away": 0.5977996812370021,
+            "pick": "Egypt"
+          },
+          "status": "sched"
         }
       ]
     }
