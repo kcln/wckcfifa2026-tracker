@@ -3479,8 +3479,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 2,
-          "clock": "69'",
+          "ag": 3,
+          "clock": "73'",
           "ht": false,
           "events": [
             {
@@ -3494,6 +3494,12 @@
               "player": "Ayase Ueda",
               "team": "Japan",
               "minute": "31'"
+            },
+            {
+              "kind": "goal",
+              "player": "Junya Ito",
+              "team": "Japan",
+              "minute": "69'"
             }
           ]
         }
@@ -3509,9 +3515,9 @@
       "venue": "Monterrey (Guadalupe)",
       "kickoff_utc": "2026-06-21T04:00:00Z",
       "hg": 0,
-      "ag": 2,
+      "ag": 3,
       "status": "LIVE",
-      "clock": "69'",
+      "clock": "73'",
       "events": [
         {
           "kind": "goal",
@@ -3524,6 +3530,12 @@
           "player": "Ayase Ueda",
           "team": "Japan",
           "minute": "31'"
+        },
+        {
+          "kind": "goal",
+          "player": "Junya Ito",
+          "team": "Japan",
+          "minute": "69'"
         }
       ]
     }
@@ -4868,8 +4880,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 2,
-          "clock": "69'",
+          "ag": 3,
+          "clock": "73'",
           "ht": false,
           "events": [
             {
@@ -4883,6 +4895,12 @@
               "player": "Ayase Ueda",
               "team": "Japan",
               "minute": "31'"
+            },
+            {
+              "kind": "goal",
+              "player": "Junya Ito",
+              "team": "Japan",
+              "minute": "69'"
             }
           ]
         }
