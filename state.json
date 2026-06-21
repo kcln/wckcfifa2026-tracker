@@ -3468,12 +3468,31 @@
             "away": 0.5928868300561004,
             "pick": "Japan"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "34",
+      "home": "Tunisia",
+      "away": "Japan",
+      "date": "2026-06-20",
+      "venue": "Monterrey (Guadalupe)",
+      "kickoff_utc": "2026-06-21T04:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "4'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -4812,7 +4831,12 @@
             "away": 0.5928868300561004,
             "pick": "Japan"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         }
       ]
     },
