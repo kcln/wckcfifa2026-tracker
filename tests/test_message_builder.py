@@ -144,6 +144,51 @@ def test_daily_recap_renders_group_standings():
     assert "Brazil" in text and "Group A" in text
 
 
+def test_daily_recap_marks_qualified_teams_and_keys_it():
+    matches = []
+    group_tables = {
+        "A": [
+            {"team": "Mexico", "played": 2, "points": 6, "gd": 3, "gf": 3, "ga": 0},
+            {"team": "South Korea", "played": 2, "points": 3, "gd": 0, "gf": 2, "ga": 2},
+            {"team": "Czech Republic", "played": 2, "points": 1, "gd": -1, "gf": 2, "ga": 3},
+        ]
+    }
+    text = mb.daily_recap("2026-06-20", matches, group_tables,
+                          qualified={"Mexico"})
+    # The key at the top explains the Q marker.
+    assert "Q Qualified" in text
+    # Qualified team's row carries a leading Q; others do not.
+    lines = text.split("\n")
+    mex = next(l for l in lines if "Mexico" in l)
+    kor = next(l for l in lines if "South Korea" in l)
+    assert mex.lstrip("<code>").startswith("Q")
+    assert not kor.lstrip().startswith("Q")
+    # Czech Republic must not be truncated by the new layout (14-wide column).
+    assert "Czech Republic" in text
+
+
+def test_daily_recap_group_table_rows_stay_aligned():
+    # Every standings row (header + teams) must be the same monospace width so
+    # the columns line up — the qualified marker mustn't shift anything.
+    group_tables = {
+        "A": [
+            {"team": "Mexico", "played": 2, "points": 6, "gd": 3, "gf": 3, "ga": 0},
+            {"team": "South Korea", "played": 2, "points": 3, "gd": 0, "gf": 2, "ga": 2},
+        ],
+        "B": [
+            {"team": "Bosnia & Herzegovina", "played": 2, "points": 4, "gd": 1, "gf": 3, "ga": 2},
+        ],
+    }
+    text = mb.daily_recap("2026-06-20", [], group_tables, qualified={"Mexico"})
+    code = text.split("<code>")[1].split("</code>")[0]
+    # Collect the team/header rows (those containing the right-aligned columns).
+    rows = [l for l in code.split("\n")
+            if l and not l.startswith("Group") and l.strip()]
+    widths = {len(l) for l in rows}
+    assert len(widths) == 1, f"misaligned row widths: {widths}"
+    assert widths.pop() == 32   # tight, phone-safe width with the Q marker
+
+
 # --- bracket_update ---
 
 def test_bracket_update_shows_header():

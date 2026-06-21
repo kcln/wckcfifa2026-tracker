@@ -27,11 +27,11 @@ from typing import Callable
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
     from src import (bracket_sim, data_fetcher, fixtures, html_archive,
-                     inbox, live_loop, message_builder, ml_predictor,
+                     inbox, knockout, live_loop, message_builder, ml_predictor,
                      predictor, state, subscribers, telegram_sender)
 else:
     from . import (bracket_sim, data_fetcher, fixtures, html_archive,
-                   inbox, live_loop, message_builder, ml_predictor,
+                   inbox, knockout, live_loop, message_builder, ml_predictor,
                    predictor, state, subscribers, telegram_sender)
 
 
@@ -271,6 +271,17 @@ def _group_tables_for(merged: dict) -> dict:
     }
 
 
+def _clinched_for(merged: dict, tables: dict) -> set:
+    """Teams that have clinched a Round-of-32 berth, derived from the current
+    group tables and the remaining (unplayed) group fixtures in `merged`."""
+    sched_like = [{"matches": [
+        {"stage": "group", "home": m["home"], "away": m["away"],
+         "status": "FT" if m.get("result") else "sched",
+         "hg": (m["result"]["home_goals"] if m.get("result") else None)}
+        for m in merged["matches"] if m["stage"] == "group"]}]
+    return knockout.clinched_set(tables, sched_like)
+
+
 def _final_match(merged: dict) -> dict | None:
     for m in merged["matches"]:
         if m["stage"] == "final":
@@ -460,12 +471,14 @@ def _due_for_day(stateobj: dict, merged: dict, match_prob, date_iso: str,
             all_resolved
             or _day_clock_complete(todays, datetime.now(timezone.utc))):
         tables = _group_tables_for(merged)
+        qualified = _clinched_for(merged, tables)
         day_acc = _accuracy(merged, match_prob, date_iso=date_iso)
         last_ko = max((m.get("kickoff_utc") or "" for m in todays), default="")
         overall_acc = _accuracy(merged, match_prob, until_kickoff=last_ko)
         recap = message_builder.daily_recap(date_iso, todays_pred, tables,
                                             day_acc=day_acc,
-                                            overall_acc=overall_acc)
+                                            overall_acc=overall_acc,
+                                            qualified=qualified)
         _add_message(day, existing, "daily_recap", date_iso, recap,
                      key=f"dr-{date_iso}", kickoff_utc=_first_kickoff(todays))
 

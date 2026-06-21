@@ -274,7 +274,7 @@ def post_match(match: dict, overall=None) -> str:
 
 
 def daily_recap(date_iso: str, matches: list[dict], group_tables: dict,
-                day_acc=None, overall_acc=None) -> str:
+                day_acc=None, overall_acc=None, qualified=None) -> str:
     """
     End-of-day recap: date header, each completed result, a prediction-accuracy
     line (today + cumulative), then group standings.
@@ -282,7 +282,10 @@ def daily_recap(date_iso: str, matches: list[dict], group_tables: dict,
     `group_tables` maps group letter -> list of row dicts
     [{team, played, points, gd, gf, ga}] (already sorted by standings).
     `day_acc` / `overall_acc` are (hits, total) tallies from the tracker.
+    `qualified` is a set of team names that have clinched a Round-of-32 berth;
+    those rows get a leading `Q` marker (explained in the key).
     """
+    qualified = qualified or set()
     lines: list[str] = _header(date_iso) + ["Daily Recap", "", "Results:"]
 
     matches = sorted(matches, key=_kickoff_key)   # chronological results
@@ -316,22 +319,26 @@ def daily_recap(date_iso: str, matches: list[dict], group_tables: dict,
         lines.append("")
         lines.append("Group Standings:")
         lines.append("")
-        lines.append("P Played · Pts Points · GD Goal Diff · "
-                     "GF Goals For · GA Goals Against")
+        lines.append("Q Qualified for Round of 32 · P Played · Pts Points · "
+                     "GD Goal Diff · GF Goals For · GA Goals Against")
         lines.append("")
         # Rendered MONOSPACE so the columns line up (a proportional font makes
         # them drift — the "ugly table" bug). We use <code>, not <pre>: Telegram
         # stamps a "</>" code badge on <pre> blocks (the stray icon KC saw);
-        # <code> is monospace without that chrome. Columns are tight for phones.
+        # <code> is monospace without that chrome. A leading 2-char Q marker is
+        # paid for by tightening GD/GF/GA from 4 to 3 wide (every realistic value
+        # still fits) — team stays 15 wide (no truncation) and every row aligns.
         table: list[str] = []
         for group_letter, rows in sorted(group_tables.items()):
             table.append(f"Group {group_letter}")
-            table.append(f"{'Team':<15}{'P':>2}{'Pts':>4}{'GD':>4}{'GF':>4}{'GA':>4}")
+            table.append(f"{'':<2}{'Team':<15}{'P':>2}{'Pts':>4}"
+                         f"{'GD':>3}{'GF':>3}{'GA':>3}")
             for row in rows:
+                mark = "Q" if row["team"] in qualified else ""
                 table.append(
-                    f"{str(row['team'])[:15]:<15}{row['played']:>2}"
-                    f"{row['points']:>4}{row['gd']:>+4}"
-                    f"{row['gf']:>4}{row['ga']:>4}")
+                    f"{mark:<2}{str(row['team'])[:15]:<15}{row['played']:>2}"
+                    f"{row['points']:>4}{row['gd']:>+3}"
+                    f"{row['gf']:>3}{row['ga']:>3}")
             table.append("")
         lines.append("<code>" + "\n".join(table).rstrip() + "</code>")
 
