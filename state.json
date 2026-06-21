@@ -3666,7 +3666,12 @@
             "away": 0.3261398278730464,
             "pick": "Belgium"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "46",
@@ -3701,7 +3706,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "39",
+      "home": "Belgium",
+      "away": "Iran",
+      "date": "2026-06-21",
+      "venue": "Los Angeles (Inglewood)",
+      "kickoff_utc": "2026-06-21T19:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -5133,7 +5152,12 @@
             "away": 0.3261398278730464,
             "pick": "Belgium"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "46",
