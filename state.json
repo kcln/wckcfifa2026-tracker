@@ -794,6 +794,15 @@
           "key": "pm-2026-06-20-28",
           "generated_at": "2026-06-20T18:58:41.615353-07:00",
           "kickoff_utc": "2026-06-21T00:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 20\n\nHalf-time:\nTunisia 0 - 2 Japan\nMonterrey (Guadalupe), Mexico\n  ⚽ 4' Daichi Kamada (Japan)\n  ⚽ 31' Ayase Ueda (Japan)\nPrediction: Japan",
+          "sent": true,
+          "hash": "4979d37775941ccc",
+          "key": "ht-2026-06-20-34",
+          "generated_at": "2026-06-20T21:52:40.190473-07:00",
+          "kickoff_utc": "2026-06-21T04:00:00Z"
         }
       ]
     }
@@ -3472,7 +3481,7 @@
           "hg": 0,
           "ag": 2,
           "clock": "45'+4'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -3501,7 +3510,7 @@
       "kickoff_utc": "2026-06-21T04:00:00Z",
       "hg": 0,
       "ag": 2,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+4'",
       "events": [
         {
@@ -4861,7 +4870,7 @@
           "hg": 0,
           "ag": 2,
           "clock": "45'+4'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
