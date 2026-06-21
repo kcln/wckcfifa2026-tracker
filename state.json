@@ -3430,7 +3430,12 @@
             "away": 0.01881107655282704,
             "pick": "Ecuador"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "34",
@@ -3450,7 +3455,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "28",
+      "home": "Ecuador",
+      "away": "Curaçao",
+      "date": "2026-06-20",
+      "venue": "Kansas City",
+      "kickoff_utc": "2026-06-21T00:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "4'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -4770,7 +4789,12 @@
             "away": 0.01881107655282704,
             "pick": "Ecuador"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "34",
