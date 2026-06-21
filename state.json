@@ -3722,9 +3722,9 @@
             "pick": "Uruguay"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "44'",
+          "clock": "45'+2'",
           "ht": false,
           "events": [
             {
@@ -3767,10 +3767,10 @@
       "date": "2026-06-21",
       "venue": "Miami (Miami Gardens)",
       "kickoff_utc": "2026-06-21T22:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 1,
       "status": "LIVE",
-      "clock": "44'",
+      "clock": "45'+2'",
       "events": [
         {
           "kind": "goal",
@@ -5245,9 +5245,9 @@
             "pick": "Uruguay"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "44'",
+          "clock": "45'+2'",
           "ht": false,
           "events": [
             {
