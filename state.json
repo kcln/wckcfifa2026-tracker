@@ -853,6 +853,15 @@
           "key": "pm-2026-06-21-45",
           "generated_at": "2026-06-21T11:04:23.529327-07:00",
           "kickoff_utc": "2026-06-21T16:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nSunday, June 21\n\nHalf-time:\nBelgium 0 - 0 Iran\nLos Angeles (Inglewood), USA\nPrediction: Belgium",
+          "sent": true,
+          "hash": "0d7580de6197762a",
+          "key": "ht-2026-06-21-39",
+          "generated_at": "2026-06-21T12:55:28.346486-07:00",
+          "kickoff_utc": "2026-06-21T19:00:00Z"
         }
       ]
     }
@@ -3669,8 +3678,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+6'",
-          "ht": false,
+          "clock": "45'+8'",
+          "ht": true,
           "events": []
         },
         {
@@ -3716,8 +3725,8 @@
       "kickoff_utc": "2026-06-21T19:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+6'",
+      "status": "HT",
+      "clock": "45'+8'",
       "events": []
     }
   ],
@@ -5155,8 +5164,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+6'",
-          "ht": false,
+          "clock": "45'+8'",
+          "ht": true,
           "events": []
         },
         {
