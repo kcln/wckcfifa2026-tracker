@@ -3724,7 +3724,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "40'",
+          "clock": "44'",
           "ht": false,
           "events": [
             {
@@ -3732,6 +3732,12 @@
               "player": "Kevin Pina",
               "team": "Cape Verde",
               "minute": "21'"
+            },
+            {
+              "kind": "goal",
+              "player": "Maxi Araújo",
+              "team": "Uruguay",
+              "minute": "44'"
             }
           ]
         },
@@ -3764,13 +3770,19 @@
       "hg": 0,
       "ag": 1,
       "status": "LIVE",
-      "clock": "40'",
+      "clock": "44'",
       "events": [
         {
           "kind": "goal",
           "player": "Kevin Pina",
           "team": "Cape Verde",
           "minute": "21'"
+        },
+        {
+          "kind": "goal",
+          "player": "Maxi Araújo",
+          "team": "Uruguay",
+          "minute": "44'"
         }
       ]
     }
@@ -5235,7 +5247,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "40'",
+          "clock": "44'",
           "ht": false,
           "events": [
             {
@@ -5243,6 +5255,12 @@
               "player": "Kevin Pina",
               "team": "Cape Verde",
               "minute": "21'"
+            },
+            {
+              "kind": "goal",
+              "player": "Maxi Araújo",
+              "team": "Uruguay",
+              "minute": "44'"
             }
           ]
         },
