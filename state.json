@@ -871,6 +871,15 @@
           "key": "pm-2026-06-21-39",
           "generated_at": "2026-06-21T14:03:07.300161-07:00",
           "kickoff_utc": "2026-06-21T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nSunday, June 21\n\nHalf-time:\nUruguay 2 - 1 Cape Verde\nMiami (Miami Gardens), USA\n  ⚽ 21' Kevin Pina (Cape Verde)\n  ⚽ 44' Maxi Araújo (Uruguay)\n  ⚽ 45'+6' Agustín Cano (Uruguay)\nPrediction: Uruguay",
+          "sent": true,
+          "hash": "5e5505e0736ac9fe",
+          "key": "ht-2026-06-21-46",
+          "generated_at": "2026-06-21T15:55:11.641499-07:00",
+          "kickoff_utc": "2026-06-21T22:00:00Z"
         }
       ]
     }
@@ -3722,10 +3731,10 @@
             "pick": "Uruguay"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "45'+6'",
-          "ht": false,
+          "clock": "45'+8'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -3773,10 +3782,10 @@
       "date": "2026-06-21",
       "venue": "Miami (Miami Gardens)",
       "kickoff_utc": "2026-06-21T22:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 1,
-      "status": "LIVE",
-      "clock": "45'+6'",
+      "status": "HT",
+      "clock": "45'+8'",
       "events": [
         {
           "kind": "goal",
@@ -5257,10 +5266,10 @@
             "pick": "Uruguay"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "45'+6'",
-          "ht": false,
+          "clock": "45'+8'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
