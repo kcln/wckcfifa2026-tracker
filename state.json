@@ -3442,7 +3442,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "67'",
+          "clock": "71'",
           "ht": false,
           "events": []
         },
@@ -3475,7 +3475,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "67'",
+      "clock": "71'",
       "events": []
     }
   ],
@@ -4801,7 +4801,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "67'",
+          "clock": "71'",
           "ht": false,
           "events": []
         },
