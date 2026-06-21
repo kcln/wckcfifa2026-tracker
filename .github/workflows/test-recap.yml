@@ -1,0 +1,22 @@
+name: test-recap-to-kc
+# Manual-only: builds the latest end-of-day recap from state.json and sends it
+# to KC's Telegram chat ONLY (scripts/test_send_recap.py hardcodes that chat —
+# it never broadcasts to the other subscribers). Used to preview message
+# changes with the real bot before they go out to everyone.
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Send test recap to KC only
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: python scripts/test_send_recap.py
