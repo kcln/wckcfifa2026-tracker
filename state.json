@@ -3584,9 +3584,9 @@
             "pick": "Spain"
           },
           "status": "live",
-          "hg": 3,
+          "hg": 4,
           "ag": 0,
-          "clock": "49'",
+          "clock": "53'",
           "ht": false,
           "events": [
             {
@@ -3671,10 +3671,10 @@
       "date": "2026-06-21",
       "venue": "Atlanta",
       "kickoff_utc": "2026-06-21T16:00:00Z",
-      "hg": 3,
+      "hg": 4,
       "ag": 0,
       "status": "LIVE",
-      "clock": "49'",
+      "clock": "53'",
       "events": [
         {
           "kind": "goal",
@@ -5091,9 +5091,9 @@
             "pick": "Spain"
           },
           "status": "live",
-          "hg": 3,
+          "hg": 4,
           "ag": 0,
-          "clock": "49'",
+          "clock": "53'",
           "ht": false,
           "events": [
             {
