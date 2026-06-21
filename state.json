@@ -3470,8 +3470,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "28'",
+          "ag": 2,
+          "clock": "32'",
           "ht": false,
           "events": [
             {
@@ -3479,6 +3479,12 @@
               "player": "Daichi Kamada",
               "team": "Japan",
               "minute": "4'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ayase Ueda",
+              "team": "Japan",
+              "minute": "31'"
             }
           ]
         }
@@ -3494,15 +3500,21 @@
       "venue": "Monterrey (Guadalupe)",
       "kickoff_utc": "2026-06-21T04:00:00Z",
       "hg": 0,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "28'",
+      "clock": "32'",
       "events": [
         {
           "kind": "goal",
           "player": "Daichi Kamada",
           "team": "Japan",
           "minute": "4'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ayase Ueda",
+          "team": "Japan",
+          "minute": "31'"
         }
       ]
     }
@@ -4847,8 +4859,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "28'",
+          "ag": 2,
+          "clock": "32'",
           "ht": false,
           "events": [
             {
@@ -4856,6 +4868,12 @@
               "player": "Daichi Kamada",
               "team": "Japan",
               "minute": "4'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ayase Ueda",
+              "team": "Japan",
+              "minute": "31'"
             }
           ]
         }
