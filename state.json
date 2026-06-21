@@ -835,6 +835,15 @@
           "key": "mb-2026-06-21",
           "generated_at": "2026-06-21T00:10:14.477101-07:00",
           "kickoff_utc": "2026-06-21T16:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nSunday, June 21\n\nHalf-time:\nSpain 3 - 0 Saudi Arabia\nAtlanta, USA\n  ⚽ 10' Lamine Yamal (Spain)\n  ⚽ 21' Mikel Oyarzabal (Spain)\n  ⚽ 24' Mikel Oyarzabal (Spain)\nPrediction: Spain",
+          "sent": true,
+          "hash": "8d6b99bb675cfcc5",
+          "key": "ht-2026-06-21-45",
+          "generated_at": "2026-06-21T09:52:27.180771-07:00",
+          "kickoff_utc": "2026-06-21T16:00:00Z"
         }
       ]
     }
@@ -3577,8 +3586,8 @@
           "status": "live",
           "hg": 3,
           "ag": 0,
-          "clock": "45'+2'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -3658,8 +3667,8 @@
       "kickoff_utc": "2026-06-21T16:00:00Z",
       "hg": 3,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+2'",
+      "status": "HT",
+      "clock": "45'+5'",
       "events": [
         {
           "kind": "goal",
@@ -5072,8 +5081,8 @@
           "status": "live",
           "hg": 3,
           "ag": 0,
-          "clock": "45'+2'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
