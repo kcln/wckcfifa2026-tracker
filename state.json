@@ -3721,7 +3721,12 @@
             "away": 0.07916212307865665,
             "pick": "Uruguay"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "40",
@@ -3741,7 +3746,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "46",
+      "home": "Uruguay",
+      "away": "Cape Verde",
+      "date": "2026-06-21",
+      "venue": "Miami (Miami Gardens)",
+      "kickoff_utc": "2026-06-21T22:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "1'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -5199,7 +5218,12 @@
             "away": 0.07916212307865665,
             "pick": "Uruguay"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "40",
