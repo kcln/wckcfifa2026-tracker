@@ -167,6 +167,21 @@ def _render_days(days: list[dict]) -> str:
     return "".join(blocks)
 
 
+def _most_recent_finished(state: dict) -> dict | None:
+    """The finished match with the latest kickoff across the whole schedule.
+    Derived here (not read from state['last_result']) so the hero always tracks
+    the genuinely most-recent result even when last_result lags behind."""
+    best = None
+    best_key = ""
+    for day in state.get("schedule") or []:
+        for m in day.get("matches", []):
+            if m.get("status") == "FT" and m.get("hg") is not None:
+                key = (m.get("kickoff_utc") or "", str(m.get("id", "")))
+                if best is None or key > best_key:
+                    best, best_key = {**m, "date": day.get("date")}, key
+    return best
+
+
 def _featured_match(state: dict):
     """The match the hero should show: the LIVE one (latest kickoff) if any is
     in progress, otherwise the most recent finished result. Returns a dict with
@@ -174,7 +189,10 @@ def _featured_match(state: dict):
     live = state.get("live") or []
     if live:
         return dict(live[-1], _live=True)
-    last = state.get("last_result") or {}
+    recent = _most_recent_finished(state)        # derived, never stale
+    if recent:
+        return {**recent, "_live": False}
+    last = state.get("last_result") or {}         # fallback if no schedule
     if last.get("home") and last.get("away"):
         return {**last, "_live": False}
     return None
@@ -353,9 +371,9 @@ def _match_card(m: dict) -> str:
             f'<span class="seg sd" style="width:{d*100:.1f}%"></span>'
             f'<span class="seg sa" style="width:{a*100:.1f}%"></span></div>'
             f'<div class="oddskey">'
-            f'<span style="flex-basis:{h*100:.1f}%">{home} {_pct(h)}</span>'
-            f'<span style="flex-basis:{d*100:.1f}%">Draw {_pct(d)}</span>'
-            f'<span style="flex-basis:{a*100:.1f}%">{away} {_pct(a)}</span></div>')
+            f'<span class="k-h">{home} {_pct(h)}</span>'
+            f'<span class="k-d">Draw {_pct(d)}</span>'
+            f'<span class="k-a">{away} {_pct(a)}</span></div>')
 
     foot_bits = []
     loc = _place(str(m.get("venue", "")))
@@ -407,25 +425,21 @@ def _tools(scope: str) -> str:
 
 
 def _order_day_matches(matches: list) -> list:
-    """Order a day's match cards by relevance (KC's spec):
-
-    - while any match is live: live first (earliest kickoff = closest to the
-      final whistle on top), then upcoming soonest-first, then finished at the
-      bottom (most recent first);
-    - when nothing is live (gaps between games, and every past day): pure
-      reverse chronological, latest kickoff on top.
-    """
+    """Order a day's match cards (KC's spec): live first (earliest kickoff =
+    closest to the final whistle on top), then the upcoming matches soonest-next
+    first (next match, the one after, …), then finished results in order of
+    completion — most recently finished at the top of that block, earliest at
+    the bottom. Soonest-first upcoming was the broken bit (it used to list the
+    latest kickoff first)."""
     def ko(m):
         return (m.get("kickoff_utc") or "", str(m.get("id", "")))
 
     live = [m for m in matches if m.get("status") == "live"]
-    if not live:
-        return sorted(matches, key=ko, reverse=True)
     done = [m for m in matches if m.get("status") == "FT"]
     upcoming = [m for m in matches if m.get("status") not in ("live", "FT")]
     return (sorted(live, key=ko)                    # closest to finishing on top
-            + sorted(upcoming, key=ko)              # soonest next first
-            + sorted(done, key=ko, reverse=True))   # most recently finished first
+            + sorted(upcoming, key=ko)              # next up, soonest first
+            + sorted(done, key=ko, reverse=True))   # finished, most recent first
 
 
 def _render_board_days(state: dict) -> str:
@@ -509,7 +523,9 @@ def _render_schedule(state: dict, today: str | None = None) -> str:
     divider = ('<div class="sched-div"><span>Knockouts</span></div>'
                if strip and bracket else "")
     note = ('<div class="sched-note"><em>Italic</em> bracket teams are projected '
-            'from the live table — they lock in when the group is decided.</div>'
+            'from the live table; once a team <span class="qlk">clinches</span> '
+            'a Round-of-32 berth the slot drops the others and shows only the '
+            'qualified team. Slots lock fully when the group is decided.</div>'
             if bracket else "")
     return (
         '<details class="section" id="schedule">'
@@ -584,10 +600,36 @@ def _bracket_positions(by_id: dict) -> dict:
     return pos
 
 
-def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict) -> str:
+def _slot_html(token: str, groups: dict, clinched: set,
+               winners: dict, losers: dict) -> str:
+    """Safe HTML label for a knockout slot. A still-projected group slot shows
+    the whole group order in standings order — but once any team in that group
+    clinches, it collapses to just the qualified team(s), locked solid (.qlk),
+    dropping the still-contending names. Everything else falls back to the plain
+    escaped slot_label."""
+    t = (token or "").strip()
+    is_group_slot = (len(t) >= 2 and t[0] in "12" and t[1:].isalpha()
+                     and "/" not in t)
+    if is_group_slot and not knockout.slot_locked(t, groups, winners, losers):
+        rows = groups.get(t[1:]) or []
+        if rows:
+            qualified = [r for r in rows
+                         if r.get("team") in (clinched or set())]
+            if qualified:                  # someone's through -> show only them
+                return " / ".join(
+                    f'<span class="qlk">{escape(knockout.abbr(r.get("team", "")))}'
+                    f'</span>' for r in qualified)
+            return " / ".join(             # nobody yet -> full projected order
+                escape(knockout.abbr(r.get("team", ""))) for r in rows)
+    return escape(knockout.slot_label(t, groups, winners, losers))
+
+
+def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict,
+                 clinched: set | None = None) -> str:
+    clinched = clinched or set()
     ht, at = str(m.get("home", "")), str(m.get("away", ""))
-    hl = knockout.slot_label(ht, groups, winners, losers)
-    al = knockout.slot_label(at, groups, winners, losers)
+    hl = _slot_html(ht, groups, clinched, winners, losers)
+    al = _slot_html(at, groups, clinched, winners, losers)
     # Projected (live table) vs locked (group decided / feeder played).
     h_proj = not knockout.slot_locked(ht, groups, winners, losers)
     a_proj = not knockout.slot_locked(at, groups, winners, losers)
@@ -603,12 +645,12 @@ def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict) -> str:
         tag = (f'<div class="bkm-tag">'
                f'{escape(_kick_pt_short(str(m.get("kickoff_utc", ""))))}</div>')
 
-    def row(label, sc, win, proj):
+    def row(label_html, sc, win, proj):
         s = f'<span class="bkm-sc">{sc}</span>' if played else ""
         wc = " win" if win else ""
         pc = " proj" if proj else ""
         return (f'<div class="bkm-row{wc}{pc}">'
-                f'<span class="bkm-nm">{escape(label)}</span>{s}</div>')
+                f'<span class="bkm-nm">{label_html}</span>{s}</div>')
 
     loc = escape(_place(str(m.get("venue", ""))))
     loc_html = f'<div class="bkm-loc">📍 {loc}</div>' if loc else ""
@@ -632,6 +674,7 @@ def _bracket_html(state: dict) -> str:
     by_id = {str(m["id"]): m for m in ko}
     pos = _bracket_positions(by_id)
     winners, losers = {}, {}                # resolved as knockout results land
+    clinched = knockout.clinched_set(groups, sched)
 
     rounds: dict = {}
     for m in ko:
@@ -640,7 +683,7 @@ def _bracket_html(state: dict) -> str:
         rounds[st].sort(key=lambda x: pos.get(str(x["id"]), 0))
 
     def box(m):
-        return _bracket_box(m, groups, winners, losers)
+        return _bracket_box(m, groups, winners, losers, clinched)
 
     def feeder_round(label, ms):
         pairs = ""
@@ -688,11 +731,13 @@ def _render_standings(state: dict) -> str:
     groups = state.get("groups") or {}
     if not groups:
         return ""
+    clinched = knockout.clinched_set(groups, state.get("schedule") or [])
     grps = []
     for g in sorted(groups):
         body = "".join(
             f'<tr class="{"qual" if n < 2 else ""}">'
-            f'<td class="t-team">{escape(str(r["team"]))}</td>'
+            f'<td class="t-team">{escape(str(r["team"]))}'
+            f'{" <span class=\"qb\">Q</span>" if r["team"] in clinched else ""}</td>'
             f'<td>{r["played"]}</td><td class="t-pts">{r["points"]}</td>'
             f'<td>{r["gd"]:+d}</td><td>{r["gf"]}</td><td>{r["ga"]}</td></tr>'
             for n, r in enumerate(groups[g]))
@@ -703,7 +748,8 @@ def _render_standings(state: dict) -> str:
             f'<th>GD</th><th>GF</th><th>GA</th></tr></thead>'
             f'<tbody>{body}</tbody></table></details>')
     legend = ('<div class="legend">P = Played · Pts = Points · '
-              'GD = Goal Difference · GF = Goals For · GA = Goals Against</div>')
+              'GD = Goal Difference · GF = Goals For · GA = Goals Against · '
+              '<span class="qb">Q</span> = Qualified for Round of 32</div>')
     return (
         '<details class="section" id="standings">'
         '<summary><span class="sec-h">Group standings</span></summary>'
@@ -832,6 +878,8 @@ __REFRESH__
     .gtable td.t-pts { font-weight: 700; color: var(--p-700); }
     .gtable tr.qual { background: var(--p-50); }
     .gtable tr.qual td.t-team { box-shadow: inset 3px 0 0 var(--p-500); }
+    .qb { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 600; letter-spacing: 0.06em; line-height: 1; color: var(--card); background: var(--p-600); border-radius: 4px; padding: 2px 5px; margin-left: 7px; vertical-align: middle; }
+    .legend .qb { margin-left: 0; }
 
     main#days .cards { display: grid; gap: 12px; padding: 6px 0 10px; }
     .mcard { background: var(--card-2); border: 1px solid var(--hair-soft); border-radius: var(--radius-md); padding: 15px 16px; }
@@ -858,8 +906,11 @@ __REFRESH__
     .oddsbar .seg.sh { background: var(--p-600); }
     .oddsbar .seg.sd { background: var(--ink-faint); }
     .oddsbar .seg.sa { background: var(--p-300); }
-    .oddskey { display: flex; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-faint); }
-    .oddskey span { flex-grow: 0; flex-shrink: 0; min-width: 0; text-align: center; white-space: nowrap; overflow: visible; }
+    .oddskey { display: flex; justify-content: space-between; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-faint); }
+    .oddskey span { flex: 0 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .oddskey .k-h { text-align: left; }
+    .oddskey .k-d { text-align: center; flex-shrink: 0; }
+    .oddskey .k-a { text-align: right; }
     .scorers { list-style: none; margin: 11px 0 0; padding: 0; display: grid; gap: 4px; }
     .scorers li { font-size: 13px; color: var(--ink-2); }
     .scorers .ev-min { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-faint); display: inline-block; min-width: 38px; }
@@ -919,6 +970,8 @@ __REFRESH__
     .bkm-row.win { color: var(--p-700); font-weight: 800; }
     .bkm-row.proj .bkm-nm { color: var(--ink-faint); font-style: italic; font-weight: 500; }
     .bkm-nm { line-height: 1.3; word-spacing: -1px; }
+    .qlk { font-style: normal; font-weight: 800; color: var(--p-700); }
+    .qlk::after { content: " ✓"; font-size: 0.85em; }
     .bkm-sc { font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--ink); }
     .bkm-loc { font-size: 10px; color: var(--ink-faint); padding: 5px 9px 7px; border-top: 1px solid var(--hair-soft); }
     .bk-third { justify-content: flex-start; }
