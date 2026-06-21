@@ -3575,11 +3575,18 @@
             "pick": "Spain"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "7'",
+          "clock": "12'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Lamine Yamal",
+              "team": "Spain",
+              "minute": "10'"
+            }
+          ]
         },
         {
           "id": "39",
@@ -3637,11 +3644,18 @@
       "date": "2026-06-21",
       "venue": "Atlanta",
       "kickoff_utc": "2026-06-21T16:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "7'",
-      "events": []
+      "clock": "12'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Lamine Yamal",
+          "team": "Spain",
+          "minute": "10'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -5032,11 +5046,18 @@
             "pick": "Spain"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "7'",
+          "clock": "12'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Lamine Yamal",
+              "team": "Spain",
+              "minute": "10'"
+            }
+          ]
         },
         {
           "id": "39",

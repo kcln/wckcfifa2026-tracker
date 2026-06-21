@@ -1,1 +1,1 @@
-{"live": true, "id": "45", "home": "Spain", "away": "Saudi Arabia", "hg": 0, "ag": 0, "status": "LIVE", "clock": "7'", "date": "2026-06-21", "venue": "Atlanta", "events": []}
+{"live": true, "id": "45", "home": "Spain", "away": "Saudi Arabia", "hg": 1, "ag": 0, "status": "LIVE", "clock": "12'", "date": "2026-06-21", "venue": "Atlanta", "events": [{"kind": "goal", "player": "Lamine Yamal", "team": "Spain", "minute": "10'"}]}
