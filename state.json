@@ -3575,9 +3575,9 @@
             "pick": "Spain"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 0,
-          "clock": "23'",
+          "clock": "27'",
           "ht": false,
           "events": [
             {
@@ -3591,6 +3591,12 @@
               "player": "Mikel Oyarzabal",
               "team": "Spain",
               "minute": "21'"
+            },
+            {
+              "kind": "goal",
+              "player": "Mikel Oyarzabal",
+              "team": "Spain",
+              "minute": "24'"
             }
           ]
         },
@@ -3650,10 +3656,10 @@
       "date": "2026-06-21",
       "venue": "Atlanta",
       "kickoff_utc": "2026-06-21T16:00:00Z",
-      "hg": 2,
+      "hg": 3,
       "ag": 0,
       "status": "LIVE",
-      "clock": "23'",
+      "clock": "27'",
       "events": [
         {
           "kind": "goal",
@@ -3666,6 +3672,12 @@
           "player": "Mikel Oyarzabal",
           "team": "Spain",
           "minute": "21'"
+        },
+        {
+          "kind": "goal",
+          "player": "Mikel Oyarzabal",
+          "team": "Spain",
+          "minute": "24'"
         }
       ]
     }
@@ -5058,9 +5070,9 @@
             "pick": "Spain"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 0,
-          "clock": "23'",
+          "clock": "27'",
           "ht": false,
           "events": [
             {
@@ -5074,6 +5086,12 @@
               "player": "Mikel Oyarzabal",
               "team": "Spain",
               "minute": "21'"
+            },
+            {
+              "kind": "goal",
+              "player": "Mikel Oyarzabal",
+              "team": "Spain",
+              "minute": "24'"
             }
           ]
         },
