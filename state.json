@@ -3678,7 +3678,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "74'",
+          "clock": "78'",
           "ht": false,
           "events": [
             {
@@ -3733,7 +3733,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "74'",
+      "clock": "78'",
       "events": [
         {
           "kind": "red",
@@ -5178,7 +5178,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "74'",
+          "clock": "78'",
           "ht": false,
           "events": [
             {
