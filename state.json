@@ -889,6 +889,15 @@
           "key": "pm-2026-06-21-46",
           "generated_at": "2026-06-21T17:06:14.874891-07:00",
           "kickoff_utc": "2026-06-21T22:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nSunday, June 21\n\nHalf-time:\nNew Zealand 1 - 0 Egypt\nVancouver, Canada\n  ⚽ 15' Finn Surman (New Zealand)\nPrediction: Egypt",
+          "sent": true,
+          "hash": "d1906216595dc7a6",
+          "key": "ht-2026-06-21-40",
+          "generated_at": "2026-06-21T18:52:23.966937-07:00",
+          "kickoff_utc": "2026-06-22T01:00:00Z"
         }
       ]
     }
@@ -3816,8 +3825,8 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "45'+3'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -3840,8 +3849,8 @@
       "kickoff_utc": "2026-06-22T01:00:00Z",
       "hg": 1,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+3'",
+      "status": "HT",
+      "clock": "45'+4'",
       "events": [
         {
           "kind": "goal",
@@ -5356,8 +5365,8 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "45'+3'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
