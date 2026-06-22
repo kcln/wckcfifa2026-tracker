@@ -939,6 +939,15 @@
           "key": "ht-2026-06-22-57",
           "generated_at": "2026-06-22T10:55:41.863647-07:00",
           "kickoff_utc": "2026-06-22T17:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 22\n\nFull time:\nArgentina 2 - 0 Austria\nDallas (Arlington), USA\n  ⚽ 38' Lionel Messi (Argentina)\n  ⚽ 90'+5' Lionel Messi (Argentina)\nOverall prediction: 21/41 (51.2%)\nPrediction ✓: Argentina",
+          "sent": true,
+          "hash": "7c00cc35047f040c",
+          "key": "pm-2026-06-22-57",
+          "generated_at": "2026-06-22T12:02:50.163385-07:00",
+          "kickoff_utc": "2026-06-22T17:00:00Z"
         }
       ]
     }
@@ -1253,19 +1262,19 @@
     "J": [
       {
         "team": "Argentina",
-        "played": 1,
-        "points": 3,
-        "gd": 3,
-        "gf": 3,
+        "played": 2,
+        "points": 6,
+        "gd": 5,
+        "gf": 5,
         "ga": 0
       },
       {
         "team": "Austria",
-        "played": 1,
+        "played": 2,
         "points": 3,
-        "gd": 2,
+        "gd": 0,
         "gf": 3,
-        "ga": 1
+        "ga": 3
       },
       {
         "team": "Jordan",
@@ -1355,126 +1364,114 @@
   },
   "bracket": {
     "title_odds": {
-      "Spain": 0.1609,
-      "Ecuador": 0.0101,
-      "Austria": 0.0078,
-      "Netherlands": 0.0304,
-      "Japan": 0.0296,
-      "Argentina": 0.2292,
-      "Australia": 0.004,
-      "France": 0.1168,
-      "Turkey": 0.0045,
-      "Algeria": 0.0028,
-      "Egypt": 0.0051,
-      "Germany": 0.0418,
-      "Croatia": 0.0234,
-      "Uruguay": 0.0114,
-      "Belgium": 0.0187,
-      "England": 0.0477,
-      "South Korea": 0.0059,
-      "Mexico": 0.0187,
-      "Norway": 0.0094,
-      "Brazil": 0.0484,
-      "Portugal": 0.043,
-      "Switzerland": 0.0128,
-      "Colombia": 0.0534,
-      "Iran": 0.0075,
-      "Morocco": 0.0257,
-      "Paraguay": 0.0036,
-      "Sweden": 0.0023,
       "Canada": 0.0082,
-      "Senegal": 0.0111,
-      "Ivory Coast": 0.0016,
-      "Scotland": 0.0009,
-      "Uzbekistan": 0.0016,
-      "Panama": 0.0007,
+      "Argentina": 0.2342,
+      "Spain": 0.1536,
+      "France": 0.1302,
+      "Morocco": 0.0242,
+      "Germany": 0.0411,
+      "Algeria": 0.0021,
+      "Turkey": 0.0042,
+      "Belgium": 0.0189,
+      "Croatia": 0.0278,
+      "Japan": 0.0299,
+      "Cape Verde": 0.0004,
+      "Australia": 0.0045,
+      "Brazil": 0.0458,
+      "Colombia": 0.0514,
+      "Netherlands": 0.0316,
+      "Norway": 0.0084,
+      "England": 0.0453,
+      "Switzerland": 0.0129,
+      "Mexico": 0.0162,
+      "Portugal": 0.0426,
+      "Paraguay": 0.0037,
+      "South Korea": 0.0082,
+      "Uruguay": 0.0118,
+      "Egypt": 0.003,
+      "Austria": 0.0062,
+      "Ecuador": 0.0076,
+      "Senegal": 0.0103,
+      "Ivory Coast": 0.0023,
+      "Iran": 0.0085,
+      "Uzbekistan": 0.0011,
+      "South Africa": 0.0001,
+      "Panama": 0.0002,
+      "Scotland": 0.0008,
+      "Sweden": 0.0019,
       "Czech Republic": 0.0005,
-      "DR Congo": 0.0003,
-      "Cape Verde": 0.0001,
-      "Qatar": 0.0001
+      "DR Congo": 0.0003
     },
     "advancement": {
       "Egypt": 1.0,
-      "France": 0.9983,
-      "Ghana": 0.6687,
-      "Paraguay": 0.6863,
+      "France": 0.9982,
+      "Paraguay": 0.69,
       "Brazil": 1.0,
       "Netherlands": 1.0,
       "Spain": 1.0,
-      "Sweden": 0.9489,
+      "Sweden": 0.955,
       "South Africa": 0.1656,
       "Mexico": 1.0,
       "Canada": 1.0,
       "Saudi Arabia": 0.2599,
       "Switzerland": 1.0,
-      "Croatia": 0.8059,
-      "Scotland": 0.7968,
-      "Ivory Coast": 0.9224,
-      "England": 0.999,
-      "Austria": 0.9813,
-      "Belgium": 0.9097,
-      "Australia": 0.876,
-      "Czech Republic": 0.3036,
-      "Morocco": 0.9999,
-      "Iraq": 0.154,
-      "Norway": 0.9921,
-      "Uruguay": 0.4256,
-      "Colombia": 0.9901,
-      "Portugal": 0.8816,
-      "Algeria": 0.5294,
+      "Croatia": 0.812,
+      "Scotland": 0.7996,
+      "Ivory Coast": 0.9233,
+      "England": 0.9987,
+      "Panama": 0.2584,
+      "Austria": 0.9571,
+      "Belgium": 0.9099,
+      "Australia": 0.8772,
+      "Czech Republic": 0.3031,
+      "Morocco": 1.0,
+      "Iraq": 0.1556,
+      "Norway": 0.9935,
+      "Uruguay": 0.4243,
+      "Colombia": 0.9924,
+      "Portugal": 0.8817,
+      "Algeria": 0.5215,
       "USA": 1.0,
       "Japan": 1.0,
       "Germany": 1.0,
       "Argentina": 1.0,
-      "DR Congo": 0.4104,
-      "Cape Verde": 0.7461,
+      "Ghana": 0.6704,
+      "DR Congo": 0.4095,
+      "Cape Verde": 0.7466,
       "South Korea": 0.9229,
-      "Uzbekistan": 0.3606,
-      "Ecuador": 0.3075,
-      "Senegal": 0.6473,
-      "Iran": 0.725,
-      "Bosnia & Herzegovina": 0.3443,
-      "Turkey": 0.2415,
+      "Uzbekistan": 0.3648,
+      "Ecuador": 0.3081,
+      "Iran": 0.7259,
+      "Bosnia & Herzegovina": 0.3446,
+      "Turkey": 0.2413,
+      "Senegal": 0.6497,
       "Curaçao": 0.1635,
-      "Panama": 0.2559,
-      "Qatar": 0.3654,
-      "New Zealand": 0.0915,
-      "Jordan": 0.1109,
-      "Haiti": 0.0121
+      "Qatar": 0.3655,
+      "Jordan": 0.1054,
+      "New Zealand": 0.092,
+      "Haiti": 0.0128
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Uruguay",
-    "away": "Cape Verde",
+    "home": "Argentina",
+    "away": "Austria",
     "home_goals": 2,
-    "away_goals": 2,
-    "date": "2026-06-21",
-    "venue": "Miami (Miami Gardens)",
+    "away_goals": 0,
+    "date": "2026-06-22",
+    "venue": "Dallas (Arlington)",
     "events": [
       {
         "kind": "goal",
-        "player": "Kevin Pina",
-        "team": "Cape Verde",
-        "minute": "21'"
+        "player": "Lionel Messi",
+        "team": "Argentina",
+        "minute": "38'"
       },
       {
         "kind": "goal",
-        "player": "Maxi Araújo",
-        "team": "Uruguay",
-        "minute": "44'"
-      },
-      {
-        "kind": "goal",
-        "player": "Agustín Canobbio",
-        "team": "Uruguay",
-        "minute": "45'+6'"
-      },
-      {
-        "kind": "goal",
-        "player": "Hélio Varela",
-        "team": "Cape Verde",
-        "minute": "61'"
+        "player": "Lionel Messi",
+        "team": "Argentina",
+        "minute": "90'+5'"
       }
     ]
   },
@@ -2388,6 +2385,24 @@
           "player": "Trézéguet",
           "team": "Egypt",
           "minute": "82'"
+        }
+      ]
+    },
+    "57": {
+      "home_goals": 2,
+      "away_goals": 0,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Lionel Messi",
+          "team": "Argentina",
+          "minute": "38'"
+        },
+        {
+          "kind": "goal",
+          "player": "Lionel Messi",
+          "team": "Argentina",
+          "minute": "90'+5'"
         }
       ]
     }
@@ -3942,19 +3957,24 @@
             "away": 0.08923031246575873,
             "pick": "Argentina"
           },
-          "status": "live",
-          "hg": 1,
+          "status": "FT",
+          "hg": 2,
           "ag": 0,
-          "clock": "90'+5'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
               "player": "Lionel Messi",
               "team": "Argentina",
               "minute": "38'"
+            },
+            {
+              "kind": "goal",
+              "player": "Lionel Messi",
+              "team": "Argentina",
+              "minute": "90'+5'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "51",
@@ -4004,28 +4024,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "57",
-      "home": "Argentina",
-      "away": "Austria",
-      "date": "2026-06-22",
-      "venue": "Dallas (Arlington)",
-      "kickoff_utc": "2026-06-22T17:00:00Z",
-      "hg": 1,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "90'+5'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Lionel Messi",
-          "team": "Argentina",
-          "minute": "38'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -5576,19 +5575,24 @@
             "away": 0.08923031246575873,
             "pick": "Argentina"
           },
-          "status": "live",
-          "hg": 1,
+          "status": "FT",
+          "hg": 2,
           "ag": 0,
-          "clock": "90'+5'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
               "player": "Lionel Messi",
               "team": "Argentina",
               "minute": "38'"
+            },
+            {
+              "kind": "goal",
+              "player": "Lionel Messi",
+              "team": "Argentina",
+              "minute": "90'+5'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "51",
