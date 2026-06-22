@@ -3824,8 +3824,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 2,
-          "clock": "81'",
+          "ag": 3,
+          "clock": "85'",
           "ht": false,
           "events": [
             {
@@ -3845,6 +3845,12 @@
               "player": "Mohamed Salah",
               "team": "Egypt",
               "minute": "67'"
+            },
+            {
+              "kind": "goal",
+              "player": "Trézéguet",
+              "team": "Egypt",
+              "minute": "82'"
             }
           ]
         }
@@ -3860,9 +3866,9 @@
       "venue": "Vancouver",
       "kickoff_utc": "2026-06-22T01:00:00Z",
       "hg": 1,
-      "ag": 2,
+      "ag": 3,
       "status": "LIVE",
-      "clock": "81'",
+      "clock": "85'",
       "events": [
         {
           "kind": "goal",
@@ -3881,6 +3887,12 @@
           "player": "Mohamed Salah",
           "team": "Egypt",
           "minute": "67'"
+        },
+        {
+          "kind": "goal",
+          "player": "Trézéguet",
+          "team": "Egypt",
+          "minute": "82'"
         }
       ]
     }
@@ -5388,8 +5400,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 2,
-          "clock": "81'",
+          "ag": 3,
+          "clock": "85'",
           "ht": false,
           "events": [
             {
@@ -5409,6 +5421,12 @@
               "player": "Mohamed Salah",
               "team": "Egypt",
               "minute": "67'"
+            },
+            {
+              "kind": "goal",
+              "player": "Trézéguet",
+              "team": "Egypt",
+              "minute": "82'"
             }
           ]
         }
