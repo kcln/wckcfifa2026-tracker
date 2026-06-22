@@ -3989,7 +3989,12 @@
             "away": 0.07525716636949663,
             "pick": "France"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "52",
@@ -4024,7 +4029,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "51",
+      "home": "France",
+      "away": "Iraq",
+      "date": "2026-06-22",
+      "venue": "Philadelphia",
+      "kickoff_utc": "2026-06-22T21:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "4'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -5607,7 +5626,12 @@
             "away": 0.07525716636949663,
             "pick": "France"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "52",

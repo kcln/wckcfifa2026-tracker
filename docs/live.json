@@ -1,1 +1,1 @@
-{"live": false, "id": "57", "home": "Argentina", "away": "Austria", "hg": 2, "ag": 0, "status": "FT", "clock": "", "date": "2026-06-22", "venue": "Dallas (Arlington)", "events": [{"kind": "goal", "player": "Lionel Messi", "team": "Argentina", "minute": "38'"}, {"kind": "goal", "player": "Lionel Messi", "team": "Argentina", "minute": "90'+5'"}]}
+{"live": true, "id": "51", "home": "France", "away": "Iraq", "hg": 0, "ag": 0, "status": "LIVE", "clock": "4'", "date": "2026-06-22", "venue": "Philadelphia", "events": []}
