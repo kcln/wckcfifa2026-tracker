@@ -3814,11 +3814,18 @@
             "pick": "Egypt"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "13'",
+          "clock": "16'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Finn Surman",
+              "team": "New Zealand",
+              "minute": "15'"
+            }
+          ]
         }
       ]
     }
@@ -3831,11 +3838,18 @@
       "date": "2026-06-21",
       "venue": "Vancouver",
       "kickoff_utc": "2026-06-22T01:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "13'",
-      "events": []
+      "clock": "16'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Finn Surman",
+          "team": "New Zealand",
+          "minute": "15'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -5340,11 +5354,18 @@
             "pick": "Egypt"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "13'",
+          "clock": "16'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Finn Surman",
+              "team": "New Zealand",
+              "minute": "15'"
+            }
+          ]
         }
       ]
     },
