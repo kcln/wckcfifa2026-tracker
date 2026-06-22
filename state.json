@@ -3934,9 +3934,9 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "39'",
+          "clock": "43'",
           "ht": false,
           "events": [
             {
@@ -4003,10 +4003,10 @@
       "date": "2026-06-22",
       "venue": "Dallas (Arlington)",
       "kickoff_utc": "2026-06-22T17:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "39'",
+      "clock": "43'",
       "events": [
         {
           "kind": "goal",
@@ -5568,9 +5568,9 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "39'",
+          "clock": "43'",
           "ht": false,
           "events": [
             {
