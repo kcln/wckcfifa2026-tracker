@@ -3824,8 +3824,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 1,
-          "clock": "67'",
+          "ag": 2,
+          "clock": "71'",
           "ht": false,
           "events": [
             {
@@ -3839,6 +3839,12 @@
               "player": "Mostafa Zico",
               "team": "Egypt",
               "minute": "58'"
+            },
+            {
+              "kind": "goal",
+              "player": "Mohamed Salah",
+              "team": "Egypt",
+              "minute": "67'"
             }
           ]
         }
@@ -3854,9 +3860,9 @@
       "venue": "Vancouver",
       "kickoff_utc": "2026-06-22T01:00:00Z",
       "hg": 1,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "67'",
+      "clock": "71'",
       "events": [
         {
           "kind": "goal",
@@ -3869,6 +3875,12 @@
           "player": "Mostafa Zico",
           "team": "Egypt",
           "minute": "58'"
+        },
+        {
+          "kind": "goal",
+          "player": "Mohamed Salah",
+          "team": "Egypt",
+          "minute": "67'"
         }
       ]
     }
@@ -5376,8 +5388,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 1,
-          "clock": "67'",
+          "ag": 2,
+          "clock": "71'",
           "ht": false,
           "events": [
             {
@@ -5391,6 +5403,12 @@
               "player": "Mostafa Zico",
               "team": "Egypt",
               "minute": "58'"
+            },
+            {
+              "kind": "goal",
+              "player": "Mohamed Salah",
+              "team": "Egypt",
+              "minute": "67'"
             }
           ]
         }
