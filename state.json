@@ -918,6 +918,20 @@
           "kickoff_utc": "2026-06-21T16:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-06-22",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 22\n\nMatchday Brief\n\nArgentina vs Austria\n  Prediction: Argentina\n  Argentina 74.3% · Draw 16.8% · Austria 8.9%\n  🕐 10:00am PT / 12:00pm CT / 1:00pm ET / 10:30pm IST\n  📍 Dallas (Arlington), USA\n\nFrance vs Iraq\n  Prediction: France\n  France 63.7% · Draw 28.8% · Iraq 7.5%\n  🕐 2:00pm PT / 4:00pm CT / 5:00pm ET / 2:30am IST (+1d)\n  📍 Philadelphia, USA\n\nNorway vs Senegal\n  Prediction: Senegal\n  Norway 29.5% · Draw 27.4% · Senegal 43.1%\n  🕐 5:00pm PT / 7:00pm CT / 8:00pm ET / 5:30am IST (+1d)\n  📍 New York/New Jersey (East Rutherford), USA\n\nJordan vs Algeria\n  Prediction: Algeria\n  Jordan 15.6% · Draw 26.6% · Algeria 57.7%\n  🕐 8:00pm PT / 10:00pm CT / 11:00pm ET / 8:30am IST (+1d)\n  📍 San Francisco Bay Area (Santa Clara), USA",
+          "sent": true,
+          "hash": "7d257d92c9f80955",
+          "key": "mb-2026-06-22",
+          "generated_at": "2026-06-22T00:09:09.737079-07:00",
+          "kickoff_utc": "2026-06-22T17:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -3900,6 +3914,71 @@
             }
           ],
           "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-06-22",
+      "matches": [
+        {
+          "id": "57",
+          "home": "Argentina",
+          "away": "Austria",
+          "kickoff_utc": "2026-06-22T17:00:00Z",
+          "venue": "Dallas (Arlington)",
+          "stage": "group",
+          "pred": {
+            "home": 0.7426071460802799,
+            "draw": 0.16816254145396145,
+            "away": 0.08923031246575873,
+            "pick": "Argentina"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "51",
+          "home": "France",
+          "away": "Iraq",
+          "kickoff_utc": "2026-06-22T21:00:00Z",
+          "venue": "Philadelphia",
+          "stage": "group",
+          "pred": {
+            "home": 0.6366417174468196,
+            "draw": 0.2881011161836837,
+            "away": 0.07525716636949663,
+            "pick": "France"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "52",
+          "home": "Norway",
+          "away": "Senegal",
+          "kickoff_utc": "2026-06-23T00:00:00Z",
+          "venue": "New York/New Jersey (East Rutherford)",
+          "stage": "group",
+          "pred": {
+            "home": 0.29491205714863183,
+            "draw": 0.2740685874599872,
+            "away": 0.4310193553913809,
+            "pick": "Senegal"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "58",
+          "home": "Jordan",
+          "away": "Algeria",
+          "kickoff_utc": "2026-06-23T03:00:00Z",
+          "venue": "San Francisco Bay Area (Santa Clara)",
+          "stage": "group",
+          "pred": {
+            "home": 0.15628159802256159,
+            "draw": 0.26647238663576667,
+            "away": 0.5772460153416716,
+            "pick": "Algeria"
+          },
+          "status": "sched"
         }
       ]
     }
