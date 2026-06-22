@@ -930,6 +930,15 @@
           "key": "mb-2026-06-22",
           "generated_at": "2026-06-22T00:09:09.737079-07:00",
           "kickoff_utc": "2026-06-22T17:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 22\n\nHalf-time:\nArgentina 1 - 0 Austria\nDallas (Arlington), USA\n  ⚽ 38' Lionel Messi (Argentina)\nPrediction: Argentina",
+          "sent": true,
+          "hash": "8bae169d854e5d4d",
+          "key": "ht-2026-06-22-57",
+          "generated_at": "2026-06-22T10:55:41.863647-07:00",
+          "kickoff_utc": "2026-06-22T17:00:00Z"
         }
       ]
     }
@@ -3936,8 +3945,8 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "45'+5'",
-          "ht": false,
+          "clock": "45'+7'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -4005,8 +4014,8 @@
       "kickoff_utc": "2026-06-22T17:00:00Z",
       "hg": 1,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+5'",
+      "status": "HT",
+      "clock": "45'+7'",
       "events": [
         {
           "kind": "goal",
@@ -5570,8 +5579,8 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "45'+5'",
-          "ht": false,
+          "clock": "45'+7'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
