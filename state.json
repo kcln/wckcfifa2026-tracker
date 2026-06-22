@@ -3933,7 +3933,12 @@
             "away": 0.08923031246575873,
             "pick": "Argentina"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "51",
@@ -3983,7 +3988,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "57",
+      "home": "Argentina",
+      "away": "Austria",
+      "date": "2026-06-22",
+      "venue": "Dallas (Arlington)",
+      "kickoff_utc": "2026-06-22T17:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -5534,7 +5553,12 @@
             "away": 0.08923031246575873,
             "pick": "Argentina"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "51",
