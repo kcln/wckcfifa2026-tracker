@@ -3936,9 +3936,16 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "34'",
+          "clock": "39'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Lionel Messi",
+              "team": "Argentina",
+              "minute": "38'"
+            }
+          ]
         },
         {
           "id": "51",
@@ -3999,8 +4006,15 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "34'",
-      "events": []
+      "clock": "39'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Lionel Messi",
+          "team": "Argentina",
+          "minute": "38'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -5556,9 +5570,16 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "34'",
+          "clock": "39'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Lionel Messi",
+              "team": "Argentina",
+              "minute": "38'"
+            }
+          ]
         },
         {
           "id": "51",
