@@ -3990,11 +3990,18 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "11'",
+          "clock": "15'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Kylian Mbappé",
+              "team": "France",
+              "minute": "14'"
+            }
+          ]
         },
         {
           "id": "52",
@@ -4037,11 +4044,18 @@
       "date": "2026-06-22",
       "venue": "Philadelphia",
       "kickoff_utc": "2026-06-22T21:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "11'",
-      "events": []
+      "clock": "15'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "minute": "14'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -5627,11 +5641,18 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "11'",
+          "clock": "15'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Kylian Mbappé",
+              "team": "France",
+              "minute": "14'"
+            }
+          ]
         },
         {
           "id": "52",
