@@ -4002,7 +4002,7 @@
           "hg": 1,
           "ag": 0,
           "clock": "45'+3'",
-          "ht": true,
+          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -4055,7 +4055,7 @@
       "kickoff_utc": "2026-06-22T21:00:00Z",
       "hg": 1,
       "ag": 0,
-      "status": "HT",
+      "status": "LIVE",
       "clock": "45'+3'",
       "events": [
         {
@@ -5653,7 +5653,7 @@
           "hg": 1,
           "ag": 0,
           "clock": "45'+3'",
-          "ht": true,
+          "ht": false,
           "events": [
             {
               "kind": "goal",
