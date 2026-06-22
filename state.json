@@ -880,6 +880,15 @@
           "key": "ht-2026-06-21-46",
           "generated_at": "2026-06-21T15:55:11.641499-07:00",
           "kickoff_utc": "2026-06-21T22:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nSunday, June 21\n\nFull time:\nUruguay 2 - 2 Cape Verde\nMiami (Miami Gardens), USA\n  ⚽ 21' Kevin Pina (Cape Verde)\n  ⚽ 44' Maxi Araújo (Uruguay)\n  ⚽ 45'+6' Agustín Cano (Uruguay)\n  ⚽ 61' Hélio Varela (Cape Verde)\nOverall prediction: 19/39 (48.7%)\nPrediction ✗: Uruguay",
+          "sent": true,
+          "hash": "def5729d0b9a481c",
+          "key": "pm-2026-06-21-46",
+          "generated_at": "2026-06-21T17:06:14.874891-07:00",
+          "kickoff_utc": "2026-06-21T22:00:00Z"
         }
       ]
     }
@@ -1134,19 +1143,19 @@
       },
       {
         "team": "Uruguay",
-        "played": 1,
-        "points": 1,
+        "played": 2,
+        "points": 2,
         "gd": 0,
-        "gf": 1,
-        "ga": 1
+        "gf": 3,
+        "ga": 3
       },
       {
         "team": "Cape Verde",
-        "played": 1,
-        "points": 1,
+        "played": 2,
+        "points": 2,
         "gd": 0,
-        "gf": 0,
-        "ga": 0
+        "gf": 2,
+        "ga": 2
       },
       {
         "team": "Saudi Arabia",
@@ -1296,126 +1305,126 @@
   },
   "bracket": {
     "title_odds": {
-      "Colombia": 0.0588,
-      "Spain": 0.149,
-      "Belgium": 0.0218,
-      "Austria": 0.0054,
-      "France": 0.1289,
-      "Iran": 0.0067,
-      "Brazil": 0.0481,
-      "Argentina": 0.215,
-      "Portugal": 0.0424,
-      "Canada": 0.0057,
-      "Germany": 0.048,
-      "England": 0.0505,
-      "Croatia": 0.0243,
-      "Switzerland": 0.0135,
-      "South Korea": 0.006,
-      "Mexico": 0.0196,
-      "Egypt": 0.0033,
-      "Japan": 0.0322,
-      "Uruguay": 0.0161,
-      "Morocco": 0.0233,
-      "Algeria": 0.0026,
-      "Netherlands": 0.0308,
-      "Ecuador": 0.0083,
+      "Spain": 0.1596,
+      "Argentina": 0.2266,
+      "Austria": 0.007,
+      "Japan": 0.0287,
+      "Netherlands": 0.0307,
+      "Iran": 0.0072,
+      "England": 0.0485,
+      "Germany": 0.0442,
+      "Colombia": 0.059,
+      "France": 0.1229,
+      "Canada": 0.0076,
+      "Croatia": 0.0241,
+      "Belgium": 0.0199,
+      "Uruguay": 0.0121,
+      "South Korea": 0.0059,
+      "Portugal": 0.0414,
+      "Brazil": 0.047,
+      "Egypt": 0.0027,
+      "Morocco": 0.0225,
+      "Norway": 0.0104,
+      "Switzerland": 0.013,
+      "Ecuador": 0.0078,
+      "Panama": 0.0008,
+      "Algeria": 0.0032,
+      "Czech Republic": 0.0004,
+      "Paraguay": 0.0043,
+      "Mexico": 0.0174,
       "Senegal": 0.0094,
-      "Czech Republic": 0.0006,
-      "Sweden": 0.0021,
-      "Turkey": 0.0035,
-      "DR Congo": 0.0005,
-      "Norway": 0.0094,
+      "Turkey": 0.0038,
+      "Ivory Coast": 0.0023,
       "Australia": 0.0049,
-      "Ivory Coast": 0.0027,
-      "Paraguay": 0.004,
-      "Uzbekistan": 0.0004,
-      "Panama": 0.0007,
-      "Scotland": 0.001,
-      "Jordan": 0.0002,
-      "Cape Verde": 0.0003
+      "Sweden": 0.0023,
+      "Scotland": 0.0012,
+      "Uzbekistan": 0.0009,
+      "Iraq": 0.0001,
+      "Jordan": 0.0001,
+      "DR Congo": 0.0001
     },
     "advancement": {
-      "Colombia": 0.9917,
-      "Japan": 1.0,
+      "Colombia": 0.9927,
+      "Croatia": 0.8074,
       "Morocco": 1.0,
-      "Australia": 0.8702,
-      "Austria": 0.9773,
-      "Portugal": 0.8813,
-      "Algeria": 0.5069,
-      "Sweden": 0.94,
-      "South Africa": 0.166,
-      "Scotland": 0.766,
-      "Czech Republic": 0.2994,
-      "Uruguay": 0.8014,
-      "Argentina": 0.9999,
+      "Japan": 1.0,
+      "Australia": 0.8815,
+      "Austria": 0.9817,
+      "Portugal": 0.8796,
+      "Senegal": 0.6387,
+      "Brazil": 1.0,
+      "Sweden": 0.9529,
+      "South Africa": 0.1655,
+      "Scotland": 0.8065,
+      "Czech Republic": 0.3047,
+      "Argentina": 1.0,
       "Switzerland": 1.0,
-      "DR Congo": 0.401,
-      "Belgium": 0.8959,
-      "Cape Verde": 0.5823,
+      "DR Congo": 0.4091,
+      "Belgium": 0.8969,
+      "Cape Verde": 0.7543,
       "Mexico": 1.0,
-      "France": 0.9988,
-      "Norway": 0.9919,
-      "Iran": 0.7141,
+      "France": 0.9974,
+      "Norway": 0.9941,
+      "Iran": 0.717,
       "Canada": 1.0,
       "Netherlands": 1.0,
-      "England": 0.999,
-      "New Zealand": 0.2881,
-      "Paraguay": 0.6791,
-      "Brazil": 1.0,
-      "Ivory Coast": 0.9166,
-      "Panama": 0.2484,
+      "England": 0.9992,
+      "New Zealand": 0.2909,
+      "Paraguay": 0.6869,
+      "Ghana": 0.6832,
+      "Ivory Coast": 0.9218,
       "Spain": 1.0,
       "Germany": 1.0,
       "USA": 1.0,
-      "Ecuador": 0.3053,
-      "Egypt": 0.7915,
-      "Ghana": 0.6543,
-      "South Korea": 0.9174,
-      "Senegal": 0.6206,
-      "Bosnia & Herzegovina": 0.3448,
-      "Saudi Arabia": 0.2551,
-      "Curaçao": 0.1632,
-      "Croatia": 0.8025,
-      "Uzbekistan": 0.3668,
-      "Turkey": 0.228,
-      "Qatar": 0.3648,
-      "Iraq": 0.1524,
-      "Jordan": 0.106,
-      "Haiti": 0.012
+      "Ecuador": 0.3065,
+      "Egypt": 0.7921,
+      "South Korea": 0.923,
+      "Bosnia & Herzegovina": 0.3449,
+      "Curaçao": 0.1635,
+      "Uruguay": 0.4183,
+      "Turkey": 0.2432,
+      "Algeria": 0.5247,
+      "Qatar": 0.3652,
+      "Uzbekistan": 0.3745,
+      "Panama": 0.2528,
+      "Saudi Arabia": 0.2532,
+      "Iraq": 0.1548,
+      "Jordan": 0.1088,
+      "Haiti": 0.0125
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Spain",
-    "away": "Saudi Arabia",
-    "home_goals": 4,
-    "away_goals": 0,
+    "home": "Uruguay",
+    "away": "Cape Verde",
+    "home_goals": 2,
+    "away_goals": 2,
     "date": "2026-06-21",
-    "venue": "Atlanta",
+    "venue": "Miami (Miami Gardens)",
     "events": [
       {
         "kind": "goal",
-        "player": "Lamine Yamal",
-        "team": "Spain",
-        "minute": "10'"
-      },
-      {
-        "kind": "goal",
-        "player": "Mikel Oyarzabal",
-        "team": "Spain",
+        "player": "Kevin Pina",
+        "team": "Cape Verde",
         "minute": "21'"
       },
       {
         "kind": "goal",
-        "player": "Mikel Oyarzabal",
-        "team": "Spain",
-        "minute": "24'"
+        "player": "Maxi Araújo",
+        "team": "Uruguay",
+        "minute": "44'"
       },
       {
-        "kind": "own_goal",
-        "player": "Hassan Al-Tambakti",
-        "team": "Spain",
-        "minute": "49'"
+        "kind": "goal",
+        "player": "Agustín Cano",
+        "team": "Uruguay",
+        "minute": "45'+6'"
+      },
+      {
+        "kind": "goal",
+        "player": "Hélio Varela",
+        "team": "Cape Verde",
+        "minute": "61'"
       }
     ]
   },
@@ -2269,6 +2278,36 @@
           "player": "Nathan Ngoy",
           "team": "Belgium",
           "minute": "66'"
+        }
+      ]
+    },
+    "46": {
+      "home_goals": 2,
+      "away_goals": 2,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Kevin Pina",
+          "team": "Cape Verde",
+          "minute": "21'"
+        },
+        {
+          "kind": "goal",
+          "player": "Maxi Araújo",
+          "team": "Uruguay",
+          "minute": "44'"
+        },
+        {
+          "kind": "goal",
+          "player": "Agustín Cano",
+          "team": "Uruguay",
+          "minute": "45'+6'"
+        },
+        {
+          "kind": "goal",
+          "player": "Hélio Varela",
+          "team": "Cape Verde",
+          "minute": "61'"
         }
       ]
     }
@@ -3730,11 +3769,9 @@
             "away": 0.07916212307865665,
             "pick": "Uruguay"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 2,
-          "clock": "90'+6'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -3760,7 +3797,8 @@
               "team": "Cape Verde",
               "minute": "61'"
             }
-          ]
+          ],
+          "hit": false
         },
         {
           "id": "40",
@@ -3780,46 +3818,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "46",
-      "home": "Uruguay",
-      "away": "Cape Verde",
-      "date": "2026-06-21",
-      "venue": "Miami (Miami Gardens)",
-      "kickoff_utc": "2026-06-21T22:00:00Z",
-      "hg": 2,
-      "ag": 2,
-      "status": "LIVE",
-      "clock": "90'+6'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Kevin Pina",
-          "team": "Cape Verde",
-          "minute": "21'"
-        },
-        {
-          "kind": "goal",
-          "player": "Maxi Araújo",
-          "team": "Uruguay",
-          "minute": "44'"
-        },
-        {
-          "kind": "goal",
-          "player": "Agustín Cano",
-          "team": "Uruguay",
-          "minute": "45'+6'"
-        },
-        {
-          "kind": "goal",
-          "player": "Hélio Varela",
-          "team": "Cape Verde",
-          "minute": "61'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -5277,11 +5276,9 @@
             "away": 0.07916212307865665,
             "pick": "Uruguay"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 2,
-          "clock": "90'+6'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -5307,7 +5304,8 @@
               "team": "Cape Verde",
               "minute": "61'"
             }
-          ]
+          ],
+          "hit": false
         },
         {
           "id": "40",
