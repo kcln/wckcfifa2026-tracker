@@ -4083,14 +4083,20 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "45'+4'",
-          "ht": true,
+          "clock": "48'",
+          "ht": false,
           "events": [
             {
               "kind": "goal",
               "player": "Marcus Holmgren Pedersen",
               "team": "Norway",
               "minute": "43'"
+            },
+            {
+              "kind": "goal",
+              "player": "Erling Haaland",
+              "team": "Norway",
+              "minute": "48'"
             }
           ]
         },
@@ -4122,14 +4128,20 @@
       "kickoff_utc": "2026-06-23T00:00:00Z",
       "hg": 1,
       "ag": 0,
-      "status": "HT",
-      "clock": "45'+4'",
+      "status": "LIVE",
+      "clock": "48'",
       "events": [
         {
           "kind": "goal",
           "player": "Marcus Holmgren Pedersen",
           "team": "Norway",
           "minute": "43'"
+        },
+        {
+          "kind": "goal",
+          "player": "Erling Haaland",
+          "team": "Norway",
+          "minute": "48'"
         }
       ]
     }
@@ -5757,14 +5769,20 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "45'+4'",
-          "ht": true,
+          "clock": "48'",
+          "ht": false,
           "events": [
             {
               "kind": "goal",
               "player": "Marcus Holmgren Pedersen",
               "team": "Norway",
               "minute": "43'"
+            },
+            {
+              "kind": "goal",
+              "player": "Erling Haaland",
+              "team": "Norway",
+              "minute": "48'"
             }
           ]
         },
