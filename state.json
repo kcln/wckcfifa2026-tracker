@@ -4300,9 +4300,9 @@
             "pick": "Portugal"
           },
           "status": "live",
-          "hg": 3,
+          "hg": 4,
           "ag": 0,
-          "clock": "57'",
+          "clock": "61'",
           "ht": false,
           "events": [
             {
@@ -4322,6 +4322,12 @@
               "player": "Cristiano Ronaldo",
               "team": "Portugal",
               "minute": "39'"
+            },
+            {
+              "kind": "own_goal",
+              "player": "Abduvohid Nematov",
+              "team": "Portugal",
+              "minute": "60'"
             }
           ]
         },
@@ -4381,10 +4387,10 @@
       "date": "2026-06-23",
       "venue": "Houston",
       "kickoff_utc": "2026-06-23T17:00:00Z",
-      "hg": 3,
+      "hg": 4,
       "ag": 0,
       "status": "LIVE",
-      "clock": "57'",
+      "clock": "61'",
       "events": [
         {
           "kind": "goal",
@@ -4403,6 +4409,12 @@
           "player": "Cristiano Ronaldo",
           "team": "Portugal",
           "minute": "39'"
+        },
+        {
+          "kind": "own_goal",
+          "player": "Abduvohid Nematov",
+          "team": "Portugal",
+          "minute": "60'"
         }
       ]
     }
@@ -6121,9 +6133,9 @@
             "pick": "Portugal"
           },
           "status": "live",
-          "hg": 3,
+          "hg": 4,
           "ag": 0,
-          "clock": "57'",
+          "clock": "61'",
           "ht": false,
           "events": [
             {
@@ -6143,6 +6155,12 @@
               "player": "Cristiano Ronaldo",
               "team": "Portugal",
               "minute": "39'"
+            },
+            {
+              "kind": "own_goal",
+              "player": "Abduvohid Nematov",
+              "team": "Portugal",
+              "minute": "60'"
             }
           ]
         },
