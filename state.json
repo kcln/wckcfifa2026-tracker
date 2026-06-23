@@ -4186,8 +4186,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 1,
-          "clock": "81'",
+          "ag": 2,
+          "clock": "86'",
           "ht": false,
           "events": [
             {
@@ -4201,6 +4201,12 @@
               "player": "Nadhir Benbouali",
               "team": "Algeria",
               "minute": "69'"
+            },
+            {
+              "kind": "goal",
+              "player": "Amine Gouiri",
+              "team": "Algeria",
+              "minute": "82'"
             }
           ]
         }
@@ -4216,9 +4222,9 @@
       "venue": "San Francisco Bay Area (Santa Clara)",
       "kickoff_utc": "2026-06-23T03:00:00Z",
       "hg": 1,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "81'",
+      "clock": "86'",
       "events": [
         {
           "kind": "goal",
@@ -4231,6 +4237,12 @@
           "player": "Nadhir Benbouali",
           "team": "Algeria",
           "minute": "69'"
+        },
+        {
+          "kind": "goal",
+          "player": "Amine Gouiri",
+          "team": "Algeria",
+          "minute": "82'"
         }
       ]
     }
@@ -5907,8 +5919,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 1,
-          "clock": "81'",
+          "ag": 2,
+          "clock": "86'",
           "ht": false,
           "events": [
             {
@@ -5922,6 +5934,12 @@
               "player": "Nadhir Benbouali",
               "team": "Algeria",
               "minute": "69'"
+            },
+            {
+              "kind": "goal",
+              "player": "Amine Gouiri",
+              "team": "Algeria",
+              "minute": "82'"
             }
           ]
         }
