@@ -975,6 +975,15 @@
           "key": "ht-2026-06-22-52",
           "generated_at": "2026-06-22T17:52:30.558422-07:00",
           "kickoff_utc": "2026-06-23T00:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 22\n\nFull time:\nNorway 3 - 2 Senegal\nNew York/New Jersey (East Rutherford), USA\n  ⚽ 43' Marcus Holmgren Pedersen (Norway)\n  ⚽ 48' Erling Haaland (Norway)\n  ⚽ 53' Ismaïla Sarr (Senegal)\n  ⚽ 58' Erling Haaland (Norway)\n  ⚽ 90'+3' Ismaïla Sarr (Senegal)\nOverall prediction: 22/43 (51.2%)\nPrediction ✗: Senegal",
+          "sent": true,
+          "hash": "77bad7cfee9f038a",
+          "key": "pm-2026-06-22-52",
+          "generated_at": "2026-06-22T19:01:14.388295-07:00",
+          "kickoff_utc": "2026-06-23T00:00:00Z"
         }
       ]
     }
@@ -1263,19 +1272,19 @@
       },
       {
         "team": "Norway",
-        "played": 1,
-        "points": 3,
-        "gd": 3,
-        "gf": 4,
-        "ga": 1
+        "played": 2,
+        "points": 6,
+        "gd": 4,
+        "gf": 7,
+        "ga": 3
       },
       {
         "team": "Senegal",
-        "played": 1,
+        "played": 2,
         "points": 0,
-        "gd": -2,
-        "gf": 1,
-        "ga": 3
+        "gd": -3,
+        "gf": 3,
+        "ga": 6
       },
       {
         "team": "Iraq",
@@ -1391,94 +1400,94 @@
   },
   "bracket": {
     "title_odds": {
-      "Brazil": 0.0502,
-      "Argentina": 0.2256,
-      "Mexico": 0.0176,
-      "France": 0.1225,
-      "Portugal": 0.0395,
-      "Germany": 0.0427,
-      "Uruguay": 0.0101,
-      "Croatia": 0.0247,
-      "Australia": 0.0044,
-      "Spain": 0.1554,
-      "Belgium": 0.0175,
-      "Morocco": 0.0228,
-      "Colombia": 0.0582,
-      "Japan": 0.0305,
-      "England": 0.0478,
-      "Netherlands": 0.0345,
-      "Canada": 0.0089,
-      "Norway": 0.0076,
-      "Iran": 0.0082,
-      "Ecuador": 0.0085,
-      "Switzerland": 0.0146,
-      "Paraguay": 0.004,
-      "South Korea": 0.0058,
-      "Senegal": 0.0105,
-      "Algeria": 0.0026,
-      "Austria": 0.0064,
-      "Egypt": 0.0045,
-      "Ivory Coast": 0.0033,
-      "Turkey": 0.0046,
-      "Sweden": 0.0018,
-      "Uzbekistan": 0.0014,
-      "Czech Republic": 0.0007,
-      "Panama": 0.0006,
+      "Brazil": 0.0489,
+      "Japan": 0.0281,
+      "England": 0.0496,
+      "Argentina": 0.231,
+      "France": 0.1263,
+      "Spain": 0.1582,
+      "Portugal": 0.0404,
+      "Austria": 0.0061,
+      "Senegal": 0.0094,
+      "Morocco": 0.0237,
+      "Belgium": 0.0178,
+      "Uruguay": 0.0122,
+      "Norway": 0.0078,
+      "Algeria": 0.0024,
+      "Ecuador": 0.0082,
+      "Colombia": 0.0532,
+      "Uzbekistan": 0.0011,
+      "Netherlands": 0.0346,
+      "Croatia": 0.024,
+      "Germany": 0.0409,
+      "Switzerland": 0.0141,
+      "Sweden": 0.0017,
+      "Ivory Coast": 0.0024,
+      "Australia": 0.0043,
+      "Mexico": 0.0185,
+      "Paraguay": 0.0042,
+      "South Korea": 0.0055,
+      "Canada": 0.0056,
+      "Iran": 0.008,
+      "Egypt": 0.0031,
+      "Turkey": 0.006,
       "Scotland": 0.0012,
-      "Cape Verde": 0.0002,
-      "Jordan": 0.0002,
-      "Ghana": 0.0001,
-      "DR Congo": 0.0002,
-      "USA": 0.0001
+      "Czech Republic": 0.0004,
+      "South Africa": 0.0001,
+      "Qatar": 0.0001,
+      "Panama": 0.0006,
+      "Iraq": 0.0001,
+      "Cape Verde": 0.0001,
+      "DR Congo": 0.0001
     },
     "advancement": {
       "Spain": 1.0,
-      "Czech Republic": 0.3032,
-      "Belgium": 0.91,
+      "Czech Republic": 0.31,
+      "Belgium": 0.9111,
       "Morocco": 1.0,
-      "Paraguay": 0.6914,
-      "DR Congo": 0.4146,
+      "Paraguay": 0.6975,
+      "DR Congo": 0.4086,
       "Germany": 1.0,
-      "Scotland": 0.8053,
-      "Saudi Arabia": 0.2598,
+      "Scotland": 0.8322,
+      "Saudi Arabia": 0.26,
       "Argentina": 1.0,
       "Switzerland": 1.0,
-      "Norway": 0.9981,
-      "Ghana": 0.6824,
+      "Norway": 1.0,
+      "Ghana": 0.692,
       "France": 1.0,
-      "Croatia": 0.8067,
+      "Croatia": 0.8178,
       "Brazil": 1.0,
       "Mexico": 1.0,
       "Japan": 1.0,
-      "South Africa": 0.1655,
-      "Ivory Coast": 0.9235,
-      "Austria": 0.9581,
-      "Australia": 0.884,
-      "Uruguay": 0.4198,
-      "Jordan": 0.1141,
+      "South Africa": 0.1657,
+      "Ivory Coast": 0.9277,
+      "Austria": 0.9624,
+      "Senegal": 0.4979,
+      "Australia": 0.8874,
+      "Uruguay": 0.4378,
       "Egypt": 1.0,
       "Netherlands": 1.0,
-      "Sweden": 0.9599,
+      "Sweden": 0.9713,
       "Canada": 1.0,
       "USA": 1.0,
-      "Colombia": 0.9919,
+      "Colombia": 0.9925,
       "England": 0.9987,
-      "Portugal": 0.8821,
-      "Bosnia & Herzegovina": 0.3444,
-      "Ecuador": 0.3082,
-      "Iran": 0.727,
-      "South Korea": 0.9247,
-      "Senegal": 0.6842,
-      "Cape Verde": 0.7482,
-      "Algeria": 0.5312,
-      "Turkey": 0.2493,
-      "Curaçao": 0.1634,
-      "Qatar": 0.3657,
-      "Uzbekistan": 0.3816,
-      "Panama": 0.2586,
-      "New Zealand": 0.091,
-      "Iraq": 0.0404,
-      "Haiti": 0.013
+      "Portugal": 0.8847,
+      "Algeria": 0.5483,
+      "Bosnia & Herzegovina": 0.3456,
+      "Uzbekistan": 0.3888,
+      "Ecuador": 0.3113,
+      "Iran": 0.7307,
+      "South Korea": 0.9305,
+      "Cape Verde": 0.7489,
+      "Turkey": 0.2543,
+      "Curaçao": 0.1636,
+      "Qatar": 0.3661,
+      "Panama": 0.2634,
+      "Jordan": 0.121,
+      "New Zealand": 0.0912,
+      "Iraq": 0.0689,
+      "Haiti": 0.0121
     }
   },
   "season_ended": false,
@@ -2456,6 +2465,42 @@
           "player": "Ousmane Dembélé",
           "team": "France",
           "minute": "66'"
+        }
+      ]
+    },
+    "52": {
+      "home_goals": 3,
+      "away_goals": 2,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Marcus Holmgren Pedersen",
+          "team": "Norway",
+          "minute": "43'"
+        },
+        {
+          "kind": "goal",
+          "player": "Erling Haaland",
+          "team": "Norway",
+          "minute": "48'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ismaïla Sarr",
+          "team": "Senegal",
+          "minute": "53'"
+        },
+        {
+          "kind": "goal",
+          "player": "Erling Haaland",
+          "team": "Norway",
+          "minute": "58'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ismaïla Sarr",
+          "team": "Senegal",
+          "minute": "90'+3'"
         }
       ]
     }
@@ -4080,11 +4125,9 @@
             "away": 0.4310193553913809,
             "pick": "Senegal"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 3,
           "ag": 2,
-          "clock": "90'+8'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -4116,7 +4159,8 @@
               "team": "Senegal",
               "minute": "90'+3'"
             }
-          ]
+          ],
+          "hit": false
         },
         {
           "id": "58",
@@ -4136,52 +4180,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "52",
-      "home": "Norway",
-      "away": "Senegal",
-      "date": "2026-06-22",
-      "venue": "New York/New Jersey (East Rutherford)",
-      "kickoff_utc": "2026-06-23T00:00:00Z",
-      "hg": 3,
-      "ag": 2,
-      "status": "LIVE",
-      "clock": "90'+8'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Marcus Holmgren Pedersen",
-          "team": "Norway",
-          "minute": "43'"
-        },
-        {
-          "kind": "goal",
-          "player": "Erling Haaland",
-          "team": "Norway",
-          "minute": "48'"
-        },
-        {
-          "kind": "goal",
-          "player": "Ismaïla Sarr",
-          "team": "Senegal",
-          "minute": "53'"
-        },
-        {
-          "kind": "goal",
-          "player": "Erling Haaland",
-          "team": "Norway",
-          "minute": "58'"
-        },
-        {
-          "kind": "goal",
-          "player": "Ismaïla Sarr",
-          "team": "Senegal",
-          "minute": "90'+3'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -5802,11 +5801,9 @@
             "away": 0.4310193553913809,
             "pick": "Senegal"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 3,
           "ag": 2,
-          "clock": "90'+8'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -5838,7 +5835,8 @@
               "team": "Senegal",
               "minute": "90'+3'"
             }
-          ]
+          ],
+          "hit": false
         },
         {
           "id": "58",
