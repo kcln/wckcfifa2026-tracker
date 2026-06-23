@@ -4001,7 +4001,7 @@
           "status": "live",
           "hg": 3,
           "ag": 0,
-          "clock": "86'",
+          "clock": "90'+1'",
           "ht": false,
           "events": [
             {
@@ -4038,11 +4038,18 @@
             "pick": "Senegal"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "42'",
+          "clock": "45'+1'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Marcus Holmgren Pedersen",
+              "team": "Norway",
+              "minute": "43'"
+            }
+          ]
         },
         {
           "id": "58",
@@ -4073,7 +4080,7 @@
       "hg": 3,
       "ag": 0,
       "status": "LIVE",
-      "clock": "86'",
+      "clock": "90'+1'",
       "events": [
         {
           "kind": "goal",
@@ -4102,11 +4109,18 @@
       "date": "2026-06-22",
       "venue": "New York/New Jersey (East Rutherford)",
       "kickoff_utc": "2026-06-23T00:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "42'",
-      "events": []
+      "clock": "45'+1'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Marcus Holmgren Pedersen",
+          "team": "Norway",
+          "minute": "43'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -5694,7 +5708,7 @@
           "status": "live",
           "hg": 3,
           "ag": 0,
-          "clock": "86'",
+          "clock": "90'+1'",
           "ht": false,
           "events": [
             {
@@ -5731,11 +5745,18 @@
             "pick": "Senegal"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "42'",
+          "clock": "45'+1'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Marcus Holmgren Pedersen",
+              "team": "Norway",
+              "minute": "43'"
+            }
+          ]
         },
         {
           "id": "58",
