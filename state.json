@@ -3999,9 +3999,9 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 0,
-          "clock": "63'",
+          "clock": "67'",
           "ht": false,
           "events": [
             {
@@ -4015,6 +4015,12 @@
               "player": "Kylian Mbappé",
               "team": "France",
               "minute": "54'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ousmane Dembélé",
+              "team": "France",
+              "minute": "66'"
             }
           ]
         },
@@ -4034,7 +4040,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "19'",
+          "clock": "23'",
           "ht": false,
           "events": []
         },
@@ -4064,10 +4070,10 @@
       "date": "2026-06-22",
       "venue": "Philadelphia",
       "kickoff_utc": "2026-06-22T21:00:00Z",
-      "hg": 2,
+      "hg": 3,
       "ag": 0,
       "status": "LIVE",
-      "clock": "63'",
+      "clock": "67'",
       "events": [
         {
           "kind": "goal",
@@ -4080,6 +4086,12 @@
           "player": "Kylian Mbappé",
           "team": "France",
           "minute": "54'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ousmane Dembélé",
+          "team": "France",
+          "minute": "66'"
         }
       ]
     },
@@ -4093,7 +4105,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "19'",
+      "clock": "23'",
       "events": []
     }
   ],
@@ -5680,9 +5692,9 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 0,
-          "clock": "63'",
+          "clock": "67'",
           "ht": false,
           "events": [
             {
@@ -5696,6 +5708,12 @@
               "player": "Kylian Mbappé",
               "team": "France",
               "minute": "54'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ousmane Dembélé",
+              "team": "France",
+              "minute": "66'"
             }
           ]
         },
@@ -5715,7 +5733,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "19'",
+          "clock": "23'",
           "ht": false,
           "events": []
         },
