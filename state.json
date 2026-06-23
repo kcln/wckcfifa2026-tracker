@@ -4176,11 +4176,18 @@
             "pick": "Algeria"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "35'",
+          "clock": "39'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Nizar Al-Rashdan",
+              "team": "Jordan",
+              "minute": "36'"
+            }
+          ]
         }
       ]
     }
@@ -4193,11 +4200,18 @@
       "date": "2026-06-22",
       "venue": "San Francisco Bay Area (Santa Clara)",
       "kickoff_utc": "2026-06-23T03:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "35'",
-      "events": []
+      "clock": "39'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Nizar Al-Rashdan",
+          "team": "Jordan",
+          "minute": "36'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -5871,11 +5885,18 @@
             "pick": "Algeria"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "35'",
+          "clock": "39'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Nizar Al-Rashdan",
+              "team": "Jordan",
+              "minute": "36'"
+            }
+          ]
         }
       ]
     },
