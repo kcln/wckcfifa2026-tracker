@@ -4292,8 +4292,8 @@
           },
           "status": "live",
           "hg": 2,
-          "ag": 0,
-          "clock": "27'",
+          "ag": 1,
+          "clock": "31'",
           "ht": false,
           "events": [
             {
@@ -4307,6 +4307,12 @@
               "player": "Nuno Mendes",
               "team": "Portugal",
               "minute": "17'"
+            },
+            {
+              "kind": "goal",
+              "player": "Azizjon Ganiev",
+              "team": "Uzbekistan",
+              "minute": "29'"
             }
           ]
         },
@@ -4367,9 +4373,9 @@
       "venue": "Houston",
       "kickoff_utc": "2026-06-23T17:00:00Z",
       "hg": 2,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "27'",
+      "clock": "31'",
       "events": [
         {
           "kind": "goal",
@@ -4382,6 +4388,12 @@
           "player": "Nuno Mendes",
           "team": "Portugal",
           "minute": "17'"
+        },
+        {
+          "kind": "goal",
+          "player": "Azizjon Ganiev",
+          "team": "Uzbekistan",
+          "minute": "29'"
         }
       ]
     }
@@ -6101,8 +6113,8 @@
           },
           "status": "live",
           "hg": 2,
-          "ag": 0,
-          "clock": "27'",
+          "ag": 1,
+          "clock": "31'",
           "ht": false,
           "events": [
             {
@@ -6116,6 +6128,12 @@
               "player": "Nuno Mendes",
               "team": "Portugal",
               "minute": "17'"
+            },
+            {
+              "kind": "goal",
+              "player": "Azizjon Ganiev",
+              "team": "Uzbekistan",
+              "minute": "29'"
             }
           ]
         },
