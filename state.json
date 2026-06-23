@@ -4414,7 +4414,12 @@
             "away": 0.5241329628486158,
             "pick": "Croatia"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "64",
@@ -4434,7 +4439,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "70",
+      "home": "Panama",
+      "away": "Croatia",
+      "date": "2026-06-23",
+      "venue": "Toronto",
+      "kickoff_utc": "2026-06-23T23:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "1'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -6217,7 +6236,12 @@
             "away": 0.5241329628486158,
             "pick": "Croatia"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "64",
