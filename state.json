@@ -4186,8 +4186,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 0,
-          "clock": "66'",
+          "ag": 1,
+          "clock": "70'",
           "ht": false,
           "events": [
             {
@@ -4195,6 +4195,12 @@
               "player": "Nizar Al-Rashdan",
               "team": "Jordan",
               "minute": "36'"
+            },
+            {
+              "kind": "goal",
+              "player": "Nadhir Benbouali",
+              "team": "Algeria",
+              "minute": "69'"
             }
           ]
         }
@@ -4210,15 +4216,21 @@
       "venue": "San Francisco Bay Area (Santa Clara)",
       "kickoff_utc": "2026-06-23T03:00:00Z",
       "hg": 1,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "66'",
+      "clock": "70'",
       "events": [
         {
           "kind": "goal",
           "player": "Nizar Al-Rashdan",
           "team": "Jordan",
           "minute": "36'"
+        },
+        {
+          "kind": "goal",
+          "player": "Nadhir Benbouali",
+          "team": "Algeria",
+          "minute": "69'"
         }
       ]
     }
@@ -5895,8 +5907,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 0,
-          "clock": "66'",
+          "ag": 1,
+          "clock": "70'",
           "ht": false,
           "events": [
             {
@@ -5904,6 +5916,12 @@
               "player": "Nizar Al-Rashdan",
               "team": "Jordan",
               "minute": "36'"
+            },
+            {
+              "kind": "goal",
+              "player": "Nadhir Benbouali",
+              "team": "Algeria",
+              "minute": "69'"
             }
           ]
         }
