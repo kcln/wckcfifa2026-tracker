@@ -1061,6 +1061,15 @@
           "key": "pm-2026-06-23-69",
           "generated_at": "2026-06-23T15:03:55.895108-07:00",
           "kickoff_utc": "2026-06-23T20:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nTuesday, June 23\n\nHalf-time:\nPanama 0 - 0 Croatia\nToronto, Canada\nPrediction: Croatia",
+          "sent": true,
+          "hash": "2ec42f2f110bf163",
+          "key": "ht-2026-06-23-70",
+          "generated_at": "2026-06-23T16:52:13.712192-07:00",
+          "kickoff_utc": "2026-06-23T23:00:00Z"
         }
       ]
     }
@@ -4418,7 +4427,7 @@
           "hg": 0,
           "ag": 0,
           "clock": "45'+3'",
-          "ht": false,
+          "ht": true,
           "events": []
         },
         {
@@ -4449,7 +4458,7 @@
       "kickoff_utc": "2026-06-23T23:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+3'",
       "events": []
     }
@@ -6240,7 +6249,7 @@
           "hg": 0,
           "ag": 0,
           "clock": "45'+3'",
-          "ht": false,
+          "ht": true,
           "events": []
         },
         {
