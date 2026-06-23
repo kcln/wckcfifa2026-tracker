@@ -4291,11 +4291,18 @@
             "pick": "Portugal"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "3'",
+          "clock": "8'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Cristiano Ronaldo",
+              "team": "Portugal",
+              "minute": "6'"
+            }
+          ]
         },
         {
           "id": "69",
@@ -4353,11 +4360,18 @@
       "date": "2026-06-23",
       "venue": "Houston",
       "kickoff_utc": "2026-06-23T17:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "3'",
-      "events": []
+      "clock": "8'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Cristiano Ronaldo",
+          "team": "Portugal",
+          "minute": "6'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -6074,11 +6088,18 @@
             "pick": "Portugal"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "3'",
+          "clock": "8'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Cristiano Ronaldo",
+              "team": "Portugal",
+              "minute": "6'"
+            }
+          ]
         },
         {
           "id": "69",
