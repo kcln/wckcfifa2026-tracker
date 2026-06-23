@@ -1043,6 +1043,15 @@
           "key": "pm-2026-06-23-63",
           "generated_at": "2026-06-23T12:03:33.468163-07:00",
           "kickoff_utc": "2026-06-23T17:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nTuesday, June 23\n\nHalf-time:\nEngland 0 - 0 Ghana\nBoston (Foxborough), USA\nPrediction: England",
+          "sent": true,
+          "hash": "a5b6506cc244f04a",
+          "key": "ht-2026-06-23-69",
+          "generated_at": "2026-06-23T13:54:44.151310-07:00",
+          "kickoff_utc": "2026-06-23T20:00:00Z"
         }
       ]
     }
@@ -4404,8 +4413,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+6'",
-          "ht": false,
+          "clock": "45'+7'",
+          "ht": true,
           "events": []
         },
         {
@@ -4451,8 +4460,8 @@
       "kickoff_utc": "2026-06-23T20:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+6'",
+      "status": "HT",
+      "clock": "45'+7'",
       "events": []
     }
   ],
@@ -6222,8 +6231,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+6'",
-          "ht": false,
+          "clock": "45'+7'",
+          "ht": true,
           "events": []
         },
         {
