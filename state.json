@@ -1034,6 +1034,15 @@
           "key": "ht-2026-06-23-63",
           "generated_at": "2026-06-23T10:54:06.128978-07:00",
           "kickoff_utc": "2026-06-23T17:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nTuesday, June 23\n\nFull time:\nPortugal 5 - 0 Uzbekistan\nHouston, USA\n  ⚽ 6' Cristiano Ronaldo (Portugal)\n  ⚽ 17' Nuno Mendes (Portugal)\n  ⚽ 39' Cristiano Ronaldo (Portugal)\n  ⚽ 60' Abduvohid Nematov (Portugal, OG)\n  ⚽ 87' Rafael Leão (Portugal)\nOverall prediction: 24/45 (53.3%)\nPrediction ✓: Portugal",
+          "sent": true,
+          "hash": "dabf0c8498a0726b",
+          "key": "pm-2026-06-23-63",
+          "generated_at": "2026-06-23T12:03:33.468163-07:00",
+          "kickoff_utc": "2026-06-23T17:00:00Z"
         }
       ]
     }
@@ -1381,6 +1390,14 @@
     ],
     "K": [
       {
+        "team": "Portugal",
+        "played": 2,
+        "points": 4,
+        "gd": 5,
+        "gf": 6,
+        "ga": 1
+      },
+      {
         "team": "Colombia",
         "played": 1,
         "points": 3,
@@ -1397,20 +1414,12 @@
         "ga": 1
       },
       {
-        "team": "Portugal",
-        "played": 1,
-        "points": 1,
-        "gd": 0,
-        "gf": 1,
-        "ga": 1
-      },
-      {
         "team": "Uzbekistan",
-        "played": 1,
+        "played": 2,
         "points": 0,
-        "gd": -2,
+        "gd": -7,
         "gf": 1,
-        "ga": 3
+        "ga": 8
       }
     ],
     "L": [
@@ -1450,123 +1459,130 @@
   },
   "bracket": {
     "title_odds": {
-      "Brazil": 0.0466,
-      "Belgium": 0.0173,
-      "France": 0.1199,
-      "Croatia": 0.0221,
-      "Spain": 0.1536,
-      "Argentina": 0.2377,
-      "Portugal": 0.0421,
-      "Sweden": 0.0029,
+      "Switzerland": 0.0121,
+      "Mexico": 0.0195,
+      "Argentina": 0.236,
+      "Spain": 0.1518,
+      "France": 0.1279,
+      "Morocco": 0.0224,
+      "Colombia": 0.0529,
+      "Brazil": 0.0477,
       "Netherlands": 0.0336,
-      "Germany": 0.0408,
-      "Japan": 0.0313,
-      "Morocco": 0.023,
-      "England": 0.0504,
-      "Colombia": 0.051,
-      "Senegal": 0.0121,
-      "Mexico": 0.0184,
-      "Algeria": 0.0043,
-      "Ecuador": 0.0074,
-      "Switzerland": 0.0148,
-      "Uruguay": 0.0126,
-      "Norway": 0.0099,
-      "South Korea": 0.0044,
-      "Canada": 0.0078,
-      "Austria": 0.0075,
-      "Iran": 0.0068,
-      "Turkey": 0.0039,
-      "Ivory Coast": 0.0023,
-      "Panama": 0.0013,
-      "Egypt": 0.004,
-      "Paraguay": 0.0031,
-      "Australia": 0.0034,
-      "Czech Republic": 0.0006,
-      "Uzbekistan": 0.001,
-      "Scotland": 0.0011,
-      "South Africa": 0.0001,
-      "Iraq": 0.0001,
-      "Cape Verde": 0.0003,
-      "DR Congo": 0.0003,
-      "Saudi Arabia": 0.0001,
-      "Ghana": 0.0001
+      "Portugal": 0.0499,
+      "England": 0.0497,
+      "Australia": 0.0042,
+      "Germany": 0.0395,
+      "Czech Republic": 0.0004,
+      "Ecuador": 0.0078,
+      "Uruguay": 0.0099,
+      "South Korea": 0.0052,
+      "Belgium": 0.0176,
+      "Iran": 0.0076,
+      "Japan": 0.0266,
+      "Senegal": 0.011,
+      "Norway": 0.0078,
+      "Croatia": 0.0232,
+      "Turkey": 0.0053,
+      "Algeria": 0.0041,
+      "Canada": 0.0066,
+      "Sweden": 0.0024,
+      "Panama": 0.0006,
+      "Egypt": 0.0039,
+      "Austria": 0.0055,
+      "Ivory Coast": 0.0021,
+      "Cape Verde": 0.0002,
+      "Paraguay": 0.0035,
+      "Scotland": 0.0013,
+      "DR Congo": 0.0002
     },
     "advancement": {
       "Germany": 1.0,
-      "Croatia": 0.8161,
+      "Croatia": 0.8224,
       "Argentina": 1.0,
       "Norway": 1.0,
       "Mexico": 1.0,
-      "Austria": 0.9594,
+      "Austria": 0.963,
       "France": 1.0,
-      "Czech Republic": 0.2986,
-      "Australia": 0.8845,
-      "Sweden": 0.9683,
-      "Scotland": 0.8336,
+      "Czech Republic": 0.2945,
+      "Australia": 0.8913,
+      "Sweden": 0.9735,
+      "Scotland": 0.8577,
       "Brazil": 1.0,
       "Canada": 1.0,
-      "Ivory Coast": 0.9266,
-      "South Africa": 0.1656,
+      "Ivory Coast": 0.9307,
+      "South Africa": 0.1653,
       "Saudi Arabia": 0.2598,
-      "Panama": 0.265,
       "Egypt": 1.0,
-      "England": 0.9991,
-      "Senegal": 0.4901,
-      "Portugal": 0.8807,
-      "Algeria": 0.7513,
+      "England": 0.9984,
+      "Senegal": 0.5023,
+      "Portugal": 1.0,
+      "Algeria": 0.8015,
+      "Ghana": 0.7244,
       "Netherlands": 1.0,
-      "Paraguay": 0.6936,
-      "Uruguay": 0.4178,
+      "Paraguay": 0.7065,
+      "Uruguay": 0.4099,
       "Switzerland": 1.0,
       "Japan": 1.0,
       "Morocco": 1.0,
       "Spain": 1.0,
       "USA": 1.0,
-      "Colombia": 0.9926,
-      "Belgium": 0.9107,
-      "Ecuador": 0.3044,
-      "Cape Verde": 0.7476,
-      "South Korea": 0.9279,
-      "Ghana": 0.6965,
-      "Iran": 0.7249,
+      "Colombia": 0.9987,
+      "Belgium": 0.9105,
+      "Ecuador": 0.3049,
+      "Cape Verde": 0.7454,
+      "South Korea": 0.9328,
+      "Iran": 0.722,
       "Bosnia & Herzegovina": 0.344,
-      "Curaçao": 0.1635,
-      "DR Congo": 0.4,
-      "Turkey": 0.2532,
-      "Qatar": 0.3659,
-      "Uzbekistan": 0.3891,
-      "New Zealand": 0.091,
-      "Iraq": 0.0606,
-      "Haiti": 0.0125,
-      "Jordan": 0.0055
+      "Curaçao": 0.1636,
+      "Turkey": 0.2657,
+      "DR Congo": 0.3964,
+      "Qatar": 0.3661,
+      "Uzbekistan": 0.1088,
+      "New Zealand": 0.0906,
+      "Panama": 0.2518,
+      "Iraq": 0.0782,
+      "Haiti": 0.0135,
+      "Jordan": 0.0058
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Jordan",
-    "away": "Algeria",
-    "home_goals": 1,
-    "away_goals": 2,
-    "date": "2026-06-22",
-    "venue": "San Francisco Bay Area (Santa Clara)",
+    "home": "Portugal",
+    "away": "Uzbekistan",
+    "home_goals": 5,
+    "away_goals": 0,
+    "date": "2026-06-23",
+    "venue": "Houston",
     "events": [
       {
         "kind": "goal",
-        "player": "Nizar Al-Rashdan",
-        "team": "Jordan",
-        "minute": "36'"
+        "player": "Cristiano Ronaldo",
+        "team": "Portugal",
+        "minute": "6'"
       },
       {
         "kind": "goal",
-        "player": "Nadhir Benbouali",
-        "team": "Algeria",
-        "minute": "69'"
+        "player": "Nuno Mendes",
+        "team": "Portugal",
+        "minute": "17'"
       },
       {
         "kind": "goal",
-        "player": "Amine Gouiri",
-        "team": "Algeria",
-        "minute": "82'"
+        "player": "Cristiano Ronaldo",
+        "team": "Portugal",
+        "minute": "39'"
+      },
+      {
+        "kind": "own_goal",
+        "player": "Abduvohid Nematov",
+        "team": "Portugal",
+        "minute": "60'"
+      },
+      {
+        "kind": "goal",
+        "player": "Rafael Leão",
+        "team": "Portugal",
+        "minute": "87'"
       }
     ]
   },
@@ -2582,6 +2598,42 @@
           "player": "Amine Gouiri",
           "team": "Algeria",
           "minute": "82'"
+        }
+      ]
+    },
+    "63": {
+      "home_goals": 5,
+      "away_goals": 0,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Cristiano Ronaldo",
+          "team": "Portugal",
+          "minute": "6'"
+        },
+        {
+          "kind": "goal",
+          "player": "Nuno Mendes",
+          "team": "Portugal",
+          "minute": "17'"
+        },
+        {
+          "kind": "goal",
+          "player": "Cristiano Ronaldo",
+          "team": "Portugal",
+          "minute": "39'"
+        },
+        {
+          "kind": "own_goal",
+          "player": "Abduvohid Nematov",
+          "team": "Portugal",
+          "minute": "60'"
+        },
+        {
+          "kind": "goal",
+          "player": "Rafael Leão",
+          "team": "Portugal",
+          "minute": "87'"
         }
       ]
     }
@@ -4299,11 +4351,9 @@
             "away": 0.08555471393242095,
             "pick": "Portugal"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 5,
           "ag": 0,
-          "clock": "90'+6'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -4335,7 +4385,8 @@
               "team": "Portugal",
               "minute": "87'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "69",
@@ -4385,52 +4436,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "63",
-      "home": "Portugal",
-      "away": "Uzbekistan",
-      "date": "2026-06-23",
-      "venue": "Houston",
-      "kickoff_utc": "2026-06-23T17:00:00Z",
-      "hg": 5,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "90'+6'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Cristiano Ronaldo",
-          "team": "Portugal",
-          "minute": "6'"
-        },
-        {
-          "kind": "goal",
-          "player": "Nuno Mendes",
-          "team": "Portugal",
-          "minute": "17'"
-        },
-        {
-          "kind": "goal",
-          "player": "Cristiano Ronaldo",
-          "team": "Portugal",
-          "minute": "39'"
-        },
-        {
-          "kind": "own_goal",
-          "player": "Abduvohid Nematov",
-          "team": "Portugal",
-          "minute": "60'"
-        },
-        {
-          "kind": "goal",
-          "player": "Rafael Leão",
-          "team": "Portugal",
-          "minute": "87'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -6144,11 +6150,9 @@
             "away": 0.08555471393242095,
             "pick": "Portugal"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 5,
           "ag": 0,
-          "clock": "90'+6'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -6180,7 +6184,8 @@
               "team": "Portugal",
               "minute": "87'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "69",
