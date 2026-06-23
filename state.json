@@ -4290,7 +4290,12 @@
             "away": 0.08555471393242095,
             "pick": "Portugal"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "69",
@@ -4340,7 +4345,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "63",
+      "home": "Portugal",
+      "away": "Uzbekistan",
+      "date": "2026-06-23",
+      "venue": "Houston",
+      "kickoff_utc": "2026-06-23T17:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -6054,7 +6073,12 @@
             "away": 0.08555471393242095,
             "pick": "Portugal"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "69",
