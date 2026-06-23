@@ -1052,6 +1052,15 @@
           "key": "ht-2026-06-23-69",
           "generated_at": "2026-06-23T13:54:44.151310-07:00",
           "kickoff_utc": "2026-06-23T20:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nTuesday, June 23\n\nFull time:\nEngland 0 - 0 Ghana\nBoston (Foxborough), USA\nOverall prediction: 24/46 (52.2%)\nPrediction ✗: England",
+          "sent": true,
+          "hash": "f1618a9b093bec47",
+          "key": "pm-2026-06-23-69",
+          "generated_at": "2026-06-23T15:03:55.895108-07:00",
+          "kickoff_utc": "2026-06-23T20:00:00Z"
         }
       ]
     }
@@ -1434,16 +1443,16 @@
     "L": [
       {
         "team": "England",
-        "played": 1,
-        "points": 3,
+        "played": 2,
+        "points": 4,
         "gd": 2,
         "gf": 4,
         "ga": 2
       },
       {
         "team": "Ghana",
-        "played": 1,
-        "points": 3,
+        "played": 2,
+        "points": 4,
         "gd": 1,
         "gf": 1,
         "ga": 0
@@ -1468,132 +1477,104 @@
   },
   "bracket": {
     "title_odds": {
-      "Switzerland": 0.0121,
-      "Mexico": 0.0195,
-      "Argentina": 0.236,
-      "Spain": 0.1518,
-      "France": 0.1279,
-      "Morocco": 0.0224,
-      "Colombia": 0.0529,
-      "Brazil": 0.0477,
-      "Netherlands": 0.0336,
-      "Portugal": 0.0499,
-      "England": 0.0497,
-      "Australia": 0.0042,
-      "Germany": 0.0395,
-      "Czech Republic": 0.0004,
-      "Ecuador": 0.0078,
-      "Uruguay": 0.0099,
-      "South Korea": 0.0052,
-      "Belgium": 0.0176,
-      "Iran": 0.0076,
-      "Japan": 0.0266,
-      "Senegal": 0.011,
-      "Norway": 0.0078,
-      "Croatia": 0.0232,
-      "Turkey": 0.0053,
-      "Algeria": 0.0041,
-      "Canada": 0.0066,
-      "Sweden": 0.0024,
+      "Switzerland": 0.0116,
+      "Spain": 0.1511,
+      "Argentina": 0.2299,
+      "Colombia": 0.051,
+      "Ivory Coast": 0.0027,
+      "Turkey": 0.0051,
+      "France": 0.1253,
+      "Brazil": 0.0497,
+      "Morocco": 0.024,
+      "Senegal": 0.0122,
+      "Germany": 0.0432,
+      "Portugal": 0.0522,
+      "Austria": 0.0064,
+      "Norway": 0.0086,
+      "Mexico": 0.0201,
+      "Croatia": 0.0238,
+      "Netherlands": 0.0288,
+      "Belgium": 0.0203,
+      "Canada": 0.0068,
+      "South Korea": 0.0067,
+      "Japan": 0.0283,
+      "Scotland": 0.0008,
+      "England": 0.0453,
       "Panama": 0.0006,
-      "Egypt": 0.0039,
-      "Austria": 0.0055,
-      "Ivory Coast": 0.0021,
+      "Egypt": 0.0034,
+      "Ecuador": 0.0065,
+      "Iran": 0.0084,
+      "Sweden": 0.0021,
+      "Uruguay": 0.0119,
+      "Algeria": 0.0043,
+      "Paraguay": 0.0033,
+      "Czech Republic": 0.001,
+      "Haiti": 0.0001,
       "Cape Verde": 0.0002,
-      "Paraguay": 0.0035,
-      "Scotland": 0.0013,
-      "DR Congo": 0.0002
+      "Saudi Arabia": 0.0002,
+      "DR Congo": 0.0006,
+      "Australia": 0.0034,
+      "Uzbekistan": 0.0001
     },
     "advancement": {
       "Germany": 1.0,
-      "Croatia": 0.8224,
+      "Croatia": 0.751,
       "Argentina": 1.0,
       "Norway": 1.0,
       "Mexico": 1.0,
-      "Austria": 0.963,
+      "Austria": 0.9477,
       "France": 1.0,
-      "Czech Republic": 0.2945,
-      "Australia": 0.8913,
-      "Sweden": 0.9735,
-      "Scotland": 0.8577,
+      "Czech Republic": 0.2944,
+      "Australia": 0.8761,
+      "Sweden": 0.9546,
+      "Scotland": 0.8309,
       "Brazil": 1.0,
       "Canada": 1.0,
-      "Ivory Coast": 0.9307,
+      "Ivory Coast": 0.9256,
       "South Africa": 0.1653,
       "Saudi Arabia": 0.2598,
       "Egypt": 1.0,
-      "England": 0.9984,
-      "Senegal": 0.5023,
+      "England": 1.0,
+      "Senegal": 0.4757,
       "Portugal": 1.0,
-      "Algeria": 0.8015,
-      "Ghana": 0.7244,
+      "Algeria": 0.7941,
+      "Ghana": 0.9863,
       "Netherlands": 1.0,
-      "Paraguay": 0.7065,
-      "Uruguay": 0.4099,
+      "Paraguay": 0.7062,
+      "Uruguay": 0.4083,
       "Switzerland": 1.0,
       "Japan": 1.0,
       "Morocco": 1.0,
       "Spain": 1.0,
       "USA": 1.0,
-      "Colombia": 0.9987,
-      "Belgium": 0.9105,
-      "Ecuador": 0.3049,
-      "Cape Verde": 0.7454,
-      "South Korea": 0.9328,
-      "Iran": 0.722,
-      "Bosnia & Herzegovina": 0.344,
-      "Curaçao": 0.1636,
-      "Turkey": 0.2657,
-      "DR Congo": 0.3964,
-      "Qatar": 0.3661,
-      "Uzbekistan": 0.1088,
+      "Colombia": 0.9981,
+      "Belgium": 0.91,
+      "Ecuador": 0.3048,
+      "Cape Verde": 0.7452,
+      "South Korea": 0.9265,
+      "Iran": 0.7204,
+      "Bosnia & Herzegovina": 0.3442,
+      "Curaçao": 0.1632,
+      "Turkey": 0.2557,
+      "DR Congo": 0.3966,
+      "Qatar": 0.3657,
+      "Uzbekistan": 0.1098,
+      "Panama": 0.1962,
       "New Zealand": 0.0906,
-      "Panama": 0.2518,
-      "Iraq": 0.0782,
-      "Haiti": 0.0135,
-      "Jordan": 0.0058
+      "Iraq": 0.0789,
+      "Haiti": 0.0128,
+      "Jordan": 0.0053
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Portugal",
-    "away": "Uzbekistan",
-    "home_goals": 5,
+    "home": "England",
+    "away": "Ghana",
+    "home_goals": 0,
     "away_goals": 0,
     "date": "2026-06-23",
-    "venue": "Houston",
-    "events": [
-      {
-        "kind": "goal",
-        "player": "Cristiano Ronaldo",
-        "team": "Portugal",
-        "minute": "6'"
-      },
-      {
-        "kind": "goal",
-        "player": "Nuno Mendes",
-        "team": "Portugal",
-        "minute": "17'"
-      },
-      {
-        "kind": "goal",
-        "player": "Cristiano Ronaldo",
-        "team": "Portugal",
-        "minute": "39'"
-      },
-      {
-        "kind": "own_goal",
-        "player": "Abduvohid Nematov",
-        "team": "Portugal",
-        "minute": "60'"
-      },
-      {
-        "kind": "goal",
-        "player": "Rafael Leão",
-        "team": "Portugal",
-        "minute": "87'"
-      }
-    ]
+    "venue": "Boston (Foxborough)",
+    "events": []
   },
   "results": {
     "1": {
@@ -2645,6 +2626,10 @@
           "minute": "87'"
         }
       ]
+    },
+    "69": {
+      "home_goals": 0,
+      "away_goals": 0
     }
   },
   "board": [
@@ -4410,12 +4395,11 @@
             "away": 0.019512102797879082,
             "pick": "England"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 0,
-          "clock": "90'+6'",
-          "ht": false,
-          "events": []
+          "events": [],
+          "hit": false
         },
         {
           "id": "70",
@@ -4450,21 +4434,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "69",
-      "home": "England",
-      "away": "Ghana",
-      "date": "2026-06-23",
-      "venue": "Boston (Foxborough)",
-      "kickoff_utc": "2026-06-23T20:00:00Z",
-      "hg": 0,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "90'+6'",
-      "events": []
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -6228,12 +6198,11 @@
             "away": 0.019512102797879082,
             "pick": "England"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 0,
-          "clock": "90'+6'",
-          "ht": false,
-          "events": []
+          "events": [],
+          "hit": false
         },
         {
           "id": "70",
