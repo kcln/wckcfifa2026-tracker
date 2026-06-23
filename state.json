@@ -957,6 +957,24 @@
           "key": "ht-2026-06-22-51",
           "generated_at": "2026-06-22T14:51:17.924068-07:00",
           "kickoff_utc": "2026-06-22T21:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 22\n\nFull time:\nFrance 3 - 0 Iraq\nPhiladelphia, USA\n  ⚽ 14' Kylian Mbappé (France)\n  ⚽ 54' Kylian Mbappé (France)\n  ⚽ 66' Ousmane Dembélé (France)\nOverall prediction: 22/42 (52.4%)\nPrediction ✓: France",
+          "sent": true,
+          "hash": "8f06394f4f78784a",
+          "key": "pm-2026-06-22-51",
+          "generated_at": "2026-06-22T17:52:30.558379-07:00",
+          "kickoff_utc": "2026-06-22T21:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 22\n\nHalf-time:\nNorway 1 - 0 Senegal\nNew York/New Jersey (East Rutherford), USA\n  ⚽ 43' Marcus Holmgren Pedersen (Norway)\nPrediction: Senegal",
+          "sent": true,
+          "hash": "6e9c679309183482",
+          "key": "ht-2026-06-22-52",
+          "generated_at": "2026-06-22T17:52:30.558422-07:00",
+          "kickoff_utc": "2026-06-23T00:00:00Z"
         }
       ]
     }
@@ -1236,19 +1254,19 @@
     ],
     "I": [
       {
+        "team": "France",
+        "played": 2,
+        "points": 6,
+        "gd": 5,
+        "gf": 6,
+        "ga": 1
+      },
+      {
         "team": "Norway",
         "played": 1,
         "points": 3,
         "gd": 3,
         "gf": 4,
-        "ga": 1
-      },
-      {
-        "team": "France",
-        "played": 1,
-        "points": 3,
-        "gd": 2,
-        "gf": 3,
         "ga": 1
       },
       {
@@ -1261,11 +1279,11 @@
       },
       {
         "team": "Iraq",
-        "played": 1,
+        "played": 2,
         "points": 0,
-        "gd": -3,
+        "gd": -6,
         "gf": 1,
-        "ga": 4
+        "ga": 7
       }
     ],
     "J": [
@@ -1373,92 +1391,94 @@
   },
   "bracket": {
     "title_odds": {
-      "Canada": 0.0082,
-      "Argentina": 0.2342,
-      "Spain": 0.1536,
-      "France": 0.1302,
-      "Morocco": 0.0242,
-      "Germany": 0.0411,
-      "Algeria": 0.0021,
-      "Turkey": 0.0042,
-      "Belgium": 0.0189,
-      "Croatia": 0.0278,
-      "Japan": 0.0299,
-      "Cape Verde": 0.0004,
-      "Australia": 0.0045,
-      "Brazil": 0.0458,
-      "Colombia": 0.0514,
-      "Netherlands": 0.0316,
-      "Norway": 0.0084,
-      "England": 0.0453,
-      "Switzerland": 0.0129,
-      "Mexico": 0.0162,
-      "Portugal": 0.0426,
-      "Paraguay": 0.0037,
-      "South Korea": 0.0082,
-      "Uruguay": 0.0118,
-      "Egypt": 0.003,
-      "Austria": 0.0062,
-      "Ecuador": 0.0076,
-      "Senegal": 0.0103,
-      "Ivory Coast": 0.0023,
-      "Iran": 0.0085,
-      "Uzbekistan": 0.0011,
-      "South Africa": 0.0001,
-      "Panama": 0.0002,
-      "Scotland": 0.0008,
-      "Sweden": 0.0019,
-      "Czech Republic": 0.0005,
-      "DR Congo": 0.0003
+      "Brazil": 0.0502,
+      "Argentina": 0.2256,
+      "Mexico": 0.0176,
+      "France": 0.1225,
+      "Portugal": 0.0395,
+      "Germany": 0.0427,
+      "Uruguay": 0.0101,
+      "Croatia": 0.0247,
+      "Australia": 0.0044,
+      "Spain": 0.1554,
+      "Belgium": 0.0175,
+      "Morocco": 0.0228,
+      "Colombia": 0.0582,
+      "Japan": 0.0305,
+      "England": 0.0478,
+      "Netherlands": 0.0345,
+      "Canada": 0.0089,
+      "Norway": 0.0076,
+      "Iran": 0.0082,
+      "Ecuador": 0.0085,
+      "Switzerland": 0.0146,
+      "Paraguay": 0.004,
+      "South Korea": 0.0058,
+      "Senegal": 0.0105,
+      "Algeria": 0.0026,
+      "Austria": 0.0064,
+      "Egypt": 0.0045,
+      "Ivory Coast": 0.0033,
+      "Turkey": 0.0046,
+      "Sweden": 0.0018,
+      "Uzbekistan": 0.0014,
+      "Czech Republic": 0.0007,
+      "Panama": 0.0006,
+      "Scotland": 0.0012,
+      "Cape Verde": 0.0002,
+      "Jordan": 0.0002,
+      "Ghana": 0.0001,
+      "DR Congo": 0.0002,
+      "USA": 0.0001
     },
     "advancement": {
-      "Croatia": 0.812,
-      "Mexico": 1.0,
-      "Saudi Arabia": 0.2599,
-      "Austria": 0.9571,
-      "Scotland": 0.7996,
-      "Norway": 0.9935,
-      "South Africa": 0.1656,
-      "Portugal": 0.8817,
-      "Iraq": 0.1556,
-      "Australia": 0.8772,
       "Spain": 1.0,
-      "Switzerland": 1.0,
-      "USA": 1.0,
-      "Sweden": 0.955,
-      "Panama": 0.2584,
-      "Brazil": 1.0,
-      "Egypt": 1.0,
-      "Canada": 1.0,
-      "Algeria": 0.5215,
-      "France": 0.9982,
-      "England": 0.9987,
-      "Germany": 1.0,
+      "Czech Republic": 0.3032,
+      "Belgium": 0.91,
       "Morocco": 1.0,
-      "Uruguay": 0.4243,
-      "Colombia": 0.9924,
-      "Czech Republic": 0.3031,
-      "Netherlands": 1.0,
-      "Ivory Coast": 0.9233,
-      "Japan": 1.0,
+      "Paraguay": 0.6914,
+      "DR Congo": 0.4146,
+      "Germany": 1.0,
+      "Scotland": 0.8053,
+      "Saudi Arabia": 0.2598,
       "Argentina": 1.0,
-      "Paraguay": 0.69,
-      "Belgium": 0.9099,
-      "Ecuador": 0.3081,
-      "Uzbekistan": 0.3648,
-      "Iran": 0.7259,
-      "Bosnia & Herzegovina": 0.3446,
-      "DR Congo": 0.4095,
-      "Ghana": 0.6704,
-      "South Korea": 0.9229,
-      "Cape Verde": 0.7466,
-      "Turkey": 0.2413,
-      "Senegal": 0.6497,
-      "Curaçao": 0.1635,
-      "Qatar": 0.3655,
-      "Jordan": 0.1054,
-      "New Zealand": 0.092,
-      "Haiti": 0.0128
+      "Switzerland": 1.0,
+      "Norway": 0.9981,
+      "Ghana": 0.6824,
+      "France": 1.0,
+      "Croatia": 0.8067,
+      "Brazil": 1.0,
+      "Mexico": 1.0,
+      "Japan": 1.0,
+      "South Africa": 0.1655,
+      "Ivory Coast": 0.9235,
+      "Austria": 0.9581,
+      "Australia": 0.884,
+      "Uruguay": 0.4198,
+      "Jordan": 0.1141,
+      "Egypt": 1.0,
+      "Netherlands": 1.0,
+      "Sweden": 0.9599,
+      "Canada": 1.0,
+      "USA": 1.0,
+      "Colombia": 0.9919,
+      "England": 0.9987,
+      "Portugal": 0.8821,
+      "Bosnia & Herzegovina": 0.3444,
+      "Ecuador": 0.3082,
+      "Iran": 0.727,
+      "South Korea": 0.9247,
+      "Senegal": 0.6842,
+      "Cape Verde": 0.7482,
+      "Algeria": 0.5312,
+      "Turkey": 0.2493,
+      "Curaçao": 0.1634,
+      "Qatar": 0.3657,
+      "Uzbekistan": 0.3816,
+      "Panama": 0.2586,
+      "New Zealand": 0.091,
+      "Iraq": 0.0404,
+      "Haiti": 0.013
     }
   },
   "season_ended": false,
@@ -2412,6 +2432,30 @@
           "player": "Lionel Messi",
           "team": "Argentina",
           "minute": "90'+5'"
+        }
+      ]
+    },
+    "51": {
+      "home_goals": 3,
+      "away_goals": 0,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "minute": "14'"
+        },
+        {
+          "kind": "goal",
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "minute": "54'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ousmane Dembélé",
+          "team": "France",
+          "minute": "66'"
         }
       ]
     }
@@ -3998,11 +4042,9 @@
             "away": 0.07525716636949663,
             "pick": "France"
           },
-          "status": "live",
-          "hg": 2,
+          "status": "FT",
+          "hg": 3,
           "ag": 0,
-          "clock": "59'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -4015,8 +4057,15 @@
               "player": "Kylian Mbappé",
               "team": "France",
               "minute": "54'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ousmane Dembélé",
+              "team": "France",
+              "minute": "66'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "52",
@@ -4032,11 +4081,18 @@
             "pick": "Senegal"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "15'",
-          "ht": false,
-          "events": []
+          "clock": "45'+4'",
+          "ht": true,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Marcus Holmgren Pedersen",
+              "team": "Norway",
+              "minute": "43'"
+            }
+          ]
         },
         {
           "id": "58",
@@ -4058,43 +4114,24 @@
   ],
   "live": [
     {
-      "id": "51",
-      "home": "France",
-      "away": "Iraq",
-      "date": "2026-06-22",
-      "venue": "Philadelphia",
-      "kickoff_utc": "2026-06-22T21:00:00Z",
-      "hg": 2,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "59'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Kylian Mbappé",
-          "team": "France",
-          "minute": "14'"
-        },
-        {
-          "kind": "goal",
-          "player": "Kylian Mbappé",
-          "team": "France",
-          "minute": "54'"
-        }
-      ]
-    },
-    {
       "id": "52",
       "home": "Norway",
       "away": "Senegal",
       "date": "2026-06-22",
       "venue": "New York/New Jersey (East Rutherford)",
       "kickoff_utc": "2026-06-23T00:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "15'",
-      "events": []
+      "status": "HT",
+      "clock": "45'+4'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Marcus Holmgren Pedersen",
+          "team": "Norway",
+          "minute": "43'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -5679,11 +5716,9 @@
             "away": 0.07525716636949663,
             "pick": "France"
           },
-          "status": "live",
-          "hg": 2,
+          "status": "FT",
+          "hg": 3,
           "ag": 0,
-          "clock": "59'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -5696,8 +5731,15 @@
               "player": "Kylian Mbappé",
               "team": "France",
               "minute": "54'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ousmane Dembélé",
+              "team": "France",
+              "minute": "66'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "52",
@@ -5713,11 +5755,18 @@
             "pick": "Senegal"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "15'",
-          "ht": false,
-          "events": []
+          "clock": "45'+4'",
+          "ht": true,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Marcus Holmgren Pedersen",
+              "team": "Norway",
+              "minute": "43'"
+            }
+          ]
         },
         {
           "id": "58",
