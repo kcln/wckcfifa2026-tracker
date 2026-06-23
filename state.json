@@ -4082,8 +4082,8 @@
           },
           "status": "live",
           "hg": 3,
-          "ag": 1,
-          "clock": "90'",
+          "ag": 2,
+          "clock": "90'+4'",
           "ht": false,
           "events": [
             {
@@ -4109,6 +4109,12 @@
               "player": "Erling Haaland",
               "team": "Norway",
               "minute": "58'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ismaïla Sarr",
+              "team": "Senegal",
+              "minute": "90'+3'"
             }
           ]
         },
@@ -4139,9 +4145,9 @@
       "venue": "New York/New Jersey (East Rutherford)",
       "kickoff_utc": "2026-06-23T00:00:00Z",
       "hg": 3,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "90'",
+      "clock": "90'+4'",
       "events": [
         {
           "kind": "goal",
@@ -4166,6 +4172,12 @@
           "player": "Erling Haaland",
           "team": "Norway",
           "minute": "58'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ismaïla Sarr",
+          "team": "Senegal",
+          "minute": "90'+3'"
         }
       ]
     }
@@ -5792,8 +5804,8 @@
           },
           "status": "live",
           "hg": 3,
-          "ag": 1,
-          "clock": "90'",
+          "ag": 2,
+          "clock": "90'+4'",
           "ht": false,
           "events": [
             {
@@ -5819,6 +5831,12 @@
               "player": "Erling Haaland",
               "team": "Norway",
               "minute": "58'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ismaïla Sarr",
+              "team": "Senegal",
+              "minute": "90'+3'"
             }
           ]
         },
