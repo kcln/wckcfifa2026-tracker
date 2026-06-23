@@ -4291,9 +4291,9 @@
             "pick": "Portugal"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 0,
-          "clock": "38'",
+          "clock": "42'",
           "ht": false,
           "events": [
             {
@@ -4307,6 +4307,12 @@
               "player": "Nuno Mendes",
               "team": "Portugal",
               "minute": "17'"
+            },
+            {
+              "kind": "goal",
+              "player": "Cristiano Ronaldo",
+              "team": "Portugal",
+              "minute": "39'"
             }
           ]
         },
@@ -4366,10 +4372,10 @@
       "date": "2026-06-23",
       "venue": "Houston",
       "kickoff_utc": "2026-06-23T17:00:00Z",
-      "hg": 2,
+      "hg": 3,
       "ag": 0,
       "status": "LIVE",
-      "clock": "38'",
+      "clock": "42'",
       "events": [
         {
           "kind": "goal",
@@ -4382,6 +4388,12 @@
           "player": "Nuno Mendes",
           "team": "Portugal",
           "minute": "17'"
+        },
+        {
+          "kind": "goal",
+          "player": "Cristiano Ronaldo",
+          "team": "Portugal",
+          "minute": "39'"
         }
       ]
     }
@@ -6100,9 +6112,9 @@
             "pick": "Portugal"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 0,
-          "clock": "38'",
+          "clock": "42'",
           "ht": false,
           "events": [
             {
@@ -6116,6 +6128,12 @@
               "player": "Nuno Mendes",
               "team": "Portugal",
               "minute": "17'"
+            },
+            {
+              "kind": "goal",
+              "player": "Cristiano Ronaldo",
+              "team": "Portugal",
+              "minute": "39'"
             }
           ]
         },
