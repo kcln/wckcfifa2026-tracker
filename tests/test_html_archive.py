@@ -617,3 +617,45 @@ def test_bracket_locks_clinched_team_solid(tmp_path):
     assert ".qlk" in html                          # styling present
     assert "KOR / CZE / RSA" not in html           # contenders removed
     assert ">KOR<" not in html and "/ CZE" not in html
+
+
+def test_bracket_single_clinch_winner_slot_only_runner_up_projects_rest(tmp_path):
+    # One team (Mexico) clinched: the 1A slot shows MEX once, the 2A slot shows
+    # the remaining contenders WITHOUT Mexico (it's not in both slots).
+    state = _clinch_state()
+    state["schedule"][1]["matches"].append(
+        {"id": "74", "home": "2A", "away": "1C", "stage": "R32",
+         "kickoff_utc": "2026-06-28T22:00:00Z", "venue": "Atlanta", "status": "sched"})
+    html = _render(state, tmp_path)
+    assert html.count('<span class="qlk">MEX</span>') == 1   # only its own slot
+    assert "KOR / CZE / RSA" in html                         # 2A: rest, no MEX
+    assert "MEX / KOR" not in html                           # MEX not duplicated
+
+
+def test_bracket_two_clinched_teams_split_across_their_two_slots(tmp_path):
+    # France (1st) and Norway (2nd) have BOTH clinched group I. The 1I and 2I
+    # slots must each show ONE country — never a single box reading "FRA / NOR".
+    state = {"days": [], "bracket": {}, "groups": {
+        "I": [
+            {"team": "France", "played": 2, "points": 6, "gd": 5, "gf": 5, "ga": 0},
+            {"team": "Norway", "played": 2, "points": 6, "gd": 3, "gf": 3, "ga": 0},
+            {"team": "Iraq", "played": 2, "points": 0, "gd": -4, "gf": 1, "ga": 5},
+            {"team": "Senegal", "played": 2, "points": 0, "gd": -4, "gf": 0, "ga": 4},
+        ]}, "schedule": [
+        {"date": "2026-06-25", "matches": [
+            {"id": "30", "home": "France", "away": "Norway", "stage": "group",
+             "kickoff_utc": "2026-06-25T19:00:00Z", "venue": "Seattle", "status": "sched"},
+            {"id": "31", "home": "Iraq", "away": "Senegal", "stage": "group",
+             "kickoff_utc": "2026-06-25T19:00:00Z", "venue": "Houston", "status": "sched"}]},
+        {"date": "2026-06-28", "matches": [
+            {"id": "80", "home": "1I", "away": "2A", "stage": "R32",
+             "kickoff_utc": "2026-06-28T19:00:00Z", "venue": "Seattle", "status": "sched"},
+            {"id": "81", "home": "2I", "away": "1B", "stage": "R32",
+             "kickoff_utc": "2026-06-28T22:00:00Z", "venue": "Dallas (Arlington)", "status": "sched"}]}]}
+    html = _render(state, tmp_path)
+    # France 1st -> 1I; Norway 2nd -> 2I; each appears once, in its own box.
+    assert html.count('<span class="qlk">FRA</span>') == 1
+    assert html.count('<span class="qlk">NOR</span>') == 1
+    # the buggy combined slot must never appear
+    assert '<span class="qlk">FRA</span> / <span class="qlk">NOR</span>' not in html
+    assert "FRA / NOR" not in html
