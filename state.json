@@ -3999,9 +3999,9 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "51'",
+          "clock": "56'",
           "ht": false,
           "events": [
             {
@@ -4009,6 +4009,12 @@
               "player": "Kylian Mbappé",
               "team": "France",
               "minute": "14'"
+            },
+            {
+              "kind": "goal",
+              "player": "Kylian Mbappé",
+              "team": "France",
+              "minute": "54'"
             }
           ]
         },
@@ -4028,7 +4034,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "7'",
+          "clock": "11'",
           "ht": false,
           "events": []
         },
@@ -4058,16 +4064,22 @@
       "date": "2026-06-22",
       "venue": "Philadelphia",
       "kickoff_utc": "2026-06-22T21:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 0,
       "status": "LIVE",
-      "clock": "51'",
+      "clock": "56'",
       "events": [
         {
           "kind": "goal",
           "player": "Kylian Mbappé",
           "team": "France",
           "minute": "14'"
+        },
+        {
+          "kind": "goal",
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "minute": "54'"
         }
       ]
     },
@@ -4081,7 +4093,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "7'",
+      "clock": "11'",
       "events": []
     }
   ],
@@ -5668,9 +5680,9 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "51'",
+          "clock": "56'",
           "ht": false,
           "events": [
             {
@@ -5678,6 +5690,12 @@
               "player": "Kylian Mbappé",
               "team": "France",
               "minute": "14'"
+            },
+            {
+              "kind": "goal",
+              "player": "Kylian Mbappé",
+              "team": "France",
+              "minute": "54'"
             }
           ]
         },
@@ -5697,7 +5715,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "7'",
+          "clock": "11'",
           "ht": false,
           "events": []
         },
