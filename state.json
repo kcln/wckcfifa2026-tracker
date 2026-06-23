@@ -4001,7 +4001,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "45'+3'",
+          "clock": "48'",
           "ht": false,
           "events": [
             {
@@ -4025,7 +4025,12 @@
             "away": 0.4310193553913809,
             "pick": "Senegal"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "58",
@@ -4056,7 +4061,7 @@
       "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "45'+3'",
+      "clock": "48'",
       "events": [
         {
           "kind": "goal",
@@ -4065,6 +4070,19 @@
           "minute": "14'"
         }
       ]
+    },
+    {
+      "id": "52",
+      "home": "Norway",
+      "away": "Senegal",
+      "date": "2026-06-22",
+      "venue": "New York/New Jersey (East Rutherford)",
+      "kickoff_utc": "2026-06-23T00:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
     }
   ],
   "schedule": [
@@ -5652,7 +5670,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "45'+3'",
+          "clock": "48'",
           "ht": false,
           "events": [
             {
@@ -5676,7 +5694,12 @@
             "away": 0.4310193553913809,
             "pick": "Senegal"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "58",
