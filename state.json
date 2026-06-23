@@ -4401,7 +4401,12 @@
             "away": 0.019512102797879082,
             "pick": "England"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "70",
@@ -4436,7 +4441,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "69",
+      "home": "England",
+      "away": "Ghana",
+      "date": "2026-06-23",
+      "venue": "Boston (Foxborough)",
+      "kickoff_utc": "2026-06-23T20:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "4'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -6200,7 +6219,12 @@
             "away": 0.019512102797879082,
             "pick": "England"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "70",
