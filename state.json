@@ -984,6 +984,15 @@
           "key": "pm-2026-06-22-52",
           "generated_at": "2026-06-22T19:01:14.388295-07:00",
           "kickoff_utc": "2026-06-23T00:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 22\n\nHalf-time:\nJordan 1 - 0 Algeria\nSan Francisco Bay Area (Santa Clara), USA\n  ⚽ 36' Nizar Al-Rashdan (Jordan)\nPrediction: Algeria",
+          "sent": true,
+          "hash": "be466dd09788cd0c",
+          "key": "ht-2026-06-22-58",
+          "generated_at": "2026-06-22T20:54:58.457328-07:00",
+          "kickoff_utc": "2026-06-23T03:00:00Z"
         }
       ]
     }
@@ -4179,7 +4188,7 @@
           "hg": 1,
           "ag": 0,
           "clock": "45'+5'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -4202,7 +4211,7 @@
       "kickoff_utc": "2026-06-23T03:00:00Z",
       "hg": 1,
       "ag": 0,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+5'",
       "events": [
         {
@@ -5888,7 +5897,7 @@
           "hg": 1,
           "ag": 0,
           "clock": "45'+5'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
