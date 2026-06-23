@@ -4300,9 +4300,9 @@
             "pick": "Portugal"
           },
           "status": "live",
-          "hg": 4,
+          "hg": 5,
           "ag": 0,
-          "clock": "84'",
+          "clock": "88'",
           "ht": false,
           "events": [
             {
@@ -4328,6 +4328,12 @@
               "player": "Abduvohid Nematov",
               "team": "Portugal",
               "minute": "60'"
+            },
+            {
+              "kind": "goal",
+              "player": "Rafael Leão",
+              "team": "Portugal",
+              "minute": "87'"
             }
           ]
         },
@@ -4387,10 +4393,10 @@
       "date": "2026-06-23",
       "venue": "Houston",
       "kickoff_utc": "2026-06-23T17:00:00Z",
-      "hg": 4,
+      "hg": 5,
       "ag": 0,
       "status": "LIVE",
-      "clock": "84'",
+      "clock": "88'",
       "events": [
         {
           "kind": "goal",
@@ -4415,6 +4421,12 @@
           "player": "Abduvohid Nematov",
           "team": "Portugal",
           "minute": "60'"
+        },
+        {
+          "kind": "goal",
+          "player": "Rafael Leão",
+          "team": "Portugal",
+          "minute": "87'"
         }
       ]
     }
@@ -6133,9 +6145,9 @@
             "pick": "Portugal"
           },
           "status": "live",
-          "hg": 4,
+          "hg": 5,
           "ag": 0,
-          "clock": "84'",
+          "clock": "88'",
           "ht": false,
           "events": [
             {
@@ -6161,6 +6173,12 @@
               "player": "Abduvohid Nematov",
               "team": "Portugal",
               "minute": "60'"
+            },
+            {
+              "kind": "goal",
+              "player": "Rafael Leão",
+              "team": "Portugal",
+              "minute": "87'"
             }
           ]
         },
