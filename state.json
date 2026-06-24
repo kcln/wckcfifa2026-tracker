@@ -4751,7 +4751,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "27'",
+          "clock": "31'",
           "ht": false,
           "events": [
             {
@@ -4778,12 +4778,12 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "27'",
+          "clock": "30'",
           "ht": false,
           "events": [
             {
-              "kind": "goal",
-              "player": "Lenny Joseph",
+              "kind": "own_goal",
+              "player": "Yassine Bounou",
               "team": "Haiti",
               "minute": "10'"
             }
@@ -4833,7 +4833,7 @@
       "hg": 0,
       "ag": 1,
       "status": "LIVE",
-      "clock": "27'",
+      "clock": "31'",
       "events": [
         {
           "kind": "goal",
@@ -4853,11 +4853,11 @@
       "hg": 0,
       "ag": 1,
       "status": "LIVE",
-      "clock": "27'",
+      "clock": "30'",
       "events": [
         {
-          "kind": "goal",
-          "player": "Lenny Joseph",
+          "kind": "own_goal",
+          "player": "Yassine Bounou",
           "team": "Haiti",
           "minute": "10'"
         }
@@ -6788,7 +6788,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "27'",
+          "clock": "31'",
           "ht": false,
           "events": [
             {
@@ -6815,12 +6815,12 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "27'",
+          "clock": "30'",
           "ht": false,
           "events": [
             {
-              "kind": "goal",
-              "player": "Lenny Joseph",
+              "kind": "own_goal",
+              "player": "Yassine Bounou",
               "team": "Haiti",
               "minute": "10'"
             }
