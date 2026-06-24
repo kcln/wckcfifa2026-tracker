@@ -4751,7 +4751,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "38'",
+          "clock": "42'",
           "ht": false,
           "events": [
             {
@@ -4776,9 +4776,9 @@
             "pick": "Morocco"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "38'",
+          "clock": "42'",
           "ht": false,
           "events": [
             {
@@ -4786,6 +4786,12 @@
               "player": "Yassine Bounou",
               "team": "Haiti",
               "minute": "10'"
+            },
+            {
+              "kind": "goal",
+              "player": "Achraf Hakimi",
+              "team": "Morocco",
+              "minute": "39'"
             }
           ]
         },
@@ -4833,7 +4839,7 @@
       "hg": 0,
       "ag": 1,
       "status": "LIVE",
-      "clock": "38'",
+      "clock": "42'",
       "events": [
         {
           "kind": "goal",
@@ -4850,16 +4856,22 @@
       "date": "2026-06-24",
       "venue": "Atlanta",
       "kickoff_utc": "2026-06-24T22:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 1,
       "status": "LIVE",
-      "clock": "38'",
+      "clock": "42'",
       "events": [
         {
           "kind": "own_goal",
           "player": "Yassine Bounou",
           "team": "Haiti",
           "minute": "10'"
+        },
+        {
+          "kind": "goal",
+          "player": "Achraf Hakimi",
+          "team": "Morocco",
+          "minute": "39'"
         }
       ]
     }
@@ -6788,7 +6800,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "38'",
+          "clock": "42'",
           "ht": false,
           "events": [
             {
@@ -6813,9 +6825,9 @@
             "pick": "Morocco"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "38'",
+          "clock": "42'",
           "ht": false,
           "events": [
             {
@@ -6823,6 +6835,12 @@
               "player": "Yassine Bounou",
               "team": "Haiti",
               "minute": "10'"
+            },
+            {
+              "kind": "goal",
+              "player": "Achraf Hakimi",
+              "team": "Morocco",
+              "minute": "39'"
             }
           ]
         },
