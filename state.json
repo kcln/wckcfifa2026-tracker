@@ -4579,11 +4579,18 @@
             "pick": "Canada"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "45'+4'",
-          "ht": true,
-          "events": []
+          "clock": "49'",
+          "ht": false,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Rubén Vargas",
+              "team": "Switzerland",
+              "minute": "46'"
+            }
+          ]
         },
         {
           "id": "12",
@@ -4601,8 +4608,8 @@
           "status": "live",
           "hg": 2,
           "ag": 1,
-          "clock": "45'+6'",
-          "ht": true,
+          "clock": "46'",
+          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -4695,11 +4702,18 @@
       "date": "2026-06-24",
       "venue": "Vancouver",
       "kickoff_utc": "2026-06-24T19:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
-      "status": "HT",
-      "clock": "45'+4'",
-      "events": []
+      "status": "LIVE",
+      "clock": "49'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Rubén Vargas",
+          "team": "Switzerland",
+          "minute": "46'"
+        }
+      ]
     },
     {
       "id": "12",
@@ -4710,8 +4724,8 @@
       "kickoff_utc": "2026-06-24T19:00:00Z",
       "hg": 2,
       "ag": 1,
-      "status": "HT",
-      "clock": "45'+6'",
+      "status": "LIVE",
+      "clock": "46'",
       "events": [
         {
           "kind": "goal",
@@ -6574,11 +6588,18 @@
             "pick": "Canada"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "45'+4'",
-          "ht": true,
-          "events": []
+          "clock": "49'",
+          "ht": false,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Rubén Vargas",
+              "team": "Switzerland",
+              "minute": "46'"
+            }
+          ]
         },
         {
           "id": "12",
@@ -6596,8 +6617,8 @@
           "status": "live",
           "hg": 2,
           "ag": 1,
-          "clock": "45'+6'",
-          "ht": true,
+          "clock": "46'",
+          "ht": false,
           "events": [
             {
               "kind": "goal",
