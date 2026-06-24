@@ -4563,7 +4563,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "32'",
+          "clock": "35'",
           "ht": false,
           "events": []
         },
@@ -4581,9 +4581,9 @@
             "pick": "Qatar"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "32'",
+          "clock": "35'",
           "ht": false,
           "events": [
             {
@@ -4591,6 +4591,12 @@
               "player": "Kerim Alajbegovic",
               "team": "Bosnia & Herzegovina",
               "minute": "29'"
+            },
+            {
+              "kind": "own_goal",
+              "player": "Sultan Al-Brake",
+              "team": "Bosnia & Herzegovina",
+              "minute": "34'"
             }
           ]
         },
@@ -4668,7 +4674,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "32'",
+      "clock": "35'",
       "events": []
     },
     {
@@ -4678,16 +4684,22 @@
       "date": "2026-06-24",
       "venue": "Seattle",
       "kickoff_utc": "2026-06-24T19:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 0,
       "status": "LIVE",
-      "clock": "32'",
+      "clock": "35'",
       "events": [
         {
           "kind": "goal",
           "player": "Kerim Alajbegovic",
           "team": "Bosnia & Herzegovina",
           "minute": "29'"
+        },
+        {
+          "kind": "own_goal",
+          "player": "Sultan Al-Brake",
+          "team": "Bosnia & Herzegovina",
+          "minute": "34'"
         }
       ]
     }
@@ -6534,7 +6546,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "32'",
+          "clock": "35'",
           "ht": false,
           "events": []
         },
@@ -6552,9 +6564,9 @@
             "pick": "Qatar"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "32'",
+          "clock": "35'",
           "ht": false,
           "events": [
             {
@@ -6562,6 +6574,12 @@
               "player": "Kerim Alajbegovic",
               "team": "Bosnia & Herzegovina",
               "minute": "29'"
+            },
+            {
+              "kind": "own_goal",
+              "player": "Sultan Al-Brake",
+              "team": "Bosnia & Herzegovina",
+              "minute": "34'"
             }
           ]
         },
