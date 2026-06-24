@@ -1138,6 +1138,15 @@
           "key": "ht-2026-06-24-12",
           "generated_at": "2026-06-24T12:53:25.592158-07:00",
           "kickoff_utc": "2026-06-24T19:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 24\n\nFull time:\nSwitzerland 2 - 1 Canada\nVancouver, Canada\n  ⚽ 46' Rubén Vargas (Switzerland)\n  ⚽ 57' Johan Manzambi (Switzerland)\n  ⚽ 76' Promise David (Canada)\nOverall prediction: 26/49 (53.1%)\nPrediction ✗: Canada",
+          "sent": true,
+          "hash": "c0e51207dce41ac1",
+          "key": "pm-2026-06-24-11",
+          "generated_at": "2026-06-24T13:57:53.377304-07:00",
+          "kickoff_utc": "2026-06-24T19:00:00Z"
         }
       ]
     }
@@ -1179,20 +1188,20 @@
     ],
     "B": [
       {
-        "team": "Canada",
-        "played": 2,
-        "points": 4,
-        "gd": 6,
+        "team": "Switzerland",
+        "played": 3,
+        "points": 7,
+        "gd": 4,
         "gf": 7,
-        "ga": 1
+        "ga": 3
       },
       {
-        "team": "Switzerland",
-        "played": 2,
+        "team": "Canada",
+        "played": 3,
         "points": 4,
-        "gd": 3,
-        "gf": 5,
-        "ga": 2
+        "gd": 5,
+        "gf": 8,
+        "ga": 3
       },
       {
         "team": "Bosnia & Herzegovina",
@@ -1554,108 +1563,120 @@
   },
   "bracket": {
     "title_odds": {
-      "Portugal": 0.0425,
-      "Colombia": 0.0524,
-      "Mexico": 0.0205,
-      "Argentina": 0.2316,
-      "France": 0.1261,
-      "England": 0.0462,
-      "Spain": 0.1459,
-      "Germany": 0.046,
-      "Japan": 0.0307,
-      "Netherlands": 0.0303,
-      "Turkey": 0.0039,
+      "Brazil": 0.0531,
+      "Colombia": 0.0453,
       "Austria": 0.0056,
-      "Paraguay": 0.004,
-      "Croatia": 0.0265,
-      "Senegal": 0.011,
-      "Switzerland": 0.0126,
-      "Morocco": 0.0263,
-      "Norway": 0.0089,
-      "Australia": 0.0045,
-      "Canada": 0.007,
-      "Brazil": 0.0523,
-      "Belgium": 0.0173,
+      "Argentina": 0.2324,
+      "France": 0.1347,
+      "Egypt": 0.0035,
+      "Senegal": 0.0105,
+      "Japan": 0.0285,
+      "Spain": 0.152,
+      "Portugal": 0.0425,
+      "Croatia": 0.0281,
+      "Morocco": 0.024,
+      "Germany": 0.0453,
+      "Belgium": 0.0172,
+      "Canada": 0.0071,
+      "Iran": 0.0074,
+      "England": 0.0458,
+      "Netherlands": 0.029,
       "Ivory Coast": 0.0029,
-      "Uruguay": 0.0096,
-      "Sweden": 0.0019,
-      "Iran": 0.0087,
-      "Egypt": 0.0041,
-      "South Korea": 0.0056,
-      "Ecuador": 0.0086,
-      "Czech Republic": 0.001,
-      "Algeria": 0.0032,
-      "Scotland": 0.0014,
-      "DR Congo": 0.0002,
-      "Uzbekistan": 0.0002,
+      "Mexico": 0.0209,
+      "Switzerland": 0.0107,
+      "Australia": 0.0039,
+      "South Korea": 0.0061,
+      "Sweden": 0.0023,
+      "Ecuador": 0.0068,
+      "Norway": 0.0083,
+      "Uruguay": 0.0111,
+      "Paraguay": 0.0039,
+      "Turkey": 0.0041,
+      "Algeria": 0.0048,
+      "Czech Republic": 0.0006,
       "Cape Verde": 0.0003,
-      "Ghana": 0.0001,
-      "Panama": 0.0001
+      "Ghana": 0.0002,
+      "Scotland": 0.0005,
+      "Uzbekistan": 0.0002,
+      "DR Congo": 0.0002,
+      "Saudi Arabia": 0.0002
     },
     "advancement": {
       "Colombia": 1.0,
       "Spain": 1.0,
-      "Morocco": 1.0,
-      "Uruguay": 0.4111,
       "Norway": 1.0,
-      "Senegal": 0.4839,
+      "Morocco": 1.0,
+      "Uruguay": 0.4139,
       "Switzerland": 1.0,
       "Egypt": 1.0,
-      "Belgium": 0.9101,
+      "Belgium": 0.9157,
       "South Africa": 0.1653,
       "Argentina": 1.0,
+      "Algeria": 0.7941,
       "Portugal": 1.0,
-      "Germany": 1.0,
       "USA": 1.0,
-      "Czech Republic": 0.2951,
-      "Ivory Coast": 0.9283,
+      "Germany": 1.0,
+      "Czech Republic": 0.2957,
+      "Iran": 0.712,
+      "Qatar": 0.3695,
+      "Ivory Coast": 0.932,
       "Netherlands": 1.0,
-      "Paraguay": 0.7062,
-      "DR Congo": 0.2867,
+      "Paraguay": 0.7152,
+      "DR Congo": 0.2902,
       "Japan": 1.0,
       "Mexico": 1.0,
-      "Austria": 0.9554,
-      "Ghana": 0.9999,
-      "Sweden": 0.9602,
-      "Scotland": 0.8472,
+      "Austria": 0.9507,
+      "Cape Verde": 0.7511,
+      "Ghana": 1.0,
+      "Brazil": 1.0,
+      "Croatia": 0.9501,
+      "Australia": 0.8863,
       "England": 1.0,
-      "Australia": 0.8828,
       "France": 1.0,
       "Canada": 1.0,
-      "Brazil": 1.0,
-      "Croatia": 0.9532,
-      "Saudi Arabia": 0.2599,
-      "South Korea": 0.928,
-      "Ecuador": 0.301,
-      "Algeria": 0.8024,
-      "Iran": 0.7208,
-      "Bosnia & Herzegovina": 0.3439,
-      "Cape Verde": 0.7462,
-      "Curaçao": 0.1631,
-      "Turkey": 0.2628,
-      "Qatar": 0.3649,
-      "New Zealand": 0.0904,
-      "Iraq": 0.0849,
-      "Uzbekistan": 0.1094,
-      "Panama": 0.0181,
-      "Haiti": 0.0129,
-      "Jordan": 0.0059
+      "South Korea": 0.9304,
+      "Ecuador": 0.3048,
+      "Sweden": 0.9606,
+      "Scotland": 0.851,
+      "Turkey": 0.2529,
+      "Senegal": 0.4886,
+      "Saudi Arabia": 0.2544,
+      "Iraq": 0.0851,
+      "New Zealand": 0.0847,
+      "Bosnia & Herzegovina": 0.348,
+      "Uzbekistan": 0.1016,
+      "Curaçao": 0.1564,
+      "Jordan": 0.0077,
+      "Panama": 0.0175,
+      "Haiti": 0.0145
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Panama",
-    "away": "Croatia",
-    "home_goals": 0,
+    "home": "Switzerland",
+    "away": "Canada",
+    "home_goals": 2,
     "away_goals": 1,
-    "date": "2026-06-23",
-    "venue": "Toronto",
+    "date": "2026-06-24",
+    "venue": "Vancouver",
     "events": [
       {
         "kind": "goal",
-        "player": "Ante Budimir",
-        "team": "Croatia",
-        "minute": "54'"
+        "player": "Rubén Vargas",
+        "team": "Switzerland",
+        "minute": "46'"
+      },
+      {
+        "kind": "goal",
+        "player": "Johan Manzambi",
+        "team": "Switzerland",
+        "minute": "57'"
+      },
+      {
+        "kind": "goal",
+        "player": "Promise David",
+        "team": "Canada",
+        "minute": "76'"
       }
     ]
   },
@@ -2734,6 +2755,30 @@
           "kind": "goal",
           "player": "Daniel Muñoz",
           "team": "Colombia",
+          "minute": "76'"
+        }
+      ]
+    },
+    "11": {
+      "home_goals": 2,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Rubén Vargas",
+          "team": "Switzerland",
+          "minute": "46'"
+        },
+        {
+          "kind": "goal",
+          "player": "Johan Manzambi",
+          "team": "Switzerland",
+          "minute": "57'"
+        },
+        {
+          "kind": "goal",
+          "player": "Promise David",
+          "team": "Canada",
           "minute": "76'"
         }
       ]
@@ -4578,11 +4623,9 @@
             "away": 0.36524197970805417,
             "pick": "Canada"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 1,
-          "clock": "90'+4'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -4602,7 +4645,8 @@
               "team": "Canada",
               "minute": "76'"
             }
-          ]
+          ],
+          "hit": false
         },
         {
           "id": "12",
@@ -4620,7 +4664,7 @@
           "status": "live",
           "hg": 3,
           "ag": 1,
-          "clock": "90'+1'",
+          "clock": "90'+5'",
           "ht": false,
           "events": [
             {
@@ -4714,38 +4758,6 @@
   ],
   "live": [
     {
-      "id": "11",
-      "home": "Switzerland",
-      "away": "Canada",
-      "date": "2026-06-24",
-      "venue": "Vancouver",
-      "kickoff_utc": "2026-06-24T19:00:00Z",
-      "hg": 2,
-      "ag": 1,
-      "status": "LIVE",
-      "clock": "90'+4'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Rubén Vargas",
-          "team": "Switzerland",
-          "minute": "46'"
-        },
-        {
-          "kind": "goal",
-          "player": "Johan Manzambi",
-          "team": "Switzerland",
-          "minute": "57'"
-        },
-        {
-          "kind": "goal",
-          "player": "Promise David",
-          "team": "Canada",
-          "minute": "76'"
-        }
-      ]
-    },
-    {
       "id": "12",
       "home": "Bosnia & Herzegovina",
       "away": "Qatar",
@@ -4755,7 +4767,7 @@
       "hg": 3,
       "ag": 1,
       "status": "LIVE",
-      "clock": "90'+1'",
+      "clock": "90'+5'",
       "events": [
         {
           "kind": "goal",
@@ -6623,11 +6635,9 @@
             "away": 0.36524197970805417,
             "pick": "Canada"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 1,
-          "clock": "90'+4'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -6647,7 +6657,8 @@
               "team": "Canada",
               "minute": "76'"
             }
-          ]
+          ],
+          "hit": false
         },
         {
           "id": "12",
@@ -6665,7 +6676,7 @@
           "status": "live",
           "hg": 3,
           "ag": 1,
-          "clock": "90'+1'",
+          "clock": "90'+5'",
           "ht": false,
           "events": [
             {
