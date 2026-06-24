@@ -4563,7 +4563,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "28'",
+          "clock": "32'",
           "ht": false,
           "events": []
         },
@@ -4581,11 +4581,18 @@
             "pick": "Qatar"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "28'",
+          "clock": "32'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Kerim Alajbegovic",
+              "team": "Bosnia & Herzegovina",
+              "minute": "29'"
+            }
+          ]
         },
         {
           "id": "17",
@@ -4661,7 +4668,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "28'",
+      "clock": "32'",
       "events": []
     },
     {
@@ -4671,11 +4678,18 @@
       "date": "2026-06-24",
       "venue": "Seattle",
       "kickoff_utc": "2026-06-24T19:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "28'",
-      "events": []
+      "clock": "32'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Kerim Alajbegovic",
+          "team": "Bosnia & Herzegovina",
+          "minute": "29'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -6520,7 +6534,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "28'",
+          "clock": "32'",
           "ht": false,
           "events": []
         },
@@ -6538,11 +6552,18 @@
             "pick": "Qatar"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "28'",
+          "clock": "32'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Kerim Alajbegovic",
+              "team": "Bosnia & Herzegovina",
+              "minute": "29'"
+            }
+          ]
         },
         {
           "id": "17",
