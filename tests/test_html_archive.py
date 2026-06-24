@@ -531,6 +531,35 @@ def test_schedule_bracket_resolves_slots_and_shows_location(tmp_path):
     assert '<span class="bkm-nm">2A</span>' not in html   # resolved, not raw token
 
 
+def test_bracket_box_leads_with_match_number_and_date(tmp_path):
+    out = tmp_path / "index.html"
+    ha.render(_ko_state(), out, today="2026-06-28")
+    html = out.read_text()
+    # every knockout box carries its match number + date (bracket has no date
+    # columns), then the kickoff time
+    assert "M73 · Sun Jun 28 · " in html and "PT</div>" in html   # R32 tie 73
+    assert "M104 · Sun Jul 19 · " in html                          # the final
+
+
+def test_schedule_strip_box_shows_match_number_after_location(tmp_path):
+    html = _render(_sched_state(), tmp_path)
+    assert '<div class="dbox-num">M1</div>' in html
+    # the match number sits after the stadium location in the box
+    assert html.index('class="dbox-loc"') < html.index('class="dbox-num"')
+
+
+def test_match_log_card_shows_match_number_after_location(tmp_path):
+    state = {"days": [], "bracket": {}, "groups": {},
+             "board": [{"date": "2026-06-15", "matches": [
+                 {"id": "7", "home": "Belgium", "away": "Egypt",
+                  "kickoff_utc": "2026-06-15T19:00:00Z", "venue": "Seattle",
+                  "stage": "group", "status": "FT", "hg": 1, "ag": 1,
+                  "events": [], "hit": False,
+                  "pred": {"home": .48, "draw": .30, "away": .22, "pick": "Belgium"}}]}]}
+    html = _render(state, tmp_path)
+    assert '<div class="mc-foot">📍 Seattle, USA · M7</div>' in html
+
+
 def _proj_state(played):
     def r(team):
         return {"team": team, "played": played, "points": 0,
