@@ -1156,6 +1156,24 @@
           "key": "pm-2026-06-24-12",
           "generated_at": "2026-06-24T14:01:40.818920-07:00",
           "kickoff_utc": "2026-06-24T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 24\n\nHalf-time:\nScotland 0 - 2 Brazil\nMiami (Miami Gardens), USA\n  ⚽ 7' Vinícius Júnior (Brazil)\n  ⚽ 45'+3' Vinícius Júnior (Brazil)\nPrediction: Brazil",
+          "sent": true,
+          "hash": "9b46cafed428638b",
+          "key": "ht-2026-06-24-17",
+          "generated_at": "2026-06-24T15:54:23.010798-07:00",
+          "kickoff_utc": "2026-06-24T22:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 24\n\nHalf-time:\nMorocco 2 - 2 Haiti\nAtlanta, USA\n  ⚽ 10' Yassine Bounou (Haiti, OG)\n  ⚽ 39' Achraf Hakimi (Morocco)\n  ⚽ 43' Wilson Isidor (Haiti)\n  ⚽ 45'+1' Ismael Saibari (Morocco)\nPrediction: Morocco",
+          "sent": true,
+          "hash": "13de291928d55dd8",
+          "key": "ht-2026-06-24-18",
+          "generated_at": "2026-06-24T15:54:23.010837-07:00",
+          "kickoff_utc": "2026-06-24T22:00:00Z"
         }
       ]
     }
@@ -4751,8 +4769,8 @@
           "status": "live",
           "hg": 0,
           "ag": 2,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+7'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -4784,8 +4802,8 @@
           "status": "live",
           "hg": 2,
           "ag": 2,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": [
             {
               "kind": "own_goal",
@@ -4856,8 +4874,8 @@
       "kickoff_utc": "2026-06-24T22:00:00Z",
       "hg": 0,
       "ag": 2,
-      "status": "LIVE",
-      "clock": "45'+4'",
+      "status": "HT",
+      "clock": "45'+7'",
       "events": [
         {
           "kind": "goal",
@@ -4882,8 +4900,8 @@
       "kickoff_utc": "2026-06-24T22:00:00Z",
       "hg": 2,
       "ag": 2,
-      "status": "LIVE",
-      "clock": "45'+4'",
+      "status": "HT",
+      "clock": "45'+5'",
       "events": [
         {
           "kind": "own_goal",
@@ -6836,8 +6854,8 @@
           "status": "live",
           "hg": 0,
           "ag": 2,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+7'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -6869,8 +6887,8 @@
           "status": "live",
           "hg": 2,
           "ag": 2,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": [
             {
               "kind": "own_goal",
