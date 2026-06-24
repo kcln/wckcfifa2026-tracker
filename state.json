@@ -1108,6 +1108,20 @@
           "kickoff_utc": "2026-06-23T17:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-06-24",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 24\n\nMatchday Brief\n\nSwitzerland vs Canada\n  Prediction: Canada\n  Switzerland 34.9% · Draw 28.6% · Canada 36.5%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 Vancouver, Canada\n\nBosnia & Herzegovina vs Qatar\n  Prediction: Qatar\n  Bosnia & Herzegovina 34.5% · Draw 28.3% · Qatar 37.2%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 Seattle, USA\n\nScotland vs Brazil\n  Prediction: Brazil\n  Scotland 10.2% · Draw 20.0% · Brazil 69.8%\n  🕐 3:00pm PT / 5:00pm CT / 6:00pm ET / 3:30am IST (+1d)\n  📍 Miami (Miami Gardens), USA\n\nMorocco vs Haiti\n  Prediction: Morocco\n  Morocco 62.4% · Draw 27.4% · Haiti 10.2%\n  🕐 3:00pm PT / 5:00pm CT / 6:00pm ET / 3:30am IST (+1d)\n  📍 Atlanta, USA\n\nCzech Republic vs Mexico\n  Prediction: Mexico\n  Czech Republic 26.8% · Draw 29.0% · Mexico 44.2%\n  🕐 6:00pm PT / 8:00pm CT / 9:00pm ET / 6:30am IST (+1d)\n  📍 Mexico City, Mexico\n\nSouth Africa vs South Korea\n  Prediction: South Korea\n  South Africa 15.6% · Draw 26.6% · South Korea 57.7%\n  🕐 6:00pm PT / 8:00pm CT / 9:00pm ET / 6:30am IST (+1d)\n  📍 Monterrey (Guadalupe), Mexico",
+          "sent": true,
+          "hash": "66a65da659ff47ba",
+          "key": "mb-2026-06-24",
+          "generated_at": "2026-06-24T00:04:04.985419-07:00",
+          "kickoff_utc": "2026-06-24T19:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -4527,6 +4541,101 @@
             }
           ],
           "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-06-24",
+      "matches": [
+        {
+          "id": "11",
+          "home": "Switzerland",
+          "away": "Canada",
+          "kickoff_utc": "2026-06-24T19:00:00Z",
+          "venue": "Vancouver",
+          "stage": "group",
+          "pred": {
+            "home": 0.348834254798891,
+            "draw": 0.28592376549305476,
+            "away": 0.36524197970805417,
+            "pick": "Canada"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "12",
+          "home": "Bosnia & Herzegovina",
+          "away": "Qatar",
+          "kickoff_utc": "2026-06-24T19:00:00Z",
+          "venue": "Seattle",
+          "stage": "group",
+          "pred": {
+            "home": 0.3452044332068305,
+            "draw": 0.28258757667133383,
+            "away": 0.37220799012183575,
+            "pick": "Qatar"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "17",
+          "home": "Scotland",
+          "away": "Brazil",
+          "kickoff_utc": "2026-06-24T22:00:00Z",
+          "venue": "Miami (Miami Gardens)",
+          "stage": "group",
+          "pred": {
+            "home": 0.1017959440362297,
+            "draw": 0.20011204319807427,
+            "away": 0.6980920127656959,
+            "pick": "Brazil"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "18",
+          "home": "Morocco",
+          "away": "Haiti",
+          "kickoff_utc": "2026-06-24T22:00:00Z",
+          "venue": "Atlanta",
+          "stage": "group",
+          "pred": {
+            "home": 0.6240285316330153,
+            "draw": 0.27387481742627273,
+            "away": 0.10209665094071195,
+            "pick": "Morocco"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "5",
+          "home": "Czech Republic",
+          "away": "Mexico",
+          "kickoff_utc": "2026-06-25T01:00:00Z",
+          "venue": "Mexico City",
+          "stage": "group",
+          "pred": {
+            "home": 0.2682362582005513,
+            "draw": 0.289781034871462,
+            "away": 0.4419827069279867,
+            "pick": "Mexico"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "6",
+          "home": "South Africa",
+          "away": "South Korea",
+          "kickoff_utc": "2026-06-25T01:00:00Z",
+          "venue": "Monterrey (Guadalupe)",
+          "stage": "group",
+          "pred": {
+            "home": 0.15628159802256159,
+            "draw": 0.26647238663576667,
+            "away": 0.5772460153416716,
+            "pick": "South Korea"
+          },
+          "status": "sched"
         }
       ]
     }
