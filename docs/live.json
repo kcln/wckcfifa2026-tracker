@@ -1,1 +1,1 @@
-{"live": true, "id": "70", "home": "Panama", "away": "Croatia", "hg": 0, "ag": 0, "status": "LIVE", "clock": "51'", "date": "2026-06-23", "venue": "Toronto", "events": []}
+{"live": true, "id": "70", "home": "Panama", "away": "Croatia", "hg": 0, "ag": 1, "status": "LIVE", "clock": "55'", "date": "2026-06-23", "venue": "Toronto", "events": [{"kind": "goal", "player": "Ante Budimir", "team": "Croatia", "minute": "54'"}]}
