@@ -4581,7 +4581,7 @@
           "status": "live",
           "hg": 2,
           "ag": 0,
-          "clock": "69'",
+          "clock": "72'",
           "ht": false,
           "events": [
             {
@@ -4614,7 +4614,7 @@
           "status": "live",
           "hg": 2,
           "ag": 1,
-          "clock": "64'",
+          "clock": "68'",
           "ht": false,
           "events": [
             {
@@ -4625,7 +4625,7 @@
             },
             {
               "kind": "own_goal",
-              "player": "Sultan Al-Brake",
+              "player": "Mahmoud Abunada",
               "team": "Bosnia & Herzegovina",
               "minute": "34'"
             },
@@ -4711,7 +4711,7 @@
       "hg": 2,
       "ag": 0,
       "status": "LIVE",
-      "clock": "69'",
+      "clock": "72'",
       "events": [
         {
           "kind": "goal",
@@ -4737,7 +4737,7 @@
       "hg": 2,
       "ag": 1,
       "status": "LIVE",
-      "clock": "64'",
+      "clock": "68'",
       "events": [
         {
           "kind": "goal",
@@ -4747,7 +4747,7 @@
         },
         {
           "kind": "own_goal",
-          "player": "Sultan Al-Brake",
+          "player": "Mahmoud Abunada",
           "team": "Bosnia & Herzegovina",
           "minute": "34'"
         },
@@ -6602,7 +6602,7 @@
           "status": "live",
           "hg": 2,
           "ag": 0,
-          "clock": "69'",
+          "clock": "72'",
           "ht": false,
           "events": [
             {
@@ -6635,7 +6635,7 @@
           "status": "live",
           "hg": 2,
           "ag": 1,
-          "clock": "64'",
+          "clock": "68'",
           "ht": false,
           "events": [
             {
@@ -6646,7 +6646,7 @@
             },
             {
               "kind": "own_goal",
-              "player": "Sultan Al-Brake",
+              "player": "Mahmoud Abunada",
               "team": "Bosnia & Herzegovina",
               "minute": "34'"
             },
