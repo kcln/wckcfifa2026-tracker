@@ -1,1 +1,1 @@
-{"live": true, "id": "64", "home": "Colombia", "away": "DR Congo", "hg": 1, "ag": 0, "status": "LIVE", "clock": "90'+3'", "date": "2026-06-23", "venue": "Guadalajara (Zapopan)", "events": [{"kind": "goal", "player": "Daniel Mu\u00f1oz", "team": "Colombia", "minute": "76'"}]}
+{"live": false, "id": "64", "home": "Colombia", "away": "DR Congo", "hg": 1, "ag": 0, "status": "FT", "clock": "", "date": "2026-06-23", "venue": "Guadalajara (Zapopan)", "events": [{"kind": "goal", "player": "Daniel Mu\u00f1oz", "team": "Colombia", "minute": "76'"}]}
