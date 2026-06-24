@@ -4751,7 +4751,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "42'",
+          "clock": "45'+1'",
           "ht": false,
           "events": [
             {
@@ -4776,9 +4776,9 @@
             "pick": "Morocco"
           },
           "status": "live",
-          "hg": 1,
-          "ag": 1,
-          "clock": "42'",
+          "hg": 2,
+          "ag": 2,
+          "clock": "45'+1'",
           "ht": false,
           "events": [
             {
@@ -4792,6 +4792,18 @@
               "player": "Achraf Hakimi",
               "team": "Morocco",
               "minute": "39'"
+            },
+            {
+              "kind": "goal",
+              "player": "Wilson Isidor",
+              "team": "Haiti",
+              "minute": "43'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ismael Saibari",
+              "team": "Morocco",
+              "minute": "45'+1'"
             }
           ]
         },
@@ -4839,7 +4851,7 @@
       "hg": 0,
       "ag": 1,
       "status": "LIVE",
-      "clock": "42'",
+      "clock": "45'+1'",
       "events": [
         {
           "kind": "goal",
@@ -4856,10 +4868,10 @@
       "date": "2026-06-24",
       "venue": "Atlanta",
       "kickoff_utc": "2026-06-24T22:00:00Z",
-      "hg": 1,
-      "ag": 1,
+      "hg": 2,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "42'",
+      "clock": "45'+1'",
       "events": [
         {
           "kind": "own_goal",
@@ -4872,6 +4884,18 @@
           "player": "Achraf Hakimi",
           "team": "Morocco",
           "minute": "39'"
+        },
+        {
+          "kind": "goal",
+          "player": "Wilson Isidor",
+          "team": "Haiti",
+          "minute": "43'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ismael Saibari",
+          "team": "Morocco",
+          "minute": "45'+1'"
         }
       ]
     }
@@ -6800,7 +6824,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "42'",
+          "clock": "45'+1'",
           "ht": false,
           "events": [
             {
@@ -6825,9 +6849,9 @@
             "pick": "Morocco"
           },
           "status": "live",
-          "hg": 1,
-          "ag": 1,
-          "clock": "42'",
+          "hg": 2,
+          "ag": 2,
+          "clock": "45'+1'",
           "ht": false,
           "events": [
             {
@@ -6841,6 +6865,18 @@
               "player": "Achraf Hakimi",
               "team": "Morocco",
               "minute": "39'"
+            },
+            {
+              "kind": "goal",
+              "player": "Wilson Isidor",
+              "team": "Haiti",
+              "minute": "43'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ismael Saibari",
+              "team": "Morocco",
+              "minute": "45'+1'"
             }
           ]
         },
