@@ -4751,7 +4751,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "8'",
+          "clock": "11'",
           "ht": false,
           "events": [
             {
@@ -4777,10 +4777,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "8'",
+          "ag": 1,
+          "clock": "12'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Lenny Joseph",
+              "team": "Haiti",
+              "minute": "10'"
+            }
+          ]
         },
         {
           "id": "5",
@@ -4826,7 +4833,7 @@
       "hg": 0,
       "ag": 1,
       "status": "LIVE",
-      "clock": "8'",
+      "clock": "11'",
       "events": [
         {
           "kind": "goal",
@@ -4844,10 +4851,17 @@
       "venue": "Atlanta",
       "kickoff_utc": "2026-06-24T22:00:00Z",
       "hg": 0,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "8'",
-      "events": []
+      "clock": "12'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Lenny Joseph",
+          "team": "Haiti",
+          "minute": "10'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -6774,7 +6788,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "8'",
+          "clock": "11'",
           "ht": false,
           "events": [
             {
@@ -6800,10 +6814,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "8'",
+          "ag": 1,
+          "clock": "12'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Lenny Joseph",
+              "team": "Haiti",
+              "minute": "10'"
+            }
+          ]
         },
         {
           "id": "5",
