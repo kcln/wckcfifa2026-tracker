@@ -4560,7 +4560,12 @@
             "away": 0.36524197970805417,
             "pick": "Canada"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "12",
@@ -4575,7 +4580,12 @@
             "away": 0.37220799012183575,
             "pick": "Qatar"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "17",
@@ -4640,7 +4650,34 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "11",
+      "home": "Switzerland",
+      "away": "Canada",
+      "date": "2026-06-24",
+      "venue": "Vancouver",
+      "kickoff_utc": "2026-06-24T19:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    },
+    {
+      "id": "12",
+      "home": "Bosnia & Herzegovina",
+      "away": "Qatar",
+      "date": "2026-06-24",
+      "venue": "Seattle",
+      "kickoff_utc": "2026-06-24T19:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -6480,7 +6517,12 @@
             "away": 0.36524197970805417,
             "pick": "Canada"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "12",
@@ -6495,7 +6537,12 @@
             "away": 0.37220799012183575,
             "pick": "Qatar"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "17",
