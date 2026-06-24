@@ -4769,7 +4769,7 @@
           "status": "live",
           "hg": 0,
           "ag": 3,
-          "clock": "85'",
+          "clock": "89'",
           "ht": false,
           "events": [
             {
@@ -4806,9 +4806,9 @@
             "pick": "Morocco"
           },
           "status": "live",
-          "hg": 3,
+          "hg": 4,
           "ag": 2,
-          "clock": "88'",
+          "clock": "90'+2'",
           "ht": false,
           "events": [
             {
@@ -4840,6 +4840,12 @@
               "player": "Soufiane Rahimi",
               "team": "Morocco",
               "minute": "78'"
+            },
+            {
+              "kind": "goal",
+              "player": "Gessime Yassine",
+              "team": "Morocco",
+              "minute": "89'"
             }
           ]
         },
@@ -4887,7 +4893,7 @@
       "hg": 0,
       "ag": 3,
       "status": "LIVE",
-      "clock": "85'",
+      "clock": "89'",
       "events": [
         {
           "kind": "goal",
@@ -4916,10 +4922,10 @@
       "date": "2026-06-24",
       "venue": "Atlanta",
       "kickoff_utc": "2026-06-24T22:00:00Z",
-      "hg": 3,
+      "hg": 4,
       "ag": 2,
       "status": "LIVE",
-      "clock": "88'",
+      "clock": "90'+2'",
       "events": [
         {
           "kind": "own_goal",
@@ -4950,6 +4956,12 @@
           "player": "Soufiane Rahimi",
           "team": "Morocco",
           "minute": "78'"
+        },
+        {
+          "kind": "goal",
+          "player": "Gessime Yassine",
+          "team": "Morocco",
+          "minute": "89'"
         }
       ]
     }
@@ -6878,7 +6890,7 @@
           "status": "live",
           "hg": 0,
           "ag": 3,
-          "clock": "85'",
+          "clock": "89'",
           "ht": false,
           "events": [
             {
@@ -6915,9 +6927,9 @@
             "pick": "Morocco"
           },
           "status": "live",
-          "hg": 3,
+          "hg": 4,
           "ag": 2,
-          "clock": "88'",
+          "clock": "90'+2'",
           "ht": false,
           "events": [
             {
@@ -6949,6 +6961,12 @@
               "player": "Soufiane Rahimi",
               "team": "Morocco",
               "minute": "78'"
+            },
+            {
+              "kind": "goal",
+              "player": "Gessime Yassine",
+              "team": "Morocco",
+              "minute": "89'"
             }
           ]
         },
