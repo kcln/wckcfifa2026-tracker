@@ -4769,7 +4769,7 @@
           "status": "live",
           "hg": 0,
           "ag": 3,
-          "clock": "74'",
+          "clock": "77'",
           "ht": false,
           "events": [
             {
@@ -4806,9 +4806,9 @@
             "pick": "Morocco"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 2,
-          "clock": "76'",
+          "clock": "81'",
           "ht": false,
           "events": [
             {
@@ -4834,6 +4834,12 @@
               "player": "Ismael Saibari",
               "team": "Morocco",
               "minute": "45'+1'"
+            },
+            {
+              "kind": "goal",
+              "player": "Soufiane Rahimi",
+              "team": "Morocco",
+              "minute": "78'"
             }
           ]
         },
@@ -4881,7 +4887,7 @@
       "hg": 0,
       "ag": 3,
       "status": "LIVE",
-      "clock": "74'",
+      "clock": "77'",
       "events": [
         {
           "kind": "goal",
@@ -4910,10 +4916,10 @@
       "date": "2026-06-24",
       "venue": "Atlanta",
       "kickoff_utc": "2026-06-24T22:00:00Z",
-      "hg": 2,
+      "hg": 3,
       "ag": 2,
       "status": "LIVE",
-      "clock": "76'",
+      "clock": "81'",
       "events": [
         {
           "kind": "own_goal",
@@ -4938,6 +4944,12 @@
           "player": "Ismael Saibari",
           "team": "Morocco",
           "minute": "45'+1'"
+        },
+        {
+          "kind": "goal",
+          "player": "Soufiane Rahimi",
+          "team": "Morocco",
+          "minute": "78'"
         }
       ]
     }
@@ -6866,7 +6878,7 @@
           "status": "live",
           "hg": 0,
           "ag": 3,
-          "clock": "74'",
+          "clock": "77'",
           "ht": false,
           "events": [
             {
@@ -6903,9 +6915,9 @@
             "pick": "Morocco"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 2,
-          "clock": "76'",
+          "clock": "81'",
           "ht": false,
           "events": [
             {
@@ -6931,6 +6943,12 @@
               "player": "Ismael Saibari",
               "team": "Morocco",
               "minute": "45'+1'"
+            },
+            {
+              "kind": "goal",
+              "player": "Soufiane Rahimi",
+              "team": "Morocco",
+              "minute": "78'"
             }
           ]
         },
