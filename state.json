@@ -4748,7 +4748,12 @@
             "away": 0.6980920127656959,
             "pick": "Brazil"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "18",
@@ -4763,7 +4768,12 @@
             "away": 0.10209665094071195,
             "pick": "Morocco"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "5",
@@ -4798,7 +4808,34 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "17",
+      "home": "Scotland",
+      "away": "Brazil",
+      "date": "2026-06-24",
+      "venue": "Miami (Miami Gardens)",
+      "kickoff_utc": "2026-06-24T22:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "4'",
+      "events": []
+    },
+    {
+      "id": "18",
+      "home": "Morocco",
+      "away": "Haiti",
+      "date": "2026-06-24",
+      "venue": "Atlanta",
+      "kickoff_utc": "2026-06-24T22:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "4'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -6720,7 +6757,12 @@
             "away": 0.6980920127656959,
             "pick": "Brazil"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "18",
@@ -6735,7 +6777,12 @@
             "away": 0.10209665094071195,
             "pick": "Morocco"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "5",
