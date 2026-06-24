@@ -4750,8 +4750,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 2,
-          "clock": "23'",
+          "ag": 1,
+          "clock": "27'",
           "ht": false,
           "events": [
             {
@@ -4759,12 +4759,6 @@
               "player": "Vinícius Júnior",
               "team": "Brazil",
               "minute": "7'"
-            },
-            {
-              "kind": "goal",
-              "player": "Vinícius Júnior",
-              "team": "Brazil",
-              "minute": "22'"
             }
           ]
         },
@@ -4784,7 +4778,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "23'",
+          "clock": "27'",
           "ht": false,
           "events": [
             {
@@ -4837,21 +4831,15 @@
       "venue": "Miami (Miami Gardens)",
       "kickoff_utc": "2026-06-24T22:00:00Z",
       "hg": 0,
-      "ag": 2,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "23'",
+      "clock": "27'",
       "events": [
         {
           "kind": "goal",
           "player": "Vinícius Júnior",
           "team": "Brazil",
           "minute": "7'"
-        },
-        {
-          "kind": "goal",
-          "player": "Vinícius Júnior",
-          "team": "Brazil",
-          "minute": "22'"
         }
       ]
     },
@@ -4865,7 +4853,7 @@
       "hg": 0,
       "ag": 1,
       "status": "LIVE",
-      "clock": "23'",
+      "clock": "27'",
       "events": [
         {
           "kind": "goal",
@@ -6799,8 +6787,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 2,
-          "clock": "23'",
+          "ag": 1,
+          "clock": "27'",
           "ht": false,
           "events": [
             {
@@ -6808,12 +6796,6 @@
               "player": "Vinícius Júnior",
               "team": "Brazil",
               "minute": "7'"
-            },
-            {
-              "kind": "goal",
-              "player": "Vinícius Júnior",
-              "team": "Brazil",
-              "minute": "22'"
             }
           ]
         },
@@ -6833,7 +6815,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "23'",
+          "clock": "27'",
           "ht": false,
           "events": [
             {
