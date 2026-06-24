@@ -4487,11 +4487,18 @@
             "pick": "Colombia"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "75'",
+          "clock": "78'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Daniel Muñoz",
+              "team": "Colombia",
+              "minute": "76'"
+            }
+          ]
         }
       ]
     }
@@ -4504,11 +4511,18 @@
       "date": "2026-06-23",
       "venue": "Guadalajara (Zapopan)",
       "kickoff_utc": "2026-06-24T02:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "75'",
-      "events": []
+      "clock": "78'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Daniel Muñoz",
+          "team": "Colombia",
+          "minute": "76'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -6320,11 +6334,18 @@
             "pick": "Colombia"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "75'",
+          "clock": "78'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Daniel Muñoz",
+              "team": "Colombia",
+              "minute": "76'"
+            }
+          ]
         }
       ]
     },
