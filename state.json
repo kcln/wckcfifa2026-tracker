@@ -1120,6 +1120,24 @@
           "key": "mb-2026-06-24",
           "generated_at": "2026-06-24T00:04:04.985419-07:00",
           "kickoff_utc": "2026-06-24T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 24\n\nHalf-time:\nSwitzerland 0 - 0 Canada\nVancouver, Canada\nPrediction: Canada",
+          "sent": true,
+          "hash": "2e6617c3aad39285",
+          "key": "ht-2026-06-24-11",
+          "generated_at": "2026-06-24T12:53:25.592098-07:00",
+          "kickoff_utc": "2026-06-24T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 24\n\nHalf-time:\nBosnia & Herzegovina 2 - 1 Qatar\nSeattle, USA\n  ⚽ 29' Kerim Alajbegovic (Bosnia & Herzegovina)\n  ⚽ 34' Sultan Al-Brake (Bosnia & Herzegovina, OG)\n  ⚽ 42' Hassan Al-Haydos (Qatar)\nPrediction: Qatar",
+          "sent": true,
+          "hash": "4533ae83df5444fc",
+          "key": "ht-2026-06-24-12",
+          "generated_at": "2026-06-24T12:53:25.592158-07:00",
+          "kickoff_utc": "2026-06-24T19:00:00Z"
         }
       ]
     }
@@ -4564,7 +4582,7 @@
           "hg": 0,
           "ag": 0,
           "clock": "45'+4'",
-          "ht": false,
+          "ht": true,
           "events": []
         },
         {
@@ -4583,8 +4601,8 @@
           "status": "live",
           "hg": 2,
           "ag": 1,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -4679,7 +4697,7 @@
       "kickoff_utc": "2026-06-24T19:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+4'",
       "events": []
     },
@@ -4692,8 +4710,8 @@
       "kickoff_utc": "2026-06-24T19:00:00Z",
       "hg": 2,
       "ag": 1,
-      "status": "LIVE",
-      "clock": "45'+4'",
+      "status": "HT",
+      "clock": "45'+6'",
       "events": [
         {
           "kind": "goal",
@@ -6559,7 +6577,7 @@
           "hg": 0,
           "ag": 0,
           "clock": "45'+4'",
-          "ht": false,
+          "ht": true,
           "events": []
         },
         {
@@ -6578,8 +6596,8 @@
           "status": "live",
           "hg": 2,
           "ag": 1,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
