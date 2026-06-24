@@ -4750,8 +4750,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "45'+1'",
+          "ag": 2,
+          "clock": "45'+4'",
           "ht": false,
           "events": [
             {
@@ -4759,6 +4759,12 @@
               "player": "Vinícius Júnior",
               "team": "Brazil",
               "minute": "7'"
+            },
+            {
+              "kind": "goal",
+              "player": "Vinícius Júnior",
+              "team": "Brazil",
+              "minute": "45'+3'"
             }
           ]
         },
@@ -4778,7 +4784,7 @@
           "status": "live",
           "hg": 2,
           "ag": 2,
-          "clock": "45'+1'",
+          "clock": "45'+4'",
           "ht": false,
           "events": [
             {
@@ -4849,15 +4855,21 @@
       "venue": "Miami (Miami Gardens)",
       "kickoff_utc": "2026-06-24T22:00:00Z",
       "hg": 0,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "45'+1'",
+      "clock": "45'+4'",
       "events": [
         {
           "kind": "goal",
           "player": "Vinícius Júnior",
           "team": "Brazil",
           "minute": "7'"
+        },
+        {
+          "kind": "goal",
+          "player": "Vinícius Júnior",
+          "team": "Brazil",
+          "minute": "45'+3'"
         }
       ]
     },
@@ -4871,7 +4883,7 @@
       "hg": 2,
       "ag": 2,
       "status": "LIVE",
-      "clock": "45'+1'",
+      "clock": "45'+4'",
       "events": [
         {
           "kind": "own_goal",
@@ -6823,8 +6835,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "45'+1'",
+          "ag": 2,
+          "clock": "45'+4'",
           "ht": false,
           "events": [
             {
@@ -6832,6 +6844,12 @@
               "player": "Vinícius Júnior",
               "team": "Brazil",
               "minute": "7'"
+            },
+            {
+              "kind": "goal",
+              "player": "Vinícius Júnior",
+              "team": "Brazil",
+              "minute": "45'+3'"
             }
           ]
         },
@@ -6851,7 +6869,7 @@
           "status": "live",
           "hg": 2,
           "ag": 2,
-          "clock": "45'+1'",
+          "clock": "45'+4'",
           "ht": false,
           "events": [
             {
