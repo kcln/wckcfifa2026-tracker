@@ -4802,8 +4802,8 @@
           "status": "live",
           "hg": 2,
           "ag": 2,
-          "clock": "45'+5'",
-          "ht": true,
+          "clock": "47'",
+          "ht": false,
           "events": [
             {
               "kind": "own_goal",
@@ -4900,8 +4900,8 @@
       "kickoff_utc": "2026-06-24T22:00:00Z",
       "hg": 2,
       "ag": 2,
-      "status": "HT",
-      "clock": "45'+5'",
+      "status": "LIVE",
+      "clock": "47'",
       "events": [
         {
           "kind": "own_goal",
@@ -6887,8 +6887,8 @@
           "status": "live",
           "hg": 2,
           "ag": 2,
-          "clock": "45'+5'",
-          "ht": true,
+          "clock": "47'",
+          "ht": false,
           "events": [
             {
               "kind": "own_goal",
