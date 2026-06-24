@@ -379,6 +379,9 @@ def _match_card(m: dict) -> str:
     loc = _place(str(m.get("venue", "")))
     if loc:
         foot_bits.append(f'📍 {escape(loc)}')
+    mid = str(m.get("id", "")).strip()
+    if mid:                                   # match number, after the location
+        foot_bits.append(f'M{escape(mid)}')
     foot = f'<div class="mc-foot">{" · ".join(foot_bits)}</div>' if foot_bits else ""
     kick = _kick_chips(str(m.get("kickoff_utc", "")))
 
@@ -502,11 +505,13 @@ def _sched_box(m: dict) -> str:
         meta = escape(_kick_pt_short(str(m.get("kickoff_utc", ""))))
     loc = escape(_place(str(m.get("venue", ""))))
     loc_html = f'<div class="dbox-loc">📍 {loc}</div>' if loc else ""
+    mid = escape(str(m.get("id", "")).strip())
+    num_html = f'<div class="dbox-num">M{mid}</div>' if mid else ""
     cls = {"FT": "done", "live": "live"}.get(st, "soon")
     return (
         f'<div class="dbox {cls}" data-mid="{escape(str(m.get("id", "")))}">'
         f'<div class="dbox-teams">{teams}</div>'
-        f'<div class="dbox-meta">{meta}</div>{loc_html}</div>')
+        f'<div class="dbox-meta">{meta}</div>{loc_html}{num_html}</div>')
 
 
 KO_START = "2026-06-28"   # knockouts begin: strip covers the group days before this
@@ -646,13 +651,21 @@ def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict,
     st = m.get("status")
     played = st in ("FT", "live")
     hg, ag = int(m.get("hg") or 0), int(m.get("ag") or 0)
+    # Every knockout box leads with its match number + date (the bracket is a
+    # tree with no date columns, so the box must carry its own date), then the
+    # kickoff time / Full time / live clock.
+    mid = str(m.get("id", "")).strip()
+    head = " · ".join(p for p in (f"M{mid}" if mid else "",
+                                  _fmt_day_col(str(m.get("date", "")))) if p)
+    head_h, sep = escape(head), (" · " if head else "")
     if st == "live":
         clk = escape(str(m.get("clock", "")).strip() or "Live")
-        tag = f'<div class="bkm-tag livet"><span class="livedot"></span>{clk}</div>'
+        tag = (f'<div class="bkm-tag livet">{head_h}{sep}'
+               f'<span class="livedot"></span>{clk}</div>')
     elif st == "FT":
-        tag = '<div class="bkm-tag">Full time</div>'
+        tag = f'<div class="bkm-tag">{head_h}{sep}Full time</div>'
     else:
-        tag = (f'<div class="bkm-tag">'
+        tag = (f'<div class="bkm-tag">{head_h}{sep}'
                f'{escape(_kick_pt_short(str(m.get("kickoff_utc", ""))))}</div>')
 
     def row(label_html, sc, win, proj):
@@ -959,6 +972,7 @@ __REFRESH__
     .dbox-meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; color: var(--ink-soft); margin-top: 6px; display: flex; align-items: center; gap: 6px; }
     .dbox.live .dbox-meta { color: var(--p-700); }
     .dbox-loc { font-size: 11px; color: var(--ink-faint); margin-top: 4px; }
+    .dbox-num { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.08em; color: var(--ink-faint); margin-top: 4px; }
     /* Knockout bracket (Schedule, from Jun 28) — classic horizontal tree */
     .bk { display: flex; flex: 0 0 auto; overflow: visible; padding: 6px 4px 12px; }
     .bk-rnd { display: flex; flex-direction: column; justify-content: space-around; min-width: 156px; padding-top: 22px; position: relative; }
