@@ -4477,12 +4477,31 @@
             "away": 0.07916212307865665,
             "pick": "Colombia"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "64",
+      "home": "Colombia",
+      "away": "DR Congo",
+      "date": "2026-06-23",
+      "venue": "Guadalajara (Zapopan)",
+      "kickoff_utc": "2026-06-24T02:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "1'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -6291,7 +6310,12 @@
             "away": 0.07916212307865665,
             "pick": "Colombia"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         }
       ]
     },
