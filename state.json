@@ -4581,7 +4581,7 @@
           "status": "live",
           "hg": 2,
           "ag": 0,
-          "clock": "72'",
+          "clock": "76'",
           "ht": false,
           "events": [
             {
@@ -4595,6 +4595,12 @@
               "player": "Johan Manzambi",
               "team": "Switzerland",
               "minute": "57'"
+            },
+            {
+              "kind": "goal",
+              "player": "Promise David",
+              "team": "Canada",
+              "minute": "76'"
             }
           ]
         },
@@ -4614,7 +4620,7 @@
           "status": "live",
           "hg": 2,
           "ag": 1,
-          "clock": "68'",
+          "clock": "72'",
           "ht": false,
           "events": [
             {
@@ -4711,7 +4717,7 @@
       "hg": 2,
       "ag": 0,
       "status": "LIVE",
-      "clock": "72'",
+      "clock": "76'",
       "events": [
         {
           "kind": "goal",
@@ -4724,6 +4730,12 @@
           "player": "Johan Manzambi",
           "team": "Switzerland",
           "minute": "57'"
+        },
+        {
+          "kind": "goal",
+          "player": "Promise David",
+          "team": "Canada",
+          "minute": "76'"
         }
       ]
     },
@@ -4737,7 +4749,7 @@
       "hg": 2,
       "ag": 1,
       "status": "LIVE",
-      "clock": "68'",
+      "clock": "72'",
       "events": [
         {
           "kind": "goal",
@@ -6602,7 +6614,7 @@
           "status": "live",
           "hg": 2,
           "ag": 0,
-          "clock": "72'",
+          "clock": "76'",
           "ht": false,
           "events": [
             {
@@ -6616,6 +6628,12 @@
               "player": "Johan Manzambi",
               "team": "Switzerland",
               "minute": "57'"
+            },
+            {
+              "kind": "goal",
+              "player": "Promise David",
+              "team": "Canada",
+              "minute": "76'"
             }
           ]
         },
@@ -6635,7 +6653,7 @@
           "status": "live",
           "hg": 2,
           "ag": 1,
-          "clock": "68'",
+          "clock": "72'",
           "ht": false,
           "events": [
             {
