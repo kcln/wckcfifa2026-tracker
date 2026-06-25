@@ -1192,6 +1192,24 @@
           "key": "pm-2026-06-24-17",
           "generated_at": "2026-06-24T17:05:59.894218-07:00",
           "kickoff_utc": "2026-06-24T22:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 24\n\nHalf-time:\nCzech Republic 0 - 0 Mexico\nMexico City, Mexico\nPrediction: Mexico",
+          "sent": true,
+          "hash": "647885a104ab7a23",
+          "key": "ht-2026-06-24-5",
+          "generated_at": "2026-06-24T18:51:48.937091-07:00",
+          "kickoff_utc": "2026-06-25T01:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 24\n\nHalf-time:\nSouth Africa 0 - 0 South Korea\nMonterrey (Guadalupe), Mexico\nPrediction: South Korea",
+          "sent": true,
+          "hash": "19f79c30f2623411",
+          "key": "ht-2026-06-24-6",
+          "generated_at": "2026-06-24T18:51:48.937130-07:00",
+          "kickoff_utc": "2026-06-25T01:00:00Z"
         }
       ]
     }
@@ -4960,8 +4978,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+2'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": []
         },
         {
@@ -4980,8 +4998,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+3'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": []
         }
       ]
@@ -4997,8 +5015,8 @@
       "kickoff_utc": "2026-06-25T01:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+2'",
+      "status": "HT",
+      "clock": "45'+4'",
       "events": []
     },
     {
@@ -5010,8 +5028,8 @@
       "kickoff_utc": "2026-06-25T01:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+3'",
+      "status": "HT",
+      "clock": "45'+5'",
       "events": []
     }
   ],
@@ -7033,8 +7051,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+2'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": []
         },
         {
@@ -7053,8 +7071,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+3'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": []
         }
       ]
