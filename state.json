@@ -1174,6 +1174,15 @@
           "key": "ht-2026-06-24-18",
           "generated_at": "2026-06-24T15:54:23.010837-07:00",
           "kickoff_utc": "2026-06-24T22:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 24\n\nFull time:\nMorocco 4 - 2 Haiti\nAtlanta, USA\n  ⚽ 10' Yassine Bounou (Haiti, OG)\n  ⚽ 39' Achraf Hakimi (Morocco)\n  ⚽ 43' Wilson Isidor (Haiti)\n  ⚽ 45'+1' Ismael Saibari (Morocco)\n  ⚽ 78' Soufiane Rahimi (Morocco)\n  ⚽ 89' Gessime Yassine (Morocco)\nOverall prediction: 27/51 (52.9%)\nPrediction ✓: Morocco",
+          "sent": true,
+          "hash": "7fa9ab3903e8369f",
+          "key": "pm-2026-06-24-18",
+          "generated_at": "2026-06-24T17:02:13.314366-07:00",
+          "kickoff_utc": "2026-06-24T22:00:00Z"
         }
       ]
     }
@@ -1249,19 +1258,19 @@
     ],
     "C": [
       {
+        "team": "Morocco",
+        "played": 3,
+        "points": 7,
+        "gd": 3,
+        "gf": 6,
+        "ga": 3
+      },
+      {
         "team": "Brazil",
         "played": 2,
         "points": 4,
         "gd": 3,
         "gf": 4,
-        "ga": 1
-      },
-      {
-        "team": "Morocco",
-        "played": 2,
-        "points": 4,
-        "gd": 1,
-        "gf": 2,
         "ga": 1
       },
       {
@@ -1274,11 +1283,11 @@
       },
       {
         "team": "Haiti",
-        "played": 2,
+        "played": 3,
         "points": 0,
-        "gd": -4,
-        "gf": 0,
-        "ga": 4
+        "gd": -6,
+        "gf": 2,
+        "ga": 8
       }
     ],
     "D": [
@@ -1590,124 +1599,136 @@
   },
   "bracket": {
     "title_odds": {
-      "Brazil": 0.0524,
-      "Argentina": 0.2364,
-      "Spain": 0.1479,
-      "France": 0.1281,
-      "Mexico": 0.0232,
-      "Germany": 0.0452,
-      "Morocco": 0.0258,
-      "Netherlands": 0.0329,
-      "Ecuador": 0.0075,
-      "Portugal": 0.0442,
-      "England": 0.0421,
-      "Colombia": 0.0488,
-      "Japan": 0.0266,
-      "Canada": 0.0078,
-      "Switzerland": 0.0112,
-      "Croatia": 0.0279,
-      "Senegal": 0.0085,
-      "Sweden": 0.0016,
-      "Algeria": 0.0048,
-      "Scotland": 0.0015,
-      "Austria": 0.0055,
-      "Uruguay": 0.0092,
-      "Egypt": 0.0042,
-      "Belgium": 0.0188,
-      "Australia": 0.0037,
+      "Brazil": 0.0514,
+      "Senegal": 0.0095,
+      "Spain": 0.1521,
+      "France": 0.1284,
+      "Argentina": 0.2332,
+      "Germany": 0.0427,
+      "Colombia": 0.051,
+      "Japan": 0.0288,
       "Turkey": 0.0044,
-      "Uzbekistan": 0.0003,
-      "Norway": 0.0101,
-      "Iran": 0.0076,
-      "South Korea": 0.0056,
+      "Portugal": 0.0412,
+      "Belgium": 0.0183,
+      "England": 0.0435,
       "Paraguay": 0.0036,
+      "Uruguay": 0.0105,
+      "Netherlands": 0.0329,
+      "Canada": 0.0071,
+      "Mexico": 0.0225,
+      "Switzerland": 0.0126,
+      "Ecuador": 0.008,
+      "Croatia": 0.0292,
+      "Norway": 0.009,
+      "Austria": 0.0055,
+      "Morocco": 0.0214,
+      "Australia": 0.0041,
+      "Sweden": 0.0023,
+      "Iran": 0.0073,
+      "Algeria": 0.0043,
+      "Egypt": 0.0055,
+      "Ivory Coast": 0.0017,
+      "Scotland": 0.0006,
+      "South Korea": 0.0061,
       "Czech Republic": 0.0006,
-      "Ivory Coast": 0.0014,
-      "Cape Verde": 0.0004,
+      "Cape Verde": 0.0003,
       "Panama": 0.0001,
-      "DR Congo": 0.0001
+      "Ghana": 0.0001,
+      "DR Congo": 0.0001,
+      "Saudi Arabia": 0.0001
     },
     "advancement": {
       "Colombia": 1.0,
       "Spain": 1.0,
       "Norway": 1.0,
       "Morocco": 1.0,
-      "Uruguay": 0.3953,
       "Switzerland": 1.0,
       "Egypt": 1.0,
-      "Belgium": 0.9083,
+      "Belgium": 0.9135,
       "South Africa": 0.1653,
       "Argentina": 1.0,
-      "Algeria": 0.758,
+      "Algeria": 0.7583,
       "Portugal": 1.0,
       "USA": 1.0,
       "Germany": 1.0,
-      "Czech Republic": 0.2838,
-      "Iran": 0.71,
+      "Czech Republic": 0.2836,
+      "Iran": 0.6996,
       "Bosnia & Herzegovina": 1.0,
-      "Ivory Coast": 0.9295,
+      "Paraguay": 0.6978,
       "Netherlands": 1.0,
-      "DR Congo": 0.2711,
+      "Ivory Coast": 0.928,
       "Japan": 1.0,
       "Mexico": 1.0,
-      "Austria": 0.9448,
-      "Cape Verde": 0.7483,
+      "Austria": 0.9461,
+      "Cape Verde": 0.7423,
       "Ghana": 1.0,
       "Brazil": 1.0,
-      "Croatia": 0.9474,
-      "Australia": 0.877,
+      "Croatia": 0.9452,
       "England": 1.0,
+      "Sweden": 0.9498,
       "France": 1.0,
       "Canada": 1.0,
-      "Sweden": 0.9515,
-      "South Korea": 0.9208,
-      "Senegal": 0.465,
-      "Paraguay": 0.6975,
-      "Scotland": 0.8169,
-      "Saudi Arabia": 0.2549,
-      "Ecuador": 0.2834,
-      "Turkey": 0.2518,
-      "Curaçao": 0.159,
-      "New Zealand": 0.0909,
-      "Uzbekistan": 0.0682,
-      "Iraq": 0.0602,
-      "Panama": 0.0192,
-      "Jordan": 0.0083,
-      "Haiti": 0.0136
+      "Australia": 0.8813,
+      "Scotland": 0.835,
+      "South Korea": 0.9231,
+      "Senegal": 0.4689,
+      "Curaçao": 0.1575,
+      "DR Congo": 0.2711,
+      "Turkey": 0.2412,
+      "Uruguay": 0.3896,
+      "Ecuador": 0.297,
+      "Saudi Arabia": 0.2593,
+      "New Zealand": 0.0857,
+      "Panama": 0.0198,
+      "Uzbekistan": 0.0668,
+      "Iraq": 0.0672,
+      "Jordan": 0.007
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Bosnia & Herzegovina",
-    "away": "Qatar",
-    "home_goals": 3,
-    "away_goals": 1,
+    "home": "Morocco",
+    "away": "Haiti",
+    "home_goals": 4,
+    "away_goals": 2,
     "date": "2026-06-24",
-    "venue": "Seattle",
+    "venue": "Atlanta",
     "events": [
       {
-        "kind": "goal",
-        "player": "Kerim Alajbegovic",
-        "team": "Bosnia & Herzegovina",
-        "minute": "29'"
-      },
-      {
         "kind": "own_goal",
-        "player": "Mahmoud Abunada",
-        "team": "Bosnia & Herzegovina",
-        "minute": "34'"
+        "player": "Yassine Bounou",
+        "team": "Haiti",
+        "minute": "10'"
       },
       {
         "kind": "goal",
-        "player": "Hassan Al-Haydos",
-        "team": "Qatar",
-        "minute": "42'"
+        "player": "Achraf Hakimi",
+        "team": "Morocco",
+        "minute": "39'"
       },
       {
         "kind": "goal",
-        "player": "Ermin Mahmic",
-        "team": "Bosnia & Herzegovina",
-        "minute": "80'"
+        "player": "Wilson Isidor",
+        "team": "Haiti",
+        "minute": "43'"
+      },
+      {
+        "kind": "goal",
+        "player": "Ismael Saibari",
+        "team": "Morocco",
+        "minute": "45'+1'"
+      },
+      {
+        "kind": "goal",
+        "player": "Soufiane Rahimi",
+        "team": "Morocco",
+        "minute": "78'"
+      },
+      {
+        "kind": "goal",
+        "player": "Gessime Yassine",
+        "team": "Morocco",
+        "minute": "89'"
       }
     ]
   },
@@ -2841,6 +2862,48 @@
           "player": "Ermin Mahmic",
           "team": "Bosnia & Herzegovina",
           "minute": "80'"
+        }
+      ]
+    },
+    "18": {
+      "home_goals": 4,
+      "away_goals": 2,
+      "events": [
+        {
+          "kind": "own_goal",
+          "player": "Yassine Bounou",
+          "team": "Haiti",
+          "minute": "10'"
+        },
+        {
+          "kind": "goal",
+          "player": "Achraf Hakimi",
+          "team": "Morocco",
+          "minute": "39'"
+        },
+        {
+          "kind": "goal",
+          "player": "Wilson Isidor",
+          "team": "Haiti",
+          "minute": "43'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ismael Saibari",
+          "team": "Morocco",
+          "minute": "45'+1'"
+        },
+        {
+          "kind": "goal",
+          "player": "Soufiane Rahimi",
+          "team": "Morocco",
+          "minute": "78'"
+        },
+        {
+          "kind": "goal",
+          "player": "Gessime Yassine",
+          "team": "Morocco",
+          "minute": "89'"
         }
       ]
     }
@@ -4769,7 +4832,7 @@
           "status": "live",
           "hg": 0,
           "ag": 3,
-          "clock": "90'+3'",
+          "clock": "90'+6'",
           "ht": false,
           "events": [
             {
@@ -4805,11 +4868,9 @@
             "away": 0.10209665094071195,
             "pick": "Morocco"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 4,
           "ag": 2,
-          "clock": "90'+6'",
-          "ht": false,
           "events": [
             {
               "kind": "own_goal",
@@ -4847,7 +4908,8 @@
               "team": "Morocco",
               "minute": "89'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "5",
@@ -4893,7 +4955,7 @@
       "hg": 0,
       "ag": 3,
       "status": "LIVE",
-      "clock": "90'+3'",
+      "clock": "90'+6'",
       "events": [
         {
           "kind": "goal",
@@ -4912,56 +4974,6 @@
           "player": "Matheus Cunha",
           "team": "Brazil",
           "minute": "60'"
-        }
-      ]
-    },
-    {
-      "id": "18",
-      "home": "Morocco",
-      "away": "Haiti",
-      "date": "2026-06-24",
-      "venue": "Atlanta",
-      "kickoff_utc": "2026-06-24T22:00:00Z",
-      "hg": 4,
-      "ag": 2,
-      "status": "LIVE",
-      "clock": "90'+6'",
-      "events": [
-        {
-          "kind": "own_goal",
-          "player": "Yassine Bounou",
-          "team": "Haiti",
-          "minute": "10'"
-        },
-        {
-          "kind": "goal",
-          "player": "Achraf Hakimi",
-          "team": "Morocco",
-          "minute": "39'"
-        },
-        {
-          "kind": "goal",
-          "player": "Wilson Isidor",
-          "team": "Haiti",
-          "minute": "43'"
-        },
-        {
-          "kind": "goal",
-          "player": "Ismael Saibari",
-          "team": "Morocco",
-          "minute": "45'+1'"
-        },
-        {
-          "kind": "goal",
-          "player": "Soufiane Rahimi",
-          "team": "Morocco",
-          "minute": "78'"
-        },
-        {
-          "kind": "goal",
-          "player": "Gessime Yassine",
-          "team": "Morocco",
-          "minute": "89'"
         }
       ]
     }
@@ -6890,7 +6902,7 @@
           "status": "live",
           "hg": 0,
           "ag": 3,
-          "clock": "90'+3'",
+          "clock": "90'+6'",
           "ht": false,
           "events": [
             {
@@ -6926,11 +6938,9 @@
             "away": 0.10209665094071195,
             "pick": "Morocco"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 4,
           "ag": 2,
-          "clock": "90'+6'",
-          "ht": false,
           "events": [
             {
               "kind": "own_goal",
@@ -6968,7 +6978,8 @@
               "team": "Morocco",
               "minute": "89'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "5",
