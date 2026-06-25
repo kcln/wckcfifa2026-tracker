@@ -4977,10 +4977,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "53'",
+          "ag": 1,
+          "clock": "57'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Mateo Chávez",
+              "team": "Mexico",
+              "minute": "55'"
+            }
+          ]
         },
         {
           "id": "6",
@@ -4998,7 +5005,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "53'",
+          "clock": "57'",
           "ht": false,
           "events": []
         }
@@ -5014,10 +5021,17 @@
       "venue": "Mexico City",
       "kickoff_utc": "2026-06-25T01:00:00Z",
       "hg": 0,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "53'",
-      "events": []
+      "clock": "57'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Mateo Chávez",
+          "team": "Mexico",
+          "minute": "55'"
+        }
+      ]
     },
     {
       "id": "6",
@@ -5029,7 +5043,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "53'",
+      "clock": "57'",
       "events": []
     }
   ],
@@ -7050,10 +7064,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "53'",
+          "ag": 1,
+          "clock": "57'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Mateo Chávez",
+              "team": "Mexico",
+              "minute": "55'"
+            }
+          ]
         },
         {
           "id": "6",
@@ -7071,7 +7092,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "53'",
+          "clock": "57'",
           "ht": false,
           "events": []
         }
