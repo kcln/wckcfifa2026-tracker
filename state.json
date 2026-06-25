@@ -5088,7 +5088,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "6'",
+          "clock": "10'",
           "ht": false,
           "events": [
             {
@@ -5113,9 +5113,9 @@
             "pick": "Germany"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "6'",
+          "clock": "11'",
           "ht": false,
           "events": [
             {
@@ -5123,6 +5123,12 @@
               "player": "Leroy Sané",
               "team": "Germany",
               "minute": "2'"
+            },
+            {
+              "kind": "goal",
+              "player": "Nilson Angulo",
+              "team": "Ecuador",
+              "minute": "9'"
             }
           ]
         },
@@ -5200,7 +5206,7 @@
       "hg": 0,
       "ag": 1,
       "status": "LIVE",
-      "clock": "6'",
+      "clock": "10'",
       "events": [
         {
           "kind": "goal",
@@ -5217,16 +5223,22 @@
       "date": "2026-06-25",
       "venue": "New York/New Jersey (East Rutherford)",
       "kickoff_utc": "2026-06-25T20:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 1,
       "status": "LIVE",
-      "clock": "6'",
+      "clock": "11'",
       "events": [
         {
           "kind": "goal",
           "player": "Leroy Sané",
           "team": "Germany",
           "minute": "2'"
+        },
+        {
+          "kind": "goal",
+          "player": "Nilson Angulo",
+          "team": "Ecuador",
+          "minute": "9'"
         }
       ]
     }
@@ -7318,7 +7330,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "6'",
+          "clock": "10'",
           "ht": false,
           "events": [
             {
@@ -7343,9 +7355,9 @@
             "pick": "Germany"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "6'",
+          "clock": "11'",
           "ht": false,
           "events": [
             {
@@ -7353,6 +7365,12 @@
               "player": "Leroy Sané",
               "team": "Germany",
               "minute": "2'"
+            },
+            {
+              "kind": "goal",
+              "player": "Nilson Angulo",
+              "team": "Ecuador",
+              "minute": "9'"
             }
           ]
         },
