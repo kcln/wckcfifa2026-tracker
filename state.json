@@ -4960,7 +4960,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "33'",
+          "clock": "36'",
           "ht": false,
           "events": []
         },
@@ -4980,7 +4980,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "32'",
+          "clock": "36'",
           "ht": false,
           "events": []
         }
@@ -4998,7 +4998,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "33'",
+      "clock": "36'",
       "events": []
     },
     {
@@ -5011,7 +5011,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "32'",
+      "clock": "36'",
       "events": []
     }
   ],
@@ -7033,7 +7033,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "33'",
+          "clock": "36'",
           "ht": false,
           "events": []
         },
@@ -7053,7 +7053,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "32'",
+          "clock": "36'",
           "ht": false,
           "events": []
         }
