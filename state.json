@@ -4957,7 +4957,12 @@
             "away": 0.4419827069279867,
             "pick": "Mexico"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "6",
@@ -4972,12 +4977,44 @@
             "away": 0.5772460153416716,
             "pick": "South Korea"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "5",
+      "home": "Czech Republic",
+      "away": "Mexico",
+      "date": "2026-06-24",
+      "venue": "Mexico City",
+      "kickoff_utc": "2026-06-25T01:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    },
+    {
+      "id": "6",
+      "home": "South Africa",
+      "away": "South Korea",
+      "date": "2026-06-24",
+      "venue": "Monterrey (Guadalupe)",
+      "kickoff_utc": "2026-06-25T01:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -6993,7 +7030,12 @@
             "away": 0.4419827069279867,
             "pick": "Mexico"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "6",
@@ -7008,7 +7050,12 @@
             "away": 0.5772460153416716,
             "pick": "South Korea"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         }
       ]
     },
