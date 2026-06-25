@@ -1287,6 +1287,24 @@
           "key": "pm-2026-06-25-30",
           "generated_at": "2026-06-25T15:00:15.613463-07:00",
           "kickoff_utc": "2026-06-25T20:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 25\n\nHalf-time:\nJapan 0 - 0 Sweden\nDallas (Arlington), USA\nPrediction: Japan",
+          "sent": true,
+          "hash": "39922a07785d8064",
+          "key": "ht-2026-06-25-35",
+          "generated_at": "2026-06-25T16:52:22.810140-07:00",
+          "kickoff_utc": "2026-06-25T23:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 25\n\nHalf-time:\nTunisia 0 - 2 Netherlands\nKansas City, USA\n  ⚽ 3' Ellyes Skhiri (Netherlands, OG)\n  ⚽ 7' Brian Brobbey (Netherlands)\nPrediction: Netherlands",
+          "sent": true,
+          "hash": "59886264d5506f11",
+          "key": "ht-2026-06-25-36",
+          "generated_at": "2026-06-25T16:52:22.810178-07:00",
+          "kickoff_utc": "2026-06-25T23:00:00Z"
         }
       ]
     }
@@ -5247,8 +5265,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+3'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": []
         },
         {
@@ -5268,7 +5286,7 @@
           "hg": 0,
           "ag": 2,
           "clock": "45'+3'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "own_goal",
@@ -5327,8 +5345,8 @@
       "kickoff_utc": "2026-06-25T23:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+3'",
+      "status": "HT",
+      "clock": "45'+5'",
       "events": []
     },
     {
@@ -5340,7 +5358,7 @@
       "kickoff_utc": "2026-06-25T23:00:00Z",
       "hg": 0,
       "ag": 2,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+3'",
       "events": [
         {
@@ -7515,8 +7533,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+3'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": []
         },
         {
@@ -7536,7 +7554,7 @@
           "hg": 0,
           "ag": 2,
           "clock": "45'+3'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "own_goal",
