@@ -4977,8 +4977,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 2,
-          "clock": "90'+1'",
+          "ag": 3,
+          "clock": "90'+4'",
           "ht": false,
           "events": [
             {
@@ -4992,6 +4992,12 @@
               "player": "Julián Quiñones",
               "team": "Mexico",
               "minute": "61'"
+            },
+            {
+              "kind": "goal",
+              "player": "Álvaro Fidalgo",
+              "team": "Mexico",
+              "minute": "90'+4'"
             }
           ]
         },
@@ -5011,7 +5017,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "90'+1'",
+          "clock": "90'+4'",
           "ht": false,
           "events": [
             {
@@ -5034,9 +5040,9 @@
       "venue": "Mexico City",
       "kickoff_utc": "2026-06-25T01:00:00Z",
       "hg": 0,
-      "ag": 2,
+      "ag": 3,
       "status": "LIVE",
-      "clock": "90'+1'",
+      "clock": "90'+4'",
       "events": [
         {
           "kind": "goal",
@@ -5049,6 +5055,12 @@
           "player": "Julián Quiñones",
           "team": "Mexico",
           "minute": "61'"
+        },
+        {
+          "kind": "goal",
+          "player": "Álvaro Fidalgo",
+          "team": "Mexico",
+          "minute": "90'+4'"
         }
       ]
     },
@@ -5062,7 +5074,7 @@
       "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "90'+1'",
+      "clock": "90'+4'",
       "events": [
         {
           "kind": "goal",
@@ -7090,8 +7102,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 2,
-          "clock": "90'+1'",
+          "ag": 3,
+          "clock": "90'+4'",
           "ht": false,
           "events": [
             {
@@ -7105,6 +7117,12 @@
               "player": "Julián Quiñones",
               "team": "Mexico",
               "minute": "61'"
+            },
+            {
+              "kind": "goal",
+              "player": "Álvaro Fidalgo",
+              "team": "Mexico",
+              "minute": "90'+4'"
             }
           ]
         },
@@ -7124,7 +7142,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "90'+1'",
+          "clock": "90'+4'",
           "ht": false,
           "events": [
             {
