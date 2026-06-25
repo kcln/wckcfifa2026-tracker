@@ -5244,7 +5244,12 @@
             "away": 0.17416922482144775,
             "pick": "Japan"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "36",
@@ -5259,7 +5264,19 @@
             "away": 0.7052705270527053,
             "pick": "Netherlands"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 1,
+          "clock": "4'",
+          "ht": false,
+          "events": [
+            {
+              "kind": "own_goal",
+              "player": "Ellyes Skhiri",
+              "team": "Netherlands",
+              "minute": "3'"
+            }
+          ]
         },
         {
           "id": "23",
@@ -5294,7 +5311,41 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "35",
+      "home": "Japan",
+      "away": "Sweden",
+      "date": "2026-06-25",
+      "venue": "Dallas (Arlington)",
+      "kickoff_utc": "2026-06-25T23:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    },
+    {
+      "id": "36",
+      "home": "Tunisia",
+      "away": "Netherlands",
+      "date": "2026-06-25",
+      "venue": "Kansas City",
+      "kickoff_utc": "2026-06-25T23:00:00Z",
+      "hg": 0,
+      "ag": 1,
+      "status": "LIVE",
+      "clock": "4'",
+      "events": [
+        {
+          "kind": "own_goal",
+          "player": "Ellyes Skhiri",
+          "team": "Netherlands",
+          "minute": "3'"
+        }
+      ]
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -7449,7 +7500,12 @@
             "away": 0.17416922482144775,
             "pick": "Japan"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "36",
@@ -7464,7 +7520,19 @@
             "away": 0.7052705270527053,
             "pick": "Netherlands"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 1,
+          "clock": "4'",
+          "ht": false,
+          "events": [
+            {
+              "kind": "own_goal",
+              "player": "Ellyes Skhiri",
+              "team": "Netherlands",
+              "minute": "3'"
+            }
+          ]
         },
         {
           "id": "23",
