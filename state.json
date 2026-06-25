@@ -5105,8 +5105,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "62'",
+          "ag": 2,
+          "clock": "66'",
           "ht": false,
           "events": [
             {
@@ -5114,6 +5114,12 @@
               "player": "Nicolas Pépé",
               "team": "Ivory Coast",
               "minute": "7'"
+            },
+            {
+              "kind": "goal",
+              "player": "Nicolas Pépé",
+              "team": "Ivory Coast",
+              "minute": "64'"
             }
           ]
         },
@@ -5133,7 +5139,7 @@
           "status": "live",
           "hg": 1,
           "ag": 1,
-          "clock": "63'",
+          "clock": "67'",
           "ht": false,
           "events": [
             {
@@ -5222,15 +5228,21 @@
       "venue": "Philadelphia",
       "kickoff_utc": "2026-06-25T20:00:00Z",
       "hg": 0,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "62'",
+      "clock": "66'",
       "events": [
         {
           "kind": "goal",
           "player": "Nicolas Pépé",
           "team": "Ivory Coast",
           "minute": "7'"
+        },
+        {
+          "kind": "goal",
+          "player": "Nicolas Pépé",
+          "team": "Ivory Coast",
+          "minute": "64'"
         }
       ]
     },
@@ -5244,7 +5256,7 @@
       "hg": 1,
       "ag": 1,
       "status": "LIVE",
-      "clock": "63'",
+      "clock": "67'",
       "events": [
         {
           "kind": "goal",
@@ -7347,8 +7359,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "62'",
+          "ag": 2,
+          "clock": "66'",
           "ht": false,
           "events": [
             {
@@ -7356,6 +7368,12 @@
               "player": "Nicolas Pépé",
               "team": "Ivory Coast",
               "minute": "7'"
+            },
+            {
+              "kind": "goal",
+              "player": "Nicolas Pépé",
+              "team": "Ivory Coast",
+              "minute": "64'"
             }
           ]
         },
@@ -7375,7 +7393,7 @@
           "status": "live",
           "hg": 1,
           "ag": 1,
-          "clock": "63'",
+          "clock": "67'",
           "ht": false,
           "events": [
             {
