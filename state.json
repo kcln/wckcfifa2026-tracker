@@ -5087,10 +5087,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "3'",
+          "ag": 1,
+          "clock": "6'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Nicolas Pépé",
+              "team": "Ivory Coast",
+              "minute": "7'"
+            }
+          ]
         },
         {
           "id": "30",
@@ -5108,7 +5115,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "4'",
+          "clock": "6'",
           "ht": false,
           "events": [
             {
@@ -5191,10 +5198,17 @@
       "venue": "Philadelphia",
       "kickoff_utc": "2026-06-25T20:00:00Z",
       "hg": 0,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "3'",
-      "events": []
+      "clock": "6'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Nicolas Pépé",
+          "team": "Ivory Coast",
+          "minute": "7'"
+        }
+      ]
     },
     {
       "id": "30",
@@ -5206,7 +5220,7 @@
       "hg": 0,
       "ag": 1,
       "status": "LIVE",
-      "clock": "4'",
+      "clock": "6'",
       "events": [
         {
           "kind": "goal",
@@ -7303,10 +7317,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "3'",
+          "ag": 1,
+          "clock": "6'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Nicolas Pépé",
+              "team": "Ivory Coast",
+              "minute": "7'"
+            }
+          ]
         },
         {
           "id": "30",
@@ -7324,7 +7345,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "4'",
+          "clock": "6'",
           "ht": false,
           "events": [
             {
