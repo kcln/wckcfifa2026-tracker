@@ -4977,8 +4977,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "61'",
+          "ag": 2,
+          "clock": "65'",
           "ht": false,
           "events": [
             {
@@ -4986,6 +4986,12 @@
               "player": "Mateo Chávez",
               "team": "Mexico",
               "minute": "55'"
+            },
+            {
+              "kind": "goal",
+              "player": "Julián Quiñones",
+              "team": "Mexico",
+              "minute": "61'"
             }
           ]
         },
@@ -5003,11 +5009,18 @@
             "pick": "South Korea"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "61'",
+          "clock": "64'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Thapelo Maseko",
+              "team": "South Africa",
+              "minute": "63'"
+            }
+          ]
         }
       ]
     }
@@ -5021,15 +5034,21 @@
       "venue": "Mexico City",
       "kickoff_utc": "2026-06-25T01:00:00Z",
       "hg": 0,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "61'",
+      "clock": "65'",
       "events": [
         {
           "kind": "goal",
           "player": "Mateo Chávez",
           "team": "Mexico",
           "minute": "55'"
+        },
+        {
+          "kind": "goal",
+          "player": "Julián Quiñones",
+          "team": "Mexico",
+          "minute": "61'"
         }
       ]
     },
@@ -5040,11 +5059,18 @@
       "date": "2026-06-24",
       "venue": "Monterrey (Guadalupe)",
       "kickoff_utc": "2026-06-25T01:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "61'",
-      "events": []
+      "clock": "64'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Thapelo Maseko",
+          "team": "South Africa",
+          "minute": "63'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -7064,8 +7090,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "61'",
+          "ag": 2,
+          "clock": "65'",
           "ht": false,
           "events": [
             {
@@ -7073,6 +7099,12 @@
               "player": "Mateo Chávez",
               "team": "Mexico",
               "minute": "55'"
+            },
+            {
+              "kind": "goal",
+              "player": "Julián Quiñones",
+              "team": "Mexico",
+              "minute": "61'"
             }
           ]
         },
@@ -7090,11 +7122,18 @@
             "pick": "South Korea"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "61'",
+          "clock": "64'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Thapelo Maseko",
+              "team": "South Africa",
+              "minute": "63'"
+            }
+          ]
         }
       ]
     },
