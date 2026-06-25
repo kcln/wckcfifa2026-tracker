@@ -5085,7 +5085,12 @@
             "away": 0.6197379539925739,
             "pick": "Ivory Coast"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "30",
@@ -5100,7 +5105,19 @@
             "away": 0.4310193553913809,
             "pick": "Germany"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 1,
+          "clock": "4'",
+          "ht": false,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Leroy Sané",
+              "team": "Germany",
+              "minute": "2'"
+            }
+          ]
         },
         {
           "id": "35",
@@ -5165,7 +5182,41 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "29",
+      "home": "Curaçao",
+      "away": "Ivory Coast",
+      "date": "2026-06-25",
+      "venue": "Philadelphia",
+      "kickoff_utc": "2026-06-25T20:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    },
+    {
+      "id": "30",
+      "home": "Ecuador",
+      "away": "Germany",
+      "date": "2026-06-25",
+      "venue": "New York/New Jersey (East Rutherford)",
+      "kickoff_utc": "2026-06-25T20:00:00Z",
+      "hg": 0,
+      "ag": 1,
+      "status": "LIVE",
+      "clock": "4'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Leroy Sané",
+          "team": "Germany",
+          "minute": "2'"
+        }
+      ]
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -7250,7 +7301,12 @@
             "away": 0.6197379539925739,
             "pick": "Ivory Coast"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "30",
@@ -7265,7 +7321,19 @@
             "away": 0.4310193553913809,
             "pick": "Germany"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 1,
+          "clock": "4'",
+          "ht": false,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Leroy Sané",
+              "team": "Germany",
+              "minute": "2'"
+            }
+          ]
         },
         {
           "id": "35",
