@@ -5247,7 +5247,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "13'",
+          "clock": "17'",
           "ht": false,
           "events": []
         },
@@ -5267,9 +5267,22 @@
           "status": "live",
           "hg": 0,
           "ag": 2,
-          "clock": "14'",
+          "clock": "17'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "own_goal",
+              "player": "Ellyes Skhiri",
+              "team": "Netherlands",
+              "minute": "3'"
+            },
+            {
+              "kind": "goal",
+              "player": "Brian Brobbey",
+              "team": "Netherlands",
+              "minute": "7'"
+            }
+          ]
         },
         {
           "id": "23",
@@ -5315,7 +5328,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "13'",
+      "clock": "17'",
       "events": []
     },
     {
@@ -5328,8 +5341,21 @@
       "hg": 0,
       "ag": 2,
       "status": "LIVE",
-      "clock": "14'",
-      "events": []
+      "clock": "17'",
+      "events": [
+        {
+          "kind": "own_goal",
+          "player": "Ellyes Skhiri",
+          "team": "Netherlands",
+          "minute": "3'"
+        },
+        {
+          "kind": "goal",
+          "player": "Brian Brobbey",
+          "team": "Netherlands",
+          "minute": "7'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -7489,7 +7515,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "13'",
+          "clock": "17'",
           "ht": false,
           "events": []
         },
@@ -7509,9 +7535,22 @@
           "status": "live",
           "hg": 0,
           "ag": 2,
-          "clock": "14'",
+          "clock": "17'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "own_goal",
+              "player": "Ellyes Skhiri",
+              "team": "Netherlands",
+              "minute": "3'"
+            },
+            {
+              "kind": "goal",
+              "player": "Brian Brobbey",
+              "team": "Netherlands",
+              "minute": "7'"
+            }
+          ]
         },
         {
           "id": "23",
