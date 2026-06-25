@@ -1210,6 +1210,33 @@
           "key": "ht-2026-06-24-6",
           "generated_at": "2026-06-24T18:51:48.937130-07:00",
           "kickoff_utc": "2026-06-25T01:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 24\n\nFull time:\nCzech Republic 0 - 3 Mexico\nMexico City, Mexico\n  ⚽ 55' Mateo Chávez (Mexico)\n  ⚽ 61' Julián Quiñones (Mexico)\n  ⚽ 90'+4' Álvaro Fidalgo (Mexico)\nOverall prediction: 29/54 (53.7%)\nPrediction ✓: Mexico",
+          "sent": true,
+          "hash": "fbef470fba66cc11",
+          "key": "pm-2026-06-24-5",
+          "generated_at": "2026-06-24T19:58:51.411097-07:00",
+          "kickoff_utc": "2026-06-25T01:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 24\n\nFull time:\nSouth Africa 1 - 0 South Korea\nMonterrey (Guadalupe), Mexico\n  ⚽ 63' Thapelo Maseko (South Africa)\nOverall prediction: 29/54 (53.7%)\nPrediction ✗: South Korea",
+          "sent": true,
+          "hash": "a8e5cb4c00c14f9b",
+          "key": "pm-2026-06-24-6",
+          "generated_at": "2026-06-24T19:58:51.413585-07:00",
+          "kickoff_utc": "2026-06-25T01:00:00Z"
+        },
+        {
+          "type": "daily_recap",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, June 24\n\nDaily Recap\n\nResults:\n  Switzerland 2 - 1 Canada\n  Vancouver, Canada\n    ⚽ 46' Rubén Vargas (Switzerland)\n    ⚽ 57' Johan Manzambi (Switzerland)\n    ⚽ 76' Promise David (Canada)\n  Prediction ✗: Canada\n\n  Bosnia & Herzegovina 3 - 1 Qatar\n  Seattle, USA\n    ⚽ 29' Kerim Alajbegovic (Bosnia & Herzegovina)\n    ⚽ 34' Mahmoud Abunada (Bosnia & Herzegovina, OG)\n    ⚽ 42' Hassan Al-Haydos (Qatar)\n    ⚽ 80' Ermin Mahmic (Bosnia & Herzegovina)\n  Prediction ✗: Qatar\n\n  Scotland 0 - 3 Brazil\n  Miami (Miami Gardens), USA\n    ⚽ 7' Vinícius Júnior (Brazil)\n    ⚽ 45'+3' Vinícius Júnior (Brazil)\n    ⚽ 60' Matheus Cunha (Brazil)\n  Prediction ✓: Brazil\n\n  Morocco 4 - 2 Haiti\n  Atlanta, USA\n    ⚽ 10' Yassine Bounou (Haiti, OG)\n    ⚽ 39' Achraf Hakimi (Morocco)\n    ⚽ 43' Wilson Isidor (Haiti)\n    ⚽ 45'+1' Ismael Saibari (Morocco)\n    ⚽ 78' Soufiane Rahimi (Morocco)\n    ⚽ 89' Gessime Yassine (Morocco)\n  Prediction ✓: Morocco\n\n  Czech Republic 0 - 3 Mexico\n  Mexico City, Mexico\n    ⚽ 55' Mateo Chávez (Mexico)\n    ⚽ 61' Julián Quiñones (Mexico)\n    ⚽ 90'+4' Álvaro Fidalgo (Mexico)\n  Prediction ✓: Mexico\n\n  South Africa 1 - 0 South Korea\n  Monterrey (Guadalupe), Mexico\n    ⚽ 63' Thapelo Maseko (South Africa)\n  Prediction ✗: South Korea\n\nOverall prediction — today 3/6 (50.0%)  ·  overall 29/54 (53.7%)\n\nGroup Standings:\n\nQ Qualified for Round of 32 · P Played · Pts Points · GD Goal Diff · GF Goals For · GA Goals Against\n\n<code>Group A\n  Team            P Pts GD GF GA\nQ Mexico          3   9 +6  6  0\nQ South Africa    3   4 -1  2  3\n  South Korea     3   3 -1  2  3\n  Czech Republic  3   1 -4  2  6\n\nGroup B\n  Team            P Pts GD GF GA\nQ Switzerland     3   7 +4  7  3\n  Canada          3   4 +5  8  3\n  Bosnia & Herzeg 3   4 -1  5  6\n  Qatar           3   1 -8  2 10\n\nGroup C\n  Team            P Pts GD GF GA\nQ Brazil          3   7 +6  7  1\nQ Morocco         3   7 +3  6  3\n  Scotland        3   3 -3  1  4\n  Haiti           3   0 -6  2  8\n\nGroup D\n  Team            P Pts GD GF GA\nQ USA             2   6 +5  6  1\n  Australia       2   3 +0  2  2\n  Paraguay        2   3 -2  2  4\n  Turkey          2   0 -3  0  3\n\nGroup E\n  Team            P Pts GD GF GA\nQ Germany         2   6 +7  9  2\n  Ivory Coast     2   3 +0  2  2\n  Ecuador         2   1 -1  0  1\n  Curaçao         2   1 -6  1  7\n\nGroup F\n  Team            P Pts GD GF GA\n  Netherlands     2   4 +4  7  3\n  Japan           2   4 +4  6  2\n  Sweden          2   3 +0  6  6\n  Tunisia         2   0 -8  1  9\n\nGroup G\n  Team            P Pts GD GF GA\n  Egypt           2   4 +2  4  2\n  Iran            2   2 +0  2  2\n  Belgium         2   2 +0  1  1\n  New Zealand     2   1 -2  3  5\n\nGroup H\n  Team            P Pts GD GF GA\n  Spain           2   4 +4  4  0\n  Uruguay         2   2 +0  3  3\n  Cape Verde      2   2 +0  2  2\n  Saudi Arabia    2   1 -4  1  5\n\nGroup I\n  Team            P Pts GD GF GA\nQ France          2   6 +5  6  1\nQ Norway          2   6 +4  7  3\n  Senegal         2   0 -3  3  6\n  Iraq            2   0 -6  1  7\n\nGroup J\n  Team            P Pts GD GF GA\nQ Argentina       2   6 +5  5  0\n  Austria         2   3 +0  3  3\n  Algeria         2   3 -2  2  4\n  Jordan          2   0 -3  2  5\n\nGroup K\n  Team            P Pts GD GF GA\nQ Colombia        2   6 +3  4  1\n  Portugal        2   4 +5  6  1\n  DR Congo        2   1 -1  1  2\n  Uzbekistan      2   0 -7  1  8\n\nGroup L\n  Team            P Pts GD GF GA\n  England         2   4 +2  4  2\n  Ghana           2   4 +1  1  0\n  Croatia         2   3 -1  3  4\n  Panama          2   0 -2  0  2</code>",
+          "sent": true,
+          "hash": "5055c3e3029052cb",
+          "key": "dr-2026-06-24",
+          "generated_at": "2026-06-24T19:58:51.417022-07:00",
+          "kickoff_utc": "2026-06-24T19:00:00Z"
         }
       ]
     }
@@ -1218,35 +1245,35 @@
     "A": [
       {
         "team": "Mexico",
-        "played": 2,
-        "points": 6,
-        "gd": 3,
-        "gf": 3,
+        "played": 3,
+        "points": 9,
+        "gd": 6,
+        "gf": 6,
         "ga": 0
       },
       {
-        "team": "South Korea",
-        "played": 2,
-        "points": 3,
-        "gd": 0,
-        "gf": 2,
-        "ga": 2
-      },
-      {
-        "team": "Czech Republic",
-        "played": 2,
-        "points": 1,
+        "team": "South Africa",
+        "played": 3,
+        "points": 4,
         "gd": -1,
         "gf": 2,
         "ga": 3
       },
       {
-        "team": "South Africa",
-        "played": 2,
-        "points": 1,
-        "gd": -2,
-        "gf": 1,
+        "team": "South Korea",
+        "played": 3,
+        "points": 3,
+        "gd": -1,
+        "gf": 2,
         "ga": 3
+      },
+      {
+        "team": "Czech Republic",
+        "played": 3,
+        "points": 1,
+        "gd": -4,
+        "gf": 2,
+        "ga": 6
       }
     ],
     "B": [
@@ -1626,137 +1653,101 @@
   },
   "bracket": {
     "title_odds": {
-      "Germany": 0.042,
-      "Switzerland": 0.0119,
-      "Colombia": 0.0495,
-      "Spain": 0.1554,
-      "Mexico": 0.0232,
-      "France": 0.1356,
-      "Brazil": 0.051,
-      "Argentina": 0.2283,
-      "Japan": 0.0262,
-      "Croatia": 0.0298,
-      "Portugal": 0.0428,
-      "Belgium": 0.017,
-      "Canada": 0.007,
-      "Turkey": 0.0056,
-      "Netherlands": 0.0288,
-      "Sweden": 0.0022,
-      "Senegal": 0.0108,
-      "England": 0.0441,
-      "Egypt": 0.0034,
-      "South Korea": 0.006,
-      "Iran": 0.0066,
-      "Morocco": 0.0238,
-      "Norway": 0.0094,
-      "Uruguay": 0.009,
-      "Austria": 0.0049,
-      "Paraguay": 0.0048,
-      "Algeria": 0.0045,
-      "Ecuador": 0.0087,
-      "Australia": 0.0043,
-      "Czech Republic": 0.0004,
-      "Ivory Coast": 0.002,
-      "Scotland": 0.0003,
-      "Bosnia & Herzegovina": 0.0001,
-      "Uzbekistan": 0.0002,
-      "Ghana": 0.0001,
-      "Jordan": 0.0001,
-      "Curaçao": 0.0001,
-      "New Zealand": 0.0001
+      "Brazil": 0.0513,
+      "Argentina": 0.2308,
+      "Portugal": 0.0422,
+      "Morocco": 0.0263,
+      "France": 0.1399,
+      "Mexico": 0.0193,
+      "Spain": 0.1488,
+      "Croatia": 0.029,
+      "Colombia": 0.0493,
+      "Germany": 0.046,
+      "Canada": 0.0109,
+      "Netherlands": 0.0299,
+      "England": 0.0456,
+      "Paraguay": 0.0031,
+      "Belgium": 0.0158,
+      "Norway": 0.0099,
+      "South Korea": 0.0066,
+      "Japan": 0.029,
+      "Uruguay": 0.0088,
+      "Senegal": 0.0094,
+      "Egypt": 0.0038,
+      "Turkey": 0.0045,
+      "Algeria": 0.0039,
+      "Austria": 0.0043,
+      "Iran": 0.0071,
+      "Switzerland": 0.0094,
+      "Sweden": 0.002,
+      "Ecuador": 0.0065,
+      "Australia": 0.0044,
+      "South Africa": 0.0002,
+      "Ivory Coast": 0.0018,
+      "Cape Verde": 0.0001,
+      "Panama": 0.0001
     },
     "advancement": {
-      "Paraguay": 0.7165,
+      "Paraguay": 0.6975,
       "Canada": 1.0,
+      "DR Congo": 0.2709,
       "France": 1.0,
-      "Australia": 0.9056,
       "Switzerland": 1.0,
       "Mexico": 1.0,
       "Brazil": 1.0,
-      "Uruguay": 0.3867,
-      "Germany": 1.0,
       "Morocco": 1.0,
-      "Algeria": 0.8231,
-      "Czech Republic": 0.2839,
+      "Germany": 1.0,
       "Portugal": 1.0,
       "England": 1.0,
+      "Senegal": 0.4922,
       "USA": 1.0,
+      "Croatia": 0.9514,
       "Netherlands": 1.0,
-      "Croatia": 0.9643,
-      "Sweden": 0.9813,
-      "Belgium": 0.916,
+      "Iran": 0.7088,
+      "Sweden": 0.9653,
+      "South Korea": 0.9237,
+      "Belgium": 0.9103,
       "Ghana": 1.0,
       "Colombia": 1.0,
-      "Curaçao": 0.1555,
-      "Cape Verde": 0.7404,
+      "Cape Verde": 0.7443,
       "Egypt": 1.0,
       "Spain": 1.0,
       "Bosnia & Herzegovina": 1.0,
-      "Ivory Coast": 0.9373,
-      "South Africa": 0.1653,
-      "Austria": 0.9744,
+      "Ivory Coast": 0.9252,
+      "South Africa": 1.0,
+      "Austria": 0.9551,
       "Argentina": 1.0,
+      "Turkey": 0.264,
       "Japan": 1.0,
       "Norway": 1.0,
-      "Scotland": 0.5243,
-      "Senegal": 0.5195,
-      "South Korea": 0.9396,
-      "DR Congo": 0.2703,
-      "Iraq": 0.0679,
-      "Saudi Arabia": 0.2629,
-      "Iran": 0.7059,
-      "Turkey": 0.284,
-      "Ecuador": 0.2923,
-      "New Zealand": 0.0836,
-      "Uzbekistan": 0.0708,
-      "Jordan": 0.0073,
-      "Panama": 0.0213
+      "Algeria": 0.7412,
+      "Scotland": 0.3121,
+      "Australia": 0.8917,
+      "Uruguay": 0.3816,
+      "New Zealand": 0.0896,
+      "Iraq": 0.0214,
+      "Saudi Arabia": 0.2565,
+      "Curaçao": 0.1641,
+      "Ecuador": 0.2922,
+      "Panama": 0.0212,
+      "Jordan": 0.007,
+      "Uzbekistan": 0.0127
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Morocco",
-    "away": "Haiti",
-    "home_goals": 4,
-    "away_goals": 2,
+    "home": "South Africa",
+    "away": "South Korea",
+    "home_goals": 1,
+    "away_goals": 0,
     "date": "2026-06-24",
-    "venue": "Atlanta",
+    "venue": "Monterrey (Guadalupe)",
     "events": [
       {
-        "kind": "own_goal",
-        "player": "Yassine Bounou",
-        "team": "Haiti",
-        "minute": "10'"
-      },
-      {
         "kind": "goal",
-        "player": "Achraf Hakimi",
-        "team": "Morocco",
-        "minute": "39'"
-      },
-      {
-        "kind": "goal",
-        "player": "Wilson Isidor",
-        "team": "Haiti",
-        "minute": "43'"
-      },
-      {
-        "kind": "goal",
-        "player": "Ismael Saibari",
-        "team": "Morocco",
-        "minute": "45'+1'"
-      },
-      {
-        "kind": "goal",
-        "player": "Soufiane Rahimi",
-        "team": "Morocco",
-        "minute": "78'"
-      },
-      {
-        "kind": "goal",
-        "player": "Gessime Yassine",
-        "team": "Morocco",
-        "minute": "89'"
+        "player": "Thapelo Maseko",
+        "team": "South Africa",
+        "minute": "63'"
       }
     ]
   },
@@ -2956,6 +2947,42 @@
           "player": "Matheus Cunha",
           "team": "Brazil",
           "minute": "60'"
+        }
+      ]
+    },
+    "5": {
+      "home_goals": 0,
+      "away_goals": 3,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Mateo Chávez",
+          "team": "Mexico",
+          "minute": "55'"
+        },
+        {
+          "kind": "goal",
+          "player": "Julián Quiñones",
+          "team": "Mexico",
+          "minute": "61'"
+        },
+        {
+          "kind": "goal",
+          "player": "Álvaro Fidalgo",
+          "team": "Mexico",
+          "minute": "90'+4'"
+        }
+      ]
+    },
+    "6": {
+      "home_goals": 1,
+      "away_goals": 0,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Thapelo Maseko",
+          "team": "South Africa",
+          "minute": "63'"
         }
       ]
     }
@@ -4975,11 +5002,9 @@
             "away": 0.4419827069279867,
             "pick": "Mexico"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 3,
-          "clock": "90'+4'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -4999,7 +5024,8 @@
               "team": "Mexico",
               "minute": "90'+4'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "6",
@@ -5014,11 +5040,9 @@
             "away": 0.5772460153416716,
             "pick": "South Korea"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 0,
-          "clock": "90'+4'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -5026,65 +5050,13 @@
               "team": "South Africa",
               "minute": "63'"
             }
-          ]
+          ],
+          "hit": false
         }
       ]
     }
   ],
-  "live": [
-    {
-      "id": "5",
-      "home": "Czech Republic",
-      "away": "Mexico",
-      "date": "2026-06-24",
-      "venue": "Mexico City",
-      "kickoff_utc": "2026-06-25T01:00:00Z",
-      "hg": 0,
-      "ag": 3,
-      "status": "LIVE",
-      "clock": "90'+4'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Mateo Chávez",
-          "team": "Mexico",
-          "minute": "55'"
-        },
-        {
-          "kind": "goal",
-          "player": "Julián Quiñones",
-          "team": "Mexico",
-          "minute": "61'"
-        },
-        {
-          "kind": "goal",
-          "player": "Álvaro Fidalgo",
-          "team": "Mexico",
-          "minute": "90'+4'"
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "home": "South Africa",
-      "away": "South Korea",
-      "date": "2026-06-24",
-      "venue": "Monterrey (Guadalupe)",
-      "kickoff_utc": "2026-06-25T01:00:00Z",
-      "hg": 1,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "90'+4'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Thapelo Maseko",
-          "team": "South Africa",
-          "minute": "63'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -7100,11 +7072,9 @@
             "away": 0.4419827069279867,
             "pick": "Mexico"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 3,
-          "clock": "90'+4'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -7124,7 +7094,8 @@
               "team": "Mexico",
               "minute": "90'+4'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "6",
@@ -7139,11 +7110,9 @@
             "away": 0.5772460153416716,
             "pick": "South Korea"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 0,
-          "clock": "90'+4'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -7151,7 +7120,8 @@
               "team": "South Africa",
               "minute": "63'"
             }
-          ]
+          ],
+          "hit": false
         }
       ]
     },
