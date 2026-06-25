@@ -1239,6 +1239,20 @@
           "kickoff_utc": "2026-06-24T19:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-06-25",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 25\n\nMatchday Brief\n\nCuraçao vs Ivory Coast\n  Prediction: Ivory Coast\n  Curaçao 15.7% · Draw 22.3% · Ivory Coast 62.0%\n  🕐 1:00pm PT / 3:00pm CT / 4:00pm ET / 1:30am IST (+1d)\n  📍 Philadelphia, USA\n\nEcuador vs Germany\n  Prediction: Germany\n  Ecuador 29.5% · Draw 27.4% · Germany 43.1%\n  🕐 1:00pm PT / 3:00pm CT / 4:00pm ET / 1:30am IST (+1d)\n  📍 New York/New Jersey (East Rutherford), USA\n\nJapan vs Sweden\n  Prediction: Japan\n  Japan 61.5% · Draw 21.1% · Sweden 17.4%\n  🕐 4:00pm PT / 6:00pm CT / 7:00pm ET / 4:30am IST (+1d)\n  📍 Dallas (Arlington), USA\n\nTunisia vs Netherlands\n  Prediction: Netherlands\n  Tunisia 11.0% · Draw 18.5% · Netherlands 70.5%\n  🕐 4:00pm PT / 6:00pm CT / 7:00pm ET / 4:30am IST (+1d)\n  📍 Kansas City, USA\n\nTurkey vs USA\n  Prediction: Turkey\n  Turkey 66.3% · Draw 30.0% · USA 3.7%\n  🕐 7:00pm PT / 9:00pm CT / 10:00pm ET / 7:30am IST (+1d)\n  📍 Los Angeles (Inglewood), USA\n\nParaguay vs Australia\n  Prediction: Paraguay\n  Paraguay 36.0% · Draw 28.4% · Australia 35.7%\n  🕐 7:00pm PT / 9:00pm CT / 10:00pm ET / 7:30am IST (+1d)\n  📍 San Francisco Bay Area (Santa Clara), USA",
+          "sent": true,
+          "hash": "6e1e4eccff277cb4",
+          "key": "mb-2026-06-25",
+          "generated_at": "2026-06-25T00:05:09.882290-07:00",
+          "kickoff_utc": "2026-06-25T20:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -5052,6 +5066,101 @@
             }
           ],
           "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-25",
+      "matches": [
+        {
+          "id": "29",
+          "home": "Curaçao",
+          "away": "Ivory Coast",
+          "kickoff_utc": "2026-06-25T20:00:00Z",
+          "venue": "Philadelphia",
+          "stage": "group",
+          "pred": {
+            "home": 0.15731552217148226,
+            "draw": 0.2229465238359439,
+            "away": 0.6197379539925739,
+            "pick": "Ivory Coast"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "30",
+          "home": "Ecuador",
+          "away": "Germany",
+          "kickoff_utc": "2026-06-25T20:00:00Z",
+          "venue": "New York/New Jersey (East Rutherford)",
+          "stage": "group",
+          "pred": {
+            "home": 0.29491205714863183,
+            "draw": 0.2740685874599872,
+            "away": 0.4310193553913809,
+            "pick": "Germany"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "35",
+          "home": "Japan",
+          "away": "Sweden",
+          "kickoff_utc": "2026-06-25T23:00:00Z",
+          "venue": "Dallas (Arlington)",
+          "stage": "group",
+          "pred": {
+            "home": 0.615036067093197,
+            "draw": 0.21079470808535536,
+            "away": 0.17416922482144775,
+            "pick": "Japan"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "36",
+          "home": "Tunisia",
+          "away": "Netherlands",
+          "kickoff_utc": "2026-06-25T23:00:00Z",
+          "venue": "Kansas City",
+          "stage": "group",
+          "pred": {
+            "home": 0.11021102110211022,
+            "draw": 0.1845184518451845,
+            "away": 0.7052705270527053,
+            "pick": "Netherlands"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "23",
+          "home": "Turkey",
+          "away": "USA",
+          "kickoff_utc": "2026-06-26T02:00:00Z",
+          "venue": "Los Angeles (Inglewood)",
+          "stage": "group",
+          "pred": {
+            "home": 0.6630105461446023,
+            "draw": 0.3000338701520445,
+            "away": 0.03695558370335314,
+            "pick": "Turkey"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "24",
+          "home": "Paraguay",
+          "away": "Australia",
+          "kickoff_utc": "2026-06-26T02:00:00Z",
+          "venue": "San Francisco Bay Area (Santa Clara)",
+          "stage": "group",
+          "pred": {
+            "home": 0.35954822036437223,
+            "draw": 0.28366224126893597,
+            "away": 0.35678953836669164,
+            "pick": "Paraguay"
+          },
+          "status": "sched"
         }
       ]
     }
