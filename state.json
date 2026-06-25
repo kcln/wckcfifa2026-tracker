@@ -4978,8 +4978,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+4'",
-          "ht": true,
+          "clock": "46'",
+          "ht": false,
           "events": []
         },
         {
@@ -4998,8 +4998,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+5'",
-          "ht": true,
+          "clock": "46'",
+          "ht": false,
           "events": []
         }
       ]
@@ -5015,8 +5015,8 @@
       "kickoff_utc": "2026-06-25T01:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "HT",
-      "clock": "45'+4'",
+      "status": "LIVE",
+      "clock": "46'",
       "events": []
     },
     {
@@ -5028,8 +5028,8 @@
       "kickoff_utc": "2026-06-25T01:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "HT",
-      "clock": "45'+5'",
+      "status": "LIVE",
+      "clock": "46'",
       "events": []
     }
   ],
@@ -7051,8 +7051,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+4'",
-          "ht": true,
+          "clock": "46'",
+          "ht": false,
           "events": []
         },
         {
@@ -7071,8 +7071,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+5'",
-          "ht": true,
+          "clock": "46'",
+          "ht": false,
           "events": []
         }
       ]
