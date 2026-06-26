@@ -5412,7 +5412,19 @@
             "away": 0.03695558370335314,
             "pick": "Turkey"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 1,
+          "clock": "4'",
+          "ht": false,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Auston Trusty",
+              "team": "USA",
+              "minute": "3'"
+            }
+          ]
         },
         {
           "id": "24",
@@ -5427,12 +5439,51 @@
             "away": 0.35678953836669164,
             "pick": "Paraguay"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "23",
+      "home": "Turkey",
+      "away": "USA",
+      "date": "2026-06-25",
+      "venue": "Los Angeles (Inglewood)",
+      "kickoff_utc": "2026-06-26T02:00:00Z",
+      "hg": 0,
+      "ag": 1,
+      "status": "LIVE",
+      "clock": "4'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Auston Trusty",
+          "team": "USA",
+          "minute": "3'"
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "home": "Paraguay",
+      "away": "Australia",
+      "date": "2026-06-25",
+      "venue": "San Francisco Bay Area (Santa Clara)",
+      "kickoff_utc": "2026-06-26T02:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -7663,7 +7714,19 @@
             "away": 0.03695558370335314,
             "pick": "Turkey"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 1,
+          "clock": "4'",
+          "ht": false,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Auston Trusty",
+              "team": "USA",
+              "minute": "3'"
+            }
+          ]
         },
         {
           "id": "24",
@@ -7678,7 +7741,12 @@
             "away": 0.35678953836669164,
             "pick": "Paraguay"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         }
       ]
     },
