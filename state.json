@@ -5585,9 +5585,9 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 0,
-          "ag": 1,
-          "clock": "19'",
+          "hg": 1,
+          "ag": 2,
+          "clock": "22'",
           "ht": false,
           "events": [
             {
@@ -5595,6 +5595,18 @@
               "player": "Ousmane Dembélé",
               "team": "France",
               "minute": "7'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ousmane Dembélé",
+              "team": "France",
+              "minute": "20'"
+            },
+            {
+              "kind": "goal",
+              "player": "Thelo Aasgaard",
+              "team": "Norway",
+              "minute": "21'"
             }
           ]
         },
@@ -5614,7 +5626,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "18'",
+          "clock": "22'",
           "ht": false,
           "events": [
             {
@@ -5702,16 +5714,28 @@
       "date": "2026-06-26",
       "venue": "Boston (Foxborough)",
       "kickoff_utc": "2026-06-26T19:00:00Z",
-      "hg": 0,
-      "ag": 1,
+      "hg": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "19'",
+      "clock": "22'",
       "events": [
         {
           "kind": "goal",
           "player": "Ousmane Dembélé",
           "team": "France",
           "minute": "7'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ousmane Dembélé",
+          "team": "France",
+          "minute": "20'"
+        },
+        {
+          "kind": "goal",
+          "player": "Thelo Aasgaard",
+          "team": "Norway",
+          "minute": "21'"
         }
       ]
     },
@@ -5725,7 +5749,7 @@
       "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "18'",
+      "clock": "22'",
       "events": [
         {
           "kind": "goal",
@@ -8047,9 +8071,9 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 0,
-          "ag": 1,
-          "clock": "19'",
+          "hg": 1,
+          "ag": 2,
+          "clock": "22'",
           "ht": false,
           "events": [
             {
@@ -8057,6 +8081,18 @@
               "player": "Ousmane Dembélé",
               "team": "France",
               "minute": "7'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ousmane Dembélé",
+              "team": "France",
+              "minute": "20'"
+            },
+            {
+              "kind": "goal",
+              "player": "Thelo Aasgaard",
+              "team": "Norway",
+              "minute": "21'"
             }
           ]
         },
@@ -8076,7 +8112,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "18'",
+          "clock": "22'",
           "ht": false,
           "events": [
             {
