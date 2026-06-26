@@ -5584,7 +5584,12 @@
             "away": 0.5977996812370021,
             "pick": "France"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "54",
@@ -5599,7 +5604,12 @@
             "away": 0.22334144935845598,
             "pick": "Senegal"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "47",
@@ -5664,7 +5674,34 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "53",
+      "home": "Norway",
+      "away": "France",
+      "date": "2026-06-26",
+      "venue": "Boston (Foxborough)",
+      "kickoff_utc": "2026-06-26T19:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "1'",
+      "events": []
+    },
+    {
+      "id": "54",
+      "home": "Senegal",
+      "away": "Iraq",
+      "date": "2026-06-26",
+      "venue": "Toronto",
+      "kickoff_utc": "2026-06-26T19:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "1'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -7969,7 +8006,12 @@
             "away": 0.5977996812370021,
             "pick": "France"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "54",
@@ -7984,7 +8026,12 @@
             "away": 0.22334144935845598,
             "pick": "Senegal"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "47",
