@@ -1341,6 +1341,15 @@
           "key": "ht-2026-06-25-24",
           "generated_at": "2026-06-25T19:52:23.193950-07:00",
           "kickoff_utc": "2026-06-26T02:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 25\n\nFull time:\nParaguay 0 - 0 Australia\nSan Francisco Bay Area (Santa Clara), USA\nOverall prediction: 31/59 (52.5%)\nPrediction ✗: Paraguay",
+          "sent": true,
+          "hash": "38b41175039ca7db",
+          "key": "pm-2026-06-25-24",
+          "generated_at": "2026-06-25T21:01:13.878379-07:00",
+          "kickoff_utc": "2026-06-26T02:00:00Z"
         }
       ]
     }
@@ -1459,16 +1468,16 @@
       },
       {
         "team": "Australia",
-        "played": 2,
-        "points": 3,
+        "played": 3,
+        "points": 4,
         "gd": 0,
         "gf": 2,
         "ga": 2
       },
       {
         "team": "Paraguay",
-        "played": 2,
-        "points": 3,
+        "played": 3,
+        "points": 4,
         "gd": -2,
         "gf": 2,
         "ga": 4
@@ -1757,86 +1766,84 @@
   },
   "bracket": {
     "title_odds": {
-      "France": 0.125,
-      "Spain": 0.1497,
-      "England": 0.0461,
-      "Ecuador": 0.0256,
-      "Colombia": 0.0516,
-      "Uruguay": 0.0106,
-      "Argentina": 0.228,
-      "Norway": 0.0078,
-      "Portugal": 0.0426,
       "Croatia": 0.03,
-      "Netherlands": 0.031,
-      "Brazil": 0.0454,
-      "Iran": 0.0097,
-      "Germany": 0.0458,
-      "Canada": 0.0113,
-      "Mexico": 0.0177,
-      "Switzerland": 0.0101,
-      "Ivory Coast": 0.0021,
-      "Belgium": 0.019,
-      "Morocco": 0.0276,
-      "South Korea": 0.0051,
-      "Australia": 0.0031,
-      "Japan": 0.0269,
-      "Sweden": 0.0009,
-      "Egypt": 0.0038,
-      "Algeria": 0.0034,
-      "Turkey": 0.0036,
-      "Senegal": 0.0083,
-      "Austria": 0.0041,
-      "DR Congo": 0.0003,
-      "Paraguay": 0.0031,
-      "Scotland": 0.0002,
-      "South Africa": 0.0001,
-      "Panama": 0.0001,
-      "Cape Verde": 0.0002,
-      "Saudi Arabia": 0.0001
+      "Spain": 0.1527,
+      "Portugal": 0.0432,
+      "Japan": 0.0303,
+      "France": 0.1278,
+      "Colombia": 0.0479,
+      "Argentina": 0.2302,
+      "Morocco": 0.0285,
+      "Brazil": 0.0431,
+      "England": 0.0441,
+      "Norway": 0.0064,
+      "Netherlands": 0.0332,
+      "Canada": 0.0096,
+      "Belgium": 0.0146,
+      "Germany": 0.0443,
+      "Ecuador": 0.0263,
+      "Mexico": 0.0203,
+      "Egypt": 0.0041,
+      "Switzerland": 0.0106,
+      "Algeria": 0.004,
+      "Iran": 0.0085,
+      "Ivory Coast": 0.0022,
+      "Paraguay": 0.0091,
+      "Uruguay": 0.0083,
+      "South Korea": 0.0048,
+      "Austria": 0.0043,
+      "Senegal": 0.0051,
+      "Sweden": 0.0012,
+      "Australia": 0.0042,
+      "Cape Verde": 0.0003,
+      "South Africa": 0.0003,
+      "DR Congo": 0.0002,
+      "Scotland": 0.0001,
+      "Jordan": 0.0001,
+      "Ghana": 0.0001
     },
     "advancement": {
-      "Sweden": 1.0,
-      "South Korea": 0.8004,
+      "Australia": 1.0,
       "Mexico": 1.0,
       "Ecuador": 1.0,
+      "Senegal": 0.3584,
       "France": 1.0,
       "Netherlands": 1.0,
-      "DR Congo": 0.2613,
       "Switzerland": 1.0,
+      "Uruguay": 0.37,
       "Colombia": 1.0,
-      "Belgium": 0.9137,
+      "Belgium": 0.9056,
       "Japan": 1.0,
+      "Croatia": 0.9251,
       "Spain": 1.0,
       "South Africa": 1.0,
       "Portugal": 1.0,
       "Morocco": 1.0,
       "England": 1.0,
       "Brazil": 1.0,
-      "Algeria": 0.6742,
+      "Algeria": 0.6495,
       "Argentina": 1.0,
       "Egypt": 1.0,
       "Germany": 1.0,
-      "Austria": 0.9211,
-      "Iran": 0.7017,
+      "Austria": 0.8907,
       "Norway": 1.0,
       "Bosnia & Herzegovina": 1.0,
-      "Cape Verde": 0.7418,
+      "Cape Verde": 0.7432,
       "Ghana": 1.0,
-      "Turkey": 0.2209,
-      "Paraguay": 0.6759,
+      "Sweden": 1.0,
+      "Paraguay": 0.9975,
       "USA": 1.0,
       "Canada": 1.0,
       "Ivory Coast": 1.0,
-      "Croatia": 0.9344,
-      "Australia": 0.8553,
-      "Senegal": 0.4177,
-      "Uruguay": 0.3737,
-      "Saudi Arabia": 0.2575,
-      "New Zealand": 0.0853,
-      "Scotland": 0.1379,
-      "Panama": 0.0182,
-      "Jordan": 0.0063,
-      "Iraq": 0.0027
+      "South Korea": 0.7055,
+      "DR Congo": 0.2633,
+      "Iran": 0.7041,
+      "Saudi Arabia": 0.2531,
+      "Scotland": 0.1168,
+      "Panama": 0.0183,
+      "New Zealand": 0.0909,
+      "Jordan": 0.0058,
+      "Iraq": 0.0022
     }
   },
   "season_ended": false,
@@ -3198,6 +3205,10 @@
           "minute": "62'"
         }
       ]
+    },
+    "24": {
+      "home_goals": 0,
+      "away_goals": 0
     }
   },
   "board": [
@@ -5433,7 +5444,7 @@
           "status": "live",
           "hg": 2,
           "ag": 2,
-          "clock": "90'+5'",
+          "clock": "90'+8'",
           "ht": false,
           "events": [
             {
@@ -5475,12 +5486,11 @@
             "away": 0.35678953836669164,
             "pick": "Paraguay"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 0,
-          "clock": "90'+4'",
-          "ht": false,
-          "events": []
+          "events": [],
+          "hit": false
         }
       ]
     }
@@ -5496,7 +5506,7 @@
       "hg": 2,
       "ag": 2,
       "status": "LIVE",
-      "clock": "90'+5'",
+      "clock": "90'+8'",
       "events": [
         {
           "kind": "goal",
@@ -5523,19 +5533,6 @@
           "minute": "49'"
         }
       ]
-    },
-    {
-      "id": "24",
-      "home": "Paraguay",
-      "away": "Australia",
-      "date": "2026-06-25",
-      "venue": "San Francisco Bay Area (Santa Clara)",
-      "kickoff_utc": "2026-06-26T02:00:00Z",
-      "hg": 0,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "90'+4'",
-      "events": []
     }
   ],
   "schedule": [
@@ -7771,7 +7768,7 @@
           "status": "live",
           "hg": 2,
           "ag": 2,
-          "clock": "90'+5'",
+          "clock": "90'+8'",
           "ht": false,
           "events": [
             {
@@ -7813,12 +7810,11 @@
             "away": 0.35678953836669164,
             "pick": "Paraguay"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 0,
-          "clock": "90'+4'",
-          "ht": false,
-          "events": []
+          "events": [],
+          "hit": false
         }
       ]
     },
