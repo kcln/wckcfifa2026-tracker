@@ -1305,6 +1305,24 @@
           "key": "ht-2026-06-25-36",
           "generated_at": "2026-06-25T16:52:22.810178-07:00",
           "kickoff_utc": "2026-06-25T23:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 25\n\nFull time:\nJapan 1 - 1 Sweden\nDallas (Arlington), USA\n  ⚽ 56' Daizen Maeda (Japan)\n  ⚽ 62' Anthony Elanga (Sweden)\nOverall prediction: 31/58 (53.4%)\nPrediction ✗: Japan",
+          "sent": true,
+          "hash": "31e6e62e6c702472",
+          "key": "pm-2026-06-25-35",
+          "generated_at": "2026-06-25T17:58:32.422074-07:00",
+          "kickoff_utc": "2026-06-25T23:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nThursday, June 25\n\nFull time:\nTunisia 1 - 3 Netherlands\nKansas City, USA\n  ⚽ 3' Ellyes Skhiri (Netherlands, OG)\n  ⚽ 7' Brian Brobbey (Netherlands)\n  ⚽ 54' Hazem Mastouri (Tunisia)\n  ⚽ 62' Jan Paul van Hecke (Netherlands)\nOverall prediction: 31/58 (53.4%)\nPrediction ✓: Netherlands",
+          "sent": true,
+          "hash": "8887b4315037b44e",
+          "key": "pm-2026-06-25-36",
+          "generated_at": "2026-06-25T17:58:32.423924-07:00",
+          "kickoff_utc": "2026-06-25T23:00:00Z"
         }
       ]
     }
@@ -1483,35 +1501,35 @@
     "F": [
       {
         "team": "Netherlands",
-        "played": 2,
-        "points": 4,
+        "played": 3,
+        "points": 7,
+        "gd": 6,
+        "gf": 10,
+        "ga": 4
+      },
+      {
+        "team": "Japan",
+        "played": 3,
+        "points": 5,
         "gd": 4,
         "gf": 7,
         "ga": 3
       },
       {
-        "team": "Japan",
-        "played": 2,
-        "points": 4,
-        "gd": 4,
-        "gf": 6,
-        "ga": 2
-      },
-      {
         "team": "Sweden",
-        "played": 2,
-        "points": 3,
+        "played": 3,
+        "points": 4,
         "gd": 0,
-        "gf": 6,
-        "ga": 6
+        "gf": 7,
+        "ga": 7
       },
       {
         "team": "Tunisia",
-        "played": 2,
+        "played": 3,
         "points": 0,
-        "gd": -8,
-        "gf": 1,
-        "ga": 9
+        "gd": -10,
+        "gf": 2,
+        "ga": 12
       }
     ],
     "G": [
@@ -1721,59 +1739,61 @@
   },
   "bracket": {
     "title_odds": {
-      "Ecuador": 0.0235,
-      "Argentina": 0.2393,
-      "Japan": 0.0306,
-      "Spain": 0.1539,
-      "Croatia": 0.031,
-      "France": 0.1207,
-      "Morocco": 0.0229,
-      "England": 0.0452,
-      "Germany": 0.0385,
-      "Sweden": 0.0021,
-      "Egypt": 0.0039,
-      "Colombia": 0.0449,
-      "Belgium": 0.0172,
-      "Mexico": 0.0213,
-      "Portugal": 0.0429,
-      "Norway": 0.0083,
-      "Switzerland": 0.01,
-      "Netherlands": 0.032,
-      "Senegal": 0.0085,
-      "Brazil": 0.0492,
-      "Iran": 0.007,
-      "Austria": 0.0045,
-      "Paraguay": 0.0038,
-      "Algeria": 0.0039,
-      "Uruguay": 0.0082,
-      "Canada": 0.0117,
-      "Turkey": 0.0028,
-      "Australia": 0.0039,
-      "South Korea": 0.0055,
-      "South Africa": 0.0003,
-      "Ivory Coast": 0.002,
-      "Scotland": 0.0001,
-      "Saudi Arabia": 0.0001,
-      "Cape Verde": 0.0003
+      "France": 0.125,
+      "Spain": 0.1497,
+      "England": 0.0461,
+      "Ecuador": 0.0256,
+      "Colombia": 0.0516,
+      "Uruguay": 0.0106,
+      "Argentina": 0.228,
+      "Norway": 0.0078,
+      "Portugal": 0.0426,
+      "Croatia": 0.03,
+      "Netherlands": 0.031,
+      "Brazil": 0.0454,
+      "Iran": 0.0097,
+      "Germany": 0.0458,
+      "Canada": 0.0113,
+      "Mexico": 0.0177,
+      "Switzerland": 0.0101,
+      "Ivory Coast": 0.0021,
+      "Belgium": 0.019,
+      "Morocco": 0.0276,
+      "South Korea": 0.0051,
+      "Australia": 0.0031,
+      "Japan": 0.0269,
+      "Sweden": 0.0009,
+      "Egypt": 0.0038,
+      "Algeria": 0.0034,
+      "Turkey": 0.0036,
+      "Senegal": 0.0083,
+      "Austria": 0.0041,
+      "DR Congo": 0.0003,
+      "Paraguay": 0.0031,
+      "Scotland": 0.0002,
+      "South Africa": 0.0001,
+      "Panama": 0.0001,
+      "Cape Verde": 0.0002,
+      "Saudi Arabia": 0.0001
     },
     "advancement": {
-      "Cape Verde": 0.7448,
+      "Cape Verde": 0.7418,
       "Ivory Coast": 1.0,
-      "Sweden": 0.9312,
+      "Iran": 0.7017,
       "Ghana": 1.0,
+      "Sweden": 1.0,
       "Netherlands": 1.0,
-      "Belgium": 0.9149,
-      "Senegal": 0.4185,
-      "Uruguay": 0.3686,
+      "Belgium": 0.9137,
       "Argentina": 1.0,
       "Portugal": 1.0,
       "Switzerland": 1.0,
+      "Colombia": 1.0,
       "Spain": 1.0,
       "England": 1.0,
-      "Colombia": 1.0,
-      "South Korea": 0.8503,
+      "South Korea": 0.8004,
       "South Africa": 1.0,
-      "Turkey": 0.2305,
+      "Turkey": 0.2209,
+      "DR Congo": 0.2613,
       "Mexico": 1.0,
       "France": 1.0,
       "Germany": 1.0,
@@ -1781,52 +1801,58 @@
       "Bosnia & Herzegovina": 1.0,
       "Egypt": 1.0,
       "Ecuador": 1.0,
-      "Austria": 0.9229,
+      "Austria": 0.9211,
+      "Algeria": 0.6742,
       "USA": 1.0,
       "Canada": 1.0,
       "Morocco": 1.0,
-      "Paraguay": 0.6779,
       "Japan": 1.0,
-      "Croatia": 0.9364,
+      "Paraguay": 0.6759,
       "Norway": 1.0,
-      "Scotland": 0.1398,
-      "Algeria": 0.6658,
-      "Iran": 0.7061,
-      "Australia": 0.8643,
-      "DR Congo": 0.2616,
-      "Saudi Arabia": 0.2547,
-      "New Zealand": 0.0849,
-      "Jordan": 0.0061,
-      "Panama": 0.0177,
-      "Iraq": 0.003
+      "Croatia": 0.9344,
+      "Australia": 0.8553,
+      "Senegal": 0.4177,
+      "Uruguay": 0.3737,
+      "Saudi Arabia": 0.2575,
+      "New Zealand": 0.0853,
+      "Scotland": 0.1379,
+      "Panama": 0.0182,
+      "Jordan": 0.0063,
+      "Iraq": 0.0027
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Ecuador",
-    "away": "Germany",
-    "home_goals": 2,
-    "away_goals": 1,
+    "home": "Tunisia",
+    "away": "Netherlands",
+    "home_goals": 1,
+    "away_goals": 3,
     "date": "2026-06-25",
-    "venue": "New York/New Jersey (East Rutherford)",
+    "venue": "Kansas City",
     "events": [
       {
-        "kind": "goal",
-        "player": "Leroy Sané",
-        "team": "Germany",
-        "minute": "2'"
+        "kind": "own_goal",
+        "player": "Ellyes Skhiri",
+        "team": "Netherlands",
+        "minute": "3'"
       },
       {
         "kind": "goal",
-        "player": "Nilson Angulo",
-        "team": "Ecuador",
-        "minute": "9'"
+        "player": "Brian Brobbey",
+        "team": "Netherlands",
+        "minute": "7'"
       },
       {
         "kind": "goal",
-        "player": "Gonzalo Plata",
-        "team": "Ecuador",
-        "minute": "77'"
+        "player": "Hazem Mastouri",
+        "team": "Tunisia",
+        "minute": "54'"
+      },
+      {
+        "kind": "goal",
+        "player": "Jan Paul van Hecke",
+        "team": "Netherlands",
+        "minute": "62'"
       }
     ]
   },
@@ -3104,6 +3130,54 @@
           "player": "Gonzalo Plata",
           "team": "Ecuador",
           "minute": "77'"
+        }
+      ]
+    },
+    "35": {
+      "home_goals": 1,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Daizen Maeda",
+          "team": "Japan",
+          "minute": "56'"
+        },
+        {
+          "kind": "goal",
+          "player": "Anthony Elanga",
+          "team": "Sweden",
+          "minute": "62'"
+        }
+      ]
+    },
+    "36": {
+      "home_goals": 1,
+      "away_goals": 3,
+      "events": [
+        {
+          "kind": "own_goal",
+          "player": "Ellyes Skhiri",
+          "team": "Netherlands",
+          "minute": "3'"
+        },
+        {
+          "kind": "goal",
+          "player": "Brian Brobbey",
+          "team": "Netherlands",
+          "minute": "7'"
+        },
+        {
+          "kind": "goal",
+          "player": "Hazem Mastouri",
+          "team": "Tunisia",
+          "minute": "54'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jan Paul van Hecke",
+          "team": "Netherlands",
+          "minute": "62'"
         }
       ]
     }
@@ -5262,11 +5336,9 @@
             "away": 0.17416922482144775,
             "pick": "Japan"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 1,
-          "clock": "90'+4'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -5280,7 +5352,8 @@
               "team": "Sweden",
               "minute": "62'"
             }
-          ]
+          ],
+          "hit": false
         },
         {
           "id": "36",
@@ -5295,11 +5368,9 @@
             "away": 0.7052705270527053,
             "pick": "Netherlands"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 3,
-          "clock": "90'+5'",
-          "ht": false,
           "events": [
             {
               "kind": "own_goal",
@@ -5325,7 +5396,8 @@
               "team": "Netherlands",
               "minute": "62'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "23",
@@ -5360,72 +5432,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "35",
-      "home": "Japan",
-      "away": "Sweden",
-      "date": "2026-06-25",
-      "venue": "Dallas (Arlington)",
-      "kickoff_utc": "2026-06-25T23:00:00Z",
-      "hg": 1,
-      "ag": 1,
-      "status": "LIVE",
-      "clock": "90'+4'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Daizen Maeda",
-          "team": "Japan",
-          "minute": "56'"
-        },
-        {
-          "kind": "goal",
-          "player": "Anthony Elanga",
-          "team": "Sweden",
-          "minute": "62'"
-        }
-      ]
-    },
-    {
-      "id": "36",
-      "home": "Tunisia",
-      "away": "Netherlands",
-      "date": "2026-06-25",
-      "venue": "Kansas City",
-      "kickoff_utc": "2026-06-25T23:00:00Z",
-      "hg": 1,
-      "ag": 3,
-      "status": "LIVE",
-      "clock": "90'+5'",
-      "events": [
-        {
-          "kind": "own_goal",
-          "player": "Ellyes Skhiri",
-          "team": "Netherlands",
-          "minute": "3'"
-        },
-        {
-          "kind": "goal",
-          "player": "Brian Brobbey",
-          "team": "Netherlands",
-          "minute": "7'"
-        },
-        {
-          "kind": "goal",
-          "player": "Hazem Mastouri",
-          "team": "Tunisia",
-          "minute": "54'"
-        },
-        {
-          "kind": "goal",
-          "player": "Jan Paul van Hecke",
-          "team": "Netherlands",
-          "minute": "62'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -7580,11 +7587,9 @@
             "away": 0.17416922482144775,
             "pick": "Japan"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 1,
-          "clock": "90'+4'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -7598,7 +7603,8 @@
               "team": "Sweden",
               "minute": "62'"
             }
-          ]
+          ],
+          "hit": false
         },
         {
           "id": "36",
@@ -7613,11 +7619,9 @@
             "away": 0.7052705270527053,
             "pick": "Netherlands"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 3,
-          "clock": "90'+5'",
-          "ht": false,
           "events": [
             {
               "kind": "own_goal",
@@ -7643,7 +7647,8 @@
               "team": "Netherlands",
               "minute": "62'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "23",
