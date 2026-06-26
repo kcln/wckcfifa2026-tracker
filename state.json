@@ -5415,7 +5415,7 @@
           "status": "live",
           "hg": 2,
           "ag": 1,
-          "clock": "31'",
+          "clock": "34'",
           "ht": false,
           "events": [
             {
@@ -5429,6 +5429,12 @@
               "player": "Arda Güler",
               "team": "Turkey",
               "minute": "10'"
+            },
+            {
+              "kind": "goal",
+              "player": "Orkun Kökçü",
+              "team": "Turkey",
+              "minute": "31'"
             }
           ]
         },
@@ -5448,7 +5454,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "31'",
+          "clock": "34'",
           "ht": false,
           "events": []
         }
@@ -5466,7 +5472,7 @@
       "hg": 2,
       "ag": 1,
       "status": "LIVE",
-      "clock": "31'",
+      "clock": "34'",
       "events": [
         {
           "kind": "goal",
@@ -5479,6 +5485,12 @@
           "player": "Arda Güler",
           "team": "Turkey",
           "minute": "10'"
+        },
+        {
+          "kind": "goal",
+          "player": "Orkun Kökçü",
+          "team": "Turkey",
+          "minute": "31'"
         }
       ]
     },
@@ -5492,7 +5504,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "31'",
+      "clock": "34'",
       "events": []
     }
   ],
@@ -7729,7 +7741,7 @@
           "status": "live",
           "hg": 2,
           "ag": 1,
-          "clock": "31'",
+          "clock": "34'",
           "ht": false,
           "events": [
             {
@@ -7743,6 +7755,12 @@
               "player": "Arda Güler",
               "team": "Turkey",
               "minute": "10'"
+            },
+            {
+              "kind": "goal",
+              "player": "Orkun Kökçü",
+              "team": "Turkey",
+              "minute": "31'"
             }
           ]
         },
@@ -7762,7 +7780,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "31'",
+          "clock": "34'",
           "ht": false,
           "events": []
         }
