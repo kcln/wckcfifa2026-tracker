@@ -5265,8 +5265,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+5'",
-          "ht": true,
+          "clock": "49'",
+          "ht": false,
           "events": []
         },
         {
@@ -5285,7 +5285,7 @@
           "status": "live",
           "hg": 0,
           "ag": 2,
-          "clock": "47'",
+          "clock": "50'",
           "ht": false,
           "events": [
             {
@@ -5345,8 +5345,8 @@
       "kickoff_utc": "2026-06-25T23:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "HT",
-      "clock": "45'+5'",
+      "status": "LIVE",
+      "clock": "49'",
       "events": []
     },
     {
@@ -5359,7 +5359,7 @@
       "hg": 0,
       "ag": 2,
       "status": "LIVE",
-      "clock": "47'",
+      "clock": "50'",
       "events": [
         {
           "kind": "own_goal",
@@ -7533,8 +7533,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+5'",
-          "ht": true,
+          "clock": "49'",
+          "ht": false,
           "events": []
         },
         {
@@ -7553,7 +7553,7 @@
           "status": "live",
           "hg": 0,
           "ag": 2,
-          "clock": "47'",
+          "clock": "50'",
           "ht": false,
           "events": [
             {
