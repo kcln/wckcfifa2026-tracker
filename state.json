@@ -1370,6 +1370,20 @@
           "kickoff_utc": "2026-06-25T20:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-06-26",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 26\n\nMatchday Brief\n\nNorway vs France\n  Prediction: France\n  Norway 15.2% · Draw 25.0% · France 59.8%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 Boston (Foxborough), USA\n\nSenegal vs Iraq\n  Prediction: Senegal\n  Senegal 56.0% · Draw 21.7% · Iraq 22.3%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 Toronto, Canada\n\nCape Verde vs Saudi Arabia\n  Prediction: Cape Verde\n  Cape Verde 48.0% · Draw 26.2% · Saudi Arabia 25.9%\n  🕐 5:00pm PT / 7:00pm CT / 8:00pm ET / 5:30am IST (+1d)\n  📍 Houston, USA\n\nUruguay vs Spain\n  Prediction: Spain\n  Uruguay 15.9% · Draw 21.2% · Spain 62.8%\n  🕐 5:00pm PT / 7:00pm CT / 8:00pm ET / 5:30am IST (+1d)\n  📍 Guadalajara (Zapopan), Mexico\n\nEgypt vs Iran\n  Prediction: Iran\n  Egypt 29.2% · Draw 28.0% · Iran 42.7%\n  🕐 8:00pm PT / 10:00pm CT / 11:00pm ET / 8:30am IST (+1d)\n  📍 Seattle, USA\n\nNew Zealand vs Belgium\n  Prediction: Belgium\n  New Zealand 8.8% · Draw 18.7% · Belgium 72.5%\n  🕐 8:00pm PT / 10:00pm CT / 11:00pm ET / 8:30am IST (+1d)\n  📍 Vancouver, Canada",
+          "sent": true,
+          "hash": "8ba782b43fdb9439",
+          "key": "mb-2026-06-26",
+          "generated_at": "2026-06-26T00:00:40.071299-07:00",
+          "kickoff_utc": "2026-06-26T19:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -5551,6 +5565,101 @@
           "ag": 0,
           "events": [],
           "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "matches": [
+        {
+          "id": "53",
+          "home": "Norway",
+          "away": "France",
+          "kickoff_utc": "2026-06-26T19:00:00Z",
+          "venue": "Boston (Foxborough)",
+          "stage": "group",
+          "pred": {
+            "home": 0.1517466671225876,
+            "draw": 0.2504536516404102,
+            "away": 0.5977996812370021,
+            "pick": "France"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "54",
+          "home": "Senegal",
+          "away": "Iraq",
+          "kickoff_utc": "2026-06-26T19:00:00Z",
+          "venue": "Toronto",
+          "stage": "group",
+          "pred": {
+            "home": 0.5597430657909453,
+            "draw": 0.21691548485059867,
+            "away": 0.22334144935845598,
+            "pick": "Senegal"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "47",
+          "home": "Cape Verde",
+          "away": "Saudi Arabia",
+          "kickoff_utc": "2026-06-27T00:00:00Z",
+          "venue": "Houston",
+          "stage": "group",
+          "pred": {
+            "home": 0.479504514899246,
+            "draw": 0.2615491425937127,
+            "away": 0.2589463425070412,
+            "pick": "Cape Verde"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "48",
+          "home": "Uruguay",
+          "away": "Spain",
+          "kickoff_utc": "2026-06-27T00:00:00Z",
+          "venue": "Guadalajara (Zapopan)",
+          "stage": "group",
+          "pred": {
+            "home": 0.1594641151827656,
+            "draw": 0.21233363805561004,
+            "away": 0.6282022467616244,
+            "pick": "Spain"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "41",
+          "home": "Egypt",
+          "away": "Iran",
+          "kickoff_utc": "2026-06-27T03:00:00Z",
+          "venue": "Seattle",
+          "stage": "group",
+          "pred": {
+            "home": 0.2924193436047386,
+            "draw": 0.2802044473548712,
+            "away": 0.42737620904039014,
+            "pick": "Iran"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "42",
+          "home": "New Zealand",
+          "away": "Belgium",
+          "kickoff_utc": "2026-06-27T03:00:00Z",
+          "venue": "Vancouver",
+          "stage": "group",
+          "pred": {
+            "home": 0.08761791830286983,
+            "draw": 0.18694340327551967,
+            "away": 0.7254386784216105,
+            "pick": "Belgium"
+          },
+          "status": "sched"
         }
       ]
     }
