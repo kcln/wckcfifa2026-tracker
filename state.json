@@ -1400,6 +1400,15 @@
           "key": "ht-2026-06-26-54",
           "generated_at": "2026-06-26T13:00:26.096581-07:00",
           "kickoff_utc": "2026-06-26T19:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 26\n\nFull time:\nNorway 1 - 4 France\nBoston (Foxborough), USA\n  ⚽ 7' Ousmane Dembélé (France)\n  ⚽ 20' Ousmane Dembélé (France)\n  ⚽ 21' Thelo Aasgaard (Norway)\n  ⚽ 32' Ousmane Dembélé (France)\n  ⚽ 90'+4' Désiré Doué (France)\nOverall prediction: 33/61 (54.1%)\nPrediction ✓: France",
+          "sent": true,
+          "hash": "5eaf600ca25be928",
+          "key": "pm-2026-06-26-53",
+          "generated_at": "2026-06-26T14:01:28.301406-07:00",
+          "kickoff_utc": "2026-06-26T19:00:00Z"
         }
       ]
     }
@@ -1680,19 +1689,19 @@
     "I": [
       {
         "team": "France",
-        "played": 2,
-        "points": 6,
-        "gd": 5,
-        "gf": 6,
-        "ga": 1
+        "played": 3,
+        "points": 9,
+        "gd": 8,
+        "gf": 10,
+        "ga": 2
       },
       {
         "team": "Norway",
-        "played": 2,
+        "played": 3,
         "points": 6,
-        "gd": 4,
-        "gf": 7,
-        "ga": 3
+        "gd": 1,
+        "gf": 8,
+        "ga": 7
       },
       {
         "team": "Senegal",
@@ -1816,119 +1825,121 @@
   },
   "bracket": {
     "title_odds": {
-      "Morocco": 0.0282,
-      "England": 0.0505,
-      "Argentina": 0.2318,
-      "Australia": 0.004,
-      "France": 0.1205,
-      "Colombia": 0.0477,
-      "Netherlands": 0.035,
-      "Germany": 0.0445,
-      "Japan": 0.0258,
-      "Ecuador": 0.0245,
-      "Iran": 0.0066,
-      "Portugal": 0.0455,
-      "Brazil": 0.0407,
-      "Spain": 0.1574,
-      "Croatia": 0.0307,
-      "Mexico": 0.0188,
-      "Paraguay": 0.0108,
-      "Norway": 0.0073,
-      "Canada": 0.011,
-      "Switzerland": 0.0099,
-      "Uruguay": 0.0079,
-      "Belgium": 0.0165,
-      "Senegal": 0.0031,
-      "Algeria": 0.0027,
-      "Egypt": 0.0053,
-      "Austria": 0.0051,
-      "South Korea": 0.0034,
-      "South Africa": 0.0002,
-      "Sweden": 0.0014,
-      "Panama": 0.0001,
-      "Cape Verde": 0.0004,
-      "Ivory Coast": 0.0022,
-      "New Zealand": 0.0001,
-      "Ghana": 0.0002,
-      "DR Congo": 0.0001,
-      "Scotland": 0.0001
+      "France": 0.1204,
+      "Argentina": 0.2382,
+      "Morocco": 0.028,
+      "Brazil": 0.0464,
+      "Colombia": 0.0461,
+      "Japan": 0.024,
+      "Germany": 0.0397,
+      "Spain": 0.158,
+      "Croatia": 0.0311,
+      "Ecuador": 0.0241,
+      "Canada": 0.0105,
+      "Portugal": 0.0419,
+      "Mexico": 0.0203,
+      "England": 0.0492,
+      "Austria": 0.0043,
+      "Belgium": 0.0151,
+      "Netherlands": 0.034,
+      "Iran": 0.0078,
+      "Switzerland": 0.011,
+      "Algeria": 0.0041,
+      "Paraguay": 0.0094,
+      "Norway": 0.007,
+      "South Korea": 0.0042,
+      "Uruguay": 0.0076,
+      "Ivory Coast": 0.0027,
+      "Egypt": 0.0033,
+      "Senegal": 0.0059,
+      "Australia": 0.0037,
+      "Sweden": 0.0013,
+      "Cape Verde": 0.0002,
+      "DR Congo": 0.0003,
+      "South Africa": 0.0002
     },
     "advancement": {
       "Netherlands": 1.0,
-      "Croatia": 0.9227,
+      "Croatia": 0.9255,
       "Brazil": 1.0,
-      "Portugal": 1.0,
       "Spain": 1.0,
+      "Portugal": 1.0,
       "Mexico": 1.0,
       "Ivory Coast": 1.0,
       "France": 1.0,
-      "Uruguay": 0.3669,
+      "Uruguay": 0.3661,
       "South Africa": 1.0,
-      "Algeria": 0.6565,
       "Morocco": 1.0,
-      "Paraguay": 0.9988,
+      "Paraguay": 0.997,
       "Sweden": 1.0,
-      "Belgium": 0.904,
+      "Belgium": 0.9042,
       "USA": 1.0,
       "England": 1.0,
       "Norway": 1.0,
       "Argentina": 1.0,
+      "Senegal": 0.3563,
       "Japan": 1.0,
       "Egypt": 1.0,
-      "Saudi Arabia": 0.2538,
-      "Austria": 0.8891,
+      "Saudi Arabia": 0.2541,
+      "Austria": 0.8908,
       "Germany": 1.0,
       "Canada": 1.0,
       "Colombia": 1.0,
       "Ecuador": 1.0,
       "Australia": 1.0,
       "Switzerland": 1.0,
-      "South Korea": 0.7125,
+      "South Korea": 0.7032,
       "Ghana": 1.0,
       "Bosnia & Herzegovina": 1.0,
-      "DR Congo": 0.2619,
-      "Iran": 0.7011,
+      "DR Congo": 0.2656,
+      "Iran": 0.7016,
       "New Zealand": 0.0923,
-      "Scotland": 0.1189,
-      "Cape Verde": 0.7443,
-      "Senegal": 0.3525,
-      "Panama": 0.0184,
-      "Jordan": 0.0048,
-      "Iraq": 0.0015
+      "Algeria": 0.6518,
+      "Cape Verde": 0.7436,
+      "Panama": 0.0194,
+      "Scotland": 0.12,
+      "Jordan": 0.006,
+      "Iraq": 0.0025
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Tunisia",
-    "away": "Netherlands",
+    "home": "Norway",
+    "away": "France",
     "home_goals": 1,
-    "away_goals": 3,
-    "date": "2026-06-25",
-    "venue": "Kansas City",
+    "away_goals": 4,
+    "date": "2026-06-26",
+    "venue": "Boston (Foxborough)",
     "events": [
       {
-        "kind": "own_goal",
-        "player": "Ellyes Skhiri",
-        "team": "Netherlands",
-        "minute": "3'"
-      },
-      {
         "kind": "goal",
-        "player": "Brian Brobbey",
-        "team": "Netherlands",
+        "player": "Ousmane Dembélé",
+        "team": "France",
         "minute": "7'"
       },
       {
         "kind": "goal",
-        "player": "Hazem Mastouri",
-        "team": "Tunisia",
-        "minute": "54'"
+        "player": "Ousmane Dembélé",
+        "team": "France",
+        "minute": "20'"
       },
       {
         "kind": "goal",
-        "player": "Jan Paul van Hecke",
-        "team": "Netherlands",
-        "minute": "62'"
+        "player": "Thelo Aasgaard",
+        "team": "Norway",
+        "minute": "21'"
+      },
+      {
+        "kind": "goal",
+        "player": "Ousmane Dembélé",
+        "team": "France",
+        "minute": "32'"
+      },
+      {
+        "kind": "goal",
+        "player": "Désiré Doué",
+        "team": "France",
+        "minute": "90'+4'"
       }
     ]
   },
@@ -3294,6 +3305,42 @@
           "player": "Kaan Ayhan",
           "team": "Turkey",
           "minute": "90'+8'"
+        }
+      ]
+    },
+    "53": {
+      "home_goals": 1,
+      "away_goals": 4,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Ousmane Dembélé",
+          "team": "France",
+          "minute": "7'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ousmane Dembélé",
+          "team": "France",
+          "minute": "20'"
+        },
+        {
+          "kind": "goal",
+          "player": "Thelo Aasgaard",
+          "team": "Norway",
+          "minute": "21'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ousmane Dembélé",
+          "team": "France",
+          "minute": "32'"
+        },
+        {
+          "kind": "goal",
+          "player": "Désiré Doué",
+          "team": "France",
+          "minute": "90'+4'"
         }
       ]
     }
@@ -5602,11 +5649,9 @@
             "away": 0.5977996812370021,
             "pick": "France"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
-          "ag": 3,
-          "clock": "90'+4'",
-          "ht": false,
+          "ag": 4,
           "events": [
             {
               "kind": "goal",
@@ -5631,8 +5676,15 @@
               "player": "Ousmane Dembélé",
               "team": "France",
               "minute": "32'"
+            },
+            {
+              "kind": "goal",
+              "player": "Désiré Doué",
+              "team": "France",
+              "minute": "90'+4'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "54",
@@ -5650,7 +5702,7 @@
           "status": "live",
           "hg": 5,
           "ag": 0,
-          "clock": "89'",
+          "clock": "90'+3'",
           "ht": false,
           "events": [
             {
@@ -5756,44 +5808,6 @@
   ],
   "live": [
     {
-      "id": "53",
-      "home": "Norway",
-      "away": "France",
-      "date": "2026-06-26",
-      "venue": "Boston (Foxborough)",
-      "kickoff_utc": "2026-06-26T19:00:00Z",
-      "hg": 1,
-      "ag": 3,
-      "status": "LIVE",
-      "clock": "90'+4'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Ousmane Dembélé",
-          "team": "France",
-          "minute": "7'"
-        },
-        {
-          "kind": "goal",
-          "player": "Ousmane Dembélé",
-          "team": "France",
-          "minute": "20'"
-        },
-        {
-          "kind": "goal",
-          "player": "Thelo Aasgaard",
-          "team": "Norway",
-          "minute": "21'"
-        },
-        {
-          "kind": "goal",
-          "player": "Ousmane Dembélé",
-          "team": "France",
-          "minute": "32'"
-        }
-      ]
-    },
-    {
       "id": "54",
       "home": "Senegal",
       "away": "Iraq",
@@ -5803,7 +5817,7 @@
       "hg": 5,
       "ag": 0,
       "status": "LIVE",
-      "clock": "89'",
+      "clock": "90'+3'",
       "events": [
         {
           "kind": "goal",
@@ -8148,11 +8162,9 @@
             "away": 0.5977996812370021,
             "pick": "France"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
-          "ag": 3,
-          "clock": "90'+4'",
-          "ht": false,
+          "ag": 4,
           "events": [
             {
               "kind": "goal",
@@ -8177,8 +8189,15 @@
               "player": "Ousmane Dembélé",
               "team": "France",
               "minute": "32'"
+            },
+            {
+              "kind": "goal",
+              "player": "Désiré Doué",
+              "team": "France",
+              "minute": "90'+4'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "54",
@@ -8196,7 +8215,7 @@
           "status": "live",
           "hg": 5,
           "ag": 0,
-          "clock": "89'",
+          "clock": "90'+3'",
           "ht": false,
           "events": [
             {
