@@ -5265,9 +5265,16 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "52'",
+          "clock": "56'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Daizen Maeda",
+              "team": "Japan",
+              "minute": "56'"
+            }
+          ]
         },
         {
           "id": "36",
@@ -5283,9 +5290,9 @@
             "pick": "Netherlands"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 2,
-          "clock": "53'",
+          "clock": "57'",
           "ht": false,
           "events": [
             {
@@ -5299,6 +5306,12 @@
               "player": "Brian Brobbey",
               "team": "Netherlands",
               "minute": "7'"
+            },
+            {
+              "kind": "goal",
+              "player": "Hazem Mastouri",
+              "team": "Tunisia",
+              "minute": "54'"
             }
           ]
         },
@@ -5346,8 +5359,15 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "52'",
-      "events": []
+      "clock": "56'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Daizen Maeda",
+          "team": "Japan",
+          "minute": "56'"
+        }
+      ]
     },
     {
       "id": "36",
@@ -5356,10 +5376,10 @@
       "date": "2026-06-25",
       "venue": "Kansas City",
       "kickoff_utc": "2026-06-25T23:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 2,
       "status": "LIVE",
-      "clock": "53'",
+      "clock": "57'",
       "events": [
         {
           "kind": "own_goal",
@@ -5372,6 +5392,12 @@
           "player": "Brian Brobbey",
           "team": "Netherlands",
           "minute": "7'"
+        },
+        {
+          "kind": "goal",
+          "player": "Hazem Mastouri",
+          "team": "Tunisia",
+          "minute": "54'"
         }
       ]
     }
@@ -7533,9 +7559,16 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "52'",
+          "clock": "56'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Daizen Maeda",
+              "team": "Japan",
+              "minute": "56'"
+            }
+          ]
         },
         {
           "id": "36",
@@ -7551,9 +7584,9 @@
             "pick": "Netherlands"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 2,
-          "clock": "53'",
+          "clock": "57'",
           "ht": false,
           "events": [
             {
@@ -7567,6 +7600,12 @@
               "player": "Brian Brobbey",
               "team": "Netherlands",
               "minute": "7'"
+            },
+            {
+              "kind": "goal",
+              "player": "Hazem Mastouri",
+              "team": "Tunisia",
+              "minute": "54'"
             }
           ]
         },
