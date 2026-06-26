@@ -5587,7 +5587,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "12'",
+          "clock": "15'",
           "ht": false,
           "events": [
             {
@@ -5614,7 +5614,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "11'",
+          "clock": "15'",
           "ht": false,
           "events": [
             {
@@ -5622,6 +5622,12 @@
               "player": "Habib Diarra",
               "team": "Senegal",
               "minute": "4'"
+            },
+            {
+              "kind": "red",
+              "player": "Rebin Sulaka",
+              "team": "Iraq",
+              "minute": "13'"
             }
           ]
         },
@@ -5699,7 +5705,7 @@
       "hg": 0,
       "ag": 1,
       "status": "LIVE",
-      "clock": "12'",
+      "clock": "15'",
       "events": [
         {
           "kind": "goal",
@@ -5719,13 +5725,19 @@
       "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "11'",
+      "clock": "15'",
       "events": [
         {
           "kind": "goal",
           "player": "Habib Diarra",
           "team": "Senegal",
           "minute": "4'"
+        },
+        {
+          "kind": "red",
+          "player": "Rebin Sulaka",
+          "team": "Iraq",
+          "minute": "13'"
         }
       ]
     }
@@ -8037,7 +8049,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "12'",
+          "clock": "15'",
           "ht": false,
           "events": [
             {
@@ -8064,7 +8076,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "11'",
+          "clock": "15'",
           "ht": false,
           "events": [
             {
@@ -8072,6 +8084,12 @@
               "player": "Habib Diarra",
               "team": "Senegal",
               "minute": "4'"
+            },
+            {
+              "kind": "red",
+              "player": "Rebin Sulaka",
+              "team": "Iraq",
+              "minute": "13'"
             }
           ]
         },
