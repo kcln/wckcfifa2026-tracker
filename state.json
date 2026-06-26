@@ -1391,6 +1391,15 @@
           "key": "ht-2026-06-26-53",
           "generated_at": "2026-06-26T12:53:13.355284-07:00",
           "kickoff_utc": "2026-06-26T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 26\n\nHalf-time:\nSenegal 1 - 0 Iraq\nToronto, Canada\n  ⚽ 4' Habib Diarra (Senegal)\n  🟥 13' Rebin Sulaka (Iraq)\nPrediction: Senegal",
+          "sent": true,
+          "hash": "861d66b39dcd3123",
+          "key": "ht-2026-06-26-54",
+          "generated_at": "2026-06-26T13:00:26.096581-07:00",
+          "kickoff_utc": "2026-06-26T19:00:00Z"
         }
       ]
     }
@@ -5642,7 +5651,7 @@
           "hg": 1,
           "ag": 0,
           "clock": "45'+9'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -5769,7 +5778,7 @@
       "kickoff_utc": "2026-06-26T19:00:00Z",
       "hg": 1,
       "ag": 0,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+9'",
       "events": [
         {
@@ -8140,7 +8149,7 @@
           "hg": 1,
           "ag": 0,
           "clock": "45'+9'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
