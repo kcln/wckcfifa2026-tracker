@@ -5433,7 +5433,7 @@
           "status": "live",
           "hg": 2,
           "ag": 2,
-          "clock": "64'",
+          "clock": "67'",
           "ht": false,
           "events": [
             {
@@ -5450,7 +5450,7 @@
             },
             {
               "kind": "goal",
-              "player": "Orkun Kökçü",
+              "player": "Baris Alper Yilmaz",
               "team": "Turkey",
               "minute": "31'"
             },
@@ -5478,7 +5478,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "63'",
+          "clock": "67'",
           "ht": false,
           "events": []
         }
@@ -5496,7 +5496,7 @@
       "hg": 2,
       "ag": 2,
       "status": "LIVE",
-      "clock": "64'",
+      "clock": "67'",
       "events": [
         {
           "kind": "goal",
@@ -5512,7 +5512,7 @@
         },
         {
           "kind": "goal",
-          "player": "Orkun Kökçü",
+          "player": "Baris Alper Yilmaz",
           "team": "Turkey",
           "minute": "31'"
         },
@@ -5534,7 +5534,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "63'",
+      "clock": "67'",
       "events": []
     }
   ],
@@ -7771,7 +7771,7 @@
           "status": "live",
           "hg": 2,
           "ag": 2,
-          "clock": "64'",
+          "clock": "67'",
           "ht": false,
           "events": [
             {
@@ -7788,7 +7788,7 @@
             },
             {
               "kind": "goal",
-              "player": "Orkun Kökçü",
+              "player": "Baris Alper Yilmaz",
               "team": "Turkey",
               "minute": "31'"
             },
@@ -7816,7 +7816,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "63'",
+          "clock": "67'",
           "ht": false,
           "events": []
         }
