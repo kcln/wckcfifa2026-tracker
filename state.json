@@ -5264,8 +5264,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 0,
-          "clock": "59'",
+          "ag": 1,
+          "clock": "63'",
           "ht": false,
           "events": [
             {
@@ -5273,6 +5273,12 @@
               "player": "Daizen Maeda",
               "team": "Japan",
               "minute": "56'"
+            },
+            {
+              "kind": "goal",
+              "player": "Anthony Elanga",
+              "team": "Sweden",
+              "minute": "62'"
             }
           ]
         },
@@ -5291,8 +5297,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 2,
-          "clock": "60'",
+          "ag": 3,
+          "clock": "64'",
           "ht": false,
           "events": [
             {
@@ -5312,6 +5318,12 @@
               "player": "Hazem Mastouri",
               "team": "Tunisia",
               "minute": "54'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jan Paul van Hecke",
+              "team": "Netherlands",
+              "minute": "62'"
             }
           ]
         },
@@ -5357,15 +5369,21 @@
       "venue": "Dallas (Arlington)",
       "kickoff_utc": "2026-06-25T23:00:00Z",
       "hg": 1,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "59'",
+      "clock": "63'",
       "events": [
         {
           "kind": "goal",
           "player": "Daizen Maeda",
           "team": "Japan",
           "minute": "56'"
+        },
+        {
+          "kind": "goal",
+          "player": "Anthony Elanga",
+          "team": "Sweden",
+          "minute": "62'"
         }
       ]
     },
@@ -5377,9 +5395,9 @@
       "venue": "Kansas City",
       "kickoff_utc": "2026-06-25T23:00:00Z",
       "hg": 1,
-      "ag": 2,
+      "ag": 3,
       "status": "LIVE",
-      "clock": "60'",
+      "clock": "64'",
       "events": [
         {
           "kind": "own_goal",
@@ -5398,6 +5416,12 @@
           "player": "Hazem Mastouri",
           "team": "Tunisia",
           "minute": "54'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jan Paul van Hecke",
+          "team": "Netherlands",
+          "minute": "62'"
         }
       ]
     }
@@ -7558,8 +7582,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 0,
-          "clock": "59'",
+          "ag": 1,
+          "clock": "63'",
           "ht": false,
           "events": [
             {
@@ -7567,6 +7591,12 @@
               "player": "Daizen Maeda",
               "team": "Japan",
               "minute": "56'"
+            },
+            {
+              "kind": "goal",
+              "player": "Anthony Elanga",
+              "team": "Sweden",
+              "minute": "62'"
             }
           ]
         },
@@ -7585,8 +7615,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 2,
-          "clock": "60'",
+          "ag": 3,
+          "clock": "64'",
           "ht": false,
           "events": [
             {
@@ -7606,6 +7636,12 @@
               "player": "Hazem Mastouri",
               "team": "Tunisia",
               "minute": "54'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jan Paul van Hecke",
+              "team": "Netherlands",
+              "minute": "62'"
             }
           ]
         },
