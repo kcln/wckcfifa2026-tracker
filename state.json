@@ -5586,8 +5586,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 2,
-          "clock": "29'",
+          "ag": 3,
+          "clock": "33'",
           "ht": false,
           "events": [
             {
@@ -5607,6 +5607,12 @@
               "player": "Thelo Aasgaard",
               "team": "Norway",
               "minute": "21'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ousmane Dembélé",
+              "team": "France",
+              "minute": "32'"
             }
           ]
         },
@@ -5626,7 +5632,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "28'",
+          "clock": "32'",
           "ht": false,
           "events": [
             {
@@ -5715,9 +5721,9 @@
       "venue": "Boston (Foxborough)",
       "kickoff_utc": "2026-06-26T19:00:00Z",
       "hg": 1,
-      "ag": 2,
+      "ag": 3,
       "status": "LIVE",
-      "clock": "29'",
+      "clock": "33'",
       "events": [
         {
           "kind": "goal",
@@ -5736,6 +5742,12 @@
           "player": "Thelo Aasgaard",
           "team": "Norway",
           "minute": "21'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ousmane Dembélé",
+          "team": "France",
+          "minute": "32'"
         }
       ]
     },
@@ -5749,7 +5761,7 @@
       "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "28'",
+      "clock": "32'",
       "events": [
         {
           "kind": "goal",
@@ -8072,8 +8084,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 2,
-          "clock": "29'",
+          "ag": 3,
+          "clock": "33'",
           "ht": false,
           "events": [
             {
@@ -8093,6 +8105,12 @@
               "player": "Thelo Aasgaard",
               "team": "Norway",
               "minute": "21'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ousmane Dembélé",
+              "team": "France",
+              "minute": "32'"
             }
           ]
         },
@@ -8112,7 +8130,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "28'",
+          "clock": "32'",
           "ht": false,
           "events": [
             {
