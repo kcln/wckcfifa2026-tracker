@@ -5605,7 +5605,7 @@
           "status": "live",
           "hg": 1,
           "ag": 3,
-          "clock": "61'",
+          "clock": "65'",
           "ht": false,
           "events": [
             {
@@ -5648,9 +5648,9 @@
             "pick": "Senegal"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 0,
-          "clock": "57'",
+          "clock": "61'",
           "ht": false,
           "events": [
             {
@@ -5670,6 +5670,12 @@
               "player": "Ismaïla Sarr",
               "team": "Senegal",
               "minute": "56'"
+            },
+            {
+              "kind": "goal",
+              "player": "Pape Gueye",
+              "team": "Senegal",
+              "minute": "59'"
             }
           ]
         },
@@ -5747,7 +5753,7 @@
       "hg": 1,
       "ag": 3,
       "status": "LIVE",
-      "clock": "61'",
+      "clock": "65'",
       "events": [
         {
           "kind": "goal",
@@ -5782,10 +5788,10 @@
       "date": "2026-06-26",
       "venue": "Toronto",
       "kickoff_utc": "2026-06-26T19:00:00Z",
-      "hg": 2,
+      "hg": 3,
       "ag": 0,
       "status": "LIVE",
-      "clock": "57'",
+      "clock": "61'",
       "events": [
         {
           "kind": "goal",
@@ -5804,6 +5810,12 @@
           "player": "Ismaïla Sarr",
           "team": "Senegal",
           "minute": "56'"
+        },
+        {
+          "kind": "goal",
+          "player": "Pape Gueye",
+          "team": "Senegal",
+          "minute": "59'"
         }
       ]
     }
@@ -8115,7 +8127,7 @@
           "status": "live",
           "hg": 1,
           "ag": 3,
-          "clock": "61'",
+          "clock": "65'",
           "ht": false,
           "events": [
             {
@@ -8158,9 +8170,9 @@
             "pick": "Senegal"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 0,
-          "clock": "57'",
+          "clock": "61'",
           "ht": false,
           "events": [
             {
@@ -8180,6 +8192,12 @@
               "player": "Ismaïla Sarr",
               "team": "Senegal",
               "minute": "56'"
+            },
+            {
+              "kind": "goal",
+              "player": "Pape Gueye",
+              "team": "Senegal",
+              "minute": "59'"
             }
           ]
         },
