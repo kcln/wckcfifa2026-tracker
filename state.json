@@ -5587,7 +5587,7 @@
           "status": "live",
           "hg": 1,
           "ag": 3,
-          "clock": "36'",
+          "clock": "40'",
           "ht": false,
           "events": [
             {
@@ -5632,7 +5632,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "35'",
+          "clock": "39'",
           "ht": false,
           "events": [
             {
@@ -5723,7 +5723,7 @@
       "hg": 1,
       "ag": 3,
       "status": "LIVE",
-      "clock": "36'",
+      "clock": "40'",
       "events": [
         {
           "kind": "goal",
@@ -5761,7 +5761,7 @@
       "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "35'",
+      "clock": "39'",
       "events": [
         {
           "kind": "goal",
@@ -8085,7 +8085,7 @@
           "status": "live",
           "hg": 1,
           "ag": 3,
-          "clock": "36'",
+          "clock": "40'",
           "ht": false,
           "events": [
             {
@@ -8130,7 +8130,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "35'",
+          "clock": "39'",
           "ht": false,
           "events": [
             {
