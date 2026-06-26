@@ -1409,6 +1409,15 @@
           "key": "pm-2026-06-26-53",
           "generated_at": "2026-06-26T14:01:28.301406-07:00",
           "kickoff_utc": "2026-06-26T19:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 26\n\nFull time:\nSenegal 5 - 0 Iraq\nToronto, Canada\n  ⚽ 4' Habib Diarra (Senegal)\n  ⚽ 56' Ismaïla Sarr (Senegal)\n  ⚽ 59' Pape Gueye (Senegal)\n  ⚽ 71' Pape Gueye (Senegal)\n  ⚽ 82' Iliman Ndiaye (Senegal)\n  🟥 13' Rebin Sulaka (Iraq)\nOverall prediction: 34/62 (54.8%)\nPrediction ✓: Senegal",
+          "sent": true,
+          "hash": "e6c49ca6870d783e",
+          "key": "pm-2026-06-26-54",
+          "generated_at": "2026-06-26T14:05:04.795351-07:00",
+          "kickoff_utc": "2026-06-26T19:00:00Z"
         }
       ]
     }
@@ -1705,19 +1714,19 @@
       },
       {
         "team": "Senegal",
-        "played": 2,
-        "points": 0,
-        "gd": -3,
-        "gf": 3,
+        "played": 3,
+        "points": 3,
+        "gd": 2,
+        "gf": 8,
         "ga": 6
       },
       {
         "team": "Iraq",
-        "played": 2,
+        "played": 3,
         "points": 0,
-        "gd": -6,
+        "gd": -11,
         "gf": 1,
-        "ga": 7
+        "ga": 12
       }
     ],
     "J": [
@@ -1825,121 +1834,127 @@
   },
   "bracket": {
     "title_odds": {
-      "France": 0.1204,
-      "Argentina": 0.2382,
-      "Morocco": 0.028,
-      "Brazil": 0.0464,
-      "Colombia": 0.0461,
-      "Japan": 0.024,
-      "Germany": 0.0397,
-      "Spain": 0.158,
-      "Croatia": 0.0311,
-      "Ecuador": 0.0241,
-      "Canada": 0.0105,
-      "Portugal": 0.0419,
-      "Mexico": 0.0203,
-      "England": 0.0492,
-      "Austria": 0.0043,
-      "Belgium": 0.0151,
-      "Netherlands": 0.034,
-      "Iran": 0.0078,
-      "Switzerland": 0.011,
-      "Algeria": 0.0041,
-      "Paraguay": 0.0094,
-      "Norway": 0.007,
-      "South Korea": 0.0042,
-      "Uruguay": 0.0076,
-      "Ivory Coast": 0.0027,
-      "Egypt": 0.0033,
-      "Senegal": 0.0059,
-      "Australia": 0.0037,
-      "Sweden": 0.0013,
-      "Cape Verde": 0.0002,
-      "DR Congo": 0.0003,
-      "South Africa": 0.0002
+      "France": 0.121,
+      "England": 0.0515,
+      "Argentina": 0.2312,
+      "Senegal": 0.018,
+      "Germany": 0.0431,
+      "Canada": 0.0091,
+      "Colombia": 0.0446,
+      "Spain": 0.1518,
+      "Netherlands": 0.0292,
+      "Paraguay": 0.0099,
+      "Ivory Coast": 0.0025,
+      "Croatia": 0.0293,
+      "Japan": 0.0287,
+      "Mexico": 0.0218,
+      "Brazil": 0.0481,
+      "Ecuador": 0.0254,
+      "Portugal": 0.0397,
+      "Iran": 0.0076,
+      "Austria": 0.0042,
+      "Belgium": 0.0162,
+      "Morocco": 0.0265,
+      "Uruguay": 0.0095,
+      "Algeria": 0.0037,
+      "Norway": 0.0072,
+      "Sweden": 0.0009,
+      "Switzerland": 0.0109,
+      "Australia": 0.0032,
+      "South Korea": 0.0018,
+      "Egypt": 0.0028,
+      "Cape Verde": 0.0001,
+      "South Africa": 0.0003,
+      "DR Congo": 0.0001,
+      "Bosnia & Herzegovina": 0.0001
     },
     "advancement": {
       "Netherlands": 1.0,
-      "Croatia": 0.9255,
+      "Croatia": 0.9082,
       "Brazil": 1.0,
       "Spain": 1.0,
       "Portugal": 1.0,
       "Mexico": 1.0,
       "Ivory Coast": 1.0,
       "France": 1.0,
-      "Uruguay": 0.3661,
+      "Uruguay": 0.3431,
+      "Algeria": 0.5978,
       "South Africa": 1.0,
       "Morocco": 1.0,
-      "Paraguay": 0.997,
+      "Paraguay": 0.9984,
       "Sweden": 1.0,
-      "Belgium": 0.9042,
+      "Belgium": 0.8825,
       "USA": 1.0,
       "England": 1.0,
       "Norway": 1.0,
       "Argentina": 1.0,
-      "Senegal": 0.3563,
+      "Senegal": 0.9558,
       "Japan": 1.0,
       "Egypt": 1.0,
-      "Saudi Arabia": 0.2541,
-      "Austria": 0.8908,
+      "Saudi Arabia": 0.2536,
       "Germany": 1.0,
       "Canada": 1.0,
       "Colombia": 1.0,
       "Ecuador": 1.0,
       "Australia": 1.0,
       "Switzerland": 1.0,
-      "South Korea": 0.7032,
+      "South Korea": 0.4425,
       "Ghana": 1.0,
       "Bosnia & Herzegovina": 1.0,
-      "DR Congo": 0.2656,
-      "Iran": 0.7016,
+      "Iran": 0.6618,
+      "Austria": 0.8252,
       "New Zealand": 0.0923,
-      "Algeria": 0.6518,
-      "Cape Verde": 0.7436,
-      "Panama": 0.0194,
-      "Scotland": 0.12,
-      "Jordan": 0.006,
-      "Iraq": 0.0025
+      "Cape Verde": 0.7284,
+      "DR Congo": 0.2622,
+      "Panama": 0.0144,
+      "Scotland": 0.0302,
+      "Jordan": 0.0036
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Norway",
-    "away": "France",
-    "home_goals": 1,
-    "away_goals": 4,
+    "home": "Senegal",
+    "away": "Iraq",
+    "home_goals": 5,
+    "away_goals": 0,
     "date": "2026-06-26",
-    "venue": "Boston (Foxborough)",
+    "venue": "Toronto",
     "events": [
       {
         "kind": "goal",
-        "player": "Ousmane Dembélé",
-        "team": "France",
-        "minute": "7'"
+        "player": "Habib Diarra",
+        "team": "Senegal",
+        "minute": "4'"
+      },
+      {
+        "kind": "red",
+        "player": "Rebin Sulaka",
+        "team": "Iraq",
+        "minute": "13'"
       },
       {
         "kind": "goal",
-        "player": "Ousmane Dembélé",
-        "team": "France",
-        "minute": "20'"
+        "player": "Ismaïla Sarr",
+        "team": "Senegal",
+        "minute": "56'"
       },
       {
         "kind": "goal",
-        "player": "Thelo Aasgaard",
-        "team": "Norway",
-        "minute": "21'"
+        "player": "Pape Gueye",
+        "team": "Senegal",
+        "minute": "59'"
       },
       {
         "kind": "goal",
-        "player": "Ousmane Dembélé",
-        "team": "France",
-        "minute": "32'"
+        "player": "Pape Gueye",
+        "team": "Senegal",
+        "minute": "71'"
       },
       {
         "kind": "goal",
-        "player": "Désiré Doué",
-        "team": "France",
-        "minute": "90'+4'"
+        "player": "Iliman Ndiaye",
+        "team": "Senegal",
+        "minute": "82'"
       }
     ]
   },
@@ -3341,6 +3356,48 @@
           "player": "Désiré Doué",
           "team": "France",
           "minute": "90'+4'"
+        }
+      ]
+    },
+    "54": {
+      "home_goals": 5,
+      "away_goals": 0,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Habib Diarra",
+          "team": "Senegal",
+          "minute": "4'"
+        },
+        {
+          "kind": "red",
+          "player": "Rebin Sulaka",
+          "team": "Iraq",
+          "minute": "13'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ismaïla Sarr",
+          "team": "Senegal",
+          "minute": "56'"
+        },
+        {
+          "kind": "goal",
+          "player": "Pape Gueye",
+          "team": "Senegal",
+          "minute": "59'"
+        },
+        {
+          "kind": "goal",
+          "player": "Pape Gueye",
+          "team": "Senegal",
+          "minute": "71'"
+        },
+        {
+          "kind": "goal",
+          "player": "Iliman Ndiaye",
+          "team": "Senegal",
+          "minute": "82'"
         }
       ]
     }
@@ -5699,11 +5756,9 @@
             "away": 0.22334144935845598,
             "pick": "Senegal"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 5,
           "ag": 0,
-          "clock": "90'+3'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -5741,7 +5796,8 @@
               "team": "Senegal",
               "minute": "82'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "47",
@@ -5806,58 +5862,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "54",
-      "home": "Senegal",
-      "away": "Iraq",
-      "date": "2026-06-26",
-      "venue": "Toronto",
-      "kickoff_utc": "2026-06-26T19:00:00Z",
-      "hg": 5,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "90'+3'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Habib Diarra",
-          "team": "Senegal",
-          "minute": "4'"
-        },
-        {
-          "kind": "red",
-          "player": "Rebin Sulaka",
-          "team": "Iraq",
-          "minute": "13'"
-        },
-        {
-          "kind": "goal",
-          "player": "Ismaïla Sarr",
-          "team": "Senegal",
-          "minute": "56'"
-        },
-        {
-          "kind": "goal",
-          "player": "Pape Gueye",
-          "team": "Senegal",
-          "minute": "59'"
-        },
-        {
-          "kind": "goal",
-          "player": "Pape Gueye",
-          "team": "Senegal",
-          "minute": "71'"
-        },
-        {
-          "kind": "goal",
-          "player": "Iliman Ndiaye",
-          "team": "Senegal",
-          "minute": "82'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -8212,11 +8217,9 @@
             "away": 0.22334144935845598,
             "pick": "Senegal"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 5,
           "ag": 0,
-          "clock": "90'+3'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -8254,7 +8257,8 @@
               "team": "Senegal",
               "minute": "82'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "47",
