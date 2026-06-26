@@ -5263,9 +5263,9 @@
             "pick": "Japan"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "56'",
+          "clock": "59'",
           "ht": false,
           "events": [
             {
@@ -5292,7 +5292,7 @@
           "status": "live",
           "hg": 1,
           "ag": 2,
-          "clock": "57'",
+          "clock": "60'",
           "ht": false,
           "events": [
             {
@@ -5356,10 +5356,10 @@
       "date": "2026-06-25",
       "venue": "Dallas (Arlington)",
       "kickoff_utc": "2026-06-25T23:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "56'",
+      "clock": "59'",
       "events": [
         {
           "kind": "goal",
@@ -5379,7 +5379,7 @@
       "hg": 1,
       "ag": 2,
       "status": "LIVE",
-      "clock": "57'",
+      "clock": "60'",
       "events": [
         {
           "kind": "own_goal",
@@ -7557,9 +7557,9 @@
             "pick": "Japan"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "56'",
+          "clock": "59'",
           "ht": false,
           "events": [
             {
@@ -7586,7 +7586,7 @@
           "status": "live",
           "hg": 1,
           "ag": 2,
-          "clock": "57'",
+          "clock": "60'",
           "ht": false,
           "events": [
             {
