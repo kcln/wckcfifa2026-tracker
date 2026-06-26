@@ -1382,6 +1382,15 @@
           "key": "mb-2026-06-26",
           "generated_at": "2026-06-26T00:00:40.071299-07:00",
           "kickoff_utc": "2026-06-26T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 26\n\nHalf-time:\nNorway 1 - 3 France\nBoston (Foxborough), USA\n  ⚽ 7' Ousmane Dembélé (France)\n  ⚽ 20' Ousmane Dembélé (France)\n  ⚽ 21' Thelo Aasgaard (Norway)\n  ⚽ 32' Ousmane Dembélé (France)\nPrediction: France",
+          "sent": true,
+          "hash": "5619d2cd998e43e3",
+          "key": "ht-2026-06-26-53",
+          "generated_at": "2026-06-26T12:53:13.355284-07:00",
+          "kickoff_utc": "2026-06-26T19:00:00Z"
         }
       ]
     }
@@ -5587,8 +5596,8 @@
           "status": "live",
           "hg": 1,
           "ag": 3,
-          "clock": "45'+3'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -5632,7 +5641,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "45'+2'",
+          "clock": "45'+6'",
           "ht": false,
           "events": [
             {
@@ -5722,8 +5731,8 @@
       "kickoff_utc": "2026-06-26T19:00:00Z",
       "hg": 1,
       "ag": 3,
-      "status": "LIVE",
-      "clock": "45'+3'",
+      "status": "HT",
+      "clock": "45'+5'",
       "events": [
         {
           "kind": "goal",
@@ -5761,7 +5770,7 @@
       "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "45'+2'",
+      "clock": "45'+6'",
       "events": [
         {
           "kind": "goal",
@@ -8085,8 +8094,8 @@
           "status": "live",
           "hg": 1,
           "ag": 3,
-          "clock": "45'+3'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -8130,7 +8139,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "45'+2'",
+          "clock": "45'+6'",
           "ht": false,
           "events": [
             {
