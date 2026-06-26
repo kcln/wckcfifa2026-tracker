@@ -5605,7 +5605,7 @@
           "status": "live",
           "hg": 1,
           "ag": 3,
-          "clock": "72'",
+          "clock": "76'",
           "ht": false,
           "events": [
             {
@@ -5648,9 +5648,9 @@
             "pick": "Senegal"
           },
           "status": "live",
-          "hg": 3,
+          "hg": 4,
           "ag": 0,
-          "clock": "68'",
+          "clock": "72'",
           "ht": false,
           "events": [
             {
@@ -5676,6 +5676,12 @@
               "player": "Pape Gueye",
               "team": "Senegal",
               "minute": "59'"
+            },
+            {
+              "kind": "goal",
+              "player": "Pape Gueye",
+              "team": "Senegal",
+              "minute": "71'"
             }
           ]
         },
@@ -5753,7 +5759,7 @@
       "hg": 1,
       "ag": 3,
       "status": "LIVE",
-      "clock": "72'",
+      "clock": "76'",
       "events": [
         {
           "kind": "goal",
@@ -5788,10 +5794,10 @@
       "date": "2026-06-26",
       "venue": "Toronto",
       "kickoff_utc": "2026-06-26T19:00:00Z",
-      "hg": 3,
+      "hg": 4,
       "ag": 0,
       "status": "LIVE",
-      "clock": "68'",
+      "clock": "72'",
       "events": [
         {
           "kind": "goal",
@@ -5816,6 +5822,12 @@
           "player": "Pape Gueye",
           "team": "Senegal",
           "minute": "59'"
+        },
+        {
+          "kind": "goal",
+          "player": "Pape Gueye",
+          "team": "Senegal",
+          "minute": "71'"
         }
       ]
     }
@@ -8127,7 +8139,7 @@
           "status": "live",
           "hg": 1,
           "ag": 3,
-          "clock": "72'",
+          "clock": "76'",
           "ht": false,
           "events": [
             {
@@ -8170,9 +8182,9 @@
             "pick": "Senegal"
           },
           "status": "live",
-          "hg": 3,
+          "hg": 4,
           "ag": 0,
-          "clock": "68'",
+          "clock": "72'",
           "ht": false,
           "events": [
             {
@@ -8198,6 +8210,12 @@
               "player": "Pape Gueye",
               "team": "Senegal",
               "minute": "59'"
+            },
+            {
+              "kind": "goal",
+              "player": "Pape Gueye",
+              "team": "Senegal",
+              "minute": "71'"
             }
           ]
         },
