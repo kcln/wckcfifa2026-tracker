@@ -5413,9 +5413,9 @@
             "pick": "Turkey"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "7'",
+          "clock": "11'",
           "ht": false,
           "events": [
             {
@@ -5423,6 +5423,12 @@
               "player": "Auston Trusty",
               "team": "USA",
               "minute": "3'"
+            },
+            {
+              "kind": "goal",
+              "player": "Arda Güler",
+              "team": "Turkey",
+              "minute": "10'"
             }
           ]
         },
@@ -5442,7 +5448,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "7'",
+          "clock": "10'",
           "ht": false,
           "events": []
         }
@@ -5457,16 +5463,22 @@
       "date": "2026-06-25",
       "venue": "Los Angeles (Inglewood)",
       "kickoff_utc": "2026-06-26T02:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 1,
       "status": "LIVE",
-      "clock": "7'",
+      "clock": "11'",
       "events": [
         {
           "kind": "goal",
           "player": "Auston Trusty",
           "team": "USA",
           "minute": "3'"
+        },
+        {
+          "kind": "goal",
+          "player": "Arda Güler",
+          "team": "Turkey",
+          "minute": "10'"
         }
       ]
     },
@@ -5480,7 +5492,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "7'",
+      "clock": "10'",
       "events": []
     }
   ],
@@ -7715,9 +7727,9 @@
             "pick": "Turkey"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "7'",
+          "clock": "11'",
           "ht": false,
           "events": [
             {
@@ -7725,6 +7737,12 @@
               "player": "Auston Trusty",
               "team": "USA",
               "minute": "3'"
+            },
+            {
+              "kind": "goal",
+              "player": "Arda Güler",
+              "team": "Turkey",
+              "minute": "10'"
             }
           ]
         },
@@ -7744,7 +7762,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "7'",
+          "clock": "10'",
           "ht": false,
           "events": []
         }
