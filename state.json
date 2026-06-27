@@ -1427,6 +1427,15 @@
           "key": "ht-2026-06-26-47",
           "generated_at": "2026-06-26T17:53:34.891673-07:00",
           "kickoff_utc": "2026-06-27T00:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 26\n\nHalf-time:\nUruguay 0 - 1 Spain\nGuadalajara (Zapopan), Mexico\n  ⚽ 42' Álex Baena (Spain)\nPrediction: Spain",
+          "sent": true,
+          "hash": "e129e4df18cfe9df",
+          "key": "ht-2026-06-26-48",
+          "generated_at": "2026-06-26T17:57:09.805558-07:00",
+          "kickoff_utc": "2026-06-27T00:00:00Z"
         }
       ]
     }
@@ -5844,8 +5853,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+7'",
-          "ht": false,
+          "clock": "45'+8'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -5911,8 +5920,8 @@
       "kickoff_utc": "2026-06-27T00:00:00Z",
       "hg": 0,
       "ag": 1,
-      "status": "LIVE",
-      "clock": "45'+7'",
+      "status": "HT",
+      "clock": "45'+8'",
       "events": [
         {
           "kind": "goal",
@@ -8356,8 +8365,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+7'",
-          "ht": false,
+          "clock": "45'+8'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
