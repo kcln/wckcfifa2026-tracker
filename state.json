@@ -5918,11 +5918,18 @@
             "pick": "Iran"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "2'",
+          "clock": "5'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Mahmoud Saber",
+              "team": "Egypt",
+              "minute": "5'"
+            }
+          ]
         },
         {
           "id": "42",
@@ -5940,7 +5947,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "1'",
+          "clock": "5'",
           "ht": false,
           "events": []
         }
@@ -5955,11 +5962,18 @@
       "date": "2026-06-26",
       "venue": "Seattle",
       "kickoff_utc": "2026-06-27T03:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "2'",
-      "events": []
+      "clock": "5'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Mahmoud Saber",
+          "team": "Egypt",
+          "minute": "5'"
+        }
+      ]
     },
     {
       "id": "42",
@@ -5971,7 +5985,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "1'",
+      "clock": "5'",
       "events": []
     }
   ],
@@ -8437,11 +8451,18 @@
             "pick": "Iran"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "2'",
+          "clock": "5'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Mahmoud Saber",
+              "team": "Egypt",
+              "minute": "5'"
+            }
+          ]
         },
         {
           "id": "42",
@@ -8459,7 +8480,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "1'",
+          "clock": "5'",
           "ht": false,
           "events": []
         }
