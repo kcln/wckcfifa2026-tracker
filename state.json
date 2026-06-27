@@ -6130,7 +6130,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "30'",
+          "clock": "33'",
           "ht": false,
           "events": []
         },
@@ -6148,11 +6148,18 @@
             "pick": "Croatia"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "29'",
+          "clock": "33'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Petar Sucic",
+              "team": "Croatia",
+              "minute": "31'"
+            }
+          ]
         },
         {
           "id": "65",
@@ -6228,7 +6235,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "30'",
+      "clock": "33'",
       "events": []
     },
     {
@@ -6238,11 +6245,18 @@
       "date": "2026-06-27",
       "venue": "Philadelphia",
       "kickoff_utc": "2026-06-27T21:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "29'",
-      "events": []
+      "clock": "33'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Petar Sucic",
+          "team": "Croatia",
+          "minute": "31'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -8802,7 +8816,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "30'",
+          "clock": "33'",
           "ht": false,
           "events": []
         },
@@ -8820,11 +8834,18 @@
             "pick": "Croatia"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "29'",
+          "clock": "33'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Petar Sucic",
+              "team": "Croatia",
+              "minute": "31'"
+            }
+          ]
         },
         {
           "id": "65",
