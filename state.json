@@ -5917,7 +5917,12 @@
             "away": 0.42737620904039014,
             "pick": "Iran"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "2'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "42",
@@ -5932,12 +5937,44 @@
             "away": 0.7254386784216105,
             "pick": "Belgium"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "41",
+      "home": "Egypt",
+      "away": "Iran",
+      "date": "2026-06-26",
+      "venue": "Seattle",
+      "kickoff_utc": "2026-06-27T03:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "2'",
+      "events": []
+    },
+    {
+      "id": "42",
+      "home": "New Zealand",
+      "away": "Belgium",
+      "date": "2026-06-26",
+      "venue": "Vancouver",
+      "kickoff_utc": "2026-06-27T03:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "1'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -8399,7 +8436,12 @@
             "away": 0.42737620904039014,
             "pick": "Iran"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "2'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "42",
@@ -8414,7 +8456,12 @@
             "away": 0.7254386784216105,
             "pick": "Belgium"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         }
       ]
     },

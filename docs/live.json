@@ -1,1 +1,1 @@
-{"live": false, "id": "48", "home": "Uruguay", "away": "Spain", "hg": 0, "ag": 1, "status": "FT", "clock": "", "date": "2026-06-26", "venue": "Guadalajara (Zapopan)", "events": [{"kind": "goal", "player": "\u00c1lex Baena", "team": "Spain", "minute": "42'"}, {"kind": "red", "player": "Agust\u00edn Canobbio", "team": "Uruguay", "minute": "90'+5'"}]}
+{"live": true, "id": "42", "home": "New Zealand", "away": "Belgium", "hg": 0, "ag": 0, "status": "LIVE", "clock": "1'", "date": "2026-06-26", "venue": "Vancouver", "events": []}
