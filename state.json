@@ -5919,8 +5919,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 0,
-          "clock": "12'",
+          "ag": 1,
+          "clock": "16'",
           "ht": false,
           "events": [
             {
@@ -5928,6 +5928,12 @@
               "player": "Mahmoud Saber",
               "team": "Egypt",
               "minute": "5'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ramin Rezaeian",
+              "team": "Iran",
+              "minute": "14'"
             }
           ]
         },
@@ -5947,7 +5953,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "12'",
+          "clock": "15'",
           "ht": false,
           "events": []
         }
@@ -5963,15 +5969,21 @@
       "venue": "Seattle",
       "kickoff_utc": "2026-06-27T03:00:00Z",
       "hg": 1,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "12'",
+      "clock": "16'",
       "events": [
         {
           "kind": "goal",
           "player": "Mahmoud Saber",
           "team": "Egypt",
           "minute": "5'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ramin Rezaeian",
+          "team": "Iran",
+          "minute": "14'"
         }
       ]
     },
@@ -5985,7 +5997,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "12'",
+      "clock": "15'",
       "events": []
     }
   ],
@@ -8452,8 +8464,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 0,
-          "clock": "12'",
+          "ag": 1,
+          "clock": "16'",
           "ht": false,
           "events": [
             {
@@ -8461,6 +8473,12 @@
               "player": "Mahmoud Saber",
               "team": "Egypt",
               "minute": "5'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ramin Rezaeian",
+              "team": "Iran",
+              "minute": "14'"
             }
           ]
         },
@@ -8480,7 +8498,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "12'",
+          "clock": "15'",
           "ht": false,
           "events": []
         }
