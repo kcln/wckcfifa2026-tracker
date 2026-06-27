@@ -5812,7 +5812,12 @@
             "away": 0.2589463425070412,
             "pick": "Cape Verde"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "48",
@@ -5827,7 +5832,12 @@
             "away": 0.6282022467616244,
             "pick": "Spain"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "2'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "41",
@@ -5862,7 +5872,34 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "47",
+      "home": "Cape Verde",
+      "away": "Saudi Arabia",
+      "date": "2026-06-26",
+      "venue": "Houston",
+      "kickoff_utc": "2026-06-27T00:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "1'",
+      "events": []
+    },
+    {
+      "id": "48",
+      "home": "Uruguay",
+      "away": "Spain",
+      "date": "2026-06-26",
+      "venue": "Guadalajara (Zapopan)",
+      "kickoff_utc": "2026-06-27T00:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "2'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -8273,7 +8310,12 @@
             "away": 0.2589463425070412,
             "pick": "Cape Verde"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "48",
@@ -8288,7 +8330,12 @@
             "away": 0.6282022467616244,
             "pick": "Spain"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "2'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "41",
