@@ -1531,6 +1531,15 @@
           "key": "ht-2026-06-27-72",
           "generated_at": "2026-06-27T14:50:59.042412-07:00",
           "kickoff_utc": "2026-06-27T21:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 27\n\nFull time:\nPanama 0 - 2 England\nNew York/New Jersey (East Rutherford), USA\n  ⚽ 62' Jude Bellingham (England)\n  ⚽ 67' Harry Kane (England)\nOverall prediction: 37/67 (55.2%)\nPrediction ✓: England",
+          "sent": true,
+          "hash": "2bad4c8eb28e13f6",
+          "key": "pm-2026-06-27-71",
+          "generated_at": "2026-06-27T15:58:53.263934-07:00",
+          "kickoff_utc": "2026-06-27T21:00:00Z"
         }
       ]
     }
@@ -1913,10 +1922,10 @@
     "L": [
       {
         "team": "England",
-        "played": 2,
-        "points": 4,
-        "gd": 2,
-        "gf": 4,
+        "played": 3,
+        "points": 7,
+        "gd": 4,
+        "gf": 6,
         "ga": 2
       },
       {
@@ -1937,46 +1946,45 @@
       },
       {
         "team": "Panama",
-        "played": 2,
+        "played": 3,
         "points": 0,
-        "gd": -2,
+        "gd": -4,
         "gf": 0,
-        "ga": 2
+        "ga": 4
       }
     ]
   },
   "bracket": {
     "title_odds": {
-      "France": 0.115,
-      "Argentina": 0.2507,
-      "Mexico": 0.0244,
-      "Iran": 0.0062,
-      "Spain": 0.1464,
-      "Brazil": 0.0473,
-      "Portugal": 0.0376,
-      "England": 0.047,
-      "Belgium": 0.0261,
-      "Colombia": 0.0438,
-      "Senegal": 0.0181,
-      "Croatia": 0.0291,
-      "Norway": 0.0066,
-      "Egypt": 0.0045,
-      "Japan": 0.0265,
-      "Netherlands": 0.029,
-      "Canada": 0.0089,
-      "Paraguay": 0.0066,
-      "Germany": 0.0453,
-      "Ecuador": 0.0241,
-      "Australia": 0.0063,
-      "Switzerland": 0.0097,
-      "Algeria": 0.0037,
-      "Morocco": 0.0257,
-      "Austria": 0.0042,
-      "South Korea": 0.0027,
-      "Ivory Coast": 0.0026,
-      "Sweden": 0.0012,
-      "South Africa": 0.0003,
-      "DR Congo": 0.0003,
+      "Argentina": 0.2409,
+      "Croatia": 0.0221,
+      "France": 0.1196,
+      "Portugal": 0.0393,
+      "Germany": 0.0437,
+      "Japan": 0.0292,
+      "Spain": 0.1471,
+      "Netherlands": 0.0336,
+      "England": 0.0617,
+      "Belgium": 0.0273,
+      "Brazil": 0.0471,
+      "Colombia": 0.0449,
+      "Canada": 0.0091,
+      "Ecuador": 0.0209,
+      "Senegal": 0.0163,
+      "Australia": 0.0033,
+      "Iran": 0.0054,
+      "Morocco": 0.0268,
+      "Mexico": 0.0231,
+      "Paraguay": 0.0083,
+      "Switzerland": 0.0098,
+      "Norway": 0.0074,
+      "South Korea": 0.0015,
+      "Austria": 0.0037,
+      "Ivory Coast": 0.0018,
+      "Egypt": 0.003,
+      "Algeria": 0.0018,
+      "Sweden": 0.0011,
+      "South Africa": 0.0001,
       "Cape Verde": 0.0001
     },
     "advancement": {
@@ -1986,9 +1994,9 @@
       "Egypt": 1.0,
       "Brazil": 1.0,
       "Mexico": 1.0,
-      "South Korea": 0.475,
-      "Colombia": 1.0,
+      "South Korea": 0.4806,
       "England": 1.0,
+      "Colombia": 1.0,
       "Portugal": 1.0,
       "Senegal": 1.0,
       "Cape Verde": 1.0,
@@ -1999,11 +2007,11 @@
       "Australia": 1.0,
       "Norway": 1.0,
       "Netherlands": 1.0,
-      "Algeria": 0.5718,
-      "Croatia": 0.9034,
+      "Algeria": 0.5715,
       "Canada": 1.0,
+      "Croatia": 0.9115,
       "Ghana": 1.0,
-      "Iran": 0.9397,
+      "Iran": 0.9404,
       "Ecuador": 1.0,
       "Spain": 1.0,
       "Ivory Coast": 1.0,
@@ -2013,55 +2021,30 @@
       "Belgium": 1.0,
       "Bosnia & Herzegovina": 1.0,
       "DR Congo": 0.2623,
-      "Austria": 0.8286,
-      "Panama": 0.0156,
-      "Jordan": 0.0036
+      "Austria": 0.83,
+      "Jordan": 0.0037
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Senegal",
-    "away": "Iraq",
-    "home_goals": 5,
-    "away_goals": 0,
-    "date": "2026-06-26",
-    "venue": "Toronto",
+    "home": "Panama",
+    "away": "England",
+    "home_goals": 0,
+    "away_goals": 2,
+    "date": "2026-06-27",
+    "venue": "New York/New Jersey (East Rutherford)",
     "events": [
       {
         "kind": "goal",
-        "player": "Habib Diarra",
-        "team": "Senegal",
-        "minute": "4'"
-      },
-      {
-        "kind": "red",
-        "player": "Rebin Sulaka",
-        "team": "Iraq",
-        "minute": "13'"
+        "player": "Jude Bellingham",
+        "team": "England",
+        "minute": "62'"
       },
       {
         "kind": "goal",
-        "player": "Ismaïla Sarr",
-        "team": "Senegal",
-        "minute": "56'"
-      },
-      {
-        "kind": "goal",
-        "player": "Pape Gueye",
-        "team": "Senegal",
-        "minute": "59'"
-      },
-      {
-        "kind": "goal",
-        "player": "Pape Gueye",
-        "team": "Senegal",
-        "minute": "71'"
-      },
-      {
-        "kind": "goal",
-        "player": "Iliman Ndiaye",
-        "team": "Senegal",
-        "minute": "82'"
+        "player": "Harry Kane",
+        "team": "England",
+        "minute": "67'"
       }
     ]
   },
@@ -3587,6 +3570,24 @@
           "player": "Ramin Rezaeian",
           "team": "Iran",
           "minute": "14'"
+        }
+      ]
+    },
+    "71": {
+      "home_goals": 0,
+      "away_goals": 2,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Jude Bellingham",
+          "team": "England",
+          "minute": "62'"
+        },
+        {
+          "kind": "goal",
+          "player": "Harry Kane",
+          "team": "England",
+          "minute": "67'"
         }
       ]
     }
@@ -6145,11 +6146,9 @@
             "away": 0.5928868300561004,
             "pick": "England"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 2,
-          "clock": "90'+6'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -6163,7 +6162,8 @@
               "team": "England",
               "minute": "67'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "72",
@@ -6181,7 +6181,7 @@
           "status": "live",
           "hg": 2,
           "ag": 1,
-          "clock": "90'+4'",
+          "clock": "90'+7'",
           "ht": false,
           "events": [
             {
@@ -6269,32 +6269,6 @@
   ],
   "live": [
     {
-      "id": "71",
-      "home": "Panama",
-      "away": "England",
-      "date": "2026-06-27",
-      "venue": "New York/New Jersey (East Rutherford)",
-      "kickoff_utc": "2026-06-27T21:00:00Z",
-      "hg": 0,
-      "ag": 2,
-      "status": "LIVE",
-      "clock": "90'+6'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Jude Bellingham",
-          "team": "England",
-          "minute": "62'"
-        },
-        {
-          "kind": "goal",
-          "player": "Harry Kane",
-          "team": "England",
-          "minute": "67'"
-        }
-      ]
-    },
-    {
       "id": "72",
       "home": "Croatia",
       "away": "Ghana",
@@ -6304,7 +6278,7 @@
       "hg": 2,
       "ag": 1,
       "status": "LIVE",
-      "clock": "90'+4'",
+      "clock": "90'+7'",
       "events": [
         {
           "kind": "goal",
@@ -8881,11 +8855,9 @@
             "away": 0.5928868300561004,
             "pick": "England"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 2,
-          "clock": "90'+6'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -8899,7 +8871,8 @@
               "team": "England",
               "minute": "67'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "72",
@@ -8917,7 +8890,7 @@
           "status": "live",
           "hg": 2,
           "ag": 1,
-          "clock": "90'+4'",
+          "clock": "90'+7'",
           "ht": false,
           "events": [
             {
