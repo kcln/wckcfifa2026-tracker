@@ -1501,6 +1501,20 @@
           "kickoff_utc": "2026-06-26T19:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-06-27",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 27\n\nMatchday Brief\n\nPanama vs England\n  Prediction: England\n  Panama 15.0% · Draw 25.7% · England 59.3%\n  🕐 2:00pm PT / 4:00pm CT / 5:00pm ET / 2:30am IST (+1d)\n  📍 New York/New Jersey (East Rutherford), USA\n\nCroatia vs Ghana\n  Prediction: Croatia\n  Croatia 80.6% · Draw 6.5% · Ghana 12.9%\n  🕐 2:00pm PT / 4:00pm CT / 5:00pm ET / 2:30am IST (+1d)\n  📍 Philadelphia, USA\n\nColombia vs Portugal\n  Prediction: Portugal\n  Colombia 34.9% · Draw 28.6% · Portugal 36.5%\n  🕐 4:30pm PT / 6:30pm CT / 7:30pm ET / 5:00am IST (+1d)\n  📍 Miami (Miami Gardens), USA\n\nDR Congo vs Uzbekistan\n  Prediction: Uzbekistan\n  DR Congo 26.2% · Draw 27.5% · Uzbekistan 46.3%\n  🕐 4:30pm PT / 6:30pm CT / 7:30pm ET / 5:00am IST (+1d)\n  📍 Atlanta, USA\n\nAlgeria vs Austria\n  Prediction: Austria\n  Algeria 29.5% · Draw 27.4% · Austria 43.1%\n  🕐 7:00pm PT / 9:00pm CT / 10:00pm ET / 7:30am IST (+1d)\n  📍 Kansas City, USA\n\nJordan vs Argentina\n  Prediction: Argentina\n  Jordan 1.4% · Draw 6.1% · Argentina 92.5%\n  🕐 7:00pm PT / 9:00pm CT / 10:00pm ET / 7:30am IST (+1d)\n  📍 Dallas (Arlington), USA",
+          "sent": true,
+          "hash": "02a323ed2d39b585",
+          "key": "mb-2026-06-27",
+          "generated_at": "2026-06-27T00:00:07.253451-07:00",
+          "kickoff_utc": "2026-06-27T21:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -6094,6 +6108,101 @@
             }
           ],
           "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-06-27",
+      "matches": [
+        {
+          "id": "71",
+          "home": "Panama",
+          "away": "England",
+          "kickoff_utc": "2026-06-27T21:00:00Z",
+          "venue": "New York/New Jersey (East Rutherford)",
+          "stage": "group",
+          "pred": {
+            "home": 0.1504995791495254,
+            "draw": 0.2566135907943742,
+            "away": 0.5928868300561004,
+            "pick": "England"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "72",
+          "home": "Croatia",
+          "away": "Ghana",
+          "kickoff_utc": "2026-06-27T21:00:00Z",
+          "venue": "Philadelphia",
+          "stage": "group",
+          "pred": {
+            "home": 0.805534469807312,
+            "draw": 0.06533900355959404,
+            "away": 0.12912652663309385,
+            "pick": "Croatia"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "65",
+          "home": "Colombia",
+          "away": "Portugal",
+          "kickoff_utc": "2026-06-27T23:30:00Z",
+          "venue": "Miami (Miami Gardens)",
+          "stage": "group",
+          "pred": {
+            "home": 0.348834254798891,
+            "draw": 0.28592376549305476,
+            "away": 0.36524197970805417,
+            "pick": "Portugal"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "66",
+          "home": "DR Congo",
+          "away": "Uzbekistan",
+          "kickoff_utc": "2026-06-27T23:30:00Z",
+          "venue": "Atlanta",
+          "stage": "group",
+          "pred": {
+            "home": 0.26247261767805796,
+            "draw": 0.27500100828428936,
+            "away": 0.46252637403765257,
+            "pick": "Uzbekistan"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "59",
+          "home": "Algeria",
+          "away": "Austria",
+          "kickoff_utc": "2026-06-28T02:00:00Z",
+          "venue": "Kansas City",
+          "stage": "group",
+          "pred": {
+            "home": 0.29491205714863183,
+            "draw": 0.2740685874599872,
+            "away": 0.4310193553913809,
+            "pick": "Austria"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "60",
+          "home": "Jordan",
+          "away": "Argentina",
+          "kickoff_utc": "2026-06-28T02:00:00Z",
+          "venue": "Dallas (Arlington)",
+          "stage": "group",
+          "pred": {
+            "home": 0.014295208789189691,
+            "draw": 0.06056898529185892,
+            "away": 0.9251358059189514,
+            "pick": "Argentina"
+          },
+          "status": "sched"
         }
       ]
     }
