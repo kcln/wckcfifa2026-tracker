@@ -5833,7 +5833,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "46'",
+          "clock": "49'",
           "ht": false,
           "events": []
         },
@@ -5853,8 +5853,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+8'",
-          "ht": true,
+          "clock": "49'",
+          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -5908,7 +5908,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "46'",
+      "clock": "49'",
       "events": []
     },
     {
@@ -5920,8 +5920,8 @@
       "kickoff_utc": "2026-06-27T00:00:00Z",
       "hg": 0,
       "ag": 1,
-      "status": "HT",
-      "clock": "45'+8'",
+      "status": "LIVE",
+      "clock": "49'",
       "events": [
         {
           "kind": "goal",
@@ -8345,7 +8345,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "46'",
+          "clock": "49'",
           "ht": false,
           "events": []
         },
@@ -8365,8 +8365,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+8'",
-          "ht": true,
+          "clock": "49'",
+          "ht": false,
           "events": [
             {
               "kind": "goal",
