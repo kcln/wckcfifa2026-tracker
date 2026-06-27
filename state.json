@@ -6257,7 +6257,12 @@
             "away": 0.36524197970805417,
             "pick": "Portugal"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "66",
@@ -6272,7 +6277,12 @@
             "away": 0.46252637403765257,
             "pick": "Uzbekistan"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "59",
@@ -6307,7 +6317,34 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "65",
+      "home": "Colombia",
+      "away": "Portugal",
+      "date": "2026-06-27",
+      "venue": "Miami (Miami Gardens)",
+      "kickoff_utc": "2026-06-27T23:30:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    },
+    {
+      "id": "66",
+      "home": "DR Congo",
+      "away": "Uzbekistan",
+      "date": "2026-06-27",
+      "venue": "Atlanta",
+      "kickoff_utc": "2026-06-27T23:30:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -8932,7 +8969,12 @@
             "away": 0.36524197970805417,
             "pick": "Portugal"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "66",
@@ -8947,7 +8989,12 @@
             "away": 0.46252637403765257,
             "pick": "Uzbekistan"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "59",
