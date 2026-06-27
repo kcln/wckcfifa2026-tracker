@@ -1513,6 +1513,24 @@
           "key": "mb-2026-06-27",
           "generated_at": "2026-06-27T00:00:07.253451-07:00",
           "kickoff_utc": "2026-06-27T21:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 27\n\nHalf-time:\nPanama 0 - 0 England\nNew York/New Jersey (East Rutherford), USA\nPrediction: England",
+          "sent": true,
+          "hash": "db6c86a967c1cb4d",
+          "key": "ht-2026-06-27-71",
+          "generated_at": "2026-06-27T14:50:59.042377-07:00",
+          "kickoff_utc": "2026-06-27T21:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 27\n\nHalf-time:\nCroatia 1 - 0 Ghana\nPhiladelphia, USA\n  ⚽ 31' Petar Sucic (Croatia)\nPrediction: Croatia",
+          "sent": true,
+          "hash": "efe5127c9005f3c8",
+          "key": "ht-2026-06-27-72",
+          "generated_at": "2026-06-27T14:50:59.042412-07:00",
+          "kickoff_utc": "2026-06-27T21:00:00Z"
         }
       ]
     }
@@ -6130,8 +6148,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+1'",
-          "ht": false,
+          "clock": "45'+3'",
+          "ht": true,
           "events": []
         },
         {
@@ -6150,8 +6168,8 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "45'+1'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -6234,8 +6252,8 @@
       "kickoff_utc": "2026-06-27T21:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+1'",
+      "status": "HT",
+      "clock": "45'+3'",
       "events": []
     },
     {
@@ -6247,8 +6265,8 @@
       "kickoff_utc": "2026-06-27T21:00:00Z",
       "hg": 1,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+1'",
+      "status": "HT",
+      "clock": "45'+4'",
       "events": [
         {
           "kind": "goal",
@@ -8816,8 +8834,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+1'",
-          "ht": false,
+          "clock": "45'+3'",
+          "ht": true,
           "events": []
         },
         {
@@ -8836,8 +8854,8 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "45'+1'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
