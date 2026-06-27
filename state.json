@@ -6148,7 +6148,7 @@
           "status": "live",
           "hg": 0,
           "ag": 2,
-          "clock": "76'",
+          "clock": "79'",
           "ht": false,
           "events": [
             {
@@ -6181,7 +6181,7 @@
           "status": "live",
           "hg": 1,
           "ag": 1,
-          "clock": "74'",
+          "clock": "78'",
           "ht": false,
           "events": [
             {
@@ -6189,6 +6189,12 @@
               "player": "Petar Sucic",
               "team": "Croatia",
               "minute": "31'"
+            },
+            {
+              "kind": "goal",
+              "player": "Derrick Luckassen",
+              "team": "Ghana",
+              "minute": "73'"
             }
           ]
         },
@@ -6266,7 +6272,7 @@
       "hg": 0,
       "ag": 2,
       "status": "LIVE",
-      "clock": "76'",
+      "clock": "79'",
       "events": [
         {
           "kind": "goal",
@@ -6292,13 +6298,19 @@
       "hg": 1,
       "ag": 1,
       "status": "LIVE",
-      "clock": "74'",
+      "clock": "78'",
       "events": [
         {
           "kind": "goal",
           "player": "Petar Sucic",
           "team": "Croatia",
           "minute": "31'"
+        },
+        {
+          "kind": "goal",
+          "player": "Derrick Luckassen",
+          "team": "Ghana",
+          "minute": "73'"
         }
       ]
     }
@@ -8860,7 +8872,7 @@
           "status": "live",
           "hg": 0,
           "ag": 2,
-          "clock": "76'",
+          "clock": "79'",
           "ht": false,
           "events": [
             {
@@ -8893,7 +8905,7 @@
           "status": "live",
           "hg": 1,
           "ag": 1,
-          "clock": "74'",
+          "clock": "78'",
           "ht": false,
           "events": [
             {
@@ -8901,6 +8913,12 @@
               "player": "Petar Sucic",
               "team": "Croatia",
               "minute": "31'"
+            },
+            {
+              "kind": "goal",
+              "player": "Derrick Luckassen",
+              "team": "Ghana",
+              "minute": "73'"
             }
           ]
         },
