@@ -5938,7 +5938,7 @@
           "status": "live",
           "hg": 1,
           "ag": 1,
-          "clock": "80'",
+          "clock": "84'",
           "ht": false,
           "events": [
             {
@@ -5969,9 +5969,9 @@
             "pick": "Belgium"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 3,
-          "clock": "82'",
+          "clock": "86'",
           "ht": false,
           "events": [
             {
@@ -5991,6 +5991,12 @@
               "player": "Kevin De Bruyne",
               "team": "Belgium",
               "minute": "66'"
+            },
+            {
+              "kind": "goal",
+              "player": "Elijah Just",
+              "team": "New Zealand",
+              "minute": "84'"
             }
           ]
         }
@@ -6008,7 +6014,7 @@
       "hg": 1,
       "ag": 1,
       "status": "LIVE",
-      "clock": "80'",
+      "clock": "84'",
       "events": [
         {
           "kind": "goal",
@@ -6031,10 +6037,10 @@
       "date": "2026-06-26",
       "venue": "Vancouver",
       "kickoff_utc": "2026-06-27T03:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 3,
       "status": "LIVE",
-      "clock": "82'",
+      "clock": "86'",
       "events": [
         {
           "kind": "goal",
@@ -6053,6 +6059,12 @@
           "player": "Kevin De Bruyne",
           "team": "Belgium",
           "minute": "66'"
+        },
+        {
+          "kind": "goal",
+          "player": "Elijah Just",
+          "team": "New Zealand",
+          "minute": "84'"
         }
       ]
     }
@@ -8521,7 +8533,7 @@
           "status": "live",
           "hg": 1,
           "ag": 1,
-          "clock": "80'",
+          "clock": "84'",
           "ht": false,
           "events": [
             {
@@ -8552,9 +8564,9 @@
             "pick": "Belgium"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 3,
-          "clock": "82'",
+          "clock": "86'",
           "ht": false,
           "events": [
             {
@@ -8574,6 +8586,12 @@
               "player": "Kevin De Bruyne",
               "team": "Belgium",
               "minute": "66'"
+            },
+            {
+              "kind": "goal",
+              "player": "Elijah Just",
+              "team": "New Zealand",
+              "minute": "84'"
             }
           ]
         }
