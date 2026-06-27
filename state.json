@@ -1472,6 +1472,15 @@
           "key": "ht-2026-06-26-42",
           "generated_at": "2026-06-26T20:55:25.280609-07:00",
           "kickoff_utc": "2026-06-27T03:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 26\n\nFull time:\nNew Zealand 1 - 5 Belgium\nVancouver, Canada\n  ⚽ 28' Leandro Trossard (Belgium)\n  ⚽ 50' Leandro Trossard (Belgium)\n  ⚽ 66' Kevin De Bruyne (Belgium)\n  ⚽ 84' Elijah Just (New Zealand)\n  ⚽ 86' Romelu Lukaku (Belgium)\n  ⚽ 90'+4' Alexis Saelemaekers (Belgium)\nOverall prediction: 36/65 (55.4%)\nPrediction ✓: Belgium",
+          "sent": true,
+          "hash": "b9381755f589d606",
+          "key": "pm-2026-06-26-42",
+          "generated_at": "2026-06-26T22:02:04.693618-07:00",
+          "kickoff_utc": "2026-06-27T03:00:00Z"
         }
       ]
     }
@@ -1683,6 +1692,14 @@
     ],
     "G": [
       {
+        "team": "Belgium",
+        "played": 3,
+        "points": 5,
+        "gd": 4,
+        "gf": 6,
+        "ga": 2
+      },
+      {
         "team": "Egypt",
         "played": 2,
         "points": 4,
@@ -1699,20 +1716,12 @@
         "ga": 2
       },
       {
-        "team": "Belgium",
-        "played": 2,
-        "points": 2,
-        "gd": 0,
-        "gf": 1,
-        "ga": 1
-      },
-      {
         "team": "New Zealand",
-        "played": 2,
+        "played": 3,
         "points": 1,
-        "gd": -2,
-        "gf": 3,
-        "ga": 5
+        "gd": -6,
+        "gf": 4,
+        "ga": 10
       }
     ],
     "H": [
@@ -1888,46 +1897,47 @@
   },
   "bracket": {
     "title_odds": {
-      "Germany": 0.0463,
-      "Spain": 0.1569,
-      "Senegal": 0.0158,
-      "Argentina": 0.246,
-      "Netherlands": 0.0348,
-      "England": 0.0465,
-      "Colombia": 0.0441,
-      "France": 0.1219,
-      "Morocco": 0.023,
-      "Croatia": 0.0271,
-      "Brazil": 0.0479,
-      "Belgium": 0.0135,
-      "Japan": 0.0284,
-      "Ecuador": 0.024,
-      "Paraguay": 0.0071,
-      "Portugal": 0.039,
-      "Iran": 0.0071,
-      "Switzerland": 0.0077,
-      "Canada": 0.0116,
-      "Mexico": 0.022,
-      "South Korea": 0.0026,
-      "Norway": 0.0065,
-      "Egypt": 0.0037,
-      "Austria": 0.0043,
-      "Ivory Coast": 0.0023,
-      "Australia": 0.0045,
+      "Switzerland": 0.0084,
+      "Colombia": 0.0425,
+      "Argentina": 0.2502,
+      "France": 0.1207,
+      "Spain": 0.1468,
+      "England": 0.046,
+      "Canada": 0.0113,
+      "Morocco": 0.0239,
+      "Brazil": 0.0492,
+      "Iran": 0.0047,
+      "Germany": 0.0407,
+      "Belgium": 0.0254,
+      "Mexico": 0.0196,
+      "Portugal": 0.0403,
+      "Netherlands": 0.0333,
+      "Ecuador": 0.0259,
+      "South Korea": 0.0032,
+      "Japan": 0.0288,
+      "Senegal": 0.0157,
+      "Egypt": 0.0034,
+      "Croatia": 0.031,
+      "Australia": 0.0043,
+      "Paraguay": 0.0066,
       "Algeria": 0.0033,
-      "Sweden": 0.0014,
-      "Cape Verde": 0.0003,
-      "Scotland": 0.0001,
-      "South Africa": 0.0003
+      "Norway": 0.0075,
+      "Sweden": 0.0012,
+      "Austria": 0.0028,
+      "Ivory Coast": 0.0025,
+      "South Africa": 0.0001,
+      "DR Congo": 0.0002,
+      "Ghana": 0.0002,
+      "Bosnia & Herzegovina": 0.0001,
+      "Cape Verde": 0.0002
     },
     "advancement": {
       "Bosnia & Herzegovina": 1.0,
       "Mexico": 1.0,
       "Paraguay": 1.0,
-      "Belgium": 0.9008,
-      "Croatia": 0.9204,
+      "Belgium": 1.0,
+      "Croatia": 0.9228,
       "Netherlands": 1.0,
-      "Jordan": 0.0047,
       "Japan": 1.0,
       "USA": 1.0,
       "Switzerland": 1.0,
@@ -1935,7 +1945,7 @@
       "England": 1.0,
       "Canada": 1.0,
       "South Africa": 1.0,
-      "Austria": 0.8688,
+      "DR Congo": 0.2619,
       "Cape Verde": 1.0,
       "Ivory Coast": 1.0,
       "Norway": 1.0,
@@ -1946,19 +1956,19 @@
       "Brazil": 1.0,
       "Portugal": 1.0,
       "Morocco": 1.0,
-      "Senegal": 0.9781,
+      "Algeria": 0.616,
       "Germany": 1.0,
       "Australia": 1.0,
       "Spain": 1.0,
+      "Senegal": 0.9737,
       "Sweden": 1.0,
-      "South Korea": 0.5915,
+      "South Korea": 0.6051,
       "France": 1.0,
-      "Iran": 0.6946,
-      "New Zealand": 0.0923,
-      "Algeria": 0.6213,
-      "DR Congo": 0.2654,
-      "Scotland": 0.0449,
-      "Panama": 0.0172
+      "Austria": 0.8613,
+      "Iran": 0.6901,
+      "Panama": 0.0164,
+      "Scotland": 0.0471,
+      "Jordan": 0.0056
     }
   },
   "season_ended": false,
@@ -3470,6 +3480,48 @@
           "player": "Agustín Canobbio",
           "team": "Uruguay",
           "minute": "90'+5'"
+        }
+      ]
+    },
+    "42": {
+      "home_goals": 1,
+      "away_goals": 5,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Leandro Trossard",
+          "team": "Belgium",
+          "minute": "28'"
+        },
+        {
+          "kind": "goal",
+          "player": "Leandro Trossard",
+          "team": "Belgium",
+          "minute": "50'"
+        },
+        {
+          "kind": "goal",
+          "player": "Kevin De Bruyne",
+          "team": "Belgium",
+          "minute": "66'"
+        },
+        {
+          "kind": "goal",
+          "player": "Elijah Just",
+          "team": "New Zealand",
+          "minute": "84'"
+        },
+        {
+          "kind": "goal",
+          "player": "Romelu Lukaku",
+          "team": "Belgium",
+          "minute": "86'"
+        },
+        {
+          "kind": "goal",
+          "player": "Alexis Saelemaekers",
+          "team": "Belgium",
+          "minute": "90'+4'"
         }
       ]
     }
@@ -5937,8 +5989,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 2,
-          "clock": "90'+4'",
+          "ag": 1,
+          "clock": "90'+7'",
           "ht": false,
           "events": [
             {
@@ -5952,12 +6004,6 @@
               "player": "Ramin Rezaeian",
               "team": "Iran",
               "minute": "14'"
-            },
-            {
-              "kind": "goal",
-              "player": "Shoja Khalilzadeh",
-              "team": "Iran",
-              "minute": "90'+3'"
             }
           ]
         },
@@ -5974,11 +6020,9 @@
             "away": 0.7254386784216105,
             "pick": "Belgium"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 5,
-          "clock": "90'+6'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -6016,7 +6060,8 @@
               "team": "Belgium",
               "minute": "90'+4'"
             }
-          ]
+          ],
+          "hit": true
         }
       ]
     }
@@ -6030,9 +6075,9 @@
       "venue": "Seattle",
       "kickoff_utc": "2026-06-27T03:00:00Z",
       "hg": 1,
-      "ag": 2,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "90'+4'",
+      "clock": "90'+7'",
       "events": [
         {
           "kind": "goal",
@@ -6045,62 +6090,6 @@
           "player": "Ramin Rezaeian",
           "team": "Iran",
           "minute": "14'"
-        },
-        {
-          "kind": "goal",
-          "player": "Shoja Khalilzadeh",
-          "team": "Iran",
-          "minute": "90'+3'"
-        }
-      ]
-    },
-    {
-      "id": "42",
-      "home": "New Zealand",
-      "away": "Belgium",
-      "date": "2026-06-26",
-      "venue": "Vancouver",
-      "kickoff_utc": "2026-06-27T03:00:00Z",
-      "hg": 1,
-      "ag": 5,
-      "status": "LIVE",
-      "clock": "90'+6'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Leandro Trossard",
-          "team": "Belgium",
-          "minute": "28'"
-        },
-        {
-          "kind": "goal",
-          "player": "Leandro Trossard",
-          "team": "Belgium",
-          "minute": "50'"
-        },
-        {
-          "kind": "goal",
-          "player": "Kevin De Bruyne",
-          "team": "Belgium",
-          "minute": "66'"
-        },
-        {
-          "kind": "goal",
-          "player": "Elijah Just",
-          "team": "New Zealand",
-          "minute": "84'"
-        },
-        {
-          "kind": "goal",
-          "player": "Romelu Lukaku",
-          "team": "Belgium",
-          "minute": "86'"
-        },
-        {
-          "kind": "goal",
-          "player": "Alexis Saelemaekers",
-          "team": "Belgium",
-          "minute": "90'+4'"
         }
       ]
     }
@@ -8568,8 +8557,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 2,
-          "clock": "90'+4'",
+          "ag": 1,
+          "clock": "90'+7'",
           "ht": false,
           "events": [
             {
@@ -8583,12 +8572,6 @@
               "player": "Ramin Rezaeian",
               "team": "Iran",
               "minute": "14'"
-            },
-            {
-              "kind": "goal",
-              "player": "Shoja Khalilzadeh",
-              "team": "Iran",
-              "minute": "90'+3'"
             }
           ]
         },
@@ -8605,11 +8588,9 @@
             "away": 0.7254386784216105,
             "pick": "Belgium"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 5,
-          "clock": "90'+6'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -8647,7 +8628,8 @@
               "team": "Belgium",
               "minute": "90'+4'"
             }
-          ]
+          ],
+          "hit": true
         }
       ]
     },
