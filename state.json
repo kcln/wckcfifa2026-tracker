@@ -1540,6 +1540,15 @@
           "key": "pm-2026-06-27-71",
           "generated_at": "2026-06-27T15:58:53.263934-07:00",
           "kickoff_utc": "2026-06-27T21:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 27\n\nFull time:\nCroatia 2 - 1 Ghana\nPhiladelphia, USA\n  ⚽ 31' Petar Sucic (Croatia)\n  ⚽ 73' Derrick Luckassen (Ghana)\n  ⚽ 83' Nikola Vlasic (Croatia)\nOverall prediction: 38/68 (55.9%)\nPrediction ✓: Croatia",
+          "sent": true,
+          "hash": "adf4028525aa5dbb",
+          "key": "pm-2026-06-27-72",
+          "generated_at": "2026-06-27T16:02:12.608743-07:00",
+          "kickoff_utc": "2026-06-27T21:00:00Z"
         }
       ]
     }
@@ -1929,20 +1938,20 @@
         "ga": 2
       },
       {
-        "team": "Ghana",
-        "played": 2,
-        "points": 4,
-        "gd": 1,
-        "gf": 1,
-        "ga": 0
+        "team": "Croatia",
+        "played": 3,
+        "points": 6,
+        "gd": 0,
+        "gf": 5,
+        "ga": 5
       },
       {
-        "team": "Croatia",
-        "played": 2,
-        "points": 3,
-        "gd": -1,
-        "gf": 3,
-        "ga": 4
+        "team": "Ghana",
+        "played": 3,
+        "points": 4,
+        "gd": 0,
+        "gf": 2,
+        "ga": 2
       },
       {
         "team": "Panama",
@@ -1956,36 +1965,38 @@
   },
   "bracket": {
     "title_odds": {
+      "France": 0.1142,
+      "Germany": 0.0461,
       "Argentina": 0.2409,
-      "Croatia": 0.0221,
-      "France": 0.1196,
-      "Portugal": 0.0393,
-      "Germany": 0.0437,
-      "Japan": 0.0292,
-      "Spain": 0.1471,
-      "Netherlands": 0.0336,
-      "England": 0.0617,
-      "Belgium": 0.0273,
-      "Brazil": 0.0471,
-      "Colombia": 0.0449,
-      "Canada": 0.0091,
-      "Ecuador": 0.0209,
-      "Senegal": 0.0163,
-      "Australia": 0.0033,
-      "Iran": 0.0054,
-      "Morocco": 0.0268,
-      "Mexico": 0.0231,
-      "Paraguay": 0.0083,
-      "Switzerland": 0.0098,
-      "Norway": 0.0074,
-      "South Korea": 0.0015,
-      "Austria": 0.0037,
-      "Ivory Coast": 0.0018,
-      "Egypt": 0.003,
-      "Algeria": 0.0018,
-      "Sweden": 0.0011,
-      "South Africa": 0.0001,
-      "Cape Verde": 0.0001
+      "Spain": 0.1428,
+      "Japan": 0.0244,
+      "Brazil": 0.0442,
+      "Ecuador": 0.0232,
+      "Canada": 0.0121,
+      "Egypt": 0.0029,
+      "Colombia": 0.045,
+      "Portugal": 0.0385,
+      "England": 0.0659,
+      "Belgium": 0.0269,
+      "Senegal": 0.0195,
+      "Algeria": 0.0023,
+      "Paraguay": 0.009,
+      "Croatia": 0.0247,
+      "Netherlands": 0.0355,
+      "Switzerland": 0.0113,
+      "Australia": 0.0039,
+      "Morocco": 0.027,
+      "Mexico": 0.0188,
+      "Austria": 0.0031,
+      "Norway": 0.0068,
+      "Ivory Coast": 0.0022,
+      "South Korea": 0.0022,
+      "Iran": 0.0051,
+      "Sweden": 0.0007,
+      "Cape Verde": 0.0004,
+      "DR Congo": 0.0001,
+      "South Africa": 0.0002,
+      "Bosnia & Herzegovina": 0.0001
     },
     "advancement": {
       "Sweden": 1.0,
@@ -1994,7 +2005,7 @@
       "Egypt": 1.0,
       "Brazil": 1.0,
       "Mexico": 1.0,
-      "South Korea": 0.4806,
+      "South Korea": 0.4214,
       "England": 1.0,
       "Colombia": 1.0,
       "Portugal": 1.0,
@@ -2007,11 +2018,11 @@
       "Australia": 1.0,
       "Norway": 1.0,
       "Netherlands": 1.0,
-      "Algeria": 0.5715,
+      "Algeria": 0.5696,
       "Canada": 1.0,
-      "Croatia": 0.9115,
+      "Croatia": 1.0,
       "Ghana": 1.0,
-      "Iran": 0.9404,
+      "Iran": 0.9303,
       "Ecuador": 1.0,
       "Spain": 1.0,
       "Ivory Coast": 1.0,
@@ -2021,30 +2032,36 @@
       "Belgium": 1.0,
       "Bosnia & Herzegovina": 1.0,
       "DR Congo": 0.2623,
-      "Austria": 0.83,
-      "Jordan": 0.0037
+      "Austria": 0.8131,
+      "Jordan": 0.0033
     }
   },
   "season_ended": false,
   "last_result": {
-    "home": "Panama",
-    "away": "England",
-    "home_goals": 0,
-    "away_goals": 2,
+    "home": "Croatia",
+    "away": "Ghana",
+    "home_goals": 2,
+    "away_goals": 1,
     "date": "2026-06-27",
-    "venue": "New York/New Jersey (East Rutherford)",
+    "venue": "Philadelphia",
     "events": [
       {
         "kind": "goal",
-        "player": "Jude Bellingham",
-        "team": "England",
-        "minute": "62'"
+        "player": "Petar Sucic",
+        "team": "Croatia",
+        "minute": "31'"
       },
       {
         "kind": "goal",
-        "player": "Harry Kane",
-        "team": "England",
-        "minute": "67'"
+        "player": "Derrick Luckassen",
+        "team": "Ghana",
+        "minute": "73'"
+      },
+      {
+        "kind": "goal",
+        "player": "Nikola Vlasic",
+        "team": "Croatia",
+        "minute": "83'"
       }
     ]
   },
@@ -3588,6 +3605,30 @@
           "player": "Harry Kane",
           "team": "England",
           "minute": "67'"
+        }
+      ]
+    },
+    "72": {
+      "home_goals": 2,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Petar Sucic",
+          "team": "Croatia",
+          "minute": "31'"
+        },
+        {
+          "kind": "goal",
+          "player": "Derrick Luckassen",
+          "team": "Ghana",
+          "minute": "73'"
+        },
+        {
+          "kind": "goal",
+          "player": "Nikola Vlasic",
+          "team": "Croatia",
+          "minute": "83'"
         }
       ]
     }
@@ -6178,11 +6219,9 @@
             "away": 0.12912652663309385,
             "pick": "Croatia"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 1,
-          "clock": "90'+7'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -6202,7 +6241,8 @@
               "team": "Croatia",
               "minute": "83'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "65",
@@ -6267,40 +6307,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "72",
-      "home": "Croatia",
-      "away": "Ghana",
-      "date": "2026-06-27",
-      "venue": "Philadelphia",
-      "kickoff_utc": "2026-06-27T21:00:00Z",
-      "hg": 2,
-      "ag": 1,
-      "status": "LIVE",
-      "clock": "90'+7'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Petar Sucic",
-          "team": "Croatia",
-          "minute": "31'"
-        },
-        {
-          "kind": "goal",
-          "player": "Derrick Luckassen",
-          "team": "Ghana",
-          "minute": "73'"
-        },
-        {
-          "kind": "goal",
-          "player": "Nikola Vlasic",
-          "team": "Croatia",
-          "minute": "83'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -8887,11 +8894,9 @@
             "away": 0.12912652663309385,
             "pick": "Croatia"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 1,
-          "clock": "90'+7'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -8911,7 +8916,8 @@
               "team": "Croatia",
               "minute": "83'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "65",
