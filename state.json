@@ -6147,8 +6147,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "66'",
+          "ag": 2,
+          "clock": "69'",
           "ht": false,
           "events": [
             {
@@ -6156,6 +6156,12 @@
               "player": "Jude Bellingham",
               "team": "England",
               "minute": "62'"
+            },
+            {
+              "kind": "goal",
+              "player": "Harry Kane",
+              "team": "England",
+              "minute": "67'"
             }
           ]
         },
@@ -6175,7 +6181,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "63'",
+          "clock": "67'",
           "ht": false,
           "events": [
             {
@@ -6258,15 +6264,21 @@
       "venue": "New York/New Jersey (East Rutherford)",
       "kickoff_utc": "2026-06-27T21:00:00Z",
       "hg": 0,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "66'",
+      "clock": "69'",
       "events": [
         {
           "kind": "goal",
           "player": "Jude Bellingham",
           "team": "England",
           "minute": "62'"
+        },
+        {
+          "kind": "goal",
+          "player": "Harry Kane",
+          "team": "England",
+          "minute": "67'"
         }
       ]
     },
@@ -6280,7 +6292,7 @@
       "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "63'",
+      "clock": "67'",
       "events": [
         {
           "kind": "goal",
@@ -8847,8 +8859,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "66'",
+          "ag": 2,
+          "clock": "69'",
           "ht": false,
           "events": [
             {
@@ -8856,6 +8868,12 @@
               "player": "Jude Bellingham",
               "team": "England",
               "minute": "62'"
+            },
+            {
+              "kind": "goal",
+              "player": "Harry Kane",
+              "team": "England",
+              "minute": "67'"
             }
           ]
         },
@@ -8875,7 +8893,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "63'",
+          "clock": "67'",
           "ht": false,
           "events": [
             {
