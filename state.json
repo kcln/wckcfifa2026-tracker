@@ -5815,7 +5815,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "41'",
+          "clock": "44'",
           "ht": false,
           "events": []
         },
@@ -5834,10 +5834,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "41'",
+          "ag": 1,
+          "clock": "45'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Álex Baena",
+              "team": "Spain",
+              "minute": "42'"
+            }
+          ]
         },
         {
           "id": "41",
@@ -5883,7 +5890,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "41'",
+      "clock": "44'",
       "events": []
     },
     {
@@ -5894,10 +5901,17 @@
       "venue": "Guadalajara (Zapopan)",
       "kickoff_utc": "2026-06-27T00:00:00Z",
       "hg": 0,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "41'",
-      "events": []
+      "clock": "45'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Álex Baena",
+          "team": "Spain",
+          "minute": "42'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -8313,7 +8327,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "41'",
+          "clock": "44'",
           "ht": false,
           "events": []
         },
@@ -8332,10 +8346,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "41'",
+          "ag": 1,
+          "clock": "45'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Álex Baena",
+              "team": "Spain",
+              "minute": "42'"
+            }
+          ]
         },
         {
           "id": "41",
