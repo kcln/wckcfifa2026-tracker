@@ -6148,7 +6148,7 @@
           "status": "live",
           "hg": 0,
           "ag": 2,
-          "clock": "83'",
+          "clock": "86'",
           "ht": false,
           "events": [
             {
@@ -6179,9 +6179,9 @@
             "pick": "Croatia"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "81'",
+          "clock": "84'",
           "ht": false,
           "events": [
             {
@@ -6195,6 +6195,12 @@
               "player": "Derrick Luckassen",
               "team": "Ghana",
               "minute": "73'"
+            },
+            {
+              "kind": "goal",
+              "player": "Nikola Vlasic",
+              "team": "Croatia",
+              "minute": "83'"
             }
           ]
         },
@@ -6272,7 +6278,7 @@
       "hg": 0,
       "ag": 2,
       "status": "LIVE",
-      "clock": "83'",
+      "clock": "86'",
       "events": [
         {
           "kind": "goal",
@@ -6295,10 +6301,10 @@
       "date": "2026-06-27",
       "venue": "Philadelphia",
       "kickoff_utc": "2026-06-27T21:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 1,
       "status": "LIVE",
-      "clock": "81'",
+      "clock": "84'",
       "events": [
         {
           "kind": "goal",
@@ -6311,6 +6317,12 @@
           "player": "Derrick Luckassen",
           "team": "Ghana",
           "minute": "73'"
+        },
+        {
+          "kind": "goal",
+          "player": "Nikola Vlasic",
+          "team": "Croatia",
+          "minute": "83'"
         }
       ]
     }
@@ -8872,7 +8884,7 @@
           "status": "live",
           "hg": 0,
           "ag": 2,
-          "clock": "83'",
+          "clock": "86'",
           "ht": false,
           "events": [
             {
@@ -8903,9 +8915,9 @@
             "pick": "Croatia"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "81'",
+          "clock": "84'",
           "ht": false,
           "events": [
             {
@@ -8919,6 +8931,12 @@
               "player": "Derrick Luckassen",
               "team": "Ghana",
               "minute": "73'"
+            },
+            {
+              "kind": "goal",
+              "player": "Nikola Vlasic",
+              "team": "Croatia",
+              "minute": "83'"
             }
           ]
         },
