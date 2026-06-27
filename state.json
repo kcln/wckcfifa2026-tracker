@@ -1418,6 +1418,15 @@
           "key": "pm-2026-06-26-54",
           "generated_at": "2026-06-26T14:05:04.795351-07:00",
           "kickoff_utc": "2026-06-26T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 26\n\nHalf-time:\nCape Verde 0 - 0 Saudi Arabia\nHouston, USA\nPrediction: Cape Verde",
+          "sent": true,
+          "hash": "61df72b23dfe1822",
+          "key": "ht-2026-06-26-47",
+          "generated_at": "2026-06-26T17:53:34.891673-07:00",
+          "kickoff_utc": "2026-06-27T00:00:00Z"
         }
       ]
     }
@@ -5815,8 +5824,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+2'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": []
         },
         {
@@ -5835,7 +5844,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+3'",
+          "clock": "45'+7'",
           "ht": false,
           "events": [
             {
@@ -5889,8 +5898,8 @@
       "kickoff_utc": "2026-06-27T00:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+2'",
+      "status": "HT",
+      "clock": "45'+6'",
       "events": []
     },
     {
@@ -5903,7 +5912,7 @@
       "hg": 0,
       "ag": 1,
       "status": "LIVE",
-      "clock": "45'+3'",
+      "clock": "45'+7'",
       "events": [
         {
           "kind": "goal",
@@ -8327,8 +8336,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+2'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": []
         },
         {
@@ -8347,7 +8356,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+3'",
+          "clock": "45'+7'",
           "ht": false,
           "events": [
             {
