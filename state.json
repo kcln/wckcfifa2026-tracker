@@ -6127,7 +6127,12 @@
             "away": 0.5928868300561004,
             "pick": "England"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "72",
@@ -6142,7 +6147,12 @@
             "away": 0.12912652663309385,
             "pick": "Croatia"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "65",
@@ -6207,7 +6217,34 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "71",
+      "home": "Panama",
+      "away": "England",
+      "date": "2026-06-27",
+      "venue": "New York/New Jersey (East Rutherford)",
+      "kickoff_utc": "2026-06-27T21:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    },
+    {
+      "id": "72",
+      "home": "Croatia",
+      "away": "Ghana",
+      "date": "2026-06-27",
+      "venue": "Philadelphia",
+      "kickoff_utc": "2026-06-27T21:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -8762,7 +8799,12 @@
             "away": 0.5928868300561004,
             "pick": "England"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "72",
@@ -8777,7 +8819,12 @@
             "away": 0.12912652663309385,
             "pick": "Croatia"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "65",
