@@ -5938,7 +5938,7 @@
           "status": "live",
           "hg": 1,
           "ag": 1,
-          "clock": "49'",
+          "clock": "52'",
           "ht": false,
           "events": [
             {
@@ -5970,8 +5970,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "50'",
+          "ag": 2,
+          "clock": "54'",
           "ht": false,
           "events": [
             {
@@ -5979,6 +5979,12 @@
               "player": "Leandro Trossard",
               "team": "Belgium",
               "minute": "28'"
+            },
+            {
+              "kind": "goal",
+              "player": "Leandro Trossard",
+              "team": "Belgium",
+              "minute": "50'"
             }
           ]
         }
@@ -5996,7 +6002,7 @@
       "hg": 1,
       "ag": 1,
       "status": "LIVE",
-      "clock": "49'",
+      "clock": "52'",
       "events": [
         {
           "kind": "goal",
@@ -6020,15 +6026,21 @@
       "venue": "Vancouver",
       "kickoff_utc": "2026-06-27T03:00:00Z",
       "hg": 0,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "50'",
+      "clock": "54'",
       "events": [
         {
           "kind": "goal",
           "player": "Leandro Trossard",
           "team": "Belgium",
           "minute": "28'"
+        },
+        {
+          "kind": "goal",
+          "player": "Leandro Trossard",
+          "team": "Belgium",
+          "minute": "50'"
         }
       ]
     }
@@ -8497,7 +8509,7 @@
           "status": "live",
           "hg": 1,
           "ag": 1,
-          "clock": "49'",
+          "clock": "52'",
           "ht": false,
           "events": [
             {
@@ -8529,8 +8541,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "50'",
+          "ag": 2,
+          "clock": "54'",
           "ht": false,
           "events": [
             {
@@ -8538,6 +8550,12 @@
               "player": "Leandro Trossard",
               "team": "Belgium",
               "minute": "28'"
+            },
+            {
+              "kind": "goal",
+              "player": "Leandro Trossard",
+              "team": "Belgium",
+              "minute": "50'"
             }
           ]
         }
