@@ -1436,6 +1436,24 @@
           "key": "ht-2026-06-26-48",
           "generated_at": "2026-06-26T17:57:09.805558-07:00",
           "kickoff_utc": "2026-06-27T00:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 26\n\nFull time:\nCape Verde 0 - 0 Saudi Arabia\nHouston, USA\nOverall prediction: 35/64 (54.7%)\nPrediction ✗: Cape Verde",
+          "sent": true,
+          "hash": "cbe7dd09e6e6dd1a",
+          "key": "pm-2026-06-26-47",
+          "generated_at": "2026-06-26T19:03:20.851337-07:00",
+          "kickoff_utc": "2026-06-27T00:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nFriday, June 26\n\nFull time:\nUruguay 0 - 1 Spain\nGuadalajara (Zapopan), Mexico\n  ⚽ 42' Álex Baena (Spain)\n  🟥 90'+5' Agustín Canobbio (Uruguay)\nOverall prediction: 35/64 (54.7%)\nPrediction ✓: Spain",
+          "sent": true,
+          "hash": "f9340c78a4a7df3d",
+          "key": "pm-2026-06-26-48",
+          "generated_at": "2026-06-26T19:03:20.854214-07:00",
+          "kickoff_utc": "2026-06-27T00:00:00Z"
         }
       ]
     }
@@ -1682,32 +1700,32 @@
     "H": [
       {
         "team": "Spain",
-        "played": 2,
-        "points": 4,
-        "gd": 4,
-        "gf": 4,
+        "played": 3,
+        "points": 7,
+        "gd": 5,
+        "gf": 5,
         "ga": 0
       },
       {
-        "team": "Uruguay",
-        "played": 2,
-        "points": 2,
-        "gd": 0,
-        "gf": 3,
-        "ga": 3
-      },
-      {
         "team": "Cape Verde",
-        "played": 2,
-        "points": 2,
+        "played": 3,
+        "points": 3,
         "gd": 0,
         "gf": 2,
         "ga": 2
       },
       {
+        "team": "Uruguay",
+        "played": 3,
+        "points": 2,
+        "gd": -1,
+        "gf": 3,
+        "ga": 4
+      },
+      {
         "team": "Saudi Arabia",
-        "played": 2,
-        "points": 1,
+        "played": 3,
+        "points": 2,
         "gd": -4,
         "gf": 1,
         "ga": 5
@@ -1852,57 +1870,55 @@
   },
   "bracket": {
     "title_odds": {
-      "France": 0.121,
-      "England": 0.0515,
-      "Argentina": 0.2312,
-      "Senegal": 0.018,
-      "Germany": 0.0431,
-      "Canada": 0.0091,
-      "Colombia": 0.0446,
-      "Spain": 0.1518,
-      "Netherlands": 0.0292,
-      "Paraguay": 0.0099,
-      "Ivory Coast": 0.0025,
-      "Croatia": 0.0293,
-      "Japan": 0.0287,
-      "Mexico": 0.0218,
-      "Brazil": 0.0481,
-      "Ecuador": 0.0254,
-      "Portugal": 0.0397,
-      "Iran": 0.0076,
-      "Austria": 0.0042,
-      "Belgium": 0.0162,
-      "Morocco": 0.0265,
-      "Uruguay": 0.0095,
-      "Algeria": 0.0037,
-      "Norway": 0.0072,
-      "Sweden": 0.0009,
-      "Switzerland": 0.0109,
-      "Australia": 0.0032,
-      "South Korea": 0.0018,
-      "Egypt": 0.0028,
-      "Cape Verde": 0.0001,
-      "South Africa": 0.0003,
-      "DR Congo": 0.0001,
-      "Bosnia & Herzegovina": 0.0001
+      "Germany": 0.0463,
+      "Spain": 0.1569,
+      "Senegal": 0.0158,
+      "Argentina": 0.246,
+      "Netherlands": 0.0348,
+      "England": 0.0465,
+      "Colombia": 0.0441,
+      "France": 0.1219,
+      "Morocco": 0.023,
+      "Croatia": 0.0271,
+      "Brazil": 0.0479,
+      "Belgium": 0.0135,
+      "Japan": 0.0284,
+      "Ecuador": 0.024,
+      "Paraguay": 0.0071,
+      "Portugal": 0.039,
+      "Iran": 0.0071,
+      "Switzerland": 0.0077,
+      "Canada": 0.0116,
+      "Mexico": 0.022,
+      "South Korea": 0.0026,
+      "Norway": 0.0065,
+      "Egypt": 0.0037,
+      "Austria": 0.0043,
+      "Ivory Coast": 0.0023,
+      "Australia": 0.0045,
+      "Algeria": 0.0033,
+      "Sweden": 0.0014,
+      "Cape Verde": 0.0003,
+      "Scotland": 0.0001,
+      "South Africa": 0.0003
     },
     "advancement": {
       "Bosnia & Herzegovina": 1.0,
-      "Spain": 1.0,
       "Mexico": 1.0,
-      "Paraguay": 0.9984,
-      "Belgium": 0.8825,
-      "Croatia": 0.9082,
+      "Paraguay": 1.0,
+      "Belgium": 0.9008,
+      "Croatia": 0.9204,
       "Netherlands": 1.0,
+      "Jordan": 0.0047,
       "Japan": 1.0,
       "USA": 1.0,
       "Switzerland": 1.0,
       "Egypt": 1.0,
-      "Uruguay": 0.3431,
       "England": 1.0,
       "Canada": 1.0,
       "South Africa": 1.0,
-      "Saudi Arabia": 0.2536,
+      "Austria": 0.8688,
+      "Cape Verde": 1.0,
       "Ivory Coast": 1.0,
       "Norway": 1.0,
       "Ecuador": 1.0,
@@ -1910,23 +1926,21 @@
       "Argentina": 1.0,
       "Colombia": 1.0,
       "Brazil": 1.0,
-      "Morocco": 1.0,
       "Portugal": 1.0,
-      "Senegal": 0.9558,
+      "Morocco": 1.0,
+      "Senegal": 0.9781,
       "Germany": 1.0,
       "Australia": 1.0,
-      "Algeria": 0.5978,
+      "Spain": 1.0,
       "Sweden": 1.0,
-      "South Korea": 0.4425,
+      "South Korea": 0.5915,
       "France": 1.0,
-      "Iran": 0.6618,
-      "Austria": 0.8252,
+      "Iran": 0.6946,
       "New Zealand": 0.0923,
-      "Cape Verde": 0.7284,
-      "DR Congo": 0.2622,
-      "Panama": 0.0144,
-      "Scotland": 0.0302,
-      "Jordan": 0.0036
+      "Algeria": 0.6213,
+      "DR Congo": 0.2654,
+      "Scotland": 0.0449,
+      "Panama": 0.0172
     }
   },
   "season_ended": false,
@@ -3416,6 +3430,28 @@
           "player": "Iliman Ndiaye",
           "team": "Senegal",
           "minute": "82'"
+        }
+      ]
+    },
+    "47": {
+      "home_goals": 0,
+      "away_goals": 0
+    },
+    "48": {
+      "home_goals": 0,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Álex Baena",
+          "team": "Spain",
+          "minute": "42'"
+        },
+        {
+          "kind": "red",
+          "player": "Agustín Canobbio",
+          "team": "Uruguay",
+          "minute": "90'+5'"
         }
       ]
     }
@@ -5830,12 +5866,11 @@
             "away": 0.2589463425070412,
             "pick": "Cape Verde"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 0,
-          "clock": "90'+5'",
-          "ht": false,
-          "events": []
+          "events": [],
+          "hit": false
         },
         {
           "id": "48",
@@ -5850,11 +5885,9 @@
             "away": 0.6282022467616244,
             "pick": "Spain"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 1,
-          "clock": "90'+5'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -5868,7 +5901,8 @@
               "team": "Uruguay",
               "minute": "90'+5'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "41",
@@ -5903,47 +5937,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "47",
-      "home": "Cape Verde",
-      "away": "Saudi Arabia",
-      "date": "2026-06-26",
-      "venue": "Houston",
-      "kickoff_utc": "2026-06-27T00:00:00Z",
-      "hg": 0,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "90'+5'",
-      "events": []
-    },
-    {
-      "id": "48",
-      "home": "Uruguay",
-      "away": "Spain",
-      "date": "2026-06-26",
-      "venue": "Guadalajara (Zapopan)",
-      "kickoff_utc": "2026-06-27T00:00:00Z",
-      "hg": 0,
-      "ag": 1,
-      "status": "LIVE",
-      "clock": "90'+5'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Álex Baena",
-          "team": "Spain",
-          "minute": "42'"
-        },
-        {
-          "kind": "red",
-          "player": "Agustín Canobbio",
-          "team": "Uruguay",
-          "minute": "90'+5'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -8354,12 +8348,11 @@
             "away": 0.2589463425070412,
             "pick": "Cape Verde"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 0,
-          "clock": "90'+5'",
-          "ht": false,
-          "events": []
+          "events": [],
+          "hit": false
         },
         {
           "id": "48",
@@ -8374,11 +8367,9 @@
             "away": 0.6282022467616244,
             "pick": "Spain"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 1,
-          "clock": "90'+5'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -8392,7 +8383,8 @@
               "team": "Uruguay",
               "minute": "90'+5'"
             }
-          ]
+          ],
+          "hit": true
         },
         {
           "id": "41",
