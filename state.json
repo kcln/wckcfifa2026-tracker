@@ -5833,7 +5833,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "90'+2'",
+          "clock": "90'+5'",
           "ht": false,
           "events": []
         },
@@ -5853,7 +5853,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "90'+1'",
+          "clock": "90'+5'",
           "ht": false,
           "events": [
             {
@@ -5861,6 +5861,12 @@
               "player": "Álex Baena",
               "team": "Spain",
               "minute": "42'"
+            },
+            {
+              "kind": "red",
+              "player": "Agustín Canobbio",
+              "team": "Uruguay",
+              "minute": "90'+5'"
             }
           ]
         },
@@ -5908,7 +5914,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "90'+2'",
+      "clock": "90'+5'",
       "events": []
     },
     {
@@ -5921,13 +5927,19 @@
       "hg": 0,
       "ag": 1,
       "status": "LIVE",
-      "clock": "90'+1'",
+      "clock": "90'+5'",
       "events": [
         {
           "kind": "goal",
           "player": "Álex Baena",
           "team": "Spain",
           "minute": "42'"
+        },
+        {
+          "kind": "red",
+          "player": "Agustín Canobbio",
+          "team": "Uruguay",
+          "minute": "90'+5'"
         }
       ]
     }
@@ -8345,7 +8357,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "90'+2'",
+          "clock": "90'+5'",
           "ht": false,
           "events": []
         },
@@ -8365,7 +8377,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "90'+1'",
+          "clock": "90'+5'",
           "ht": false,
           "events": [
             {
@@ -8373,6 +8385,12 @@
               "player": "Álex Baena",
               "team": "Spain",
               "minute": "42'"
+            },
+            {
+              "kind": "red",
+              "player": "Agustín Canobbio",
+              "team": "Uruguay",
+              "minute": "90'+5'"
             }
           ]
         },
