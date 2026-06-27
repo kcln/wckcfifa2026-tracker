@@ -5938,7 +5938,7 @@
           "status": "live",
           "hg": 1,
           "ag": 1,
-          "clock": "62'",
+          "clock": "66'",
           "ht": false,
           "events": [
             {
@@ -5970,8 +5970,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 2,
-          "clock": "65'",
+          "ag": 3,
+          "clock": "68'",
           "ht": false,
           "events": [
             {
@@ -5985,6 +5985,12 @@
               "player": "Leandro Trossard",
               "team": "Belgium",
               "minute": "50'"
+            },
+            {
+              "kind": "goal",
+              "player": "Kevin De Bruyne",
+              "team": "Belgium",
+              "minute": "66'"
             }
           ]
         }
@@ -6002,7 +6008,7 @@
       "hg": 1,
       "ag": 1,
       "status": "LIVE",
-      "clock": "62'",
+      "clock": "66'",
       "events": [
         {
           "kind": "goal",
@@ -6026,9 +6032,9 @@
       "venue": "Vancouver",
       "kickoff_utc": "2026-06-27T03:00:00Z",
       "hg": 0,
-      "ag": 2,
+      "ag": 3,
       "status": "LIVE",
-      "clock": "65'",
+      "clock": "68'",
       "events": [
         {
           "kind": "goal",
@@ -6041,6 +6047,12 @@
           "player": "Leandro Trossard",
           "team": "Belgium",
           "minute": "50'"
+        },
+        {
+          "kind": "goal",
+          "player": "Kevin De Bruyne",
+          "team": "Belgium",
+          "minute": "66'"
         }
       ]
     }
@@ -8509,7 +8521,7 @@
           "status": "live",
           "hg": 1,
           "ag": 1,
-          "clock": "62'",
+          "clock": "66'",
           "ht": false,
           "events": [
             {
@@ -8541,8 +8553,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 2,
-          "clock": "65'",
+          "ag": 3,
+          "clock": "68'",
           "ht": false,
           "events": [
             {
@@ -8556,6 +8568,12 @@
               "player": "Leandro Trossard",
               "team": "Belgium",
               "minute": "50'"
+            },
+            {
+              "kind": "goal",
+              "player": "Kevin De Bruyne",
+              "team": "Belgium",
+              "minute": "66'"
             }
           ]
         }
