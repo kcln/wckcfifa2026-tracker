@@ -6387,7 +6387,12 @@
             "away": 0.4310193553913809,
             "pick": "Austria"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "60",
@@ -6405,7 +6410,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "1'",
+          "clock": "4'",
           "ht": false,
           "events": []
         }
@@ -6413,6 +6418,19 @@
     }
   ],
   "live": [
+    {
+      "id": "59",
+      "home": "Algeria",
+      "away": "Austria",
+      "date": "2026-06-27",
+      "venue": "Kansas City",
+      "kickoff_utc": "2026-06-28T02:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "4'",
+      "events": []
+    },
     {
       "id": "60",
       "home": "Jordan",
@@ -6423,7 +6441,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "1'",
+      "clock": "4'",
       "events": []
     }
   ],
@@ -9114,7 +9132,12 @@
             "away": 0.4310193553913809,
             "pick": "Austria"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "60",
@@ -9132,7 +9155,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "1'",
+          "clock": "4'",
           "ht": false,
           "events": []
         }
