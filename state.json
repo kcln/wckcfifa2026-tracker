@@ -1585,6 +1585,15 @@
           "key": "pm-2026-06-27-66",
           "generated_at": "2026-06-27T18:35:26.773477-07:00",
           "kickoff_utc": "2026-06-27T23:30:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 27\n\nHalf-time:\nAlgeria 1 - 1 Austria\nKansas City, USA\n  ⚽ 28' Marko Arnautovic (Austria)\n  ⚽ 45' Rafik Belghali (Algeria)\nPrediction: Austria",
+          "sent": true,
+          "hash": "744985007c0f161f",
+          "key": "ht-2026-06-27-59",
+          "generated_at": "2026-06-27T19:50:20.360516-07:00",
+          "kickoff_utc": "2026-06-28T02:00:00Z"
         }
       ]
     }
@@ -6390,8 +6399,8 @@
           "status": "live",
           "hg": 1,
           "ag": 1,
-          "clock": "45'+1'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -6423,7 +6432,7 @@
           "status": "live",
           "hg": 0,
           "ag": 2,
-          "clock": "45'+1'",
+          "clock": "45'+5'",
           "ht": false,
           "events": [
             {
@@ -6453,8 +6462,8 @@
       "kickoff_utc": "2026-06-28T02:00:00Z",
       "hg": 1,
       "ag": 1,
-      "status": "LIVE",
-      "clock": "45'+1'",
+      "status": "HT",
+      "clock": "45'+4'",
       "events": [
         {
           "kind": "goal",
@@ -6480,7 +6489,7 @@
       "hg": 0,
       "ag": 2,
       "status": "LIVE",
-      "clock": "45'+1'",
+      "clock": "45'+5'",
       "events": [
         {
           "kind": "goal",
@@ -9187,8 +9196,8 @@
           "status": "live",
           "hg": 1,
           "ag": 1,
-          "clock": "45'+1'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -9220,7 +9229,7 @@
           "status": "live",
           "hg": 0,
           "ag": 2,
-          "clock": "45'+1'",
+          "clock": "45'+5'",
           "ht": false,
           "events": [
             {
