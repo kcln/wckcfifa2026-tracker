@@ -6407,8 +6407,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 1,
-          "clock": "54'",
+          "ag": 2,
+          "clock": "57'",
           "ht": false,
           "events": [
             {
@@ -6422,6 +6422,12 @@
               "player": "Rafik Belghali",
               "team": "Algeria",
               "minute": "45'"
+            },
+            {
+              "kind": "goal",
+              "player": "Marcel Sabitzer",
+              "team": "Austria",
+              "minute": "55'"
             }
           ]
         },
@@ -6439,9 +6445,9 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 2,
-          "clock": "54'",
+          "clock": "57'",
           "ht": false,
           "events": [
             {
@@ -6455,6 +6461,12 @@
               "player": "Lautaro Martínez",
               "team": "Argentina",
               "minute": "31'"
+            },
+            {
+              "kind": "goal",
+              "player": "Mousa Al-Tamari",
+              "team": "Jordan",
+              "minute": "55'"
             }
           ]
         }
@@ -6470,9 +6482,9 @@
       "venue": "Kansas City",
       "kickoff_utc": "2026-06-28T02:00:00Z",
       "hg": 1,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "54'",
+      "clock": "57'",
       "events": [
         {
           "kind": "goal",
@@ -6485,6 +6497,12 @@
           "player": "Rafik Belghali",
           "team": "Algeria",
           "minute": "45'"
+        },
+        {
+          "kind": "goal",
+          "player": "Marcel Sabitzer",
+          "team": "Austria",
+          "minute": "55'"
         }
       ]
     },
@@ -6495,10 +6513,10 @@
       "date": "2026-06-27",
       "venue": "Dallas (Arlington)",
       "kickoff_utc": "2026-06-28T02:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 2,
       "status": "LIVE",
-      "clock": "54'",
+      "clock": "57'",
       "events": [
         {
           "kind": "goal",
@@ -6511,6 +6529,12 @@
           "player": "Lautaro Martínez",
           "team": "Argentina",
           "minute": "31'"
+        },
+        {
+          "kind": "goal",
+          "player": "Mousa Al-Tamari",
+          "team": "Jordan",
+          "minute": "55'"
         }
       ]
     }
@@ -9204,8 +9228,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 1,
-          "clock": "54'",
+          "ag": 2,
+          "clock": "57'",
           "ht": false,
           "events": [
             {
@@ -9219,6 +9243,12 @@
               "player": "Rafik Belghali",
               "team": "Algeria",
               "minute": "45'"
+            },
+            {
+              "kind": "goal",
+              "player": "Marcel Sabitzer",
+              "team": "Austria",
+              "minute": "55'"
             }
           ]
         },
@@ -9236,9 +9266,9 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 2,
-          "clock": "54'",
+          "clock": "57'",
           "ht": false,
           "events": [
             {
@@ -9252,6 +9282,12 @@
               "player": "Lautaro Martínez",
               "team": "Argentina",
               "minute": "31'"
+            },
+            {
+              "kind": "goal",
+              "player": "Mousa Al-Tamari",
+              "team": "Jordan",
+              "minute": "55'"
             }
           ]
         }
