@@ -6390,7 +6390,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "30'",
+          "clock": "33'",
           "ht": false,
           "events": [
             {
@@ -6416,8 +6416,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "30'",
+          "ag": 2,
+          "clock": "33'",
           "ht": false,
           "events": [
             {
@@ -6425,6 +6425,12 @@
               "player": "Giovani Lo Celso",
               "team": "Argentina",
               "minute": "19'"
+            },
+            {
+              "kind": "penalty",
+              "player": "Lautaro Martínez",
+              "team": "Argentina",
+              "minute": "31'"
             }
           ]
         }
@@ -6442,7 +6448,7 @@
       "hg": 0,
       "ag": 1,
       "status": "LIVE",
-      "clock": "30'",
+      "clock": "33'",
       "events": [
         {
           "kind": "goal",
@@ -6460,15 +6466,21 @@
       "venue": "Dallas (Arlington)",
       "kickoff_utc": "2026-06-28T02:00:00Z",
       "hg": 0,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "30'",
+      "clock": "33'",
       "events": [
         {
           "kind": "goal",
           "player": "Giovani Lo Celso",
           "team": "Argentina",
           "minute": "19'"
+        },
+        {
+          "kind": "penalty",
+          "player": "Lautaro Martínez",
+          "team": "Argentina",
+          "minute": "31'"
         }
       ]
     }
@@ -9163,7 +9175,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "30'",
+          "clock": "33'",
           "ht": false,
           "events": [
             {
@@ -9189,8 +9201,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "30'",
+          "ag": 2,
+          "clock": "33'",
           "ht": false,
           "events": [
             {
@@ -9198,6 +9210,12 @@
               "player": "Giovani Lo Celso",
               "team": "Argentina",
               "minute": "19'"
+            },
+            {
+              "kind": "penalty",
+              "player": "Lautaro Martínez",
+              "team": "Argentina",
+              "minute": "31'"
             }
           ]
         }
