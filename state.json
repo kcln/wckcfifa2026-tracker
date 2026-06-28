@@ -1632,6 +1632,29 @@
           "kickoff_utc": "2026-06-27T21:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-06-28",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026\nSunday, June 28\n\nMatchday Brief\n\n2A vs 2B\n  Prediction: 2A\n  2A 36.5% · Draw 27.0% · 2B 36.5%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 Los Angeles (Inglewood), USA",
+          "sent": true,
+          "hash": "a226182183af9858",
+          "key": "mb-2026-06-28",
+          "generated_at": "2026-06-28T00:07:28.236702-07:00",
+          "kickoff_utc": "2026-06-28T19:00:00Z"
+        },
+        {
+          "type": "bracket_update",
+          "body": "FIFA World Cup 2026 — Title Odds Update\n\nTop title probabilities:\n   1. Argentina            — 24.5%\n   2. Spain                — 14.5%\n   3. France               — 13.3%\n   4. England              — 5.4%\n   5. Colombia             — 5.2%\n   6. Germany              — 4.8%\n   7. Brazil               — 4.5%\n   8. Belgium              — 3.5%\n   9. Portugal             — 3.3%\n  10. Netherlands          — 3.2%\n\nAdvancement odds (next round):\n  Sweden               — 100.0%\n  Paraguay             — 100.0%\n  Switzerland          — 100.0%\n  South Africa         — 100.0%\n  Cape Verde           — 100.0%\n  Germany              — 100.0%\n  France               — 100.0%\n  Bosnia & Herzegovina — 100.0%\n  Spain                — 100.0%\n  Japan                — 100.0%",
+          "sent": true,
+          "hash": "d5952e0fd566075d",
+          "key": "d5952e0fd566075d",
+          "generated_at": "2026-06-28T00:07:28.236773-07:00",
+          "kickoff_utc": "2026-06-28T19:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -6588,6 +6611,26 @@
             }
           ],
           "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-06-28",
+      "matches": [
+        {
+          "id": "73",
+          "home": "2A",
+          "away": "2B",
+          "kickoff_utc": "2026-06-28T19:00:00Z",
+          "venue": "Los Angeles (Inglewood)",
+          "stage": "R32",
+          "pred": {
+            "home": 0.365,
+            "draw": 0.27,
+            "away": 0.365,
+            "pick": "2A"
+          },
+          "status": "sched"
         }
       ]
     }
