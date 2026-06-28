@@ -1567,6 +1567,15 @@
           "key": "ht-2026-06-27-66",
           "generated_at": "2026-06-27T17:27:13.503650-07:00",
           "kickoff_utc": "2026-06-27T23:30:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 27\n\nFull time:\nColombia 0 - 0 Portugal\nMiami (Miami Gardens), USA\nOverall prediction: 38/69 (55.1%)\nPrediction ✗: Portugal",
+          "sent": true,
+          "hash": "d6f2f7f48e9697a8",
+          "key": "pm-2026-06-27-65",
+          "generated_at": "2026-06-27T18:28:52.973918-07:00",
+          "kickoff_utc": "2026-06-27T23:30:00Z"
         }
       ]
     }
@@ -1915,16 +1924,16 @@
     "K": [
       {
         "team": "Colombia",
-        "played": 2,
-        "points": 6,
+        "played": 3,
+        "points": 7,
         "gd": 3,
         "gf": 4,
         "ga": 1
       },
       {
         "team": "Portugal",
-        "played": 2,
-        "points": 4,
+        "played": 3,
+        "points": 5,
         "gd": 5,
         "gf": 6,
         "ga": 1
@@ -1983,38 +1992,38 @@
   },
   "bracket": {
     "title_odds": {
-      "France": 0.1142,
-      "Germany": 0.0461,
-      "Argentina": 0.2409,
-      "Spain": 0.1428,
-      "Japan": 0.0244,
-      "Brazil": 0.0442,
-      "Ecuador": 0.0232,
-      "Canada": 0.0121,
-      "Egypt": 0.0029,
-      "Colombia": 0.045,
-      "Portugal": 0.0385,
-      "England": 0.0659,
-      "Belgium": 0.0269,
-      "Senegal": 0.0195,
-      "Algeria": 0.0023,
-      "Paraguay": 0.009,
-      "Croatia": 0.0247,
-      "Netherlands": 0.0355,
-      "Switzerland": 0.0113,
-      "Australia": 0.0039,
-      "Morocco": 0.027,
-      "Mexico": 0.0188,
-      "Austria": 0.0031,
-      "Norway": 0.0068,
+      "Germany": 0.0394,
+      "Spain": 0.1512,
+      "Argentina": 0.2411,
+      "Netherlands": 0.0322,
+      "Mexico": 0.0199,
+      "France": 0.1155,
+      "England": 0.0687,
+      "Morocco": 0.0249,
+      "Croatia": 0.0266,
+      "Canada": 0.0096,
+      "Colombia": 0.049,
+      "Belgium": 0.0282,
+      "Japan": 0.026,
       "Ivory Coast": 0.0022,
-      "South Korea": 0.0022,
-      "Iran": 0.0051,
-      "Sweden": 0.0007,
-      "Cape Verde": 0.0004,
-      "DR Congo": 0.0001,
-      "South Africa": 0.0002,
-      "Bosnia & Herzegovina": 0.0001
+      "Iran": 0.007,
+      "Senegal": 0.0181,
+      "Australia": 0.0057,
+      "Brazil": 0.0433,
+      "Portugal": 0.0306,
+      "Ecuador": 0.0216,
+      "Norway": 0.0078,
+      "Algeria": 0.0029,
+      "Egypt": 0.0026,
+      "Paraguay": 0.0078,
+      "Switzerland": 0.0118,
+      "Austria": 0.0027,
+      "Ghana": 0.0003,
+      "Bosnia & Herzegovina": 0.0001,
+      "Sweden": 0.0013,
+      "South Korea": 0.0017,
+      "Cape Verde": 0.0001,
+      "South Africa": 0.0001
     },
     "advancement": {
       "Sweden": 1.0,
@@ -2023,9 +2032,9 @@
       "Egypt": 1.0,
       "Brazil": 1.0,
       "Mexico": 1.0,
-      "South Korea": 0.4214,
-      "England": 1.0,
+      "South Korea": 0.421,
       "Colombia": 1.0,
+      "England": 1.0,
       "Portugal": 1.0,
       "Senegal": 1.0,
       "Cape Verde": 1.0,
@@ -2040,7 +2049,7 @@
       "Canada": 1.0,
       "Croatia": 1.0,
       "Ghana": 1.0,
-      "Iran": 0.9303,
+      "Iran": 0.9272,
       "Ecuador": 1.0,
       "Spain": 1.0,
       "Ivory Coast": 1.0,
@@ -2049,8 +2058,8 @@
       "Switzerland": 1.0,
       "Belgium": 1.0,
       "Bosnia & Herzegovina": 1.0,
-      "DR Congo": 0.2623,
-      "Austria": 0.8131,
+      "Austria": 0.8122,
+      "DR Congo": 0.2667,
       "Jordan": 0.0033
     }
   },
@@ -3649,6 +3658,10 @@
           "minute": "83'"
         }
       ]
+    },
+    "65": {
+      "home_goals": 0,
+      "away_goals": 0
     }
   },
   "board": [
@@ -6275,12 +6288,11 @@
             "away": 0.36524197970805417,
             "pick": "Portugal"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 0,
-          "clock": "90'+3'",
-          "ht": false,
-          "events": []
+          "events": [],
+          "hit": false
         },
         {
           "id": "66",
@@ -6298,7 +6310,7 @@
           "status": "live",
           "hg": 3,
           "ag": 1,
-          "clock": "90'+2'",
+          "clock": "90'+5'",
           "ht": false,
           "events": [
             {
@@ -6362,19 +6374,6 @@
   ],
   "live": [
     {
-      "id": "65",
-      "home": "Colombia",
-      "away": "Portugal",
-      "date": "2026-06-27",
-      "venue": "Miami (Miami Gardens)",
-      "kickoff_utc": "2026-06-27T23:30:00Z",
-      "hg": 0,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "90'+3'",
-      "events": []
-    },
-    {
       "id": "66",
       "home": "DR Congo",
       "away": "Uzbekistan",
@@ -6384,7 +6383,7 @@
       "hg": 3,
       "ag": 1,
       "status": "LIVE",
-      "clock": "90'+2'",
+      "clock": "90'+5'",
       "events": [
         {
           "kind": "goal",
@@ -9037,12 +9036,11 @@
             "away": 0.36524197970805417,
             "pick": "Portugal"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 0,
-          "clock": "90'+3'",
-          "ht": false,
-          "events": []
+          "events": [],
+          "hit": false
         },
         {
           "id": "66",
@@ -9060,7 +9058,7 @@
           "status": "live",
           "hg": 3,
           "ag": 1,
-          "clock": "90'+2'",
+          "clock": "90'+5'",
           "ht": false,
           "events": [
             {
