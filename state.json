@@ -1603,6 +1603,33 @@
           "key": "ht-2026-06-27-60",
           "generated_at": "2026-06-27T19:53:36.769494-07:00",
           "kickoff_utc": "2026-06-28T02:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 27\n\nFull time:\nAlgeria 3 - 3 Austria\nKansas City, USA\n  ⚽ 28' Marko Arnautovic (Austria)\n  ⚽ 45' Rafik Belghali (Algeria)\n  ⚽ 55' Marcel Sabitzer (Austria)\n  ⚽ 60' Riyad Mahrez (Algeria)\n  ⚽ 90'+3' Riyad Mahrez (Algeria)\n  ⚽ 90'+6' Sasa Kalajdzic (Austria)\nOverall prediction: 39/72 (54.2%)\nPrediction ✗: Austria",
+          "sent": true,
+          "hash": "7f378ff7d4990b45",
+          "key": "pm-2026-06-27-59",
+          "generated_at": "2026-06-27T21:00:13.727763-07:00",
+          "kickoff_utc": "2026-06-28T02:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 27\n\nFull time:\nJordan 1 - 3 Argentina\nDallas (Arlington), USA\n  ⚽ 19' Giovani Lo Celso (Argentina)\n  ⚽ 31' Lautaro Martínez (Argentina, pen)\n  ⚽ 55' Mousa Al-Tamari (Jordan)\n  ⚽ 80' Lionel Messi (Argentina)\nOverall prediction: 39/72 (54.2%)\nPrediction ✓: Argentina",
+          "sent": true,
+          "hash": "3acb6869e0015b29",
+          "key": "pm-2026-06-27-60",
+          "generated_at": "2026-06-27T21:00:13.731022-07:00",
+          "kickoff_utc": "2026-06-28T02:00:00Z"
+        },
+        {
+          "type": "daily_recap",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 27\n\nDaily Recap\n\nResults:\n  Panama 0 - 2 England\n  New York/New Jersey (East Rutherford), USA\n    ⚽ 62' Jude Bellingham (England)\n    ⚽ 67' Harry Kane (England)\n  Prediction ✓: England\n\n  Croatia 2 - 1 Ghana\n  Philadelphia, USA\n    ⚽ 31' Petar Sucic (Croatia)\n    ⚽ 73' Derrick Luckassen (Ghana)\n    ⚽ 83' Nikola Vlasic (Croatia)\n  Prediction ✓: Croatia\n\n  Colombia 0 - 0 Portugal\n  Miami (Miami Gardens), USA\n  Prediction ✗: Portugal\n\n  DR Congo 3 - 1 Uzbekistan\n  Atlanta, USA\n    ⚽ 10' Eldor Shomurodov (Uzbekistan)\n    ⚽ 68' Yoane Wissa (DR Congo, pen)\n    ⚽ 78' Fiston Mayele (DR Congo)\n    ⚽ 90'+1' Yoane Wissa (DR Congo)\n  Prediction ✗: Uzbekistan\n\n  Algeria 3 - 3 Austria\n  Kansas City, USA\n    ⚽ 28' Marko Arnautovic (Austria)\n    ⚽ 45' Rafik Belghali (Algeria)\n    ⚽ 55' Marcel Sabitzer (Austria)\n    ⚽ 60' Riyad Mahrez (Algeria)\n    ⚽ 90'+3' Riyad Mahrez (Algeria)\n    ⚽ 90'+6' Sasa Kalajdzic (Austria)\n  Prediction ✗: Austria\n\n  Jordan 1 - 3 Argentina\n  Dallas (Arlington), USA\n    ⚽ 19' Giovani Lo Celso (Argentina)\n    ⚽ 31' Lautaro Martínez (Argentina, pen)\n    ⚽ 55' Mousa Al-Tamari (Jordan)\n    ⚽ 80' Lionel Messi (Argentina)\n  Prediction ✓: Argentina\n\nOverall prediction — today 3/6 (50.0%)  ·  overall 39/72 (54.2%)\n\nGroup Standings:\n\nQ Qualified for Round of 32 · P Played · Pts Points · GD Goal Diff · GF Goals For · GA Goals Against\n\n<code>Group A\n  Team            P Pts GD GF GA\nQ Mexico          3   9 +6  6  0\nQ South Africa    3   4 -1  2  3\n  South Korea     3   3 -1  2  3\n  Czech Republic  3   1 -4  2  6\n\nGroup B\n  Team            P Pts GD GF GA\nQ Switzerland     3   7 +4  7  3\n  Canada          3   4 +5  8  3\nQ Bosnia & Herzeg 3   4 -1  5  6\n  Qatar           3   1 -8  2 10\n\nGroup C\n  Team            P Pts GD GF GA\nQ Brazil          3   7 +6  7  1\nQ Morocco         3   7 +3  6  3\n  Scotland        3   3 -3  1  4\n  Haiti           3   0 -6  2  8\n\nGroup D\n  Team            P Pts GD GF GA\nQ USA             3   6 +4  8  4\n  Australia       3   4 +0  2  2\nQ Paraguay        3   4 -2  2  4\n  Turkey          3   3 -2  3  5\n\nGroup E\n  Team            P Pts GD GF GA\nQ Germany         3   6 +6 10  4\nQ Ivory Coast     3   6 +2  4  2\nQ Ecuador         3   4 +0  2  2\n  Curaçao         3   1 -8  1  9\n\nGroup F\n  Team            P Pts GD GF GA\nQ Netherlands     3   7 +6 10  4\nQ Japan           3   5 +4  7  3\nQ Sweden          3   4 +0  7  7\n  Tunisia         3   0-10  2 12\n\nGroup G\n  Team            P Pts GD GF GA\nQ Belgium         3   5 +4  6  2\nQ Egypt           3   5 +2  5  3\n  Iran            3   3 +0  3  3\n  New Zealand     3   1 -6  4 10\n\nGroup H\n  Team            P Pts GD GF GA\nQ Spain           3   7 +5  5  0\nQ Cape Verde      3   3 +0  2  2\n  Uruguay         3   2 -1  3  4\n  Saudi Arabia    3   2 -4  1  5\n\nGroup I\n  Team            P Pts GD GF GA\nQ France          3   9 +8 10  2\nQ Norway          3   6 +1  8  7\nQ Senegal         3   3 +2  8  6\n  Iraq            3   0-11  1 12\n\nGroup J\n  Team            P Pts GD GF GA\nQ Argentina       3   9 +7  8  1\n  Austria         3   4 +0  6  6\nQ Algeria         3   4 -2  5  7\n  Jordan          3   0 -5  3  8\n\nGroup K\n  Team            P Pts GD GF GA\nQ Colombia        3   7 +3  4  1\nQ Portugal        3   5 +5  6  1\nQ DR Congo        3   4 +1  4  3\n  Uzbekistan      3   0 -9  2 11\n\nGroup L\n  Team            P Pts GD GF GA\nQ England         3   7 +4  6  2\nQ Croatia         3   6 +0  5  5\nQ Ghana           3   4 +0  2  2\n  Panama          3   0 -4  0  4</code>",
+          "sent": true,
+          "hash": "5b6d138eca2380ce",
+          "key": "dr-2026-06-27",
+          "generated_at": "2026-06-27T21:00:13.735162-07:00",
+          "kickoff_utc": "2026-06-27T21:00:00Z"
         }
       ]
     }
@@ -1917,35 +1944,35 @@
     "J": [
       {
         "team": "Argentina",
-        "played": 2,
-        "points": 6,
-        "gd": 5,
-        "gf": 5,
-        "ga": 0
+        "played": 3,
+        "points": 9,
+        "gd": 7,
+        "gf": 8,
+        "ga": 1
       },
       {
         "team": "Austria",
-        "played": 2,
-        "points": 3,
+        "played": 3,
+        "points": 4,
         "gd": 0,
-        "gf": 3,
-        "ga": 3
+        "gf": 6,
+        "ga": 6
       },
       {
         "team": "Algeria",
-        "played": 2,
-        "points": 3,
+        "played": 3,
+        "points": 4,
         "gd": -2,
-        "gf": 2,
-        "ga": 4
+        "gf": 5,
+        "ga": 7
       },
       {
         "team": "Jordan",
-        "played": 2,
+        "played": 3,
         "points": 0,
-        "gd": -3,
-        "gf": 2,
-        "ga": 5
+        "gd": -5,
+        "gf": 3,
+        "ga": 8
       }
     ],
     "K": [
@@ -2019,37 +2046,36 @@
   },
   "bracket": {
     "title_odds": {
-      "Argentina": 0.2457,
-      "Spain": 0.1462,
-      "France": 0.1295,
+      "Japan": 0.0251,
+      "France": 0.1329,
+      "England": 0.0536,
+      "Argentina": 0.2454,
+      "Egypt": 0.0031,
+      "Spain": 0.145,
+      "Netherlands": 0.0325,
+      "Colombia": 0.052,
+      "Portugal": 0.0329,
+      "Belgium": 0.0355,
+      "Germany": 0.0477,
+      "Senegal": 0.0104,
       "Brazil": 0.0453,
-      "England": 0.0543,
-      "Ecuador": 0.0259,
-      "Germany": 0.047,
-      "Mexico": 0.0107,
-      "Canada": 0.0096,
-      "Senegal": 0.0175,
-      "Colombia": 0.0476,
-      "Portugal": 0.0316,
-      "Belgium": 0.0395,
-      "Netherlands": 0.0315,
-      "Morocco": 0.026,
-      "Japan": 0.0264,
-      "Croatia": 0.0236,
-      "Switzerland": 0.0086,
-      "Norway": 0.0067,
-      "Egypt": 0.0029,
-      "Austria": 0.0026,
-      "Algeria": 0.0031,
-      "Paraguay": 0.0058,
-      "Ivory Coast": 0.0018,
-      "Australia": 0.0038,
-      "Iran": 0.0045,
-      "South Africa": 0.0003,
-      "DR Congo": 0.0005,
-      "Sweden": 0.0009,
+      "Norway": 0.0081,
+      "Ecuador": 0.0253,
+      "Canada": 0.0114,
+      "Switzerland": 0.0081,
+      "Ivory Coast": 0.0016,
+      "Croatia": 0.0242,
+      "Morocco": 0.0247,
+      "Australia": 0.0052,
+      "Paraguay": 0.0048,
+      "Sweden": 0.0011,
+      "Mexico": 0.0121,
+      "Austria": 0.0037,
+      "Algeria": 0.0072,
       "Cape Verde": 0.0005,
-      "Ghana": 0.0001
+      "DR Congo": 0.0004,
+      "USA": 0.0001,
+      "South Africa": 0.0001
     },
     "advancement": {
       "Sweden": 1.0,
@@ -2066,11 +2092,10 @@
       "Brazil": 1.0,
       "Portugal": 1.0,
       "Ivory Coast": 1.0,
-      "Iran": 0.7259,
+      "Ecuador": 1.0,
       "Argentina": 1.0,
       "Norway": 1.0,
       "England": 1.0,
-      "Ecuador": 1.0,
       "Canada": 1.0,
       "Mexico": 1.0,
       "Senegal": 1.0,
@@ -2080,11 +2105,11 @@
       "Morocco": 1.0,
       "Australia": 1.0,
       "Egypt": 1.0,
+      "Austria": 1.0,
       "USA": 1.0,
       "DR Congo": 1.0,
       "Netherlands": 1.0,
-      "Algeria": 0.5696,
-      "Austria": 0.7045
+      "Algeria": 1.0
     }
   },
   "season_ended": false,
@@ -3714,6 +3739,78 @@
           "player": "Yoane Wissa",
           "team": "DR Congo",
           "minute": "90'+1'"
+        }
+      ]
+    },
+    "59": {
+      "home_goals": 3,
+      "away_goals": 3,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Marko Arnautovic",
+          "team": "Austria",
+          "minute": "28'"
+        },
+        {
+          "kind": "goal",
+          "player": "Rafik Belghali",
+          "team": "Algeria",
+          "minute": "45'"
+        },
+        {
+          "kind": "goal",
+          "player": "Marcel Sabitzer",
+          "team": "Austria",
+          "minute": "55'"
+        },
+        {
+          "kind": "goal",
+          "player": "Riyad Mahrez",
+          "team": "Algeria",
+          "minute": "60'"
+        },
+        {
+          "kind": "goal",
+          "player": "Riyad Mahrez",
+          "team": "Algeria",
+          "minute": "90'+3'"
+        },
+        {
+          "kind": "goal",
+          "player": "Sasa Kalajdzic",
+          "team": "Austria",
+          "minute": "90'+6'"
+        }
+      ]
+    },
+    "60": {
+      "home_goals": 1,
+      "away_goals": 3,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Giovani Lo Celso",
+          "team": "Argentina",
+          "minute": "19'"
+        },
+        {
+          "kind": "penalty",
+          "player": "Lautaro Martínez",
+          "team": "Argentina",
+          "minute": "31'"
+        },
+        {
+          "kind": "goal",
+          "player": "Mousa Al-Tamari",
+          "team": "Jordan",
+          "minute": "55'"
+        },
+        {
+          "kind": "goal",
+          "player": "Lionel Messi",
+          "team": "Argentina",
+          "minute": "80'"
         }
       ]
     }
@@ -6405,11 +6502,9 @@
             "away": 0.4310193553913809,
             "pick": "Austria"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 3,
-          "ag": 2,
-          "clock": "90'+5'",
-          "ht": false,
+          "ag": 3,
           "events": [
             {
               "kind": "goal",
@@ -6440,8 +6535,15 @@
               "player": "Riyad Mahrez",
               "team": "Algeria",
               "minute": "90'+3'"
+            },
+            {
+              "kind": "goal",
+              "player": "Sasa Kalajdzic",
+              "team": "Austria",
+              "minute": "90'+6'"
             }
-          ]
+          ],
+          "hit": false
         },
         {
           "id": "60",
@@ -6456,11 +6558,9 @@
             "away": 0.9251358059189514,
             "pick": "Argentina"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 3,
-          "clock": "90'+5'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -6486,95 +6586,13 @@
               "team": "Argentina",
               "minute": "80'"
             }
-          ]
+          ],
+          "hit": true
         }
       ]
     }
   ],
-  "live": [
-    {
-      "id": "59",
-      "home": "Algeria",
-      "away": "Austria",
-      "date": "2026-06-27",
-      "venue": "Kansas City",
-      "kickoff_utc": "2026-06-28T02:00:00Z",
-      "hg": 3,
-      "ag": 2,
-      "status": "LIVE",
-      "clock": "90'+5'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Marko Arnautovic",
-          "team": "Austria",
-          "minute": "28'"
-        },
-        {
-          "kind": "goal",
-          "player": "Rafik Belghali",
-          "team": "Algeria",
-          "minute": "45'"
-        },
-        {
-          "kind": "goal",
-          "player": "Marcel Sabitzer",
-          "team": "Austria",
-          "minute": "55'"
-        },
-        {
-          "kind": "goal",
-          "player": "Riyad Mahrez",
-          "team": "Algeria",
-          "minute": "60'"
-        },
-        {
-          "kind": "goal",
-          "player": "Riyad Mahrez",
-          "team": "Algeria",
-          "minute": "90'+3'"
-        }
-      ]
-    },
-    {
-      "id": "60",
-      "home": "Jordan",
-      "away": "Argentina",
-      "date": "2026-06-27",
-      "venue": "Dallas (Arlington)",
-      "kickoff_utc": "2026-06-28T02:00:00Z",
-      "hg": 1,
-      "ag": 3,
-      "status": "LIVE",
-      "clock": "90'+5'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Giovani Lo Celso",
-          "team": "Argentina",
-          "minute": "19'"
-        },
-        {
-          "kind": "penalty",
-          "player": "Lautaro Martínez",
-          "team": "Argentina",
-          "minute": "31'"
-        },
-        {
-          "kind": "goal",
-          "player": "Mousa Al-Tamari",
-          "team": "Jordan",
-          "minute": "55'"
-        },
-        {
-          "kind": "goal",
-          "player": "Lionel Messi",
-          "team": "Argentina",
-          "minute": "80'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -9262,11 +9280,9 @@
             "away": 0.4310193553913809,
             "pick": "Austria"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 3,
-          "ag": 2,
-          "clock": "90'+5'",
-          "ht": false,
+          "ag": 3,
           "events": [
             {
               "kind": "goal",
@@ -9297,8 +9313,15 @@
               "player": "Riyad Mahrez",
               "team": "Algeria",
               "minute": "90'+3'"
+            },
+            {
+              "kind": "goal",
+              "player": "Sasa Kalajdzic",
+              "team": "Austria",
+              "minute": "90'+6'"
             }
-          ]
+          ],
+          "hit": false
         },
         {
           "id": "60",
@@ -9313,11 +9336,9 @@
             "away": 0.9251358059189514,
             "pick": "Argentina"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 3,
-          "clock": "90'+5'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -9343,7 +9364,8 @@
               "team": "Argentina",
               "minute": "80'"
             }
-          ]
+          ],
+          "hit": true
         }
       ]
     },
