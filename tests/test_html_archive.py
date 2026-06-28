@@ -521,8 +521,8 @@ def test_schedule_bracket_resolves_slots_and_shows_location(tmp_path):
     ha.render(_ko_state(), out, today="2026-06-28")
     html = out.read_text()
     assert '<div class="bk">' in html
-    # group-slot tokens resolve to live country codes
-    assert '<span class="bkm-nm">KOR</span>' in html   # 2A -> South Korea
+    # a decided group slot resolves to the full country name
+    assert '<span class="bkm-nm">South Korea</span>' in html   # 2A -> South Korea
     assert "Round of 32" in html and "Final" in html
     # location shown in bracket boxes
     assert "Los Angeles (Inglewood), USA" in html
@@ -587,8 +587,8 @@ def test_bracket_collapses_to_qualifier_when_group_decided(tmp_path):
     out = tmp_path / "i.html"
     ha.render(_proj_state(3), out)        # group A complete -> locked
     html = out.read_text()
-    # collapses to the single runner-up, solid (not faded)
-    kor = re.search(r'<div class="bkm-row[^"]*"><span class="bkm-nm">KOR</span>',
+    # collapses to the single runner-up by full name, solid (not faded)
+    kor = re.search(r'<div class="bkm-row[^"]*"><span class="bkm-nm">South Korea</span>',
                     html)
     assert kor is not None and "proj" not in kor.group(0)
     assert 'MEX / KOR' not in html        # no longer the projected group list
@@ -640,9 +640,9 @@ def test_standings_marks_clinched_team_with_q_badge(tmp_path):
 
 def test_bracket_locks_clinched_team_solid(tmp_path):
     html = _render(_clinch_state(), tmp_path)
-    # Once Mexico clinches, the 1A slot collapses to just MEX (locked solid) and
-    # the still-contesting group-mates are dropped entirely.
-    assert '<span class="qlk">MEX</span>' in html
+    # Once Mexico clinches, the 1A slot collapses to just Mexico (full name,
+    # locked solid) and the still-contesting group-mates are dropped entirely.
+    assert '<span class="qlk">Mexico</span>' in html
     assert ".qlk" in html                          # styling present
     assert "KOR / CZE / RSA" not in html           # contenders removed
     assert ">KOR<" not in html and "/ CZE" not in html
@@ -656,9 +656,9 @@ def test_bracket_single_clinch_winner_slot_only_runner_up_projects_rest(tmp_path
         {"id": "74", "home": "2A", "away": "1C", "stage": "R32",
          "kickoff_utc": "2026-06-28T22:00:00Z", "venue": "Atlanta", "status": "sched"})
     html = _render(state, tmp_path)
-    assert html.count('<span class="qlk">MEX</span>') == 1   # only its own slot
+    assert html.count('<span class="qlk">Mexico</span>') == 1  # only its own slot
     assert "KOR / CZE / RSA" in html                         # 2A: rest, no MEX
-    assert "MEX / KOR" not in html                           # MEX not duplicated
+    assert "Mexico / KOR" not in html                        # not duplicated
 
 
 def test_bracket_two_clinched_teams_split_across_their_two_slots(tmp_path):
@@ -682,9 +682,9 @@ def test_bracket_two_clinched_teams_split_across_their_two_slots(tmp_path):
             {"id": "81", "home": "2I", "away": "1B", "stage": "R32",
              "kickoff_utc": "2026-06-28T22:00:00Z", "venue": "Dallas (Arlington)", "status": "sched"}]}]}
     html = _render(state, tmp_path)
-    # France 1st -> 1I; Norway 2nd -> 2I; each appears once, in its own box.
-    assert html.count('<span class="qlk">FRA</span>') == 1
-    assert html.count('<span class="qlk">NOR</span>') == 1
+    # France 1st -> 1I; Norway 2nd -> 2I; each appears once (full name), own box.
+    assert html.count('<span class="qlk">France</span>') == 1
+    assert html.count('<span class="qlk">Norway</span>') == 1
     # the buggy combined slot must never appear
-    assert '<span class="qlk">FRA</span> / <span class="qlk">NOR</span>' not in html
+    assert '<span class="qlk">France</span> / <span class="qlk">Norway</span>' not in html
     assert "FRA / NOR" not in html

@@ -110,9 +110,79 @@ def clinched_qualifiers(groups: dict, schedule: list) -> dict:
 
 
 def clinched_set(groups: dict, schedule: list) -> set:
-    """Flat set of all teams that have clinched a Round-of-32 berth."""
+    """Flat set of all teams that have clinched a top-2 Round-of-32 berth."""
     return {t for teams in clinched_qualifiers(groups, schedule).values()
             for t in teams}
+
+
+def _max_third_points(rows: list, fixtures: list) -> int:
+    """Highest points total any 3rd-place finisher of this group could end on,
+    across every completion of its remaining fixtures (points only)."""
+    base = {r["team"]: r.get("points", 0) for r in rows if r.get("team")}
+    teams = list(base)
+    best = 0
+    for combo in itertools.product((0, 1, 2), repeat=len(fixtures)):
+        pts = dict(base)
+        for (h, a), o in zip(fixtures, combo):
+            if o == 0:
+                pts[h] += 3
+            elif o == 1:
+                pts[h] += 1
+                pts[a] += 1
+            else:
+                pts[a] += 3
+        order = sorted(teams, key=lambda t: pts[t], reverse=True)
+        if len(order) >= 3:
+            best = max(best, pts[order[2]])
+    return best
+
+
+def clinched_thirds(groups: dict, schedule: list) -> set:
+    """Third-place teams that have mathematically secured one of the 8 best-third
+    Round-of-32 berths. A complete group's 3rd-place team T is clinched iff at
+    most 7 other groups can produce a third that ranks at-or-above T — so T is
+    no worse than the 8th-best third. Other complete thirds are compared exactly
+    (points, GD, GF; ties count against T); a still-incomplete group threatens T
+    if its 3rd-place team could reach T's points in some completion (GD treated
+    as reversible, matching FIFA's points-first clinching)."""
+    rem = _remaining_group_fixtures(groups, schedule)
+    complete: dict = {}                       # group -> (team, pts, gd, gf)
+    incomplete_max: dict = {}                 # group -> max possible 3rd points
+    for grp, rows in (groups or {}).items():
+        base_teams = [r for r in rows if r.get("team")]
+        n = len(base_teams)
+        expected = n * (n - 1) // 2
+        fixtures = [(h, a) for h, a in rem.get(grp, [])
+                    if any(r["team"] == h for r in base_teams)
+                    and any(r["team"] == a for r in base_teams)]
+        played = sum(r.get("played", 0) for r in base_teams) // 2
+        if played + len(fixtures) != expected:
+            continue                          # inconsistent schedule -> skip
+        if not fixtures and n >= 3:
+            t = rows[2]
+            complete[grp] = (t["team"], t.get("points", 0),
+                             t.get("gd", 0), t.get("gf", 0))
+        elif fixtures:
+            incomplete_max[grp] = _max_third_points(base_teams, fixtures)
+
+    clinched = set()
+    for grp, (team, pts, gd, gf) in complete.items():
+        threats = 0
+        for g2, (_t, p2, d2, f2) in complete.items():
+            if g2 != grp and (p2, d2, f2) >= (pts, gd, gf):
+                threats += 1
+        for mx in incomplete_max.values():
+            if mx >= pts:
+                threats += 1
+        if threats <= 7:                      # T is no worse than 8th best third
+            clinched.add(team)
+    return clinched
+
+
+def clinched_all(groups: dict, schedule: list) -> set:
+    """Every team that has clinched a Round-of-32 berth — group top-2 AND the
+    best-third qualifiers."""
+    return clinched_set(groups, schedule) | clinched_thirds(groups, schedule)
 
 
 def _group_complete(grp: str, groups: dict) -> bool:

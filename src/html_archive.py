@@ -610,32 +610,39 @@ def _slot_html(token: str, groups: dict, clinched: set,
     """Safe HTML label for ONE knockout slot — always resolves to a single
     position so a match reads as country-vs-country.
 
-    A group slot is '1X' (winner) or '2X' (runner-up). While the group is
-    undecided we show the team CURRENTLY in that exact position: if it has
-    clinched, its code locked solid (.qlk); otherwise the still-contending
-    teams for that slot in standings order, with any already-clinched team
-    dropped (it's shown in its own position slot, never both). This avoids the
-    bug where every slot of a group listed ALL its clinched teams (e.g. a single
-    box reading 'FRA / NOR', or one team appearing in both the 1X and 2X slots).
+    A resolved slot (a decided group winner/runner-up, a clinched team, or a
+    settled W/L feeder) shows the FULL country name. A group slot is '1X'
+    (winner) or '2X' (runner-up): while the group is undecided we show the team
+    CURRENTLY in that position — its full name locked solid (.qlk) if clinched,
+    otherwise the still-contending teams as compact codes (with any already-
+    clinched team dropped, since it's shown in its own slot). Best-third combos
+    ('3A/B/C/D/F') and unsettled feeders stay as their token.
     """
     t = (token or "").strip()
     is_group_slot = (len(t) >= 2 and t[0] in "12" and t[1:].isalpha()
                      and "/" not in t)
-    if is_group_slot and not knockout.slot_locked(t, groups, winners, losers):
+    if is_group_slot:
         rows = groups.get(t[1:]) or []
         if rows:
-            clset = clinched or set()
             pos = int(t[0]) - 1                    # 0 = winner, 1 = runner-up
-            if pos < len(rows) and rows[pos].get("team") in clset:
-                # the team currently in THIS slot has clinched -> one team, solid
-                code = escape(knockout.abbr(rows[pos]["team"]))
-                return f'<span class="qlk">{code}</span>'
-            # otherwise project this slot's contenders, dropping clinched teams
-            # (each is shown in its own position slot, not here)
-            contenders = [r for r in rows if r.get("team") not in clset]
-            shown = contenders or rows             # never render an empty slot
-            return " / ".join(
-                escape(knockout.abbr(r.get("team", ""))) for r in shown)
+            if knockout.slot_locked(t, groups, winners, losers):
+                if pos < len(rows):                # group decided -> full name
+                    return escape(str(rows[pos].get("team", "")))
+            else:
+                clset = clinched or set()
+                if pos < len(rows) and rows[pos].get("team") in clset:
+                    # clinched -> full name, locked solid
+                    return f'<span class="qlk">{escape(str(rows[pos]["team"]))}</span>'
+                # project this slot's contenders as codes, dropping clinched teams
+                contenders = [r for r in rows if r.get("team") not in clset]
+                shown = contenders or rows         # never render an empty slot
+                return " / ".join(
+                    escape(knockout.abbr(r.get("team", ""))) for r in shown)
+    if t[:1] in ("W", "L") and t[1:].isdigit():    # feeder -> full name once known
+        table = (winners if t[0] == "W" else losers) or {}
+        if t[1:] in table:
+            return escape(str(table[t[1:]]))
+        return escape(t)
     return escape(knockout.slot_label(t, groups, winners, losers))
 
 
@@ -754,7 +761,7 @@ def _render_standings(state: dict) -> str:
     groups = state.get("groups") or {}
     if not groups:
         return ""
-    clinched = knockout.clinched_set(groups, state.get("schedule") or [])
+    clinched = knockout.clinched_all(groups, state.get("schedule") or [])
     grps = []
     for g in sorted(groups):
         body = "".join(

@@ -107,3 +107,56 @@ def test_clinch_requires_points_security_not_goal_difference():
                          ("France", 2, 3), ("Senegal", 2, 0))}
     sched = _sched(("Norway", "Senegal"), ("France", "Argentina"))
     assert "Argentina" not in k.clinched_set(groups, sched)
+
+
+# --- clinched_thirds: best-third (top 8 of 12) Round-of-32 berths ---
+
+def _complete4(g, third_gd, third_pts=3):
+    """A consistent complete (played-3) 4-team group: 9 > 6 > 3rd(3 pts) > 0.
+    The 3rd row's GD is the knob used to rank thirds across groups."""
+    return [
+        {"team": f"{g}1", "played": 3, "points": 9, "gd": 9, "gf": 9, "ga": 0},
+        {"team": f"{g}2", "played": 3, "points": 6, "gd": 3, "gf": 5, "ga": 2},
+        {"team": f"{g}3", "played": 3, "points": third_pts,
+         "gd": third_gd, "gf": 3, "ga": 3},
+        {"team": f"{g}4", "played": 3, "points": 0, "gd": -9, "gf": 0, "ga": 9},
+    ]
+
+
+def test_clinched_thirds_top8_qualify_ninth_excluded():
+    # 9 complete groups; thirds tie on points but have distinct GD (8..0). Only
+    # the best 8 third-place teams advance, so the 9th (lowest GD) is NOT clinched.
+    groups = {chr(ord("A") + i): _complete4(chr(ord("A") + i), 8 - i)
+              for i in range(9)}
+    clinched = k.clinched_thirds(groups, [])
+    assert clinched == {f"{chr(ord('A') + i)}3" for i in range(8)}  # GD 8..1
+    assert "I3" not in clinched                                     # GD 0 -> 9th
+
+
+def test_clinched_thirds_incomplete_group_blocks_borderline_third():
+    # 7 strong complete thirds (GD 5) rank above a borderline complete third
+    # (GD 0). An unfinished group whose third can still reach 3 pts is the 8th
+    # threat, so the borderline third is NOT yet clinched; the 7 strong ones are.
+    groups = {chr(ord("A") + i): _complete4(chr(ord("A") + i), 5)
+              for i in range(7)}
+    groups["H"] = _complete4("H", 0)
+    groups["H"][2]["team"] = "Borderline"
+    groups["J"] = [                       # incomplete: 2 played, 2 fixtures left
+        {"team": "J1", "played": 2, "points": 6, "gd": 4, "gf": 4, "ga": 0},
+        {"team": "J2", "played": 2, "points": 3, "gd": 1, "gf": 2, "ga": 1},
+        {"team": "J3", "played": 2, "points": 3, "gd": 0, "gf": 2, "ga": 2},
+        {"team": "J4", "played": 2, "points": 0, "gd": -5, "gf": 0, "ga": 5},
+    ]
+    sched = _sched(("J1", "J4"), ("J2", "J3"))
+    clinched = k.clinched_thirds(groups, sched)
+    assert "Borderline" not in clinched
+    assert all(f"{chr(ord('A') + i)}3" in clinched for i in range(7))
+
+
+def test_clinched_all_unions_top2_and_thirds():
+    groups = {chr(ord("A") + i): _complete4(chr(ord("A") + i), 8 - i)
+              for i in range(9)}
+    allc = k.clinched_all(groups, [])
+    assert "A1" in allc and "A2" in allc        # group winner + runner-up (top 2)
+    assert "A3" in allc                          # a qualifying third (best GD)
+    assert "I3" not in allc                      # 9th-best third, not in
