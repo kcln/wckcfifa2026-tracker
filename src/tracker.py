@@ -279,7 +279,7 @@ def _clinched_for(merged: dict, tables: dict) -> set:
          "status": "FT" if m.get("result") else "sched",
          "hg": (m["result"]["home_goals"] if m.get("result") else None)}
         for m in merged["matches"] if m["stage"] == "group"]}]
-    return knockout.clinched_set(tables, sched_like)
+    return knockout.clinched_all(tables, sched_like)
 
 
 def _final_match(merged: dict) -> dict | None:
