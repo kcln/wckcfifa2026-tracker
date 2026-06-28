@@ -1594,6 +1594,15 @@
           "key": "ht-2026-06-27-59",
           "generated_at": "2026-06-27T19:50:20.360516-07:00",
           "kickoff_utc": "2026-06-28T02:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 27\n\nHalf-time:\nJordan 0 - 2 Argentina\nDallas (Arlington), USA\n  ⚽ 19' Giovani Lo Celso (Argentina)\n  ⚽ 31' Lautaro Martínez (Argentina, pen)\nPrediction: Argentina",
+          "sent": true,
+          "hash": "bfa787fb3fc42f53",
+          "key": "ht-2026-06-27-60",
+          "generated_at": "2026-06-27T19:53:36.769494-07:00",
+          "kickoff_utc": "2026-06-28T02:00:00Z"
         }
       ]
     }
@@ -6432,8 +6441,8 @@
           "status": "live",
           "hg": 0,
           "ag": 2,
-          "clock": "45'+5'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -6488,8 +6497,8 @@
       "kickoff_utc": "2026-06-28T02:00:00Z",
       "hg": 0,
       "ag": 2,
-      "status": "LIVE",
-      "clock": "45'+5'",
+      "status": "HT",
+      "clock": "45'+6'",
       "events": [
         {
           "kind": "goal",
@@ -9229,8 +9238,8 @@
           "status": "live",
           "hg": 0,
           "ag": 2,
-          "clock": "45'+5'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
