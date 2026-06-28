@@ -6388,9 +6388,9 @@
             "pick": "Austria"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "43'",
+          "clock": "45'+1'",
           "ht": false,
           "events": [
             {
@@ -6398,6 +6398,12 @@
               "player": "Marko Arnautovic",
               "team": "Austria",
               "minute": "28'"
+            },
+            {
+              "kind": "goal",
+              "player": "Rafik Belghali",
+              "team": "Algeria",
+              "minute": "45'"
             }
           ]
         },
@@ -6417,7 +6423,7 @@
           "status": "live",
           "hg": 0,
           "ag": 2,
-          "clock": "43'",
+          "clock": "45'+1'",
           "ht": false,
           "events": [
             {
@@ -6445,16 +6451,22 @@
       "date": "2026-06-27",
       "venue": "Kansas City",
       "kickoff_utc": "2026-06-28T02:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 1,
       "status": "LIVE",
-      "clock": "43'",
+      "clock": "45'+1'",
       "events": [
         {
           "kind": "goal",
           "player": "Marko Arnautovic",
           "team": "Austria",
           "minute": "28'"
+        },
+        {
+          "kind": "goal",
+          "player": "Rafik Belghali",
+          "team": "Algeria",
+          "minute": "45'"
         }
       ]
     },
@@ -6468,7 +6480,7 @@
       "hg": 0,
       "ag": 2,
       "status": "LIVE",
-      "clock": "43'",
+      "clock": "45'+1'",
       "events": [
         {
           "kind": "goal",
@@ -9173,9 +9185,9 @@
             "pick": "Austria"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "43'",
+          "clock": "45'+1'",
           "ht": false,
           "events": [
             {
@@ -9183,6 +9195,12 @@
               "player": "Marko Arnautovic",
               "team": "Austria",
               "minute": "28'"
+            },
+            {
+              "kind": "goal",
+              "player": "Rafik Belghali",
+              "team": "Algeria",
+              "minute": "45'"
             }
           ]
         },
@@ -9202,7 +9220,7 @@
           "status": "live",
           "hg": 0,
           "ag": 2,
-          "clock": "43'",
+          "clock": "45'+1'",
           "ht": false,
           "events": [
             {
