@@ -1549,6 +1549,15 @@
           "key": "pm-2026-06-27-72",
           "generated_at": "2026-06-27T16:02:12.608743-07:00",
           "kickoff_utc": "2026-06-27T21:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 27\n\nHalf-time:\nColombia 0 - 0 Portugal\nMiami (Miami Gardens), USA\nPrediction: Portugal",
+          "sent": true,
+          "hash": "663792b4ea3c89b6",
+          "key": "ht-2026-06-27-65",
+          "generated_at": "2026-06-27T17:20:39.970490-07:00",
+          "kickoff_utc": "2026-06-27T23:30:00Z"
         }
       ]
     }
@@ -6260,8 +6269,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+1'",
-          "ht": false,
+          "clock": "45'+3'",
+          "ht": true,
           "events": []
         },
         {
@@ -6280,7 +6289,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+1'",
+          "clock": "45'+4'",
           "ht": false,
           "events": [
             {
@@ -6334,8 +6343,8 @@
       "kickoff_utc": "2026-06-27T23:30:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+1'",
+      "status": "HT",
+      "clock": "45'+3'",
       "events": []
     },
     {
@@ -6348,7 +6357,7 @@
       "hg": 0,
       "ag": 1,
       "status": "LIVE",
-      "clock": "45'+1'",
+      "clock": "45'+4'",
       "events": [
         {
           "kind": "goal",
@@ -8986,8 +8995,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+1'",
-          "ht": false,
+          "clock": "45'+3'",
+          "ht": true,
           "events": []
         },
         {
@@ -9006,7 +9015,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+1'",
+          "clock": "45'+4'",
           "ht": false,
           "events": [
             {
