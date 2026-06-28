@@ -1558,6 +1558,15 @@
           "key": "ht-2026-06-27-65",
           "generated_at": "2026-06-27T17:20:39.970490-07:00",
           "kickoff_utc": "2026-06-27T23:30:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, June 27\n\nHalf-time:\nDR Congo 0 - 1 Uzbekistan\nAtlanta, USA\n  ⚽ 10' Eldor Shomurodov (Uzbekistan)\nPrediction: Uzbekistan",
+          "sent": true,
+          "hash": "e090a7b823b98765",
+          "key": "ht-2026-06-27-66",
+          "generated_at": "2026-06-27T17:27:13.503650-07:00",
+          "kickoff_utc": "2026-06-27T23:30:00Z"
         }
       ]
     }
@@ -6290,7 +6299,7 @@
           "hg": 0,
           "ag": 1,
           "clock": "45'+7'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -6356,7 +6365,7 @@
       "kickoff_utc": "2026-06-27T23:30:00Z",
       "hg": 0,
       "ag": 1,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+7'",
       "events": [
         {
@@ -9016,7 +9025,7 @@
           "hg": 0,
           "ag": 1,
           "clock": "45'+7'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
