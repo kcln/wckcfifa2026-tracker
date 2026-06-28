@@ -6278,7 +6278,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "90'",
+          "clock": "90'+3'",
           "ht": false,
           "events": []
         },
@@ -6296,9 +6296,9 @@
             "pick": "Uzbekistan"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 1,
-          "clock": "88'",
+          "clock": "90'+2'",
           "ht": false,
           "events": [
             {
@@ -6318,6 +6318,12 @@
               "player": "Fiston Mayele",
               "team": "DR Congo",
               "minute": "78'"
+            },
+            {
+              "kind": "goal",
+              "player": "Yoane Wissa",
+              "team": "DR Congo",
+              "minute": "90'+1'"
             }
           ]
         },
@@ -6365,7 +6371,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "90'",
+      "clock": "90'+3'",
       "events": []
     },
     {
@@ -6375,10 +6381,10 @@
       "date": "2026-06-27",
       "venue": "Atlanta",
       "kickoff_utc": "2026-06-27T23:30:00Z",
-      "hg": 2,
+      "hg": 3,
       "ag": 1,
       "status": "LIVE",
-      "clock": "88'",
+      "clock": "90'+2'",
       "events": [
         {
           "kind": "goal",
@@ -6397,6 +6403,12 @@
           "player": "Fiston Mayele",
           "team": "DR Congo",
           "minute": "78'"
+        },
+        {
+          "kind": "goal",
+          "player": "Yoane Wissa",
+          "team": "DR Congo",
+          "minute": "90'+1'"
         }
       ]
     }
@@ -9028,7 +9040,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "90'",
+          "clock": "90'+3'",
           "ht": false,
           "events": []
         },
@@ -9046,9 +9058,9 @@
             "pick": "Uzbekistan"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 1,
-          "clock": "88'",
+          "clock": "90'+2'",
           "ht": false,
           "events": [
             {
@@ -9068,6 +9080,12 @@
               "player": "Fiston Mayele",
               "team": "DR Congo",
               "minute": "78'"
+            },
+            {
+              "kind": "goal",
+              "player": "Yoane Wissa",
+              "team": "DR Congo",
+              "minute": "90'+1'"
             }
           ]
         },
