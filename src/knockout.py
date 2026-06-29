@@ -290,8 +290,9 @@ def resolve_bracket(matches: list, group_tables: dict,
         res = ko_results.get(str(m["id"])) or ko_results.get(m["id"])
         if res and not is_descriptor(h) and not is_descriptor(a):
             hg, ag = res.get("home_goals", 0), res.get("away_goals", 0)
-            ko_w[str(m["id"])] = h if hg >= ag else a
-            ko_l[str(m["id"])] = a if hg >= ag else h
+            if hg != ag:                     # a knockout level at FT goes to
+                ko_w[str(m["id"])] = h if hg > ag else a   # penalties — don't
+                ko_l[str(m["id"])] = a if hg > ag else h   # guess the winner
     return out
 
 

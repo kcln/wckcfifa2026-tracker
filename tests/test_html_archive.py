@@ -752,3 +752,17 @@ def test_bracket_colour_codes_today_and_tomorrow(tmp_path):
     # M73 is today (Jun 28), M75 is tomorrow (Jun 29)
     assert re.search(r'<div class="bkm bkm-today">.*?M73', html, re.S)
     assert re.search(r'<div class="bkm bkm-tomorrow">.*?M75', html, re.S)
+
+
+def test_bracket_keeps_feeder_token_while_match_is_live(tmp_path):
+    # Regression: a live/half-time scoreline must NOT advance a winner. M73 is
+    # in progress (Canada leading); the R16 W73 slot stays "W73", not "Canada".
+    state = _ko_with_result()
+    m73 = state["schedule"][0]["matches"][0]
+    m73["status"] = "live"
+    m73["clock"] = "45'+4'"
+    out = tmp_path / "i.html"
+    ha.render(state, out, today="2026-06-28")
+    html = out.read_text()
+    assert '<span class="bkm-nm">W73</span>' in html        # feeder NOT resolved
+    assert html.count('<span class="bkm-nm">Canada</span>') == 1  # only the R32 box

@@ -733,9 +733,10 @@ def _bracket_html(state: dict, today: str | None = None) -> str:
     clinched = knockout.clinched_set(groups, sched)
     # Best-third combo slots resolve via the FIFA combination table once groups
     # are decided; pass the resolution in so '3A/B/C/D/F' shows a real team.
+    # ONLY full-time results advance a winner into the next round — a live or
+    # half-time scoreline must never fill the W##/L## feeder slot.
     ko_results = {str(m["id"]): {"home_goals": m.get("hg"), "away_goals": m.get("ag")}
-                  for m in ko if m.get("status") in ("FT", "live")
-                  and m.get("hg") is not None}
+                  for m in ko if m.get("status") == "FT" and m.get("hg") is not None}
     resolved = knockout.resolve_bracket(ko, groups, ko_results)
     tomorrow = _next_day(today) if today else ""
 

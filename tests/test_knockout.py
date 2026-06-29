@@ -258,3 +258,15 @@ def test_resolve_bracket_assigns_thirds_via_fifa_table():
     assert res["87"][1] == "L3"    # 1K plays 3L
     # no '3////' token survives for a resolved combo
     assert not any("/" in h or "/" in a for h, a in res.values())
+
+
+def test_resolve_bracket_does_not_advance_winner_on_draw():
+    # A knockout level at full time is decided on penalties — we can't tell the
+    # winner from goals, so the feeder slot must stay a token, not guess home.
+    groups = {"A": _decided("Mexico", "South Africa", "SK", "CZ"),
+              "B": _decided("Switzerland", "Canada", "BIH", "Qatar")}
+    matches = [
+        {"id": "73", "stage": "R32", "home": "2A", "away": "2B"},
+        {"id": "90", "stage": "R16", "home": "W73", "away": "W75"}]
+    res = k.resolve_bracket(matches, groups, {"73": {"home_goals": 1, "away_goals": 1}})
+    assert res["90"][0] == "W73"          # draw -> winner unknown, stays token
