@@ -6855,9 +6855,9 @@
             "pick": "Germany"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "54'",
+          "clock": "57'",
           "ht": false,
           "events": [
             {
@@ -6865,6 +6865,12 @@
               "player": "Julio Enciso",
               "team": "Paraguay",
               "minute": "42'"
+            },
+            {
+              "kind": "goal",
+              "player": "Kai Havertz",
+              "team": "Germany",
+              "minute": "54'"
             }
           ]
         },
@@ -6894,16 +6900,22 @@
       "date": "2026-06-29",
       "venue": "Boston (Foxborough)",
       "kickoff_utc": "2026-06-29T20:30:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 1,
       "status": "LIVE",
-      "clock": "54'",
+      "clock": "57'",
       "events": [
         {
           "kind": "goal",
           "player": "Julio Enciso",
           "team": "Paraguay",
           "minute": "42'"
+        },
+        {
+          "kind": "goal",
+          "player": "Kai Havertz",
+          "team": "Germany",
+          "minute": "54'"
         }
       ]
     }
@@ -9770,9 +9782,9 @@
             "pick": "1E"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "54'",
+          "clock": "57'",
           "ht": false,
           "events": [
             {
@@ -9780,6 +9792,12 @@
               "player": "Julio Enciso",
               "team": "Paraguay",
               "minute": "42'"
+            },
+            {
+              "kind": "goal",
+              "player": "Kai Havertz",
+              "team": "Germany",
+              "minute": "54'"
             }
           ]
         },
