@@ -648,14 +648,23 @@ def _slot_html(token: str, groups: dict, clinched: set,
 
 
 def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict,
-                 clinched: set | None = None) -> str:
+                 clinched: set | None = None, resolved: dict | None = None) -> str:
     clinched = clinched or set()
+    rh, ra = (resolved or {}).get(str(m.get("id")), (None, None))
     ht, at = str(m.get("home", "")), str(m.get("away", ""))
-    hl = _slot_html(ht, groups, clinched, winners, losers)
-    al = _slot_html(at, groups, clinched, winners, losers)
-    # Projected (live table) vs locked (group decided / feeder played).
-    h_proj = not knockout.slot_locked(ht, groups, winners, losers)
-    a_proj = not knockout.slot_locked(at, groups, winners, losers)
+
+    def label_and_proj(token, rteam):
+        # A best-third combo ('3A/B/C/D/F') resolves via the FIFA table to a real
+        # team (full name, no longer projected); everything else goes through the
+        # usual slot resolver/styling.
+        if (token[:1] == "3" and "/" in token
+                and rteam and not knockout.is_descriptor(rteam)):
+            return escape(str(rteam)), False
+        return (_slot_html(token, groups, clinched, winners, losers),
+                not knockout.slot_locked(token, groups, winners, losers))
+
+    hl, h_proj = label_and_proj(ht, rh)
+    al, a_proj = label_and_proj(at, ra)
     st = m.get("status")
     played = st in ("FT", "live")
     hg, ag = int(m.get("hg") or 0), int(m.get("ag") or 0)
@@ -706,6 +715,12 @@ def _bracket_html(state: dict) -> str:
     pos = _bracket_positions(by_id)
     winners, losers = {}, {}                # resolved as knockout results land
     clinched = knockout.clinched_set(groups, sched)
+    # Best-third combo slots resolve via the FIFA combination table once groups
+    # are decided; pass the resolution in so '3A/B/C/D/F' shows a real team.
+    ko_results = {str(m["id"]): {"home_goals": m.get("hg"), "away_goals": m.get("ag")}
+                  for m in ko if m.get("status") in ("FT", "live")
+                  and m.get("hg") is not None}
+    resolved = knockout.resolve_bracket(ko, groups, ko_results)
 
     rounds: dict = {}
     for m in ko:
@@ -714,7 +729,7 @@ def _bracket_html(state: dict) -> str:
         rounds[st].sort(key=lambda x: pos.get(str(x["id"]), 0))
 
     def box(m):
-        return _bracket_box(m, groups, winners, losers, clinched)
+        return _bracket_box(m, groups, winners, losers, clinched, resolved)
 
     def feeder_round(label, ms):
         pairs = ""

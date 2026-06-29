@@ -88,6 +88,14 @@ def clinched_qualifiers(groups: dict, schedule: list) -> dict:
         games_played = sum(t.get("played", 0) for t in rows) // 2
         if games_played + len(fixtures) != expected:
             continue
+        if not fixtures:
+            # Group is finished: the actual top two (final standings, GD/GF
+            # already applied) are through — never re-derive from points alone,
+            # which would wrongly drop a runner-up that's level on points with
+            # the 3rd-placed team but ahead on goal difference.
+            if len(rows) >= 2:
+                out[grp] = {rows[0]["team"], rows[1]["team"]}
+            continue
         safe = set(teams)
         for combo in itertools.product((0, 1, 2), repeat=len(fixtures)):
             pts = dict(base)
@@ -198,6 +206,18 @@ def is_descriptor(s: str) -> bool:
     return False
 
 
+# FIFA Annex C round-of-32 third-place combination table. Keyed by the frozenset
+# of the eight groups whose third-placed team qualified; the value maps each
+# group WINNER (that faces a third) to the GROUP whose third it plays. There are
+# 495 possible combinations; only realized ones are encoded as the tournament
+# reaches them. {B,D,E,F,I,J,K,L} is the 2026 actual combination (Wikipedia /
+# Annex C row 67).
+_THIRD_PLACE_TABLE = {
+    frozenset("BDEFIJKL"): {"A": "E", "B": "J", "D": "B", "E": "D",
+                            "G": "I", "I": "F", "K": "L", "L": "K"},
+}
+
+
 def resolve_bracket(matches: list, group_tables: dict,
                     ko_results: dict | None = None) -> dict:
     """Map each knockout match's slot descriptors to real team names where they
@@ -207,29 +227,59 @@ def resolve_bracket(matches: list, group_tables: dict,
     Returns {match_id: (home, away)} for every non-group match; each side is the
     resolved team name, or the original descriptor when still unknown. Group
     winners/runners-up resolve once that group is decided and W##/L## feeders
-    resolve as knockout results land. Best-third slots ('3A/B/C/D/F') are left
-    as their token on purpose: which specific qualifying third fills each slot
-    follows FIFA's fixed combination table, which we don't encode yet, so we
-    show the honest placeholder rather than risk a wrong matchup."""
+    resolve as knockout results land. Best-third slots ('3A/B/C/D/F') resolve via
+    FIFA's fixed combination table once every group is decided (the eight
+    qualifying thirds are matched to group winners per Annex C); combinations the
+    table doesn't encode are left as the honest placeholder."""
     gt = group_tables or {}
     ko_results = ko_results or {}
     winners, runners = {}, {}
+    all_decided = bool(gt)
+    third_rows = []
     for g, rows in gt.items():
-        if (rows and len(rows) >= 2
-                and all(r.get("played", 0) >= len(rows) - 1 for r in rows)):
+        decided = (rows and len(rows) >= 2
+                   and all(r.get("played", 0) >= len(rows) - 1 for r in rows))
+        if decided:
             winners[g] = rows[0]["team"]
             runners[g] = rows[1]["team"]
+            if len(rows) >= 3:
+                third_rows.append((g, rows[2]))
+        else:
+            all_decided = False
 
     ko = sorted([m for m in matches if m.get("stage") not in ("group", None)],
                 key=lambda m: int(m["id"]))
+
+    # Best-third slot -> real team, via the FIFA Annex C combination table.
+    third_assign = {}                        # third descriptor -> team name
+    if all_decided and len(third_rows) == len(gt) and len(gt) >= 12:
+        order = sorted(third_rows, key=lambda gr: (-gr[1].get("points", 0),
+                                                   -gr[1].get("gd", 0),
+                                                   -gr[1].get("gf", 0),
+                                                   gr[1].get("team", "")))
+        qual_groups = frozenset(g for g, _ in order[:8])
+        winner_to_third = _THIRD_PLACE_TABLE.get(qual_groups)
+        if winner_to_third:
+            third_team = {g: r["team"] for g, r in third_rows}
+            for m in ko:
+                for side, other in (("home", "away"), ("away", "home")):
+                    d = str(m.get(side, ""))
+                    o = str(m.get(other, ""))
+                    if (_is_third_desc(d) and len(o) >= 2 and o[0] == "1"
+                            and o[1:] in winner_to_third):
+                        tg = winner_to_third[o[1:]]    # which group's third
+                        if tg in third_team:
+                            third_assign[d] = third_team[tg]
 
     def resolve_one(desc, ko_w, ko_l):
         d = (desc or "").strip()
         if len(d) >= 2 and d[0] in "12" and d[1:].isalpha() and "/" not in d:
             return (winners if d[0] == "1" else runners).get(d[1:])
+        if _is_third_desc(d):
+            return third_assign.get(d)
         if d[:1] in ("W", "L") and d[1:].isdigit():
             return (ko_w if d[0] == "W" else ko_l).get(d[1:])
-        return None                          # third combos stay as their token
+        return None
 
     ko_w, ko_l = {}, {}
     out = {}

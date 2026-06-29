@@ -212,3 +212,49 @@ def test_is_descriptor():
     assert k.is_descriptor("W74") and k.is_descriptor("L101")
     assert k.is_descriptor("3A/B/C/D/F")
     assert not k.is_descriptor("South Africa") and not k.is_descriptor("Germany")
+
+
+def test_complete_group_runner_up_clinched_despite_points_tie_with_third():
+    # Group finished: the runner-up is level on points with the 3rd-placed team
+    # but ahead on GD, so it IS through — points-only logic must not drop it.
+    groups = {"B": [
+        {"team": "Switzerland", "played": 3, "points": 7, "gd": 4, "gf": 7, "ga": 3},
+        {"team": "Canada", "played": 3, "points": 4, "gd": 5, "gf": 8, "ga": 3},
+        {"team": "Bosnia", "played": 3, "points": 4, "gd": -1, "gf": 5, "ga": 6},
+        {"team": "Qatar", "played": 3, "points": 1, "gd": -8, "gf": 2, "ga": 10}]}
+    cs = k.clinched_set(groups, [])
+    assert "Switzerland" in cs and "Canada" in cs    # both top-2 through
+    assert "Bosnia" not in cs                         # 3rd is not a top-2 clinch
+
+
+def _twelve_groups(strong):
+    groups = {}
+    for L in "ABCDEFGHIJKL":
+        tp = 4 if L in strong else 0
+        groups[L] = [
+            {"team": f"{L}1", "played": 3, "points": 9, "gd": 9, "gf": 9, "ga": 0},
+            {"team": f"{L}2", "played": 3, "points": 6, "gd": 3, "gf": 5, "ga": 2},
+            {"team": f"{L}3", "played": 3, "points": tp, "gd": 0, "gf": 3, "ga": 3},
+            {"team": f"{L}4", "played": 3, "points": 0, "gd": -9, "gf": 0, "ga": 9}]
+    return groups
+
+
+def test_resolve_bracket_assigns_thirds_via_fifa_table():
+    # Qualifying thirds from groups B,D,E,F,I,J,K,L -> FIFA Annex C row: 1E plays
+    # 3D, 1D plays 3B, 1B plays 3J, 1A plays 3E, 1K plays 3L.
+    groups = _twelve_groups(set("BDEFIJKL"))
+    matches = [
+        {"id": "74", "stage": "R32", "home": "1E", "away": "3A/B/C/D/F"},
+        {"id": "79", "stage": "R32", "home": "1A", "away": "3C/E/F/H/I"},
+        {"id": "81", "stage": "R32", "home": "1D", "away": "3B/E/F/I/J"},
+        {"id": "85", "stage": "R32", "home": "1B", "away": "3E/F/G/I/J"},
+        {"id": "87", "stage": "R32", "home": "1K", "away": "3D/E/I/J/L"},
+    ]
+    res = k.resolve_bracket(matches, groups, {})
+    assert res["74"][1] == "D3"    # 1E plays 3D
+    assert res["79"][1] == "E3"    # 1A plays 3E
+    assert res["81"][1] == "B3"    # 1D plays 3B
+    assert res["85"][1] == "J3"    # 1B plays 3J
+    assert res["87"][1] == "L3"    # 1K plays 3L
+    # no '3////' token survives for a resolved combo
+    assert not any("/" in h or "/" in a for h, a in res.values())
