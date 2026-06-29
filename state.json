@@ -6766,9 +6766,9 @@
             "pick": "Japan"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "90'+4'",
+          "clock": "90'+8'",
           "ht": false,
           "events": [
             {
@@ -6782,6 +6782,12 @@
               "player": "Casemiro",
               "team": "Brazil",
               "minute": "56'"
+            },
+            {
+              "kind": "goal",
+              "player": "Gabriel Martinelli",
+              "team": "Brazil",
+              "minute": "90'+5'"
             }
           ]
         },
@@ -6826,10 +6832,10 @@
       "date": "2026-06-29",
       "venue": "Houston",
       "kickoff_utc": "2026-06-29T17:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 1,
       "status": "LIVE",
-      "clock": "90'+4'",
+      "clock": "90'+8'",
       "events": [
         {
           "kind": "goal",
@@ -6842,6 +6848,12 @@
           "player": "Casemiro",
           "team": "Brazil",
           "minute": "56'"
+        },
+        {
+          "kind": "goal",
+          "player": "Gabriel Martinelli",
+          "team": "Brazil",
+          "minute": "90'+5'"
         }
       ]
     }
@@ -9670,9 +9682,9 @@
             "pick": "1C"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "90'+4'",
+          "clock": "90'+8'",
           "ht": false,
           "events": [
             {
@@ -9686,6 +9698,12 @@
               "player": "Casemiro",
               "team": "Brazil",
               "minute": "56'"
+            },
+            {
+              "kind": "goal",
+              "player": "Gabriel Martinelli",
+              "team": "Brazil",
+              "minute": "90'+5'"
             }
           ]
         },
