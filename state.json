@@ -6766,9 +6766,9 @@
             "pick": "Japan"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "54'",
+          "clock": "57'",
           "ht": false,
           "events": [
             {
@@ -6776,6 +6776,12 @@
               "player": "Kaishu Sano",
               "team": "Japan",
               "minute": "29'"
+            },
+            {
+              "kind": "goal",
+              "player": "Casemiro",
+              "team": "Brazil",
+              "minute": "56'"
             }
           ]
         },
@@ -6820,16 +6826,22 @@
       "date": "2026-06-29",
       "venue": "Houston",
       "kickoff_utc": "2026-06-29T17:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 1,
       "status": "LIVE",
-      "clock": "54'",
+      "clock": "57'",
       "events": [
         {
           "kind": "goal",
           "player": "Kaishu Sano",
           "team": "Japan",
           "minute": "29'"
+        },
+        {
+          "kind": "goal",
+          "player": "Casemiro",
+          "team": "Brazil",
+          "minute": "56'"
         }
       ]
     }
@@ -9658,9 +9670,9 @@
             "pick": "1C"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "54'",
+          "clock": "57'",
           "ht": false,
           "events": [
             {
@@ -9668,6 +9680,12 @@
               "player": "Kaishu Sano",
               "team": "Japan",
               "minute": "29'"
+            },
+            {
+              "kind": "goal",
+              "player": "Casemiro",
+              "team": "Brazil",
+              "minute": "56'"
             }
           ]
         },
