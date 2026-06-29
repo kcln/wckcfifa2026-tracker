@@ -168,12 +168,13 @@ def _render_days(days: list[dict]) -> str:
 
 
 def _most_recent_finished(state: dict) -> dict | None:
-    """The finished match with the latest kickoff across the whole schedule.
-    Derived here (not read from state['last_result']) so the hero always tracks
-    the genuinely most-recent result even when last_result lags behind."""
+    """The finished match with the latest kickoff. Read from the `board` (which
+    carries resolved knockout team names) and fall back to the raw `schedule`,
+    so the hero tracks the genuinely most-recent result without showing a
+    knockout slot token like '2A'."""
     best = None
     best_key = ""
-    for day in state.get("schedule") or []:
+    for day in (state.get("board") or []) or (state.get("schedule") or []):
         for m in day.get("matches", []):
             if m.get("status") == "FT" and m.get("hg") is not None:
                 key = (m.get("kickoff_utc") or "", str(m.get("id", "")))

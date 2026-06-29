@@ -233,9 +233,10 @@ def test_board_day_no_live_upcoming_soonest_first_then_finished(tmp_path):
     state = {"days": [], "bracket": {}, "groups": {},
              "board": [{"date": "2026-06-17", "matches": _day17()}]}
     html = _render(state, tmp_path)
-    assert (html.index("England") < html.index("Ghana")
-            < html.index("Uzbekistan")                # upcoming, soonest first
-            < html.index("Portugal"))                 # finished, at the bottom
+    log = html[html.index("Match log"):]              # scope to the match log
+    assert (log.index("England") < log.index("Ghana")
+            < log.index("Uzbekistan")                 # upcoming, soonest first
+            < log.index("Portugal"))                  # finished, at the bottom
 
 
 def test_board_day_live_pinned_then_upcoming_then_finished(tmp_path):
@@ -246,8 +247,9 @@ def test_board_day_live_pinned_then_upcoming_then_finished(tmp_path):
     state = {"days": [], "bracket": {}, "groups": {},
              "board": [{"date": "2026-06-17", "matches": day}]}
     html = _render(state, tmp_path)
-    assert (html.index("England") < html.index("Ghana")
-            < html.index("Uzbekistan") < html.index("Portugal"))
+    log = html[html.index("Match log"):]              # scope to the match log
+    assert (log.index("England") < log.index("Ghana")
+            < log.index("Uzbekistan") < log.index("Portugal"))
 
 
 def _sched_state():
