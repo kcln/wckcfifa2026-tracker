@@ -630,6 +630,23 @@ def _clinch_state():
              "status": "sched"}]}]}
 
 
+def test_standings_qualified_third_gets_purple_band(tmp_path):
+    # A complete group's 3rd-place team that has clinched a best-third berth gets
+    # BOTH the Q badge and the purple qualification band (.qual), like the top 2.
+    state = {"days": [], "bracket": {}, "schedule": [], "groups": {"A": [
+        {"team": "Mexico", "played": 3, "points": 9, "gd": 5, "gf": 6, "ga": 1},
+        {"team": "South Africa", "played": 3, "points": 6, "gd": 2, "gf": 4, "ga": 2},
+        {"team": "South Korea", "played": 3, "points": 3, "gd": -1, "gf": 2, "ga": 3},
+        {"team": "Czechia", "played": 3, "points": 0, "gd": -6, "gf": 1, "ga": 7}]}}
+    html = _render(state, tmp_path)
+    # South Korea (3rd) clinches a best-third spot here -> qual band + Q badge.
+    assert re.search(
+        r'<tr class="qual"><td class="t-team">South Korea <span class="qb">Q</span>',
+        html) is not None
+    # the non-qualifying last team has neither
+    assert '<tr class=""><td class="t-team">Czechia</td>' in html
+
+
 def test_standings_marks_clinched_team_with_q_badge(tmp_path):
     html = _render(_clinch_state(), tmp_path)
     # Mexico has clinched -> gets a Q badge; South Korea (not secure) does not.

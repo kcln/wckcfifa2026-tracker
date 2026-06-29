@@ -160,3 +160,55 @@ def test_clinched_all_unions_top2_and_thirds():
     assert "A1" in allc and "A2" in allc        # group winner + runner-up (top 2)
     assert "A3" in allc                          # a qualifying third (best GD)
     assert "I3" not in allc                      # 9th-best third, not in
+
+
+# --- resolve_bracket: knockout slot tokens -> real team names ---
+
+def _decided(*names):
+    return [{"team": n, "played": 3, "points": 9 - i * 3, "gd": 5 - i,
+             "gf": 6 - i, "ga": 1} for i, n in enumerate(names)]
+
+
+def test_resolve_bracket_resolves_decided_group_slots():
+    groups = {"A": _decided("Mexico", "South Africa", "South Korea", "Czechia"),
+              "B": _decided("Switzerland", "Canada", "Bosnia", "Qatar")}
+    matches = [
+        {"id": "73", "stage": "R32", "home": "2A", "away": "2B"},
+        {"id": "74", "stage": "R32", "home": "1A", "away": "3A/B/C/D/F"},
+        {"id": "90", "stage": "R16", "home": "W73", "away": "W75"},
+        {"id": "1", "stage": "group", "home": "Mexico", "away": "Czechia"},
+    ]
+    res = k.resolve_bracket(matches, groups, {})
+    assert res["73"] == ("South Africa", "Canada")    # runners-up of A, B
+    assert res["74"] == ("Mexico", "3A/B/C/D/F")      # 1A resolves; third stays token
+    assert res["90"] == ("W73", "W75")                # feeders unresolved (no results)
+    assert "1" not in res                              # group match untouched
+
+
+def test_resolve_bracket_feeder_resolves_after_result():
+    groups = {"A": _decided("Mexico", "South Africa", "SK", "CZ"),
+              "B": _decided("Switzerland", "Canada", "BIH", "Qatar"),
+              "C": _decided("Brazil", "Morocco", "SCO", "HAI"),
+              "F": _decided("Netherlands", "Japan", "SWE", "TUN")}
+    matches = [
+        {"id": "73", "stage": "R32", "home": "2A", "away": "2B"},
+        {"id": "75", "stage": "R32", "home": "1F", "away": "2C"},
+        {"id": "90", "stage": "R16", "home": "W73", "away": "W75"},
+    ]
+    # M73 played: South Africa beat Canada -> W73 = South Africa
+    res = k.resolve_bracket(matches, groups, {"73": {"home_goals": 2, "away_goals": 1}})
+    assert res["90"][0] == "South Africa"             # W73 resolved from the result
+
+
+def test_resolve_bracket_undecided_group_stays_token():
+    groups = {"A": [{"team": "Mexico", "played": 2}, {"team": "SA", "played": 2},
+                    {"team": "SK", "played": 2}, {"team": "CZ", "played": 2}]}
+    matches = [{"id": "73", "stage": "R32", "home": "1A", "away": "2B"}]
+    assert k.resolve_bracket(matches, groups, {})["73"] == ("1A", "2B")
+
+
+def test_is_descriptor():
+    assert k.is_descriptor("2A") and k.is_descriptor("1E")
+    assert k.is_descriptor("W74") and k.is_descriptor("L101")
+    assert k.is_descriptor("3A/B/C/D/F")
+    assert not k.is_descriptor("South Africa") and not k.is_descriptor("Germany")

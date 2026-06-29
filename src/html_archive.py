@@ -765,7 +765,7 @@ def _render_standings(state: dict) -> str:
     grps = []
     for g in sorted(groups):
         body = "".join(
-            f'<tr class="{"qual" if n < 2 else ""}">'
+            f'<tr class="{"qual" if (n < 2 or r["team"] in clinched) else ""}">'
             f'<td class="t-team">{escape(str(r["team"]))}'
             f'{" <span class=\"qb\">Q</span>" if r["team"] in clinched else ""}</td>'
             f'<td>{r["played"]}</td><td class="t-pts">{r["points"]}</td>'

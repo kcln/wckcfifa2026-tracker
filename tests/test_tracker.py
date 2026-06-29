@@ -433,3 +433,23 @@ def test_send_pending_prunes_blocked_chat_and_still_marks_sent(tmp_path):
     subs = subscribers.load(subs_path)
     assert subs["approved"] == ["A", "C"]      # B pruned
     assert subs["onboarded"] == ["A", "C"]
+
+
+def test_build_board_resolves_knockout_slot_tokens():
+    from src import fixtures, knockout
+    seed = fixtures.load_seed()
+    merged = fixtures.merge_results(seed, {})
+    mp = lambda h, a: {"home": 0.4, "draw": 0.3, "away": 0.3}
+    # Pretend every group is decided so 1X/2X slots resolve.
+    tables = {}
+    for g, teams in merged["groups"].items():
+        tables[g] = [{"team": t, "played": 3, "points": 9 - i, "gd": 5 - i,
+                      "gf": 6, "ga": 1} for i, t in enumerate(teams)]
+    resolved = knockout.resolve_bracket(merged["matches"], tables, {})
+    m73 = next(m for m in merged["matches"] if str(m["id"]) == "73")
+    board = tracker.build_board(merged, mp, {m73["date"]}, resolved=resolved)
+    entry = next(x for d in board for x in d["matches"] if str(x["id"]) == "73")
+    # 2A/2B are now real team names, not the raw tokens
+    assert not knockout.is_descriptor(entry["home"])
+    assert not knockout.is_descriptor(entry["away"])
+    assert entry["home"] == tables["A"][1]["team"]   # 2A = group A runner-up

@@ -185,6 +185,71 @@ def clinched_all(groups: dict, schedule: list) -> set:
     return clinched_set(groups, schedule) | clinched_thirds(groups, schedule)
 
 
+def is_descriptor(s: str) -> bool:
+    """True if `s` is still an unresolved knockout slot token ('1A', '2C',
+    '3A/B/C/D/F', 'W74', 'L101') rather than a real team name."""
+    s = (s or "").strip()
+    if len(s) >= 2 and s[0] in "12" and s[1:].isalpha() and "/" not in s:
+        return True
+    if s[:1] == "3" and "/" in s:
+        return True
+    if s[:1] in ("W", "L") and s[1:].isdigit():
+        return True
+    return False
+
+
+def resolve_bracket(matches: list, group_tables: dict,
+                    ko_results: dict | None = None) -> dict:
+    """Map each knockout match's slot descriptors to real team names where they
+    are determinable, so the site, Telegram, and result reconciliation use real
+    matchups instead of '2A vs 2B'.
+
+    Returns {match_id: (home, away)} for every non-group match; each side is the
+    resolved team name, or the original descriptor when still unknown. Group
+    winners/runners-up resolve once that group is decided and W##/L## feeders
+    resolve as knockout results land. Best-third slots ('3A/B/C/D/F') are left
+    as their token on purpose: which specific qualifying third fills each slot
+    follows FIFA's fixed combination table, which we don't encode yet, so we
+    show the honest placeholder rather than risk a wrong matchup."""
+    gt = group_tables or {}
+    ko_results = ko_results or {}
+    winners, runners = {}, {}
+    for g, rows in gt.items():
+        if (rows and len(rows) >= 2
+                and all(r.get("played", 0) >= len(rows) - 1 for r in rows)):
+            winners[g] = rows[0]["team"]
+            runners[g] = rows[1]["team"]
+
+    ko = sorted([m for m in matches if m.get("stage") not in ("group", None)],
+                key=lambda m: int(m["id"]))
+
+    def resolve_one(desc, ko_w, ko_l):
+        d = (desc or "").strip()
+        if len(d) >= 2 and d[0] in "12" and d[1:].isalpha() and "/" not in d:
+            return (winners if d[0] == "1" else runners).get(d[1:])
+        if d[:1] in ("W", "L") and d[1:].isdigit():
+            return (ko_w if d[0] == "W" else ko_l).get(d[1:])
+        return None                          # third combos stay as their token
+
+    ko_w, ko_l = {}, {}
+    out = {}
+    for m in ko:
+        h = resolve_one(str(m.get("home", "")), ko_w, ko_l) or str(m.get("home", ""))
+        a = resolve_one(str(m.get("away", "")), ko_w, ko_l) or str(m.get("away", ""))
+        out[str(m["id"])] = (h, a)
+        res = ko_results.get(str(m["id"])) or ko_results.get(m["id"])
+        if res and not is_descriptor(h) and not is_descriptor(a):
+            hg, ag = res.get("home_goals", 0), res.get("away_goals", 0)
+            ko_w[str(m["id"])] = h if hg >= ag else a
+            ko_l[str(m["id"])] = a if hg >= ag else h
+    return out
+
+
+def _is_third_desc(desc) -> bool:
+    d = str(desc or "")
+    return d[:1] == "3" and "/" in d
+
+
 def _group_complete(grp: str, groups: dict) -> bool:
     """A group is decided once every team has played all its group games (a
     4-team round-robin = 3 each), so 1st/2nd are final."""
