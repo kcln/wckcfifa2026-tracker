@@ -6845,7 +6845,12 @@
             "away": 0.2159136092608439,
             "pick": "Germany"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "75",
@@ -6865,7 +6870,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "74",
+      "home": "Germany",
+      "away": "Paraguay",
+      "date": "2026-06-29",
+      "venue": "Boston (Foxborough)",
+      "kickoff_utc": "2026-06-29T20:30:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "4'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -9727,7 +9746,12 @@
             "away": 0.365,
             "pick": "1E"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "75",
