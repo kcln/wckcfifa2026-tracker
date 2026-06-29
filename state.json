@@ -6855,9 +6855,9 @@
             "pick": "Germany"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "101'",
+          "clock": "104'",
           "ht": false,
           "events": [
             {
@@ -6871,6 +6871,12 @@
               "player": "Kai Havertz",
               "team": "Germany",
               "minute": "54'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jonathan Tah",
+              "team": "Germany",
+              "minute": "102'"
             }
           ]
         },
@@ -6900,10 +6906,10 @@
       "date": "2026-06-29",
       "venue": "Boston (Foxborough)",
       "kickoff_utc": "2026-06-29T20:30:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 1,
       "status": "LIVE",
-      "clock": "101'",
+      "clock": "104'",
       "events": [
         {
           "kind": "goal",
@@ -6916,6 +6922,12 @@
           "player": "Kai Havertz",
           "team": "Germany",
           "minute": "54'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jonathan Tah",
+          "team": "Germany",
+          "minute": "102'"
         }
       ]
     }
@@ -9782,9 +9794,9 @@
             "pick": "1E"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "101'",
+          "clock": "104'",
           "ht": false,
           "events": [
             {
@@ -9798,6 +9810,12 @@
               "player": "Kai Havertz",
               "team": "Germany",
               "minute": "54'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jonathan Tah",
+              "team": "Germany",
+              "minute": "102'"
             }
           ]
         },
