@@ -1766,6 +1766,15 @@
           "key": "pm-2026-06-29-76",
           "generated_at": "2026-06-29T12:06:14.581363-07:00",
           "kickoff_utc": "2026-06-29T17:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 29\n\nHalf-time:\nGermany 0 - 1 Paraguay\nBoston (Foxborough), USA\n  ⚽ 42' Julio Enciso (Paraguay)\nPrediction: Germany",
+          "sent": true,
+          "hash": "99ec4f0d923f4f48",
+          "key": "ht-2026-06-29-74",
+          "generated_at": "2026-06-29T14:23:10.204758-07:00",
+          "kickoff_utc": "2026-06-29T20:30:00Z"
         }
       ]
     }
@@ -6848,8 +6857,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -6887,8 +6896,8 @@
       "kickoff_utc": "2026-06-29T20:30:00Z",
       "hg": 0,
       "ag": 1,
-      "status": "LIVE",
-      "clock": "45'+4'",
+      "status": "HT",
+      "clock": "45'+5'",
       "events": [
         {
           "kind": "goal",
@@ -9763,8 +9772,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
