@@ -707,3 +707,48 @@ def test_bracket_two_clinched_teams_split_across_their_two_slots(tmp_path):
     # the buggy combined slot must never appear
     assert '<span class="qlk">France</span> / <span class="qlk">Norway</span>' not in html
     assert "FRA / NOR" not in html
+
+
+def _ko_with_result():
+    return {"days": [], "bracket": {}, "groups": {
+        "A": [{"team": "Mexico", "played": 3, "points": 9, "gd": 5, "gf": 6, "ga": 1},
+              {"team": "South Korea", "played": 3, "points": 6, "gd": 2, "gf": 4, "ga": 2},
+              {"team": "Czechia", "played": 3, "points": 3, "gd": -1, "gf": 2, "ga": 3},
+              {"team": "RSA", "played": 3, "points": 0, "gd": -6, "gf": 1, "ga": 7}],
+        "B": [{"team": "Switzerland", "played": 3, "points": 7, "gd": 4, "gf": 7, "ga": 3},
+              {"team": "Canada", "played": 3, "points": 4, "gd": 5, "gf": 8, "ga": 3},
+              {"team": "Bosnia", "played": 3, "points": 4, "gd": -1, "gf": 5, "ga": 6},
+              {"team": "Qatar", "played": 3, "points": 1, "gd": -8, "gf": 2, "ga": 10}]},
+        "schedule": [
+            {"date": "2026-06-28", "matches": [
+                {"id": "73", "home": "2A", "away": "2B", "stage": "R32",
+                 "kickoff_utc": "2026-06-28T19:00:00Z", "venue": "Atlanta",
+                 "status": "FT", "hg": 0, "ag": 1, "events": []}]},
+            {"date": "2026-06-29", "matches": [
+                {"id": "75", "home": "1A", "away": "2A", "stage": "R32",
+                 "kickoff_utc": "2026-06-29T19:00:00Z", "venue": "Dallas (Arlington)",
+                 "status": "sched"}]},
+            {"date": "2026-07-04", "matches": [
+                {"id": "90", "home": "W73", "away": "W75", "stage": "R16",
+                 "kickoff_utc": "2026-07-04T19:00:00Z", "venue": "Houston",
+                 "status": "sched"}]}]}
+
+
+def test_bracket_resolves_winner_feeder_the_moment_a_match_is_won(tmp_path):
+    out = tmp_path / "i.html"
+    ha.render(_ko_with_result(), out, today="2026-06-28")
+    html = out.read_text()
+    # 2B = Canada (group B runner-up); Canada won M73 0-1, so W73 -> Canada in M90.
+    assert html.count('<span class="bkm-nm">Canada</span>') == 2   # R32 box + R16 feeder
+    assert '<span class="bkm-nm">W73</span>' not in html           # feeder resolved
+    assert '<span class="bkm-nm">W75</span>' in html               # not yet played
+
+
+def test_bracket_colour_codes_today_and_tomorrow(tmp_path):
+    out = tmp_path / "i.html"
+    ha.render(_ko_with_result(), out, today="2026-06-28")
+    html = out.read_text()
+    assert "bkm-today" in html and "bkm-tomorrow" in html     # legend + boxes
+    # M73 is today (Jun 28), M75 is tomorrow (Jun 29)
+    assert re.search(r'<div class="bkm bkm-today">.*?M73', html, re.S)
+    assert re.search(r'<div class="bkm bkm-tomorrow">.*?M75', html, re.S)

@@ -499,15 +499,8 @@ def _due_for_day(stateobj: dict, merged: dict, match_prob, date_iso: str,
         _add_message(day, existing, "daily_recap", date_iso, recap,
                      key=f"dr-{date_iso}", kickoff_utc=_first_kickoff(todays))
 
-    # 4) Bracket update — on any knockout date.
-    if any(m["stage"] != "group" for m in todays):
-        bracket = stateobj.get("bracket") or {}
-        body = message_builder.bracket_update(
-            bracket.get("title_odds") or {},
-            bracket.get("advancement") or {},
-        )
-        _add_message(day, existing, "bracket_update", date_iso, body,
-                     kickoff_utc=_first_kickoff(todays))
+    # (The standalone "Title Odds Update" bracket message was removed per KC —
+    # the odds still drive the website; they're no longer pushed to Telegram.)
 
 
 def _due_messages(stateobj: dict, merged: dict, match_prob, now_iso: str,

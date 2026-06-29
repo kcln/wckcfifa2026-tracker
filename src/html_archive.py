@@ -523,15 +523,16 @@ def _render_schedule(state: dict, today: str | None = None) -> str:
     Jun 27) flow straight into the knockout bracket on the right — both visible
     at once, no date gate. (`today` kept for signature compatibility.)"""
     strip = _strip_columns(state)
-    bracket = _bracket_html(state)
+    bracket = _bracket_html(state, today)
     if not strip and not bracket:
         return ""
     divider = ('<div class="sched-div"><span>Knockouts</span></div>'
                if strip and bracket else "")
-    note = ('<div class="sched-note"><em>Italic</em> bracket teams are projected '
-            'from the live table; once a team <span class="qlk">clinches</span> '
-            'a Round-of-32 berth the slot drops the others and shows only the '
-            'qualified team. Slots lock fully when the group is decided.</div>'
+    note = ('<div class="sched-note">'
+            '<span class="bkm-key bkm-today">Today</span> and '
+            '<span class="bkm-key bkm-tomorrow">Tomorrow</span> mark when each '
+            'knockout tie is played; <em>italic</em> teams are still projected '
+            'and lock in once the feeding match is decided.</div>'
             if bracket else "")
     return (
         '<details class="section" id="schedule">'
@@ -648,17 +649,18 @@ def _slot_html(token: str, groups: dict, clinched: set,
 
 
 def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict,
-                 clinched: set | None = None, resolved: dict | None = None) -> str:
+                 clinched: set | None = None, resolved: dict | None = None,
+                 today: str | None = None, tomorrow: str | None = None) -> str:
     clinched = clinched or set()
     rh, ra = (resolved or {}).get(str(m.get("id")), (None, None))
     ht, at = str(m.get("home", "")), str(m.get("away", ""))
 
     def label_and_proj(token, rteam):
-        # A best-third combo ('3A/B/C/D/F') resolves via the FIFA table to a real
-        # team (full name, no longer projected); everything else goes through the
-        # usual slot resolver/styling.
-        if (token[:1] == "3" and "/" in token
-                and rteam and not knockout.is_descriptor(rteam)):
+        # Any slot resolved to a real team — a decided group winner/runner-up, a
+        # best-third via the FIFA table, or a W##/L## feeder the moment that match
+        # is won — shows the full name and is no longer projected. Slots still
+        # unknown (future feeders) fall back to the usual resolver/styling.
+        if rteam and not knockout.is_descriptor(rteam):
             return escape(str(rteam)), False
         return (_slot_html(token, groups, clinched, winners, losers),
                 not knockout.slot_locked(token, groups, winners, losers))
@@ -695,16 +697,30 @@ def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict,
     loc = escape(_place(str(m.get("venue", ""))))
     loc_html = f'<div class="bkm-loc">📍 {loc}</div>' if loc else ""
     cls = " live" if st == "live" else ""
+    mdate = m.get("date") or ""
+    if today and mdate == today:
+        cls += " bkm-today"
+    elif tomorrow and mdate == tomorrow:
+        cls += " bkm-tomorrow"
     return (f'<div class="bkm{cls}">{tag}'
             f'{row(hl, hg, st == "FT" and hg > ag, h_proj)}'
             f'{row(al, ag, st == "FT" and ag > hg, a_proj)}{loc_html}</div>')
 
 
-def _bracket_html(state: dict) -> str:
+def _next_day(iso: str) -> str:
+    """The PT calendar day after an ISO date (YYYY-MM-DD), '' if unparseable."""
+    try:
+        from datetime import datetime as _dt, timedelta as _td
+        return (_dt.strptime(iso, "%Y-%m-%d").date() + _td(days=1)).isoformat()
+    except (ValueError, TypeError):
+        return ""
+
+
+def _bracket_html(state: dict, today: str | None = None) -> str:
     """Classic horizontal knockout bracket (R32 → Final) as one inline flex
     block, appended to the right of the group strip. Slot tokens resolve to
-    live country codes; each tie shows its venue. Empty string if no knockout
-    data yet."""
+    live country codes; each tie shows its venue. Ties played today/tomorrow are
+    colour-coded. Empty string if no knockout data yet."""
     sched = state.get("schedule") or []
     groups = state.get("groups") or {}
     ko = [{**m, "date": d.get("date")} for d in sched
@@ -721,6 +737,7 @@ def _bracket_html(state: dict) -> str:
                   for m in ko if m.get("status") in ("FT", "live")
                   and m.get("hg") is not None}
     resolved = knockout.resolve_bracket(ko, groups, ko_results)
+    tomorrow = _next_day(today) if today else ""
 
     rounds: dict = {}
     for m in ko:
@@ -729,7 +746,8 @@ def _bracket_html(state: dict) -> str:
         rounds[st].sort(key=lambda x: pos.get(str(x["id"]), 0))
 
     def box(m):
-        return _bracket_box(m, groups, winners, losers, clinched, resolved)
+        return _bracket_box(m, groups, winners, losers, clinched, resolved,
+                            today=today, tomorrow=tomorrow)
 
     def feeder_round(label, ms):
         pairs = ""
@@ -1010,6 +1028,14 @@ __REFRESH__
     .bk-feeder .bk-pair::before { content: ''; position: absolute; right: -42px; top: 50%; width: 21px; height: 2px; background: var(--hair-soft); }
     .bkm { background: var(--card); border: 1px solid var(--hair-soft); border-radius: 9px; box-shadow: var(--shadow-sm); overflow: hidden; }
     .bkm.live { border-color: var(--p-400); box-shadow: 0 0 0 1px var(--p-400); }
+    /* day colour-coding: today = purple, tomorrow = teal */
+    .bkm.bkm-today { border-color: var(--p-400); box-shadow: inset 4px 0 0 var(--p-500), var(--shadow-sm); }
+    .bkm.bkm-today .bkm-tag { background: var(--p-100); color: var(--p-700); }
+    .bkm.bkm-tomorrow { border-color: #5EAAA8; box-shadow: inset 4px 0 0 #0E7490, var(--shadow-sm); }
+    .bkm.bkm-tomorrow .bkm-tag { background: #E0F2F1; color: #0E7490; }
+    .bkm-key { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; padding: 1px 7px; border-radius: 5px; letter-spacing: 0.04em; }
+    .bkm-key.bkm-today { background: var(--p-100); color: var(--p-700); box-shadow: inset 3px 0 0 var(--p-500); }
+    .bkm-key.bkm-tomorrow { background: #E0F2F1; color: #0E7490; box-shadow: inset 3px 0 0 #0E7490; }
     .bkm-tag { font-family: 'JetBrains Mono', monospace; font-size: 8px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); padding: 3px 9px; border-bottom: 1px solid var(--hair-soft); background: var(--card-2); }
     .bkm-tag.livet { color: var(--p-700); display: flex; align-items: center; gap: 5px; }
     .bkm-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 9px; font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 12.5px; color: var(--ink-soft); }
