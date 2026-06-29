@@ -1680,6 +1680,15 @@
           "key": "bb1ee42da008b76a",
           "generated_at": "2026-06-28T12:55:55.667646-07:00",
           "kickoff_utc": "2026-06-28T19:00:00Z"
+        },
+        {
+          "type": "bracket_update",
+          "body": "FIFA World Cup 2026 — Title Odds Update\n\nTop title probabilities:\n   1. Argentina            — 24.5%\n   2. Spain                — 14.5%\n   3. France               — 13.3%\n   4. England              — 5.4%\n   5. Colombia             — 5.2%\n   6. Germany              — 4.8%\n   7. Brazil               — 4.5%\n   8. Belgium              — 3.5%\n   9. Portugal             — 3.3%\n  10. Netherlands          — 3.2%\n\nAdvancement odds (next round):\n  Egypt                — 100.0%\n  Spain                — 100.0%\n  Mexico               — 100.0%\n  Australia            — 100.0%\n  Argentina            — 100.0%\n  France               — 100.0%\n  Ghana                — 100.0%\n  Austria              — 100.0%\n  Morocco              — 100.0%\n  Portugal             — 100.0%",
+          "sent": true,
+          "hash": "dab63f2051816cef",
+          "key": "dab63f2051816cef",
+          "generated_at": "2026-06-28T18:24:03.389669-07:00",
+          "kickoff_utc": "2026-06-28T19:00:00Z"
         }
       ]
     }
