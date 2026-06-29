@@ -6756,7 +6756,12 @@
             "away": 0.36896500278091293,
             "pick": "Japan"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "74",
@@ -6791,7 +6796,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "76",
+      "home": "Brazil",
+      "away": "Japan",
+      "date": "2026-06-29",
+      "venue": "Houston",
+      "kickoff_utc": "2026-06-29T17:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -9615,7 +9634,12 @@
             "away": 0.365,
             "pick": "1C"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "74",
