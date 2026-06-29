@@ -1736,6 +1736,20 @@
           "kickoff_utc": "2026-06-28T19:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-06-29",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 29\n\nMatchday Brief\n\nBrazil vs Japan\n  Prediction: Japan\n  Brazil 34.2% · Draw 28.9% · Japan 36.9%\n  🕐 10:00am PT / 12:00pm CT / 1:00pm ET / 10:30pm IST\n  📍 Houston, USA\n\nGermany vs Paraguay\n  Prediction: Germany\n  Germany 50.7% · Draw 27.7% · Paraguay 21.6%\n  🕐 1:30pm PT / 3:30pm CT / 4:30pm ET / 2:00am IST (+1d)\n  📍 Boston (Foxborough), USA\n\nNetherlands vs Morocco\n  Prediction: Morocco\n  Netherlands 31.7% · Draw 32.3% · Morocco 36.0%\n  🕐 6:00pm PT / 8:00pm CT / 9:00pm ET / 6:30am IST (+1d)\n  📍 Monterrey (Guadalupe), Mexico",
+          "sent": true,
+          "hash": "b75ca7e3272b0f13",
+          "key": "mb-2026-06-29",
+          "generated_at": "2026-06-29T00:01:59.815063-07:00",
+          "kickoff_utc": "2026-06-29T17:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -6723,6 +6737,56 @@
             }
           ],
           "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-06-29",
+      "matches": [
+        {
+          "id": "76",
+          "home": "Brazil",
+          "away": "Japan",
+          "kickoff_utc": "2026-06-29T17:00:00Z",
+          "venue": "Houston",
+          "stage": "R32",
+          "pred": {
+            "home": 0.3421967234407028,
+            "draw": 0.28883827377838434,
+            "away": 0.36896500278091293,
+            "pick": "Japan"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "74",
+          "home": "Germany",
+          "away": "Paraguay",
+          "kickoff_utc": "2026-06-29T20:30:00Z",
+          "venue": "Boston (Foxborough)",
+          "stage": "R32",
+          "pred": {
+            "home": 0.5073491786039152,
+            "draw": 0.27673721213524094,
+            "away": 0.2159136092608439,
+            "pick": "Germany"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "75",
+          "home": "Netherlands",
+          "away": "Morocco",
+          "kickoff_utc": "2026-06-30T01:00:00Z",
+          "venue": "Monterrey (Guadalupe)",
+          "stage": "R32",
+          "pred": {
+            "home": 0.31666507008972766,
+            "draw": 0.32287575438260363,
+            "away": 0.36045917552766865,
+            "pick": "Morocco"
+          },
+          "status": "sched"
         }
       ]
     }
