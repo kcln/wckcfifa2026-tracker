@@ -1748,6 +1748,15 @@
           "key": "mb-2026-06-29",
           "generated_at": "2026-06-29T00:01:59.815063-07:00",
           "kickoff_utc": "2026-06-29T17:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 29\n\nHalf-time:\nBrazil 0 - 1 Japan\nHouston, USA\n  ⚽ 29' Kaishu Sano (Japan)\nPrediction: Japan",
+          "sent": true,
+          "hash": "dc4babe9d1b60d0e",
+          "key": "ht-2026-06-29-76",
+          "generated_at": "2026-06-29T10:53:02.017364-07:00",
+          "kickoff_utc": "2026-06-29T17:00:00Z"
         }
       ]
     }
@@ -6760,7 +6769,7 @@
           "hg": 0,
           "ag": 1,
           "clock": "45'+4'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -6813,7 +6822,7 @@
       "kickoff_utc": "2026-06-29T17:00:00Z",
       "hg": 0,
       "ag": 1,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+4'",
       "events": [
         {
@@ -9652,7 +9661,7 @@
           "hg": 0,
           "ag": 1,
           "clock": "45'+4'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
