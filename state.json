@@ -6922,11 +6922,18 @@
             "pick": "Morocco"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "72'",
+          "clock": "75'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Cody Gakpo",
+              "team": "Netherlands",
+              "minute": "72'"
+            }
+          ]
         }
       ]
     }
@@ -6939,11 +6946,18 @@
       "date": "2026-06-29",
       "venue": "Monterrey (Guadalupe)",
       "kickoff_utc": "2026-06-30T01:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "72'",
-      "events": []
+      "clock": "75'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Cody Gakpo",
+          "team": "Netherlands",
+          "minute": "72'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -9840,11 +9854,18 @@
             "pick": "1F"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "72'",
+          "clock": "75'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Cody Gakpo",
+              "team": "Netherlands",
+              "minute": "72'"
+            }
+          ]
         }
       ]
     },
