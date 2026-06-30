@@ -1813,6 +1813,20 @@
           "kickoff_utc": "2026-06-29T17:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-06-30",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026\nTuesday, June 30\n\nMatchday Brief\n\nIvory Coast vs Norway\n  Prediction: Norway\n  Ivory Coast 31.4% · Draw 30.1% · Norway 38.5%\n  🕐 10:00am PT / 12:00pm CT / 1:00pm ET / 10:30pm IST\n  📍 Dallas (Arlington), USA\n\nFrance vs Sweden\n  Prediction: France\n  France 68.0% · Draw 20.2% · Sweden 11.8%\n  🕐 2:00pm PT / 4:00pm CT / 5:00pm ET / 2:30am IST (+1d)\n  📍 New York/New Jersey (East Rutherford), USA\n\nMexico vs Ecuador\n  Prediction: Ecuador\n  Mexico 23.3% · Draw 30.4% · Ecuador 46.3%\n  🕐 6:00pm PT / 8:00pm CT / 9:00pm ET / 6:30am IST (+1d)\n  📍 Mexico City, Mexico",
+          "sent": true,
+          "hash": "d488bd07c6a1f9b9",
+          "key": "mb-2026-06-30",
+          "generated_at": "2026-06-30T00:09:55.822294-07:00",
+          "kickoff_utc": "2026-06-30T17:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -2254,38 +2268,38 @@
       "Cape Verde": 0.0002
     },
     "advancement": {
-      "Brazil": 1.0,
-      "France": 1.0,
-      "Switzerland": 1.0,
-      "Netherlands": 1.0,
-      "South Africa": 1.0,
       "Colombia": 1.0,
-      "Senegal": 1.0,
-      "Germany": 1.0,
+      "France": 1.0,
+      "Paraguay": 1.0,
+      "South Africa": 1.0,
       "Algeria": 1.0,
+      "DR Congo": 1.0,
+      "Switzerland": 1.0,
+      "Belgium": 1.0,
+      "Austria": 1.0,
+      "Norway": 1.0,
+      "Portugal": 1.0,
       "Bosnia & Herzegovina": 1.0,
-      "Sweden": 1.0,
+      "Egypt": 1.0,
+      "Netherlands": 1.0,
+      "Germany": 1.0,
+      "Brazil": 1.0,
+      "Morocco": 1.0,
+      "Cape Verde": 1.0,
+      "England": 1.0,
+      "Japan": 1.0,
+      "Ecuador": 1.0,
       "Ghana": 1.0,
       "USA": 1.0,
-      "Portugal": 1.0,
-      "Cape Verde": 1.0,
-      "Argentina": 1.0,
-      "Japan": 1.0,
-      "Egypt": 1.0,
-      "Croatia": 1.0,
-      "Ecuador": 1.0,
-      "Morocco": 1.0,
-      "Austria": 1.0,
-      "Australia": 1.0,
-      "DR Congo": 1.0,
-      "Paraguay": 1.0,
-      "Belgium": 1.0,
-      "Mexico": 1.0,
-      "Norway": 1.0,
-      "Ivory Coast": 1.0,
-      "Spain": 1.0,
       "Canada": 1.0,
-      "England": 1.0
+      "Ivory Coast": 1.0,
+      "Mexico": 1.0,
+      "Croatia": 1.0,
+      "Argentina": 1.0,
+      "Australia": 1.0,
+      "Senegal": 1.0,
+      "Sweden": 1.0,
+      "Spain": 1.0
     }
   },
   "season_ended": false,
@@ -6988,6 +7002,56 @@
           "winner": "Morocco",
           "hpens": 2,
           "apens": 3
+        }
+      ]
+    },
+    {
+      "date": "2026-06-30",
+      "matches": [
+        {
+          "id": "78",
+          "home": "Ivory Coast",
+          "away": "Norway",
+          "kickoff_utc": "2026-06-30T17:00:00Z",
+          "venue": "Dallas (Arlington)",
+          "stage": "R32",
+          "pred": {
+            "home": 0.3142402309865493,
+            "draw": 0.30111383595495583,
+            "away": 0.38464593305849487,
+            "pick": "Norway"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "77",
+          "home": "France",
+          "away": "Sweden",
+          "kickoff_utc": "2026-06-30T21:00:00Z",
+          "venue": "New York/New Jersey (East Rutherford)",
+          "stage": "R32",
+          "pred": {
+            "home": 0.680005455879774,
+            "draw": 0.2020536072225596,
+            "away": 0.11794093689766638,
+            "pick": "France"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "79",
+          "home": "Mexico",
+          "away": "Ecuador",
+          "kickoff_utc": "2026-07-01T01:00:00Z",
+          "venue": "Mexico City",
+          "stage": "R32",
+          "pred": {
+            "home": 0.2333578962321105,
+            "draw": 0.3035929898078767,
+            "away": 0.46304911396001275,
+            "pick": "Ecuador"
+          },
+          "status": "sched"
         }
       ]
     }
