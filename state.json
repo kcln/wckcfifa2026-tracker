@@ -7023,10 +7023,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "40'",
+          "ag": 1,
+          "clock": "43'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Antonio Nusa",
+              "team": "Norway",
+              "minute": "39'"
+            }
+          ]
         },
         {
           "id": "77",
@@ -7070,10 +7077,17 @@
       "venue": "Dallas (Arlington)",
       "kickoff_utc": "2026-06-30T17:00:00Z",
       "hg": 0,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "40'",
-      "events": []
+      "clock": "43'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Antonio Nusa",
+          "team": "Norway",
+          "minute": "39'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -10015,10 +10029,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "40'",
+          "ag": 1,
+          "clock": "43'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Antonio Nusa",
+              "team": "Norway",
+              "minute": "39'"
+            }
+          ]
         },
         {
           "id": "77",
