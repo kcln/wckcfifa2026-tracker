@@ -178,3 +178,15 @@ def test_parse_espn_captures_penalty_winner_and_tally():
     assert e["home_goals"] == 1 and e["away_goals"] == 1
     assert e["winner"] == "Paraguay"
     assert e["home_pens"] == 3 and e["away_pens"] == 4
+
+
+def test_merge_results_carries_penalty_winner_onto_result():
+    from src import fixtures
+    seed = {"matches": [{"id": "74", "home": "Germany", "away": "Paraguay"}]}
+    live = {"74": {"home_goals": 1, "away_goals": 1, "status": "FT",
+                   "winner": "Paraguay", "home_pens": 3, "away_pens": 4,
+                   "events": []}}
+    out = fixtures.merge_results(seed, live)
+    r = out["matches"][0]["result"]
+    assert r["winner"] == "Paraguay"
+    assert r["home_pens"] == 3 and r["away_pens"] == 4

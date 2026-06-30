@@ -22,4 +22,9 @@ def merge_results(seed: dict, live: dict) -> dict:
                            "away_goals": r["away_goals"]}
             if r.get("events"):
                 m["result"]["events"] = r["events"]
+            # Carry the shootout outcome through so a knockout tie level at full
+            # time advances the ACTUAL winner (the goal score can't say who won).
+            for k in ("winner", "home_pens", "away_pens"):
+                if r.get(k) is not None:
+                    m["result"][k] = r[k]
     return out
