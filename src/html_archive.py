@@ -982,7 +982,7 @@ __REFRESH__
     .mc-top .tm.win { color: var(--p-700); }
     .mc-top .mid { font-family: 'Outfit', sans-serif; font-weight: 800; text-align: center; white-space: nowrap; }
     .mc-top .sc { font-size: 22px; }
-    .mc-top .sc .pen { font-size: 13px; font-weight: 500; color: var(--ink-soft); }
+    .mc-top .sc .pen { font-size: 22px; font-weight: 400; color: var(--ink-soft); }
     .mc-top .sc .pen.win { font-weight: 800; color: var(--p-700); }
     .mc-top .dash { margin: 0 5px; color: var(--ink-faint); }
     .mc-top .vsbig { font-size: 12px; color: var(--ink-faint); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; }
