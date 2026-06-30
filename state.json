@@ -7021,7 +7021,12 @@
             "away": 0.38464593305849487,
             "pick": "Norway"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "77",
@@ -7056,7 +7061,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "78",
+      "home": "Ivory Coast",
+      "away": "Norway",
+      "date": "2026-06-30",
+      "venue": "Dallas (Arlington)",
+      "kickoff_utc": "2026-06-30T17:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -9994,7 +10013,12 @@
             "away": 0.365,
             "pick": "2E"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "77",
