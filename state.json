@@ -1852,6 +1852,15 @@
           "key": "ht-2026-06-30-77",
           "generated_at": "2026-06-30T14:52:49.511110-07:00",
           "kickoff_utc": "2026-06-30T21:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nTuesday, June 30\n\nFull time:\n<b>France</b> 3 - 0 Sweden\n<b>France</b> wins\nNew York/New Jersey (East Rutherford), USA\n  ⚽ 45' Kylian Mbappé (France)\n  ⚽ 53' Bradley Barcola (France)\n  ⚽ 74' Kylian Mbappé (France)\nOverall prediction: 43/78 (55.1%)\nPrediction ✓: France",
+          "sent": true,
+          "hash": "8526f206b2bd693e",
+          "key": "pm-2026-06-30-77",
+          "generated_at": "2026-06-30T15:55:24.633929-07:00",
+          "kickoff_utc": "2026-06-30T21:00:00Z"
         }
       ]
     }
@@ -2268,30 +2277,28 @@
   },
   "bracket": {
     "title_odds": {
-      "Canada": 0.0125,
-      "Spain": 0.1471,
-      "Germany": 0.0554,
-      "Brazil": 0.0819,
-      "Algeria": 0.0075,
-      "Portugal": 0.0321,
-      "Argentina": 0.2375,
-      "Colombia": 0.0496,
-      "France": 0.1109,
-      "Netherlands": 0.0589,
-      "England": 0.0587,
-      "Belgium": 0.0378,
-      "Norway": 0.0126,
-      "Croatia": 0.0248,
-      "Ecuador": 0.0261,
-      "Senegal": 0.0126,
-      "Austria": 0.0047,
-      "Paraguay": 0.0038,
-      "Switzerland": 0.0084,
+      "Brazil": 0.0786,
+      "France": 0.1547,
+      "Ecuador": 0.0221,
+      "England": 0.0566,
+      "Argentina": 0.2395,
+      "Spain": 0.1342,
+      "Portugal": 0.0339,
+      "Canada": 0.0102,
+      "Switzerland": 0.0091,
+      "Colombia": 0.0448,
+      "Senegal": 0.0123,
+      "Paraguay": 0.0043,
+      "Netherlands": 0.0525,
+      "Germany": 0.0513,
+      "Algeria": 0.0077,
+      "Croatia": 0.0213,
+      "Norway": 0.0132,
+      "Belgium": 0.0332,
+      "Mexico": 0.0084,
       "Egypt": 0.0039,
-      "Mexico": 0.0077,
-      "Australia": 0.0039,
-      "Sweden": 0.0012,
-      "Cape Verde": 0.0003,
+      "Australia": 0.0047,
+      "Austria": 0.0034,
       "Bosnia & Herzegovina": 0.0001
     },
     "advancement": {
@@ -4134,6 +4141,31 @@
         }
       ],
       "winner": "Norway"
+    },
+    "77": {
+      "home_goals": 3,
+      "away_goals": 0,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "minute": "45'"
+        },
+        {
+          "kind": "goal",
+          "player": "Bradley Barcola",
+          "team": "France",
+          "minute": "53'"
+        },
+        {
+          "kind": "goal",
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "minute": "74'"
+        }
+      ],
+      "winner": "France"
     }
   },
   "board": [
@@ -7112,11 +7144,9 @@
             "away": 0.11794093689766638,
             "pick": "France"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 3,
           "ag": 0,
-          "clock": "90'+3'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -7136,7 +7166,9 @@
               "team": "France",
               "minute": "74'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "France"
         },
         {
           "id": "79",
@@ -7156,40 +7188,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "77",
-      "home": "France",
-      "away": "Sweden",
-      "date": "2026-06-30",
-      "venue": "New York/New Jersey (East Rutherford)",
-      "kickoff_utc": "2026-06-30T21:00:00Z",
-      "hg": 3,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "90'+3'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Kylian Mbappé",
-          "team": "France",
-          "minute": "45'"
-        },
-        {
-          "kind": "goal",
-          "player": "Bradley Barcola",
-          "team": "France",
-          "minute": "53'"
-        },
-        {
-          "kind": "goal",
-          "player": "Kylian Mbappé",
-          "team": "France",
-          "minute": "74'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -10166,11 +10165,9 @@
             "away": 0.365,
             "pick": "1I"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 3,
           "ag": 0,
-          "clock": "90'+3'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -10190,7 +10187,9 @@
               "team": "France",
               "minute": "74'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "France"
         },
         {
           "id": "79",
