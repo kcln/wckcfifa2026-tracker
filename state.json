@@ -7032,8 +7032,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 1,
-          "clock": "84'",
+          "ag": 2,
+          "clock": "87'",
           "ht": false,
           "events": [
             {
@@ -7047,6 +7047,12 @@
               "player": "Amad Diallo",
               "team": "Ivory Coast",
               "minute": "74'"
+            },
+            {
+              "kind": "goal",
+              "player": "Erling Haaland",
+              "team": "Norway",
+              "minute": "86'"
             }
           ]
         },
@@ -7092,9 +7098,9 @@
       "venue": "Dallas (Arlington)",
       "kickoff_utc": "2026-06-30T17:00:00Z",
       "hg": 1,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "84'",
+      "clock": "87'",
       "events": [
         {
           "kind": "goal",
@@ -7107,6 +7113,12 @@
           "player": "Amad Diallo",
           "team": "Ivory Coast",
           "minute": "74'"
+        },
+        {
+          "kind": "goal",
+          "player": "Erling Haaland",
+          "team": "Norway",
+          "minute": "86'"
         }
       ]
     }
@@ -10050,8 +10062,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 1,
-          "clock": "84'",
+          "ag": 2,
+          "clock": "87'",
           "ht": false,
           "events": [
             {
@@ -10065,6 +10077,12 @@
               "player": "Amad Diallo",
               "team": "Ivory Coast",
               "minute": "74'"
+            },
+            {
+              "kind": "goal",
+              "player": "Erling Haaland",
+              "team": "Norway",
+              "minute": "86'"
             }
           ]
         },
