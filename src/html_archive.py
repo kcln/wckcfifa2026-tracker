@@ -344,15 +344,14 @@ def _match_card(m: dict) -> str:
 
     if finished or is_live:
         hg, ag = int(m.get("hg", 0)), int(m.get("ag", 0))
-        # Penalties flank the dash: "1 (3) – 1 (4)", with the winner's pen bold.
+        # Penalties flank the dash: "1 (3) – 1 (4)". The pens sit in a smaller
+        # span (not the big score size), and only the winning pen is bold.
         win = m.get("winner")
         hsc, asc = str(hg), str(ag)
         if m.get("hpens") is not None and m.get("apens") is not None:
             hp, ap = int(m["hpens"]), int(m["apens"])
-            hsc += (f' (<strong>{hp}</strong>)' if win == str(m["home"])
-                    else f' ({hp})')
-            asc += (f' (<strong>{ap}</strong>)' if win == str(m["away"])
-                    else f' ({ap})')
+            hsc += f' <span class="pen{" win" if win == str(m["home"]) else ""}">({hp})</span>'
+            asc += f' <span class="pen{" win" if win == str(m["away"]) else ""}">({ap})</span>'
         center = (f'<span class="sc">{hsc}</span>'
                   f'<span class="dash">–</span><span class="sc">{asc}</span>')
     if finished:
@@ -983,6 +982,8 @@ __REFRESH__
     .mc-top .tm.win { color: var(--p-700); }
     .mc-top .mid { font-family: 'Outfit', sans-serif; font-weight: 800; text-align: center; white-space: nowrap; }
     .mc-top .sc { font-size: 22px; }
+    .mc-top .sc .pen { font-size: 13px; font-weight: 500; color: var(--ink-soft); }
+    .mc-top .sc .pen.win { font-weight: 800; color: var(--p-700); }
     .mc-top .dash { margin: 0 5px; color: var(--ink-faint); }
     .mc-top .vsbig { font-size: 12px; color: var(--ink-faint); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; }
     .mc-pred { margin-top: 10px; font-size: 13px; color: var(--ink-soft); display: flex; align-items: center; gap: 8px; }

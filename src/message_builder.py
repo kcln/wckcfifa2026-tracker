@@ -184,8 +184,9 @@ def _result_block(match: dict, *, indent: str = "", overall=None) -> list[str]:
     else:
         score = f"{hn} {hg} - {ag} {an}"
     lines = [f"{indent}{score}"]
-    if shootout and win:                     # level in play -> name the pens winner
-        lines.append(f"{indent}{win} win on penalties")
+    if win:                                  # call the winner out on its own line
+        lines.append(f"{indent}<b>{win}</b> "
+                     + ("win on penalties" if shootout else "wins"))
     loc = _place_of(match)
     if loc:
         lines.append(f"{indent}{loc}")

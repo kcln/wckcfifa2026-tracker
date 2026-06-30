@@ -423,7 +423,25 @@ def test_post_match_penalty_line_flanks_dash_and_bolds_winner():
                         "home_pens": 3, "away_pens": 4}}
     body = mb.post_match(match)
     assert "Germany 1 (3) - 1 (<b>4</b>) <b>Paraguay</b>" in body
-    assert "Paraguay win on penalties" in body
+    assert "<b>Paraguay</b> win on penalties" in body
+
+
+def test_post_match_adds_bold_wins_line_for_a_normal_win():
+    match = {"home": "Brazil", "away": "Japan",
+             "prediction": {"home": 0.6, "draw": 0.25, "away": 0.15},
+             "result": {"home_goals": 2, "away_goals": 1, "winner": "Brazil"}}
+    body = mb.post_match(match)
+    assert "<b>Brazil</b> 2 - 1 Japan" in body
+    assert "<b>Brazil</b> wins" in body
+
+
+def test_post_match_draw_has_no_winner_line():
+    match = {"home": "Iran", "away": "Egypt",
+             "prediction": {"home": 0.4, "draw": 0.35, "away": 0.25},
+             "result": {"home_goals": 1, "away_goals": 1}}
+    body = mb.post_match(match)
+    assert "Iran 1 - 1 Egypt" in body
+    assert "wins" not in body and "<b>" not in body
 
 
 def test_daily_recap_blank_line_between_results():
