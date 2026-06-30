@@ -1784,6 +1784,15 @@
           "key": "pm-2026-06-29-74",
           "generated_at": "2026-06-29T16:38:34.127798-07:00",
           "kickoff_utc": "2026-06-29T20:30:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 29\n\nHalf-time:\nNetherlands 0 - 0 Morocco\nMonterrey (Guadalupe), Mexico\nPrediction: Morocco",
+          "sent": true,
+          "hash": "686333d586e05006",
+          "key": "ht-2026-06-29-75",
+          "generated_at": "2026-06-29T18:54:04.251688-07:00",
+          "kickoff_utc": "2026-06-30T01:00:00Z"
         }
       ]
     }
@@ -6915,8 +6924,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+5'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": []
         }
       ]
@@ -6932,8 +6941,8 @@
       "kickoff_utc": "2026-06-30T01:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+5'",
+      "status": "HT",
+      "clock": "45'+6'",
       "events": []
     }
   ],
@@ -9833,8 +9842,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+5'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": []
         }
       ]
