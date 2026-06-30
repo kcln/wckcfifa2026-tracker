@@ -6924,8 +6924,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+6'",
-          "ht": true,
+          "clock": "48'",
+          "ht": false,
           "events": []
         }
       ]
@@ -6941,8 +6941,8 @@
       "kickoff_utc": "2026-06-30T01:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "HT",
-      "clock": "45'+6'",
+      "status": "LIVE",
+      "clock": "48'",
       "events": []
     }
   ],
@@ -9842,8 +9842,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+6'",
-          "ht": true,
+          "clock": "48'",
+          "ht": false,
           "events": []
         }
       ]
