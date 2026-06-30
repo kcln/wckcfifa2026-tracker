@@ -7104,11 +7104,18 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "42'",
+          "clock": "45'+1'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Kylian Mbappé",
+              "team": "France",
+              "minute": "45'"
+            }
+          ]
         },
         {
           "id": "79",
@@ -7136,11 +7143,18 @@
       "date": "2026-06-30",
       "venue": "New York/New Jersey (East Rutherford)",
       "kickoff_utc": "2026-06-30T21:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "42'",
-      "events": []
+      "clock": "45'+1'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "minute": "45'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -10120,11 +10134,18 @@
             "pick": "1I"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "42'",
+          "clock": "45'+1'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Kylian Mbappé",
+              "team": "France",
+              "minute": "45'"
+            }
+          ]
         },
         {
           "id": "79",

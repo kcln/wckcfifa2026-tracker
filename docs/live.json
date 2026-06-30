@@ -1,1 +1,1 @@
-{"live": true, "id": "77", "home": "France", "away": "Sweden", "hg": 0, "ag": 0, "status": "LIVE", "clock": "42'", "date": "2026-06-30", "venue": "New York/New Jersey (East Rutherford)", "events": []}
+{"live": true, "id": "77", "home": "France", "away": "Sweden", "hg": 1, "ag": 0, "status": "LIVE", "clock": "45'+1'", "date": "2026-06-30", "venue": "New York/New Jersey (East Rutherford)", "events": [{"kind": "goal", "player": "Kylian Mbapp\u00e9", "team": "France", "minute": "45'"}]}
