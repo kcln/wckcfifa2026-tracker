@@ -23,7 +23,10 @@ def _format(text: str) -> str:
     still escaped, only the tags survive — so Telegram renders fixed-width
     columns that line up, WITHOUT the "</>" badge a <pre> block would add."""
     out = escape(text, quote=False)
-    out = out.replace("&lt;code&gt;", "<code>").replace("&lt;/code&gt;", "</code>")
+    # Keep the markup tags we emit on purpose (monospace tables + bold winners);
+    # everything else — including team names with & < > — stays escaped.
+    for tag in ("<code>", "</code>", "<b>", "</b>"):
+        out = out.replace(escape(tag, quote=False), tag)
     return out + _FOOTER
 
 

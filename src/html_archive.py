@@ -344,12 +344,17 @@ def _match_card(m: dict) -> str:
 
     if finished or is_live:
         hg, ag = int(m.get("hg", 0)), int(m.get("ag", 0))
-        pens = ""
+        # Penalties flank the dash: "1 (3) – 1 (4)", with the winner's pen bold.
+        win = m.get("winner")
+        hsc, asc = str(hg), str(ag)
         if m.get("hpens") is not None and m.get("apens") is not None:
-            pens = (f'<span class="mc-pens">({int(m["hpens"])}-{int(m["apens"])}'
-                    f' pens)</span>')
-        center = (f'<span class="sc">{hg}</span>'
-                  f'<span class="dash">–</span><span class="sc">{ag}</span>{pens}')
+            hp, ap = int(m["hpens"]), int(m["apens"])
+            hsc += (f' (<strong>{hp}</strong>)' if win == str(m["home"])
+                    else f' ({hp})')
+            asc += (f' (<strong>{ap}</strong>)' if win == str(m["away"])
+                    else f' ({ap})')
+        center = (f'<span class="sc">{hsc}</span>'
+                  f'<span class="dash">–</span><span class="sc">{asc}</span>')
     if finished:
         win = m.get("winner")
         if win and win in (str(m["home"]), str(m["away"])):   # incl. shootout
@@ -691,10 +696,7 @@ def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict,
         tag = (f'<div class="bkm-tag livet">{head_h}{sep}'
                f'<span class="livedot"></span>{clk}</div>')
     elif st == "FT":
-        pens = ""
-        if m.get("hpens") is not None and m.get("apens") is not None:
-            pens = f' · {int(m["hpens"])}-{int(m["apens"])} pens'
-        tag = f'<div class="bkm-tag">{head_h}{sep}Full time{escape(pens)}</div>'
+        tag = f'<div class="bkm-tag">{head_h}{sep}Full time</div>'
     else:
         tag = (f'<div class="bkm-tag">{head_h}{sep}'
                f'{escape(_kick_pt_short(str(m.get("kickoff_utc", ""))))}</div>')
@@ -721,9 +723,15 @@ def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict,
         h_win, a_win = winner == rh, winner == ra
     else:
         h_win, a_win = st == "FT" and hg > ag, st == "FT" and ag > hg
+    # Each row's score carries the shootout tally — "1 (4)" — winner's pen bold.
+    hsc, asc = str(hg), str(ag)
+    if m.get("hpens") is not None and m.get("apens") is not None:
+        hp, ap = int(m["hpens"]), int(m["apens"])
+        hsc += f' (<strong>{hp}</strong>)' if h_win else f' ({hp})'
+        asc += f' (<strong>{ap}</strong>)' if a_win else f' ({ap})'
     return (f'<div class="bkm{cls}">{tag}'
-            f'{row(hl, hg, h_win, h_proj)}'
-            f'{row(al, ag, a_win, a_proj)}{loc_html}</div>')
+            f'{row(hl, hsc, h_win, h_proj)}'
+            f'{row(al, asc, a_win, a_proj)}{loc_html}</div>')
 
 
 def _next_day(iso: str) -> str:
@@ -976,7 +984,6 @@ __REFRESH__
     .mc-top .mid { font-family: 'Outfit', sans-serif; font-weight: 800; text-align: center; white-space: nowrap; }
     .mc-top .sc { font-size: 22px; }
     .mc-top .dash { margin: 0 5px; color: var(--ink-faint); }
-    .mc-pens { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-faint); margin-left: 7px; white-space: nowrap; }
     .mc-top .vsbig { font-size: 12px; color: var(--ink-faint); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; }
     .mc-pred { margin-top: 10px; font-size: 13px; color: var(--ink-soft); display: flex; align-items: center; gap: 8px; }
     .mc-pred .hit { color: var(--ink); font-weight: 700; }
@@ -1189,9 +1196,9 @@ __REFRESH__
 </div>
 </section>
 __SIGNUP_TOP__
-__STANDINGS__
-__MATCHLOG__
 __SCHEDULE__
+__MATCHLOG__
+__STANDINGS__
 __SIGNUP_BOTTOM__
 <footer class="foot">
 <span class="made">Built by <a href="https://github.com/kcln/wckcfifa2026-tracker" rel="noopener" target="_blank">KC Lakshminarasimham</a></span>

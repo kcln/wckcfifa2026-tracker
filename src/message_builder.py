@@ -168,13 +168,24 @@ def _result_block(match: dict, *, indent: str = "", overall=None) -> list[str]:
     """
     r = match["result"]
     mark = "✓" if _argmax_outcome(match["prediction"]) == _actual_outcome(r) else "✗"
-    score = f"{match['home']} {r['home_goals']} - {r['away_goals']} {match['away']}"
+    home, away = match["home"], match["away"]
+    hg, ag = r["home_goals"], r["away_goals"]
+    # The winner (ESPN's recorded winner, incl. shootouts; else the higher score)
+    # has their name bolded; a draw has none.
+    win = r.get("winner") or (home if hg > ag else away if ag > hg else "")
+    hn = f"<b>{home}</b>" if win == home else home
+    an = f"<b>{away}</b>" if win == away else away
     shootout = r.get("home_pens") is not None and r.get("away_pens") is not None
-    if shootout:
-        score += f" ({r['home_pens']}-{r['away_pens']} pens)"
+    if shootout:                             # "1 (3) - 1 (4)", winner's pen bold
+        hp, ap = r["home_pens"], r["away_pens"]
+        hgs = f"{hg} (<b>{hp}</b>)" if win == home else f"{hg} ({hp})"
+        ags = f"{ag} (<b>{ap}</b>)" if win == away else f"{ag} ({ap})"
+        score = f"{hn} {hgs} - {ags} {an}"
+    else:
+        score = f"{hn} {hg} - {ag} {an}"
     lines = [f"{indent}{score}"]
-    if shootout and r.get("winner"):         # level in play -> name the pens winner
-        lines.append(f"{indent}{r['winner']} win on penalties")
+    if shootout and win:                     # level in play -> name the pens winner
+        lines.append(f"{indent}{win} win on penalties")
     loc = _place_of(match)
     if loc:
         lines.append(f"{indent}{loc}")
@@ -320,33 +331,9 @@ def daily_recap(date_iso: str, matches: list[dict], group_tables: dict,
             parts.append(f"overall {fmt_accuracy(*overall_acc)}")
         lines.append("Overall prediction — " + "  ·  ".join(parts))
 
-    if group_tables:
-        lines.append("")
-        lines.append("Group Standings:")
-        lines.append("")
-        lines.append("Q Qualified for Round of 32 · P Played · Pts Points · "
-                     "GD Goal Diff · GF Goals For · GA Goals Against")
-        lines.append("")
-        # Rendered MONOSPACE so the columns line up (a proportional font makes
-        # them drift — the "ugly table" bug). We use <code>, not <pre>: Telegram
-        # stamps a "</>" code badge on <pre> blocks (the stray icon KC saw);
-        # <code> is monospace without that chrome. A leading 2-char Q marker is
-        # paid for by tightening GD/GF/GA from 4 to 3 wide (every realistic value
-        # still fits) — team stays 15 wide (no truncation) and every row aligns.
-        table: list[str] = []
-        for group_letter, rows in sorted(group_tables.items()):
-            table.append(f"Group {group_letter}")
-            table.append(f"{'':<2}{'Team':<15}{'P':>2}{'Pts':>4}"
-                         f"{'GD':>3}{'GF':>3}{'GA':>3}")
-            for row in rows:
-                mark = "Q" if row["team"] in qualified else ""
-                table.append(
-                    f"{mark:<2}{str(row['team'])[:15]:<15}{row['played']:>2}"
-                    f"{row['points']:>4}{row['gd']:>+3}"
-                    f"{row['gf']:>3}{row['ga']:>3}")
-            table.append("")
-        lines.append("<code>" + "\n".join(table).rstrip() + "</code>")
-
+    # Group-standings tables were dropped from the recap once the group stage
+    # ended (they're frozen now); the website keeps the full tables. The
+    # `group_tables`/`qualified` args are retained for signature compatibility.
     return "\n".join(lines).rstrip()
 
 
