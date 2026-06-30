@@ -1,1 +1,1 @@
-{"live": false, "id": "74", "home": "Germany", "away": "Paraguay", "hg": 1, "ag": 1, "status": "FT", "clock": "", "date": "2026-06-29", "venue": "Boston (Foxborough)", "events": [{"kind": "goal", "player": "Julio Enciso", "team": "Paraguay", "minute": "42'"}, {"kind": "goal", "player": "Kai Havertz", "team": "Germany", "minute": "54'"}]}
+{"live": true, "id": "75", "home": "Netherlands", "away": "Morocco", "hg": 0, "ag": 0, "status": "LIVE", "clock": "3'", "date": "2026-06-29", "venue": "Monterrey (Guadalupe)", "events": []}
