@@ -6923,8 +6923,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 0,
-          "clock": "89'",
+          "ag": 1,
+          "clock": "90'+2'",
           "ht": false,
           "events": [
             {
@@ -6932,6 +6932,12 @@
               "player": "Cody Gakpo",
               "team": "Netherlands",
               "minute": "72'"
+            },
+            {
+              "kind": "goal",
+              "player": "Issa Diop",
+              "team": "Morocco",
+              "minute": "90'+1'"
             }
           ]
         }
@@ -6947,15 +6953,21 @@
       "venue": "Monterrey (Guadalupe)",
       "kickoff_utc": "2026-06-30T01:00:00Z",
       "hg": 1,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "89'",
+      "clock": "90'+2'",
       "events": [
         {
           "kind": "goal",
           "player": "Cody Gakpo",
           "team": "Netherlands",
           "minute": "72'"
+        },
+        {
+          "kind": "goal",
+          "player": "Issa Diop",
+          "team": "Morocco",
+          "minute": "90'+1'"
         }
       ]
     }
@@ -9855,8 +9867,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 0,
-          "clock": "89'",
+          "ag": 1,
+          "clock": "90'+2'",
           "ht": false,
           "events": [
             {
@@ -9864,6 +9876,12 @@
               "player": "Cody Gakpo",
               "team": "Netherlands",
               "minute": "72'"
+            },
+            {
+              "kind": "goal",
+              "player": "Issa Diop",
+              "team": "Morocco",
+              "minute": "90'+1'"
             }
           ]
         }
