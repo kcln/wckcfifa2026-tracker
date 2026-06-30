@@ -164,3 +164,17 @@ def test_parse_espn_captures_live_in_progress_with_clock():
     assert out["700"]["status"] == "LIVE"
     assert out["700"]["clock"] == "50'"
     assert out["700"]["home_goals"] == 1 and out["700"]["away_goals"] == 0
+
+
+def test_parse_espn_captures_penalty_winner_and_tally():
+    sample = {"events": [{"id": "74", "date": "2026-06-29T20:30Z",
+        "status": {"type": {"completed": True, "name": "STATUS_FINAL_PEN"}},
+        "competitions": [{"competitors": [
+            {"homeAway": "home", "score": "1", "winner": False, "shootoutScore": 3,
+             "team": {"displayName": "Germany"}},
+            {"homeAway": "away", "score": "1", "winner": True, "shootoutScore": 4,
+             "team": {"displayName": "Paraguay"}}]}]}]}
+    e = df.parse_espn(sample)["74"]
+    assert e["home_goals"] == 1 and e["away_goals"] == 1
+    assert e["winner"] == "Paraguay"
+    assert e["home_pens"] == 3 and e["away_pens"] == 4

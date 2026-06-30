@@ -94,7 +94,11 @@ def parse_espn(payload: dict) -> dict:
         h = next(c for c in comp if c["homeAway"] == "home")
         a = next(c for c in comp if c["homeAway"] == "away")
         id_to_name = {c.get("team", {}).get("id"): _team_name(c) for c in comp}
-        out[ev["id"]] = {
+        # A knockout tie level after extra time is settled on penalties: ESPN
+        # marks the actual winner (`winner: true`) and carries each side's
+        # shootout tally, so capture both — the score alone can't tell us.
+        win = next((c for c in comp if c.get("winner")), None)
+        entry = {
             "home": _team_name(h),
             "away": _team_name(a),
             "date": _pt_date(ev.get("date") or ""),
@@ -105,6 +109,12 @@ def parse_espn(payload: dict) -> dict:
             "events": _events_from_details(
                 competition.get("details"), id_to_name),
         }
+        if status == "FT" and win is not None:
+            entry["winner"] = _team_name(win)
+        if h.get("shootoutScore") is not None and a.get("shootoutScore") is not None:
+            entry["home_pens"] = int(h["shootoutScore"])
+            entry["away_pens"] = int(a["shootoutScore"])
+        out[ev["id"]] = entry
     return out
 
 

@@ -168,8 +168,13 @@ def _result_block(match: dict, *, indent: str = "", overall=None) -> list[str]:
     """
     r = match["result"]
     mark = "✓" if _argmax_outcome(match["prediction"]) == _actual_outcome(r) else "✗"
-    lines = [f"{indent}{match['home']} {r['home_goals']} - {r['away_goals']} "
-             f"{match['away']}"]
+    score = f"{match['home']} {r['home_goals']} - {r['away_goals']} {match['away']}"
+    shootout = r.get("home_pens") is not None and r.get("away_pens") is not None
+    if shootout:
+        score += f" ({r['home_pens']}-{r['away_pens']} pens)"
+    lines = [f"{indent}{score}"]
+    if shootout and r.get("winner"):         # level in play -> name the pens winner
+        lines.append(f"{indent}{r['winner']} win on penalties")
     loc = _place_of(match)
     if loc:
         lines.append(f"{indent}{loc}")

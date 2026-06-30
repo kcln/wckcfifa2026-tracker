@@ -270,3 +270,14 @@ def test_resolve_bracket_does_not_advance_winner_on_draw():
         {"id": "90", "stage": "R16", "home": "W73", "away": "W75"}]
     res = k.resolve_bracket(matches, groups, {"73": {"home_goals": 1, "away_goals": 1}})
     assert res["90"][0] == "W73"          # draw -> winner unknown, stays token
+
+
+def test_resolve_bracket_advances_penalty_winner_on_a_draw():
+    # 1-1 at full time but South Africa won the shootout -> W73 = South Africa.
+    groups = {"A": _decided("Mexico", "South Africa", "SK", "CZ"),
+              "B": _decided("Switzerland", "Canada", "BIH", "Qatar")}
+    matches = [{"id": "73", "stage": "R32", "home": "2A", "away": "2B"},
+               {"id": "90", "stage": "R16", "home": "W73", "away": "W75"}]
+    res = k.resolve_bracket(matches, groups, {
+        "73": {"home_goals": 1, "away_goals": 1, "winner": "South Africa"}})
+    assert res["90"][0] == "South Africa"

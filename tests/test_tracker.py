@@ -453,3 +453,14 @@ def test_build_board_resolves_knockout_slot_tokens():
     assert not knockout.is_descriptor(entry["home"])
     assert not knockout.is_descriptor(entry["away"])
     assert entry["home"] == tables["A"][1]["team"]   # 2A = group A runner-up
+
+
+def test_reconcile_results_carries_penalty_winner():
+    feed = {"e": {"home": "Germany", "away": "Paraguay", "date": "2026-06-29",
+                  "home_goals": 1, "away_goals": 1, "status": "FT",
+                  "winner": "Paraguay", "home_pens": 3, "away_pens": 4, "events": []}}
+    seed = {"matches": [{"id": "74", "home": "Germany", "away": "Paraguay",
+                         "date": "2026-06-29"}]}
+    out = tracker.reconcile_results(feed, seed)
+    assert out["74"]["winner"] == "Paraguay"
+    assert out["74"]["home_pens"] == 3 and out["74"]["away_pens"] == 4

@@ -289,10 +289,15 @@ def resolve_bracket(matches: list, group_tables: dict,
         out[str(m["id"])] = (h, a)
         res = ko_results.get(str(m["id"])) or ko_results.get(m["id"])
         if res and not is_descriptor(h) and not is_descriptor(a):
-            hg, ag = res.get("home_goals", 0), res.get("away_goals", 0)
-            if hg != ag:                     # a knockout level at FT goes to
-                ko_w[str(m["id"])] = h if hg > ag else a   # penalties — don't
-                ko_l[str(m["id"])] = a if hg > ag else h   # guess the winner
+            w = res.get("winner")
+            if w in (h, a):                  # ESPN's actual winner (incl. pens)
+                ko_w[str(m["id"])], ko_l[str(m["id"])] = w, (a if w == h else h)
+            else:
+                hg, ag = res.get("home_goals", 0), res.get("away_goals", 0)
+                if hg != ag:                 # decisive in normal/extra time
+                    ko_w[str(m["id"])] = h if hg > ag else a
+                    ko_l[str(m["id"])] = a if hg > ag else h
+                # else: level with no recorded winner -> stay unresolved
     return out
 
 

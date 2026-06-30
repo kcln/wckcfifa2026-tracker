@@ -121,7 +121,7 @@ def reconcile_results(raw_feed: dict, seed: dict) -> dict:
         m = index.get(key)
         if m is None:
             continue
-        out[m["id"]] = {
+        res = {
             "home_goals": entry["home_goals"],
             "away_goals": entry["away_goals"],
             "status": entry.get("status", "FT"),
@@ -130,6 +130,18 @@ def reconcile_results(raw_feed: dict, seed: dict) -> dict:
             # shows "Congo DR" in the scorer line under a "DR Congo" headline.
             "events": [_canon_event_team(ev, m) for ev in entry.get("events", [])],
         }
+        # Penalty-shootout outcome (knockout ties): keep ESPN's actual winner,
+        # spelled the seed's way, plus each side's shootout tally.
+        w = entry.get("winner")
+        if w:
+            if _norm(w) == _norm(m["home"]):
+                res["winner"] = m["home"]
+            elif _norm(w) == _norm(m["away"]):
+                res["winner"] = m["away"]
+        if entry.get("home_pens") is not None:
+            res["home_pens"] = entry["home_pens"]
+            res["away_pens"] = entry["away_pens"]
+        out[m["id"]] = res
     return out
 
 
@@ -335,6 +347,11 @@ def build_board(merged: dict, match_prob, dates: set, live: dict | None = None,
             entry.update({"status": "FT", "hg": r["home_goals"],
                           "ag": r["away_goals"], "events": r.get("events", []),
                           "hit": pick == outcome})
+            if r.get("winner"):                # penalty-shootout winner + tally
+                entry["winner"] = r["winner"]
+            if r.get("home_pens") is not None:
+                entry["hpens"] = r["home_pens"]
+                entry["apens"] = r["away_pens"]
         elif lv and lv.get("status") in ("LIVE", "HT"):
             entry.update({"status": "live", "hg": lv["home_goals"],
                           "ag": lv["away_goals"], "clock": lv.get("clock", ""),

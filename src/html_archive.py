@@ -344,11 +344,20 @@ def _match_card(m: dict) -> str:
 
     if finished or is_live:
         hg, ag = int(m.get("hg", 0)), int(m.get("ag", 0))
+        pens = ""
+        if m.get("hpens") is not None and m.get("apens") is not None:
+            pens = (f'<span class="mc-pens">({int(m["hpens"])}-{int(m["apens"])}'
+                    f' pens)</span>')
         center = (f'<span class="sc">{hg}</span>'
-                  f'<span class="dash">–</span><span class="sc">{ag}</span>')
+                  f'<span class="dash">–</span><span class="sc">{ag}</span>{pens}')
     if finished:
-        hcls = " win" if hg > ag else ""
-        acls = " win" if ag > hg else ""
+        win = m.get("winner")
+        if win and win in (str(m["home"]), str(m["away"])):   # incl. shootout
+            hcls = " win" if win == str(m["home"]) else ""
+            acls = " win" if win == str(m["away"]) else ""
+        else:
+            hcls = " win" if hg > ag else ""
+            acls = " win" if ag > hg else ""
         hit = m.get("hit")
         pill = (f'<span class="pill {"ok" if hit else "no"}">'
                 f'{"✓" if hit else "✗"}</span>')
@@ -682,7 +691,10 @@ def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict,
         tag = (f'<div class="bkm-tag livet">{head_h}{sep}'
                f'<span class="livedot"></span>{clk}</div>')
     elif st == "FT":
-        tag = f'<div class="bkm-tag">{head_h}{sep}Full time</div>'
+        pens = ""
+        if m.get("hpens") is not None and m.get("apens") is not None:
+            pens = f' · {int(m["hpens"])}-{int(m["apens"])} pens'
+        tag = f'<div class="bkm-tag">{head_h}{sep}Full time{escape(pens)}</div>'
     else:
         tag = (f'<div class="bkm-tag">{head_h}{sep}'
                f'{escape(_kick_pt_short(str(m.get("kickoff_utc", ""))))}</div>')
@@ -702,9 +714,16 @@ def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict,
         cls += " bkm-today"
     elif tomorrow and mdate == tomorrow:
         cls += " bkm-tomorrow"
+    # Winner: the side with more goals, or — when level and decided on penalties
+    # — ESPN's recorded shootout winner (matched to the resolved team name).
+    winner = m.get("winner")
+    if st == "FT" and winner and not knockout.is_descriptor(str(winner)):
+        h_win, a_win = winner == rh, winner == ra
+    else:
+        h_win, a_win = st == "FT" and hg > ag, st == "FT" and ag > hg
     return (f'<div class="bkm{cls}">{tag}'
-            f'{row(hl, hg, st == "FT" and hg > ag, h_proj)}'
-            f'{row(al, ag, st == "FT" and ag > hg, a_proj)}{loc_html}</div>')
+            f'{row(hl, hg, h_win, h_proj)}'
+            f'{row(al, ag, a_win, a_proj)}{loc_html}</div>')
 
 
 def _next_day(iso: str) -> str:
@@ -734,8 +753,10 @@ def _bracket_html(state: dict, today: str | None = None) -> str:
     # Best-third combo slots resolve via the FIFA combination table once groups
     # are decided; pass the resolution in so '3A/B/C/D/F' shows a real team.
     # ONLY full-time results advance a winner into the next round — a live or
-    # half-time scoreline must never fill the W##/L## feeder slot.
-    ko_results = {str(m["id"]): {"home_goals": m.get("hg"), "away_goals": m.get("ag")}
+    # half-time scoreline must never fill the W##/L## feeder slot. A tie level
+    # at FT carries ESPN's shootout `winner` so penalties advance correctly.
+    ko_results = {str(m["id"]): {"home_goals": m.get("hg"), "away_goals": m.get("ag"),
+                                 "winner": m.get("winner")}
                   for m in ko if m.get("status") == "FT" and m.get("hg") is not None}
     resolved = knockout.resolve_bracket(ko, groups, ko_results)
     tomorrow = _next_day(today) if today else ""
@@ -955,6 +976,7 @@ __REFRESH__
     .mc-top .mid { font-family: 'Outfit', sans-serif; font-weight: 800; text-align: center; white-space: nowrap; }
     .mc-top .sc { font-size: 22px; }
     .mc-top .dash { margin: 0 5px; color: var(--ink-faint); }
+    .mc-pens { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-faint); margin-left: 7px; white-space: nowrap; }
     .mc-top .vsbig { font-size: 12px; color: var(--ink-faint); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; }
     .mc-pred { margin-top: 10px; font-size: 13px; color: var(--ink-soft); display: flex; align-items: center; gap: 8px; }
     .mc-pred .hit { color: var(--ink); font-weight: 700; }
