@@ -342,8 +342,7 @@ def build_board(merged: dict, match_prob, dates: set, live: dict | None = None,
         r = m.get("result")
         lv = live.get(m["id"])
         if r:
-            outcome = ("home" if r["home_goals"] > r["away_goals"]
-                       else "away" if r["away_goals"] > r["home_goals"] else "draw")
+            outcome = _outcome_side(r, home, away)   # shootout-aware
             entry.update({"status": "FT", "hg": r["home_goals"],
                           "ag": r["away_goals"], "events": r.get("events", []),
                           "hit": pick == outcome})
@@ -416,6 +415,21 @@ def _prev_day_iso(now_iso: str) -> str:
             - timedelta(days=1)).isoformat()
 
 
+def _outcome_side(r: dict, home: str = "", away: str = "") -> str:
+    """'home'/'away'/'draw' — a knockout tie level on goals but won on penalties
+    counts for the shootout winner, so picking that team is correct."""
+    if r["home_goals"] > r["away_goals"]:
+        return "home"
+    if r["away_goals"] > r["home_goals"]:
+        return "away"
+    w = r.get("winner")
+    if w and w == home:
+        return "home"
+    if w and w == away:
+        return "away"
+    return "draw"
+
+
 def _result_outcome(r: dict) -> str:
     if r["home_goals"] > r["away_goals"]:
         return "home"
@@ -425,10 +439,11 @@ def _result_outcome(r: dict) -> str:
 
 
 def _accuracy(merged: dict, match_prob, *, until_kickoff: str | None = None,
-              date_iso: str | None = None) -> tuple:
+              date_iso: str | None = None, resolved: dict | None = None) -> tuple:
     """(hits, total) prediction accuracy over RESOLVED matches — argmax pick vs
-    actual outcome. Filter to a single PT day with `date_iso`, or to matches
-    that kicked off at/before `until_kickoff` for a stable running cumulative."""
+    actual outcome. Knockout slot tokens are resolved to real teams (so the pick
+    and the shootout-aware outcome match what the site shows). Filter to a single
+    PT day with `date_iso`, or to matches at/before `until_kickoff`."""
     hits = total = 0
     for m in merged["matches"]:
         r = m.get("result")
@@ -438,10 +453,12 @@ def _accuracy(merged: dict, match_prob, *, until_kickoff: str | None = None,
             continue
         if until_kickoff is not None and (m.get("kickoff_utc") or "") > until_kickoff:
             continue
-        pred = match_prob(m["home"], m["away"])
+        home, away = (resolved or {}).get(str(m.get("id")),
+                                          (m["home"], m["away"]))
+        pred = match_prob(home, away)
         predicted = max(("home", "draw", "away"), key=lambda k: pred[k])
         total += 1
-        if predicted == _result_outcome(r):
+        if predicted == _outcome_side(r, home, away):
             hits += 1
     return hits, total
 
@@ -474,7 +491,7 @@ def _due_for_day(stateobj: dict, merged: dict, match_prob, date_iso: str,
     #    stable as later matches resolve (no spurious re-sends).
     for mp in todays_pred:
         if mp.get("result"):
-            overall = _accuracy(merged, match_prob,
+            overall = _accuracy(merged, match_prob, resolved=resolved,
                                 until_kickoff=mp.get("kickoff_utc") or "")
             body = message_builder.post_match(mp, overall=overall)
             _add_message(day, existing, "post_match", date_iso, body,
@@ -506,9 +523,10 @@ def _due_for_day(stateobj: dict, merged: dict, match_prob, date_iso: str,
             or _day_clock_complete(todays, datetime.now(timezone.utc))):
         tables = _group_tables_for(merged)
         qualified = _clinched_for(merged, tables)
-        day_acc = _accuracy(merged, match_prob, date_iso=date_iso)
+        day_acc = _accuracy(merged, match_prob, date_iso=date_iso, resolved=resolved)
         last_ko = max((m.get("kickoff_utc") or "" for m in todays), default="")
-        overall_acc = _accuracy(merged, match_prob, until_kickoff=last_ko)
+        overall_acc = _accuracy(merged, match_prob, until_kickoff=last_ko,
+                                resolved=resolved)
         recap = message_builder.daily_recap(date_iso, todays_pred, tables,
                                             day_acc=day_acc,
                                             overall_acc=overall_acc,

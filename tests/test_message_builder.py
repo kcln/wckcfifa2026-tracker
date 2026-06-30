@@ -455,3 +455,14 @@ def test_daily_recap_blank_line_between_results():
     body = mb.daily_recap("2026-06-15", matches, {})
     # a blank line separates the two result blocks
     assert "\n\n  B 2 - 2 b" in body
+
+
+def test_post_match_pick_of_shootout_winner_counts_as_hit():
+    # 1-1, Morocco won on penalties; the model picked Morocco (away argmax) ->
+    # the prediction is CORRECT, not a draw miss.
+    match = {"home": "Netherlands", "away": "Morocco",
+             "prediction": {"home": 0.32, "draw": 0.30, "away": 0.38},
+             "result": {"home_goals": 1, "away_goals": 1, "winner": "Morocco",
+                        "home_pens": 2, "away_pens": 3}}
+    body = mb.post_match(match)
+    assert "Prediction ✓:" in body and "Prediction ✗" not in body

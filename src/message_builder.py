@@ -129,20 +129,28 @@ def _event_lines(events, indent: str = "  ") -> list[str]:
     return lines
 
 
-def _actual_outcome(result: dict) -> str:
-    """Derive 'home', 'draw', or 'away' from a result dict."""
+def _actual_outcome(result: dict, home: str = "", away: str = "") -> str:
+    """Derive 'home', 'draw', or 'away' from a result dict. A knockout tie level
+    on goals but settled on penalties counts as a win for the shootout winner —
+    so a pick of that team is correct, not a 'draw' miss."""
     hg = result["home_goals"]
     ag = result["away_goals"]
     if hg > ag:
         return "home"
     if ag > hg:
         return "away"
+    w = result.get("winner")
+    if w and w == home:
+        return "home"
+    if w and w == away:
+        return "away"
     return "draw"
 
 
 def _result_word(match: dict) -> str:
     """Human label for the actual outcome: 'Draw' or '<team> win'."""
-    actual = _actual_outcome(match["result"])
+    actual = _actual_outcome(match["result"], match.get("home", ""),
+                             match.get("away", ""))
     if actual == "draw":
         return "Draw"
     return f"{match['home']} win" if actual == "home" else f"{match['away']} win"
@@ -167,7 +175,8 @@ def _result_block(match: dict, *, indent: str = "", overall=None) -> list[str]:
     The city is always its own line and the prediction is always the last line.
     """
     r = match["result"]
-    mark = "✓" if _argmax_outcome(match["prediction"]) == _actual_outcome(r) else "✗"
+    mark = ("✓" if _argmax_outcome(match["prediction"])
+            == _actual_outcome(r, match["home"], match["away"]) else "✗")
     home, away = match["home"], match["away"]
     hg, ag = r["home_goals"], r["away_goals"]
     # The winner (ESPN's recorded winner, incl. shootouts; else the higher score)

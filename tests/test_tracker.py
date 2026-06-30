@@ -464,3 +464,15 @@ def test_reconcile_results_carries_penalty_winner():
     out = tracker.reconcile_results(feed, seed)
     assert out["74"]["winner"] == "Paraguay"
     assert out["74"]["home_pens"] == 3 and out["74"]["away_pens"] == 4
+
+
+def test_accuracy_counts_shootout_winner_pick_as_hit():
+    merged = {"matches": [{"id": "75", "home": "1F", "away": "2C",
+                           "date": "2026-06-29", "kickoff_utc": "2026-06-29T19:00:00Z",
+                           "result": {"home_goals": 1, "away_goals": 1,
+                                      "winner": "Morocco"}}]}
+    def mp(h, a):
+        return ({"home": 0.3, "draw": 0.3, "away": 0.4} if a == "Morocco"
+                else {"home": 0.4, "draw": 0.3, "away": 0.3})
+    hits, total = tracker._accuracy(merged, mp, resolved={"75": ("Netherlands", "Morocco")})
+    assert (hits, total) == (1, 1)
