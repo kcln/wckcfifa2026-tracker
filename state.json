@@ -7113,9 +7113,9 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "50'",
+          "clock": "53'",
           "ht": false,
           "events": [
             {
@@ -7123,6 +7123,12 @@
               "player": "Kylian Mbappé",
               "team": "France",
               "minute": "45'"
+            },
+            {
+              "kind": "goal",
+              "player": "Bradley Barcola",
+              "team": "France",
+              "minute": "53'"
             }
           ]
         },
@@ -7152,16 +7158,22 @@
       "date": "2026-06-30",
       "venue": "New York/New Jersey (East Rutherford)",
       "kickoff_utc": "2026-06-30T21:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 0,
       "status": "LIVE",
-      "clock": "50'",
+      "clock": "53'",
       "events": [
         {
           "kind": "goal",
           "player": "Kylian Mbappé",
           "team": "France",
           "minute": "45'"
+        },
+        {
+          "kind": "goal",
+          "player": "Bradley Barcola",
+          "team": "France",
+          "minute": "53'"
         }
       ]
     }
@@ -10143,9 +10155,9 @@
             "pick": "1I"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "50'",
+          "clock": "53'",
           "ht": false,
           "events": [
             {
@@ -10153,6 +10165,12 @@
               "player": "Kylian Mbappé",
               "team": "France",
               "minute": "45'"
+            },
+            {
+              "kind": "goal",
+              "player": "Bradley Barcola",
+              "team": "France",
+              "minute": "53'"
             }
           ]
         },
