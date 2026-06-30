@@ -7103,7 +7103,12 @@
             "away": 0.11794093689766638,
             "pick": "France"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "79",
@@ -7123,7 +7128,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "77",
+      "home": "France",
+      "away": "Sweden",
+      "date": "2026-06-30",
+      "venue": "New York/New Jersey (East Rutherford)",
+      "kickoff_utc": "2026-06-30T21:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -10100,7 +10119,12 @@
             "away": 0.365,
             "pick": "1I"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "79",
