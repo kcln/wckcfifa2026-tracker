@@ -1843,6 +1843,15 @@
           "key": "pm-2026-06-30-78",
           "generated_at": "2026-06-30T12:00:31.680204-07:00",
           "kickoff_utc": "2026-06-30T17:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nTuesday, June 30\n\nHalf-time:\nFrance 1 - 0 Sweden\nNew York/New Jersey (East Rutherford), USA\n  ⚽ 45' Kylian Mbappé (France)\nPrediction: France",
+          "sent": true,
+          "hash": "9d1054f8699f7127",
+          "key": "ht-2026-06-30-77",
+          "generated_at": "2026-06-30T14:52:49.511110-07:00",
+          "kickoff_utc": "2026-06-30T21:00:00Z"
         }
       ]
     }
@@ -7107,7 +7116,7 @@
           "hg": 1,
           "ag": 0,
           "clock": "45'+4'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -7145,7 +7154,7 @@
       "kickoff_utc": "2026-06-30T21:00:00Z",
       "hg": 1,
       "ag": 0,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+4'",
       "events": [
         {
@@ -10137,7 +10146,7 @@
           "hg": 1,
           "ag": 0,
           "clock": "45'+4'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
