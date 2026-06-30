@@ -1793,6 +1793,24 @@
           "key": "ht-2026-06-29-75",
           "generated_at": "2026-06-29T18:54:04.251688-07:00",
           "kickoff_utc": "2026-06-30T01:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 29\n\nFull time:\nNetherlands 1 - 1 Morocco (2-3 pens)\nMorocco win on penalties\nMonterrey (Guadalupe), Mexico\n  ⚽ 72' Cody Gakpo (Netherlands)\n  ⚽ 90'+1' Issa Diop (Morocco)\nOverall prediction: 40/76 (52.6%)\nPrediction ✗: Morocco",
+          "sent": true,
+          "hash": "2cacc05b32151f83",
+          "key": "pm-2026-06-29-75",
+          "generated_at": "2026-06-29T20:55:02.855482-07:00",
+          "kickoff_utc": "2026-06-30T01:00:00Z"
+        },
+        {
+          "type": "daily_recap",
+          "body": "🏆 FIFA World Cup 2026\nMonday, June 29\n\nDaily Recap\n\nResults:\n  Brazil 2 - 1 Japan\n  Houston, USA\n    ⚽ 29' Kaishu Sano (Japan)\n    ⚽ 56' Casemiro (Brazil)\n    ⚽ 90'+5' Gabriel Martinelli (Brazil)\n  Prediction ✗: Japan\n\n  Germany 1 - 1 Paraguay (3-4 pens)\n  Paraguay win on penalties\n  Boston (Foxborough), USA\n    ⚽ 42' Julio Enciso (Paraguay)\n    ⚽ 54' Kai Havertz (Germany)\n  Prediction ✗: Germany\n\n  Netherlands 1 - 1 Morocco (2-3 pens)\n  Morocco win on penalties\n  Monterrey (Guadalupe), Mexico\n    ⚽ 72' Cody Gakpo (Netherlands)\n    ⚽ 90'+1' Issa Diop (Morocco)\n  Prediction ✗: Morocco\n\nOverall prediction — today 1/3 (33.3%)  ·  overall 40/76 (52.6%)\n\nGroup Standings:\n\nQ Qualified for Round of 32 · P Played · Pts Points · GD Goal Diff · GF Goals For · GA Goals Against\n\n<code>Group A\n  Team            P Pts GD GF GA\nQ Mexico          3   9 +6  6  0\nQ South Africa    3   4 -1  2  3\n  South Korea     3   3 -1  2  3\n  Czech Republic  3   1 -4  2  6\n\nGroup B\n  Team            P Pts GD GF GA\nQ Switzerland     3   7 +4  7  3\nQ Canada          3   4 +5  8  3\nQ Bosnia & Herzeg 3   4 -1  5  6\n  Qatar           3   1 -8  2 10\n\nGroup C\n  Team            P Pts GD GF GA\nQ Brazil          3   7 +6  7  1\nQ Morocco         3   7 +3  6  3\n  Scotland        3   3 -3  1  4\n  Haiti           3   0 -6  2  8\n\nGroup D\n  Team            P Pts GD GF GA\nQ USA             3   6 +4  8  4\nQ Australia       3   4 +0  2  2\nQ Paraguay        3   4 -2  2  4\n  Turkey          3   3 -2  3  5\n\nGroup E\n  Team            P Pts GD GF GA\nQ Germany         3   6 +6 10  4\nQ Ivory Coast     3   6 +2  4  2\nQ Ecuador         3   4 +0  2  2\n  Curaçao         3   1 -8  1  9\n\nGroup F\n  Team            P Pts GD GF GA\nQ Netherlands     3   7 +6 10  4\nQ Japan           3   5 +4  7  3\nQ Sweden          3   4 +0  7  7\n  Tunisia         3   0-10  2 12\n\nGroup G\n  Team            P Pts GD GF GA\nQ Belgium         3   5 +4  6  2\nQ Egypt           3   5 +2  5  3\n  Iran            3   3 +0  3  3\n  New Zealand     3   1 -6  4 10\n\nGroup H\n  Team            P Pts GD GF GA\nQ Spain           3   7 +5  5  0\nQ Cape Verde      3   3 +0  2  2\n  Uruguay         3   2 -1  3  4\n  Saudi Arabia    3   2 -4  1  5\n\nGroup I\n  Team            P Pts GD GF GA\nQ France          3   9 +8 10  2\nQ Norway          3   6 +1  8  7\nQ Senegal         3   3 +2  8  6\n  Iraq            3   0-11  1 12\n\nGroup J\n  Team            P Pts GD GF GA\nQ Argentina       3   9 +7  8  1\nQ Austria         3   4 +0  6  6\nQ Algeria         3   4 -2  5  7\n  Jordan          3   0 -5  3  8\n\nGroup K\n  Team            P Pts GD GF GA\nQ Colombia        3   7 +3  4  1\nQ Portugal        3   5 +5  6  1\nQ DR Congo        3   4 +1  4  3\n  Uzbekistan      3   0 -9  2 11\n\nGroup L\n  Team            P Pts GD GF GA\nQ England         3   7 +4  6  2\nQ Croatia         3   6 +0  5  5\nQ Ghana           3   4 +0  2  2\n  Panama          3   0 -4  0  4</code>",
+          "sent": true,
+          "hash": "f355b54f0d06f10b",
+          "key": "dr-2026-06-29",
+          "generated_at": "2026-06-29T20:55:02.860155-07:00",
+          "kickoff_utc": "2026-06-29T17:00:00Z"
         }
       ]
     }
@@ -2209,32 +2227,31 @@
   },
   "bracket": {
     "title_odds": {
-      "Belgium": 0.0435,
-      "Canada": 0.0145,
-      "Spain": 0.1438,
-      "Brazil": 0.0838,
-      "Argentina": 0.2362,
-      "Croatia": 0.0231,
-      "Netherlands": 0.0264,
-      "Germany": 0.0579,
-      "Colombia": 0.0451,
-      "France": 0.1191,
-      "England": 0.0561,
-      "Portugal": 0.0338,
-      "Ecuador": 0.026,
-      "Morocco": 0.0254,
-      "Senegal": 0.0119,
-      "Sweden": 0.0016,
-      "Norway": 0.008,
-      "Switzerland": 0.0097,
-      "Mexico": 0.0112,
-      "Egypt": 0.0019,
-      "Paraguay": 0.0046,
+      "Argentina": 0.2388,
+      "Brazil": 0.0899,
+      "Canada": 0.0136,
+      "Netherlands": 0.0587,
+      "Germany": 0.0608,
+      "Spain": 0.1383,
+      "Colombia": 0.0473,
+      "Croatia": 0.0237,
+      "Belgium": 0.0388,
+      "Paraguay": 0.0049,
+      "Senegal": 0.0123,
+      "Portugal": 0.0326,
+      "France": 0.1153,
+      "Switzerland": 0.0094,
+      "England": 0.0538,
+      "Mexico": 0.0104,
+      "Ecuador": 0.0249,
+      "Norway": 0.0058,
+      "Australia": 0.0034,
+      "Austria": 0.0038,
+      "Sweden": 0.0005,
       "Algeria": 0.0074,
-      "Austria": 0.003,
-      "Australia": 0.0042,
-      "Ivory Coast": 0.0017,
-      "Cape Verde": 0.0001
+      "Egypt": 0.0032,
+      "Ivory Coast": 0.0022,
+      "Cape Verde": 0.0002
     },
     "advancement": {
       "Colombia": 1.0,
@@ -4030,6 +4047,27 @@
       "winner": "Paraguay",
       "home_pens": 3,
       "away_pens": 4
+    },
+    "75": {
+      "home_goals": 1,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Cody Gakpo",
+          "team": "Netherlands",
+          "minute": "72'"
+        },
+        {
+          "kind": "goal",
+          "player": "Issa Diop",
+          "team": "Morocco",
+          "minute": "90'+1'"
+        }
+      ],
+      "winner": "Morocco",
+      "home_pens": 2,
+      "away_pens": 3
     }
   },
   "board": [
@@ -6929,11 +6967,9 @@
             "away": 0.36045917552766865,
             "pick": "Morocco"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 1,
-          "clock": "120'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -6947,39 +6983,16 @@
               "team": "Morocco",
               "minute": "90'+1'"
             }
-          ]
+          ],
+          "hit": false,
+          "winner": "Morocco",
+          "hpens": 2,
+          "apens": 3
         }
       ]
     }
   ],
-  "live": [
-    {
-      "id": "75",
-      "home": "Netherlands",
-      "away": "Morocco",
-      "date": "2026-06-29",
-      "venue": "Monterrey (Guadalupe)",
-      "kickoff_utc": "2026-06-30T01:00:00Z",
-      "hg": 1,
-      "ag": 1,
-      "status": "LIVE",
-      "clock": "120'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Cody Gakpo",
-          "team": "Netherlands",
-          "minute": "72'"
-        },
-        {
-          "kind": "goal",
-          "player": "Issa Diop",
-          "team": "Morocco",
-          "minute": "90'+1'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -9877,11 +9890,9 @@
             "away": 0.365,
             "pick": "1F"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 1,
-          "clock": "120'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -9895,7 +9906,11 @@
               "team": "Morocco",
               "minute": "90'+1'"
             }
-          ]
+          ],
+          "hit": false,
+          "winner": "Morocco",
+          "hpens": 2,
+          "apens": 3
         }
       ]
     },
