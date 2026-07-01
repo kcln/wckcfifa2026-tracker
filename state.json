@@ -7385,9 +7385,9 @@
             "pick": "Senegal"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 2,
           "ag": 2,
-          "clock": "87'",
+          "clock": "90'",
           "ht": false,
           "events": [
             {
@@ -7407,6 +7407,12 @@
               "player": "Romelu Lukaku",
               "team": "Belgium",
               "minute": "86'"
+            },
+            {
+              "kind": "goal",
+              "player": "Youri Tielemans",
+              "team": "Belgium",
+              "minute": "89'"
             }
           ]
         },
@@ -7436,10 +7442,10 @@
       "date": "2026-07-01",
       "venue": "Seattle",
       "kickoff_utc": "2026-07-01T20:00:00Z",
-      "hg": 0,
+      "hg": 2,
       "ag": 2,
       "status": "LIVE",
-      "clock": "87'",
+      "clock": "90'",
       "events": [
         {
           "kind": "goal",
@@ -7458,6 +7464,12 @@
           "player": "Romelu Lukaku",
           "team": "Belgium",
           "minute": "86'"
+        },
+        {
+          "kind": "goal",
+          "player": "Youri Tielemans",
+          "team": "Belgium",
+          "minute": "89'"
         }
       ]
     }
@@ -10561,9 +10573,9 @@
             "pick": "1G"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 2,
           "ag": 2,
-          "clock": "87'",
+          "clock": "90'",
           "ht": false,
           "events": [
             {
@@ -10583,6 +10595,12 @@
               "player": "Romelu Lukaku",
               "team": "Belgium",
               "minute": "86'"
+            },
+            {
+              "kind": "goal",
+              "player": "Youri Tielemans",
+              "team": "Belgium",
+              "minute": "89'"
             }
           ]
         },
