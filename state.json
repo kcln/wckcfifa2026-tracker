@@ -7387,8 +7387,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+5'",
-          "ht": true,
+          "clock": "48'",
+          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -7426,8 +7426,8 @@
       "kickoff_utc": "2026-07-01T20:00:00Z",
       "hg": 0,
       "ag": 1,
-      "status": "HT",
-      "clock": "45'+5'",
+      "status": "LIVE",
+      "clock": "48'",
       "events": [
         {
           "kind": "goal",
@@ -10539,8 +10539,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+5'",
-          "ht": true,
+          "clock": "48'",
+          "ht": false,
           "events": [
             {
               "kind": "goal",
