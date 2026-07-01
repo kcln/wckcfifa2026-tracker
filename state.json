@@ -7377,10 +7377,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "23'",
+          "ag": 1,
+          "clock": "25'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Habib Diarra",
+              "team": "Senegal",
+              "minute": "25'"
+            }
+          ]
         },
         {
           "id": "81",
@@ -7409,10 +7416,17 @@
       "venue": "Seattle",
       "kickoff_utc": "2026-07-01T20:00:00Z",
       "hg": 0,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "23'",
-      "events": []
+      "clock": "25'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Habib Diarra",
+          "team": "Senegal",
+          "minute": "25'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -10515,10 +10529,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "23'",
+          "ag": 1,
+          "clock": "25'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Habib Diarra",
+              "team": "Senegal",
+              "minute": "25'"
+            }
+          ]
         },
         {
           "id": "81",
