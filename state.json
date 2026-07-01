@@ -7295,10 +7295,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "6'",
+          "ag": 1,
+          "clock": "9'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Brian Cipenga",
+              "team": "DR Congo",
+              "minute": "7'"
+            }
+          ]
         },
         {
           "id": "82",
@@ -7342,10 +7349,17 @@
       "venue": "Atlanta",
       "kickoff_utc": "2026-07-01T16:00:00Z",
       "hg": 0,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "6'",
-      "events": []
+      "clock": "9'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Brian Cipenga",
+          "team": "DR Congo",
+          "minute": "7'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -10409,10 +10423,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "6'",
+          "ag": 1,
+          "clock": "9'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Brian Cipenga",
+              "team": "DR Congo",
+              "minute": "7'"
+            }
+          ]
         },
         {
           "id": "82",
