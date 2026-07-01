@@ -7387,7 +7387,7 @@
           "status": "live",
           "hg": 0,
           "ag": 2,
-          "clock": "83'",
+          "clock": "87'",
           "ht": false,
           "events": [
             {
@@ -7401,6 +7401,12 @@
               "player": "Ismaïla Sarr",
               "team": "Senegal",
               "minute": "51'"
+            },
+            {
+              "kind": "goal",
+              "player": "Romelu Lukaku",
+              "team": "Belgium",
+              "minute": "86'"
             }
           ]
         },
@@ -7433,7 +7439,7 @@
       "hg": 0,
       "ag": 2,
       "status": "LIVE",
-      "clock": "83'",
+      "clock": "87'",
       "events": [
         {
           "kind": "goal",
@@ -7446,6 +7452,12 @@
           "player": "Ismaïla Sarr",
           "team": "Senegal",
           "minute": "51'"
+        },
+        {
+          "kind": "goal",
+          "player": "Romelu Lukaku",
+          "team": "Belgium",
+          "minute": "86'"
         }
       ]
     }
@@ -10551,7 +10563,7 @@
           "status": "live",
           "hg": 0,
           "ag": 2,
-          "clock": "83'",
+          "clock": "87'",
           "ht": false,
           "events": [
             {
@@ -10565,6 +10577,12 @@
               "player": "Ismaïla Sarr",
               "team": "Senegal",
               "minute": "51'"
+            },
+            {
+              "kind": "goal",
+              "player": "Romelu Lukaku",
+              "team": "Belgium",
+              "minute": "86'"
             }
           ]
         },
