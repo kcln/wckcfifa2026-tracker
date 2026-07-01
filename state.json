@@ -1920,6 +1920,15 @@
           "key": "pm-2026-07-01-80",
           "generated_at": "2026-07-01T11:02:05.791175-07:00",
           "kickoff_utc": "2026-07-01T16:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, July 1\n\nHalf-time:\nBelgium 0 - 1 Senegal\nSeattle, USA\n  ⚽ 25' Habib Diarra (Senegal)\nPrediction: Senegal",
+          "sent": true,
+          "hash": "940da4c9978d6123",
+          "key": "ht-2026-07-01-82",
+          "generated_at": "2026-07-01T13:54:05.305520-07:00",
+          "kickoff_utc": "2026-07-01T20:00:00Z"
         }
       ]
     }
@@ -7379,7 +7388,7 @@
           "hg": 0,
           "ag": 1,
           "clock": "45'+5'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -7417,7 +7426,7 @@
       "kickoff_utc": "2026-07-01T20:00:00Z",
       "hg": 0,
       "ag": 1,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+5'",
       "events": [
         {
@@ -10531,7 +10540,7 @@
           "hg": 0,
           "ag": 1,
           "clock": "45'+5'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
