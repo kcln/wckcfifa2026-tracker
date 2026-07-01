@@ -7385,9 +7385,9 @@
             "pick": "Senegal"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 2,
-          "clock": "120'+3'",
+          "clock": "120'+6'",
           "ht": false,
           "events": [
             {
@@ -7413,6 +7413,12 @@
               "player": "Youri Tielemans",
               "team": "Belgium",
               "minute": "89'"
+            },
+            {
+              "kind": "penalty",
+              "player": "Youri Tielemans",
+              "team": "Belgium",
+              "minute": "120'+5'"
             }
           ]
         },
@@ -7442,10 +7448,10 @@
       "date": "2026-07-01",
       "venue": "Seattle",
       "kickoff_utc": "2026-07-01T20:00:00Z",
-      "hg": 2,
+      "hg": 3,
       "ag": 2,
       "status": "LIVE",
-      "clock": "120'+3'",
+      "clock": "120'+6'",
       "events": [
         {
           "kind": "goal",
@@ -7470,6 +7476,12 @@
           "player": "Youri Tielemans",
           "team": "Belgium",
           "minute": "89'"
+        },
+        {
+          "kind": "penalty",
+          "player": "Youri Tielemans",
+          "team": "Belgium",
+          "minute": "120'+5'"
         }
       ]
     }
@@ -10573,9 +10585,9 @@
             "pick": "1G"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 2,
-          "clock": "120'+3'",
+          "clock": "120'+6'",
           "ht": false,
           "events": [
             {
@@ -10601,6 +10613,12 @@
               "player": "Youri Tielemans",
               "team": "Belgium",
               "minute": "89'"
+            },
+            {
+              "kind": "penalty",
+              "player": "Youri Tielemans",
+              "team": "Belgium",
+              "minute": "120'+5'"
             }
           ]
         },
