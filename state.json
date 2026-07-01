@@ -7303,9 +7303,9 @@
             "pick": "England"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "85'",
+          "clock": "88'",
           "ht": false,
           "events": [
             {
@@ -7319,6 +7319,12 @@
               "player": "Harry Kane",
               "team": "England",
               "minute": "75'"
+            },
+            {
+              "kind": "goal",
+              "player": "Harry Kane",
+              "team": "England",
+              "minute": "86'"
             }
           ]
         },
@@ -7363,10 +7369,10 @@
       "date": "2026-07-01",
       "venue": "Atlanta",
       "kickoff_utc": "2026-07-01T16:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 1,
       "status": "LIVE",
-      "clock": "85'",
+      "clock": "88'",
       "events": [
         {
           "kind": "goal",
@@ -7379,6 +7385,12 @@
           "player": "Harry Kane",
           "team": "England",
           "minute": "75'"
+        },
+        {
+          "kind": "goal",
+          "player": "Harry Kane",
+          "team": "England",
+          "minute": "86'"
         }
       ]
     }
@@ -10443,9 +10455,9 @@
             "pick": "1L"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "85'",
+          "clock": "88'",
           "ht": false,
           "events": [
             {
@@ -10459,6 +10471,12 @@
               "player": "Harry Kane",
               "team": "England",
               "minute": "75'"
+            },
+            {
+              "kind": "goal",
+              "player": "Harry Kane",
+              "team": "England",
+              "minute": "86'"
             }
           ]
         },
