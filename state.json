@@ -7303,9 +7303,9 @@
             "pick": "England"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "72'",
+          "clock": "76'",
           "ht": false,
           "events": [
             {
@@ -7313,6 +7313,12 @@
               "player": "Brian Cipenga",
               "team": "DR Congo",
               "minute": "7'"
+            },
+            {
+              "kind": "goal",
+              "player": "Harry Kane",
+              "team": "England",
+              "minute": "75'"
             }
           ]
         },
@@ -7357,16 +7363,22 @@
       "date": "2026-07-01",
       "venue": "Atlanta",
       "kickoff_utc": "2026-07-01T16:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 1,
       "status": "LIVE",
-      "clock": "72'",
+      "clock": "76'",
       "events": [
         {
           "kind": "goal",
           "player": "Brian Cipenga",
           "team": "DR Congo",
           "minute": "7'"
+        },
+        {
+          "kind": "goal",
+          "player": "Harry Kane",
+          "team": "England",
+          "minute": "75'"
         }
       ]
     }
@@ -10431,9 +10443,9 @@
             "pick": "1L"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "72'",
+          "clock": "76'",
           "ht": false,
           "events": [
             {
@@ -10441,6 +10453,12 @@
               "player": "Brian Cipenga",
               "team": "DR Congo",
               "minute": "7'"
+            },
+            {
+              "kind": "goal",
+              "player": "Harry Kane",
+              "team": "England",
+              "minute": "75'"
             }
           ]
         },
