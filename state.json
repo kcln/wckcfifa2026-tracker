@@ -7195,7 +7195,7 @@
           "status": "live",
           "hg": 2,
           "ag": 0,
-          "clock": "90'+2'",
+          "clock": "90'+6'",
           "ht": false,
           "events": [
             {
@@ -7209,6 +7209,12 @@
               "player": "Raúl Jiménez",
               "team": "Mexico",
               "minute": "31'"
+            },
+            {
+              "kind": "red",
+              "player": "Piero Hincapié",
+              "team": "Ecuador",
+              "minute": "90'+5'"
             }
           ]
         }
@@ -7226,7 +7232,7 @@
       "hg": 2,
       "ag": 0,
       "status": "LIVE",
-      "clock": "90'+2'",
+      "clock": "90'+6'",
       "events": [
         {
           "kind": "goal",
@@ -7239,6 +7245,12 @@
           "player": "Raúl Jiménez",
           "team": "Mexico",
           "minute": "31'"
+        },
+        {
+          "kind": "red",
+          "player": "Piero Hincapié",
+          "team": "Ecuador",
+          "minute": "90'+5'"
         }
       ]
     }
@@ -10261,7 +10273,7 @@
           "status": "live",
           "hg": 2,
           "ag": 0,
-          "clock": "90'+2'",
+          "clock": "90'+6'",
           "ht": false,
           "events": [
             {
@@ -10275,6 +10287,12 @@
               "player": "Raúl Jiménez",
               "team": "Mexico",
               "minute": "31'"
+            },
+            {
+              "kind": "red",
+              "player": "Piero Hincapié",
+              "team": "Ecuador",
+              "minute": "90'+5'"
             }
           ]
         }
