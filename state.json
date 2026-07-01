@@ -1902,6 +1902,15 @@
           "key": "mb-2026-07-01",
           "generated_at": "2026-07-01T00:08:56.834105-07:00",
           "kickoff_utc": "2026-07-01T16:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, July 1\n\nHalf-time:\nEngland 0 - 1 DR Congo\nAtlanta, USA\n  ⚽ 7' Brian Cipenga (DR Congo)\nPrediction: England",
+          "sent": true,
+          "hash": "9ac02bed29a4b127",
+          "key": "ht-2026-07-01-80",
+          "generated_at": "2026-07-01T09:53:00.576574-07:00",
+          "kickoff_utc": "2026-07-01T16:00:00Z"
         }
       ]
     }
@@ -7296,8 +7305,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+7'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -7350,8 +7359,8 @@
       "kickoff_utc": "2026-07-01T16:00:00Z",
       "hg": 0,
       "ag": 1,
-      "status": "LIVE",
-      "clock": "45'+4'",
+      "status": "HT",
+      "clock": "45'+7'",
       "events": [
         {
           "kind": "goal",
@@ -10424,8 +10433,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+7'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
