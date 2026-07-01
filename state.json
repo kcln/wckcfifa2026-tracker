@@ -7375,7 +7375,12 @@
             "away": 0.39098943425914434,
             "pick": "Senegal"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "81",
@@ -7395,7 +7400,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "82",
+      "home": "Belgium",
+      "away": "Senegal",
+      "date": "2026-07-01",
+      "venue": "Seattle",
+      "kickoff_utc": "2026-07-01T20:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -10494,7 +10513,12 @@
             "away": 0.365,
             "pick": "1G"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "81",
