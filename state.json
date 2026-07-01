@@ -7184,11 +7184,18 @@
             "pick": "Ecuador"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "20'",
+          "clock": "23'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Julián Quiñones",
+              "team": "Mexico",
+              "minute": "22'"
+            }
+          ]
         }
       ]
     }
@@ -7201,11 +7208,18 @@
       "date": "2026-06-30",
       "venue": "Mexico City",
       "kickoff_utc": "2026-07-01T01:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "20'",
-      "events": []
+      "clock": "23'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Julián Quiñones",
+          "team": "Mexico",
+          "minute": "22'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -10224,11 +10238,18 @@
             "pick": "1A"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "20'",
+          "clock": "23'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Julián Quiñones",
+              "team": "Mexico",
+              "minute": "22'"
+            }
+          ]
         }
       ]
     },
