@@ -7386,8 +7386,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "51'",
+          "ag": 2,
+          "clock": "54'",
           "ht": false,
           "events": [
             {
@@ -7395,6 +7395,12 @@
               "player": "Habib Diarra",
               "team": "Senegal",
               "minute": "25'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ismaïla Sarr",
+              "team": "Senegal",
+              "minute": "51'"
             }
           ]
         },
@@ -7425,15 +7431,21 @@
       "venue": "Seattle",
       "kickoff_utc": "2026-07-01T20:00:00Z",
       "hg": 0,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "51'",
+      "clock": "54'",
       "events": [
         {
           "kind": "goal",
           "player": "Habib Diarra",
           "team": "Senegal",
           "minute": "25'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ismaïla Sarr",
+          "team": "Senegal",
+          "minute": "51'"
         }
       ]
     }
@@ -10538,8 +10550,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "51'",
+          "ag": 2,
+          "clock": "54'",
           "ht": false,
           "events": [
             {
@@ -10547,6 +10559,12 @@
               "player": "Habib Diarra",
               "team": "Senegal",
               "minute": "25'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ismaïla Sarr",
+              "team": "Senegal",
+              "minute": "51'"
             }
           ]
         },
