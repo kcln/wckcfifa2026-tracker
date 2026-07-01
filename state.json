@@ -1911,6 +1911,15 @@
           "key": "ht-2026-07-01-80",
           "generated_at": "2026-07-01T09:53:00.576574-07:00",
           "kickoff_utc": "2026-07-01T16:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, July 1\n\nFull time:\n<b>England</b> 2 - 1 DR Congo\n<b>England</b> wins\nAtlanta, USA\n  ⚽ 7' Brian Cipenga (DR Congo)\n  ⚽ 75' Harry Kane (England)\n  ⚽ 86' Harry Kane (England)\nOverall prediction: 44/80 (55.0%)\nPrediction ✓: England",
+          "sent": true,
+          "hash": "f51048bb5577ccd6",
+          "key": "pm-2026-07-01-80",
+          "generated_at": "2026-07-01T11:02:05.791175-07:00",
+          "kickoff_utc": "2026-07-01T16:00:00Z"
         }
       ]
     }
@@ -2327,29 +2336,29 @@
   },
   "bracket": {
     "title_odds": {
-      "France": 0.1474,
-      "Spain": 0.1352,
-      "Argentina": 0.2329,
-      "Netherlands": 0.0539,
-      "Germany": 0.0534,
-      "Brazil": 0.0843,
-      "Mexico": 0.0279,
-      "Belgium": 0.0389,
-      "Austria": 0.0034,
-      "Switzerland": 0.0099,
-      "Colombia": 0.047,
-      "Croatia": 0.0239,
-      "England": 0.0587,
-      "Egypt": 0.0028,
-      "Portugal": 0.0307,
+      "France": 0.1552,
+      "Argentina": 0.236,
+      "Algeria": 0.007,
+      "Brazil": 0.0805,
+      "Croatia": 0.0183,
+      "Spain": 0.1419,
+      "Germany": 0.0497,
+      "England": 0.0676,
+      "Belgium": 0.0327,
+      "Colombia": 0.0454,
+      "Mexico": 0.0238,
+      "Norway": 0.0114,
+      "Netherlands": 0.0537,
+      "Switzerland": 0.0081,
+      "Senegal": 0.012,
+      "Portugal": 0.0289,
+      "Canada": 0.0117,
       "Australia": 0.0042,
-      "Senegal": 0.0121,
-      "Algeria": 0.0067,
-      "Paraguay": 0.0043,
-      "Norway": 0.0124,
-      "Canada": 0.0098,
-      "USA": 0.0001,
-      "Cape Verde": 0.0001
+      "Austria": 0.0043,
+      "Paraguay": 0.0049,
+      "Egypt": 0.0023,
+      "Cape Verde": 0.0003,
+      "Bosnia & Herzegovina": 0.0001
     },
     "advancement": {
       "DR Congo": 1.0,
@@ -2388,30 +2397,30 @@
   },
   "season_ended": false,
   "last_result": {
-    "home": "Mexico",
-    "away": "Ecuador",
+    "home": "England",
+    "away": "DR Congo",
     "home_goals": 2,
-    "away_goals": 0,
-    "date": "2026-06-30",
-    "venue": "Mexico City",
+    "away_goals": 1,
+    "date": "2026-07-01",
+    "venue": "Atlanta",
     "events": [
       {
         "kind": "goal",
-        "player": "Julián Quiñones",
-        "team": "Mexico",
-        "minute": "22'"
+        "player": "Brian Cipenga",
+        "team": "DR Congo",
+        "minute": "7'"
       },
       {
         "kind": "goal",
-        "player": "Raúl Jiménez",
-        "team": "Mexico",
-        "minute": "31'"
+        "player": "Harry Kane",
+        "team": "England",
+        "minute": "75'"
       },
       {
-        "kind": "red",
-        "player": "Piero Hincapié",
-        "team": "Ecuador",
-        "minute": "90'+5'"
+        "kind": "goal",
+        "player": "Harry Kane",
+        "team": "England",
+        "minute": "86'"
       }
     ]
   },
@@ -4241,6 +4250,31 @@
         }
       ],
       "winner": "Mexico"
+    },
+    "80": {
+      "home_goals": 2,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Brian Cipenga",
+          "team": "DR Congo",
+          "minute": "7'"
+        },
+        {
+          "kind": "goal",
+          "player": "Harry Kane",
+          "team": "England",
+          "minute": "75'"
+        },
+        {
+          "kind": "goal",
+          "player": "Harry Kane",
+          "team": "England",
+          "minute": "86'"
+        }
+      ],
+      "winner": "England"
     }
   },
   "board": [
@@ -7302,11 +7336,9 @@
             "away": 0.1526243997715581,
             "pick": "England"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 1,
-          "clock": "90'+5'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -7326,7 +7358,9 @@
               "team": "England",
               "minute": "86'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "England"
         },
         {
           "id": "82",
@@ -7361,40 +7395,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "80",
-      "home": "England",
-      "away": "DR Congo",
-      "date": "2026-07-01",
-      "venue": "Atlanta",
-      "kickoff_utc": "2026-07-01T16:00:00Z",
-      "hg": 2,
-      "ag": 1,
-      "status": "LIVE",
-      "clock": "90'+5'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Brian Cipenga",
-          "team": "DR Congo",
-          "minute": "7'"
-        },
-        {
-          "kind": "goal",
-          "player": "Harry Kane",
-          "team": "England",
-          "minute": "75'"
-        },
-        {
-          "kind": "goal",
-          "player": "Harry Kane",
-          "team": "England",
-          "minute": "86'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -10454,11 +10455,9 @@
             "away": 0.365,
             "pick": "1L"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 1,
-          "clock": "90'+5'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -10478,7 +10477,9 @@
               "team": "England",
               "minute": "86'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "England"
         },
         {
           "id": "82",
