@@ -1890,6 +1890,20 @@
           "kickoff_utc": "2026-06-30T17:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-07-01",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, July 1\n\nMatchday Brief\n\nEngland vs DR Congo\n  Prediction: England\n  England 63.7% · Draw 21.1% · DR Congo 15.3%\n  🕐 9:00am PT / 11:00am CT / 12:00pm ET / 9:30pm IST\n  📍 Atlanta, USA\n\nBelgium vs Senegal\n  Prediction: Senegal\n  Belgium 28.3% · Draw 32.6% · Senegal 39.1%\n  🕐 1:00pm PT / 3:00pm CT / 4:00pm ET / 1:30am IST (+1d)\n  📍 Seattle, USA\n\nUSA vs Bosnia & Herzegovina\n  Prediction: Bosnia & Herzegovina\n  USA 34.5% · Draw 28.3% · Bosnia & Herzegovina 37.2%\n  🕐 5:00pm PT / 7:00pm CT / 8:00pm ET / 5:30am IST (+1d)\n  📍 San Francisco Bay Area (Santa Clara), USA",
+          "sent": true,
+          "hash": "eec247b08c537f45",
+          "key": "mb-2026-07-01",
+          "generated_at": "2026-07-01T00:08:56.834105-07:00",
+          "kickoff_utc": "2026-07-01T16:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -7260,6 +7274,56 @@
           ],
           "hit": false,
           "winner": "Mexico"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-01",
+      "matches": [
+        {
+          "id": "80",
+          "home": "England",
+          "away": "DR Congo",
+          "kickoff_utc": "2026-07-01T16:00:00Z",
+          "venue": "Atlanta",
+          "stage": "R32",
+          "pred": {
+            "home": 0.6365427185011742,
+            "draw": 0.21083288172726763,
+            "away": 0.1526243997715581,
+            "pick": "England"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "82",
+          "home": "Belgium",
+          "away": "Senegal",
+          "kickoff_utc": "2026-07-01T20:00:00Z",
+          "venue": "Seattle",
+          "stage": "R32",
+          "pred": {
+            "home": 0.2833231823863312,
+            "draw": 0.3256873833545244,
+            "away": 0.39098943425914434,
+            "pick": "Senegal"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "81",
+          "home": "USA",
+          "away": "Bosnia & Herzegovina",
+          "kickoff_utc": "2026-07-02T00:00:00Z",
+          "venue": "San Francisco Bay Area (Santa Clara)",
+          "stage": "R32",
+          "pred": {
+            "home": 0.3452044332068305,
+            "draw": 0.28258757667133383,
+            "away": 0.37220799012183575,
+            "pick": "Bosnia & Herzegovina"
+          },
+          "status": "sched"
         }
       ]
     }
