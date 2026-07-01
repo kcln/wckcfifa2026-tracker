@@ -1861,6 +1861,15 @@
           "key": "pm-2026-06-30-77",
           "generated_at": "2026-06-30T15:55:24.633929-07:00",
           "kickoff_utc": "2026-06-30T21:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nTuesday, June 30\n\nHalf-time:\nMexico 2 - 0 Ecuador\nMexico City, Mexico\n  ⚽ 22' Julián Quiñones (Mexico)\n  ⚽ 31' Raúl Jiménez (Mexico)\nPrediction: Ecuador",
+          "sent": true,
+          "hash": "a1a68bda80270587",
+          "key": "ht-2026-06-30-79",
+          "generated_at": "2026-06-30T19:53:22.431224-07:00",
+          "kickoff_utc": "2026-07-01T01:00:00Z"
         }
       ]
     }
@@ -7186,8 +7195,8 @@
           "status": "live",
           "hg": 2,
           "ag": 0,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -7216,8 +7225,8 @@
       "kickoff_utc": "2026-07-01T01:00:00Z",
       "hg": 2,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+4'",
+      "status": "HT",
+      "clock": "45'+5'",
       "events": [
         {
           "kind": "goal",
@@ -10252,8 +10261,8 @@
           "status": "live",
           "hg": 2,
           "ag": 0,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
