@@ -7293,7 +7293,12 @@
             "away": 0.1526243997715581,
             "pick": "England"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "82",
@@ -7328,7 +7333,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "80",
+      "home": "England",
+      "away": "DR Congo",
+      "date": "2026-07-01",
+      "venue": "Atlanta",
+      "kickoff_utc": "2026-07-01T16:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -10388,7 +10407,12 @@
             "away": 0.365,
             "pick": "1L"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "82",
