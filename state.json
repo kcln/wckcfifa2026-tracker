@@ -7184,9 +7184,9 @@
             "pick": "Ecuador"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "30'",
+          "clock": "32'",
           "ht": false,
           "events": [
             {
@@ -7194,6 +7194,12 @@
               "player": "Julián Quiñones",
               "team": "Mexico",
               "minute": "22'"
+            },
+            {
+              "kind": "goal",
+              "player": "Raúl Jiménez",
+              "team": "Mexico",
+              "minute": "31'"
             }
           ]
         }
@@ -7208,16 +7214,22 @@
       "date": "2026-06-30",
       "venue": "Mexico City",
       "kickoff_utc": "2026-07-01T01:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 0,
       "status": "LIVE",
-      "clock": "30'",
+      "clock": "32'",
       "events": [
         {
           "kind": "goal",
           "player": "Julián Quiñones",
           "team": "Mexico",
           "minute": "22'"
+        },
+        {
+          "kind": "goal",
+          "player": "Raúl Jiménez",
+          "team": "Mexico",
+          "minute": "31'"
         }
       ]
     }
@@ -10238,9 +10250,9 @@
             "pick": "1A"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "30'",
+          "clock": "32'",
           "ht": false,
           "events": [
             {
@@ -10248,6 +10260,12 @@
               "player": "Julián Quiñones",
               "team": "Mexico",
               "minute": "22'"
+            },
+            {
+              "kind": "goal",
+              "player": "Raúl Jiménez",
+              "team": "Mexico",
+              "minute": "31'"
             }
           ]
         }
