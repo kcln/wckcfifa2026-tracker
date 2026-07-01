@@ -1929,6 +1929,15 @@
           "key": "ht-2026-07-01-82",
           "generated_at": "2026-07-01T13:54:05.305520-07:00",
           "kickoff_utc": "2026-07-01T20:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, July 1\n\nFull time:\n<b>Belgium</b> 3 - 2 Senegal\n<b>Belgium</b> wins\nSeattle, USA\n  ⚽ 25' Habib Diarra (Senegal)\n  ⚽ 51' Ismaïla Sarr (Senegal)\n  ⚽ 86' Romelu Lukaku (Belgium)\n  ⚽ 89' Youri Tielemans (Belgium)\n  ⚽ 120'+5' Youri Tielemans (Belgium, pen)\nOverall prediction: 44/81 (54.3%)\nPrediction ✗: Senegal",
+          "sent": true,
+          "hash": "8910f03b3509fb05",
+          "key": "pm-2026-07-01-82",
+          "generated_at": "2026-07-01T15:50:42.008707-07:00",
+          "kickoff_utc": "2026-07-01T20:00:00Z"
         }
       ]
     }
@@ -2345,29 +2354,28 @@
   },
   "bracket": {
     "title_odds": {
-      "France": 0.1552,
-      "Argentina": 0.236,
-      "Algeria": 0.007,
-      "Brazil": 0.0805,
-      "Croatia": 0.0183,
-      "Spain": 0.1419,
-      "Germany": 0.0497,
-      "England": 0.0676,
-      "Belgium": 0.0327,
-      "Colombia": 0.0454,
-      "Mexico": 0.0238,
-      "Norway": 0.0114,
-      "Netherlands": 0.0537,
-      "Switzerland": 0.0081,
-      "Senegal": 0.012,
-      "Portugal": 0.0289,
-      "Canada": 0.0117,
-      "Australia": 0.0042,
-      "Austria": 0.0043,
-      "Paraguay": 0.0049,
-      "Egypt": 0.0023,
+      "Spain": 0.1343,
+      "Netherlands": 0.0532,
+      "France": 0.1486,
+      "Brazil": 0.0831,
+      "Argentina": 0.2327,
+      "Belgium": 0.0602,
+      "Colombia": 0.0479,
+      "Germany": 0.0485,
+      "Portugal": 0.0302,
+      "Croatia": 0.0214,
+      "England": 0.0634,
+      "Austria": 0.0033,
+      "Canada": 0.011,
+      "Mexico": 0.0199,
+      "Senegal": 0.0127,
+      "Paraguay": 0.0048,
+      "Norway": 0.0093,
+      "Switzerland": 0.008,
+      "Egypt": 0.0032,
       "Cape Verde": 0.0003,
-      "Bosnia & Herzegovina": 0.0001
+      "Australia": 0.0039,
+      "USA": 0.0001
     },
     "advancement": {
       "Bosnia & Herzegovina": 1.0,
@@ -2406,30 +2414,42 @@
   },
   "season_ended": false,
   "last_result": {
-    "home": "England",
-    "away": "DR Congo",
-    "home_goals": 2,
-    "away_goals": 1,
+    "home": "Belgium",
+    "away": "Senegal",
+    "home_goals": 3,
+    "away_goals": 2,
     "date": "2026-07-01",
-    "venue": "Atlanta",
+    "venue": "Seattle",
     "events": [
       {
         "kind": "goal",
-        "player": "Brian Cipenga",
-        "team": "DR Congo",
-        "minute": "7'"
+        "player": "Habib Diarra",
+        "team": "Senegal",
+        "minute": "25'"
       },
       {
         "kind": "goal",
-        "player": "Harry Kane",
-        "team": "England",
-        "minute": "75'"
+        "player": "Ismaïla Sarr",
+        "team": "Senegal",
+        "minute": "51'"
       },
       {
         "kind": "goal",
-        "player": "Harry Kane",
-        "team": "England",
+        "player": "Romelu Lukaku",
+        "team": "Belgium",
         "minute": "86'"
+      },
+      {
+        "kind": "goal",
+        "player": "Youri Tielemans",
+        "team": "Belgium",
+        "minute": "89'"
+      },
+      {
+        "kind": "penalty",
+        "player": "Youri Tielemans",
+        "team": "Belgium",
+        "minute": "120'+5'"
       }
     ]
   },
@@ -4284,6 +4304,43 @@
         }
       ],
       "winner": "England"
+    },
+    "82": {
+      "home_goals": 3,
+      "away_goals": 2,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Habib Diarra",
+          "team": "Senegal",
+          "minute": "25'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ismaïla Sarr",
+          "team": "Senegal",
+          "minute": "51'"
+        },
+        {
+          "kind": "goal",
+          "player": "Romelu Lukaku",
+          "team": "Belgium",
+          "minute": "86'"
+        },
+        {
+          "kind": "goal",
+          "player": "Youri Tielemans",
+          "team": "Belgium",
+          "minute": "89'"
+        },
+        {
+          "kind": "penalty",
+          "player": "Youri Tielemans",
+          "team": "Belgium",
+          "minute": "120'+5'"
+        }
+      ],
+      "winner": "Belgium"
     }
   },
   "board": [
@@ -7384,11 +7441,9 @@
             "away": 0.39098943425914434,
             "pick": "Senegal"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 3,
           "ag": 2,
-          "clock": "120'+9'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -7420,7 +7475,9 @@
               "team": "Belgium",
               "minute": "120'+5'"
             }
-          ]
+          ],
+          "hit": false,
+          "winner": "Belgium"
         },
         {
           "id": "81",
@@ -7440,52 +7497,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "82",
-      "home": "Belgium",
-      "away": "Senegal",
-      "date": "2026-07-01",
-      "venue": "Seattle",
-      "kickoff_utc": "2026-07-01T20:00:00Z",
-      "hg": 3,
-      "ag": 2,
-      "status": "LIVE",
-      "clock": "120'+9'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Habib Diarra",
-          "team": "Senegal",
-          "minute": "25'"
-        },
-        {
-          "kind": "goal",
-          "player": "Ismaïla Sarr",
-          "team": "Senegal",
-          "minute": "51'"
-        },
-        {
-          "kind": "goal",
-          "player": "Romelu Lukaku",
-          "team": "Belgium",
-          "minute": "86'"
-        },
-        {
-          "kind": "goal",
-          "player": "Youri Tielemans",
-          "team": "Belgium",
-          "minute": "89'"
-        },
-        {
-          "kind": "penalty",
-          "player": "Youri Tielemans",
-          "team": "Belgium",
-          "minute": "120'+5'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -10584,11 +10596,9 @@
             "away": 0.365,
             "pick": "1G"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 3,
           "ag": 2,
-          "clock": "120'+9'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -10620,7 +10630,9 @@
               "team": "Belgium",
               "minute": "120'+5'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Belgium"
         },
         {
           "id": "81",
