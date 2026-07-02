@@ -913,6 +913,7 @@ __REFRESH__
       --ink-faint:    rgba(31,22,18,0.40);
       --hair:         rgba(31,22,18,0.10);
       --hair-soft:    rgba(31,22,18,0.06);
+      --hair-strong:  rgba(31,22,18,0.22);
       --p-50:  #FAF5FF;  --p-100: #F3E8FF;  --p-200: #E9D5FF;
       --p-300: #D8B4FE;  --p-400: #C084FC;  --p-500: #A855F7;
       --p-600: #9333EA;  --p-700: #7E22CE;  --p-800: #6B21A8;  --p-900: #581C87;
@@ -1064,12 +1065,12 @@ __REFRESH__
     .bk-rnd > .rlabel { position: absolute; top: 0; left: 2px; white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); }
     .bk-cell { flex: 1; display: flex; align-items: center; position: relative; }
     .bk-cell .bkm { width: 100%; }
-    .bk-rnd:not(:last-child) .bk-cell::after { content: ''; position: absolute; right: -21px; top: 50%; width: 21px; height: 2px; background: var(--hair-soft); }
-    .bk-rnd:not(:first-child) .bk-cell::before { content: ''; position: absolute; left: -21px; top: 50%; width: 21px; height: 2px; background: var(--hair-soft); }
+    .bk-rnd:not(:last-child) .bk-cell::after { content: ''; position: absolute; right: -21px; top: 50%; width: 21px; height: 3px; background: var(--p-300); border-radius: 2px; }
+    .bk-rnd:not(:first-child) .bk-cell::before { content: ''; position: absolute; left: -21px; top: 50%; width: 21px; height: 3px; background: var(--p-300); border-radius: 2px; }
     .bk-pair { flex: 1; display: flex; flex-direction: column; justify-content: space-around; position: relative; }
-    .bk-feeder .bk-pair::after { content: ''; position: absolute; right: -21px; top: 25%; bottom: 25%; width: 2px; background: var(--hair-soft); }
-    .bk-feeder .bk-pair::before { content: ''; position: absolute; right: -42px; top: 50%; width: 21px; height: 2px; background: var(--hair-soft); }
-    .bkm { background: var(--card); border: 1px solid var(--hair-soft); border-radius: 9px; box-shadow: var(--shadow-sm); overflow: hidden; }
+    .bk-feeder .bk-pair::after { content: ''; position: absolute; right: -21px; top: 25%; bottom: 25%; width: 3px; background: var(--p-300); border-radius: 2px; }
+    .bk-feeder .bk-pair::before { content: ''; position: absolute; right: -42px; top: 50%; width: 21px; height: 3px; background: var(--p-300); border-radius: 2px; }
+    .bkm { background: var(--card); border: 1.5px solid var(--hair-strong); border-radius: 9px; box-shadow: var(--shadow-sm); overflow: hidden; }
     .bkm.live { border-color: var(--p-400); box-shadow: 0 0 0 1px var(--p-400); }
     /* day colour-coding: today = purple, tomorrow = teal */
     .bkm.bkm-today { border-color: var(--p-400); box-shadow: inset 4px 0 0 var(--p-500), var(--shadow-sm); }
@@ -1079,10 +1080,10 @@ __REFRESH__
     .bkm-key { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; padding: 1px 7px; border-radius: 5px; letter-spacing: 0.04em; }
     .bkm-key.bkm-today { background: var(--p-100); color: var(--p-700); box-shadow: inset 3px 0 0 var(--p-500); }
     .bkm-key.bkm-tomorrow { background: #E0F2F1; color: #0E7490; box-shadow: inset 3px 0 0 #0E7490; }
-    .bkm-tag { font-family: 'JetBrains Mono', monospace; font-size: 8px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); padding: 3px 9px; border-bottom: 1px solid var(--hair-soft); background: var(--card-2); }
+    .bkm-tag { font-family: 'JetBrains Mono', monospace; font-size: 8px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); padding: 3px 9px; border-bottom: 1px solid var(--hair); background: var(--card-2); }
     .bkm-tag.livet { color: var(--p-700); display: flex; align-items: center; gap: 5px; }
     .bkm-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 9px; font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 12.5px; color: var(--ink-soft); }
-    .bkm-row + .bkm-row { border-top: 1px solid var(--hair-soft); }
+    .bkm-row + .bkm-row { border-top: 1px solid var(--hair); }
     .bkm-row.win { color: var(--p-700); font-weight: 800; }
     .bkm-row.proj .bkm-nm { color: var(--ink-faint); font-style: italic; font-weight: 500; }
     .bkm-nm { line-height: 1.3; word-spacing: -1px; }
