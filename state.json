@@ -7504,7 +7504,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "61'",
+          "clock": "65'",
           "ht": false,
           "events": [
             {
@@ -7512,6 +7512,12 @@
               "player": "Folarin Balogun",
               "team": "USA",
               "minute": "45'"
+            },
+            {
+              "kind": "red",
+              "player": "Folarin Balogun",
+              "team": "USA",
+              "minute": "64'"
             }
           ]
         }
@@ -7529,13 +7535,19 @@
       "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "61'",
+      "clock": "65'",
       "events": [
         {
           "kind": "goal",
           "player": "Folarin Balogun",
           "team": "USA",
           "minute": "45'"
+        },
+        {
+          "kind": "red",
+          "player": "Folarin Balogun",
+          "team": "USA",
+          "minute": "64'"
         }
       ]
     }
@@ -10692,7 +10704,7 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "61'",
+          "clock": "65'",
           "ht": false,
           "events": [
             {
@@ -10700,6 +10712,12 @@
               "player": "Folarin Balogun",
               "team": "USA",
               "minute": "45'"
+            },
+            {
+              "kind": "red",
+              "player": "Folarin Balogun",
+              "team": "USA",
+              "minute": "64'"
             }
           ]
         }
