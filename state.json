@@ -1979,6 +1979,15 @@
           "key": "mb-2026-07-02",
           "generated_at": "2026-07-02T00:05:39.267339-07:00",
           "kickoff_utc": "2026-07-02T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nThursday, July 2\n\nHalf-time:\nSpain 1 - 0 Austria\nLos Angeles (Inglewood), USA\n  ⚽ 36' Mikel Oyarzabal (Spain)\nPrediction: Spain",
+          "sent": true,
+          "hash": "98b598267ec796e0",
+          "key": "ht-2026-07-02-84",
+          "generated_at": "2026-07-02T12:52:18.496386-07:00",
+          "kickoff_utc": "2026-07-02T19:00:00Z"
         }
       ]
     }
@@ -7627,8 +7636,8 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "45'+3'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -7685,8 +7694,8 @@
       "kickoff_utc": "2026-07-02T19:00:00Z",
       "hg": 1,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+3'",
+      "status": "HT",
+      "clock": "45'+4'",
       "events": [
         {
           "kind": "goal",
@@ -10915,8 +10924,8 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "45'+3'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
