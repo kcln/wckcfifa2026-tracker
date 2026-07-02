@@ -7625,11 +7625,18 @@
             "pick": "Spain"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "35'",
+          "clock": "38'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Mikel Oyarzabal",
+              "team": "Spain",
+              "minute": "36'"
+            }
+          ]
         },
         {
           "id": "83",
@@ -7676,11 +7683,18 @@
       "date": "2026-07-02",
       "venue": "Los Angeles (Inglewood)",
       "kickoff_utc": "2026-07-02T19:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "35'",
-      "events": []
+      "clock": "38'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Mikel Oyarzabal",
+          "team": "Spain",
+          "minute": "36'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -10899,11 +10913,18 @@
             "pick": "Spain"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "35'",
+          "clock": "38'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Mikel Oyarzabal",
+              "team": "Spain",
+              "minute": "36'"
+            }
+          ]
         },
         {
           "id": "83",
