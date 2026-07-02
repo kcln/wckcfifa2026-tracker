@@ -781,3 +781,29 @@ def test_knockout_card_shows_two_way_to_advance(tmp_path):
     assert "Draw 0.0%" not in html
     assert '<span class="k-h">Portugal 49.9%</span>' in html
     assert '<span class="k-a">Croatia 50.1%</span>' in html
+
+
+def _pick_state():
+    def m(id_, date, status, home="Portugal", away="Croatia", pick="Portugal"):
+        e = {"id": id_, "home": home, "away": away, "stage": "R32",
+             "kickoff_utc": f"{date}T20:00:00Z", "venue": "Toronto",
+             "status": status,
+             "pred": {"home": 0.6, "draw": 0.0, "away": 0.4, "pick": pick}}
+        if status == "FT":
+            e.update({"hg": 1, "ag": 0, "events": []})
+        return {"date": date, "matches": [e]}
+    return {"days": [], "bracket": {}, "groups": {}, "schedule": [
+        m("83", "2026-07-02", "sched"),                      # today
+        m("89", "2026-07-03", "sched", "Spain", "Austria", "Spain"),   # tomorrow
+        m("95", "2026-07-07", "sched", "France", "Sweden", "France"),  # later
+        m("80", "2026-07-01", "FT", "England", "DR Congo", "England")]}  # done
+
+
+def test_bracket_pick_line_only_today_tomorrow_and_unfinished(tmp_path):
+    out = tmp_path / "i.html"
+    ha.render(_pick_state(), out, today="2026-07-02")
+    html = out.read_text()
+    assert "🔮 Pick: Portugal" in html          # today, unplayed -> shown
+    assert "🔮 Pick: Spain" in html             # tomorrow -> shown
+    assert "🔮 Pick: France" not in html        # later round -> hidden
+    assert "🔮 Pick: England" not in html       # finished -> removed

@@ -767,11 +767,12 @@ def run(cfg: Config) -> int:
         stateobj["board"] = build_board(merged, match_prob, processed, live,
                                         resolved=resolved_ko, prior=prior_board)
         # Full-tournament board (every fixture) drives the Schedule section +
-        # bracket. The bracket resolves & styles its own slot tokens, so the
-        # schedule keeps the RAW descriptors (no `resolved`); only the match-log
-        # `board` above swaps in real knockout team names.
+        # bracket. Resolved knockout names ride along so bracket boxes carry a
+        # real prediction (the pick line); still-unresolved slots keep their
+        # descriptors, which the bracket styles as projections as before.
         all_dates = {m.get("date") for m in merged["matches"]}
         stateobj["schedule"] = build_board(merged, match_prob, all_dates, live,
+                                           resolved=resolved_ko,
                                            prior=stateobj.get("schedule") or [])
         stateobj["live"] = build_live(seed, live, resolved=resolved_ko)
 

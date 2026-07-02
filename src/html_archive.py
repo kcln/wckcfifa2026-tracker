@@ -726,6 +726,13 @@ def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict,
         cls += " bkm-today"
     elif tomorrow and mdate == tomorrow:
         cls += " bkm-tomorrow"
+    # Model pick as its own line (like the venue) — only on today/tomorrow ties,
+    # dropped once the match finishes; never shown for unresolved slot tokens.
+    pick = str((m.get("pred") or {}).get("pick", ""))
+    pick_html = ""
+    if (st != "FT" and pick and not knockout.is_descriptor(pick)
+            and mdate in (today, tomorrow) and today):
+        pick_html = f'<div class="bkm-loc bkm-pick">🔮 Pick: {escape(pick)}</div>'
     # Winner: the side with more goals, or — when level and decided on penalties
     # — ESPN's recorded shootout winner (matched to the resolved team name).
     winner = m.get("winner")
@@ -741,7 +748,7 @@ def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict,
         asc += f' (<strong>{ap}</strong>)' if a_win else f' ({ap})'
     return (f'<div class="bkm{cls}">{tag}'
             f'{row(hl, hsc, h_win, h_proj)}'
-            f'{row(al, asc, a_win, a_proj)}{loc_html}</div>')
+            f'{row(al, asc, a_win, a_proj)}{loc_html}{pick_html}</div>')
 
 
 def _next_day(iso: str) -> str:
@@ -1064,11 +1071,13 @@ __REFRESH__
     .bk-rnd > .rlabel { position: absolute; top: 0; left: 2px; white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); }
     .bk-cell { flex: 1; display: flex; align-items: center; position: relative; }
     .bk-cell .bkm { width: 100%; }
-    .bk-rnd:not(:last-child) .bk-cell::after { content: ''; position: absolute; right: -21px; top: 50%; width: 21px; height: 3px; background: var(--p-300); border-radius: 2px; }
-    .bk-rnd:not(:first-child) .bk-cell::before { content: ''; position: absolute; left: -21px; top: 50%; width: 21px; height: 3px; background: var(--p-300); border-radius: 2px; }
+    /* Connectors: ONE continuous bracket stroke per pair — a ']' elbow drawn
+       with borders (top arm from the upper box, vertical, bottom arm from the
+       lower box) plus a single outgoing stub to the next round. No per-cell
+       stubs: overlapping segments were rendering as doubled/uneven lines. */
     .bk-pair { flex: 1; display: flex; flex-direction: column; justify-content: space-around; position: relative; }
-    .bk-feeder .bk-pair::after { content: ''; position: absolute; right: -21px; top: 25%; bottom: 25%; width: 3px; background: var(--p-300); border-radius: 2px; }
-    .bk-feeder .bk-pair::before { content: ''; position: absolute; right: -42px; top: 50%; width: 21px; height: 3px; background: var(--p-300); border-radius: 2px; }
+    .bk-feeder .bk-pair::after { content: ''; position: absolute; right: -21px; top: calc(25% - 1px); bottom: calc(25% - 2px); width: 21px; border: 3px solid var(--p-300); border-left: none; border-radius: 0 10px 10px 0; }
+    .bk-feeder .bk-pair::before { content: ''; position: absolute; right: -42px; top: 50%; width: 21px; height: 3px; background: var(--p-300); transform: translateY(-50%); }
     .bkm { background: var(--card); border: 1.5px solid var(--hair-strong); border-radius: 9px; box-shadow: var(--shadow-sm); overflow: hidden; }
     .bkm.live { border-color: var(--p-400); box-shadow: 0 0 0 1px var(--p-400); }
     /* day colour-coding: today = purple, tomorrow = teal */
@@ -1076,6 +1085,7 @@ __REFRESH__
     .bkm.bkm-today .bkm-tag { background: var(--p-100); color: var(--p-700); }
     .bkm.bkm-tomorrow { border-color: #5EAAA8; box-shadow: inset 4px 0 0 #0E7490, var(--shadow-sm); }
     .bkm.bkm-tomorrow .bkm-tag { background: #E0F2F1; color: #0E7490; }
+    .bkm-pick { color: var(--p-700); font-weight: 600; }
     .bkm-key { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; padding: 1px 7px; border-radius: 5px; letter-spacing: 0.04em; }
     .bkm-key.bkm-today { background: var(--p-100); color: var(--p-700); box-shadow: inset 3px 0 0 var(--p-500); }
     .bkm-key.bkm-tomorrow { background: #E0F2F1; color: #0E7490; box-shadow: inset 3px 0 0 #0E7490; }
