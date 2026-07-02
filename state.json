@@ -7634,9 +7634,9 @@
             "pick": "Spain"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "65'",
+          "clock": "69'",
           "ht": false,
           "events": [
             {
@@ -7644,6 +7644,12 @@
               "player": "Mikel Oyarzabal",
               "team": "Spain",
               "minute": "36'"
+            },
+            {
+              "kind": "goal",
+              "player": "Pedro Porro",
+              "team": "Spain",
+              "minute": "66'"
             }
           ]
         },
@@ -7692,16 +7698,22 @@
       "date": "2026-07-02",
       "venue": "Los Angeles (Inglewood)",
       "kickoff_utc": "2026-07-02T19:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 0,
       "status": "LIVE",
-      "clock": "65'",
+      "clock": "69'",
       "events": [
         {
           "kind": "goal",
           "player": "Mikel Oyarzabal",
           "team": "Spain",
           "minute": "36'"
+        },
+        {
+          "kind": "goal",
+          "player": "Pedro Porro",
+          "team": "Spain",
+          "minute": "66'"
         }
       ]
     }
@@ -10922,9 +10934,9 @@
             "pick": "Spain"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "65'",
+          "clock": "69'",
           "ht": false,
           "events": [
             {
@@ -10932,6 +10944,12 @@
               "player": "Mikel Oyarzabal",
               "team": "Spain",
               "minute": "36'"
+            },
+            {
+              "kind": "goal",
+              "player": "Pedro Porro",
+              "team": "Spain",
+              "minute": "66'"
             }
           ]
         },
