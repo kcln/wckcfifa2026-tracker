@@ -26,7 +26,11 @@ from sklearn.metrics import accuracy_score, log_loss
 
 # The ONLY feature columns the model consumes. elo_home/elo_away are redundant
 # with elo_diff for this model, so X stays compact. Shared verbatim with predict.py.
-FEATURES = ["elo_diff", "form_home", "form_away", "neutral"]
+# rest_home/rest_away (days since each side's previous match, capped) are
+# computable across the full historical dataset, so the model actually learns
+# the fatigue/recovery effect rather than seeing an always-missing column.
+FEATURES = ["elo_diff", "form_home", "form_away", "neutral",
+            "rest_home", "rest_away"]
 
 # All three labels the model must always know about, in a stable sorted order.
 CLASSES = ["away", "draw", "home"]

@@ -45,3 +45,32 @@ def test_build_is_sorted_by_date_and_outputs_expected_columns():
     assert list(feat["date"]) == sorted(feat["date"])
     for col in ["elo_home","elo_away","elo_diff","form_home","form_away","neutral","outcome"]:
         assert col in feat.columns
+
+
+def test_rest_days_computed_pit_safe():
+    import pandas as pd
+    from ml.src import features
+    df = pd.DataFrame([
+        {"date": pd.Timestamp("2026-06-01"), "home_team": "A", "away_team": "B",
+         "home_score": 1, "away_score": 0, "neutral": True},
+        {"date": pd.Timestamp("2026-06-05"), "home_team": "A", "away_team": "C",
+         "home_score": 2, "away_score": 0, "neutral": True},
+    ])
+    feat = features.build(df)
+    assert feat.iloc[0]["rest_home"] == features.REST_CAP   # debut -> cap
+    assert feat.iloc[1]["rest_home"] == 4.0                 # played 4 days ago
+    assert feat.iloc[1]["rest_away"] == features.REST_CAP   # C's debut
+
+
+def test_build_return_state_includes_newest_result():
+    import pandas as pd
+    from ml.src import features
+    df = pd.DataFrame([
+        {"date": pd.Timestamp("2026-06-01"), "home_team": "A", "away_team": "B",
+         "home_score": 3, "away_score": 0, "neutral": True},
+    ])
+    frame, state = features.build(df, return_state=True)
+    assert state["elo"]["A"] > features.START_ELO            # win already counted
+    assert state["elo"]["B"] < features.START_ELO
+    assert state["form"]["A"] == 3.0
+    assert str(state["last_played"]["A"].date()) == "2026-06-01"

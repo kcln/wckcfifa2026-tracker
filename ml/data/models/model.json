@@ -1,7 +1,7 @@
 {
-  "n_rows": 49365,
-  "n_train": 39492,
-  "n_val": 9873,
+  "n_rows": 49445,
+  "n_train": 39556,
+  "n_val": 9889,
   "classes": [
     "away",
     "draw",
@@ -11,10 +11,12 @@
     "elo_diff",
     "form_home",
     "form_away",
-    "neutral"
+    "neutral",
+    "rest_home",
+    "rest_away"
   ],
-  "val_accuracy": 0.5969816671730983,
-  "val_logloss": 0.8834459887239066,
-  "trained_through": "2026-06-06T00:00:00",
+  "val_accuracy": 0.5964202649408433,
+  "val_logloss": 0.8850592373401232,
+  "trained_through": "2026-07-01T00:00:00",
   "model_type": "lightgbm-multiclass+isotonic"
 }

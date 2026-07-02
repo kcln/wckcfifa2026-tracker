@@ -1,0 +1,18 @@
+{
+  "run_date": "2026-07-02",
+  "n_tournament_matches": 82,
+  "n_gate": 82,
+  "frozen_logloss": 0.95169,
+  "retrained_logloss": 0.93221,
+  "gate_passed": true,
+  "features": [
+    "elo_diff",
+    "form_home",
+    "form_away",
+    "neutral",
+    "rest_home",
+    "rest_away"
+  ],
+  "promoted": true,
+  "rest_teams": 22
+}

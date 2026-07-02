@@ -31,12 +31,26 @@ from ml.src.train import FEATURES
 # <repo>/ml/data/models  (this file lives at <repo>/ml/src/predict.py)
 DEFAULT_MODEL_DIR = Path(__file__).resolve().parents[1] / "data" / "models"
 MODEL_PATH = DEFAULT_MODEL_DIR / "model.pkl"
+MODEL_META_PATH = DEFAULT_MODEL_DIR / "model.json"
 TEAM_STATE_PATH = DEFAULT_MODEL_DIR / "team_state.json"
 PREDICTIONS_PATH = DEFAULT_MODEL_DIR / "predictions.json"
+
+
+@functools.lru_cache(maxsize=None)
+def _model_features() -> tuple:
+    """Feature columns of the PUBLISHED model (from model.json), falling back
+    to train.FEATURES. Inference must follow the promoted artifact: after a
+    failed retrain gate the published model can lag the code's feature list."""
+    try:
+        return tuple(json.loads(MODEL_META_PATH.read_text())["features"])
+    except Exception:
+        return tuple(FEATURES)
 
 # Defaults for teams absent from the historical state table.
 DEFAULT_ELO = 1500.0
 DEFAULT_FORM = 1.5
+DEFAULT_REST = 4.0   # days; the typical knockout-round gap, used when a
+                     # pairing has no concrete scheduled date to compute from
 
 
 @functools.lru_cache(maxsize=None)
@@ -52,28 +66,29 @@ def _team_state() -> dict:
     return json.loads(Path(TEAM_STATE_PATH).read_text())
 
 
-def build_team_state(out_path: Path | str = TEAM_STATE_PATH) -> dict:
-    """Build team -> {elo, form} from the training-consistent features pass.
+def build_team_state(out_path: Path | str = TEAM_STATE_PATH,
+                     df=None) -> dict:
+    """Build team -> {elo, form, last_date} from the training-consistent pass.
 
-    Runs ingest + features.build over the real historical data, then for each
-    team takes its FINAL Elo and FINAL recent form (last-5 ppg) as of the most
-    recent match it appears in. Writes the table to ``out_path`` and returns it.
-
-    Done this way (not via a separate Elo recompute) so inference state matches
-    the running state the model saw at train time.
+    Runs features.build over ``df`` (or the historical data when omitted) and
+    takes the FINAL running state — i.e. each team's Elo/form INCLUDING its
+    newest result. (The per-row pre-match snapshots lag one match by
+    construction, which would make a self-updating loop permanently stale.)
+    Writes the table to ``out_path`` and returns it.
     """
     from ml.src import ingest, features
 
-    raw = ingest.load_results()
-    feat = features.build(raw)
-    ordered = feat.sort_values("date", kind="stable").reset_index(drop=True)
+    raw = df if df is not None else ingest.load_results()
+    _, final = features.build(raw, return_state=True)
 
-    # Walk chronologically; each row carries the PRE-match state, so the latest
-    # row a team appears in (as home or away) holds its most-recent known state.
     state: dict[str, dict] = {}
-    for row in ordered.itertuples(index=False):
-        state[row.home_team] = {"elo": float(row.elo_home), "form": float(row.form_home)}
-        state[row.away_team] = {"elo": float(row.elo_away), "form": float(row.form_away)}
+    for team, elo_v in final["elo"].items():
+        state[team] = {
+            "elo": float(elo_v),
+            "form": float(final["form"].get(team, DEFAULT_FORM)),
+            "last_date": str(final["last_played"][team].date())
+            if team in final["last_played"] else None,
+        }
 
     out_path = Path(out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -82,11 +97,14 @@ def build_team_state(out_path: Path | str = TEAM_STATE_PATH) -> dict:
     # Refresh the memoized cache if we just rewrote the default artifact.
     if out_path == Path(TEAM_STATE_PATH):
         _team_state.cache_clear()
+        predict_wdl.cache_clear()
     return state
 
 
 @functools.lru_cache(maxsize=None)
-def predict_wdl(home: str, away: str, neutral: bool = True) -> dict:
+def predict_wdl(home: str, away: str, neutral: bool = True,
+                rest_home: float | None = None,
+                rest_away: float | None = None) -> dict:
     """Return calibrated {home, draw, away} probabilities for a pairing.
 
     Looks up each team's Elo + form (defaulting unknown teams to
@@ -109,8 +127,10 @@ def predict_wdl(home: str, away: str, neutral: bool = True) -> dict:
         "form_home": form_home,
         "form_away": form_away,
         "neutral": int(neutral),
+        "rest_home": DEFAULT_REST if rest_home is None else float(rest_home),
+        "rest_away": DEFAULT_REST if rest_away is None else float(rest_away),
     }
-    X = np.array([[feats[name] for name in FEATURES]], dtype=float)
+    X = np.array([[feats[name] for name in _model_features()]], dtype=float)
 
     model = _model()
     proba = model.predict_proba(X)[0]
@@ -123,19 +143,26 @@ def predict_wdl(home: str, away: str, neutral: bool = True) -> dict:
 
 
 def export_predictions(
-    teams: list[str], out_path: Path | str = PREDICTIONS_PATH, neutral: bool = True
+    teams: list[str], out_path: Path | str = PREDICTIONS_PATH, neutral: bool = True,
+    rest_by_team: dict | None = None,
 ) -> dict:
     """Precompute every ordered pairing into a ``{"home|away": {...}}`` lookup.
 
     Writes the lookup to ``out_path`` and returns it. For n teams this is
-    n*(n-1) entries (ordered pairs, no self-pairs).
+    n*(n-1) entries (ordered pairs, no self-pairs). ``rest_by_team`` maps a
+    team to its rest days as of its next scheduled fixture (from the live
+    bracket); teams absent from the map use DEFAULT_REST.
     """
+    rest_by_team = rest_by_team or {}
     lookup: dict[str, dict] = {}
     for home in teams:
         for away in teams:
             if home == away:
                 continue
-            lookup[f"{home}|{away}"] = predict_wdl(home, away, neutral)
+            lookup[f"{home}|{away}"] = predict_wdl(
+                home, away, neutral,
+                rest_home=rest_by_team.get(home),
+                rest_away=rest_by_team.get(away))
 
     out_path = Path(out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)

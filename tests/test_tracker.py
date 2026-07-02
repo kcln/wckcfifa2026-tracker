@@ -495,3 +495,42 @@ def test_build_board_folds_draw_for_knockouts():
     assert ko["pred"]["pick"] == "Croatia"
     # group stage keeps the raw three-way
     assert grp["pred"]["draw"] == 0.276
+
+
+def test_build_board_freezes_published_pick_for_finished_matches():
+    # A retrained model (new match_prob) must NOT rewrite the pick/hit of a
+    # match that was already published; unplayed matches get fresh pricing.
+    merged = {"matches": [
+        {"id": "1", "home": "Spain", "away": "Japan", "date": "2026-06-15",
+         "kickoff_utc": "2026-06-15T19:00:00Z", "venue": "Atlanta",
+         "stage": "group", "result": {"home_goals": 0, "away_goals": 2}},
+        {"id": "2", "home": "Spain", "away": "Brazil", "date": "2026-06-15",
+         "kickoff_utc": "2026-06-15T22:00:00Z", "venue": "Atlanta",
+         "stage": "group"}]}
+    prior = [{"date": "2026-06-15", "matches": [
+        {"id": "1", "home": "Spain", "away": "Japan", "status": "FT",
+         "pred": {"home": 0.7, "draw": 0.2, "away": 0.1, "pick": "Spain"}}]}]
+    # the "retrained" model now loves Japan — would flip the old pick to a hit
+    new_mp = lambda h, a: {"home": 0.1, "draw": 0.2, "away": 0.7}
+    board = tracker.build_board(merged, new_mp, {"2026-06-15"}, prior=prior)
+    done = next(x for d in board for x in d["matches"] if x["id"] == "1")
+    upcoming = next(x for d in board for x in d["matches"] if x["id"] == "2")
+    assert done["pred"]["pick"] == "Spain"      # published pick preserved
+    assert done["pred"]["home"] == 0.7
+    assert done["hit"] is False                 # Spain lost; stays a miss
+    assert upcoming["pred"]["pick"] == "Brazil" # future match: new model prices
+
+
+def test_accuracy_uses_frozen_published_picks():
+    merged = {"matches": [
+        {"id": "1", "home": "Spain", "away": "Japan", "date": "2026-06-15",
+         "kickoff_utc": "2026-06-15T19:00:00Z", "stage": "group",
+         "result": {"home_goals": 0, "away_goals": 2}}]}
+    frozen = {"1": {"id": "1", "home": "Spain", "away": "Japan",
+                    "pred": {"home": 0.7, "draw": 0.2, "away": 0.1,
+                             "pick": "Spain"}}}
+    retrained = lambda h, a: {"home": 0.1, "draw": 0.2, "away": 0.7}
+    # frozen pick (Spain) missed -> 0/1, even though the retrained model "knew"
+    assert tracker._accuracy(merged, retrained, frozen=frozen) == (0, 1)
+    # without freezing it would count as a hit — the inflation we're preventing
+    assert tracker._accuracy(merged, retrained) == (1, 1)

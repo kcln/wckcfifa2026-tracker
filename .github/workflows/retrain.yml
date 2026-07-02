@@ -1,0 +1,44 @@
+name: ml-nightly-retrain
+# Self-learning loop: retrain the match model on history + THIS tournament's
+# played matches, gate against the currently-published predictions, and commit
+# the promoted artifacts (predictions.json etc.) only when the retrain scores
+# better. The live tracker just reads predictions.json — no ML deps at runtime.
+on:
+  schedule:
+    - cron: "30 9 * * *"   # 09:30 UTC ≈ 2:30am PT, after the PT matchday ends
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: retrain
+  cancel-in-progress: false
+jobs:
+  retrain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r ml/requirements.txt
+      - name: Retrain with backtest gate
+        run: PYTHONPATH=. python -m ml.src.retrain
+      - name: Commit promoted artifacts
+        run: |
+          git config user.name "wc2026-ml-retrain"
+          git config user.email "actions@users.noreply.github.com"
+          git add ml/data/models/model.pkl ml/data/models/model.json \
+                  ml/data/models/team_state.json ml/data/models/predictions.json \
+                  ml/data/models/retrain_metrics.json
+          git diff --cached --quiet && { echo "gate failed or no change - nothing to commit"; exit 0; }
+          git commit -m "ml: nightly retrain $(date -u +%F) (gate passed)"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main || { sleep $((attempt * 3)); continue; }
+            git merge -X ours --no-edit origin/main || { git merge --abort 2>/dev/null || true; sleep $((attempt * 3)); continue; }
+            if git push origin HEAD:main; then
+              echo "persisted on attempt $attempt"; exit 0
+            fi
+            sleep $((attempt * 3))
+          done
+          echo "ERROR: could not push retrained artifacts"; exit 1

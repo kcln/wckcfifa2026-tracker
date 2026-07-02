@@ -25,6 +25,8 @@ START_ELO = 1500.0
 HOME_ADV = 65.0          # Elo points added to the home side (0 on neutral ground)
 K = 30.0                 # Elo update step size
 FORM_WINDOW = 5          # matches of recent form to average over
+REST_CAP = 30.0          # days; longer layoffs (and debuts) clamp here — past a
+                         # month the rested-vs-rusty signal saturates
 
 # Columns carried through from the input frame to identify each match.
 _ID_COLS = ["date", "home_team", "away_team", "home_score", "away_score", "neutral"]
@@ -62,17 +64,34 @@ def _form(recent: dict, team: str) -> float:
     return sum(history) / len(history)
 
 
-def build(df: pd.DataFrame) -> pd.DataFrame:
+def _rest(last_played: dict, team: str, date) -> float:
+    """Days since the team's previous match, clamped to REST_CAP (debuts and
+    long layoffs read as fully rested). In a compressed tournament this is the
+    fatigue/recovery signal: 3 days' rest vs 6 is a real difference."""
+    prev = last_played.get(team)
+    if prev is None:
+        return REST_CAP
+    days = (date - prev).days
+    return float(min(max(days, 0), REST_CAP))
+
+
+def build(df: pd.DataFrame, return_state: bool = False):
     """Build a PIT-safe feature matrix with a 3-class ``outcome`` label.
 
     Single stable-sorted chronological pass maintaining running Elo and recent
     form. Each row stores the PRE-match feature values; state is updated only
     after the row is recorded, so there is no leakage.
+
+    With ``return_state=True`` also returns the FINAL running state after the
+    last match — ``(frame, {"elo", "form", "last_played"})`` — which is what
+    inference should use (each team's state *including* its newest result; the
+    per-row pre-match snapshots lag one match by construction).
     """
     ordered = df.sort_values("date", kind="stable").reset_index(drop=True)
 
     elo: dict[str, float] = {}
     recent: dict[str, list[int]] = {}
+    last_played: dict = {}                    # team -> date of last match
     rows: list[dict] = []
 
     for match in ordered.itertuples(index=False):
@@ -84,6 +103,9 @@ def build(df: pd.DataFrame) -> pd.DataFrame:
 
         form_home = _form(recent, home)
         form_away = _form(recent, away)
+
+        rest_home = _rest(last_played, home, match.date)
+        rest_away = _rest(last_played, away, match.date)
 
         rows.append({
             "date": match.date,
@@ -97,6 +119,8 @@ def build(df: pd.DataFrame) -> pd.DataFrame:
             "elo_diff": elo_home - elo_away,
             "form_home": form_home,
             "form_away": form_away,
+            "rest_home": rest_home,
+            "rest_away": rest_away,
             "outcome": outcome_label(match.home_score, match.away_score),
         })
 
@@ -118,5 +142,15 @@ def build(df: pd.DataFrame) -> pd.DataFrame:
         recent.setdefault(away, []).append(_points(match.home_score, match.away_score, for_home=False))
         recent[home][:] = recent[home][-FORM_WINDOW:]
         recent[away][:] = recent[away][-FORM_WINDOW:]
+        last_played[home] = match.date
+        last_played[away] = match.date
 
-    return pd.DataFrame(rows)
+    frame = pd.DataFrame(rows)
+    if return_state:
+        state = {
+            "elo": dict(elo),
+            "form": {t: (sum(h) / len(h)) for t, h in recent.items() if h},
+            "last_played": dict(last_played),
+        }
+        return frame, state
+    return frame

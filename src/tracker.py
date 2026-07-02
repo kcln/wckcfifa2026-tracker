@@ -320,7 +320,7 @@ def _final_match(merged: dict) -> dict | None:
 
 
 def build_board(merged: dict, match_prob, dates: set, live: dict | None = None,
-                resolved: dict | None = None) -> list:
+                resolved: dict | None = None, prior: list | None = None) -> list:
     """Structured per-day match data for the website to render from (instead of
     re-parsing Telegram text). One entry per match in `dates` (the PT days the
     tracker has processed), carrying teams, kickoff, venue, the ML prediction
@@ -328,9 +328,15 @@ def build_board(merged: dict, match_prob, dates: set, live: dict | None = None,
     the live score + clock while a match is in progress (`live`).
 
     `resolved` maps match id -> (home, away) with knockout slot tokens replaced
-    by real team names once decided (see knockout.resolve_bracket)."""
+    by real team names once decided (see knockout.resolve_bracket). `prior` is
+    the previous cycle's board: a FINISHED match keeps the prediction it was
+    published with, so a nightly-retrained model (trained on that very match)
+    can never rewrite past picks, hit marks, or the accuracy record.
+    """
     live = live or {}
     resolved = resolved or {}
+    frozen = {str(e["id"]): e for d in (prior or []) for e in d.get("matches", [])
+              if e.get("pred")}
     by_date: dict = {}
     for m in merged["matches"]:
         d = m.get("date")
@@ -342,19 +348,28 @@ def build_board(merged: dict, match_prob, dates: set, live: dict | None = None,
             "kickoff_utc": m.get("kickoff_utc", ""), "venue": m.get("venue", ""),
             "stage": m.get("stage", "group"),
         }
+        r = m.get("result")
+        prev = frozen.get(str(m["id"]))
+        keep = (r and prev and prev.get("home") == home
+                and prev.get("away") == away)
         # An unresolved knockout placeholder ("2A", "3A/B/C/D/F") can't be priced;
         # the prediction is optional and skipped for those.
         try:
-            pred = match_prob(home, away)
-            if m.get("stage") not in ("group", None):
-                pred = _fold_draw(pred)      # knockouts: two-way, no draw
-            pick = max(("home", "draw", "away"), key=lambda k: pred[k])
-            pick_label = {"home": home, "away": away}.get(pick, "Draw")
-            entry["pred"] = {"home": pred["home"], "draw": pred["draw"],
-                             "away": pred["away"], "pick": pick_label}
+            if keep:                         # finished: keep the published pred
+                p = prev["pred"]
+                entry["pred"] = dict(p)
+                pick = ("home" if p["pick"] == home
+                        else "away" if p["pick"] == away else "draw")
+            else:
+                pred = match_prob(home, away)
+                if m.get("stage") not in ("group", None):
+                    pred = _fold_draw(pred)  # knockouts: two-way, no draw
+                pick = max(("home", "draw", "away"), key=lambda k: pred[k])
+                pick_label = {"home": home, "away": away}.get(pick, "Draw")
+                entry["pred"] = {"home": pred["home"], "draw": pred["draw"],
+                                 "away": pred["away"], "pick": pick_label}
         except Exception:
             pick = None
-        r = m.get("result")
         lv = live.get(m["id"])
         if r:
             outcome = _outcome_side(r, home, away)   # shootout-aware
@@ -454,11 +469,14 @@ def _result_outcome(r: dict) -> str:
 
 
 def _accuracy(merged: dict, match_prob, *, until_kickoff: str | None = None,
-              date_iso: str | None = None, resolved: dict | None = None) -> tuple:
+              date_iso: str | None = None, resolved: dict | None = None,
+              frozen: dict | None = None) -> tuple:
     """(hits, total) prediction accuracy over RESOLVED matches — argmax pick vs
     actual outcome. Knockout slot tokens are resolved to real teams (so the pick
-    and the shootout-aware outcome match what the site shows). Filter to a single
-    PT day with `date_iso`, or to matches at/before `until_kickoff`."""
+    and the shootout-aware outcome match what the site shows). `frozen` maps
+    match id -> the prior board entry: a finished match is scored against the
+    pick it was PUBLISHED with, so a nightly-retrained model can't inflate the
+    historical record. Filter with `date_iso` or `until_kickoff`."""
     hits = total = 0
     for m in merged["matches"]:
         r = m.get("result")
@@ -470,10 +488,17 @@ def _accuracy(merged: dict, match_prob, *, until_kickoff: str | None = None,
             continue
         home, away = (resolved or {}).get(str(m.get("id")),
                                           (m["home"], m["away"]))
-        pred = match_prob(home, away)
-        if m.get("stage") not in ("group", None):
-            pred = _fold_draw(pred)          # knockouts: pick is always a team
-        predicted = max(("home", "draw", "away"), key=lambda k: pred[k])
+        prev = (frozen or {}).get(str(m.get("id")))
+        if (prev and prev.get("pred") and prev.get("home") == home
+                and prev.get("away") == away):
+            label = prev["pred"]["pick"]     # the pick as published
+            predicted = ("home" if label == home
+                         else "away" if label == away else "draw")
+        else:
+            pred = match_prob(home, away)
+            if m.get("stage") not in ("group", None):
+                pred = _fold_draw(pred)      # knockouts: pick is always a team
+            predicted = max(("home", "draw", "away"), key=lambda k: pred[k])
         total += 1
         if predicted == _outcome_side(r, home, away):
             hits += 1
@@ -482,7 +507,8 @@ def _accuracy(merged: dict, match_prob, *, until_kickoff: str | None = None,
 
 def _due_for_day(stateobj: dict, merged: dict, match_prob, date_iso: str,
                  *, is_today: bool, live: dict | None, existing: set,
-                 resolved: dict | None = None) -> None:
+                 resolved: dict | None = None,
+                 frozen: dict | None = None) -> None:
     """Append all due messages for the matches whose PT KICKOFF date is
     `date_iso`: morning brief, per-match results, (live-day-only) half-times,
     the daily recap, and any knockout bracket update. All deduped by hash.
@@ -509,6 +535,7 @@ def _due_for_day(stateobj: dict, merged: dict, match_prob, date_iso: str,
     for mp in todays_pred:
         if mp.get("result"):
             overall = _accuracy(merged, match_prob, resolved=resolved,
+                                frozen=frozen,
                                 until_kickoff=mp.get("kickoff_utc") or "")
             body = message_builder.post_match(mp, overall=overall)
             _add_message(day, existing, "post_match", date_iso, body,
@@ -540,10 +567,11 @@ def _due_for_day(stateobj: dict, merged: dict, match_prob, date_iso: str,
             or _day_clock_complete(todays, datetime.now(timezone.utc))):
         tables = _group_tables_for(merged)
         qualified = _clinched_for(merged, tables)
-        day_acc = _accuracy(merged, match_prob, date_iso=date_iso, resolved=resolved)
+        day_acc = _accuracy(merged, match_prob, date_iso=date_iso,
+                            resolved=resolved, frozen=frozen)
         last_ko = max((m.get("kickoff_utc") or "" for m in todays), default="")
         overall_acc = _accuracy(merged, match_prob, until_kickoff=last_ko,
-                                resolved=resolved)
+                                resolved=resolved, frozen=frozen)
         recap = message_builder.daily_recap(date_iso, todays_pred, tables,
                                             day_acc=day_acc,
                                             overall_acc=overall_acc,
@@ -556,7 +584,8 @@ def _due_for_day(stateobj: dict, merged: dict, match_prob, date_iso: str,
 
 
 def _due_messages(stateobj: dict, merged: dict, match_prob, now_iso: str,
-                  live: dict | None = None, resolved: dict | None = None) -> None:
+                  live: dict | None = None, resolved: dict | None = None,
+                  frozen: dict | None = None) -> None:
     """Compute and append all due messages (deduped).
 
     Processes today AND the immediately previous PT day, so a match that ends
@@ -566,9 +595,11 @@ def _due_messages(stateobj: dict, merged: dict, match_prob, now_iso: str,
     """
     existing = _all_keys(stateobj)
     _due_for_day(stateobj, merged, match_prob, _prev_day_iso(now_iso),
-                 is_today=False, live=None, existing=existing, resolved=resolved)
+                 is_today=False, live=None, existing=existing, resolved=resolved,
+                 frozen=frozen)
     _due_for_day(stateobj, merged, match_prob, now_iso,
-                 is_today=True, live=live, existing=existing, resolved=resolved)
+                 is_today=True, live=live, existing=existing, resolved=resolved,
+                 frozen=frozen)
 
     # 5) Champion recap — once, after the final is done (or now past it).
     if not stateobj.get("season_ended"):
@@ -706,9 +737,15 @@ def run(cfg: Config) -> int:
         resolved_ko = knockout.resolve_bracket(merged["matches"], tables,
                                                stateobj.get("results", {}))
 
+        # Picks already PUBLISHED for finished matches (previous cycle's board):
+        # the nightly-retrained model prices future games, never rewrites these.
+        prior_board = stateobj.get("board") or []
+        frozen_picks = {str(e["id"]): e for d in prior_board
+                        for e in d.get("matches", []) if e.get("pred")}
+
         # Compute and append all due messages for today (idempotent).
         _due_messages(stateobj, merged, match_prob, cfg.now_iso, live=live,
-                      resolved=resolved_ko)
+                      resolved=resolved_ko, frozen=frozen_picks)
 
         # Recompute bracket + group state.
         try:
@@ -728,13 +765,14 @@ def run(cfg: Config) -> int:
         # plus a transient snapshot of in-progress matches for live scores.
         processed = {d.get("date") for d in stateobj["days"]}
         stateobj["board"] = build_board(merged, match_prob, processed, live,
-                                        resolved=resolved_ko)
+                                        resolved=resolved_ko, prior=prior_board)
         # Full-tournament board (every fixture) drives the Schedule section +
         # bracket. The bracket resolves & styles its own slot tokens, so the
         # schedule keeps the RAW descriptors (no `resolved`); only the match-log
         # `board` above swaps in real knockout team names.
         all_dates = {m.get("date") for m in merged["matches"]}
-        stateobj["schedule"] = build_board(merged, match_prob, all_dates, live)
+        stateobj["schedule"] = build_board(merged, match_prob, all_dates, live,
+                                           prior=stateobj.get("schedule") or [])
         stateobj["live"] = build_live(seed, live, resolved=resolved_ko)
 
         # Keep days ordered.

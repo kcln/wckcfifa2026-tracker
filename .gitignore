@@ -14,3 +14,6 @@ ml/data/historical/*
 .live-continue
 .live-continue
 .season-ended
+
+# retrain staging (promoted artifacts are committed; staging never is)
+ml/data/models/staging/
