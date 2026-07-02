@@ -4,7 +4,13 @@ name: test-recap-to-kc
 # it never broadcasts to the other subscribers). Used to preview message
 # changes with the real bot before they go out to everyone.
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      args:
+        description: "Extra args for the script (e.g. --announce)"
+        required: false
+        default: ""
+        type: string
 permissions:
   contents: read
 jobs:
@@ -19,4 +25,4 @@ jobs:
       - name: Send test recap to KC only
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-        run: python scripts/test_send_recap.py
+        run: python scripts/test_send_recap.py ${{ inputs.args }}

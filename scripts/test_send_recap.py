@@ -101,16 +101,41 @@ def _strip(msg: str) -> str:
     return msg.replace("<code>", "").replace("</code>", "")
 
 
+def build_announcement() -> str:
+    """Subscriber-facing note about the model upgrade + knockout format."""
+    return "\n".join([
+        "🏆 FIFA World Cup 2026",
+        "",
+        "Tracker update",
+        "",
+        "🧠 <b>ML model upgraded.</b> The prediction engine now retrains "
+        "nightly on every match played this tournament — picks reflect live "
+        "form, not just pre-tournament ratings.",
+        "",
+        "⚔️ <b>No more Draw.</b> These are knockouts — every prediction is "
+        "now simply who advances.",
+        "",
+        "Today's refreshed matchday brief follows.",
+    ])
+
+
 def main() -> None:
     state = json.loads((ROOT / "state.json").read_text())
-    brief = build_brief(state)
-    pm = build_post_match(state)
-    date_iso, recap = build_recap(state)
-    if brief:
-        print("--- matchday brief (preview) ---\n" + _strip(brief) + "\n")
-    print("--- post-match (preview) ---\n" + _strip(pm))
-    print(f"\n--- recap for {date_iso} (preview) ---\n" + _strip(recap))
-    print("\n--- end preview ---")
+
+    if "--announce" in sys.argv:
+        # Model-upgrade announcement + the refreshed brief, nothing else.
+        msgs = [("announce", build_announcement()),
+                ("brief", build_brief(state))]
+    else:
+        date_iso, recap = build_recap(state)
+        msgs = [("brief", build_brief(state)),
+                ("post_match", build_post_match(state)),
+                ("recap", recap)]
+
+    for name, body in msgs:
+        if body:
+            print(f"--- {name} (preview) ---\n" + _strip(body) + "\n")
+    print("--- end preview ---")
 
     if "--dry-run" in sys.argv:
         print("dry-run: not sent.")
@@ -118,10 +143,10 @@ def main() -> None:
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
     if not token:
         raise SystemExit("set TELEGRAM_BOT_TOKEN to send (or pass --dry-run)")
-    s0 = telegram_sender.send(brief, token, [KC_CHAT_ID]) if brief else None
-    s1 = telegram_sender.send(pm, token, [KC_CHAT_ID])
-    s2 = telegram_sender.send(recap, token, [KC_CHAT_ID])
-    print(f"sent to KC ({KC_CHAT_ID}): brief={s0} post_match={s1} recap={s2}")
+    results = {name: telegram_sender.send(body, token, [KC_CHAT_ID])
+               for name, body in msgs if body}
+    print(f"sent to KC ({KC_CHAT_ID}): " +
+          " ".join(f"{k}={v}" for k, v in results.items()))
 
 
 if __name__ == "__main__":
