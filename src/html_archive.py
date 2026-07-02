@@ -804,25 +804,31 @@ def _bracket_html(state: dict, today: str | None = None) -> str:
         return _bracket_box(m, groups, winners, losers, clinched, resolved,
                             today=today, tomorrow=tomorrow)
 
-    def feeder_round(label, ms):
-        pairs = ""
-        for i in range(0, len(ms) - 1, 2):
-            pairs += (f'<div class="bk-pair"><div class="bk-cell">{box(ms[i])}'
-                      f'</div><div class="bk-cell">{box(ms[i + 1])}</div></div>')
-        if len(ms) % 2:
-            pairs += f'<div class="bk-pair"><div class="bk-cell">{box(ms[-1])}</div></div>'
-        return (f'<div class="bk-rnd bk-feeder"><div class="rlabel">{label}</div>'
-                f'{pairs}</div>')
+    # FIXED-GRID layout: every match occupies an exact slot computed from the
+    # feeder tree (leaves are 1 row; each later round spans 2x, centred over
+    # its feeders). Flexbox used to divide columns into "equal" slots, but
+    # variable box heights (pick lines, wrapped venues) made the slots drift —
+    # connectors could never line up reliably. With fixed rows the arms at
+    # 50% and the vertical at 25%..75% of a cell are exact by construction.
+    _SPAN = {"R32": 1, "R16": 2, "QF": 4, "SF": 8, "final": 16}
 
-    def plain_round(label, ms):
-        cells = "".join(f'<div class="bk-cell">{box(m)}</div>' for m in ms)
-        return f'<div class="bk-rnd"><div class="rlabel">{label}</div>{cells}</div>'
+    def cell(m, span):
+        p = pos.get(str(m["id"]), 0)
+        top = p + 0.5 - span / 2.0            # in leaf-row units
+        style = (f"top:calc(22px + {top:g} * var(--bk-row));"
+                 f"height:calc({span} * var(--bk-row))")
+        return f'<div class="bk-cell" style="{style}">{box(m)}</div>'
 
-    cols = (feeder_round("Round of 32", rounds.get("R32", []))
-            + feeder_round("Round of 16", rounds.get("R16", []))
-            + feeder_round("Quarter-finals", rounds.get("QF", []))
-            + feeder_round("Semi-finals", rounds.get("SF", []))
-            + plain_round("Final", rounds.get("final", [])))
+    def round_col(label, ms, stage, feeder=True):
+        cls = "bk-rnd bk-feeder" if feeder else "bk-rnd"
+        cells = "".join(cell(m, _SPAN[stage]) for m in ms)
+        return f'<div class="{cls}"><div class="rlabel">{label}</div>{cells}</div>'
+
+    cols = (round_col("Round of 32", rounds.get("R32", []), "R32")
+            + round_col("Round of 16", rounds.get("R16", []), "R16")
+            + round_col("Quarter-finals", rounds.get("QF", []), "QF")
+            + round_col("Semi-finals", rounds.get("SF", []), "SF")
+            + round_col("Final", rounds.get("final", []), "final", feeder=False))
     third = rounds.get("3rd", [])
     third_html = (f'<div class="bk-rnd bk-third"><div class="rlabel">Third place'
                   f'</div><div class="bk-cell">{box(third[0])}</div></div>'
@@ -1073,23 +1079,21 @@ __REFRESH__
     .dbox-loc { font-size: 11px; color: var(--ink-faint); margin-top: 4px; }
     .dbox-num { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.08em; color: var(--ink-faint); margin-top: 4px; }
     /* Knockout bracket (Schedule, from Jun 28) — classic horizontal tree */
-    .bk { display: flex; flex: 0 0 auto; overflow: visible; padding: 6px 4px 12px; }
-    .bk-rnd { display: flex; flex-direction: column; justify-content: space-around; min-width: 156px; padding-top: 22px; position: relative; }
+    .bk { --bk-row: 172px; display: flex; flex: 0 0 auto; overflow: visible; padding: 6px 4px 12px; }
+    .bk-rnd { position: relative; min-width: 156px; height: calc(22px + 16 * var(--bk-row)); }
     .bk-rnd + .bk-rnd { margin-left: 42px; }
     .bk-rnd > .rlabel { position: absolute; top: 0; left: 2px; white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); }
-    .bk-cell { flex: 1; display: flex; align-items: center; position: relative; }
+    /* Fixed-grid cells (inline top/height in leaf-row units). Boxes centre in
+       their cell, so: out-arm at cell 50% == box centre; the child's vertical
+       spans 25%..75% of ITS cell == exactly its two feeders' centres; the
+       incoming stub sits at the vertical's midpoint == the child's own centre.
+       All exact — no flex drift from unequal box heights. */
+    .bk-cell { position: absolute; left: 0; right: 0; display: flex; align-items: center; }
     .bk-cell .bkm { width: 100%; }
-    /* Connectors anchored to BOX CENTERS, not fixed pair percentages (boxes
-       differ in height, so 25%/75% arms missed their boxes). Each cell of a
-       pair draws its own half of the ']': the upper cell an arm at its centre
-       + a vertical down to the cell boundary, the lower cell the mirror — the
-       halves meet flush at the boundary. The child box draws the incoming stub
-       at ITS centre; it always lands on the vertical (the pair midpoint sits
-       between the two arm heights by construction). */
-    .bk-pair { flex: 1; display: flex; flex-direction: column; justify-content: space-around; position: relative; }
-    .bk-feeder .bk-cell:first-child::after { content: ''; position: absolute; right: -21px; top: 50%; bottom: 0; width: 21px; border-top: 3px solid var(--p-300); border-right: 3px solid var(--p-300); border-radius: 0 10px 0 0; }
-    .bk-feeder .bk-cell:last-child::after { content: ''; position: absolute; right: -21px; top: 0; bottom: 50%; width: 21px; border-bottom: 3px solid var(--p-300); border-right: 3px solid var(--p-300); border-radius: 0 0 10px 0; }
-    .bk-rnd:not(:first-child):not(.bk-third) .bk-cell::before { content: ''; position: absolute; left: -21px; top: 50%; width: 21px; height: 3px; background: var(--p-300); transform: translateY(-50%); }
+    .bk-feeder .bk-cell::after { content: ''; position: absolute; right: -21px; top: 50%; width: 21px; height: 3px; background: var(--p-300); transform: translateY(-50%); }
+    .bk-rnd:not(:first-child):not(.bk-third) .bk-cell::before { content: ''; position: absolute; left: -21px; top: 25%; bottom: 25%; width: 21px; border-left: 3px solid var(--p-300); background: linear-gradient(var(--p-300), var(--p-300)) no-repeat left center / 100% 3px; }
+    .bk-rnd.bk-third { height: auto; align-self: flex-start; margin-top: 22px; padding-top: 22px; }
+    .bk-rnd.bk-third .bk-cell { position: static; }
     .bkm { background: var(--card); border: 1.5px solid var(--hair-strong); border-radius: 9px; box-shadow: var(--shadow-sm); overflow: hidden; }
     .bkm.live { border-color: var(--p-400); box-shadow: 0 0 0 1px var(--p-400); }
     /* day colour-coding: today = purple, tomorrow = teal */
