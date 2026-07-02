@@ -1967,6 +1967,20 @@
           "kickoff_utc": "2026-07-01T16:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-07-02",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026\nThursday, July 2\n\nMatchday Brief\n\nSpain vs Austria\n  Prediction: Spain\n  Spain 64.8% · Draw 19.6% · Austria 15.5%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 Los Angeles (Inglewood), USA\n\nPortugal vs Croatia\n  Prediction: Croatia\n  Portugal 36.1% · Draw 27.6% · Croatia 36.3%\n  🕐 4:00pm PT / 6:00pm CT / 7:00pm ET / 4:30am IST (+1d)\n  📍 Toronto, Canada\n\nSwitzerland vs Algeria\n  Prediction: Algeria\n  Switzerland 36.1% · Draw 27.6% · Algeria 36.3%\n  🕐 8:00pm PT / 10:00pm CT / 11:00pm ET / 8:30am IST (+1d)\n  📍 Vancouver, Canada",
+          "sent": true,
+          "hash": "be74176b10bac1b4",
+          "key": "mb-2026-07-02",
+          "generated_at": "2026-07-02T00:05:39.267339-07:00",
+          "kickoff_utc": "2026-07-02T19:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -7568,6 +7582,56 @@
           ],
           "hit": false,
           "winner": "USA"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-02",
+      "matches": [
+        {
+          "id": "84",
+          "home": "Spain",
+          "away": "Austria",
+          "kickoff_utc": "2026-07-02T19:00:00Z",
+          "venue": "Los Angeles (Inglewood)",
+          "stage": "R32",
+          "pred": {
+            "home": 0.648479753878529,
+            "draw": 0.1960336930229366,
+            "away": 0.15548655309853435,
+            "pick": "Spain"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "83",
+          "home": "Portugal",
+          "away": "Croatia",
+          "kickoff_utc": "2026-07-02T23:00:00Z",
+          "venue": "Toronto",
+          "stage": "R32",
+          "pred": {
+            "home": 0.3606276344161666,
+            "draw": 0.2759314456965843,
+            "away": 0.3634409198872491,
+            "pick": "Croatia"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "85",
+          "home": "Switzerland",
+          "away": "Algeria",
+          "kickoff_utc": "2026-07-03T03:00:00Z",
+          "venue": "Vancouver",
+          "stage": "R32",
+          "pred": {
+            "home": 0.3606276344161666,
+            "draw": 0.2759314456965843,
+            "away": 0.3634409198872491,
+            "pick": "Algeria"
+          },
+          "status": "sched"
         }
       ]
     }
