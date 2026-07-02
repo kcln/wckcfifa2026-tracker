@@ -50,6 +50,23 @@ def _finished(state: dict) -> list[tuple]:
             if m.get("status") == "FT" and m.get("hg") is not None]
 
 
+def build_brief(state: dict) -> str | None:
+    """Matchday brief for the latest day with unplayed matches (shows the
+    two-way 'to advance' knockout format). None if nothing is scheduled."""
+    board = sorted(state.get("board") or [], key=lambda d: d["date"])
+    for d in reversed(board):
+        sched = [m for m in d.get("matches", [])
+                 if m.get("status") == "sched" and m.get("pred")]
+        if sched:
+            matches = [{"home": m["home"], "away": m["away"],
+                        "stage": m.get("stage"), "date": d["date"],
+                        "kickoff_utc": m.get("kickoff_utc", ""),
+                        "venue": m.get("venue", ""),
+                        "prediction": m["pred"]} for m in sched]
+            return message_builder.morning_brief(d["date"], matches)
+    return None
+
+
 def build_post_match(state: dict) -> str:
     fts = _finished(state)
     if not fts:
@@ -86,8 +103,11 @@ def _strip(msg: str) -> str:
 
 def main() -> None:
     state = json.loads((ROOT / "state.json").read_text())
+    brief = build_brief(state)
     pm = build_post_match(state)
     date_iso, recap = build_recap(state)
+    if brief:
+        print("--- matchday brief (preview) ---\n" + _strip(brief) + "\n")
     print("--- post-match (preview) ---\n" + _strip(pm))
     print(f"\n--- recap for {date_iso} (preview) ---\n" + _strip(recap))
     print("\n--- end preview ---")
@@ -98,9 +118,10 @@ def main() -> None:
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
     if not token:
         raise SystemExit("set TELEGRAM_BOT_TOKEN to send (or pass --dry-run)")
+    s0 = telegram_sender.send(brief, token, [KC_CHAT_ID]) if brief else None
     s1 = telegram_sender.send(pm, token, [KC_CHAT_ID])
     s2 = telegram_sender.send(recap, token, [KC_CHAT_ID])
-    print(f"sent to KC ({KC_CHAT_ID}): post_match={s1} recap={s2}")
+    print(f"sent to KC ({KC_CHAT_ID}): brief={s0} post_match={s1} recap={s2}")
 
 
 if __name__ == "__main__":
