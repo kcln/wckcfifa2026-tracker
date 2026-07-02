@@ -31,8 +31,9 @@ jobs:
           git add ml/data/models/model.pkl ml/data/models/model.json \
                   ml/data/models/team_state.json ml/data/models/predictions.json \
                   ml/data/models/retrain_metrics.json
-          git diff --cached --quiet && { echo "gate failed or no change - nothing to commit"; exit 0; }
-          git commit -m "ml: nightly retrain $(date -u +%F) (gate passed)"
+          git diff --cached --quiet && { echo "no change - nothing to commit"; exit 0; }
+          gate=$(jq -r 'if .gate_passed then "passed - model promoted" else "failed - metrics only" end' ml/data/models/retrain_metrics.json)
+          git commit -m "ml: nightly retrain $(date -u +%F) (gate $gate)"
           for attempt in 1 2 3 4 5; do
             git fetch origin main || { sleep $((attempt * 3)); continue; }
             git merge -X ours --no-edit origin/main || { git merge --abort 2>/dev/null || true; sleep $((attempt * 3)); continue; }
