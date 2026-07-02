@@ -2434,7 +2434,7 @@
         "kind": "goal",
         "player": "Habib Diarra",
         "team": "Senegal",
-        "minute": "25'"
+        "minute": "24'"
       },
       {
         "kind": "goal",
@@ -4322,7 +4322,7 @@
           "kind": "goal",
           "player": "Habib Diarra",
           "team": "Senegal",
-          "minute": "25'"
+          "minute": "24'"
         },
         {
           "kind": "goal",
@@ -7458,7 +7458,7 @@
               "kind": "goal",
               "player": "Habib Diarra",
               "team": "Senegal",
-              "minute": "25'"
+              "minute": "24'"
             },
             {
               "kind": "goal",
@@ -7504,7 +7504,7 @@
           "status": "live",
           "hg": 2,
           "ag": 0,
-          "clock": "90'+3'",
+          "clock": "90'+7'",
           "ht": false,
           "events": [
             {
@@ -7541,7 +7541,7 @@
       "hg": 2,
       "ag": 0,
       "status": "LIVE",
-      "clock": "90'+3'",
+      "clock": "90'+7'",
       "events": [
         {
           "kind": "goal",
@@ -10670,7 +10670,7 @@
               "kind": "goal",
               "player": "Habib Diarra",
               "team": "Senegal",
-              "minute": "25'"
+              "minute": "24'"
             },
             {
               "kind": "goal",
@@ -10716,7 +10716,7 @@
           "status": "live",
           "hg": 2,
           "ag": 0,
-          "clock": "90'+3'",
+          "clock": "90'+7'",
           "ht": false,
           "events": [
             {
