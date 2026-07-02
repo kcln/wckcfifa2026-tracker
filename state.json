@@ -2419,38 +2419,38 @@
       "USA": 0.0001
     },
     "advancement": {
-      "Egypt": 1.0,
-      "Switzerland": 1.0,
-      "France": 1.0,
-      "Croatia": 1.0,
-      "Bosnia & Herzegovina": 1.0,
-      "Canada": 1.0,
-      "Portugal": 1.0,
-      "Mexico": 1.0,
       "Spain": 1.0,
-      "Ivory Coast": 1.0,
-      "Austria": 1.0,
-      "Colombia": 1.0,
-      "DR Congo": 1.0,
       "Australia": 1.0,
-      "Algeria": 1.0,
-      "Ecuador": 1.0,
-      "Paraguay": 1.0,
-      "Sweden": 1.0,
-      "South Africa": 1.0,
-      "Morocco": 1.0,
-      "England": 1.0,
-      "Germany": 1.0,
-      "Brazil": 1.0,
-      "Ghana": 1.0,
-      "Netherlands": 1.0,
+      "Bosnia & Herzegovina": 1.0,
       "Norway": 1.0,
-      "Senegal": 1.0,
+      "Algeria": 1.0,
+      "Switzerland": 1.0,
+      "Morocco": 1.0,
+      "Portugal": 1.0,
+      "DR Congo": 1.0,
       "Belgium": 1.0,
-      "Japan": 1.0,
-      "Cape Verde": 1.0,
+      "Austria": 1.0,
+      "Netherlands": 1.0,
+      "England": 1.0,
       "Argentina": 1.0,
-      "USA": 1.0
+      "Brazil": 1.0,
+      "South Africa": 1.0,
+      "France": 1.0,
+      "Germany": 1.0,
+      "Japan": 1.0,
+      "Sweden": 1.0,
+      "Paraguay": 1.0,
+      "Ghana": 1.0,
+      "Mexico": 1.0,
+      "Colombia": 1.0,
+      "Croatia": 1.0,
+      "USA": 1.0,
+      "Senegal": 1.0,
+      "Egypt": 1.0,
+      "Ivory Coast": 1.0,
+      "Ecuador": 1.0,
+      "Cape Verde": 1.0,
+      "Canada": 1.0
     }
   },
   "season_ended": false,
@@ -7195,6 +7195,8 @@
           "kickoff_utc": "2026-06-28T19:00:00Z",
           "venue": "Los Angeles (Inglewood)",
           "stage": "R32",
+          "slot_home": "2A",
+          "slot_away": "2B",
           "pred": {
             "home": 0.21929173868213547,
             "draw": 0.0,
@@ -7226,6 +7228,8 @@
           "kickoff_utc": "2026-06-29T17:00:00Z",
           "venue": "Houston",
           "stage": "R32",
+          "slot_home": "1C",
+          "slot_away": "2F",
           "pred": {
             "home": 0.48661586032989496,
             "draw": 0.0,
@@ -7265,6 +7269,8 @@
           "kickoff_utc": "2026-06-29T20:30:00Z",
           "venue": "Boston (Foxborough)",
           "stage": "R32",
+          "slot_home": "1E",
+          "slot_away": "3A/B/C/D/F",
           "pred": {
             "home": 0.6457177846715356,
             "draw": 0.0,
@@ -7300,6 +7306,8 @@
           "kickoff_utc": "2026-06-30T01:00:00Z",
           "venue": "Monterrey (Guadalupe)",
           "stage": "R32",
+          "slot_home": "1F",
+          "slot_away": "2C",
           "pred": {
             "home": 0.4781029472810295,
             "draw": 0.0,
@@ -7340,6 +7348,8 @@
           "kickoff_utc": "2026-06-30T17:00:00Z",
           "venue": "Dallas (Arlington)",
           "stage": "R32",
+          "slot_home": "2E",
+          "slot_away": "2I",
           "pred": {
             "home": 0.46479714896402724,
             "draw": 0.0,
@@ -7379,6 +7389,8 @@
           "kickoff_utc": "2026-06-30T21:00:00Z",
           "venue": "New York/New Jersey (East Rutherford)",
           "stage": "R32",
+          "slot_home": "1I",
+          "slot_away": "3C/D/F/G/H",
           "pred": {
             "home": 0.7810322594910538,
             "draw": 0.0,
@@ -7418,6 +7430,8 @@
           "kickoff_utc": "2026-07-01T01:00:00Z",
           "venue": "Mexico City",
           "stage": "R32",
+          "slot_home": "1A",
+          "slot_away": "3C/E/F/H/I",
           "pred": {
             "home": 0.3851543911360489,
             "draw": 0.0,
@@ -7462,6 +7476,8 @@
           "kickoff_utc": "2026-07-01T16:00:00Z",
           "venue": "Atlanta",
           "stage": "R32",
+          "slot_home": "1L",
+          "slot_away": "3E/H/I/J/K",
           "pred": {
             "home": 0.7419591593648079,
             "draw": 0.0,
@@ -7501,6 +7517,8 @@
           "kickoff_utc": "2026-07-01T20:00:00Z",
           "venue": "Seattle",
           "stage": "R32",
+          "slot_home": "1G",
+          "slot_away": "3A/E/H/I/J",
           "pred": {
             "home": 0.4461668740635934,
             "draw": 0.0,
@@ -7552,6 +7570,8 @@
           "kickoff_utc": "2026-07-02T00:00:00Z",
           "venue": "San Francisco Bay Area (Santa Clara)",
           "stage": "R32",
+          "slot_home": "1D",
+          "slot_away": "3B/E/F/I/J",
           "pred": {
             "home": 0.4864982215424974,
             "draw": 0.0,
@@ -7596,6 +7616,8 @@
           "kickoff_utc": "2026-07-02T19:00:00Z",
           "venue": "Los Angeles (Inglewood)",
           "stage": "R32",
+          "slot_home": "1H",
+          "slot_away": "2J",
           "pred": {
             "home": 0.7029263428322539,
             "draw": 0.0,
@@ -7611,6 +7633,8 @@
           "kickoff_utc": "2026-07-02T23:00:00Z",
           "venue": "Toronto",
           "stage": "R32",
+          "slot_home": "2K",
+          "slot_away": "2L",
           "pred": {
             "home": 0.6064721718534704,
             "draw": 0.0,
@@ -7626,6 +7650,8 @@
           "kickoff_utc": "2026-07-03T03:00:00Z",
           "venue": "Vancouver",
           "stage": "R32",
+          "slot_home": "1B",
+          "slot_away": "3E/F/G/I/J",
           "pred": {
             "home": 0.47002196620966336,
             "draw": 0.0,
@@ -10424,6 +10450,8 @@
           "kickoff_utc": "2026-06-28T19:00:00Z",
           "venue": "Los Angeles (Inglewood)",
           "stage": "R32",
+          "slot_home": "2A",
+          "slot_away": "2B",
           "pred": {
             "home": 0.26544736302014954,
             "draw": 0.0,
@@ -10455,6 +10483,8 @@
           "kickoff_utc": "2026-06-29T17:00:00Z",
           "venue": "Houston",
           "stage": "R32",
+          "slot_home": "1C",
+          "slot_away": "2F",
           "pred": {
             "home": 0.6412381306471874,
             "draw": 0.0,
@@ -10494,6 +10524,8 @@
           "kickoff_utc": "2026-06-29T20:30:00Z",
           "venue": "Boston (Foxborough)",
           "stage": "R32",
+          "slot_home": "1E",
+          "slot_away": "3A/B/C/D/F",
           "pred": {
             "home": 0.6064721718534704,
             "draw": 0.0,
@@ -10529,6 +10561,8 @@
           "kickoff_utc": "2026-06-30T01:00:00Z",
           "venue": "Monterrey (Guadalupe)",
           "stage": "R32",
+          "slot_home": "1F",
+          "slot_away": "2C",
           "pred": {
             "home": 0.5070688268584618,
             "draw": 0.0,
@@ -10569,6 +10603,8 @@
           "kickoff_utc": "2026-06-30T17:00:00Z",
           "venue": "Dallas (Arlington)",
           "stage": "R32",
+          "slot_home": "2E",
+          "slot_away": "2I",
           "pred": {
             "home": 0.38301821830842075,
             "draw": 0.0,
@@ -10608,6 +10644,8 @@
           "kickoff_utc": "2026-06-30T21:00:00Z",
           "venue": "New York/New Jersey (East Rutherford)",
           "stage": "R32",
+          "slot_home": "1I",
+          "slot_away": "3C/D/F/G/H",
           "pred": {
             "home": 0.8416002703772013,
             "draw": 0.0,
@@ -10647,6 +10685,8 @@
           "kickoff_utc": "2026-07-01T01:00:00Z",
           "venue": "Mexico City",
           "stage": "R32",
+          "slot_home": "1A",
+          "slot_away": "3C/E/F/H/I",
           "pred": {
             "home": 0.5176856663350023,
             "draw": 0.0,
@@ -10691,6 +10731,8 @@
           "kickoff_utc": "2026-07-01T16:00:00Z",
           "venue": "Atlanta",
           "stage": "R32",
+          "slot_home": "1L",
+          "slot_away": "3E/H/I/J/K",
           "pred": {
             "home": 0.8267679939751856,
             "draw": 0.0,
@@ -10730,6 +10772,8 @@
           "kickoff_utc": "2026-07-01T20:00:00Z",
           "venue": "Seattle",
           "stage": "R32",
+          "slot_home": "1G",
+          "slot_away": "3A/E/H/I/J",
           "pred": {
             "home": 0.7011945135036095,
             "draw": 0.0,
@@ -10781,6 +10825,8 @@
           "kickoff_utc": "2026-07-02T00:00:00Z",
           "venue": "San Francisco Bay Area (Santa Clara)",
           "stage": "R32",
+          "slot_home": "1D",
+          "slot_away": "3B/E/F/I/J",
           "pred": {
             "home": 0.6257826371102062,
             "draw": 0.0,
@@ -10825,6 +10871,8 @@
           "kickoff_utc": "2026-07-02T19:00:00Z",
           "venue": "Los Angeles (Inglewood)",
           "stage": "R32",
+          "slot_home": "1H",
+          "slot_away": "2J",
           "pred": {
             "home": 0.7029263428322539,
             "draw": 0.0,
@@ -10840,6 +10888,8 @@
           "kickoff_utc": "2026-07-02T23:00:00Z",
           "venue": "Toronto",
           "stage": "R32",
+          "slot_home": "2K",
+          "slot_away": "2L",
           "pred": {
             "home": 0.6064721718534704,
             "draw": 0.0,
@@ -10855,6 +10905,8 @@
           "kickoff_utc": "2026-07-03T03:00:00Z",
           "venue": "Vancouver",
           "stage": "R32",
+          "slot_home": "1B",
+          "slot_away": "3E/F/G/I/J",
           "pred": {
             "home": 0.47002196620966336,
             "draw": 0.0,
@@ -10875,6 +10927,8 @@
           "kickoff_utc": "2026-07-03T18:00:00Z",
           "venue": "Dallas (Arlington)",
           "stage": "R32",
+          "slot_home": "2D",
+          "slot_away": "2G",
           "pred": {
             "home": 0.48785955193465824,
             "draw": 0.0,
@@ -10890,6 +10944,8 @@
           "kickoff_utc": "2026-07-03T22:00:00Z",
           "venue": "Miami (Miami Gardens)",
           "stage": "R32",
+          "slot_home": "1J",
+          "slot_away": "2H",
           "pred": {
             "home": 0.641338563478966,
             "draw": 0.0,
@@ -10905,6 +10961,8 @@
           "kickoff_utc": "2026-07-04T01:30:00Z",
           "venue": "Kansas City",
           "stage": "R32",
+          "slot_home": "1K",
+          "slot_away": "3D/E/I/J/L",
           "pred": {
             "home": 0.8781028625321196,
             "draw": 0.0,
@@ -10925,6 +10983,8 @@
           "kickoff_utc": "2026-07-04T17:00:00Z",
           "venue": "Houston",
           "stage": "R16",
+          "slot_home": "W73",
+          "slot_away": "W75",
           "pred": {
             "home": 0.3023091249975194,
             "draw": 0.0,
@@ -10940,6 +11000,8 @@
           "kickoff_utc": "2026-07-04T21:00:00Z",
           "venue": "Philadelphia",
           "stage": "R16",
+          "slot_home": "W74",
+          "slot_away": "W77",
           "pred": {
             "home": 0.29301600896036717,
             "draw": 0.0,
@@ -10960,6 +11022,8 @@
           "kickoff_utc": "2026-07-05T20:00:00Z",
           "venue": "New York/New Jersey (East Rutherford)",
           "stage": "R16",
+          "slot_home": "W76",
+          "slot_away": "W78",
           "pred": {
             "home": 0.6862073969056656,
             "draw": 0.0,
@@ -10975,6 +11039,8 @@
           "kickoff_utc": "2026-07-06T00:00:00Z",
           "venue": "Mexico City",
           "stage": "R16",
+          "slot_home": "W79",
+          "slot_away": "W80",
           "pred": {
             "home": 0.41853115261656343,
             "draw": 0.0,
@@ -10995,6 +11061,8 @@
           "kickoff_utc": "2026-07-06T19:00:00Z",
           "venue": "Dallas (Arlington)",
           "stage": "R16",
+          "slot_home": "W83",
+          "slot_away": "W84",
           "pred": {
             "home": 0.5,
             "draw": 0.0,
@@ -11010,6 +11078,8 @@
           "kickoff_utc": "2026-07-07T00:00:00Z",
           "venue": "Seattle",
           "stage": "R16",
+          "slot_home": "W81",
+          "slot_away": "W82",
           "pred": {
             "home": 0.08743693707635644,
             "draw": 0.0,
@@ -11030,6 +11100,8 @@
           "kickoff_utc": "2026-07-07T16:00:00Z",
           "venue": "Atlanta",
           "stage": "R16",
+          "slot_home": "W86",
+          "slot_away": "W88",
           "pred": {
             "home": 0.5,
             "draw": 0.0,
@@ -11045,6 +11117,8 @@
           "kickoff_utc": "2026-07-07T20:00:00Z",
           "venue": "Vancouver",
           "stage": "R16",
+          "slot_home": "W85",
+          "slot_away": "W87",
           "pred": {
             "home": 0.5,
             "draw": 0.0,
@@ -11065,6 +11139,8 @@
           "kickoff_utc": "2026-07-09T20:00:00Z",
           "venue": "Boston (Foxborough)",
           "stage": "QF",
+          "slot_home": "W89",
+          "slot_away": "W90",
           "pred": {
             "home": 0.5,
             "draw": 0.0,
@@ -11085,6 +11161,8 @@
           "kickoff_utc": "2026-07-10T19:00:00Z",
           "venue": "Los Angeles (Inglewood)",
           "stage": "QF",
+          "slot_home": "W93",
+          "slot_away": "W94",
           "pred": {
             "home": 0.5,
             "draw": 0.0,
@@ -11105,6 +11183,8 @@
           "kickoff_utc": "2026-07-11T21:00:00Z",
           "venue": "Miami (Miami Gardens)",
           "stage": "QF",
+          "slot_home": "W91",
+          "slot_away": "W92",
           "pred": {
             "home": 0.5,
             "draw": 0.0,
@@ -11120,6 +11200,8 @@
           "kickoff_utc": "2026-07-12T01:00:00Z",
           "venue": "Kansas City",
           "stage": "QF",
+          "slot_home": "W95",
+          "slot_away": "W96",
           "pred": {
             "home": 0.5,
             "draw": 0.0,
@@ -11140,6 +11222,8 @@
           "kickoff_utc": "2026-07-14T19:00:00Z",
           "venue": "Dallas (Arlington)",
           "stage": "SF",
+          "slot_home": "W97",
+          "slot_away": "W98",
           "pred": {
             "home": 0.5,
             "draw": 0.0,
@@ -11160,6 +11244,8 @@
           "kickoff_utc": "2026-07-15T19:00:00Z",
           "venue": "Atlanta",
           "stage": "SF",
+          "slot_home": "W99",
+          "slot_away": "W100",
           "pred": {
             "home": 0.5,
             "draw": 0.0,
@@ -11180,6 +11266,8 @@
           "kickoff_utc": "2026-07-18T21:00:00Z",
           "venue": "Miami (Miami Gardens)",
           "stage": "3rd",
+          "slot_home": "L101",
+          "slot_away": "L102",
           "pred": {
             "home": 0.5,
             "draw": 0.0,
@@ -11200,6 +11288,8 @@
           "kickoff_utc": "2026-07-19T19:00:00Z",
           "venue": "New York/New Jersey (East Rutherford)",
           "stage": "final",
+          "slot_home": "W101",
+          "slot_away": "W102",
           "pred": {
             "home": 0.5,
             "draw": 0.0,
