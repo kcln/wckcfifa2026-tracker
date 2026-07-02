@@ -7493,11 +7493,18 @@
             "pick": "Bosnia & Herzegovina"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "42'",
+          "clock": "45'+1'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Folarin Balogun",
+              "team": "USA",
+              "minute": "45'"
+            }
+          ]
         }
       ]
     }
@@ -7510,11 +7517,18 @@
       "date": "2026-07-01",
       "venue": "San Francisco Bay Area (Santa Clara)",
       "kickoff_utc": "2026-07-02T00:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "42'",
-      "events": []
+      "clock": "45'+1'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Folarin Balogun",
+          "team": "USA",
+          "minute": "45'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -10667,11 +10681,18 @@
             "pick": "1D"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "42'",
+          "clock": "45'+1'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Folarin Balogun",
+              "team": "USA",
+              "minute": "45'"
+            }
+          ]
         }
       ]
     },
