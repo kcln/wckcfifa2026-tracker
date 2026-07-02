@@ -1938,6 +1938,15 @@
           "key": "pm-2026-07-01-82",
           "generated_at": "2026-07-01T15:50:42.008707-07:00",
           "kickoff_utc": "2026-07-01T20:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nWednesday, July 1\n\nHalf-time:\nUSA 1 - 0 Bosnia & Herzegovina\nSan Francisco Bay Area (Santa Clara), USA\n  ⚽ 45' Folarin Balogun (USA)\nPrediction: Bosnia & Herzegovina",
+          "sent": true,
+          "hash": "c231c49d2f892e9f",
+          "key": "ht-2026-07-01-81",
+          "generated_at": "2026-07-01T17:58:33.913404-07:00",
+          "kickoff_utc": "2026-07-02T00:00:00Z"
         }
       ]
     }
@@ -7496,7 +7505,7 @@
           "hg": 1,
           "ag": 0,
           "clock": "45'+10'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -7519,7 +7528,7 @@
       "kickoff_utc": "2026-07-02T00:00:00Z",
       "hg": 1,
       "ag": 0,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+10'",
       "events": [
         {
@@ -10684,7 +10693,7 @@
           "hg": 1,
           "ag": 0,
           "clock": "45'+10'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
