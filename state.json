@@ -7695,7 +7695,12 @@
             "away": 0.39352782814652965,
             "pick": "Portugal"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "85",
@@ -7717,7 +7722,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "83",
+      "home": "Portugal",
+      "away": "Croatia",
+      "date": "2026-07-02",
+      "venue": "Toronto",
+      "kickoff_utc": "2026-07-02T23:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -10974,7 +10993,12 @@
             "away": 0.39352782814652965,
             "pick": "Portugal"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "85",
