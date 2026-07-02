@@ -807,3 +807,25 @@ def test_bracket_pick_line_only_today_tomorrow_and_unfinished(tmp_path):
     assert "🔮 Pick: Spain" in html             # tomorrow -> shown
     assert "🔮 Pick: France" not in html        # later round -> hidden
     assert "🔮 Pick: England" not in html       # finished -> removed
+
+
+def test_bracket_tree_survives_resolved_team_names():
+    # Regression: once the schedule resolves 'W74' -> 'Paraguay', the layout
+    # must still walk the feeder tree via the slot descriptors — without them
+    # played matches fell out of the tree and paired with wrong neighbours.
+    by_id = {
+        "74": {"id": "74", "home": "Germany", "away": "Paraguay", "stage": "R32",
+               "slot_home": "1E", "slot_away": "3A/B/C/D/F"},
+        "77": {"id": "77", "home": "France", "away": "Sweden", "stage": "R32",
+               "slot_home": "1I", "slot_away": "3C/D/F/G/H"},
+        "89": {"id": "89", "home": "Paraguay", "away": "France", "stage": "R16",
+               "slot_home": "W74", "slot_away": "W77"},
+        "104": {"id": "104", "home": "W89", "away": "W90", "stage": "final",
+                "slot_home": "W89", "slot_away": "W90"},
+    }
+    pos = ha._bracket_positions(by_id)
+    # 74 and 77 are leaves fed into 89: they take slots 0 and 1, and 89 sits
+    # between them — none of them fall to the disconnected bucket (1e9).
+    assert pos["74"] == 0 and pos["77"] == 1
+    assert pos["89"] == 0.5
+    assert pos["104"] < 1e9

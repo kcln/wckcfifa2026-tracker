@@ -605,9 +605,14 @@ def _bracket_positions(by_id: dict) -> dict:
     counter = [0]
 
     def feeders(mid):
+        # Walk the SEED slot descriptors (slot_home/slot_away) — once a slot
+        # resolves to a real team name the display fields no longer carry the
+        # 'W74' link, and losing it would sever the tree (matches drop to the
+        # bottom and pair with the wrong neighbours).
         m = by_id[mid]
         out = []
-        for tok in (str(m.get("home", "")), str(m.get("away", ""))):
+        for tok in (str(m.get("slot_home") or m.get("home", "")),
+                    str(m.get("slot_away") or m.get("away", ""))):
             if tok[:1] == "W" and tok[1:].isdigit() and tok[1:] in by_id:
                 out.append(tok[1:])
         return out
@@ -677,7 +682,10 @@ def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict,
                  today: str | None = None, tomorrow: str | None = None) -> str:
     clinched = clinched or set()
     rh, ra = (resolved or {}).get(str(m.get("id")), (None, None))
-    ht, at = str(m.get("home", "")), str(m.get("away", ""))
+    # Token-based styling (projections, locking) reads the seed slot
+    # descriptors; the resolved real name (rteam) takes over for display.
+    ht = str(m.get("slot_home") or m.get("home", ""))
+    at = str(m.get("slot_away") or m.get("away", ""))
 
     def label_and_proj(token, rteam):
         # Any slot resolved to a real team — a decided group winner/runner-up, a

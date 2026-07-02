@@ -348,6 +348,12 @@ def build_board(merged: dict, match_prob, dates: set, live: dict | None = None,
             "kickoff_utc": m.get("kickoff_utc", ""), "venue": m.get("venue", ""),
             "stage": m.get("stage", "group"),
         }
+        if m.get("stage") not in ("group", None):
+            # The seed's slot descriptors ("1E", "W74") ride along even after
+            # names resolve: the bracket layout walks these to know which match
+            # feeds which — real names would sever the tree.
+            entry["slot_home"] = m["home"]
+            entry["slot_away"] = m["away"]
         r = m.get("result")
         prev = frozen.get(str(m["id"]))
         keep = (r and prev and prev.get("home") == home
