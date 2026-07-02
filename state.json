@@ -2419,37 +2419,37 @@
     },
     "advancement": {
       "Brazil": 1.0,
-      "Japan": 1.0,
-      "Senegal": 1.0,
-      "DR Congo": 1.0,
-      "South Africa": 1.0,
-      "Belgium": 1.0,
-      "Croatia": 1.0,
-      "Spain": 1.0,
+      "England": 1.0,
       "Egypt": 1.0,
-      "Ecuador": 1.0,
-      "Paraguay": 1.0,
-      "Morocco": 1.0,
-      "Sweden": 1.0,
+      "Colombia": 1.0,
+      "South Africa": 1.0,
+      "Spain": 1.0,
+      "Japan": 1.0,
       "Mexico": 1.0,
       "Bosnia & Herzegovina": 1.0,
-      "England": 1.0,
-      "Australia": 1.0,
-      "Cape Verde": 1.0,
+      "Croatia": 1.0,
+      "Ecuador": 1.0,
+      "Argentina": 1.0,
+      "Netherlands": 1.0,
+      "Senegal": 1.0,
+      "USA": 1.0,
+      "Morocco": 1.0,
+      "France": 1.0,
       "Ghana": 1.0,
+      "Canada": 1.0,
+      "Belgium": 1.0,
+      "Cape Verde": 1.0,
+      "Austria": 1.0,
       "Ivory Coast": 1.0,
       "Algeria": 1.0,
-      "Colombia": 1.0,
-      "Portugal": 1.0,
-      "USA": 1.0,
-      "Argentina": 1.0,
-      "France": 1.0,
-      "Austria": 1.0,
+      "Sweden": 1.0,
+      "Germany": 1.0,
+      "Australia": 1.0,
+      "DR Congo": 1.0,
+      "Paraguay": 1.0,
       "Switzerland": 1.0,
-      "Canada": 1.0,
-      "Netherlands": 1.0,
       "Norway": 1.0,
-      "Germany": 1.0
+      "Portugal": 1.0
     }
   },
   "season_ended": false,
@@ -7195,9 +7195,9 @@
           "venue": "Los Angeles (Inglewood)",
           "stage": "R32",
           "pred": {
-            "home": 0.10717385337774185,
-            "draw": 0.22423577060878727,
-            "away": 0.6685903760134709,
+            "home": 0.21929173868213547,
+            "draw": 0.0,
+            "away": 0.7807082613178645,
             "pick": "Canada"
           },
           "status": "FT",
@@ -7226,9 +7226,9 @@
           "venue": "Houston",
           "stage": "R32",
           "pred": {
-            "home": 0.3421967234407028,
-            "draw": 0.28883827377838434,
-            "away": 0.36896500278091293,
+            "home": 0.48661586032989496,
+            "draw": 0.0,
+            "away": 0.5133841396701051,
             "pick": "Japan"
           },
           "status": "FT",
@@ -7265,9 +7265,9 @@
           "venue": "Boston (Foxborough)",
           "stage": "R32",
           "pred": {
-            "home": 0.5073491786039152,
-            "draw": 0.27673721213524094,
-            "away": 0.2159136092608439,
+            "home": 0.6457177846715356,
+            "draw": 0.0,
+            "away": 0.3542822153284644,
             "pick": "Germany"
           },
           "status": "FT",
@@ -7300,9 +7300,9 @@
           "venue": "Monterrey (Guadalupe)",
           "stage": "R32",
           "pred": {
-            "home": 0.31666507008972766,
-            "draw": 0.32287575438260363,
-            "away": 0.36045917552766865,
+            "home": 0.4781029472810295,
+            "draw": 0.0,
+            "away": 0.5218970527189705,
             "pick": "Morocco"
           },
           "status": "FT",
@@ -7340,9 +7340,9 @@
           "venue": "Dallas (Arlington)",
           "stage": "R32",
           "pred": {
-            "home": 0.3142402309865493,
-            "draw": 0.30111383595495583,
-            "away": 0.38464593305849487,
+            "home": 0.46479714896402724,
+            "draw": 0.0,
+            "away": 0.5352028510359728,
             "pick": "Norway"
           },
           "status": "FT",
@@ -7379,9 +7379,9 @@
           "venue": "New York/New Jersey (East Rutherford)",
           "stage": "R32",
           "pred": {
-            "home": 0.680005455879774,
-            "draw": 0.2020536072225596,
-            "away": 0.11794093689766638,
+            "home": 0.7810322594910538,
+            "draw": 0.0,
+            "away": 0.21896774050894618,
             "pick": "France"
           },
           "status": "FT",
@@ -7418,9 +7418,9 @@
           "venue": "Mexico City",
           "stage": "R32",
           "pred": {
-            "home": 0.2333578962321105,
-            "draw": 0.3035929898078767,
-            "away": 0.46304911396001275,
+            "home": 0.3851543911360489,
+            "draw": 0.0,
+            "away": 0.6148456088639511,
             "pick": "Ecuador"
           },
           "status": "FT",
@@ -7462,9 +7462,9 @@
           "venue": "Atlanta",
           "stage": "R32",
           "pred": {
-            "home": 0.6365427185011742,
-            "draw": 0.21083288172726763,
-            "away": 0.1526243997715581,
+            "home": 0.7419591593648079,
+            "draw": 0.0,
+            "away": 0.2580408406351919,
             "pick": "England"
           },
           "status": "FT",
@@ -7501,9 +7501,9 @@
           "venue": "Seattle",
           "stage": "R32",
           "pred": {
-            "home": 0.2833231823863312,
-            "draw": 0.3256873833545244,
-            "away": 0.39098943425914434,
+            "home": 0.4461668740635934,
+            "draw": 0.0,
+            "away": 0.5538331259364065,
             "pick": "Senegal"
           },
           "status": "FT",
@@ -7552,9 +7552,9 @@
           "venue": "San Francisco Bay Area (Santa Clara)",
           "stage": "R32",
           "pred": {
-            "home": 0.3452044332068305,
-            "draw": 0.28258757667133383,
-            "away": 0.37220799012183575,
+            "home": 0.4864982215424974,
+            "draw": 0.0,
+            "away": 0.5135017784575027,
             "pick": "Bosnia & Herzegovina"
           },
           "status": "FT",
@@ -7596,9 +7596,9 @@
           "venue": "Los Angeles (Inglewood)",
           "stage": "R32",
           "pred": {
-            "home": 0.648479753878529,
-            "draw": 0.1960336930229366,
-            "away": 0.15548655309853435,
+            "home": 0.7464966003899973,
+            "draw": 0.0,
+            "away": 0.2535033996100027,
             "pick": "Spain"
           },
           "status": "sched"
@@ -7611,9 +7611,9 @@
           "venue": "Toronto",
           "stage": "R32",
           "pred": {
-            "home": 0.3606276344161666,
-            "draw": 0.2759314456965843,
-            "away": 0.3634409198872491,
+            "home": 0.49859335726445875,
+            "draw": 0.0,
+            "away": 0.5014066427355413,
             "pick": "Croatia"
           },
           "status": "sched"
@@ -7626,9 +7626,9 @@
           "venue": "Vancouver",
           "stage": "R32",
           "pred": {
-            "home": 0.3606276344161666,
-            "draw": 0.2759314456965843,
-            "away": 0.3634409198872491,
+            "home": 0.49859335726445875,
+            "draw": 0.0,
+            "away": 0.5014066427355413,
             "pick": "Algeria"
           },
           "status": "sched"
@@ -10424,9 +10424,9 @@
           "venue": "Los Angeles (Inglewood)",
           "stage": "R32",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "2A"
           },
           "status": "FT",
@@ -10455,9 +10455,9 @@
           "venue": "Houston",
           "stage": "R32",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "1C"
           },
           "status": "FT",
@@ -10494,9 +10494,9 @@
           "venue": "Boston (Foxborough)",
           "stage": "R32",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "1E"
           },
           "status": "FT",
@@ -10529,9 +10529,9 @@
           "venue": "Monterrey (Guadalupe)",
           "stage": "R32",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "1F"
           },
           "status": "FT",
@@ -10569,9 +10569,9 @@
           "venue": "Dallas (Arlington)",
           "stage": "R32",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "2E"
           },
           "status": "FT",
@@ -10608,9 +10608,9 @@
           "venue": "New York/New Jersey (East Rutherford)",
           "stage": "R32",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "1I"
           },
           "status": "FT",
@@ -10647,9 +10647,9 @@
           "venue": "Mexico City",
           "stage": "R32",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "1A"
           },
           "status": "FT",
@@ -10691,9 +10691,9 @@
           "venue": "Atlanta",
           "stage": "R32",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "1L"
           },
           "status": "FT",
@@ -10730,9 +10730,9 @@
           "venue": "Seattle",
           "stage": "R32",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "1G"
           },
           "status": "FT",
@@ -10781,9 +10781,9 @@
           "venue": "San Francisco Bay Area (Santa Clara)",
           "stage": "R32",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "1D"
           },
           "status": "FT",
@@ -10825,9 +10825,9 @@
           "venue": "Los Angeles (Inglewood)",
           "stage": "R32",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "1H"
           },
           "status": "sched"
@@ -10840,9 +10840,9 @@
           "venue": "Toronto",
           "stage": "R32",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "2K"
           },
           "status": "sched"
@@ -10855,9 +10855,9 @@
           "venue": "Vancouver",
           "stage": "R32",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "1B"
           },
           "status": "sched"
@@ -10875,9 +10875,9 @@
           "venue": "Dallas (Arlington)",
           "stage": "R32",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "2D"
           },
           "status": "sched"
@@ -10890,9 +10890,9 @@
           "venue": "Miami (Miami Gardens)",
           "stage": "R32",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "1J"
           },
           "status": "sched"
@@ -10905,9 +10905,9 @@
           "venue": "Kansas City",
           "stage": "R32",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "1K"
           },
           "status": "sched"
@@ -10925,9 +10925,9 @@
           "venue": "Houston",
           "stage": "R16",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "W73"
           },
           "status": "sched"
@@ -10940,9 +10940,9 @@
           "venue": "Philadelphia",
           "stage": "R16",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "W74"
           },
           "status": "sched"
@@ -10960,9 +10960,9 @@
           "venue": "New York/New Jersey (East Rutherford)",
           "stage": "R16",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "W76"
           },
           "status": "sched"
@@ -10975,9 +10975,9 @@
           "venue": "Mexico City",
           "stage": "R16",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "W79"
           },
           "status": "sched"
@@ -10995,9 +10995,9 @@
           "venue": "Dallas (Arlington)",
           "stage": "R16",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "W83"
           },
           "status": "sched"
@@ -11010,9 +11010,9 @@
           "venue": "Seattle",
           "stage": "R16",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "W81"
           },
           "status": "sched"
@@ -11030,9 +11030,9 @@
           "venue": "Atlanta",
           "stage": "R16",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "W86"
           },
           "status": "sched"
@@ -11045,9 +11045,9 @@
           "venue": "Vancouver",
           "stage": "R16",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "W85"
           },
           "status": "sched"
@@ -11065,9 +11065,9 @@
           "venue": "Boston (Foxborough)",
           "stage": "QF",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "W89"
           },
           "status": "sched"
@@ -11085,9 +11085,9 @@
           "venue": "Los Angeles (Inglewood)",
           "stage": "QF",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "W93"
           },
           "status": "sched"
@@ -11105,9 +11105,9 @@
           "venue": "Miami (Miami Gardens)",
           "stage": "QF",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "W91"
           },
           "status": "sched"
@@ -11120,9 +11120,9 @@
           "venue": "Kansas City",
           "stage": "QF",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "W95"
           },
           "status": "sched"
@@ -11140,9 +11140,9 @@
           "venue": "Dallas (Arlington)",
           "stage": "SF",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "W97"
           },
           "status": "sched"
@@ -11160,9 +11160,9 @@
           "venue": "Atlanta",
           "stage": "SF",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "W99"
           },
           "status": "sched"
@@ -11180,9 +11180,9 @@
           "venue": "Miami (Miami Gardens)",
           "stage": "3rd",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "L101"
           },
           "status": "sched"
@@ -11200,9 +11200,9 @@
           "venue": "New York/New Jersey (East Rutherford)",
           "stage": "final",
           "pred": {
-            "home": 0.365,
-            "draw": 0.27,
-            "away": 0.365,
+            "home": 0.5,
+            "draw": 0.0,
+            "away": 0.5,
             "pick": "W101"
           },
           "status": "sched"
