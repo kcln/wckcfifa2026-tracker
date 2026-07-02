@@ -2419,38 +2419,38 @@
       "USA": 0.0001
     },
     "advancement": {
-      "Bosnia & Herzegovina": 1.0,
-      "Morocco": 1.0,
-      "South Africa": 1.0,
-      "Sweden": 1.0,
-      "Algeria": 1.0,
-      "Norway": 1.0,
-      "Mexico": 1.0,
-      "Colombia": 1.0,
-      "Austria": 1.0,
-      "Belgium": 1.0,
-      "France": 1.0,
-      "Paraguay": 1.0,
-      "Canada": 1.0,
-      "Ghana": 1.0,
-      "Croatia": 1.0,
-      "Australia": 1.0,
-      "Senegal": 1.0,
-      "DR Congo": 1.0,
-      "Cape Verde": 1.0,
-      "USA": 1.0,
-      "Germany": 1.0,
-      "England": 1.0,
-      "Japan": 1.0,
-      "Portugal": 1.0,
       "Egypt": 1.0,
-      "Ivory Coast": 1.0,
-      "Argentina": 1.0,
       "Switzerland": 1.0,
-      "Ecuador": 1.0,
+      "France": 1.0,
+      "Croatia": 1.0,
+      "Bosnia & Herzegovina": 1.0,
+      "Canada": 1.0,
+      "Portugal": 1.0,
+      "Mexico": 1.0,
       "Spain": 1.0,
+      "Ivory Coast": 1.0,
+      "Austria": 1.0,
+      "Colombia": 1.0,
+      "DR Congo": 1.0,
+      "Australia": 1.0,
+      "Algeria": 1.0,
+      "Ecuador": 1.0,
+      "Paraguay": 1.0,
+      "Sweden": 1.0,
+      "South Africa": 1.0,
+      "Morocco": 1.0,
+      "England": 1.0,
+      "Germany": 1.0,
+      "Brazil": 1.0,
+      "Ghana": 1.0,
       "Netherlands": 1.0,
-      "Brazil": 1.0
+      "Norway": 1.0,
+      "Senegal": 1.0,
+      "Belgium": 1.0,
+      "Japan": 1.0,
+      "Cape Verde": 1.0,
+      "Argentina": 1.0,
+      "USA": 1.0
     }
   },
   "season_ended": false,
@@ -10419,16 +10419,16 @@
       "matches": [
         {
           "id": "73",
-          "home": "2A",
-          "away": "2B",
+          "home": "South Africa",
+          "away": "Canada",
           "kickoff_utc": "2026-06-28T19:00:00Z",
           "venue": "Los Angeles (Inglewood)",
           "stage": "R32",
           "pred": {
-            "home": 0.5,
+            "home": 0.26544736302014954,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "2A"
+            "away": 0.7345526369798504,
+            "pick": "Canada"
           },
           "status": "FT",
           "hg": 0,
@@ -10441,7 +10441,7 @@
               "minute": "90'+2'"
             }
           ],
-          "hit": false
+          "hit": true
         }
       ]
     },
@@ -10450,16 +10450,16 @@
       "matches": [
         {
           "id": "76",
-          "home": "1C",
-          "away": "2F",
+          "home": "Brazil",
+          "away": "Japan",
           "kickoff_utc": "2026-06-29T17:00:00Z",
           "venue": "Houston",
           "stage": "R32",
           "pred": {
-            "home": 0.5,
+            "home": 0.6412381306471874,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "1C"
+            "away": 0.3587618693528125,
+            "pick": "Brazil"
           },
           "status": "FT",
           "hg": 2,
@@ -10489,16 +10489,16 @@
         },
         {
           "id": "74",
-          "home": "1E",
-          "away": "3A/B/C/D/F",
+          "home": "Germany",
+          "away": "Paraguay",
           "kickoff_utc": "2026-06-29T20:30:00Z",
           "venue": "Boston (Foxborough)",
           "stage": "R32",
           "pred": {
-            "home": 0.5,
+            "home": 0.6064721718534704,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "1E"
+            "away": 0.39352782814652965,
+            "pick": "Germany"
           },
           "status": "FT",
           "hg": 1,
@@ -10524,16 +10524,16 @@
         },
         {
           "id": "75",
-          "home": "1F",
-          "away": "2C",
+          "home": "Netherlands",
+          "away": "Morocco",
           "kickoff_utc": "2026-06-30T01:00:00Z",
           "venue": "Monterrey (Guadalupe)",
           "stage": "R32",
           "pred": {
-            "home": 0.5,
+            "home": 0.5070688268584618,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "1F"
+            "away": 0.4929311731415381,
+            "pick": "Netherlands"
           },
           "status": "FT",
           "hg": 1,
@@ -10564,16 +10564,16 @@
       "matches": [
         {
           "id": "78",
-          "home": "2E",
-          "away": "2I",
+          "home": "Ivory Coast",
+          "away": "Norway",
           "kickoff_utc": "2026-06-30T17:00:00Z",
           "venue": "Dallas (Arlington)",
           "stage": "R32",
           "pred": {
-            "home": 0.5,
+            "home": 0.38301821830842075,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "2E"
+            "away": 0.6169817816915792,
+            "pick": "Norway"
           },
           "status": "FT",
           "hg": 1,
@@ -10598,21 +10598,21 @@
               "minute": "86'"
             }
           ],
-          "hit": false,
+          "hit": true,
           "winner": "Norway"
         },
         {
           "id": "77",
-          "home": "1I",
-          "away": "3C/D/F/G/H",
+          "home": "France",
+          "away": "Sweden",
           "kickoff_utc": "2026-06-30T21:00:00Z",
           "venue": "New York/New Jersey (East Rutherford)",
           "stage": "R32",
           "pred": {
-            "home": 0.5,
+            "home": 0.8416002703772013,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "1I"
+            "away": 0.15839972962279877,
+            "pick": "France"
           },
           "status": "FT",
           "hg": 3,
@@ -10642,16 +10642,16 @@
         },
         {
           "id": "79",
-          "home": "1A",
-          "away": "3C/E/F/H/I",
+          "home": "Mexico",
+          "away": "Ecuador",
           "kickoff_utc": "2026-07-01T01:00:00Z",
           "venue": "Mexico City",
           "stage": "R32",
           "pred": {
-            "home": 0.5,
+            "home": 0.5176856663350023,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "1A"
+            "away": 0.4823143336649976,
+            "pick": "Mexico"
           },
           "status": "FT",
           "hg": 2,
@@ -10686,16 +10686,16 @@
       "matches": [
         {
           "id": "80",
-          "home": "1L",
-          "away": "3E/H/I/J/K",
+          "home": "England",
+          "away": "DR Congo",
           "kickoff_utc": "2026-07-01T16:00:00Z",
           "venue": "Atlanta",
           "stage": "R32",
           "pred": {
-            "home": 0.5,
+            "home": 0.8267679939751856,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "1L"
+            "away": 0.17323200602481448,
+            "pick": "England"
           },
           "status": "FT",
           "hg": 2,
@@ -10725,16 +10725,16 @@
         },
         {
           "id": "82",
-          "home": "1G",
-          "away": "3A/E/H/I/J",
+          "home": "Belgium",
+          "away": "Senegal",
           "kickoff_utc": "2026-07-01T20:00:00Z",
           "venue": "Seattle",
           "stage": "R32",
           "pred": {
-            "home": 0.5,
+            "home": 0.7011945135036095,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "1G"
+            "away": 0.29880548649639044,
+            "pick": "Belgium"
           },
           "status": "FT",
           "hg": 3,
@@ -10776,16 +10776,16 @@
         },
         {
           "id": "81",
-          "home": "1D",
-          "away": "3B/E/F/I/J",
+          "home": "USA",
+          "away": "Bosnia & Herzegovina",
           "kickoff_utc": "2026-07-02T00:00:00Z",
           "venue": "San Francisco Bay Area (Santa Clara)",
           "stage": "R32",
           "pred": {
-            "home": 0.5,
+            "home": 0.6257826371102062,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "1D"
+            "away": 0.3742173628897938,
+            "pick": "USA"
           },
           "status": "FT",
           "hg": 2,
@@ -10820,46 +10820,46 @@
       "matches": [
         {
           "id": "84",
-          "home": "1H",
-          "away": "2J",
+          "home": "Spain",
+          "away": "Austria",
           "kickoff_utc": "2026-07-02T19:00:00Z",
           "venue": "Los Angeles (Inglewood)",
           "stage": "R32",
           "pred": {
-            "home": 0.5,
+            "home": 0.7029263428322539,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "1H"
+            "away": 0.29707365716774614,
+            "pick": "Spain"
           },
           "status": "sched"
         },
         {
           "id": "83",
-          "home": "2K",
-          "away": "2L",
+          "home": "Portugal",
+          "away": "Croatia",
           "kickoff_utc": "2026-07-02T23:00:00Z",
           "venue": "Toronto",
           "stage": "R32",
           "pred": {
-            "home": 0.5,
+            "home": 0.6064721718534704,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "2K"
+            "away": 0.39352782814652965,
+            "pick": "Portugal"
           },
           "status": "sched"
         },
         {
           "id": "85",
-          "home": "1B",
-          "away": "3E/F/G/I/J",
+          "home": "Switzerland",
+          "away": "Algeria",
           "kickoff_utc": "2026-07-03T03:00:00Z",
           "venue": "Vancouver",
           "stage": "R32",
           "pred": {
-            "home": 0.5,
+            "home": 0.47002196620966336,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "1B"
+            "away": 0.5299780337903366,
+            "pick": "Algeria"
           },
           "status": "sched"
         }
@@ -10870,46 +10870,46 @@
       "matches": [
         {
           "id": "88",
-          "home": "2D",
-          "away": "2G",
+          "home": "Australia",
+          "away": "Egypt",
           "kickoff_utc": "2026-07-03T18:00:00Z",
           "venue": "Dallas (Arlington)",
           "stage": "R32",
           "pred": {
-            "home": 0.5,
+            "home": 0.48785955193465824,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "2D"
+            "away": 0.5121404480653418,
+            "pick": "Egypt"
           },
           "status": "sched"
         },
         {
           "id": "86",
-          "home": "1J",
-          "away": "2H",
+          "home": "Argentina",
+          "away": "Cape Verde",
           "kickoff_utc": "2026-07-03T22:00:00Z",
           "venue": "Miami (Miami Gardens)",
           "stage": "R32",
           "pred": {
-            "home": 0.5,
+            "home": 0.641338563478966,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "1J"
+            "away": 0.3586614365210341,
+            "pick": "Argentina"
           },
           "status": "sched"
         },
         {
           "id": "87",
-          "home": "1K",
-          "away": "3D/E/I/J/L",
+          "home": "Colombia",
+          "away": "Ghana",
           "kickoff_utc": "2026-07-04T01:30:00Z",
           "venue": "Kansas City",
           "stage": "R32",
           "pred": {
-            "home": 0.5,
+            "home": 0.8781028625321196,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "1K"
+            "away": 0.12189713746788056,
+            "pick": "Colombia"
           },
           "status": "sched"
         }
@@ -10920,31 +10920,31 @@
       "matches": [
         {
           "id": "90",
-          "home": "W73",
-          "away": "W75",
+          "home": "Canada",
+          "away": "Morocco",
           "kickoff_utc": "2026-07-04T17:00:00Z",
           "venue": "Houston",
           "stage": "R16",
           "pred": {
-            "home": 0.5,
+            "home": 0.3023091249975194,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "W73"
+            "away": 0.6976908750024806,
+            "pick": "Morocco"
           },
           "status": "sched"
         },
         {
           "id": "89",
-          "home": "W74",
-          "away": "W77",
+          "home": "Paraguay",
+          "away": "France",
           "kickoff_utc": "2026-07-04T21:00:00Z",
           "venue": "Philadelphia",
           "stage": "R16",
           "pred": {
-            "home": 0.5,
+            "home": 0.29301600896036717,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "W74"
+            "away": 0.7069839910396328,
+            "pick": "France"
           },
           "status": "sched"
         }
@@ -10955,31 +10955,31 @@
       "matches": [
         {
           "id": "91",
-          "home": "W76",
-          "away": "W78",
+          "home": "Brazil",
+          "away": "Norway",
           "kickoff_utc": "2026-07-05T20:00:00Z",
           "venue": "New York/New Jersey (East Rutherford)",
           "stage": "R16",
           "pred": {
-            "home": 0.5,
+            "home": 0.6862073969056656,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "W76"
+            "away": 0.31379260309433454,
+            "pick": "Brazil"
           },
           "status": "sched"
         },
         {
           "id": "92",
-          "home": "W79",
-          "away": "W80",
+          "home": "Mexico",
+          "away": "England",
           "kickoff_utc": "2026-07-06T00:00:00Z",
           "venue": "Mexico City",
           "stage": "R16",
           "pred": {
-            "home": 0.5,
+            "home": 0.41853115261656343,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "W79"
+            "away": 0.5814688473834366,
+            "pick": "England"
           },
           "status": "sched"
         }
@@ -11005,16 +11005,16 @@
         },
         {
           "id": "94",
-          "home": "W81",
-          "away": "W82",
+          "home": "USA",
+          "away": "Belgium",
           "kickoff_utc": "2026-07-07T00:00:00Z",
           "venue": "Seattle",
           "stage": "R16",
           "pred": {
-            "home": 0.5,
+            "home": 0.08743693707635644,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "W81"
+            "away": 0.9125630629236436,
+            "pick": "Belgium"
           },
           "status": "sched"
         }
