@@ -377,17 +377,29 @@ def _match_card(m: dict) -> str:
     bar = ""
     if pred:
         h, d, a = pred.get("home", 0), pred.get("draw", 0), pred.get("away", 0)
-        # Each label box is as wide as its bar segment and centre-aligned, so
-        # the label sits centred over its own segment.
-        bar = (
-            f'<div class="oddsbar" title="{home} {_pct(h)} · Draw {_pct(d)} · {away} {_pct(a)}">'
-            f'<span class="seg sh" style="width:{h*100:.1f}%"></span>'
-            f'<span class="seg sd" style="width:{d*100:.1f}%"></span>'
-            f'<span class="seg sa" style="width:{a*100:.1f}%"></span></div>'
-            f'<div class="oddskey">'
-            f'<span class="k-h">{home} {_pct(h)}</span>'
-            f'<span class="k-d">Draw {_pct(d)}</span>'
-            f'<span class="k-a">{away} {_pct(a)}</span></div>')
+        if m.get("stage") not in ("group", None):
+            # Knockout: no draw outcome — two-way "to advance" probabilities
+            # (the 90' draw prob was folded into the sides upstream).
+            bar = (
+                f'<div class="oddsbar" title="{home} {_pct(h)} · {away} {_pct(a)} to advance">'
+                f'<span class="seg sh" style="width:{h*100:.1f}%"></span>'
+                f'<span class="seg sa" style="width:{a*100:.1f}%"></span></div>'
+                f'<div class="oddskey">'
+                f'<span class="k-h">{home} {_pct(h)}</span>'
+                f'<span class="k-d">to advance</span>'
+                f'<span class="k-a">{away} {_pct(a)}</span></div>')
+        else:
+            # Each label box is as wide as its bar segment and centre-aligned, so
+            # the label sits centred over its own segment.
+            bar = (
+                f'<div class="oddsbar" title="{home} {_pct(h)} · Draw {_pct(d)} · {away} {_pct(a)}">'
+                f'<span class="seg sh" style="width:{h*100:.1f}%"></span>'
+                f'<span class="seg sd" style="width:{d*100:.1f}%"></span>'
+                f'<span class="seg sa" style="width:{a*100:.1f}%"></span></div>'
+                f'<div class="oddskey">'
+                f'<span class="k-h">{home} {_pct(h)}</span>'
+                f'<span class="k-d">Draw {_pct(d)}</span>'
+                f'<span class="k-a">{away} {_pct(a)}</span></div>')
 
     foot_bits = []
     loc = _place(str(m.get("venue", "")))

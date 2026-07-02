@@ -248,9 +248,15 @@ def morning_brief(date_iso: str, matches: list[dict]) -> str:
         home, away = m["home"], m["away"]
         lines.append(f"{home} vs {away}")
         lines.append(f"  Prediction: {_pick_label(m)}")
-        lines.append(
-            f"  {home} {_pct(pred['home'])} · "
-            f"Draw {_pct(pred['draw'])} · {away} {_pct(pred['away'])}")
+        if m.get("stage") not in ("group", None):
+            # Knockout: no draw outcome — two-way "to advance" probabilities
+            # (the 90' draw prob is folded evenly into the sides upstream).
+            lines.append(f"  {home} {_pct(pred['home'])} · "
+                         f"{away} {_pct(pred['away'])} (to advance)")
+        else:
+            lines.append(
+                f"  {home} {_pct(pred['home'])} · "
+                f"Draw {_pct(pred['draw'])} · {away} {_pct(pred['away'])}")
         ko = kickoff_stack(m.get("kickoff_utc", ""), m.get("date", ""))
         if ko:
             lines.append(f"  🕐 {ko}")

@@ -170,6 +170,16 @@ def is_host_home(home: str, match: dict) -> bool:
     return home in HOSTS
 
 
+def _fold_draw(pred: dict) -> dict:
+    """Two-way 'to advance' probabilities for a knockout tie: there is no draw
+    outcome (extra time + penalties decide it), so fold the 90-minute draw
+    probability evenly into the two sides — the same split bracket_sim uses
+    when it samples a knockout winner."""
+    half = pred["draw"] / 2.0
+    return {"home": pred["home"] + half, "draw": 0.0,
+            "away": pred["away"] + half}
+
+
 def _build_match_prob(merged: dict):
     """match_prob(home, away) using ML when available, else the Elo predictor with
     host home-advantage applied per is_host_home."""
@@ -251,7 +261,10 @@ def _with_prediction(match: dict, match_prob, resolved: dict | None = None) -> d
     if resolved:
         h, a = resolved.get(str(match.get("id")), (match["home"], match["away"]))
         out["home"], out["away"] = h, a
-    out["prediction"] = match_prob(out["home"], out["away"])
+    pred = match_prob(out["home"], out["away"])
+    if match.get("stage") not in ("group", None):
+        pred = _fold_draw(pred)              # knockouts: two-way, no draw
+    out["prediction"] = pred
     return out
 
 
@@ -333,6 +346,8 @@ def build_board(merged: dict, match_prob, dates: set, live: dict | None = None,
         # the prediction is optional and skipped for those.
         try:
             pred = match_prob(home, away)
+            if m.get("stage") not in ("group", None):
+                pred = _fold_draw(pred)      # knockouts: two-way, no draw
             pick = max(("home", "draw", "away"), key=lambda k: pred[k])
             pick_label = {"home": home, "away": away}.get(pick, "Draw")
             entry["pred"] = {"home": pred["home"], "draw": pred["draw"],
@@ -456,6 +471,8 @@ def _accuracy(merged: dict, match_prob, *, until_kickoff: str | None = None,
         home, away = (resolved or {}).get(str(m.get("id")),
                                           (m["home"], m["away"]))
         pred = match_prob(home, away)
+        if m.get("stage") not in ("group", None):
+            pred = _fold_draw(pred)          # knockouts: pick is always a team
         predicted = max(("home", "draw", "away"), key=lambda k: pred[k])
         total += 1
         if predicted == _outcome_side(r, home, away):

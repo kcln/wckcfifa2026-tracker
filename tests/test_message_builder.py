@@ -466,3 +466,11 @@ def test_post_match_pick_of_shootout_winner_counts_as_hit():
                         "home_pens": 2, "away_pens": 3}}
     body = mb.post_match(match)
     assert "Prediction ✓:" in body and "Prediction ✗" not in body
+
+
+def test_morning_brief_knockout_shows_two_way_to_advance():
+    matches = [{"home": "Portugal", "away": "Croatia", "stage": "R32",
+                "prediction": {"home": 0.499, "draw": 0.0, "away": 0.501}}]
+    body = mb.morning_brief("2026-07-02", matches)
+    assert "Portugal 49.9% · Croatia 50.1% (to advance)" in body
+    assert "Draw" not in body

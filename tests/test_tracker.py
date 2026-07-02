@@ -476,3 +476,22 @@ def test_accuracy_counts_shootout_winner_pick_as_hit():
                 else {"home": 0.4, "draw": 0.3, "away": 0.3})
     hits, total = tracker._accuracy(merged, mp, resolved={"75": ("Netherlands", "Morocco")})
     assert (hits, total) == (1, 1)
+
+
+def test_build_board_folds_draw_for_knockouts():
+    merged = {"matches": [
+        {"id": "83", "home": "Portugal", "away": "Croatia", "date": "2026-07-02",
+         "kickoff_utc": "2026-07-02T20:00:00Z", "venue": "Toronto", "stage": "R32"},
+        {"id": "5", "home": "Mexico", "away": "South Korea", "date": "2026-07-02",
+         "kickoff_utc": "2026-07-02T23:00:00Z", "venue": "Mexico City", "stage": "group"}]}
+    mp = lambda h, a: {"home": 0.361, "draw": 0.276, "away": 0.363}
+    board = tracker.build_board(merged, mp, {"2026-07-02"})
+    ko = next(x for d in board for x in d["matches"] if x["id"] == "83")
+    grp = next(x for d in board for x in d["matches"] if x["id"] == "5")
+    # knockout: draw folded 50/50 into the sides, pick is a team
+    assert ko["pred"]["draw"] == 0.0
+    assert abs(ko["pred"]["home"] - 0.499) < 0.001
+    assert abs(ko["pred"]["away"] - 0.501) < 0.001
+    assert ko["pred"]["pick"] == "Croatia"
+    # group stage keeps the raw three-way
+    assert grp["pred"]["draw"] == 0.276

@@ -766,3 +766,18 @@ def test_bracket_keeps_feeder_token_while_match_is_live(tmp_path):
     html = out.read_text()
     assert '<span class="bkm-nm">W73</span>' in html        # feeder NOT resolved
     assert html.count('<span class="bkm-nm">Canada</span>') == 1  # only the R32 box
+
+
+def test_knockout_card_shows_two_way_to_advance(tmp_path):
+    state = {"days": [], "bracket": {}, "groups": {},
+             "board": [{"date": "2026-07-02", "matches": [
+                 {"id": "83", "home": "Portugal", "away": "Croatia",
+                  "kickoff_utc": "2026-07-02T20:00:00Z", "venue": "Toronto",
+                  "stage": "R32", "status": "sched",
+                  "pred": {"home": 0.499, "draw": 0.0, "away": 0.501,
+                           "pick": "Croatia"}}]}]}
+    html = _render(state, tmp_path)
+    assert '<span class="k-d">to advance</span>' in html
+    assert "Draw 0.0%" not in html
+    assert '<span class="k-h">Portugal 49.9%</span>' in html
+    assert '<span class="k-a">Croatia 50.1%</span>' in html
