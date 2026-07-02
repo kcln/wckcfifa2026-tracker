@@ -7624,7 +7624,12 @@
             "away": 0.29707365716774614,
             "pick": "Spain"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "83",
@@ -7663,7 +7668,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "84",
+      "home": "Spain",
+      "away": "Austria",
+      "date": "2026-07-02",
+      "venue": "Los Angeles (Inglewood)",
+      "kickoff_utc": "2026-07-02T19:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -10879,7 +10898,12 @@
             "away": 0.29707365716774614,
             "pick": "Spain"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "83",
