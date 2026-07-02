@@ -559,7 +559,7 @@ def _render_schedule(state: dict, today: str | None = None) -> str:
             'and lock in once the feeding match is decided.</div>'
             if bracket else "")
     return (
-        '<details class="section" id="schedule">'
+        '<details class="section" id="schedule" open>'
         '<summary><span class="sec-h">Schedule</span>'
         '<span class="sec-count">Full tournament</span></summary>'
         f'<div class="sec-body"><div class="daystrip">'
@@ -1344,15 +1344,28 @@ __SIGNUP_BOTTOM__
     function centre() {
       var strip = document.querySelector('.daystrip');
       if (!strip) return;
-      var t = strip.querySelector('.daycol.is-today');
-      if (t) strip.scrollLeft =
-        t.offsetLeft - strip.clientWidth / 2 + t.clientWidth / 2;
+      var target = null;
+      var bk = strip.querySelector('.bk');
+      if (bk) {
+        // Knockouts: centre the round holding today's tie (else tomorrow's,
+        // else the first round of the bracket).
+        var t = bk.querySelector('.bkm.bkm-today') ||
+                bk.querySelector('.bkm.bkm-tomorrow');
+        target = t ? t.closest('.bk-rnd') : bk.querySelector('.bk-rnd');
+      }
+      if (!target) target = strip.querySelector('.daycol.is-today');
+      if (!target) return;
+      var left = target.getBoundingClientRect().left -
+                 strip.getBoundingClientRect().left + strip.scrollLeft;
+      strip.scrollLeft = left - (strip.clientWidth - target.clientWidth) / 2;
     }
     centre();
     var sec = document.getElementById('schedule');
     if (sec) sec.addEventListener('toggle', function () {
       if (sec.open) centre();
     });
+    // Open on the Schedule (knockout view) unless a deep link says otherwise.
+    if (!location.hash && sec) sec.scrollIntoView();
   })();
 </script>
 </body>
