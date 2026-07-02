@@ -7502,9 +7502,9 @@
             "pick": "Bosnia & Herzegovina"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "80'",
+          "clock": "84'",
           "ht": false,
           "events": [
             {
@@ -7518,6 +7518,12 @@
               "player": "Folarin Balogun",
               "team": "USA",
               "minute": "64'"
+            },
+            {
+              "kind": "goal",
+              "player": "Malik Tillman",
+              "team": "USA",
+              "minute": "82'"
             }
           ]
         }
@@ -7532,10 +7538,10 @@
       "date": "2026-07-01",
       "venue": "San Francisco Bay Area (Santa Clara)",
       "kickoff_utc": "2026-07-02T00:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 0,
       "status": "LIVE",
-      "clock": "80'",
+      "clock": "84'",
       "events": [
         {
           "kind": "goal",
@@ -7548,6 +7554,12 @@
           "player": "Folarin Balogun",
           "team": "USA",
           "minute": "64'"
+        },
+        {
+          "kind": "goal",
+          "player": "Malik Tillman",
+          "team": "USA",
+          "minute": "82'"
         }
       ]
     }
@@ -10702,9 +10714,9 @@
             "pick": "1D"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "80'",
+          "clock": "84'",
           "ht": false,
           "events": [
             {
@@ -10718,6 +10730,12 @@
               "player": "Folarin Balogun",
               "team": "USA",
               "minute": "64'"
+            },
+            {
+              "kind": "goal",
+              "player": "Malik Tillman",
+              "team": "USA",
+              "minute": "82'"
             }
           ]
         }
