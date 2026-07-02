@@ -7492,12 +7492,31 @@
             "away": 0.37220799012183575,
             "pick": "Bosnia & Herzegovina"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "81",
+      "home": "USA",
+      "away": "Bosnia & Herzegovina",
+      "date": "2026-07-01",
+      "venue": "San Francisco Bay Area (Santa Clara)",
+      "kickoff_utc": "2026-07-02T00:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -10647,7 +10666,12 @@
             "away": 0.365,
             "pick": "1D"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         }
       ]
     },
