@@ -180,13 +180,17 @@
     .bk-rnd > .rlabel { position: absolute; top: 0; left: 2px; white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); }
     .bk-cell { flex: 1; display: flex; align-items: center; position: relative; }
     .bk-cell .bkm { width: 100%; }
-    /* Connectors: ONE continuous bracket stroke per pair — a ']' elbow drawn
-       with borders (top arm from the upper box, vertical, bottom arm from the
-       lower box) plus a single outgoing stub to the next round. No per-cell
-       stubs: overlapping segments were rendering as doubled/uneven lines. */
+    /* Connectors anchored to BOX CENTERS, not fixed pair percentages (boxes
+       differ in height, so 25%/75% arms missed their boxes). Each cell of a
+       pair draws its own half of the ']': the upper cell an arm at its centre
+       + a vertical down to the cell boundary, the lower cell the mirror — the
+       halves meet flush at the boundary. The child box draws the incoming stub
+       at ITS centre; it always lands on the vertical (the pair midpoint sits
+       between the two arm heights by construction). */
     .bk-pair { flex: 1; display: flex; flex-direction: column; justify-content: space-around; position: relative; }
-    .bk-feeder .bk-pair::after { content: ''; position: absolute; right: -21px; top: calc(25% - 1px); bottom: calc(25% - 2px); width: 21px; border: 3px solid var(--p-300); border-left: none; border-radius: 0 10px 10px 0; }
-    .bk-feeder .bk-pair::before { content: ''; position: absolute; right: -42px; top: 50%; width: 21px; height: 3px; background: var(--p-300); transform: translateY(-50%); }
+    .bk-feeder .bk-cell:first-child::after { content: ''; position: absolute; right: -21px; top: 50%; bottom: 0; width: 21px; border-top: 3px solid var(--p-300); border-right: 3px solid var(--p-300); border-radius: 0 10px 0 0; }
+    .bk-feeder .bk-cell:last-child::after { content: ''; position: absolute; right: -21px; top: 0; bottom: 50%; width: 21px; border-bottom: 3px solid var(--p-300); border-right: 3px solid var(--p-300); border-radius: 0 0 10px 0; }
+    .bk-rnd:not(:first-child):not(.bk-third) .bk-cell::before { content: ''; position: absolute; left: -21px; top: 50%; width: 21px; height: 3px; background: var(--p-300); transform: translateY(-50%); }
     .bkm { background: var(--card); border: 1.5px solid var(--hair-strong); border-radius: 9px; box-shadow: var(--shadow-sm); overflow: hidden; }
     .bkm.live { border-color: var(--p-400); box-shadow: 0 0 0 1px var(--p-400); }
     /* day colour-coding: today = purple, tomorrow = teal */
