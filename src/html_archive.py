@@ -378,15 +378,14 @@ def _match_card(m: dict) -> str:
     if pred:
         h, d, a = pred.get("home", 0), pred.get("draw", 0), pred.get("away", 0)
         if m.get("stage") not in ("group", None):
-            # Knockout: no draw outcome — two-way "to advance" probabilities
-            # (the 90' draw prob was folded into the sides upstream).
+            # Knockout: no draw outcome — two-way probabilities (the 90' draw
+            # prob was folded into the sides upstream).
             bar = (
-                f'<div class="oddsbar" title="{home} {_pct(h)} · {away} {_pct(a)} to advance">'
+                f'<div class="oddsbar" title="{home} {_pct(h)} · {away} {_pct(a)}">'
                 f'<span class="seg sh" style="width:{h*100:.1f}%"></span>'
                 f'<span class="seg sa" style="width:{a*100:.1f}%"></span></div>'
                 f'<div class="oddskey">'
                 f'<span class="k-h">{home} {_pct(h)}</span>'
-                f'<span class="k-d">to advance</span>'
                 f'<span class="k-a">{away} {_pct(a)}</span></div>')
         else:
             # Each label box is as wide as its bar segment and centre-aligned, so

@@ -472,5 +472,5 @@ def test_morning_brief_knockout_shows_two_way_to_advance():
     matches = [{"home": "Portugal", "away": "Croatia", "stage": "R32",
                 "prediction": {"home": 0.499, "draw": 0.0, "away": 0.501}}]
     body = mb.morning_brief("2026-07-02", matches)
-    assert "Portugal 49.9% · Croatia 50.1% (to advance)" in body
-    assert "Draw" not in body
+    assert "Portugal 49.9% · Croatia 50.1%" in body
+    assert "to advance" not in body and "Draw" not in body

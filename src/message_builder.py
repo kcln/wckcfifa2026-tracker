@@ -249,10 +249,10 @@ def morning_brief(date_iso: str, matches: list[dict]) -> str:
         lines.append(f"{home} vs {away}")
         lines.append(f"  Prediction: {_pick_label(m)}")
         if m.get("stage") not in ("group", None):
-            # Knockout: no draw outcome — two-way "to advance" probabilities
-            # (the 90' draw prob is folded evenly into the sides upstream).
+            # Knockout: no draw outcome — two-way probabilities (the 90' draw
+            # prob is folded evenly into the sides upstream).
             lines.append(f"  {home} {_pct(pred['home'])} · "
-                         f"{away} {_pct(pred['away'])} (to advance)")
+                         f"{away} {_pct(pred['away'])}")
         else:
             lines.append(
                 f"  {home} {_pct(pred['home'])} · "

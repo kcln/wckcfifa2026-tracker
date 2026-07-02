@@ -143,10 +143,16 @@ def main() -> None:
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
     if not token:
         raise SystemExit("set TELEGRAM_BOT_TOKEN to send (or pass --dry-run)")
-    results = {name: telegram_sender.send(body, token, [KC_CHAT_ID])
+    if "--broadcast" in sys.argv:            # explicit opt-in: ALL subscribers
+        subs = json.loads((ROOT / "subscribers.json").read_text())
+        chat_ids = subs.get("approved") or [KC_CHAT_ID]
+        who = f"ALL subscribers ({len(chat_ids)})"
+    else:
+        chat_ids = [KC_CHAT_ID]
+        who = f"KC ({KC_CHAT_ID})"
+    results = {name: telegram_sender.send(body, token, chat_ids)
                for name, body in msgs if body}
-    print(f"sent to KC ({KC_CHAT_ID}): " +
-          " ".join(f"{k}={v}" for k, v in results.items()))
+    print(f"sent to {who}: " + " ".join(f"{k}={v}" for k, v in results.items()))
 
 
 if __name__ == "__main__":

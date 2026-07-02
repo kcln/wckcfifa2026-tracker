@@ -777,7 +777,7 @@ def test_knockout_card_shows_two_way_to_advance(tmp_path):
                   "pred": {"home": 0.499, "draw": 0.0, "away": 0.501,
                            "pick": "Croatia"}}]}]}
     html = _render(state, tmp_path)
-    assert '<span class="k-d">to advance</span>' in html
+    assert "to advance" not in html                # label dropped (KC)
     assert "Draw 0.0%" not in html
     assert '<span class="k-h">Portugal 49.9%</span>' in html
     assert '<span class="k-a">Croatia 50.1%</span>' in html
