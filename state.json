@@ -7947,11 +7947,18 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "25'",
+          "clock": "29'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Lionel Messi",
+              "team": "Argentina",
+              "minute": "29'"
+            }
+          ]
         },
         {
           "id": "87",
@@ -7981,11 +7988,18 @@
       "date": "2026-07-03",
       "venue": "Miami (Miami Gardens)",
       "kickoff_utc": "2026-07-03T22:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "25'",
-      "events": []
+      "clock": "29'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Lionel Messi",
+          "team": "Argentina",
+          "minute": "29'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -11363,11 +11377,18 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "25'",
+          "clock": "29'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Lionel Messi",
+              "team": "Argentina",
+              "minute": "29'"
+            }
+          ]
         },
         {
           "id": "87",
