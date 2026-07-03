@@ -2015,6 +2015,15 @@
           "key": "pm-2026-07-02-83",
           "generated_at": "2026-07-02T18:10:49.771615-07:00",
           "kickoff_utc": "2026-07-02T23:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nThursday, July 2\n\nHalf-time:\nSwitzerland 1 - 0 Algeria\nVancouver, Canada\n  ⚽ 10' Breel Embolo (Switzerland)\nPrediction: Algeria",
+          "sent": true,
+          "hash": "fb9bda50d846d188",
+          "key": "ht-2026-07-02-85",
+          "generated_at": "2026-07-02T20:52:53.349222-07:00",
+          "kickoff_utc": "2026-07-03T03:00:00Z"
         }
       ]
     }
@@ -7782,7 +7791,7 @@
           "hg": 1,
           "ag": 0,
           "clock": "45'+4'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -7805,7 +7814,7 @@
       "kickoff_utc": "2026-07-03T03:00:00Z",
       "hg": 1,
       "ag": 0,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+4'",
       "events": [
         {
@@ -11118,7 +11127,7 @@
           "hg": 1,
           "ag": 0,
           "clock": "45'+4'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
