@@ -7872,10 +7872,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "13'",
+          "ag": 1,
+          "clock": "16'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Emam Ashour",
+              "team": "Egypt",
+              "minute": "13'"
+            }
+          ]
         },
         {
           "id": "86",
@@ -7923,10 +7930,17 @@
       "venue": "Dallas (Arlington)",
       "kickoff_utc": "2026-07-03T18:00:00Z",
       "hg": 0,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "13'",
-      "events": []
+      "clock": "16'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Emam Ashour",
+          "team": "Egypt",
+          "minute": "13'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -11268,10 +11282,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "13'",
+          "ag": 1,
+          "clock": "16'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Emam Ashour",
+              "team": "Egypt",
+              "minute": "13'"
+            }
+          ]
         },
         {
           "id": "86",
