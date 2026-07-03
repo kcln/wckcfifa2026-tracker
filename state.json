@@ -7706,10 +7706,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "52'",
+          "ag": 1,
+          "clock": "55'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Ivan Perisic",
+              "team": "Croatia",
+              "minute": "53'"
+            }
+          ]
         },
         {
           "id": "85",
@@ -7740,10 +7747,17 @@
       "venue": "Toronto",
       "kickoff_utc": "2026-07-02T23:00:00Z",
       "hg": 0,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "52'",
-      "events": []
+      "clock": "55'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Ivan Perisic",
+          "team": "Croatia",
+          "minute": "53'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -11004,10 +11018,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "52'",
+          "ag": 1,
+          "clock": "55'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Ivan Perisic",
+              "team": "Croatia",
+              "minute": "53'"
+            }
+          ]
         },
         {
           "id": "85",
