@@ -7778,12 +7778,31 @@
             "away": 0.5299780337903366,
             "pick": "Algeria"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "85",
+      "home": "Switzerland",
+      "away": "Algeria",
+      "date": "2026-07-02",
+      "venue": "Vancouver",
+      "kickoff_utc": "2026-07-03T03:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "4'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -11081,7 +11100,12 @@
             "away": 0.5299780337903366,
             "pick": "Algeria"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "4'",
+          "ht": false,
+          "events": []
         }
       ]
     },
