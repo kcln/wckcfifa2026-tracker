@@ -1,1 +1,1 @@
-{"live": false, "id": "88", "home": "Australia", "away": "Egypt", "hg": 1, "ag": 1, "status": "FT", "clock": "", "date": "2026-07-03", "venue": "Dallas (Arlington)", "events": [{"kind": "goal", "player": "Emam Ashour", "team": "Egypt", "minute": "13'"}, {"kind": "own_goal", "player": "Mohamed Hany", "team": "Australia", "minute": "55'"}]}
+{"live": true, "id": "86", "home": "Argentina", "away": "Cape Verde", "hg": 0, "ag": 0, "status": "LIVE", "clock": "3'", "date": "2026-07-03", "venue": "Miami (Miami Gardens)", "events": []}
