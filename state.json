@@ -2044,6 +2044,20 @@
           "kickoff_utc": "2026-07-02T19:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-07-03",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026\nFriday, July 3\n\nMatchday Brief\n\nAustralia vs Egypt\n  Prediction: Egypt\n  Australia 48.8% · Egypt 51.2%\n  🕐 11:00am PT / 1:00pm CT / 2:00pm ET / 11:30pm IST\n  📍 Dallas (Arlington), USA\n\nArgentina vs Cape Verde\n  Prediction: Argentina\n  Argentina 64.1% · Cape Verde 35.9%\n  🕐 3:00pm PT / 5:00pm CT / 6:00pm ET / 3:30am IST (+1d)\n  📍 Miami (Miami Gardens), USA\n\nColombia vs Ghana\n  Prediction: Colombia\n  Colombia 87.8% · Ghana 12.2%\n  🕐 6:30pm PT / 8:30pm CT / 9:30pm ET / 7:00am IST (+1d)\n  📍 Kansas City, USA",
+          "sent": true,
+          "hash": "fcb3c57d74a52889",
+          "key": "mb-2026-07-03",
+          "generated_at": "2026-07-03T00:07:43.781213-07:00",
+          "kickoff_utc": "2026-07-03T18:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -7835,6 +7849,62 @@
           ],
           "hit": false,
           "winner": "Switzerland"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-03",
+      "matches": [
+        {
+          "id": "88",
+          "home": "Australia",
+          "away": "Egypt",
+          "kickoff_utc": "2026-07-03T18:00:00Z",
+          "venue": "Dallas (Arlington)",
+          "stage": "R32",
+          "slot_home": "2D",
+          "slot_away": "2G",
+          "pred": {
+            "home": 0.48785955193465824,
+            "draw": 0.0,
+            "away": 0.5121404480653418,
+            "pick": "Egypt"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "86",
+          "home": "Argentina",
+          "away": "Cape Verde",
+          "kickoff_utc": "2026-07-03T22:00:00Z",
+          "venue": "Miami (Miami Gardens)",
+          "stage": "R32",
+          "slot_home": "1J",
+          "slot_away": "2H",
+          "pred": {
+            "home": 0.641338563478966,
+            "draw": 0.0,
+            "away": 0.3586614365210341,
+            "pick": "Argentina"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "87",
+          "home": "Colombia",
+          "away": "Ghana",
+          "kickoff_utc": "2026-07-04T01:30:00Z",
+          "venue": "Kansas City",
+          "stage": "R32",
+          "slot_home": "1K",
+          "slot_away": "3D/E/I/J/L",
+          "pred": {
+            "home": 0.8781028625321196,
+            "draw": 0.0,
+            "away": 0.12189713746788056,
+            "pick": "Colombia"
+          },
+          "status": "sched"
         }
       ]
     }
