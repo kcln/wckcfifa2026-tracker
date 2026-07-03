@@ -2024,6 +2024,24 @@
           "key": "ht-2026-07-02-85",
           "generated_at": "2026-07-02T20:52:53.349222-07:00",
           "kickoff_utc": "2026-07-03T03:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nThursday, July 2\n\nFull time:\n<b>Switzerland</b> 2 - 0 Algeria\n<b>Switzerland</b> wins\nVancouver, Canada\n  ⚽ 10' Breel Embolo (Switzerland)\n  ⚽ 46' Dan Ndoye (Switzerland)\nOverall prediction: 46/85 (54.1%)\nPrediction ✗: Algeria",
+          "sent": true,
+          "hash": "e30aaaa30f348ca4",
+          "key": "pm-2026-07-02-85",
+          "generated_at": "2026-07-02T21:58:02.299416-07:00",
+          "kickoff_utc": "2026-07-03T03:00:00Z"
+        },
+        {
+          "type": "daily_recap",
+          "body": "🏆 FIFA World Cup 2026\nThursday, July 2\n\nDaily Recap\n\nResults:\n  <b>Spain</b> 3 - 0 Austria\n  <b>Spain</b> wins\n  Los Angeles (Inglewood), USA\n    ⚽ 36' Mikel Oyarzabal (Spain)\n    ⚽ 66' Pedro Porro (Spain)\n    ⚽ 89' Mikel Oyarzabal (Spain)\n  Prediction ✓: Spain\n\n  <b>Portugal</b> 2 - 1 Croatia\n  <b>Portugal</b> wins\n  Toronto, Canada\n    ⚽ 53' Ivan Perisic (Croatia)\n    ⚽ 68' Cristiano Ronaldo (Portugal, pen)\n    ⚽ 90'+4' Gonçalo Ramos (Portugal)\n  Prediction ✓: Portugal\n\n  <b>Switzerland</b> 2 - 0 Algeria\n  <b>Switzerland</b> wins\n  Vancouver, Canada\n    ⚽ 10' Breel Embolo (Switzerland)\n    ⚽ 46' Dan Ndoye (Switzerland)\n  Prediction ✗: Algeria\n\nOverall prediction — today 2/3 (66.7%)  ·  overall 46/85 (54.1%)",
+          "sent": true,
+          "hash": "d8431d16b6ac96ee",
+          "key": "dr-2026-07-02",
+          "generated_at": "2026-07-02T21:58:02.299843-07:00",
+          "kickoff_utc": "2026-07-02T19:00:00Z"
         }
       ]
     }
@@ -2440,26 +2458,24 @@
   },
   "bracket": {
     "title_odds": {
-      "Colombia": 0.0629,
-      "Spain": 0.1398,
-      "France": 0.1158,
-      "England": 0.0823,
-      "Argentina": 0.1524,
-      "Portugal": 0.0563,
-      "Belgium": 0.0619,
-      "Norway": 0.0179,
-      "Brazil": 0.1269,
-      "Switzerland": 0.0108,
-      "Egypt": 0.0059,
-      "Mexico": 0.0359,
-      "Germany": 0.0446,
-      "Netherlands": 0.0604,
-      "Senegal": 0.0036,
-      "Australia": 0.0043,
-      "Cape Verde": 0.0008,
-      "Paraguay": 0.0098,
-      "Canada": 0.0075,
-      "USA": 0.0002
+      "Spain": 0.1363,
+      "Brazil": 0.1287,
+      "France": 0.1163,
+      "England": 0.083,
+      "Portugal": 0.0614,
+      "Canada": 0.0077,
+      "Germany": 0.0421,
+      "Argentina": 0.1499,
+      "Belgium": 0.0663,
+      "Netherlands": 0.0555,
+      "Mexico": 0.0367,
+      "Colombia": 0.0668,
+      "Switzerland": 0.0203,
+      "Egypt": 0.0051,
+      "Norway": 0.0155,
+      "Senegal": 0.0033,
+      "Australia": 0.0039,
+      "Cape Verde": 0.0012
     },
     "advancement": {
       "Portugal": 1.0,
@@ -2498,30 +2514,24 @@
   },
   "season_ended": false,
   "last_result": {
-    "home": "Spain",
-    "away": "Austria",
-    "home_goals": 3,
+    "home": "Switzerland",
+    "away": "Algeria",
+    "home_goals": 2,
     "away_goals": 0,
     "date": "2026-07-02",
-    "venue": "Los Angeles (Inglewood)",
+    "venue": "Vancouver",
     "events": [
       {
         "kind": "goal",
-        "player": "Mikel Oyarzabal",
-        "team": "Spain",
-        "minute": "36'"
+        "player": "Breel Embolo",
+        "team": "Switzerland",
+        "minute": "10'"
       },
       {
         "kind": "goal",
-        "player": "Pedro Porro",
-        "team": "Spain",
-        "minute": "66'"
-      },
-      {
-        "kind": "goal",
-        "player": "Mikel Oyarzabal",
-        "team": "Spain",
-        "minute": "89'"
+        "player": "Dan Ndoye",
+        "team": "Switzerland",
+        "minute": "46'"
       }
     ]
   },
@@ -4488,6 +4498,25 @@
         }
       ],
       "winner": "Portugal"
+    },
+    "85": {
+      "home_goals": 2,
+      "away_goals": 0,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Breel Embolo",
+          "team": "Switzerland",
+          "minute": "10'"
+        },
+        {
+          "kind": "goal",
+          "player": "Dan Ndoye",
+          "team": "Switzerland",
+          "minute": "46'"
+        }
+      ],
+      "winner": "Switzerland"
     }
   },
   "board": [
@@ -7787,11 +7816,9 @@
             "away": 0.5299780337903366,
             "pick": "Algeria"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 0,
-          "clock": "90'+5'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -7805,39 +7832,14 @@
               "team": "Switzerland",
               "minute": "46'"
             }
-          ]
+          ],
+          "hit": false,
+          "winner": "Switzerland"
         }
       ]
     }
   ],
-  "live": [
-    {
-      "id": "85",
-      "home": "Switzerland",
-      "away": "Algeria",
-      "date": "2026-07-02",
-      "venue": "Vancouver",
-      "kickoff_utc": "2026-07-03T03:00:00Z",
-      "hg": 2,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "90'+5'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Breel Embolo",
-          "team": "Switzerland",
-          "minute": "10'"
-        },
-        {
-          "kind": "goal",
-          "player": "Dan Ndoye",
-          "team": "Switzerland",
-          "minute": "46'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -11135,11 +11137,9 @@
             "away": 0.5299780337903366,
             "pick": "Algeria"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 0,
-          "clock": "90'+5'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -11153,7 +11153,9 @@
               "team": "Switzerland",
               "minute": "46'"
             }
-          ]
+          ],
+          "hit": false,
+          "winner": "Switzerland"
         }
       ]
     },
@@ -11352,7 +11354,7 @@
         },
         {
           "id": "96",
-          "home": "W85",
+          "home": "Switzerland",
           "away": "W87",
           "kickoff_utc": "2026-07-07T20:00:00Z",
           "venue": "Vancouver",
@@ -11360,10 +11362,10 @@
           "slot_home": "W85",
           "slot_away": "W87",
           "pred": {
-            "home": 0.5,
+            "home": 0.9047175302821824,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "W85"
+            "away": 0.09528246971781762,
+            "pick": "Switzerland"
           },
           "status": "sched"
         }
