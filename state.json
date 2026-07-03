@@ -7880,9 +7880,9 @@
             "pick": "Egypt"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "54'",
+          "clock": "56'",
           "ht": false,
           "events": [
             {
@@ -7890,6 +7890,12 @@
               "player": "Emam Ashour",
               "team": "Egypt",
               "minute": "13'"
+            },
+            {
+              "kind": "own_goal",
+              "player": "Mohamed Hany",
+              "team": "Australia",
+              "minute": "55'"
             }
           ]
         },
@@ -7938,16 +7944,22 @@
       "date": "2026-07-03",
       "venue": "Dallas (Arlington)",
       "kickoff_utc": "2026-07-03T18:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 1,
       "status": "LIVE",
-      "clock": "54'",
+      "clock": "56'",
       "events": [
         {
           "kind": "goal",
           "player": "Emam Ashour",
           "team": "Egypt",
           "minute": "13'"
+        },
+        {
+          "kind": "own_goal",
+          "player": "Mohamed Hany",
+          "team": "Australia",
+          "minute": "55'"
         }
       ]
     }
@@ -11290,9 +11302,9 @@
             "pick": "Egypt"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "54'",
+          "clock": "56'",
           "ht": false,
           "events": [
             {
@@ -11300,6 +11312,12 @@
               "player": "Emam Ashour",
               "team": "Egypt",
               "minute": "13'"
+            },
+            {
+              "kind": "own_goal",
+              "player": "Mohamed Hany",
+              "team": "Australia",
+              "minute": "55'"
             }
           ]
         },
