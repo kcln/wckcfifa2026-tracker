@@ -2006,6 +2006,15 @@
           "key": "ht-2026-07-02-83",
           "generated_at": "2026-07-02T16:52:24.146072-07:00",
           "kickoff_utc": "2026-07-02T23:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nThursday, July 2\n\nFull time:\n<b>Portugal</b> 2 - 1 Croatia\n<b>Portugal</b> wins\nToronto, Canada\n  ⚽ 53' Ivan Perisic (Croatia)\n  ⚽ 68' Cristiano Ronaldo (Portugal, pen)\n  ⚽ 90'+4' Gonçalo Ramos (Portugal)\nOverall prediction: 46/84 (54.8%)\nPrediction ✓: Portugal",
+          "sent": true,
+          "hash": "3c69e353c7ccbea7",
+          "key": "pm-2026-07-02-83",
+          "generated_at": "2026-07-02T18:10:49.771615-07:00",
+          "kickoff_utc": "2026-07-02T23:00:00Z"
         }
       ]
     }
@@ -2422,27 +2431,26 @@
   },
   "bracket": {
     "title_odds": {
-      "Brazil": 0.128,
-      "Portugal": 0.0362,
-      "Argentina": 0.1514,
-      "England": 0.0822,
-      "Spain": 0.1616,
-      "Germany": 0.0412,
-      "Colombia": 0.0644,
-      "France": 0.1147,
-      "Belgium": 0.0651,
-      "Mexico": 0.0355,
-      "Switzerland": 0.0104,
-      "Croatia": 0.0085,
-      "Canada": 0.0058,
-      "Netherlands": 0.0546,
-      "Senegal": 0.0035,
-      "Norway": 0.0165,
-      "Cape Verde": 0.0013,
-      "Egypt": 0.0048,
-      "Australia": 0.0051,
-      "Paraguay": 0.0091,
-      "USA": 0.0001
+      "Colombia": 0.0629,
+      "Spain": 0.1398,
+      "France": 0.1158,
+      "England": 0.0823,
+      "Argentina": 0.1524,
+      "Portugal": 0.0563,
+      "Belgium": 0.0619,
+      "Norway": 0.0179,
+      "Brazil": 0.1269,
+      "Switzerland": 0.0108,
+      "Egypt": 0.0059,
+      "Mexico": 0.0359,
+      "Germany": 0.0446,
+      "Netherlands": 0.0604,
+      "Senegal": 0.0036,
+      "Australia": 0.0043,
+      "Cape Verde": 0.0008,
+      "Paraguay": 0.0098,
+      "Canada": 0.0075,
+      "USA": 0.0002
     },
     "advancement": {
       "Japan": 1.0,
@@ -4446,6 +4454,31 @@
         }
       ],
       "winner": "Spain"
+    },
+    "83": {
+      "home_goals": 2,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Ivan Perisic",
+          "team": "Croatia",
+          "minute": "53'"
+        },
+        {
+          "kind": "penalty",
+          "player": "Cristiano Ronaldo",
+          "team": "Portugal",
+          "minute": "68'"
+        },
+        {
+          "kind": "goal",
+          "player": "Gonçalo Ramos",
+          "team": "Portugal",
+          "minute": "90'+4'"
+        }
+      ],
+      "winner": "Portugal"
     }
   },
   "board": [
@@ -7704,11 +7737,9 @@
             "away": 0.39352782814652965,
             "pick": "Portugal"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 1,
-          "clock": "90'+17'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -7728,7 +7759,9 @@
               "team": "Portugal",
               "minute": "90'+4'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Portugal"
         },
         {
           "id": "85",
@@ -7750,40 +7783,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "83",
-      "home": "Portugal",
-      "away": "Croatia",
-      "date": "2026-07-02",
-      "venue": "Toronto",
-      "kickoff_utc": "2026-07-02T23:00:00Z",
-      "hg": 2,
-      "ag": 1,
-      "status": "LIVE",
-      "clock": "90'+17'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Ivan Perisic",
-          "team": "Croatia",
-          "minute": "53'"
-        },
-        {
-          "kind": "penalty",
-          "player": "Cristiano Ronaldo",
-          "team": "Portugal",
-          "minute": "68'"
-        },
-        {
-          "kind": "goal",
-          "player": "Gonçalo Ramos",
-          "team": "Portugal",
-          "minute": "90'+4'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -11040,11 +11040,9 @@
             "away": 0.39352782814652965,
             "pick": "Portugal"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 1,
-          "clock": "90'+17'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -11064,7 +11062,9 @@
               "team": "Portugal",
               "minute": "90'+4'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Portugal"
         },
         {
           "id": "85",
@@ -11224,7 +11224,7 @@
       "matches": [
         {
           "id": "93",
-          "home": "W83",
+          "home": "Portugal",
           "away": "Spain",
           "kickoff_utc": "2026-07-06T19:00:00Z",
           "venue": "Dallas (Arlington)",
@@ -11232,9 +11232,9 @@
           "slot_home": "W83",
           "slot_away": "W84",
           "pred": {
-            "home": 0.02252200189678742,
+            "home": 0.47002196620966336,
             "draw": 0.0,
-            "away": 0.9774779981032126,
+            "away": 0.5299780337903366,
             "pick": "Spain"
           },
           "status": "sched"
