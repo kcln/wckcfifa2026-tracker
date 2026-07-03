@@ -7779,11 +7779,18 @@
             "pick": "Algeria"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "10'",
+          "clock": "13'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Breel Embolo",
+              "team": "Switzerland",
+              "minute": "10'"
+            }
+          ]
         }
       ]
     }
@@ -7796,11 +7803,18 @@
       "date": "2026-07-02",
       "venue": "Vancouver",
       "kickoff_utc": "2026-07-03T03:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "10'",
-      "events": []
+      "clock": "13'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Breel Embolo",
+          "team": "Switzerland",
+          "minute": "10'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -11101,11 +11115,18 @@
             "pick": "Algeria"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "10'",
+          "clock": "13'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Breel Embolo",
+              "team": "Switzerland",
+              "minute": "10'"
+            }
+          ]
         }
       ]
     },
