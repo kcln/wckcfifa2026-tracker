@@ -285,7 +285,8 @@ def test_schedule_is_by_day_strip(tmp_path):
     i = [html.index(f'data-date="{d}"')
          for d in ("2026-06-15", "2026-06-17", "2026-06-20")]
     assert i == sorted(i)
-    assert 'data-date="2026-06-28"' not in html   # knockout day not a strip column
+    assert '<div class="daycol" data-date="2026-06-28"' not in html \
+        and 'daycol is-today" data-date="2026-06-28"' not in html  # KO day not a strip column
     assert '<div class="bk">' in html             # bracket appended to the right
     for gone in ("Today", "Upcoming", "Finished", "Bracket"):
         assert f'<span class="sub-h">{gone}</span>' not in html
@@ -529,7 +530,7 @@ def test_schedule_bracket_resolves_slots_and_shows_location(tmp_path):
     # location shown in bracket boxes
     assert "Los Angeles (Inglewood), USA" in html
     # the knockout day is NOT a strip column (it's only in the bracket)
-    assert 'data-date="2026-06-28"' not in html
+    assert '<div class="daycol" data-date="2026-06-28"' not in html
     assert '<span class="bkm-nm">2A</span>' not in html   # resolved, not raw token
 
 
@@ -750,8 +751,8 @@ def test_bracket_colour_codes_today_and_tomorrow(tmp_path):
     html = out.read_text()
     assert "bkm-today" in html and "bkm-tomorrow" in html     # legend + boxes
     # M73 is today (Jun 28), M75 is tomorrow (Jun 29)
-    assert re.search(r'<div class="bkm bkm-today">.*?M73', html, re.S)
-    assert re.search(r'<div class="bkm bkm-tomorrow">.*?M75', html, re.S)
+    assert re.search(r'<div class="bkm bkm-today"[^>]*>.*?M73', html, re.S)
+    assert re.search(r'<div class="bkm bkm-tomorrow"[^>]*>.*?M75', html, re.S)
 
 
 def test_bracket_keeps_feeder_token_while_match_is_live(tmp_path):

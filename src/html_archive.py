@@ -754,7 +754,7 @@ def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict,
         hp, ap = int(m["hpens"]), int(m["apens"])
         hsc += f' (<strong>{hp}</strong>)' if h_win else f' ({hp})'
         asc += f' (<strong>{ap}</strong>)' if a_win else f' ({ap})'
-    return (f'<div class="bkm{cls}">{tag}'
+    return (f'<div class="bkm{cls}" data-date="{escape(mdate)}">{tag}'
             f'{row(hl, hsc, h_win, h_proj)}'
             f'{row(al, asc, a_win, a_proj)}{loc_html}{pick_html}</div>')
 
@@ -1341,6 +1341,23 @@ __SIGNUP_BOTTOM__
   // Schedule strip: centre the highlighted current day on load and whenever
   // the (collapsed-by-default) section is opened.
   (function () {
+    function markDays() {
+      // Re-mark today/tomorrow in the VIEWER's PT clock. The server bakes the
+      // classes at render time, which goes stale around midnight when no
+      // tracker cycle has run yet.
+      try {
+        var now = new Date().toLocaleDateString('en-CA',
+          {timeZone: 'America/Los_Angeles'});
+        var t = new Date(now + 'T12:00:00Z');
+        t.setUTCDate(t.getUTCDate() + 1);
+        var tomorrow = t.toISOString().slice(0, 10);
+        document.querySelectorAll('.bkm[data-date]').forEach(function (b) {
+          b.classList.remove('bkm-today', 'bkm-tomorrow');
+          if (b.getAttribute('data-date') === now) b.classList.add('bkm-today');
+          else if (b.getAttribute('data-date') === tomorrow) b.classList.add('bkm-tomorrow');
+        });
+      } catch (e) { /* keep server-rendered classes */ }
+    }
     function centre() {
       var strip = document.querySelector('.daystrip');
       if (!strip) return;
@@ -1359,6 +1376,7 @@ __SIGNUP_BOTTOM__
                  strip.getBoundingClientRect().left + strip.scrollLeft;
       strip.scrollLeft = left - (strip.clientWidth - target.clientWidth) / 2;
     }
+    markDays();
     centre();
     var sec = document.getElementById('schedule');
     if (sec) sec.addEventListener('toggle', function () {
