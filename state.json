@@ -7705,9 +7705,9 @@
             "pick": "Portugal"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "65'",
+          "clock": "68'",
           "ht": false,
           "events": [
             {
@@ -7746,10 +7746,10 @@
       "date": "2026-07-02",
       "venue": "Toronto",
       "kickoff_utc": "2026-07-02T23:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 1,
       "status": "LIVE",
-      "clock": "65'",
+      "clock": "68'",
       "events": [
         {
           "kind": "goal",
@@ -11017,9 +11017,9 @@
             "pick": "Portugal"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 1,
-          "clock": "65'",
+          "clock": "68'",
           "ht": false,
           "events": [
             {
