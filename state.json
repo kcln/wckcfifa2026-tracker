@@ -7870,7 +7870,12 @@
             "away": 0.5121404480653418,
             "pick": "Egypt"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "86",
@@ -7909,7 +7914,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "88",
+      "home": "Australia",
+      "away": "Egypt",
+      "date": "2026-07-03",
+      "venue": "Dallas (Arlington)",
+      "kickoff_utc": "2026-07-03T18:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -11247,7 +11266,12 @@
             "away": 0.5121404480653418,
             "pick": "Egypt"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "86",
