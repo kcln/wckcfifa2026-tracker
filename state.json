@@ -2065,6 +2065,15 @@
           "key": "ht-2026-07-03-88",
           "generated_at": "2026-07-03T11:52:31.394017-07:00",
           "kickoff_utc": "2026-07-03T18:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nFriday, July 3\n\nFull time:\nAustralia 1 (2) - 1 (<b>4</b>) <b>Egypt</b>\n<b>Egypt</b> win on penalties\nDallas (Arlington), USA\n  ⚽ 13' Emam Ashour (Egypt)\n  ⚽ 55' Mohamed Hany (Australia, OG)\nOverall prediction: 47/86 (54.7%)\nPrediction ✓: Egypt",
+          "sent": true,
+          "hash": "e820d839bba7c960",
+          "key": "pm-2026-07-03-88",
+          "generated_at": "2026-07-03T13:59:35.727359-07:00",
+          "kickoff_utc": "2026-07-03T18:00:00Z"
         }
       ]
     }
@@ -2481,24 +2490,24 @@
   },
   "bracket": {
     "title_odds": {
-      "Spain": 0.1363,
-      "Brazil": 0.1287,
-      "France": 0.1163,
-      "England": 0.083,
-      "Portugal": 0.0614,
-      "Canada": 0.0077,
-      "Germany": 0.0421,
-      "Argentina": 0.1499,
-      "Belgium": 0.0663,
-      "Netherlands": 0.0555,
-      "Mexico": 0.0367,
-      "Colombia": 0.0668,
-      "Switzerland": 0.0203,
-      "Egypt": 0.0051,
-      "Norway": 0.0155,
-      "Senegal": 0.0033,
-      "Australia": 0.0039,
-      "Cape Verde": 0.0012
+      "Brazil": 0.1319,
+      "Switzerland": 0.0232,
+      "Argentina": 0.1559,
+      "Belgium": 0.0653,
+      "Mexico": 0.0375,
+      "Spain": 0.1383,
+      "France": 0.1136,
+      "Norway": 0.0154,
+      "Germany": 0.0434,
+      "Netherlands": 0.0587,
+      "Colombia": 0.057,
+      "Portugal": 0.0565,
+      "Senegal": 0.0032,
+      "England": 0.0813,
+      "Australia": 0.0103,
+      "Canada": 0.0071,
+      "Cape Verde": 0.0013,
+      "USA": 0.0001
     },
     "advancement": {
       "Netherlands": 1.0,
@@ -2537,24 +2546,24 @@
   },
   "season_ended": false,
   "last_result": {
-    "home": "Switzerland",
-    "away": "Algeria",
-    "home_goals": 2,
-    "away_goals": 0,
-    "date": "2026-07-02",
-    "venue": "Vancouver",
+    "home": "Australia",
+    "away": "Egypt",
+    "home_goals": 1,
+    "away_goals": 1,
+    "date": "2026-07-03",
+    "venue": "Dallas (Arlington)",
     "events": [
       {
         "kind": "goal",
-        "player": "Breel Embolo",
-        "team": "Switzerland",
-        "minute": "10'"
+        "player": "Emam Ashour",
+        "team": "Egypt",
+        "minute": "13'"
       },
       {
-        "kind": "goal",
-        "player": "Dan Ndoye",
-        "team": "Switzerland",
-        "minute": "46'"
+        "kind": "own_goal",
+        "player": "Mohamed Hany",
+        "team": "Australia",
+        "minute": "55'"
       }
     ]
   },
@@ -4540,6 +4549,27 @@
         }
       ],
       "winner": "Switzerland"
+    },
+    "88": {
+      "home_goals": 1,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Emam Ashour",
+          "team": "Egypt",
+          "minute": "13'"
+        },
+        {
+          "kind": "own_goal",
+          "player": "Mohamed Hany",
+          "team": "Australia",
+          "minute": "55'"
+        }
+      ],
+      "winner": "Egypt",
+      "home_pens": 2,
+      "away_pens": 4
     }
   },
   "board": [
@@ -7879,11 +7909,9 @@
             "away": 0.5121404480653418,
             "pick": "Egypt"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 1,
-          "clock": "120'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -7897,7 +7925,11 @@
               "team": "Australia",
               "minute": "55'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Egypt",
+          "hpens": 2,
+          "apens": 4
         },
         {
           "id": "86",
@@ -7936,34 +7968,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "88",
-      "home": "Australia",
-      "away": "Egypt",
-      "date": "2026-07-03",
-      "venue": "Dallas (Arlington)",
-      "kickoff_utc": "2026-07-03T18:00:00Z",
-      "hg": 1,
-      "ag": 1,
-      "status": "LIVE",
-      "clock": "120'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Emam Ashour",
-          "team": "Egypt",
-          "minute": "13'"
-        },
-        {
-          "kind": "own_goal",
-          "player": "Mohamed Hany",
-          "team": "Australia",
-          "minute": "55'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -11301,11 +11306,9 @@
             "away": 0.5121404480653418,
             "pick": "Egypt"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 1,
-          "clock": "120'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -11319,7 +11322,11 @@
               "team": "Australia",
               "minute": "55'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Egypt",
+          "hpens": 2,
+          "apens": 4
         },
         {
           "id": "86",
@@ -11480,17 +11487,17 @@
         {
           "id": "95",
           "home": "W86",
-          "away": "W88",
+          "away": "Egypt",
           "kickoff_utc": "2026-07-07T16:00:00Z",
           "venue": "Atlanta",
           "stage": "R16",
           "slot_home": "W86",
           "slot_away": "W88",
           "pred": {
-            "home": 0.5,
+            "home": 0.24448111792880314,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "W86"
+            "away": 0.7555188820711969,
+            "pick": "Egypt"
           },
           "status": "sched"
         },
