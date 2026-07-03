@@ -7705,9 +7705,9 @@
             "pick": "Portugal"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "90'+1'",
+          "clock": "90'+4'",
           "ht": false,
           "events": [
             {
@@ -7721,6 +7721,12 @@
               "player": "Cristiano Ronaldo",
               "team": "Portugal",
               "minute": "68'"
+            },
+            {
+              "kind": "goal",
+              "player": "Gonçalo Ramos",
+              "team": "Portugal",
+              "minute": "90'+4'"
             }
           ]
         },
@@ -7752,10 +7758,10 @@
       "date": "2026-07-02",
       "venue": "Toronto",
       "kickoff_utc": "2026-07-02T23:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 1,
       "status": "LIVE",
-      "clock": "90'+1'",
+      "clock": "90'+4'",
       "events": [
         {
           "kind": "goal",
@@ -7768,6 +7774,12 @@
           "player": "Cristiano Ronaldo",
           "team": "Portugal",
           "minute": "68'"
+        },
+        {
+          "kind": "goal",
+          "player": "Gonçalo Ramos",
+          "team": "Portugal",
+          "minute": "90'+4'"
         }
       ]
     }
@@ -11029,9 +11041,9 @@
             "pick": "Portugal"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "90'+1'",
+          "clock": "90'+4'",
           "ht": false,
           "events": [
             {
@@ -11045,6 +11057,12 @@
               "player": "Cristiano Ronaldo",
               "team": "Portugal",
               "minute": "68'"
+            },
+            {
+              "kind": "goal",
+              "player": "Gonçalo Ramos",
+              "team": "Portugal",
+              "minute": "90'+4'"
             }
           ]
         },
