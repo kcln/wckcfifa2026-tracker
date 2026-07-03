@@ -7788,16 +7788,22 @@
             "pick": "Algeria"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "45'+4'",
-          "ht": true,
+          "clock": "49'",
+          "ht": false,
           "events": [
             {
               "kind": "goal",
               "player": "Breel Embolo",
               "team": "Switzerland",
               "minute": "10'"
+            },
+            {
+              "kind": "goal",
+              "player": "Dan Ndoye",
+              "team": "Switzerland",
+              "minute": "46'"
             }
           ]
         }
@@ -7812,16 +7818,22 @@
       "date": "2026-07-02",
       "venue": "Vancouver",
       "kickoff_utc": "2026-07-03T03:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 0,
-      "status": "HT",
-      "clock": "45'+4'",
+      "status": "LIVE",
+      "clock": "49'",
       "events": [
         {
           "kind": "goal",
           "player": "Breel Embolo",
           "team": "Switzerland",
           "minute": "10'"
+        },
+        {
+          "kind": "goal",
+          "player": "Dan Ndoye",
+          "team": "Switzerland",
+          "minute": "46'"
         }
       ]
     }
@@ -11124,16 +11136,22 @@
             "pick": "Algeria"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "45'+4'",
-          "ht": true,
+          "clock": "49'",
+          "ht": false,
           "events": [
             {
               "kind": "goal",
               "player": "Breel Embolo",
               "team": "Switzerland",
               "minute": "10'"
+            },
+            {
+              "kind": "goal",
+              "player": "Dan Ndoye",
+              "team": "Switzerland",
+              "minute": "46'"
             }
           ]
         }
