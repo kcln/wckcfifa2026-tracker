@@ -2074,6 +2074,15 @@
           "key": "pm-2026-07-03-88",
           "generated_at": "2026-07-03T13:59:35.727359-07:00",
           "kickoff_utc": "2026-07-03T18:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nFriday, July 3\n\nHalf-time:\nArgentina 1 - 0 Cape Verde\nMiami (Miami Gardens), USA\n  ⚽ 29' Lionel Messi (Argentina)\nPrediction: Argentina",
+          "sent": true,
+          "hash": "d1350acfd0f03b42",
+          "key": "ht-2026-07-03-86",
+          "generated_at": "2026-07-03T15:52:22.876305-07:00",
+          "kickoff_utc": "2026-07-03T22:00:00Z"
         }
       ]
     }
@@ -7950,7 +7959,7 @@
           "hg": 1,
           "ag": 0,
           "clock": "45'+4'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -7990,7 +7999,7 @@
       "kickoff_utc": "2026-07-03T22:00:00Z",
       "hg": 1,
       "ag": 0,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+4'",
       "events": [
         {
@@ -11380,7 +11389,7 @@
           "hg": 1,
           "ag": 0,
           "clock": "45'+4'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
