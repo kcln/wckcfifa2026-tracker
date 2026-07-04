@@ -8151,8 +8151,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 2,
-          "clock": "90'+5'",
+          "ag": 3,
+          "clock": "90'+9'",
           "ht": false,
           "events": [
             {
@@ -8166,6 +8166,12 @@
               "player": "Azzedine Ounahi",
               "team": "Morocco",
               "minute": "82'"
+            },
+            {
+              "kind": "goal",
+              "player": "Soufiane Rahimi",
+              "team": "Morocco",
+              "minute": "90'+8'"
             }
           ]
         },
@@ -8198,9 +8204,9 @@
       "venue": "Houston",
       "kickoff_utc": "2026-07-04T17:00:00Z",
       "hg": 0,
-      "ag": 2,
+      "ag": 3,
       "status": "LIVE",
-      "clock": "90'+5'",
+      "clock": "90'+9'",
       "events": [
         {
           "kind": "goal",
@@ -8213,6 +8219,12 @@
           "player": "Azzedine Ounahi",
           "team": "Morocco",
           "minute": "82'"
+        },
+        {
+          "kind": "goal",
+          "player": "Soufiane Rahimi",
+          "team": "Morocco",
+          "minute": "90'+8'"
         }
       ]
     }
@@ -11680,8 +11692,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 2,
-          "clock": "90'+5'",
+          "ag": 3,
+          "clock": "90'+9'",
           "ht": false,
           "events": [
             {
@@ -11695,6 +11707,12 @@
               "player": "Azzedine Ounahi",
               "team": "Morocco",
               "minute": "82'"
+            },
+            {
+              "kind": "goal",
+              "player": "Soufiane Rahimi",
+              "team": "Morocco",
+              "minute": "90'+8'"
             }
           ]
         },
