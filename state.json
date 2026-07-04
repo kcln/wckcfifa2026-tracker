@@ -8053,12 +8053,31 @@
             "away": 0.12189713746788056,
             "pick": "Colombia"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "87",
+      "home": "Colombia",
+      "away": "Ghana",
+      "date": "2026-07-03",
+      "venue": "Kansas City",
+      "kickoff_utc": "2026-07-04T01:30:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -11486,7 +11505,12 @@
             "away": 0.12189713746788056,
             "pick": "Colombia"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         }
       ]
     },
