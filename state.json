@@ -2133,6 +2133,15 @@
           "key": "mb-2026-07-04",
           "generated_at": "2026-07-04T00:01:55.866970-07:00",
           "kickoff_utc": "2026-07-04T17:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, July 4\n\nHalf-time:\nCanada 0 - 0 Morocco\nHouston, USA\nPrediction: Morocco",
+          "sent": true,
+          "hash": "c7619d2a8c47dd77",
+          "key": "ht-2026-07-04-90",
+          "generated_at": "2026-07-04T10:55:19.133129-07:00",
+          "kickoff_utc": "2026-07-04T17:00:00Z"
         }
       ]
     }
@@ -8144,7 +8153,7 @@
           "hg": 0,
           "ag": 0,
           "clock": "45'+6'",
-          "ht": false,
+          "ht": true,
           "events": []
         },
         {
@@ -8177,7 +8186,7 @@
       "kickoff_utc": "2026-07-04T17:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+6'",
       "events": []
     }
@@ -11647,7 +11656,7 @@
           "hg": 0,
           "ag": 0,
           "clock": "45'+6'",
-          "ht": false,
+          "ht": true,
           "events": []
         },
         {
