@@ -7957,8 +7957,8 @@
           },
           "status": "live",
           "hg": 2,
-          "ag": 1,
-          "clock": "102'",
+          "ag": 2,
+          "clock": "105'",
           "ht": false,
           "events": [
             {
@@ -7978,6 +7978,12 @@
               "player": "Lisandro Martínez",
               "team": "Argentina",
               "minute": "92'"
+            },
+            {
+              "kind": "goal",
+              "player": "Sidny Lopes Cabral",
+              "team": "Cape Verde",
+              "minute": "103'"
             }
           ]
         },
@@ -8010,9 +8016,9 @@
       "venue": "Miami (Miami Gardens)",
       "kickoff_utc": "2026-07-03T22:00:00Z",
       "hg": 2,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "102'",
+      "clock": "105'",
       "events": [
         {
           "kind": "goal",
@@ -8031,6 +8037,12 @@
           "player": "Lisandro Martínez",
           "team": "Argentina",
           "minute": "92'"
+        },
+        {
+          "kind": "goal",
+          "player": "Sidny Lopes Cabral",
+          "team": "Cape Verde",
+          "minute": "103'"
         }
       ]
     }
@@ -11411,8 +11423,8 @@
           },
           "status": "live",
           "hg": 2,
-          "ag": 1,
-          "clock": "102'",
+          "ag": 2,
+          "clock": "105'",
           "ht": false,
           "events": [
             {
@@ -11432,6 +11444,12 @@
               "player": "Lisandro Martínez",
               "team": "Argentina",
               "minute": "92'"
+            },
+            {
+              "kind": "goal",
+              "player": "Sidny Lopes Cabral",
+              "team": "Cape Verde",
+              "minute": "103'"
             }
           ]
         },
