@@ -7956,9 +7956,9 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "92'",
+          "clock": "95'",
           "ht": false,
           "events": [
             {
@@ -7972,6 +7972,12 @@
               "player": "Deroy Duarte",
               "team": "Cape Verde",
               "minute": "59'"
+            },
+            {
+              "kind": "goal",
+              "player": "Lisandro Martínez",
+              "team": "Argentina",
+              "minute": "92'"
             }
           ]
         },
@@ -8003,10 +8009,10 @@
       "date": "2026-07-03",
       "venue": "Miami (Miami Gardens)",
       "kickoff_utc": "2026-07-03T22:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 1,
       "status": "LIVE",
-      "clock": "92'",
+      "clock": "95'",
       "events": [
         {
           "kind": "goal",
@@ -8019,6 +8025,12 @@
           "player": "Deroy Duarte",
           "team": "Cape Verde",
           "minute": "59'"
+        },
+        {
+          "kind": "goal",
+          "player": "Lisandro Martínez",
+          "team": "Argentina",
+          "minute": "92'"
         }
       ]
     }
@@ -11398,9 +11410,9 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "92'",
+          "clock": "95'",
           "ht": false,
           "events": [
             {
@@ -11414,6 +11426,12 @@
               "player": "Deroy Duarte",
               "team": "Cape Verde",
               "minute": "59'"
+            },
+            {
+              "kind": "goal",
+              "player": "Lisandro Martínez",
+              "team": "Argentina",
+              "minute": "92'"
             }
           ]
         },
