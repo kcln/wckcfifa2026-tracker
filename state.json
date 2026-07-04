@@ -8229,12 +8229,31 @@
             "away": 0.7069839910396328,
             "pick": "France"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "89",
+      "home": "Paraguay",
+      "away": "France",
+      "date": "2026-07-04",
+      "venue": "Philadelphia",
+      "kickoff_utc": "2026-07-04T21:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -11737,7 +11756,12 @@
             "away": 0.7069839910396328,
             "pick": "France"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         }
       ]
     },
