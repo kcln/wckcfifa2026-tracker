@@ -2160,6 +2160,24 @@
           "key": "ht-2026-07-04-89",
           "generated_at": "2026-07-04T14:55:21.675020-07:00",
           "kickoff_utc": "2026-07-04T21:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, July 4\n\nFull time:\nParaguay 0 - 1 <b>France</b>\n<b>France</b> wins\nPhiladelphia, USA\n  ⚽ 70' Kylian Mbappé (France, pen)\nOverall prediction: 51/90 (56.7%)\nPrediction ✓: France",
+          "sent": true,
+          "hash": "f1ce319cfadccd09",
+          "key": "pm-2026-07-04-89",
+          "generated_at": "2026-07-04T16:07:24.375379-07:00",
+          "kickoff_utc": "2026-07-04T21:00:00Z"
+        },
+        {
+          "type": "daily_recap",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, July 4\n\nDaily Recap\n\nResults:\n  Canada 0 - 3 <b>Morocco</b>\n  <b>Morocco</b> wins\n  Houston, USA\n    ⚽ 50' Azzedine Ounahi (Morocco)\n    ⚽ 82' Azzedine Ounahi (Morocco)\n    ⚽ 90'+8' Soufiane Rahimi (Morocco)\n  Prediction ✓: Morocco\n\n  Paraguay 0 - 1 <b>France</b>\n  <b>France</b> wins\n  Philadelphia, USA\n    ⚽ 70' Kylian Mbappé (France, pen)\n  Prediction ✓: France\n\nOverall prediction — today 2/2 (100.0%)  ·  overall 51/90 (56.7%)",
+          "sent": true,
+          "hash": "05cde0de057395f0",
+          "key": "dr-2026-07-04",
+          "generated_at": "2026-07-04T16:07:24.375789-07:00",
+          "kickoff_utc": "2026-07-04T17:00:00Z"
         }
       ]
     }
@@ -2576,20 +2594,19 @@
   },
   "bracket": {
     "title_odds": {
-      "Mexico": 0.0299,
-      "Netherlands": 0.0818,
-      "Brazil": 0.1132,
-      "France": 0.0969,
-      "Argentina": 0.2318,
-      "Belgium": 0.0592,
-      "Colombia": 0.0657,
-      "Spain": 0.1299,
-      "Norway": 0.0146,
-      "England": 0.0744,
-      "Switzerland": 0.0118,
-      "Germany": 0.0351,
-      "Portugal": 0.0501,
-      "Australia": 0.0055,
+      "Argentina": 0.2306,
+      "England": 0.069,
+      "Spain": 0.131,
+      "Belgium": 0.0535,
+      "Brazil": 0.1171,
+      "Portugal": 0.0506,
+      "Norway": 0.0137,
+      "Mexico": 0.0289,
+      "Netherlands": 0.0693,
+      "France": 0.1577,
+      "Colombia": 0.0637,
+      "Australia": 0.0043,
+      "Switzerland": 0.0105,
       "USA": 0.0001
     },
     "advancement": {
@@ -4734,6 +4751,19 @@
         }
       ],
       "winner": "Morocco"
+    },
+    "89": {
+      "home_goals": 0,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "penalty",
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "minute": "70'"
+        }
+      ],
+      "winner": "France"
     }
   },
   "board": [
@@ -8238,11 +8268,9 @@
             "away": 0.7069839910396328,
             "pick": "France"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 1,
-          "clock": "90'+10'",
-          "ht": false,
           "events": [
             {
               "kind": "penalty",
@@ -8250,33 +8278,14 @@
               "team": "France",
               "minute": "70'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "France"
         }
       ]
     }
   ],
-  "live": [
-    {
-      "id": "89",
-      "home": "Paraguay",
-      "away": "France",
-      "date": "2026-07-04",
-      "venue": "Philadelphia",
-      "kickoff_utc": "2026-07-04T21:00:00Z",
-      "hg": 0,
-      "ag": 1,
-      "status": "LIVE",
-      "clock": "90'+10'",
-      "events": [
-        {
-          "kind": "penalty",
-          "player": "Kylian Mbappé",
-          "team": "France",
-          "minute": "70'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -11779,11 +11788,9 @@
             "away": 0.7069839910396328,
             "pick": "France"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 1,
-          "clock": "90'+10'",
-          "ht": false,
           "events": [
             {
               "kind": "penalty",
@@ -11791,7 +11798,9 @@
               "team": "France",
               "minute": "70'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "France"
         }
       ]
     },
@@ -11917,7 +11926,7 @@
       "matches": [
         {
           "id": "97",
-          "home": "W89",
+          "home": "France",
           "away": "Morocco",
           "kickoff_utc": "2026-07-09T20:00:00Z",
           "venue": "Boston (Foxborough)",
@@ -11925,10 +11934,10 @@
           "slot_home": "W89",
           "slot_away": "W90",
           "pred": {
-            "home": 0.13411041754495612,
+            "home": 0.5803314639762882,
             "draw": 0.0,
-            "away": 0.8658895824550439,
-            "pick": "Morocco"
+            "away": 0.4196685360237116,
+            "pick": "France"
           },
           "status": "sched"
         }
