@@ -2083,6 +2083,15 @@
           "key": "ht-2026-07-03-86",
           "generated_at": "2026-07-03T15:52:22.876305-07:00",
           "kickoff_utc": "2026-07-03T22:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nFriday, July 3\n\nFull time:\n<b>Argentina</b> 3 - 2 Cape Verde\n<b>Argentina</b> wins\nMiami (Miami Gardens), USA\n  ⚽ 29' Lionel Messi (Argentina)\n  ⚽ 59' Deroy Duarte (Cape Verde)\n  ⚽ 92' Lisandro Martínez (Argentina)\n  ⚽ 103' Sidny Lopes Cabral (Cape Verde)\n  ⚽ 111' Diney Borges (Argentina, OG)\nOverall prediction: 48/87 (55.2%)\nPrediction ✓: Argentina",
+          "sent": true,
+          "hash": "0afe93994945b267",
+          "key": "pm-2026-07-03-86",
+          "generated_at": "2026-07-03T17:46:09.016520-07:00",
+          "kickoff_utc": "2026-07-03T22:00:00Z"
         }
       ]
     }
@@ -2499,24 +2508,23 @@
   },
   "bracket": {
     "title_odds": {
-      "Brazil": 0.1319,
-      "Switzerland": 0.0232,
-      "Argentina": 0.1559,
-      "Belgium": 0.0653,
-      "Mexico": 0.0375,
-      "Spain": 0.1383,
-      "France": 0.1136,
-      "Norway": 0.0154,
-      "Germany": 0.0434,
-      "Netherlands": 0.0587,
-      "Colombia": 0.057,
-      "Portugal": 0.0565,
-      "Senegal": 0.0032,
-      "England": 0.0813,
-      "Australia": 0.0103,
-      "Canada": 0.0071,
-      "Cape Verde": 0.0013,
-      "USA": 0.0001
+      "France": 0.1124,
+      "Norway": 0.0153,
+      "Netherlands": 0.0532,
+      "Spain": 0.1337,
+      "England": 0.0756,
+      "Argentina": 0.2237,
+      "Canada": 0.0075,
+      "Mexico": 0.0356,
+      "Belgium": 0.0632,
+      "Colombia": 0.047,
+      "Portugal": 0.0502,
+      "Brazil": 0.1253,
+      "Germany": 0.0377,
+      "Australia": 0.0044,
+      "Switzerland": 0.0135,
+      "Senegal": 0.0014,
+      "USA": 0.0003
     },
     "advancement": {
       "Netherlands": 1.0,
@@ -4579,6 +4587,43 @@
       "winner": "Egypt",
       "home_pens": 2,
       "away_pens": 4
+    },
+    "86": {
+      "home_goals": 3,
+      "away_goals": 2,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Lionel Messi",
+          "team": "Argentina",
+          "minute": "29'"
+        },
+        {
+          "kind": "goal",
+          "player": "Deroy Duarte",
+          "team": "Cape Verde",
+          "minute": "59'"
+        },
+        {
+          "kind": "goal",
+          "player": "Lisandro Martínez",
+          "team": "Argentina",
+          "minute": "92'"
+        },
+        {
+          "kind": "goal",
+          "player": "Sidny Lopes Cabral",
+          "team": "Cape Verde",
+          "minute": "103'"
+        },
+        {
+          "kind": "own_goal",
+          "player": "Diney Borges",
+          "team": "Argentina",
+          "minute": "111'"
+        }
+      ],
+      "winner": "Argentina"
     }
   },
   "board": [
@@ -7955,11 +8000,9 @@
             "away": 0.3586614365210341,
             "pick": "Argentina"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 3,
           "ag": 2,
-          "clock": "120'+2'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -7991,7 +8034,9 @@
               "team": "Argentina",
               "minute": "111'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Argentina"
         },
         {
           "id": "87",
@@ -8013,52 +8058,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "86",
-      "home": "Argentina",
-      "away": "Cape Verde",
-      "date": "2026-07-03",
-      "venue": "Miami (Miami Gardens)",
-      "kickoff_utc": "2026-07-03T22:00:00Z",
-      "hg": 3,
-      "ag": 2,
-      "status": "LIVE",
-      "clock": "120'+2'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Lionel Messi",
-          "team": "Argentina",
-          "minute": "29'"
-        },
-        {
-          "kind": "goal",
-          "player": "Deroy Duarte",
-          "team": "Cape Verde",
-          "minute": "59'"
-        },
-        {
-          "kind": "goal",
-          "player": "Lisandro Martínez",
-          "team": "Argentina",
-          "minute": "92'"
-        },
-        {
-          "kind": "goal",
-          "player": "Sidny Lopes Cabral",
-          "team": "Cape Verde",
-          "minute": "103'"
-        },
-        {
-          "kind": "own_goal",
-          "player": "Diney Borges",
-          "team": "Argentina",
-          "minute": "111'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -11433,11 +11433,9 @@
             "away": 0.3586614365210341,
             "pick": "Argentina"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 3,
           "ag": 2,
-          "clock": "120'+2'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -11469,7 +11467,9 @@
               "team": "Argentina",
               "minute": "111'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Argentina"
         },
         {
           "id": "87",
@@ -11612,7 +11612,7 @@
       "matches": [
         {
           "id": "95",
-          "home": "W86",
+          "home": "Argentina",
           "away": "Egypt",
           "kickoff_utc": "2026-07-07T16:00:00Z",
           "venue": "Atlanta",
@@ -11620,10 +11620,10 @@
           "slot_home": "W86",
           "slot_away": "W88",
           "pred": {
-            "home": 0.24448111792880314,
+            "home": 0.7889849127075319,
             "draw": 0.0,
-            "away": 0.7555188820711969,
-            "pick": "Egypt"
+            "away": 0.21101508729246823,
+            "pick": "Argentina"
           },
           "status": "sched"
         },
