@@ -2121,6 +2121,20 @@
           "kickoff_utc": "2026-07-03T18:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-07-04",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, July 4\n\nMatchday Brief\n\nCanada vs Morocco\n  Prediction: Morocco\n  Canada 30.2% · Morocco 69.8%\n  🕐 10:00am PT / 12:00pm CT / 1:00pm ET / 10:30pm IST\n  📍 Houston, USA\n\nParaguay vs France\n  Prediction: France\n  Paraguay 29.3% · France 70.7%\n  🕐 2:00pm PT / 4:00pm CT / 5:00pm ET / 2:30am IST (+1d)\n  📍 Philadelphia, USA",
+          "sent": true,
+          "hash": "92753a3fe25ffbe5",
+          "key": "mb-2026-07-04",
+          "generated_at": "2026-07-04T00:01:55.866970-07:00",
+          "kickoff_utc": "2026-07-04T17:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -8105,6 +8119,45 @@
           ],
           "hit": true,
           "winner": "Colombia"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-04",
+      "matches": [
+        {
+          "id": "90",
+          "home": "Canada",
+          "away": "Morocco",
+          "kickoff_utc": "2026-07-04T17:00:00Z",
+          "venue": "Houston",
+          "stage": "R16",
+          "slot_home": "W73",
+          "slot_away": "W75",
+          "pred": {
+            "home": 0.3023091249975194,
+            "draw": 0.0,
+            "away": 0.6976908750024806,
+            "pick": "Morocco"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "89",
+          "home": "Paraguay",
+          "away": "France",
+          "kickoff_utc": "2026-07-04T21:00:00Z",
+          "venue": "Philadelphia",
+          "stage": "R16",
+          "slot_home": "W74",
+          "slot_away": "W77",
+          "pred": {
+            "home": 0.29301600896036717,
+            "draw": 0.0,
+            "away": 0.7069839910396328,
+            "pick": "France"
+          },
+          "status": "sched"
         }
       ]
     }
