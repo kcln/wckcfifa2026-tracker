@@ -2101,6 +2101,24 @@
           "key": "ht-2026-07-03-87",
           "generated_at": "2026-07-03T19:25:45.569687-07:00",
           "kickoff_utc": "2026-07-04T01:30:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026\nFriday, July 3\n\nFull time:\n<b>Colombia</b> 1 - 0 Ghana\n<b>Colombia</b> wins\nKansas City, USA\n  ⚽ 14' Jhon Arias (Colombia)\nOverall prediction: 49/88 (55.7%)\nPrediction ✓: Colombia",
+          "sent": true,
+          "hash": "fd6521558f158250",
+          "key": "pm-2026-07-03-87",
+          "generated_at": "2026-07-03T20:33:47.674646-07:00",
+          "kickoff_utc": "2026-07-04T01:30:00Z"
+        },
+        {
+          "type": "daily_recap",
+          "body": "🏆 FIFA World Cup 2026\nFriday, July 3\n\nDaily Recap\n\nResults:\n  Australia 1 (2) - 1 (<b>4</b>) <b>Egypt</b>\n  <b>Egypt</b> win on penalties\n  Dallas (Arlington), USA\n    ⚽ 13' Emam Ashour (Egypt)\n    ⚽ 55' Mohamed Hany (Australia, OG)\n  Prediction ✓: Egypt\n\n  <b>Argentina</b> 3 - 2 Cape Verde\n  <b>Argentina</b> wins\n  Miami (Miami Gardens), USA\n    ⚽ 29' Lionel Messi (Argentina)\n    ⚽ 59' Deroy Duarte (Cape Verde)\n    ⚽ 92' Lisandro Martínez (Argentina)\n    ⚽ 103' Sidny Lopes Cabral (Cape Verde)\n    ⚽ 111' Diney Borges (Argentina, OG)\n  Prediction ✓: Argentina\n\n  <b>Colombia</b> 1 - 0 Ghana\n  <b>Colombia</b> wins\n  Kansas City, USA\n    ⚽ 14' Jhon Arias (Colombia)\n  Prediction ✓: Colombia\n\nOverall prediction — today 3/3 (100.0%)  ·  overall 49/88 (55.7%)",
+          "sent": true,
+          "hash": "cc172cabec23fe90",
+          "key": "dr-2026-07-03",
+          "generated_at": "2026-07-03T20:33:47.675126-07:00",
+          "kickoff_utc": "2026-07-03T18:00:00Z"
         }
       ]
     }
@@ -2517,23 +2535,22 @@
   },
   "bracket": {
     "title_odds": {
-      "France": 0.1124,
-      "Norway": 0.0153,
-      "Netherlands": 0.0532,
-      "Spain": 0.1337,
-      "England": 0.0756,
-      "Argentina": 0.2237,
-      "Canada": 0.0075,
-      "Mexico": 0.0356,
-      "Belgium": 0.0632,
-      "Colombia": 0.047,
-      "Portugal": 0.0502,
-      "Brazil": 0.1253,
-      "Germany": 0.0377,
-      "Australia": 0.0044,
-      "Switzerland": 0.0135,
-      "Senegal": 0.0014,
-      "USA": 0.0003
+      "Netherlands": 0.0519,
+      "Argentina": 0.2338,
+      "France": 0.1105,
+      "Spain": 0.1325,
+      "Germany": 0.0366,
+      "Belgium": 0.0595,
+      "Brazil": 0.1167,
+      "Portugal": 0.0549,
+      "Australia": 0.0055,
+      "Norway": 0.012,
+      "Colombia": 0.0619,
+      "England": 0.0757,
+      "Mexico": 0.0316,
+      "Canada": 0.0067,
+      "Switzerland": 0.01,
+      "USA": 0.0002
     },
     "advancement": {
       "Netherlands": 1.0,
@@ -4633,6 +4650,19 @@
         }
       ],
       "winner": "Argentina"
+    },
+    "87": {
+      "home_goals": 1,
+      "away_goals": 0,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Jhon Arias",
+          "team": "Colombia",
+          "minute": "14'"
+        }
+      ],
+      "winner": "Colombia"
     }
   },
   "board": [
@@ -8062,11 +8092,9 @@
             "away": 0.12189713746788056,
             "pick": "Colombia"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 0,
-          "clock": "90'+6'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -8074,33 +8102,14 @@
               "team": "Colombia",
               "minute": "14'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Colombia"
         }
       ]
     }
   ],
-  "live": [
-    {
-      "id": "87",
-      "home": "Colombia",
-      "away": "Ghana",
-      "date": "2026-07-03",
-      "venue": "Kansas City",
-      "kickoff_utc": "2026-07-04T01:30:00Z",
-      "hg": 1,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "90'+6'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Jhon Arias",
-          "team": "Colombia",
-          "minute": "14'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -11528,11 +11537,9 @@
             "away": 0.12189713746788056,
             "pick": "Colombia"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 0,
-          "clock": "90'+6'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -11540,7 +11547,9 @@
               "team": "Colombia",
               "minute": "14'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Colombia"
         }
       ]
     },
@@ -11684,17 +11693,17 @@
         {
           "id": "96",
           "home": "Switzerland",
-          "away": "W87",
+          "away": "Colombia",
           "kickoff_utc": "2026-07-07T20:00:00Z",
           "venue": "Vancouver",
           "stage": "R16",
           "slot_home": "W85",
           "slot_away": "W87",
           "pred": {
-            "home": 0.9047175302821824,
+            "home": 0.31621108541750337,
             "draw": 0.0,
-            "away": 0.09528246971781762,
-            "pick": "Switzerland"
+            "away": 0.6837889145824967,
+            "pick": "Colombia"
           },
           "status": "sched"
         }
