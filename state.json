@@ -8140,7 +8140,12 @@
             "away": 0.6976908750024806,
             "pick": "Morocco"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "2'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "89",
@@ -8162,7 +8167,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "90",
+      "home": "Canada",
+      "away": "Morocco",
+      "date": "2026-07-04",
+      "venue": "Houston",
+      "kickoff_utc": "2026-07-04T17:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "2'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -11624,7 +11643,12 @@
             "away": 0.6976908750024806,
             "pick": "Morocco"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "2'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "89",
