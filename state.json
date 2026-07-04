@@ -8151,8 +8151,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "79'",
+          "ag": 2,
+          "clock": "83'",
           "ht": false,
           "events": [
             {
@@ -8160,6 +8160,12 @@
               "player": "Azzedine Ounahi",
               "team": "Morocco",
               "minute": "50'"
+            },
+            {
+              "kind": "goal",
+              "player": "Azzedine Ounahi",
+              "team": "Morocco",
+              "minute": "82'"
             }
           ]
         },
@@ -8192,15 +8198,21 @@
       "venue": "Houston",
       "kickoff_utc": "2026-07-04T17:00:00Z",
       "hg": 0,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "79'",
+      "clock": "83'",
       "events": [
         {
           "kind": "goal",
           "player": "Azzedine Ounahi",
           "team": "Morocco",
           "minute": "50'"
+        },
+        {
+          "kind": "goal",
+          "player": "Azzedine Ounahi",
+          "team": "Morocco",
+          "minute": "82'"
         }
       ]
     }
@@ -11668,8 +11680,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "79'",
+          "ag": 2,
+          "clock": "83'",
           "ht": false,
           "events": [
             {
@@ -11677,6 +11689,12 @@
               "player": "Azzedine Ounahi",
               "team": "Morocco",
               "minute": "50'"
+            },
+            {
+              "kind": "goal",
+              "player": "Azzedine Ounahi",
+              "team": "Morocco",
+              "minute": "82'"
             }
           ]
         },
