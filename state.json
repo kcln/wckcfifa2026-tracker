@@ -2092,6 +2092,15 @@
           "key": "pm-2026-07-03-86",
           "generated_at": "2026-07-03T17:46:09.016520-07:00",
           "kickoff_utc": "2026-07-03T22:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nFriday, July 3\n\nHalf-time:\nColombia 1 - 0 Ghana\nKansas City, USA\n  ⚽ 14' Jhon Arias (Colombia)\nPrediction: Colombia",
+          "sent": true,
+          "hash": "bcc16e6313904482",
+          "key": "ht-2026-07-03-87",
+          "generated_at": "2026-07-03T19:25:45.569687-07:00",
+          "kickoff_utc": "2026-07-04T01:30:00Z"
         }
       ]
     }
@@ -8057,7 +8066,7 @@
           "hg": 1,
           "ag": 0,
           "clock": "45'+7'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -8080,7 +8089,7 @@
       "kickoff_utc": "2026-07-04T01:30:00Z",
       "hg": 1,
       "ag": 0,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+7'",
       "events": [
         {
@@ -11523,7 +11532,7 @@
           "hg": 1,
           "ag": 0,
           "clock": "45'+7'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
