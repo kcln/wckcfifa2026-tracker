@@ -8240,10 +8240,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "68'",
+          "ag": 1,
+          "clock": "70'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "penalty",
+              "player": "Kylian Mbappé",
+              "team": "France",
+              "minute": "70'"
+            }
+          ]
         }
       ]
     }
@@ -8257,10 +8264,17 @@
       "venue": "Philadelphia",
       "kickoff_utc": "2026-07-04T21:00:00Z",
       "hg": 0,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "68'",
-      "events": []
+      "clock": "70'",
+      "events": [
+        {
+          "kind": "penalty",
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "minute": "70'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -11767,10 +11781,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "68'",
+          "ag": 1,
+          "clock": "70'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "penalty",
+              "player": "Kylian Mbappé",
+              "team": "France",
+              "minute": "70'"
+            }
+          ]
         }
       ]
     },
