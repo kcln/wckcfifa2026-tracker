@@ -8232,7 +8232,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "19'",
+          "clock": "22'",
           "ht": false,
           "events": []
         }
@@ -8250,7 +8250,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "19'",
+      "clock": "22'",
       "events": []
     }
   ],
@@ -11759,7 +11759,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "19'",
+          "clock": "22'",
           "ht": false,
           "events": []
         }
