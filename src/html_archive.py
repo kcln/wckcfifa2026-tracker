@@ -754,7 +754,8 @@ def _bracket_box(m: dict, groups: dict, winners: dict, losers: dict,
         hp, ap = int(m["hpens"]), int(m["apens"])
         hsc += f' (<strong>{hp}</strong>)' if h_win else f' ({hp})'
         asc += f' (<strong>{ap}</strong>)' if a_win else f' ({ap})'
-    return (f'<div class="bkm{cls}" data-date="{escape(mdate)}">{tag}'
+    return (f'<div class="bkm{cls}" data-date="{escape(mdate)}" '
+            f'data-status="{escape(st or "sched")}">{tag}'
             f'{row(hl, hsc, h_win, h_proj)}'
             f'{row(al, asc, a_win, a_proj)}{loc_html}{pick_html}</div>')
 
@@ -1358,32 +1359,48 @@ __SIGNUP_BOTTOM__
         });
       } catch (e) { /* keep server-rendered classes */ }
     }
+    function focusBox() {
+      // The tie the page should open on: the topmost box of the EARLIEST day
+      // (>= viewer-PT today) that still has an unfinished tie. Covers: today
+      // in play -> today; today all done or a rest day -> next match day.
+      var bk = document.querySelector('.daystrip .bk');
+      if (!bk) return null;
+      var now = new Date().toLocaleDateString('en-CA',
+        {timeZone: 'America/Los_Angeles'});
+      var best = null;
+      bk.querySelectorAll('.bkm[data-date]').forEach(function (b) {
+        var d = b.getAttribute('data-date');
+        if (d >= now && b.getAttribute('data-status') !== 'FT') {
+          if (!best || d < best.getAttribute('data-date') ||
+              (d === best.getAttribute('data-date') &&
+               b.offsetTop < best.offsetTop)) best = b;
+        }
+      });
+      return best || bk.querySelector('.bkm');
+    }
     function centre() {
       var strip = document.querySelector('.daystrip');
       if (!strip) return;
-      var target = null;
-      var bk = strip.querySelector('.bk');
-      if (bk) {
-        // Knockouts: centre the round holding today's tie (else tomorrow's,
-        // else the first round of the bracket).
-        var t = bk.querySelector('.bkm.bkm-today') ||
-                bk.querySelector('.bkm.bkm-tomorrow');
-        target = t ? t.closest('.bk-rnd') : bk.querySelector('.bk-rnd');
-      }
-      if (!target) target = strip.querySelector('.daycol.is-today');
+      var box = focusBox();
+      var target = box ? box.closest('.bk-rnd')
+                       : strip.querySelector('.daycol.is-today');
       if (!target) return;
       var left = target.getBoundingClientRect().left -
                  strip.getBoundingClientRect().left + strip.scrollLeft;
       strip.scrollLeft = left - (strip.clientWidth - target.clientWidth) / 2;
+      return box;
     }
     markDays();
-    centre();
+    var focused = centre();
     var sec = document.getElementById('schedule');
     if (sec) sec.addEventListener('toggle', function () {
       if (sec.open) centre();
     });
-    // Open on the Schedule (knockout view) unless a deep link says otherwise.
-    if (!location.hash && sec) sec.scrollIntoView();
+    // Open on the day's ties (vertically too) unless a deep link says otherwise.
+    if (!location.hash) {
+      if (focused) focused.scrollIntoView({block: 'center', inline: 'nearest'});
+      else if (sec) sec.scrollIntoView();
+    }
   })();
 </script>
 </body>
