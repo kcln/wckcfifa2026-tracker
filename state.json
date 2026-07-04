@@ -2151,6 +2151,15 @@
           "key": "pm-2026-07-04-90",
           "generated_at": "2026-07-04T12:06:19.978388-07:00",
           "kickoff_utc": "2026-07-04T17:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026\nSaturday, July 4\n\nHalf-time:\nParaguay 0 - 0 France\nPhiladelphia, USA\nPrediction: France",
+          "sent": true,
+          "hash": "c7eb5f9a489173f5",
+          "key": "ht-2026-07-04-89",
+          "generated_at": "2026-07-04T14:55:21.675020-07:00",
+          "kickoff_utc": "2026-07-04T21:00:00Z"
         }
       ]
     }
@@ -8233,7 +8242,7 @@
           "hg": 0,
           "ag": 0,
           "clock": "45'+3'",
-          "ht": false,
+          "ht": true,
           "events": []
         }
       ]
@@ -8249,7 +8258,7 @@
       "kickoff_utc": "2026-07-04T21:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+3'",
       "events": []
     }
@@ -11760,7 +11769,7 @@
           "hg": 0,
           "ag": 0,
           "clock": "45'+3'",
-          "ht": false,
+          "ht": true,
           "events": []
         }
       ]
