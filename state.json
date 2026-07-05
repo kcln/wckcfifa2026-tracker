@@ -8316,7 +8316,12 @@
             "away": 0.31379260309433454,
             "pick": "Brazil"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "92",
@@ -8338,7 +8343,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "91",
+      "home": "Brazil",
+      "away": "Norway",
+      "date": "2026-07-05",
+      "venue": "New York/New Jersey (East Rutherford)",
+      "kickoff_utc": "2026-07-05T20:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -11875,7 +11894,12 @@
             "away": 0.31379260309433454,
             "pick": "Brazil"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "92",
