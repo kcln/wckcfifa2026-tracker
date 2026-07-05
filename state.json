@@ -2192,6 +2192,15 @@
           "key": "mb-2026-07-05",
           "generated_at": "2026-07-05T00:04:26.106069-07:00",
           "kickoff_utc": "2026-07-05T20:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026 — Round of 16\nSunday, July 5\n\nHalf-time:\nBrazil 0 - 0 Norway\nNew York/New Jersey (East Rutherford), USA\nPrediction: Brazil",
+          "sent": true,
+          "hash": "9c3ddaaa42332c26",
+          "key": "ht-2026-07-05-91",
+          "generated_at": "2026-07-05T13:52:54.886080-07:00",
+          "kickoff_utc": "2026-07-05T20:00:00Z"
         }
       ]
     }
@@ -8319,8 +8328,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": []
         },
         {
@@ -8353,8 +8362,8 @@
       "kickoff_utc": "2026-07-05T20:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+4'",
+      "status": "HT",
+      "clock": "45'+6'",
       "events": []
     }
   ],
@@ -11897,8 +11906,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": []
         },
         {
