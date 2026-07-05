@@ -224,9 +224,36 @@ def _kickoff_key(m: dict):
     return (m.get("kickoff_utc") or "", str(m.get("id") or ""))
 
 
-def _header(date_iso: str) -> list[str]:
-    """Brand + date header used by every message — one item per line."""
-    return ["🏆 FIFA World Cup 2026", _pretty_date(date_iso), ""]
+# Knockout stage codes -> header titles (KC's spec: every knockout message is
+# titled with its round). Group-stage messages keep the plain brand header.
+_STAGE_TITLES = {
+    "R32": "Round of 32",
+    "R16": "Round of 16",
+    "QF": "Quarterfinal",
+    "SF": "Semifinal",
+    "3rd": "Third Place",
+    "final": "Final",
+}
+
+
+def _stage_title(matches) -> str:
+    """The shared knockout title of `matches` (a list or a single match dict);
+    '' when group-stage, unknown, or the matches span different rounds."""
+    if isinstance(matches, dict):
+        matches = [matches]
+    stages = {m.get("stage") for m in matches} - {"group", None}
+    if len(stages) != 1:
+        return ""
+    return _STAGE_TITLES.get(stages.pop(), "")
+
+
+def _header(date_iso: str, matches=None) -> list[str]:
+    """Brand + date header used by every message — one item per line. The
+    brand line carries the knockout round title when `matches` are all in
+    the same one, e.g. '🏆 FIFA World Cup 2026 — Round of 16'."""
+    title = _stage_title(matches) if matches is not None else ""
+    brand = f"🏆 FIFA World Cup 2026 — {title}" if title else "🏆 FIFA World Cup 2026"
+    return [brand, _pretty_date(date_iso), ""]
 
 
 def morning_brief(date_iso: str, matches: list[dict]) -> str:
@@ -242,7 +269,7 @@ def morning_brief(date_iso: str, matches: list[dict]) -> str:
           🕐 10:00am PT / 12:00pm CT / 1:00pm ET / 10:30pm IST
           📍 Houston, USA
     """
-    lines: list[str] = _header(date_iso) + ["Matchday Brief", ""]
+    lines: list[str] = _header(date_iso, matches) + ["Matchday Brief", ""]
     for m in sorted(matches, key=_kickoff_key):   # earliest kickoff first
         pred = m["prediction"]
         home, away = m["home"], m["away"]
@@ -274,7 +301,7 @@ def half_time(match: dict, home_goals: int, away_goals: int,
     context (predictions are not re-run mid-match). First-half goal scorers
     and any red cards (player, country, minute) are listed when available.
     """
-    lines = _header(match.get("date", "")) + [
+    lines = _header(match.get("date", ""), match) + [
         "Half-time:",
         f"{match['home']} {home_goals} - {away_goals} {match['away']}"]
     loc = _place_of(match)
@@ -300,7 +327,7 @@ def post_match(match: dict, overall=None) -> str:
     rendered as the running cumulative accuracy through this match — passed in
     by the tracker so it stays stable (independent of later matches).
     """
-    lines = _header(match.get("date", "")) + ["Full time:"]
+    lines = _header(match.get("date", ""), match) + ["Full time:"]
     lines += _result_block(match, overall=overall)
     return "\n".join(lines)
 
@@ -318,7 +345,7 @@ def daily_recap(date_iso: str, matches: list[dict], group_tables: dict,
     those rows get a leading `Q` marker (explained in the key).
     """
     qualified = qualified or set()
-    lines: list[str] = _header(date_iso) + ["Daily Recap", "", "Results:"]
+    lines: list[str] = _header(date_iso, matches) + ["Daily Recap", "", "Results:"]
 
     matches = sorted(matches, key=_kickoff_key)   # chronological results
     resolved = [m for m in matches if m.get("result")]

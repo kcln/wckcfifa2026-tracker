@@ -474,3 +474,50 @@ def test_morning_brief_knockout_shows_two_way_to_advance():
     body = mb.morning_brief("2026-07-02", matches)
     assert "Portugal 49.9% · Croatia 50.1%" in body
     assert "to advance" not in body and "Draw" not in body
+
+
+# --- stage titles in message headers ---
+
+def test_morning_brief_r16_header_titled_round_of_16():
+    matches = [{"home": "Spain", "away": "Japan", "stage": "R16",
+                "prediction": {"home": 0.6, "draw": 0.0, "away": 0.4}}]
+    body = mb.morning_brief("2026-07-04", matches)
+    assert "Round of 16" in body.splitlines()[0]
+
+
+def test_post_match_qf_header_titled_quarterfinal():
+    match = {"home": "Brazil", "away": "France", "stage": "QF",
+             "prediction": {"home": 0.55, "draw": 0.0, "away": 0.45},
+             "result": {"home_goals": 2, "away_goals": 1}}
+    body = mb.post_match(match)
+    assert "Quarterfinal" in body.splitlines()[0]
+
+
+def test_half_time_sf_header_titled_semifinal():
+    match = {"home": "Argentina", "away": "England", "stage": "SF",
+             "prediction": {"home": 0.5, "draw": 0.0, "away": 0.5}}
+    body = mb.half_time(match, 1, 0)
+    assert "Semifinal" in body.splitlines()[0]
+
+
+def test_daily_recap_final_header_titled_final():
+    matches = [{"home": "Argentina", "away": "Brazil", "stage": "final",
+                "kickoff_utc": "2026-07-19T19:00:00Z",
+                "prediction": {"home": 0.5, "draw": 0.0, "away": 0.5},
+                "result": {"home_goals": 3, "away_goals": 2}}]
+    body = mb.daily_recap("2026-07-19", matches, {})
+    assert "Final" in body.splitlines()[0]
+
+
+def test_third_place_header_titled():
+    matches = [{"home": "England", "away": "Germany", "stage": "3rd",
+                "prediction": {"home": 0.5, "draw": 0.0, "away": 0.5}}]
+    body = mb.morning_brief("2026-07-18", matches)
+    assert "Third Place" in body.splitlines()[0]
+
+
+def test_group_stage_header_has_no_stage_title():
+    matches = [{"home": "USA", "away": "Mexico", "stage": "group",
+                "prediction": {"home": 0.5, "draw": 0.3, "away": 0.2}}]
+    body = mb.morning_brief("2026-06-11", matches)
+    assert body.splitlines()[0] == "🏆 FIFA World Cup 2026"
