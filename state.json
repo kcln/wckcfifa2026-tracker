@@ -8327,10 +8327,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "78'",
+          "ag": 1,
+          "clock": "81'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Erling Haaland",
+              "team": "Norway",
+              "minute": "79'"
+            }
+          ]
         },
         {
           "id": "92",
@@ -8361,10 +8368,17 @@
       "venue": "New York/New Jersey (East Rutherford)",
       "kickoff_utc": "2026-07-05T20:00:00Z",
       "hg": 0,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "78'",
-      "events": []
+      "clock": "81'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Erling Haaland",
+          "team": "Norway",
+          "minute": "79'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -11905,10 +11919,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "78'",
+          "ag": 1,
+          "clock": "81'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Erling Haaland",
+              "team": "Norway",
+              "minute": "79'"
+            }
+          ]
         },
         {
           "id": "92",
