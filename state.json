@@ -2201,6 +2201,15 @@
           "key": "ht-2026-07-05-91",
           "generated_at": "2026-07-05T13:52:54.886080-07:00",
           "kickoff_utc": "2026-07-05T20:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026 — Round of 16\nSunday, July 5\n\nFull time:\nBrazil 1 - 2 <b>Norway</b>\n<b>Norway</b> wins\nNew York/New Jersey (East Rutherford), USA\n  ⚽ 79' Erling Haaland (Norway)\n  ⚽ 90' Erling Haaland (Norway)\n  ⚽ 90'+10' Neymar (Brazil, pen)\nOverall prediction: 51/91 (56.0%)\nPrediction ✗: Brazil",
+          "sent": true,
+          "hash": "f5f709ac1fac3b56",
+          "key": "pm-2026-07-05-91",
+          "generated_at": "2026-07-05T15:07:13.277617-07:00",
+          "kickoff_utc": "2026-07-05T20:00:00Z"
         }
       ]
     }
@@ -2617,20 +2626,19 @@
   },
   "bracket": {
     "title_odds": {
-      "Argentina": 0.2306,
-      "England": 0.069,
-      "Spain": 0.131,
-      "Belgium": 0.0535,
-      "Brazil": 0.1171,
-      "Portugal": 0.0506,
-      "Norway": 0.0137,
-      "Mexico": 0.0289,
-      "Netherlands": 0.0693,
-      "France": 0.1577,
-      "Colombia": 0.0637,
-      "Australia": 0.0043,
-      "Switzerland": 0.0105,
-      "USA": 0.0001
+      "Spain": 0.1317,
+      "France": 0.1698,
+      "Belgium": 0.0564,
+      "Netherlands": 0.076,
+      "Colombia": 0.0755,
+      "Portugal": 0.0518,
+      "Argentina": 0.2578,
+      "England": 0.085,
+      "Norway": 0.0387,
+      "Mexico": 0.0397,
+      "Switzerland": 0.0123,
+      "Australia": 0.0051,
+      "USA": 0.0002
     },
     "advancement": {
       "Colombia": 1.0,
@@ -2669,30 +2677,30 @@
   },
   "season_ended": false,
   "last_result": {
-    "home": "Canada",
-    "away": "Morocco",
-    "home_goals": 0,
-    "away_goals": 3,
-    "date": "2026-07-04",
-    "venue": "Houston",
+    "home": "Brazil",
+    "away": "Norway",
+    "home_goals": 1,
+    "away_goals": 2,
+    "date": "2026-07-05",
+    "venue": "New York/New Jersey (East Rutherford)",
     "events": [
       {
         "kind": "goal",
-        "player": "Azzedine Ounahi",
-        "team": "Morocco",
-        "minute": "50'"
+        "player": "Erling Haaland",
+        "team": "Norway",
+        "minute": "79'"
       },
       {
         "kind": "goal",
-        "player": "Azzedine Ounahi",
-        "team": "Morocco",
-        "minute": "82'"
+        "player": "Erling Haaland",
+        "team": "Norway",
+        "minute": "90'"
       },
       {
-        "kind": "goal",
-        "player": "Soufiane Rahimi",
-        "team": "Morocco",
-        "minute": "90'+8'"
+        "kind": "penalty",
+        "player": "Neymar",
+        "team": "Brazil",
+        "minute": "90'+10'"
       }
     ]
   },
@@ -4787,6 +4795,31 @@
         }
       ],
       "winner": "France"
+    },
+    "91": {
+      "home_goals": 1,
+      "away_goals": 2,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Erling Haaland",
+          "team": "Norway",
+          "minute": "79'"
+        },
+        {
+          "kind": "goal",
+          "player": "Erling Haaland",
+          "team": "Norway",
+          "minute": "90'"
+        },
+        {
+          "kind": "penalty",
+          "player": "Neymar",
+          "team": "Brazil",
+          "minute": "90'+10'"
+        }
+      ],
+      "winner": "Norway"
     }
   },
   "board": [
@@ -8325,11 +8358,9 @@
             "away": 0.31379260309433454,
             "pick": "Brazil"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 2,
-          "clock": "90'+11'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -8349,7 +8380,9 @@
               "team": "Brazil",
               "minute": "90'+10'"
             }
-          ]
+          ],
+          "hit": false,
+          "winner": "Norway"
         },
         {
           "id": "92",
@@ -8371,40 +8404,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "91",
-      "home": "Brazil",
-      "away": "Norway",
-      "date": "2026-07-05",
-      "venue": "New York/New Jersey (East Rutherford)",
-      "kickoff_utc": "2026-07-05T20:00:00Z",
-      "hg": 1,
-      "ag": 2,
-      "status": "LIVE",
-      "clock": "90'+11'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Erling Haaland",
-          "team": "Norway",
-          "minute": "79'"
-        },
-        {
-          "kind": "goal",
-          "player": "Erling Haaland",
-          "team": "Norway",
-          "minute": "90'"
-        },
-        {
-          "kind": "penalty",
-          "player": "Neymar",
-          "team": "Brazil",
-          "minute": "90'+10'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -11941,11 +11941,9 @@
             "away": 0.31379260309433454,
             "pick": "Brazil"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 2,
-          "clock": "90'+11'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -11965,7 +11963,9 @@
               "team": "Brazil",
               "minute": "90'+10'"
             }
-          ]
+          ],
+          "hit": false,
+          "winner": "Norway"
         },
         {
           "id": "92",
@@ -12113,7 +12113,7 @@
       "matches": [
         {
           "id": "99",
-          "home": "W91",
+          "home": "Norway",
           "away": "W92",
           "kickoff_utc": "2026-07-11T21:00:00Z",
           "venue": "Miami (Miami Gardens)",
@@ -12121,10 +12121,10 @@
           "slot_home": "W91",
           "slot_away": "W92",
           "pred": {
-            "home": 0.5,
+            "home": 0.9168612275957299,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "W91"
+            "away": 0.08313877240427014,
+            "pick": "Norway"
           },
           "status": "sched"
         },
