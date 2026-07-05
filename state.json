@@ -8326,9 +8326,9 @@
             "pick": "Brazil"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 2,
-          "clock": "90'+8'",
+          "clock": "90'+11'",
           "ht": false,
           "events": [
             {
@@ -8342,6 +8342,12 @@
               "player": "Erling Haaland",
               "team": "Norway",
               "minute": "90'"
+            },
+            {
+              "kind": "penalty",
+              "player": "Neymar",
+              "team": "Brazil",
+              "minute": "90'+10'"
             }
           ]
         },
@@ -8373,10 +8379,10 @@
       "date": "2026-07-05",
       "venue": "New York/New Jersey (East Rutherford)",
       "kickoff_utc": "2026-07-05T20:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 2,
       "status": "LIVE",
-      "clock": "90'+8'",
+      "clock": "90'+11'",
       "events": [
         {
           "kind": "goal",
@@ -8389,6 +8395,12 @@
           "player": "Erling Haaland",
           "team": "Norway",
           "minute": "90'"
+        },
+        {
+          "kind": "penalty",
+          "player": "Neymar",
+          "team": "Brazil",
+          "minute": "90'+10'"
         }
       ]
     }
@@ -11930,9 +11942,9 @@
             "pick": "Brazil"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 2,
-          "clock": "90'+8'",
+          "clock": "90'+11'",
           "ht": false,
           "events": [
             {
@@ -11946,6 +11958,12 @@
               "player": "Erling Haaland",
               "team": "Norway",
               "minute": "90'"
+            },
+            {
+              "kind": "penalty",
+              "player": "Neymar",
+              "team": "Brazil",
+              "minute": "90'+10'"
             }
           ]
         },
