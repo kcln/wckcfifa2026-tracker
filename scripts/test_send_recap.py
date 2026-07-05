@@ -122,7 +122,10 @@ def build_announcement() -> str:
 def main() -> None:
     state = json.loads((ROOT / "state.json").read_text())
 
-    if "--announce" in sys.argv:
+    if "--brief" in sys.argv:
+        # Today's matchday brief alone — previews header/format changes.
+        msgs = [("brief", build_brief(state))]
+    elif "--announce" in sys.argv:
         # Model-upgrade announcement + the refreshed brief, nothing else.
         msgs = [("announce", build_announcement()),
                 ("brief", build_brief(state))]
