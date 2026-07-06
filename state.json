@@ -8409,11 +8409,36 @@
             "pick": "England"
           },
           "status": "live",
-          "hg": 0,
-          "ag": 0,
-          "clock": "9'",
+          "hg": 1,
+          "ag": 2,
+          "clock": "57'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Jude Bellingham",
+              "team": "England",
+              "minute": "36'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jude Bellingham",
+              "team": "England",
+              "minute": "38'"
+            },
+            {
+              "kind": "goal",
+              "player": "Julián Quiñones",
+              "team": "Mexico",
+              "minute": "42'"
+            },
+            {
+              "kind": "red",
+              "player": "Jarell Quansah",
+              "team": "England",
+              "minute": "54'"
+            }
+          ]
         }
       ]
     }
@@ -8426,11 +8451,36 @@
       "date": "2026-07-05",
       "venue": "Mexico City",
       "kickoff_utc": "2026-07-06T00:00:00Z",
-      "hg": 0,
-      "ag": 0,
+      "hg": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "9'",
-      "events": []
+      "clock": "57'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Jude Bellingham",
+          "team": "England",
+          "minute": "36'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jude Bellingham",
+          "team": "England",
+          "minute": "38'"
+        },
+        {
+          "kind": "goal",
+          "player": "Julián Quiñones",
+          "team": "Mexico",
+          "minute": "42'"
+        },
+        {
+          "kind": "red",
+          "player": "Jarell Quansah",
+          "team": "England",
+          "minute": "54'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -12011,11 +12061,36 @@
             "pick": "England"
           },
           "status": "live",
-          "hg": 0,
-          "ag": 0,
-          "clock": "9'",
+          "hg": 1,
+          "ag": 2,
+          "clock": "57'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Jude Bellingham",
+              "team": "England",
+              "minute": "36'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jude Bellingham",
+              "team": "England",
+              "minute": "38'"
+            },
+            {
+              "kind": "goal",
+              "player": "Julián Quiñones",
+              "team": "Mexico",
+              "minute": "42'"
+            },
+            {
+              "kind": "red",
+              "player": "Jarell Quansah",
+              "team": "England",
+              "minute": "54'"
+            }
+          ]
         }
       ]
     },
