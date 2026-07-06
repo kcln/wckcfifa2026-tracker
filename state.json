@@ -2210,6 +2210,15 @@
           "key": "pm-2026-07-05-91",
           "generated_at": "2026-07-05T15:07:13.277617-07:00",
           "kickoff_utc": "2026-07-05T20:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026 — Round of 16\nSunday, July 5\n\nHalf-time:\nMexico 1 - 2 England\nMexico City, Mexico\n  ⚽ 36' Jude Bellingham (England)\n  ⚽ 38' Jude Bellingham (England)\n  ⚽ 42' Julián Quiñones (Mexico)\nPrediction: England",
+          "sent": true,
+          "hash": "68f98707ba4adb14",
+          "key": "ht-2026-07-05-92",
+          "generated_at": "2026-07-05T18:52:39.010024-07:00",
+          "kickoff_utc": "2026-07-06T00:00:00Z"
         }
       ]
     }
@@ -8402,8 +8411,8 @@
           "status": "live",
           "hg": 1,
           "ag": 2,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -8438,8 +8447,8 @@
       "kickoff_utc": "2026-07-06T00:00:00Z",
       "hg": 1,
       "ag": 2,
-      "status": "LIVE",
-      "clock": "45'+4'",
+      "status": "HT",
+      "clock": "45'+6'",
       "events": [
         {
           "kind": "goal",
@@ -12042,8 +12051,8 @@
           "status": "live",
           "hg": 1,
           "ag": 2,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
