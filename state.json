@@ -8400,9 +8400,9 @@
             "pick": "England"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 2,
-          "clock": "40'",
+          "clock": "43'",
           "ht": false,
           "events": [
             {
@@ -8416,6 +8416,12 @@
               "player": "Jude Bellingham",
               "team": "England",
               "minute": "38'"
+            },
+            {
+              "kind": "goal",
+              "player": "Julián Quiñones",
+              "team": "Mexico",
+              "minute": "42'"
             }
           ]
         }
@@ -8430,10 +8436,10 @@
       "date": "2026-07-05",
       "venue": "Mexico City",
       "kickoff_utc": "2026-07-06T00:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 2,
       "status": "LIVE",
-      "clock": "40'",
+      "clock": "43'",
       "events": [
         {
           "kind": "goal",
@@ -8446,6 +8452,12 @@
           "player": "Jude Bellingham",
           "team": "England",
           "minute": "38'"
+        },
+        {
+          "kind": "goal",
+          "player": "Julián Quiñones",
+          "team": "Mexico",
+          "minute": "42'"
         }
       ]
     }
@@ -12028,9 +12040,9 @@
             "pick": "England"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 2,
-          "clock": "40'",
+          "clock": "43'",
           "ht": false,
           "events": [
             {
@@ -12044,6 +12056,12 @@
               "player": "Jude Bellingham",
               "team": "England",
               "minute": "38'"
+            },
+            {
+              "kind": "goal",
+              "player": "Julián Quiñones",
+              "team": "Mexico",
+              "minute": "42'"
             }
           ]
         }
