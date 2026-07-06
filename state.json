@@ -2219,6 +2219,24 @@
           "key": "ht-2026-07-05-92",
           "generated_at": "2026-07-05T18:52:39.010024-07:00",
           "kickoff_utc": "2026-07-06T00:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026 — Round of 16\nSunday, July 5\n\nFull time:\nMexico 2 - 3 <b>England</b>\n<b>England</b> wins\nMexico City, Mexico\n  ⚽ 36' Jude Bellingham (England)\n  ⚽ 38' Jude Bellingham (England)\n  ⚽ 42' Julián Quiñones (Mexico)\n  ⚽ 60' Harry Kane (England, pen)\n  ⚽ 69' Raúl Jiménez (Mexico, pen)\n  🟥 54' Jarell Quansah (England)\nOverall prediction: 52/92 (56.5%)\nPrediction ✓: England",
+          "sent": true,
+          "hash": "d8fcd8595b81937e",
+          "key": "pm-2026-07-05-92",
+          "generated_at": "2026-07-05T20:08:49.222800-07:00",
+          "kickoff_utc": "2026-07-06T00:00:00Z"
+        },
+        {
+          "type": "daily_recap",
+          "body": "🏆 FIFA World Cup 2026 — Round of 16\nSunday, July 5\n\nDaily Recap\n\nResults:\n  Brazil 1 - 2 <b>Norway</b>\n  <b>Norway</b> wins\n  New York/New Jersey (East Rutherford), USA\n    ⚽ 79' Erling Haaland (Norway)\n    ⚽ 90' Erling Haaland (Norway)\n    ⚽ 90'+10' Neymar (Brazil, pen)\n  Prediction ✗: Brazil\n\n  Mexico 2 - 3 <b>England</b>\n  <b>England</b> wins\n  Mexico City, Mexico\n    ⚽ 36' Jude Bellingham (England)\n    ⚽ 38' Jude Bellingham (England)\n    ⚽ 42' Julián Quiñones (Mexico)\n    ⚽ 60' Harry Kane (England, pen)\n    ⚽ 69' Raúl Jiménez (Mexico, pen)\n    🟥 54' Jarell Quansah (England)\n  Prediction ✓: England\n\nOverall prediction — today 1/2 (50.0%)  ·  overall 52/92 (56.5%)",
+          "sent": true,
+          "hash": "79aa760215303b7a",
+          "key": "dr-2026-07-05",
+          "generated_at": "2026-07-05T20:08:49.223264-07:00",
+          "kickoff_utc": "2026-07-05T20:00:00Z"
         }
       ]
     }
@@ -2635,19 +2653,18 @@
   },
   "bracket": {
     "title_odds": {
-      "Spain": 0.1317,
-      "France": 0.1698,
-      "Belgium": 0.0564,
-      "Netherlands": 0.076,
-      "Colombia": 0.0755,
-      "Portugal": 0.0518,
-      "Argentina": 0.2578,
-      "England": 0.085,
-      "Norway": 0.0387,
-      "Mexico": 0.0397,
-      "Switzerland": 0.0123,
-      "Australia": 0.0051,
-      "USA": 0.0002
+      "Argentina": 0.2459,
+      "Portugal": 0.0533,
+      "Netherlands": 0.0785,
+      "Norway": 0.0374,
+      "Spain": 0.1221,
+      "England": 0.148,
+      "France": 0.1746,
+      "Belgium": 0.0536,
+      "Colombia": 0.0678,
+      "Switzerland": 0.0145,
+      "Australia": 0.004,
+      "USA": 0.0003
     },
     "advancement": {
       "Canada": 1.0,
@@ -2686,30 +2703,48 @@
   },
   "season_ended": false,
   "last_result": {
-    "home": "Brazil",
-    "away": "Norway",
-    "home_goals": 1,
-    "away_goals": 2,
+    "home": "Mexico",
+    "away": "England",
+    "home_goals": 2,
+    "away_goals": 3,
     "date": "2026-07-05",
-    "venue": "New York/New Jersey (East Rutherford)",
+    "venue": "Mexico City",
     "events": [
       {
         "kind": "goal",
-        "player": "Erling Haaland",
-        "team": "Norway",
-        "minute": "79'"
+        "player": "Jude Bellingham",
+        "team": "England",
+        "minute": "36'"
       },
       {
         "kind": "goal",
-        "player": "Erling Haaland",
-        "team": "Norway",
-        "minute": "90'"
+        "player": "Jude Bellingham",
+        "team": "England",
+        "minute": "38'"
+      },
+      {
+        "kind": "goal",
+        "player": "Julián Quiñones",
+        "team": "Mexico",
+        "minute": "42'"
+      },
+      {
+        "kind": "red",
+        "player": "Jarell Quansah",
+        "team": "England",
+        "minute": "54'"
       },
       {
         "kind": "penalty",
-        "player": "Neymar",
-        "team": "Brazil",
-        "minute": "90'+10'"
+        "player": "Harry Kane",
+        "team": "England",
+        "minute": "60'"
+      },
+      {
+        "kind": "penalty",
+        "player": "Raúl Jiménez",
+        "team": "Mexico",
+        "minute": "69'"
       }
     ]
   },
@@ -4829,6 +4864,49 @@
         }
       ],
       "winner": "Norway"
+    },
+    "92": {
+      "home_goals": 2,
+      "away_goals": 3,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Jude Bellingham",
+          "team": "England",
+          "minute": "36'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jude Bellingham",
+          "team": "England",
+          "minute": "38'"
+        },
+        {
+          "kind": "goal",
+          "player": "Julián Quiñones",
+          "team": "Mexico",
+          "minute": "42'"
+        },
+        {
+          "kind": "red",
+          "player": "Jarell Quansah",
+          "team": "England",
+          "minute": "54'"
+        },
+        {
+          "kind": "penalty",
+          "player": "Harry Kane",
+          "team": "England",
+          "minute": "60'"
+        },
+        {
+          "kind": "penalty",
+          "player": "Raúl Jiménez",
+          "team": "Mexico",
+          "minute": "69'"
+        }
+      ],
+      "winner": "England"
     }
   },
   "board": [
@@ -8408,11 +8486,9 @@
             "away": 0.5814688473834366,
             "pick": "England"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 3,
-          "clock": "90'+6'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -8450,63 +8526,14 @@
               "team": "Mexico",
               "minute": "69'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "England"
         }
       ]
     }
   ],
-  "live": [
-    {
-      "id": "92",
-      "home": "Mexico",
-      "away": "England",
-      "date": "2026-07-05",
-      "venue": "Mexico City",
-      "kickoff_utc": "2026-07-06T00:00:00Z",
-      "hg": 2,
-      "ag": 3,
-      "status": "LIVE",
-      "clock": "90'+6'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Jude Bellingham",
-          "team": "England",
-          "minute": "36'"
-        },
-        {
-          "kind": "goal",
-          "player": "Jude Bellingham",
-          "team": "England",
-          "minute": "38'"
-        },
-        {
-          "kind": "goal",
-          "player": "Julián Quiñones",
-          "team": "Mexico",
-          "minute": "42'"
-        },
-        {
-          "kind": "red",
-          "player": "Jarell Quansah",
-          "team": "England",
-          "minute": "54'"
-        },
-        {
-          "kind": "penalty",
-          "player": "Harry Kane",
-          "team": "England",
-          "minute": "60'"
-        },
-        {
-          "kind": "penalty",
-          "player": "Raúl Jiménez",
-          "team": "Mexico",
-          "minute": "69'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -12084,11 +12111,9 @@
             "away": 0.5814688473834366,
             "pick": "England"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 3,
-          "clock": "90'+6'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -12126,7 +12151,9 @@
               "team": "Mexico",
               "minute": "69'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "England"
         }
       ]
     },
@@ -12258,17 +12285,17 @@
         {
           "id": "99",
           "home": "Norway",
-          "away": "W92",
+          "away": "England",
           "kickoff_utc": "2026-07-11T21:00:00Z",
           "venue": "Miami (Miami Gardens)",
           "stage": "QF",
           "slot_home": "W91",
           "slot_away": "W92",
           "pred": {
-            "home": 0.9168612275957299,
+            "home": 0.3666443651632542,
             "draw": 0.0,
-            "away": 0.08313877240427014,
-            "pick": "Norway"
+            "away": 0.6333556348367458,
+            "pick": "England"
           },
           "status": "sched"
         },
