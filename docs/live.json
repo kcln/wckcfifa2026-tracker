@@ -1,1 +1,1 @@
-{"live": true, "id": "93", "home": "Portugal", "away": "Spain", "hg": 0, "ag": 0, "status": "LIVE", "clock": "87'", "date": "2026-07-06", "venue": "Dallas (Arlington)", "events": []}
+{"live": true, "id": "93", "home": "Portugal", "away": "Spain", "hg": 0, "ag": 1, "status": "LIVE", "clock": "90'+1'", "date": "2026-07-06", "venue": "Dallas (Arlington)", "events": [{"kind": "goal", "player": "Mikel Merino", "team": "Spain", "minute": "90'+1'"}]}

@@ -8575,10 +8575,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "87'",
+          "ag": 1,
+          "clock": "90'+1'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Mikel Merino",
+              "team": "Spain",
+              "minute": "90'+1'"
+            }
+          ]
         },
         {
           "id": "94",
@@ -8609,10 +8616,17 @@
       "venue": "Dallas (Arlington)",
       "kickoff_utc": "2026-07-06T19:00:00Z",
       "hg": 0,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "87'",
-      "events": []
+      "clock": "90'+1'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Mikel Merino",
+          "team": "Spain",
+          "minute": "90'+1'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -12258,10 +12272,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "87'",
+          "ag": 1,
+          "clock": "90'+1'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Mikel Merino",
+              "team": "Spain",
+              "minute": "90'+1'"
+            }
+          ]
         },
         {
           "id": "94",
