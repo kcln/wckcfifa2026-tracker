@@ -2251,6 +2251,15 @@
           "key": "mb-2026-07-06",
           "generated_at": "2026-07-06T00:04:58.752109-07:00",
           "kickoff_utc": "2026-07-06T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026 — Round of 16\nMonday, July 6\n\nHalf-time:\nPortugal 0 - 0 Spain\nDallas (Arlington), USA\nPrediction: Spain",
+          "sent": true,
+          "hash": "d5f3637feff4fb1b",
+          "key": "ht-2026-07-06-93",
+          "generated_at": "2026-07-06T12:53:58.628338-07:00",
+          "kickoff_utc": "2026-07-06T19:00:00Z"
         }
       ]
     }
@@ -8567,8 +8576,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+5'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": []
         },
         {
@@ -8601,8 +8610,8 @@
       "kickoff_utc": "2026-07-06T19:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+5'",
+      "status": "HT",
+      "clock": "45'+6'",
       "events": []
     }
   ],
@@ -12250,8 +12259,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+5'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": []
         },
         {
