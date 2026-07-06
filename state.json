@@ -8399,12 +8399,31 @@
             "away": 0.5814688473834366,
             "pick": "England"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "92",
+      "home": "Mexico",
+      "away": "England",
+      "date": "2026-07-05",
+      "venue": "Mexico City",
+      "kickoff_utc": "2026-07-06T00:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "1'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -11982,7 +12001,12 @@
             "away": 0.5814688473834366,
             "pick": "England"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         }
       ]
     },
