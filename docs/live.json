@@ -1,1 +1,1 @@
-{"live": true, "id": "92", "home": "Mexico", "away": "England", "hg": 0, "ag": 0, "status": "LIVE", "clock": "36'", "date": "2026-07-05", "venue": "Mexico City", "events": []}
+{"live": true, "id": "92", "home": "Mexico", "away": "England", "hg": 0, "ag": 2, "status": "LIVE", "clock": "40'", "date": "2026-07-05", "venue": "Mexico City", "events": [{"kind": "goal", "player": "Jude Bellingham", "team": "England", "minute": "36'"}, {"kind": "goal", "player": "Jude Bellingham", "team": "England", "minute": "38'"}]}

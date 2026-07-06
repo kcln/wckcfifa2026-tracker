@@ -8401,10 +8401,23 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "36'",
+          "ag": 2,
+          "clock": "40'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Jude Bellingham",
+              "team": "England",
+              "minute": "36'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jude Bellingham",
+              "team": "England",
+              "minute": "38'"
+            }
+          ]
         }
       ]
     }
@@ -8418,10 +8431,23 @@
       "venue": "Mexico City",
       "kickoff_utc": "2026-07-06T00:00:00Z",
       "hg": 0,
-      "ag": 0,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "36'",
-      "events": []
+      "clock": "40'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Jude Bellingham",
+          "team": "England",
+          "minute": "36'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jude Bellingham",
+          "team": "England",
+          "minute": "38'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -12003,10 +12029,23 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "36'",
+          "ag": 2,
+          "clock": "40'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Jude Bellingham",
+              "team": "England",
+              "minute": "36'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jude Bellingham",
+              "team": "England",
+              "minute": "38'"
+            }
+          ]
         }
       ]
     },
