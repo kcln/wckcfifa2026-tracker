@@ -8410,8 +8410,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 2,
-          "clock": "57'",
+          "ag": 3,
+          "clock": "60'",
           "ht": false,
           "events": [
             {
@@ -8437,6 +8437,12 @@
               "player": "Jarell Quansah",
               "team": "England",
               "minute": "54'"
+            },
+            {
+              "kind": "penalty",
+              "player": "Harry Kane",
+              "team": "England",
+              "minute": "60'"
             }
           ]
         }
@@ -8452,9 +8458,9 @@
       "venue": "Mexico City",
       "kickoff_utc": "2026-07-06T00:00:00Z",
       "hg": 1,
-      "ag": 2,
+      "ag": 3,
       "status": "LIVE",
-      "clock": "57'",
+      "clock": "60'",
       "events": [
         {
           "kind": "goal",
@@ -8479,6 +8485,12 @@
           "player": "Jarell Quansah",
           "team": "England",
           "minute": "54'"
+        },
+        {
+          "kind": "penalty",
+          "player": "Harry Kane",
+          "team": "England",
+          "minute": "60'"
         }
       ]
     }
@@ -12062,8 +12074,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 2,
-          "clock": "57'",
+          "ag": 3,
+          "clock": "60'",
           "ht": false,
           "events": [
             {
@@ -12089,6 +12101,12 @@
               "player": "Jarell Quansah",
               "team": "England",
               "minute": "54'"
+            },
+            {
+              "kind": "penalty",
+              "player": "Harry Kane",
+              "team": "England",
+              "minute": "60'"
             }
           ]
         }
