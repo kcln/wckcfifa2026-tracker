@@ -2239,6 +2239,20 @@
           "kickoff_utc": "2026-07-05T20:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-07-06",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026 — Round of 16\nMonday, July 6\n\nMatchday Brief\n\nPortugal vs Spain\n  Prediction: Spain\n  Portugal 47.0% · Spain 53.0%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 Dallas (Arlington), USA\n\nUSA vs Belgium\n  Prediction: Belgium\n  USA 8.7% · Belgium 91.3%\n  🕐 5:00pm PT / 7:00pm CT / 8:00pm ET / 5:30am IST (+1d)\n  📍 Seattle, USA",
+          "sent": true,
+          "hash": "1934fcf165db2fe9",
+          "key": "mb-2026-07-06",
+          "generated_at": "2026-07-06T00:04:58.752109-07:00",
+          "kickoff_utc": "2026-07-06T19:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -8529,6 +8543,45 @@
           ],
           "hit": true,
           "winner": "England"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-06",
+      "matches": [
+        {
+          "id": "93",
+          "home": "Portugal",
+          "away": "Spain",
+          "kickoff_utc": "2026-07-06T19:00:00Z",
+          "venue": "Dallas (Arlington)",
+          "stage": "R16",
+          "slot_home": "W83",
+          "slot_away": "W84",
+          "pred": {
+            "home": 0.47002196620966336,
+            "draw": 0.0,
+            "away": 0.5299780337903366,
+            "pick": "Spain"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "94",
+          "home": "USA",
+          "away": "Belgium",
+          "kickoff_utc": "2026-07-07T00:00:00Z",
+          "venue": "Seattle",
+          "stage": "R16",
+          "slot_home": "W81",
+          "slot_away": "W82",
+          "pred": {
+            "home": 0.08743693707635644,
+            "draw": 0.0,
+            "away": 0.9125630629236436,
+            "pick": "Belgium"
+          },
+          "status": "sched"
         }
       ]
     }
