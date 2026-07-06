@@ -8409,9 +8409,9 @@
             "pick": "England"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 3,
-          "clock": "66'",
+          "clock": "69'",
           "ht": false,
           "events": [
             {
@@ -8443,6 +8443,12 @@
               "player": "Harry Kane",
               "team": "England",
               "minute": "60'"
+            },
+            {
+              "kind": "penalty",
+              "player": "Raúl Jiménez",
+              "team": "Mexico",
+              "minute": "69'"
             }
           ]
         }
@@ -8457,10 +8463,10 @@
       "date": "2026-07-05",
       "venue": "Mexico City",
       "kickoff_utc": "2026-07-06T00:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 3,
       "status": "LIVE",
-      "clock": "66'",
+      "clock": "69'",
       "events": [
         {
           "kind": "goal",
@@ -8491,6 +8497,12 @@
           "player": "Harry Kane",
           "team": "England",
           "minute": "60'"
+        },
+        {
+          "kind": "penalty",
+          "player": "Raúl Jiménez",
+          "team": "Mexico",
+          "minute": "69'"
         }
       ]
     }
@@ -12073,9 +12085,9 @@
             "pick": "England"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 3,
-          "clock": "66'",
+          "clock": "69'",
           "ht": false,
           "events": [
             {
@@ -12107,6 +12119,12 @@
               "player": "Harry Kane",
               "team": "England",
               "minute": "60'"
+            },
+            {
+              "kind": "penalty",
+              "player": "Raúl Jiménez",
+              "team": "Mexico",
+              "minute": "69'"
             }
           ]
         }
