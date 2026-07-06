@@ -2260,6 +2260,15 @@
           "key": "ht-2026-07-06-93",
           "generated_at": "2026-07-06T12:53:58.628338-07:00",
           "kickoff_utc": "2026-07-06T19:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026 — Round of 16\nMonday, July 6\n\nFull time:\nPortugal 0 - 1 <b>Spain</b>\n<b>Spain</b> wins\nDallas (Arlington), USA\n  ⚽ 90'+1' Mikel Merino (Spain)\nOverall prediction: 53/93 (57.0%)\nPrediction ✓: Spain",
+          "sent": true,
+          "hash": "ab84e96477c5af26",
+          "key": "pm-2026-07-06-93",
+          "generated_at": "2026-07-06T14:03:39.727655-07:00",
+          "kickoff_utc": "2026-07-06T19:00:00Z"
         }
       ]
     }
@@ -2676,18 +2685,17 @@
   },
   "bracket": {
     "title_odds": {
-      "Argentina": 0.2459,
-      "Portugal": 0.0533,
-      "Netherlands": 0.0785,
-      "Norway": 0.0374,
-      "Spain": 0.1221,
-      "England": 0.148,
-      "France": 0.1746,
-      "Belgium": 0.0536,
-      "Colombia": 0.0678,
-      "Switzerland": 0.0145,
-      "Australia": 0.004,
-      "USA": 0.0003
+      "Spain": 0.2367,
+      "Australia": 0.0044,
+      "England": 0.1445,
+      "Colombia": 0.0664,
+      "Belgium": 0.0377,
+      "Argentina": 0.2408,
+      "Norway": 0.0365,
+      "France": 0.1547,
+      "Netherlands": 0.0663,
+      "Switzerland": 0.0118,
+      "USA": 0.0002
     },
     "advancement": {
       "Japan": 1.0,
@@ -2726,48 +2734,18 @@
   },
   "season_ended": false,
   "last_result": {
-    "home": "Mexico",
-    "away": "England",
-    "home_goals": 2,
-    "away_goals": 3,
-    "date": "2026-07-05",
-    "venue": "Mexico City",
+    "home": "Portugal",
+    "away": "Spain",
+    "home_goals": 0,
+    "away_goals": 1,
+    "date": "2026-07-06",
+    "venue": "Dallas (Arlington)",
     "events": [
       {
         "kind": "goal",
-        "player": "Jude Bellingham",
-        "team": "England",
-        "minute": "36'"
-      },
-      {
-        "kind": "goal",
-        "player": "Jude Bellingham",
-        "team": "England",
-        "minute": "38'"
-      },
-      {
-        "kind": "goal",
-        "player": "Julián Quiñones",
-        "team": "Mexico",
-        "minute": "42'"
-      },
-      {
-        "kind": "red",
-        "player": "Jarell Quansah",
-        "team": "England",
-        "minute": "54'"
-      },
-      {
-        "kind": "penalty",
-        "player": "Harry Kane",
-        "team": "England",
-        "minute": "60'"
-      },
-      {
-        "kind": "penalty",
-        "player": "Raúl Jiménez",
-        "team": "Mexico",
-        "minute": "69'"
+        "player": "Mikel Merino",
+        "team": "Spain",
+        "minute": "90'+1'"
       }
     ]
   },
@@ -4930,6 +4908,19 @@
         }
       ],
       "winner": "England"
+    },
+    "93": {
+      "home_goals": 0,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Mikel Merino",
+          "team": "Spain",
+          "minute": "90'+1'"
+        }
+      ],
+      "winner": "Spain"
     }
   },
   "board": [
@@ -8573,11 +8564,9 @@
             "away": 0.5299780337903366,
             "pick": "Spain"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 1,
-          "clock": "90'+8'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -8585,7 +8574,9 @@
               "team": "Spain",
               "minute": "90'+1'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Spain"
         },
         {
           "id": "94",
@@ -8607,28 +8598,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "93",
-      "home": "Portugal",
-      "away": "Spain",
-      "date": "2026-07-06",
-      "venue": "Dallas (Arlington)",
-      "kickoff_utc": "2026-07-06T19:00:00Z",
-      "hg": 0,
-      "ag": 1,
-      "status": "LIVE",
-      "clock": "90'+8'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Mikel Merino",
-          "team": "Spain",
-          "minute": "90'+1'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -12270,11 +12240,9 @@
             "away": 0.5299780337903366,
             "pick": "Spain"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 1,
-          "clock": "90'+8'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -12282,7 +12250,9 @@
               "team": "Spain",
               "minute": "90'+1'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Spain"
         },
         {
           "id": "94",
@@ -12369,7 +12339,7 @@
       "matches": [
         {
           "id": "98",
-          "home": "W93",
+          "home": "Spain",
           "away": "W94",
           "kickoff_utc": "2026-07-10T19:00:00Z",
           "venue": "Los Angeles (Inglewood)",
@@ -12377,10 +12347,10 @@
           "slot_home": "W93",
           "slot_away": "W94",
           "pred": {
-            "home": 0.5,
+            "home": 0.9774779981032126,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "W93"
+            "away": 0.022522001896787436,
+            "pick": "Spain"
           },
           "status": "sched"
         }
