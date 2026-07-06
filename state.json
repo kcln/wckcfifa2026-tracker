@@ -8564,7 +8564,12 @@
             "away": 0.5299780337903366,
             "pick": "Spain"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "94",
@@ -8586,7 +8591,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "93",
+      "home": "Portugal",
+      "away": "Spain",
+      "date": "2026-07-06",
+      "venue": "Dallas (Arlington)",
+      "kickoff_utc": "2026-07-06T19:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -12228,7 +12247,12 @@
             "away": 0.5299780337903366,
             "pick": "Spain"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "94",
