@@ -8409,30 +8409,11 @@
             "pick": "England"
           },
           "status": "live",
-          "hg": 1,
-          "ag": 2,
-          "clock": "50'",
+          "hg": 0,
+          "ag": 0,
+          "clock": "9'",
           "ht": false,
-          "events": [
-            {
-              "kind": "goal",
-              "player": "Jude Bellingham",
-              "team": "England",
-              "minute": "36'"
-            },
-            {
-              "kind": "goal",
-              "player": "Jude Bellingham",
-              "team": "England",
-              "minute": "38'"
-            },
-            {
-              "kind": "goal",
-              "player": "Julián Quiñones",
-              "team": "Mexico",
-              "minute": "42'"
-            }
-          ]
+          "events": []
         }
       ]
     }
@@ -8445,30 +8426,11 @@
       "date": "2026-07-05",
       "venue": "Mexico City",
       "kickoff_utc": "2026-07-06T00:00:00Z",
-      "hg": 1,
-      "ag": 2,
+      "hg": 0,
+      "ag": 0,
       "status": "LIVE",
-      "clock": "50'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Jude Bellingham",
-          "team": "England",
-          "minute": "36'"
-        },
-        {
-          "kind": "goal",
-          "player": "Jude Bellingham",
-          "team": "England",
-          "minute": "38'"
-        },
-        {
-          "kind": "goal",
-          "player": "Julián Quiñones",
-          "team": "Mexico",
-          "minute": "42'"
-        }
-      ]
+      "clock": "9'",
+      "events": []
     }
   ],
   "schedule": [
@@ -12049,30 +12011,11 @@
             "pick": "England"
           },
           "status": "live",
-          "hg": 1,
-          "ag": 2,
-          "clock": "50'",
+          "hg": 0,
+          "ag": 0,
+          "clock": "9'",
           "ht": false,
-          "events": [
-            {
-              "kind": "goal",
-              "player": "Jude Bellingham",
-              "team": "England",
-              "minute": "36'"
-            },
-            {
-              "kind": "goal",
-              "player": "Jude Bellingham",
-              "team": "England",
-              "minute": "38'"
-            },
-            {
-              "kind": "goal",
-              "player": "Julián Quiñones",
-              "team": "Mexico",
-              "minute": "42'"
-            }
-          ]
+          "events": []
         }
       ]
     },
