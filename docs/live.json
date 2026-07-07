@@ -1,1 +1,1 @@
-{"live": true, "id": "94", "home": "USA", "away": "Belgium", "hg": 0, "ag": 0, "status": "LIVE", "clock": "8'", "date": "2026-07-06", "venue": "Seattle", "events": []}
+{"live": true, "id": "94", "home": "USA", "away": "Belgium", "hg": 0, "ag": 1, "status": "LIVE", "clock": "12'", "date": "2026-07-06", "venue": "Seattle", "events": [{"kind": "goal", "player": "Charles De Ketelaere", "team": "Belgium", "minute": "9'"}]}

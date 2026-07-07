@@ -8595,10 +8595,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "8'",
+          "ag": 1,
+          "clock": "12'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Charles De Ketelaere",
+              "team": "Belgium",
+              "minute": "9'"
+            }
+          ]
         }
       ]
     }
@@ -8612,10 +8619,17 @@
       "venue": "Seattle",
       "kickoff_utc": "2026-07-07T00:00:00Z",
       "hg": 0,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "8'",
-      "events": []
+      "clock": "12'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Charles De Ketelaere",
+          "team": "Belgium",
+          "minute": "9'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -12290,10 +12304,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "8'",
+          "ag": 1,
+          "clock": "12'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Charles De Ketelaere",
+              "team": "Belgium",
+              "minute": "9'"
+            }
+          ]
         }
       ]
     },
