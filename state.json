@@ -2328,6 +2328,15 @@
           "key": "pm-2026-07-07-95",
           "generated_at": "2026-07-07T11:07:42.059661-07:00",
           "kickoff_utc": "2026-07-07T16:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026 — Round of 16\nTuesday, July 7\n\nHalf-time:\nSwitzerland 0 - 0 Colombia\nVancouver, Canada\nPrediction: Colombia",
+          "sent": true,
+          "hash": "7687409a483afb8b",
+          "key": "ht-2026-07-07-96",
+          "generated_at": "2026-07-07T13:48:51.512760-07:00",
+          "kickoff_utc": "2026-07-07T20:00:00Z"
         }
       ]
     }
@@ -8862,8 +8871,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'",
-          "ht": false,
+          "clock": "45'+3'",
+          "ht": true,
           "events": []
         }
       ]
@@ -8879,8 +8888,8 @@
       "kickoff_utc": "2026-07-07T20:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'",
+      "status": "HT",
+      "clock": "45'+3'",
       "events": []
     }
   ],
@@ -12668,8 +12677,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'",
-          "ht": false,
+          "clock": "45'+3'",
+          "ht": true,
           "events": []
         }
       ]
