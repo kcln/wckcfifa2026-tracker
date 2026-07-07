@@ -8754,10 +8754,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "15'",
+          "ag": 1,
+          "clock": "17'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Yasser Ibrahim",
+              "team": "Egypt",
+              "minute": "15'"
+            }
+          ]
         },
         {
           "id": "96",
@@ -8788,10 +8795,17 @@
       "venue": "Atlanta",
       "kickoff_utc": "2026-07-07T16:00:00Z",
       "hg": 0,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "15'",
-      "events": []
+      "clock": "17'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Yasser Ibrahim",
+          "team": "Egypt",
+          "minute": "15'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -12524,10 +12538,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "15'",
+          "ag": 1,
+          "clock": "17'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Yasser Ibrahim",
+              "team": "Egypt",
+              "minute": "15'"
+            }
+          ]
         },
         {
           "id": "96",
