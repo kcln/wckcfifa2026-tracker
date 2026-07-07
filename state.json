@@ -8871,7 +8871,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "105'+1'",
+          "clock": "107'",
           "ht": false,
           "events": []
         }
@@ -8889,7 +8889,7 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "105'+1'",
+      "clock": "107'",
       "events": []
     }
   ],
@@ -12677,7 +12677,7 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "105'+1'",
+          "clock": "107'",
           "ht": false,
           "events": []
         }
