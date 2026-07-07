@@ -8752,7 +8752,12 @@
             "away": 0.21101508729246823,
             "pick": "Argentina"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "2'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "96",
@@ -8774,7 +8779,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "95",
+      "home": "Argentina",
+      "away": "Egypt",
+      "date": "2026-07-07",
+      "venue": "Atlanta",
+      "kickoff_utc": "2026-07-07T16:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "2'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -12503,7 +12522,12 @@
             "away": 0.21101508729246823,
             "pick": "Argentina"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "2'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "96",
