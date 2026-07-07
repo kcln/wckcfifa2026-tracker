@@ -8604,8 +8604,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 2,
-          "clock": "56'",
+          "ag": 3,
+          "clock": "59'",
           "ht": false,
           "events": [
             {
@@ -8625,6 +8625,12 @@
               "player": "Charles De Ketelaere",
               "team": "Belgium",
               "minute": "33'"
+            },
+            {
+              "kind": "goal",
+              "player": "Hans Vanaken",
+              "team": "Belgium",
+              "minute": "57'"
             }
           ]
         }
@@ -8640,9 +8646,9 @@
       "venue": "Seattle",
       "kickoff_utc": "2026-07-07T00:00:00Z",
       "hg": 1,
-      "ag": 2,
+      "ag": 3,
       "status": "LIVE",
-      "clock": "56'",
+      "clock": "59'",
       "events": [
         {
           "kind": "goal",
@@ -8661,6 +8667,12 @@
           "player": "Charles De Ketelaere",
           "team": "Belgium",
           "minute": "33'"
+        },
+        {
+          "kind": "goal",
+          "player": "Hans Vanaken",
+          "team": "Belgium",
+          "minute": "57'"
         }
       ]
     }
@@ -12337,8 +12349,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 2,
-          "clock": "56'",
+          "ag": 3,
+          "clock": "59'",
           "ht": false,
           "events": [
             {
@@ -12358,6 +12370,12 @@
               "player": "Charles De Ketelaere",
               "team": "Belgium",
               "minute": "33'"
+            },
+            {
+              "kind": "goal",
+              "player": "Hans Vanaken",
+              "team": "Belgium",
+              "minute": "57'"
             }
           ]
         }
