@@ -2278,6 +2278,24 @@
           "key": "ht-2026-07-06-94",
           "generated_at": "2026-07-06T17:54:41.373250-07:00",
           "kickoff_utc": "2026-07-07T00:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026 — Round of 16\nMonday, July 6\n\nFull time:\nUSA 1 - 4 <b>Belgium</b>\n<b>Belgium</b> wins\nSeattle, USA\n  ⚽ 9' Charles De Ketelaere (Belgium)\n  ⚽ 31' Malik Tillman (USA)\n  ⚽ 33' Charles De Ketelaere (Belgium)\n  ⚽ 57' Hans Vanaken (Belgium)\n  ⚽ 90'+3' Romelu Lukaku (Belgium)\nOverall prediction: 54/94 (57.4%)\nPrediction ✓: Belgium",
+          "sent": true,
+          "hash": "ad7711ba619ed073",
+          "key": "pm-2026-07-06-94",
+          "generated_at": "2026-07-06T19:02:00.907142-07:00",
+          "kickoff_utc": "2026-07-07T00:00:00Z"
+        },
+        {
+          "type": "daily_recap",
+          "body": "🏆 FIFA World Cup 2026 — Round of 16\nMonday, July 6\n\nDaily Recap\n\nResults:\n  Portugal 0 - 1 <b>Spain</b>\n  <b>Spain</b> wins\n  Dallas (Arlington), USA\n    ⚽ 90'+1' Mikel Merino (Spain)\n  Prediction ✓: Spain\n\n  USA 1 - 4 <b>Belgium</b>\n  <b>Belgium</b> wins\n  Seattle, USA\n    ⚽ 9' Charles De Ketelaere (Belgium)\n    ⚽ 31' Malik Tillman (USA)\n    ⚽ 33' Charles De Ketelaere (Belgium)\n    ⚽ 57' Hans Vanaken (Belgium)\n    ⚽ 90'+3' Romelu Lukaku (Belgium)\n  Prediction ✓: Belgium\n\nOverall prediction — today 2/2 (100.0%)  ·  overall 54/94 (57.4%)",
+          "sent": true,
+          "hash": "c3436cd87bd2d877",
+          "key": "dr-2026-07-06",
+          "generated_at": "2026-07-06T19:02:00.907562-07:00",
+          "kickoff_utc": "2026-07-06T19:00:00Z"
         }
       ]
     }
@@ -2694,17 +2712,16 @@
   },
   "bracket": {
     "title_odds": {
-      "Spain": 0.2367,
-      "Australia": 0.0044,
-      "England": 0.1445,
-      "Colombia": 0.0664,
-      "Belgium": 0.0377,
-      "Argentina": 0.2408,
-      "Norway": 0.0365,
-      "France": 0.1547,
-      "Netherlands": 0.0663,
-      "Switzerland": 0.0118,
-      "USA": 0.0002
+      "Argentina": 0.2437,
+      "France": 0.1528,
+      "Spain": 0.236,
+      "Netherlands": 0.0665,
+      "Belgium": 0.0458,
+      "Norway": 0.0353,
+      "England": 0.1409,
+      "Colombia": 0.0627,
+      "Switzerland": 0.0132,
+      "Australia": 0.0031
     },
     "advancement": {
       "France": 1.0,
@@ -2743,18 +2760,42 @@
   },
   "season_ended": false,
   "last_result": {
-    "home": "Portugal",
-    "away": "Spain",
-    "home_goals": 0,
-    "away_goals": 1,
+    "home": "USA",
+    "away": "Belgium",
+    "home_goals": 1,
+    "away_goals": 4,
     "date": "2026-07-06",
-    "venue": "Dallas (Arlington)",
+    "venue": "Seattle",
     "events": [
       {
         "kind": "goal",
-        "player": "Mikel Merino",
-        "team": "Spain",
-        "minute": "90'+1'"
+        "player": "Charles De Ketelaere",
+        "team": "Belgium",
+        "minute": "9'"
+      },
+      {
+        "kind": "goal",
+        "player": "Malik Tillman",
+        "team": "USA",
+        "minute": "31'"
+      },
+      {
+        "kind": "goal",
+        "player": "Charles De Ketelaere",
+        "team": "Belgium",
+        "minute": "33'"
+      },
+      {
+        "kind": "goal",
+        "player": "Hans Vanaken",
+        "team": "Belgium",
+        "minute": "57'"
+      },
+      {
+        "kind": "goal",
+        "player": "Romelu Lukaku",
+        "team": "Belgium",
+        "minute": "90'+3'"
       }
     ]
   },
@@ -4930,6 +4971,43 @@
         }
       ],
       "winner": "Spain"
+    },
+    "94": {
+      "home_goals": 1,
+      "away_goals": 4,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Charles De Ketelaere",
+          "team": "Belgium",
+          "minute": "9'"
+        },
+        {
+          "kind": "goal",
+          "player": "Malik Tillman",
+          "team": "USA",
+          "minute": "31'"
+        },
+        {
+          "kind": "goal",
+          "player": "Charles De Ketelaere",
+          "team": "Belgium",
+          "minute": "33'"
+        },
+        {
+          "kind": "goal",
+          "player": "Hans Vanaken",
+          "team": "Belgium",
+          "minute": "57'"
+        },
+        {
+          "kind": "goal",
+          "player": "Romelu Lukaku",
+          "team": "Belgium",
+          "minute": "90'+3'"
+        }
+      ],
+      "winner": "Belgium"
     }
   },
   "board": [
@@ -8602,11 +8680,9 @@
             "away": 0.9125630629236436,
             "pick": "Belgium"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 4,
-          "clock": "90'+4'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -8638,57 +8714,14 @@
               "team": "Belgium",
               "minute": "90'+3'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Belgium"
         }
       ]
     }
   ],
-  "live": [
-    {
-      "id": "94",
-      "home": "USA",
-      "away": "Belgium",
-      "date": "2026-07-06",
-      "venue": "Seattle",
-      "kickoff_utc": "2026-07-07T00:00:00Z",
-      "hg": 1,
-      "ag": 4,
-      "status": "LIVE",
-      "clock": "90'+4'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Charles De Ketelaere",
-          "team": "Belgium",
-          "minute": "9'"
-        },
-        {
-          "kind": "goal",
-          "player": "Malik Tillman",
-          "team": "USA",
-          "minute": "31'"
-        },
-        {
-          "kind": "goal",
-          "player": "Charles De Ketelaere",
-          "team": "Belgium",
-          "minute": "33'"
-        },
-        {
-          "kind": "goal",
-          "player": "Hans Vanaken",
-          "team": "Belgium",
-          "minute": "57'"
-        },
-        {
-          "kind": "goal",
-          "player": "Romelu Lukaku",
-          "team": "Belgium",
-          "minute": "90'+3'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -12359,11 +12392,9 @@
             "away": 0.9125630629236436,
             "pick": "Belgium"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 4,
-          "clock": "90'+4'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -12395,7 +12426,9 @@
               "team": "Belgium",
               "minute": "90'+3'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Belgium"
         }
       ]
     },
@@ -12466,16 +12499,16 @@
         {
           "id": "98",
           "home": "Spain",
-          "away": "W94",
+          "away": "Belgium",
           "kickoff_utc": "2026-07-10T19:00:00Z",
           "venue": "Los Angeles (Inglewood)",
           "stage": "QF",
           "slot_home": "W93",
           "slot_away": "W94",
           "pred": {
-            "home": 0.9774779981032126,
+            "home": 0.7213269550769206,
             "draw": 0.0,
-            "away": 0.022522001896787436,
+            "away": 0.2786730449230794,
             "pick": "Spain"
           },
           "status": "sched"
