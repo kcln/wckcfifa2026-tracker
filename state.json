@@ -8762,9 +8762,9 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 2,
-          "clock": "81'",
+          "clock": "84'",
           "ht": false,
           "events": [
             {
@@ -8784,6 +8784,12 @@
               "player": "Cristian Romero",
               "team": "Argentina",
               "minute": "79'"
+            },
+            {
+              "kind": "goal",
+              "player": "Lionel Messi",
+              "team": "Argentina",
+              "minute": "83'"
             }
           ]
         },
@@ -8815,10 +8821,10 @@
       "date": "2026-07-07",
       "venue": "Atlanta",
       "kickoff_utc": "2026-07-07T16:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 2,
       "status": "LIVE",
-      "clock": "81'",
+      "clock": "84'",
       "events": [
         {
           "kind": "goal",
@@ -8837,6 +8843,12 @@
           "player": "Cristian Romero",
           "team": "Argentina",
           "minute": "79'"
+        },
+        {
+          "kind": "goal",
+          "player": "Lionel Messi",
+          "team": "Argentina",
+          "minute": "83'"
         }
       ]
     }
@@ -12570,9 +12582,9 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 2,
-          "clock": "81'",
+          "clock": "84'",
           "ht": false,
           "events": [
             {
@@ -12592,6 +12604,12 @@
               "player": "Cristian Romero",
               "team": "Argentina",
               "minute": "79'"
+            },
+            {
+              "kind": "goal",
+              "player": "Lionel Messi",
+              "team": "Argentina",
+              "minute": "83'"
             }
           ]
         },
