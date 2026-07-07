@@ -8593,12 +8593,31 @@
             "away": 0.9125630629236436,
             "pick": "Belgium"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "94",
+      "home": "USA",
+      "away": "Belgium",
+      "date": "2026-07-06",
+      "venue": "Seattle",
+      "kickoff_utc": "2026-07-07T00:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -12269,7 +12288,12 @@
             "away": 0.9125630629236436,
             "pick": "Belgium"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         }
       ]
     },
