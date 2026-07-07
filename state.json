@@ -8604,8 +8604,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 3,
-          "clock": "90'+2'",
+          "ag": 4,
+          "clock": "90'+4'",
           "ht": false,
           "events": [
             {
@@ -8631,6 +8631,12 @@
               "player": "Hans Vanaken",
               "team": "Belgium",
               "minute": "57'"
+            },
+            {
+              "kind": "goal",
+              "player": "Romelu Lukaku",
+              "team": "Belgium",
+              "minute": "90'+3'"
             }
           ]
         }
@@ -8646,9 +8652,9 @@
       "venue": "Seattle",
       "kickoff_utc": "2026-07-07T00:00:00Z",
       "hg": 1,
-      "ag": 3,
+      "ag": 4,
       "status": "LIVE",
-      "clock": "90'+2'",
+      "clock": "90'+4'",
       "events": [
         {
           "kind": "goal",
@@ -8673,6 +8679,12 @@
           "player": "Hans Vanaken",
           "team": "Belgium",
           "minute": "57'"
+        },
+        {
+          "kind": "goal",
+          "player": "Romelu Lukaku",
+          "team": "Belgium",
+          "minute": "90'+3'"
         }
       ]
     }
@@ -12349,8 +12361,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 3,
-          "clock": "90'+2'",
+          "ag": 4,
+          "clock": "90'+4'",
           "ht": false,
           "events": [
             {
@@ -12376,6 +12388,12 @@
               "player": "Hans Vanaken",
               "team": "Belgium",
               "minute": "57'"
+            },
+            {
+              "kind": "goal",
+              "player": "Romelu Lukaku",
+              "team": "Belgium",
+              "minute": "90'+3'"
             }
           ]
         }
