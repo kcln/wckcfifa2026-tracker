@@ -2337,6 +2337,24 @@
           "key": "ht-2026-07-07-96",
           "generated_at": "2026-07-07T13:48:51.512760-07:00",
           "kickoff_utc": "2026-07-07T20:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026 — Round of 16\nTuesday, July 7\n\nFull time:\n<b>Switzerland</b> 0 (<b>4</b>) - 0 (3) Colombia\n<b>Switzerland</b> win on penalties\nVancouver, Canada\nOverall prediction: 55/96 (57.3%)\nPrediction ✗: Colombia",
+          "sent": true,
+          "hash": "b9c79549f6639ea3",
+          "key": "pm-2026-07-07-96",
+          "generated_at": "2026-07-07T15:59:15.666875-07:00",
+          "kickoff_utc": "2026-07-07T20:00:00Z"
+        },
+        {
+          "type": "daily_recap",
+          "body": "🏆 FIFA World Cup 2026 — Round of 16\nTuesday, July 7\n\nDaily Recap\n\nResults:\n  <b>Argentina</b> 3 - 2 Egypt\n  <b>Argentina</b> wins\n  Atlanta, USA\n    ⚽ 15' Yasser Ibrahim (Egypt)\n    ⚽ 67' Mostafa Zico (Egypt)\n    ⚽ 79' Cristian Romero (Argentina)\n    ⚽ 83' Lionel Messi (Argentina)\n    ⚽ 90'+2' Enzo Fernández (Argentina)\n  Prediction ✓: Argentina\n\n  <b>Switzerland</b> 0 (<b>4</b>) - 0 (3) Colombia\n  <b>Switzerland</b> win on penalties\n  Vancouver, Canada\n  Prediction ✗: Colombia\n\nOverall prediction — today 1/2 (50.0%)  ·  overall 55/96 (57.3%)",
+          "sent": true,
+          "hash": "3720de5567176233",
+          "key": "dr-2026-07-07",
+          "generated_at": "2026-07-07T15:59:15.667315-07:00",
+          "kickoff_utc": "2026-07-07T16:00:00Z"
         }
       ]
     }
@@ -2753,15 +2771,14 @@
   },
   "bracket": {
     "title_odds": {
-      "England": 0.1265,
-      "Spain": 0.2196,
-      "Colombia": 0.0477,
-      "France": 0.1489,
-      "Netherlands": 0.0661,
-      "Argentina": 0.3123,
-      "Norway": 0.0313,
-      "Belgium": 0.0385,
-      "Switzerland": 0.0091
+      "France": 0.1438,
+      "Argentina": 0.3228,
+      "England": 0.1392,
+      "Switzerland": 0.0303,
+      "Spain": 0.2207,
+      "Belgium": 0.0442,
+      "Netherlands": 0.0686,
+      "Norway": 0.0304
     },
     "advancement": {
       "Cape Verde": 1.0,
@@ -2800,44 +2817,13 @@
   },
   "season_ended": false,
   "last_result": {
-    "home": "Argentina",
-    "away": "Egypt",
-    "home_goals": 3,
-    "away_goals": 2,
+    "home": "Switzerland",
+    "away": "Colombia",
+    "home_goals": 0,
+    "away_goals": 0,
     "date": "2026-07-07",
-    "venue": "Atlanta",
-    "events": [
-      {
-        "kind": "goal",
-        "player": "Yasser Ibrahim",
-        "team": "Egypt",
-        "minute": "15'"
-      },
-      {
-        "kind": "goal",
-        "player": "Mostafa Zico",
-        "team": "Egypt",
-        "minute": "67'"
-      },
-      {
-        "kind": "goal",
-        "player": "Cristian Romero",
-        "team": "Argentina",
-        "minute": "79'"
-      },
-      {
-        "kind": "goal",
-        "player": "Lionel Messi",
-        "team": "Argentina",
-        "minute": "83'"
-      },
-      {
-        "kind": "goal",
-        "player": "Enzo Fernández",
-        "team": "Argentina",
-        "minute": "90'+2'"
-      }
-    ]
+    "venue": "Vancouver",
+    "events": []
   },
   "results": {
     "1": {
@@ -5085,6 +5071,13 @@
         }
       ],
       "winner": "Argentina"
+    },
+    "96": {
+      "home_goals": 0,
+      "away_goals": 0,
+      "winner": "Switzerland",
+      "home_pens": 4,
+      "away_pens": 3
     }
   },
   "board": [
@@ -8868,31 +8861,19 @@
             "away": 0.6837889145824967,
             "pick": "Colombia"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 0,
-          "clock": "120'",
-          "ht": false,
-          "events": []
+          "events": [],
+          "hit": false,
+          "winner": "Switzerland",
+          "hpens": 4,
+          "apens": 3
         }
       ]
     }
   ],
-  "live": [
-    {
-      "id": "96",
-      "home": "Switzerland",
-      "away": "Colombia",
-      "date": "2026-07-07",
-      "venue": "Vancouver",
-      "kickoff_utc": "2026-07-07T20:00:00Z",
-      "hg": 0,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "120'",
-      "events": []
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -12674,12 +12655,14 @@
             "away": 0.6837889145824967,
             "pick": "Colombia"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 0,
-          "clock": "120'",
-          "ht": false,
-          "events": []
+          "events": [],
+          "hit": false,
+          "winner": "Switzerland",
+          "hpens": 4,
+          "apens": 3
         }
       ]
     },
@@ -12750,16 +12733,16 @@
         {
           "id": "100",
           "home": "Argentina",
-          "away": "W96",
+          "away": "Switzerland",
           "kickoff_utc": "2026-07-12T01:00:00Z",
           "venue": "Kansas City",
           "stage": "QF",
           "slot_home": "W95",
           "slot_away": "W96",
           "pred": {
-            "home": 0.9716527404673236,
+            "home": 0.7816096165801456,
             "draw": 0.0,
-            "away": 0.02834725953267636,
+            "away": 0.21839038341985448,
             "pick": "Argentina"
           },
           "status": "sched"
