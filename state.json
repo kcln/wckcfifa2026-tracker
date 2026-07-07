@@ -8763,8 +8763,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "56'",
+          "ag": 2,
+          "clock": "59'",
           "ht": false,
           "events": [
             {
@@ -8772,6 +8772,12 @@
               "player": "Yasser Ibrahim",
               "team": "Egypt",
               "minute": "15'"
+            },
+            {
+              "kind": "goal",
+              "player": "Mostafa Zico",
+              "team": "Egypt",
+              "minute": "58'"
             }
           ]
         },
@@ -8804,15 +8810,21 @@
       "venue": "Atlanta",
       "kickoff_utc": "2026-07-07T16:00:00Z",
       "hg": 0,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "56'",
+      "clock": "59'",
       "events": [
         {
           "kind": "goal",
           "player": "Yasser Ibrahim",
           "team": "Egypt",
           "minute": "15'"
+        },
+        {
+          "kind": "goal",
+          "player": "Mostafa Zico",
+          "team": "Egypt",
+          "minute": "58'"
         }
       ]
     }
@@ -12547,8 +12559,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "56'",
+          "ag": 2,
+          "clock": "59'",
           "ht": false,
           "events": [
             {
@@ -12556,6 +12568,12 @@
               "player": "Yasser Ibrahim",
               "team": "Egypt",
               "minute": "15'"
+            },
+            {
+              "kind": "goal",
+              "player": "Mostafa Zico",
+              "team": "Egypt",
+              "minute": "58'"
             }
           ]
         },
