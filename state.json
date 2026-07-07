@@ -8762,9 +8762,9 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 2,
-          "clock": "78'",
+          "clock": "81'",
           "ht": false,
           "events": [
             {
@@ -8778,6 +8778,12 @@
               "player": "Mostafa Zico",
               "team": "Egypt",
               "minute": "67'"
+            },
+            {
+              "kind": "goal",
+              "player": "Cristian Romero",
+              "team": "Argentina",
+              "minute": "79'"
             }
           ]
         },
@@ -8809,10 +8815,10 @@
       "date": "2026-07-07",
       "venue": "Atlanta",
       "kickoff_utc": "2026-07-07T16:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 2,
       "status": "LIVE",
-      "clock": "78'",
+      "clock": "81'",
       "events": [
         {
           "kind": "goal",
@@ -8825,6 +8831,12 @@
           "player": "Mostafa Zico",
           "team": "Egypt",
           "minute": "67'"
+        },
+        {
+          "kind": "goal",
+          "player": "Cristian Romero",
+          "team": "Argentina",
+          "minute": "79'"
         }
       ]
     }
@@ -12558,9 +12570,9 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 2,
-          "clock": "78'",
+          "clock": "81'",
           "ht": false,
           "events": [
             {
@@ -12574,6 +12586,12 @@
               "player": "Mostafa Zico",
               "team": "Egypt",
               "minute": "67'"
+            },
+            {
+              "kind": "goal",
+              "player": "Cristian Romero",
+              "team": "Argentina",
+              "minute": "79'"
             }
           ]
         },
