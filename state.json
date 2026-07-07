@@ -2298,6 +2298,20 @@
           "kickoff_utc": "2026-07-06T19:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-07-07",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026 — Round of 16\nTuesday, July 7\n\nMatchday Brief\n\nArgentina vs Egypt\n  Prediction: Argentina\n  Argentina 78.9% · Egypt 21.1%\n  🕐 9:00am PT / 11:00am CT / 12:00pm ET / 9:30pm IST\n  📍 Atlanta, USA\n\nSwitzerland vs Colombia\n  Prediction: Colombia\n  Switzerland 31.6% · Colombia 68.4%\n  🕐 1:00pm PT / 3:00pm CT / 4:00pm ET / 1:30am IST (+1d)\n  📍 Vancouver, Canada",
+          "sent": true,
+          "hash": "f011b3a13b4f243e",
+          "key": "mb-2026-07-07",
+          "generated_at": "2026-07-07T00:10:21.919143-07:00",
+          "kickoff_utc": "2026-07-07T16:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -8717,6 +8731,45 @@
           ],
           "hit": true,
           "winner": "Belgium"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-07",
+      "matches": [
+        {
+          "id": "95",
+          "home": "Argentina",
+          "away": "Egypt",
+          "kickoff_utc": "2026-07-07T16:00:00Z",
+          "venue": "Atlanta",
+          "stage": "R16",
+          "slot_home": "W86",
+          "slot_away": "W88",
+          "pred": {
+            "home": 0.7889849127075319,
+            "draw": 0.0,
+            "away": 0.21101508729246823,
+            "pick": "Argentina"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "96",
+          "home": "Switzerland",
+          "away": "Colombia",
+          "kickoff_utc": "2026-07-07T20:00:00Z",
+          "venue": "Vancouver",
+          "stage": "R16",
+          "slot_home": "W85",
+          "slot_away": "W87",
+          "pred": {
+            "home": 0.31621108541750337,
+            "draw": 0.0,
+            "away": 0.6837889145824967,
+            "pick": "Colombia"
+          },
+          "status": "sched"
         }
       ]
     }
