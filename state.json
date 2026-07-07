@@ -2319,6 +2319,15 @@
           "key": "ht-2026-07-07-95",
           "generated_at": "2026-07-07T09:54:38.801767-07:00",
           "kickoff_utc": "2026-07-07T16:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026 — Round of 16\nTuesday, July 7\n\nFull time:\n<b>Argentina</b> 3 - 2 Egypt\n<b>Argentina</b> wins\nAtlanta, USA\n  ⚽ 15' Yasser Ibrahim (Egypt)\n  ⚽ 67' Mostafa Zico (Egypt)\n  ⚽ 79' Cristian Romero (Argentina)\n  ⚽ 83' Lionel Messi (Argentina)\n  ⚽ 90'+2' Enzo Fernández (Argentina)\nOverall prediction: 55/95 (57.9%)\nPrediction ✓: Argentina",
+          "sent": true,
+          "hash": "567e2a2c00f7d7ad",
+          "key": "pm-2026-07-07-95",
+          "generated_at": "2026-07-07T11:07:42.059661-07:00",
+          "kickoff_utc": "2026-07-07T16:00:00Z"
         }
       ]
     }
@@ -2735,16 +2744,15 @@
   },
   "bracket": {
     "title_odds": {
-      "Argentina": 0.2437,
-      "France": 0.1528,
-      "Spain": 0.236,
-      "Netherlands": 0.0665,
-      "Belgium": 0.0458,
-      "Norway": 0.0353,
-      "England": 0.1409,
-      "Colombia": 0.0627,
-      "Switzerland": 0.0132,
-      "Australia": 0.0031
+      "England": 0.1265,
+      "Spain": 0.2196,
+      "Colombia": 0.0477,
+      "France": 0.1489,
+      "Netherlands": 0.0661,
+      "Argentina": 0.3123,
+      "Norway": 0.0313,
+      "Belgium": 0.0385,
+      "Switzerland": 0.0091
     },
     "advancement": {
       "Ecuador": 1.0,
@@ -2783,42 +2791,42 @@
   },
   "season_ended": false,
   "last_result": {
-    "home": "USA",
-    "away": "Belgium",
-    "home_goals": 1,
-    "away_goals": 4,
-    "date": "2026-07-06",
-    "venue": "Seattle",
+    "home": "Argentina",
+    "away": "Egypt",
+    "home_goals": 3,
+    "away_goals": 2,
+    "date": "2026-07-07",
+    "venue": "Atlanta",
     "events": [
       {
         "kind": "goal",
-        "player": "Charles De Ketelaere",
-        "team": "Belgium",
-        "minute": "9'"
+        "player": "Yasser Ibrahim",
+        "team": "Egypt",
+        "minute": "15'"
       },
       {
         "kind": "goal",
-        "player": "Malik Tillman",
-        "team": "USA",
-        "minute": "31'"
+        "player": "Mostafa Zico",
+        "team": "Egypt",
+        "minute": "67'"
       },
       {
         "kind": "goal",
-        "player": "Charles De Ketelaere",
-        "team": "Belgium",
-        "minute": "33'"
+        "player": "Cristian Romero",
+        "team": "Argentina",
+        "minute": "79'"
       },
       {
         "kind": "goal",
-        "player": "Hans Vanaken",
-        "team": "Belgium",
-        "minute": "57'"
+        "player": "Lionel Messi",
+        "team": "Argentina",
+        "minute": "83'"
       },
       {
         "kind": "goal",
-        "player": "Romelu Lukaku",
-        "team": "Belgium",
-        "minute": "90'+3'"
+        "player": "Enzo Fernández",
+        "team": "Argentina",
+        "minute": "90'+2'"
       }
     ]
   },
@@ -5031,6 +5039,43 @@
         }
       ],
       "winner": "Belgium"
+    },
+    "95": {
+      "home_goals": 3,
+      "away_goals": 2,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Yasser Ibrahim",
+          "team": "Egypt",
+          "minute": "15'"
+        },
+        {
+          "kind": "goal",
+          "player": "Mostafa Zico",
+          "team": "Egypt",
+          "minute": "67'"
+        },
+        {
+          "kind": "goal",
+          "player": "Cristian Romero",
+          "team": "Argentina",
+          "minute": "79'"
+        },
+        {
+          "kind": "goal",
+          "player": "Lionel Messi",
+          "team": "Argentina",
+          "minute": "83'"
+        },
+        {
+          "kind": "goal",
+          "player": "Enzo Fernández",
+          "team": "Argentina",
+          "minute": "90'+2'"
+        }
+      ],
+      "winner": "Argentina"
     }
   },
   "board": [
@@ -8761,11 +8806,9 @@
             "away": 0.21101508729246823,
             "pick": "Argentina"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 3,
           "ag": 2,
-          "clock": "90'+10'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -8797,7 +8840,9 @@
               "team": "Argentina",
               "minute": "90'+2'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Argentina"
         },
         {
           "id": "96",
@@ -8819,52 +8864,7 @@
       ]
     }
   ],
-  "live": [
-    {
-      "id": "95",
-      "home": "Argentina",
-      "away": "Egypt",
-      "date": "2026-07-07",
-      "venue": "Atlanta",
-      "kickoff_utc": "2026-07-07T16:00:00Z",
-      "hg": 3,
-      "ag": 2,
-      "status": "LIVE",
-      "clock": "90'+10'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Yasser Ibrahim",
-          "team": "Egypt",
-          "minute": "15'"
-        },
-        {
-          "kind": "goal",
-          "player": "Mostafa Zico",
-          "team": "Egypt",
-          "minute": "67'"
-        },
-        {
-          "kind": "goal",
-          "player": "Cristian Romero",
-          "team": "Argentina",
-          "minute": "79'"
-        },
-        {
-          "kind": "goal",
-          "player": "Lionel Messi",
-          "team": "Argentina",
-          "minute": "83'"
-        },
-        {
-          "kind": "goal",
-          "player": "Enzo Fernández",
-          "team": "Argentina",
-          "minute": "90'+2'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -12593,11 +12593,9 @@
             "away": 0.21101508729246823,
             "pick": "Argentina"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 3,
           "ag": 2,
-          "clock": "90'+10'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -12629,7 +12627,9 @@
               "team": "Argentina",
               "minute": "90'+2'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Argentina"
         },
         {
           "id": "96",
@@ -12716,7 +12716,7 @@
         },
         {
           "id": "100",
-          "home": "W95",
+          "home": "Argentina",
           "away": "W96",
           "kickoff_utc": "2026-07-12T01:00:00Z",
           "venue": "Kansas City",
@@ -12724,10 +12724,10 @@
           "slot_home": "W95",
           "slot_away": "W96",
           "pred": {
-            "home": 0.5,
+            "home": 0.9716527404673236,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "W95"
+            "away": 0.02834725953267636,
+            "pick": "Argentina"
           },
           "status": "sched"
         }
