@@ -8859,12 +8859,31 @@
             "away": 0.6837889145824967,
             "pick": "Colombia"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "2'",
+          "ht": false,
+          "events": []
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "96",
+      "home": "Switzerland",
+      "away": "Colombia",
+      "date": "2026-07-07",
+      "venue": "Vancouver",
+      "kickoff_utc": "2026-07-07T20:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "2'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -12646,7 +12665,12 @@
             "away": 0.6837889145824967,
             "pick": "Colombia"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "2'",
+          "ht": false,
+          "events": []
         }
       ]
     },
