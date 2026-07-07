@@ -8595,8 +8595,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 1,
-          "clock": "32'",
+          "ag": 2,
+          "clock": "35'",
           "ht": false,
           "events": [
             {
@@ -8610,6 +8610,12 @@
               "player": "Malik Tillman",
               "team": "USA",
               "minute": "31'"
+            },
+            {
+              "kind": "goal",
+              "player": "Charles De Ketelaere",
+              "team": "Belgium",
+              "minute": "33'"
             }
           ]
         }
@@ -8625,9 +8631,9 @@
       "venue": "Seattle",
       "kickoff_utc": "2026-07-07T00:00:00Z",
       "hg": 1,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "32'",
+      "clock": "35'",
       "events": [
         {
           "kind": "goal",
@@ -8640,6 +8646,12 @@
           "player": "Malik Tillman",
           "team": "USA",
           "minute": "31'"
+        },
+        {
+          "kind": "goal",
+          "player": "Charles De Ketelaere",
+          "team": "Belgium",
+          "minute": "33'"
         }
       ]
     }
@@ -12316,8 +12328,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 1,
-          "clock": "32'",
+          "ag": 2,
+          "clock": "35'",
           "ht": false,
           "events": [
             {
@@ -12331,6 +12343,12 @@
               "player": "Malik Tillman",
               "team": "USA",
               "minute": "31'"
+            },
+            {
+              "kind": "goal",
+              "player": "Charles De Ketelaere",
+              "team": "Belgium",
+              "minute": "33'"
             }
           ]
         }
