@@ -2269,6 +2269,15 @@
           "key": "pm-2026-07-06-93",
           "generated_at": "2026-07-06T14:03:39.727655-07:00",
           "kickoff_utc": "2026-07-06T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026 — Round of 16\nMonday, July 6\n\nHalf-time:\nUSA 1 - 2 Belgium\nSeattle, USA\n  ⚽ 9' Charles De Ketelaere (Belgium)\n  ⚽ 31' Malik Tillman (USA)\n  ⚽ 33' Charles De Ketelaere (Belgium)\nPrediction: Belgium",
+          "sent": true,
+          "hash": "4a38e5f199c2dba4",
+          "key": "ht-2026-07-06-94",
+          "generated_at": "2026-07-06T17:54:41.373250-07:00",
+          "kickoff_utc": "2026-07-07T00:00:00Z"
         }
       ]
     }
@@ -8596,8 +8605,8 @@
           "status": "live",
           "hg": 1,
           "ag": 2,
-          "clock": "45'+5'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -8632,8 +8641,8 @@
       "kickoff_utc": "2026-07-07T00:00:00Z",
       "hg": 1,
       "ag": 2,
-      "status": "LIVE",
-      "clock": "45'+5'",
+      "status": "HT",
+      "clock": "45'+6'",
       "events": [
         {
           "kind": "goal",
@@ -12329,8 +12338,8 @@
           "status": "live",
           "hg": 1,
           "ag": 2,
-          "clock": "45'+5'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
