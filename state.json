@@ -2369,6 +2369,15 @@
           "key": "mb-2026-07-09",
           "generated_at": "2026-07-09T00:05:10.542748-07:00",
           "kickoff_utc": "2026-07-09T20:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026 — Quarterfinal\nThursday, July 9\n\nHalf-time:\nFrance 0 - 0 Morocco\nBoston (Foxborough), USA\nPrediction: France",
+          "sent": true,
+          "hash": "c3e828e74e3fc395",
+          "key": "ht-2026-07-09-97",
+          "generated_at": "2026-07-09T13:53:37.598989-07:00",
+          "kickoff_utc": "2026-07-09T20:00:00Z"
         }
       ]
     }
@@ -8907,8 +8916,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": []
         }
       ]
@@ -8924,8 +8933,8 @@
       "kickoff_utc": "2026-07-09T20:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+4'",
+      "status": "HT",
+      "clock": "45'+5'",
       "events": []
     }
   ],
@@ -12742,8 +12751,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": []
         }
       ]
