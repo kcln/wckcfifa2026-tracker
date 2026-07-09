@@ -2378,6 +2378,24 @@
           "key": "ht-2026-07-09-97",
           "generated_at": "2026-07-09T13:53:37.598989-07:00",
           "kickoff_utc": "2026-07-09T20:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026 — Quarterfinal\nThursday, July 9\n\nFull time:\n<b>France</b> 2 - 0 Morocco\n<b>France</b> wins\nBoston (Foxborough), USA\n  ⚽ 60' Kylian Mbappé (France)\n  ⚽ 66' Ousmane Dembélé (France)\nOverall prediction: 56/97 (57.7%)\nPrediction ✓: France",
+          "sent": true,
+          "hash": "3470c99b9eef7bd6",
+          "key": "pm-2026-07-09-97",
+          "generated_at": "2026-07-09T15:03:05.654641-07:00",
+          "kickoff_utc": "2026-07-09T20:00:00Z"
+        },
+        {
+          "type": "daily_recap",
+          "body": "🏆 FIFA World Cup 2026 — Quarterfinal\nThursday, July 9\n\nDaily Recap\n\nResults:\n  <b>France</b> 2 - 0 Morocco\n  <b>France</b> wins\n  Boston (Foxborough), USA\n    ⚽ 60' Kylian Mbappé (France)\n    ⚽ 66' Ousmane Dembélé (France)\n  Prediction ✓: France\n\nOverall prediction — today 1/1 (100.0%)  ·  overall 56/97 (57.7%)",
+          "sent": true,
+          "hash": "0a4f3130be7fcd77",
+          "key": "dr-2026-07-09",
+          "generated_at": "2026-07-09T15:03:05.655064-07:00",
+          "kickoff_utc": "2026-07-09T20:00:00Z"
         }
       ]
     }
@@ -2794,14 +2812,13 @@
   },
   "bracket": {
     "title_odds": {
-      "France": 0.1438,
-      "Argentina": 0.3228,
-      "England": 0.1392,
-      "Switzerland": 0.0303,
-      "Spain": 0.2207,
-      "Belgium": 0.0442,
-      "Netherlands": 0.0686,
-      "Norway": 0.0304
+      "Spain": 0.2065,
+      "Argentina": 0.3202,
+      "England": 0.1315,
+      "France": 0.2543,
+      "Norway": 0.027,
+      "Belgium": 0.0364,
+      "Switzerland": 0.0241
     },
     "advancement": {
       "Bosnia & Herzegovina": 1.0,
@@ -2840,13 +2857,26 @@
   },
   "season_ended": false,
   "last_result": {
-    "home": "Switzerland",
-    "away": "Colombia",
-    "home_goals": 0,
+    "home": "France",
+    "away": "Morocco",
+    "home_goals": 2,
     "away_goals": 0,
-    "date": "2026-07-07",
-    "venue": "Vancouver",
-    "events": []
+    "date": "2026-07-09",
+    "venue": "Boston (Foxborough)",
+    "events": [
+      {
+        "kind": "goal",
+        "player": "Kylian Mbappé",
+        "team": "France",
+        "minute": "60'"
+      },
+      {
+        "kind": "goal",
+        "player": "Ousmane Dembélé",
+        "team": "France",
+        "minute": "66'"
+      }
+    ]
   },
   "results": {
     "1": {
@@ -5101,6 +5131,25 @@
       "winner": "Switzerland",
       "home_pens": 4,
       "away_pens": 3
+    },
+    "97": {
+      "home_goals": 2,
+      "away_goals": 0,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "minute": "60'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ousmane Dembélé",
+          "team": "France",
+          "minute": "66'"
+        }
+      ],
+      "winner": "France"
     }
   },
   "board": [
@@ -8913,11 +8962,9 @@
             "away": 0.4196685360237116,
             "pick": "France"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 0,
-          "clock": "90'+5'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -8931,39 +8978,14 @@
               "team": "France",
               "minute": "66'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "France"
         }
       ]
     }
   ],
-  "live": [
-    {
-      "id": "97",
-      "home": "France",
-      "away": "Morocco",
-      "date": "2026-07-09",
-      "venue": "Boston (Foxborough)",
-      "kickoff_utc": "2026-07-09T20:00:00Z",
-      "hg": 2,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "90'+5'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Kylian Mbappé",
-          "team": "France",
-          "minute": "60'"
-        },
-        {
-          "kind": "goal",
-          "player": "Ousmane Dembélé",
-          "team": "France",
-          "minute": "66'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -12774,11 +12796,9 @@
             "away": 0.4196685360237116,
             "pick": "France"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 0,
-          "clock": "90'+5'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -12792,7 +12812,9 @@
               "team": "France",
               "minute": "66'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "France"
         }
       ]
     },
@@ -12862,7 +12884,7 @@
       "matches": [
         {
           "id": "101",
-          "home": "W97",
+          "home": "France",
           "away": "W98",
           "kickoff_utc": "2026-07-14T19:00:00Z",
           "venue": "Dallas (Arlington)",
@@ -12870,10 +12892,10 @@
           "slot_home": "W97",
           "slot_away": "W98",
           "pred": {
-            "home": 0.5,
+            "home": 0.9621351633851132,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "W97"
+            "away": 0.03786483661488682,
+            "pick": "France"
           },
           "status": "sched"
         }
