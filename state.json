@@ -8914,11 +8914,18 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "57'",
+          "clock": "61'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Kylian Mbappé",
+              "team": "France",
+              "minute": "60'"
+            }
+          ]
         }
       ]
     }
@@ -8931,11 +8938,18 @@
       "date": "2026-07-09",
       "venue": "Boston (Foxborough)",
       "kickoff_utc": "2026-07-09T20:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "57'",
-      "events": []
+      "clock": "61'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "minute": "60'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -12749,11 +12763,18 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "57'",
+          "clock": "61'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Kylian Mbappé",
+              "team": "France",
+              "minute": "60'"
+            }
+          ]
         }
       ]
     },
