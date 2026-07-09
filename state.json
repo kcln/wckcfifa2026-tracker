@@ -2357,6 +2357,20 @@
           "kickoff_utc": "2026-07-07T16:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-07-09",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026 — Quarterfinal\nThursday, July 9\n\nMatchday Brief\n\nFrance vs Morocco\n  Prediction: France\n  France 58.0% · Morocco 42.0%\n  🕐 1:00pm PT / 3:00pm CT / 4:00pm ET / 1:30am IST (+1d)\n  📍 Boston (Foxborough), USA",
+          "sent": true,
+          "hash": "0cecc65917314d7a",
+          "key": "mb-2026-07-09",
+          "generated_at": "2026-07-09T00:05:10.542748-07:00",
+          "kickoff_utc": "2026-07-09T20:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -8869,6 +8883,28 @@
           "winner": "Switzerland",
           "hpens": 4,
           "apens": 3
+        }
+      ]
+    },
+    {
+      "date": "2026-07-09",
+      "matches": [
+        {
+          "id": "97",
+          "home": "France",
+          "away": "Morocco",
+          "kickoff_utc": "2026-07-09T20:00:00Z",
+          "venue": "Boston (Foxborough)",
+          "stage": "QF",
+          "slot_home": "W89",
+          "slot_away": "W90",
+          "pred": {
+            "home": 0.5803314639762882,
+            "draw": 0.0,
+            "away": 0.4196685360237116,
+            "pick": "France"
+          },
+          "status": "sched"
         }
       ]
     }
