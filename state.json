@@ -8914,9 +8914,9 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "64'",
+          "clock": "67'",
           "ht": false,
           "events": [
             {
@@ -8924,6 +8924,12 @@
               "player": "Kylian Mbappé",
               "team": "France",
               "minute": "60'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ousmane Dembélé",
+              "team": "France",
+              "minute": "66'"
             }
           ]
         }
@@ -8938,16 +8944,22 @@
       "date": "2026-07-09",
       "venue": "Boston (Foxborough)",
       "kickoff_utc": "2026-07-09T20:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 0,
       "status": "LIVE",
-      "clock": "64'",
+      "clock": "67'",
       "events": [
         {
           "kind": "goal",
           "player": "Kylian Mbappé",
           "team": "France",
           "minute": "60'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ousmane Dembélé",
+          "team": "France",
+          "minute": "66'"
         }
       ]
     }
@@ -12763,9 +12775,9 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 0,
-          "clock": "64'",
+          "clock": "67'",
           "ht": false,
           "events": [
             {
@@ -12773,6 +12785,12 @@
               "player": "Kylian Mbappé",
               "team": "France",
               "minute": "60'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ousmane Dembélé",
+              "team": "France",
+              "minute": "66'"
             }
           ]
         }
