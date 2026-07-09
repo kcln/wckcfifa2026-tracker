@@ -8904,12 +8904,31 @@
             "away": 0.4196685360237116,
             "pick": "France"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "2'",
+          "ht": false,
+          "events": []
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "97",
+      "home": "France",
+      "away": "Morocco",
+      "date": "2026-07-09",
+      "venue": "Boston (Foxborough)",
+      "kickoff_utc": "2026-07-09T20:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "2'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -12720,7 +12739,12 @@
             "away": 0.4196685360237116,
             "pick": "France"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "2'",
+          "ht": false,
+          "events": []
         }
       ]
     },
