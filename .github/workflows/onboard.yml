@@ -1,0 +1,27 @@
+name: send-onboarding-menu
+# Manual-only: sends the 1-4 onboarding menu to ONE approved subscriber who
+# was approved by editing subscribers.json directly (which skips the menu the
+# Approve button would have sent). Their 1-4 reply is handled by the normal
+# tracker inbox poll.
+on:
+  workflow_dispatch:
+    inputs:
+      chat_id:
+        description: "Approved chat ID to send the onboarding menu to"
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Send onboarding menu
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: python scripts/send_onboarding.py "${{ inputs.chat_id }}"
