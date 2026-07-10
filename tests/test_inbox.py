@@ -100,11 +100,14 @@ def test_start_ignored_when_already_known():
     assert sent == []   # no duplicate approval prompt
 
 
-def test_start_stores_name_in_pending():
+def test_start_does_not_persist_name_in_pending():
+    # pending entries are committed to the public repo — the name must only
+    # appear in the transient approval prompt, never in subscribers.json
     subs = {"approved": [], "pending": {}, "onboarded": [], "last_update_id": 0}
-    run, _, _ = _harness(subs)
+    run, sent, _ = _harness(subs)
     run([_start(5, "777", "Ravi Kumar")])
-    assert subs["pending"]["777"].get("name") == "Ravi Kumar"
+    assert "name" not in subs["pending"]["777"]
+    assert any("Ravi Kumar" in t for _, t, _m in sent)   # prompt still names them
 
 
 def test_approve_dms_approver_a_confirmation_with_name():

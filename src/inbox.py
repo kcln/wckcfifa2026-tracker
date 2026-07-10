@@ -101,8 +101,9 @@ def process_updates(updates, subs, *, approver, send, answer_cb, catchup,
                 continue
             name = " ".join(x for x in (chat.get("first_name"),
                                         chat.get("last_name")) if x)
-            # Store the name so the approval confirmation can show it later.
-            pending[chat_id] = {"ts": now_ts, "name": name}
+            # Name is used only in the prompt below — never persisted, because
+            # pending entries are committed to the public repo.
+            pending[chat_id] = {"ts": now_ts}
             ptext, kb = _approval_prompt(name, chat_id)
             send(approver, ptext, kb)
             continue
