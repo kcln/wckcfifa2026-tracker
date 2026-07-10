@@ -9017,11 +9017,18 @@
             "pick": "Spain"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "28'",
+          "clock": "31'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Fabián Ruiz",
+              "team": "Spain",
+              "minute": "30'"
+            }
+          ]
         }
       ]
     }
@@ -9034,11 +9041,18 @@
       "date": "2026-07-10",
       "venue": "Los Angeles (Inglewood)",
       "kickoff_utc": "2026-07-10T19:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "28'",
-      "events": []
+      "clock": "31'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Fabián Ruiz",
+          "team": "Spain",
+          "minute": "30'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -12892,11 +12906,18 @@
             "pick": "Spain"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "28'",
+          "clock": "31'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Fabián Ruiz",
+              "team": "Spain",
+              "minute": "30'"
+            }
+          ]
         }
       ]
     },
