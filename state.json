@@ -2398,6 +2398,20 @@
           "kickoff_utc": "2026-07-09T20:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-07-10",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026 — Quarterfinal\nFriday, July 10\n\nMatchday Brief\n\nSpain vs Belgium\n  Prediction: Spain\n  Spain 72.1% · Belgium 27.9%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 Los Angeles (Inglewood), USA",
+          "sent": true,
+          "hash": "271749d81ed72026",
+          "key": "mb-2026-07-10",
+          "generated_at": "2026-07-10T00:07:41.878081-07:00",
+          "kickoff_utc": "2026-07-10T19:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -8981,6 +8995,28 @@
           ],
           "hit": true,
           "winner": "France"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-10",
+      "matches": [
+        {
+          "id": "98",
+          "home": "Spain",
+          "away": "Belgium",
+          "kickoff_utc": "2026-07-10T19:00:00Z",
+          "venue": "Los Angeles (Inglewood)",
+          "stage": "QF",
+          "slot_home": "W93",
+          "slot_away": "W94",
+          "pred": {
+            "home": 0.7213269550769206,
+            "draw": 0.0,
+            "away": 0.2786730449230794,
+            "pick": "Spain"
+          },
+          "status": "sched"
         }
       ]
     }
