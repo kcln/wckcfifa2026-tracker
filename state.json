@@ -9016,12 +9016,31 @@
             "away": 0.2786730449230794,
             "pick": "Spain"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "98",
+      "home": "Spain",
+      "away": "Belgium",
+      "date": "2026-07-10",
+      "venue": "Los Angeles (Inglewood)",
+      "kickoff_utc": "2026-07-10T19:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -12872,7 +12891,12 @@
             "away": 0.2786730449230794,
             "pick": "Spain"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         }
       ]
     },
