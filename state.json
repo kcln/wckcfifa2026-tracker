@@ -2419,6 +2419,24 @@
           "key": "ht-2026-07-10-98",
           "generated_at": "2026-07-10T12:54:04.357434-07:00",
           "kickoff_utc": "2026-07-10T19:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026 — Quarterfinal\nFriday, July 10\n\nFull time:\n<b>Spain</b> 2 - 1 Belgium\n<b>Spain</b> wins\nLos Angeles (Inglewood), USA\n  ⚽ 30' Fabián Ruiz (Spain)\n  ⚽ 41' Charles De Ketelaere (Belgium)\n  ⚽ 88' Mikel Merino (Spain)\nOverall prediction: 57/98 (58.2%)\nPrediction ✓: Spain",
+          "sent": true,
+          "hash": "ad224e9dae4f6cfe",
+          "key": "pm-2026-07-10-98",
+          "generated_at": "2026-07-10T14:03:16.807103-07:00",
+          "kickoff_utc": "2026-07-10T19:00:00Z"
+        },
+        {
+          "type": "daily_recap",
+          "body": "🏆 FIFA World Cup 2026 — Quarterfinal\nFriday, July 10\n\nDaily Recap\n\nResults:\n  <b>Spain</b> 2 - 1 Belgium\n  <b>Spain</b> wins\n  Los Angeles (Inglewood), USA\n    ⚽ 30' Fabián Ruiz (Spain)\n    ⚽ 41' Charles De Ketelaere (Belgium)\n    ⚽ 88' Mikel Merino (Spain)\n  Prediction ✓: Spain\n\nOverall prediction — today 1/1 (100.0%)  ·  overall 57/98 (58.2%)",
+          "sent": true,
+          "hash": "f733f979d860c4c5",
+          "key": "dr-2026-07-10",
+          "generated_at": "2026-07-10T14:03:16.807496-07:00",
+          "kickoff_utc": "2026-07-10T19:00:00Z"
         }
       ]
     }
@@ -2835,13 +2853,12 @@
   },
   "bracket": {
     "title_odds": {
-      "Spain": 0.2065,
-      "Argentina": 0.3202,
-      "England": 0.1315,
-      "France": 0.2543,
-      "Norway": 0.027,
-      "Belgium": 0.0364,
-      "Switzerland": 0.0241
+      "France": 0.23,
+      "Spain": 0.2912,
+      "Argentina": 0.3085,
+      "England": 0.1197,
+      "Switzerland": 0.0228,
+      "Norway": 0.0278
     },
     "advancement": {
       "Colombia": 1.0,
@@ -2880,24 +2897,30 @@
   },
   "season_ended": false,
   "last_result": {
-    "home": "France",
-    "away": "Morocco",
+    "home": "Spain",
+    "away": "Belgium",
     "home_goals": 2,
-    "away_goals": 0,
-    "date": "2026-07-09",
-    "venue": "Boston (Foxborough)",
+    "away_goals": 1,
+    "date": "2026-07-10",
+    "venue": "Los Angeles (Inglewood)",
     "events": [
       {
         "kind": "goal",
-        "player": "Kylian Mbappé",
-        "team": "France",
-        "minute": "60'"
+        "player": "Fabián Ruiz",
+        "team": "Spain",
+        "minute": "30'"
       },
       {
         "kind": "goal",
-        "player": "Ousmane Dembélé",
-        "team": "France",
-        "minute": "66'"
+        "player": "Charles De Ketelaere",
+        "team": "Belgium",
+        "minute": "41'"
+      },
+      {
+        "kind": "goal",
+        "player": "Mikel Merino",
+        "team": "Spain",
+        "minute": "88'"
       }
     ]
   },
@@ -5173,6 +5196,31 @@
         }
       ],
       "winner": "France"
+    },
+    "98": {
+      "home_goals": 2,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Fabián Ruiz",
+          "team": "Spain",
+          "minute": "30'"
+        },
+        {
+          "kind": "goal",
+          "player": "Charles De Ketelaere",
+          "team": "Belgium",
+          "minute": "41'"
+        },
+        {
+          "kind": "goal",
+          "player": "Mikel Merino",
+          "team": "Spain",
+          "minute": "88'"
+        }
+      ],
+      "winner": "Spain"
     }
   },
   "board": [
@@ -9025,11 +9073,9 @@
             "away": 0.2786730449230794,
             "pick": "Spain"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 1,
-          "clock": "90'+7'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -9049,45 +9095,14 @@
               "team": "Spain",
               "minute": "88'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Spain"
         }
       ]
     }
   ],
-  "live": [
-    {
-      "id": "98",
-      "home": "Spain",
-      "away": "Belgium",
-      "date": "2026-07-10",
-      "venue": "Los Angeles (Inglewood)",
-      "kickoff_utc": "2026-07-10T19:00:00Z",
-      "hg": 2,
-      "ag": 1,
-      "status": "LIVE",
-      "clock": "90'+7'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Fabián Ruiz",
-          "team": "Spain",
-          "minute": "30'"
-        },
-        {
-          "kind": "goal",
-          "player": "Charles De Ketelaere",
-          "team": "Belgium",
-          "minute": "41'"
-        },
-        {
-          "kind": "goal",
-          "player": "Mikel Merino",
-          "team": "Spain",
-          "minute": "88'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -12938,11 +12953,9 @@
             "away": 0.2786730449230794,
             "pick": "Spain"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 2,
           "ag": 1,
-          "clock": "90'+7'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -12962,7 +12975,9 @@
               "team": "Spain",
               "minute": "88'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Spain"
         }
       ]
     },
@@ -13011,17 +13026,17 @@
         {
           "id": "101",
           "home": "France",
-          "away": "W98",
+          "away": "Spain",
           "kickoff_utc": "2026-07-14T19:00:00Z",
           "venue": "Dallas (Arlington)",
           "stage": "SF",
           "slot_home": "W97",
           "slot_away": "W98",
           "pred": {
-            "home": 0.9621351633851132,
+            "home": 0.45717424056655653,
             "draw": 0.0,
-            "away": 0.03786483661488682,
-            "pick": "France"
+            "away": 0.5428257594334434,
+            "pick": "Spain"
           },
           "status": "sched"
         }
