@@ -2410,6 +2410,15 @@
           "key": "mb-2026-07-10",
           "generated_at": "2026-07-10T00:07:41.878081-07:00",
           "kickoff_utc": "2026-07-10T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026 — Quarterfinal\nFriday, July 10\n\nHalf-time:\nSpain 1 - 1 Belgium\nLos Angeles (Inglewood), USA\n  ⚽ 30' Fabián Ruiz (Spain)\n  ⚽ 41' Charles De Ketelaere (Belgium)\nPrediction: Spain",
+          "sent": true,
+          "hash": "c9471e9d810b855d",
+          "key": "ht-2026-07-10-98",
+          "generated_at": "2026-07-10T12:54:04.357434-07:00",
+          "kickoff_utc": "2026-07-10T19:00:00Z"
         }
       ]
     }
@@ -9020,7 +9029,7 @@
           "hg": 1,
           "ag": 1,
           "clock": "45'+5'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -9049,7 +9058,7 @@
       "kickoff_utc": "2026-07-10T19:00:00Z",
       "hg": 1,
       "ag": 1,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+5'",
       "events": [
         {
@@ -12921,7 +12930,7 @@
           "hg": 1,
           "ag": 1,
           "clock": "45'+5'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
