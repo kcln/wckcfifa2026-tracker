@@ -9026,9 +9026,9 @@
             "pick": "Spain"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "86'",
+          "clock": "89'",
           "ht": false,
           "events": [
             {
@@ -9042,6 +9042,12 @@
               "player": "Charles De Ketelaere",
               "team": "Belgium",
               "minute": "41'"
+            },
+            {
+              "kind": "goal",
+              "player": "Mikel Merino",
+              "team": "Spain",
+              "minute": "88'"
             }
           ]
         }
@@ -9056,10 +9062,10 @@
       "date": "2026-07-10",
       "venue": "Los Angeles (Inglewood)",
       "kickoff_utc": "2026-07-10T19:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 1,
       "status": "LIVE",
-      "clock": "86'",
+      "clock": "89'",
       "events": [
         {
           "kind": "goal",
@@ -9072,6 +9078,12 @@
           "player": "Charles De Ketelaere",
           "team": "Belgium",
           "minute": "41'"
+        },
+        {
+          "kind": "goal",
+          "player": "Mikel Merino",
+          "team": "Spain",
+          "minute": "88'"
         }
       ]
     }
@@ -12927,9 +12939,9 @@
             "pick": "Spain"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "86'",
+          "clock": "89'",
           "ht": false,
           "events": [
             {
@@ -12943,6 +12955,12 @@
               "player": "Charles De Ketelaere",
               "team": "Belgium",
               "minute": "41'"
+            },
+            {
+              "kind": "goal",
+              "player": "Mikel Merino",
+              "team": "Spain",
+              "minute": "88'"
             }
           ]
         }
