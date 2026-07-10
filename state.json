@@ -9018,8 +9018,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 0,
-          "clock": "37'",
+          "ag": 1,
+          "clock": "40'",
           "ht": false,
           "events": [
             {
@@ -9027,6 +9027,12 @@
               "player": "Fabián Ruiz",
               "team": "Spain",
               "minute": "30'"
+            },
+            {
+              "kind": "goal",
+              "player": "Charles De Ketelaere",
+              "team": "Belgium",
+              "minute": "41'"
             }
           ]
         }
@@ -9042,15 +9048,21 @@
       "venue": "Los Angeles (Inglewood)",
       "kickoff_utc": "2026-07-10T19:00:00Z",
       "hg": 1,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "37'",
+      "clock": "40'",
       "events": [
         {
           "kind": "goal",
           "player": "Fabián Ruiz",
           "team": "Spain",
           "minute": "30'"
+        },
+        {
+          "kind": "goal",
+          "player": "Charles De Ketelaere",
+          "team": "Belgium",
+          "minute": "41'"
         }
       ]
     }
@@ -12907,8 +12919,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 0,
-          "clock": "37'",
+          "ag": 1,
+          "clock": "40'",
           "ht": false,
           "events": [
             {
@@ -12916,6 +12928,12 @@
               "player": "Fabián Ruiz",
               "team": "Spain",
               "minute": "30'"
+            },
+            {
+              "kind": "goal",
+              "player": "Charles De Ketelaere",
+              "team": "Belgium",
+              "minute": "41'"
             }
           ]
         }
