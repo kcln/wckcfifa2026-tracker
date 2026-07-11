@@ -2439,6 +2439,20 @@
           "kickoff_utc": "2026-07-10T19:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-07-11",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026 — Quarterfinal\nSaturday, July 11\n\nMatchday Brief\n\nNorway vs England\n  Prediction: England\n  Norway 36.7% · England 63.3%\n  🕐 2:00pm PT / 4:00pm CT / 5:00pm ET / 2:30am IST (+1d)\n  📍 Miami (Miami Gardens), USA\n\nArgentina vs Switzerland\n  Prediction: Argentina\n  Argentina 78.2% · Switzerland 21.8%\n  🕐 6:00pm PT / 8:00pm CT / 9:00pm ET / 6:30am IST (+1d)\n  📍 Kansas City, USA",
+          "sent": true,
+          "hash": "f2be0458907820f1",
+          "key": "mb-2026-07-11",
+          "generated_at": "2026-07-11T00:10:17.327859-07:00",
+          "kickoff_utc": "2026-07-11T21:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -9098,6 +9112,45 @@
           ],
           "hit": true,
           "winner": "Spain"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-11",
+      "matches": [
+        {
+          "id": "99",
+          "home": "Norway",
+          "away": "England",
+          "kickoff_utc": "2026-07-11T21:00:00Z",
+          "venue": "Miami (Miami Gardens)",
+          "stage": "QF",
+          "slot_home": "W91",
+          "slot_away": "W92",
+          "pred": {
+            "home": 0.3666443651632542,
+            "draw": 0.0,
+            "away": 0.6333556348367458,
+            "pick": "England"
+          },
+          "status": "sched"
+        },
+        {
+          "id": "100",
+          "home": "Argentina",
+          "away": "Switzerland",
+          "kickoff_utc": "2026-07-12T01:00:00Z",
+          "venue": "Kansas City",
+          "stage": "QF",
+          "slot_home": "W95",
+          "slot_away": "W96",
+          "pred": {
+            "home": 0.7816096165801456,
+            "draw": 0.0,
+            "away": 0.21839038341985448,
+            "pick": "Argentina"
+          },
+          "status": "sched"
         }
       ]
     }
