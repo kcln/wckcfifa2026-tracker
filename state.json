@@ -9144,8 +9144,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 1,
-          "clock": "92'",
+          "ag": 2,
+          "clock": "95'",
           "ht": false,
           "events": [
             {
@@ -9159,6 +9159,12 @@
               "player": "Jude Bellingham",
               "team": "England",
               "minute": "45'+2'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jude Bellingham",
+              "team": "England",
+              "minute": "93'"
             }
           ]
         },
@@ -9191,9 +9197,9 @@
       "venue": "Miami (Miami Gardens)",
       "kickoff_utc": "2026-07-11T21:00:00Z",
       "hg": 1,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "92'",
+      "clock": "95'",
       "events": [
         {
           "kind": "goal",
@@ -9206,6 +9212,12 @@
           "player": "Jude Bellingham",
           "team": "England",
           "minute": "45'+2'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jude Bellingham",
+          "team": "England",
+          "minute": "93'"
         }
       ]
     }
@@ -13108,8 +13120,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 1,
-          "clock": "92'",
+          "ag": 2,
+          "clock": "95'",
           "ht": false,
           "events": [
             {
@@ -13123,6 +13135,12 @@
               "player": "Jude Bellingham",
               "team": "England",
               "minute": "45'+2'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jude Bellingham",
+              "team": "England",
+              "minute": "93'"
             }
           ]
         },
