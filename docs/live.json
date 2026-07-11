@@ -1,1 +1,1 @@
-{"live": true, "id": "99", "home": "Norway", "away": "England", "hg": 0, "ag": 0, "status": "LIVE", "clock": "33'", "date": "2026-07-11", "venue": "Miami (Miami Gardens)", "events": []}
+{"live": true, "id": "99", "home": "Norway", "away": "England", "hg": 1, "ag": 0, "status": "LIVE", "clock": "37'", "date": "2026-07-11", "venue": "Miami (Miami Gardens)", "events": [{"kind": "goal", "player": "Andreas Schjelderup", "team": "Norway", "minute": "36'"}]}

@@ -9134,11 +9134,18 @@
             "pick": "England"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "33'",
+          "clock": "37'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Andreas Schjelderup",
+              "team": "Norway",
+              "minute": "36'"
+            }
+          ]
         },
         {
           "id": "100",
@@ -9168,11 +9175,18 @@
       "date": "2026-07-11",
       "venue": "Miami (Miami Gardens)",
       "kickoff_utc": "2026-07-11T21:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "33'",
-      "events": []
+      "clock": "37'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Andreas Schjelderup",
+          "team": "Norway",
+          "minute": "36'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -13072,11 +13086,18 @@
             "pick": "England"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "33'",
+          "clock": "37'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Andreas Schjelderup",
+              "team": "Norway",
+              "minute": "36'"
+            }
+          ]
         },
         {
           "id": "100",
