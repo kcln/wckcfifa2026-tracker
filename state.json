@@ -2451,6 +2451,15 @@
           "key": "mb-2026-07-11",
           "generated_at": "2026-07-11T00:10:17.327859-07:00",
           "kickoff_utc": "2026-07-11T21:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026 — Quarterfinal\nSaturday, July 11\n\nHalf-time:\nNorway 1 - 1 England\nMiami (Miami Gardens), USA\n  ⚽ 36' Andreas Schjelderup (Norway)\n  ⚽ 45'+2' Jude Bellingham (England)\nPrediction: England",
+          "sent": true,
+          "hash": "8b8dedfc4f01a708",
+          "key": "ht-2026-07-11-99",
+          "generated_at": "2026-07-11T14:53:53.081123-07:00",
+          "kickoff_utc": "2026-07-11T21:00:00Z"
         }
       ]
     }
@@ -9136,8 +9145,8 @@
           "status": "live",
           "hg": 1,
           "ag": 1,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -9183,8 +9192,8 @@
       "kickoff_utc": "2026-07-11T21:00:00Z",
       "hg": 1,
       "ag": 1,
-      "status": "LIVE",
-      "clock": "45'+4'",
+      "status": "HT",
+      "clock": "45'+5'",
       "events": [
         {
           "kind": "goal",
@@ -13100,8 +13109,8 @@
           "status": "live",
           "hg": 1,
           "ag": 1,
-          "clock": "45'+4'",
-          "ht": false,
+          "clock": "45'+5'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
