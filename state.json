@@ -9143,9 +9143,9 @@
             "pick": "England"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 1,
           "ag": 1,
-          "clock": "56'",
+          "clock": "59'",
           "ht": false,
           "events": [
             {
@@ -9159,12 +9159,6 @@
               "player": "Jude Bellingham",
               "team": "England",
               "minute": "45'+2'"
-            },
-            {
-              "kind": "goal",
-              "player": "Torbjørn Heggem",
-              "team": "Norway",
-              "minute": "55'"
             }
           ]
         },
@@ -9196,10 +9190,10 @@
       "date": "2026-07-11",
       "venue": "Miami (Miami Gardens)",
       "kickoff_utc": "2026-07-11T21:00:00Z",
-      "hg": 2,
+      "hg": 1,
       "ag": 1,
       "status": "LIVE",
-      "clock": "56'",
+      "clock": "59'",
       "events": [
         {
           "kind": "goal",
@@ -9212,12 +9206,6 @@
           "player": "Jude Bellingham",
           "team": "England",
           "minute": "45'+2'"
-        },
-        {
-          "kind": "goal",
-          "player": "Torbjørn Heggem",
-          "team": "Norway",
-          "minute": "55'"
         }
       ]
     }
@@ -13119,9 +13107,9 @@
             "pick": "England"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 1,
           "ag": 1,
-          "clock": "56'",
+          "clock": "59'",
           "ht": false,
           "events": [
             {
@@ -13135,12 +13123,6 @@
               "player": "Jude Bellingham",
               "team": "England",
               "minute": "45'+2'"
-            },
-            {
-              "kind": "goal",
-              "player": "Torbjørn Heggem",
-              "team": "Norway",
-              "minute": "55'"
             }
           ]
         },
