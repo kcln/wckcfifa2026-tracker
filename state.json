@@ -9135,8 +9135,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 0,
-          "clock": "45'+1'",
+          "ag": 1,
+          "clock": "45'+4'",
           "ht": false,
           "events": [
             {
@@ -9144,6 +9144,12 @@
               "player": "Andreas Schjelderup",
               "team": "Norway",
               "minute": "36'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jude Bellingham",
+              "team": "England",
+              "minute": "45'+2'"
             }
           ]
         },
@@ -9176,15 +9182,21 @@
       "venue": "Miami (Miami Gardens)",
       "kickoff_utc": "2026-07-11T21:00:00Z",
       "hg": 1,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "45'+1'",
+      "clock": "45'+4'",
       "events": [
         {
           "kind": "goal",
           "player": "Andreas Schjelderup",
           "team": "Norway",
           "minute": "36'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jude Bellingham",
+          "team": "England",
+          "minute": "45'+2'"
         }
       ]
     }
@@ -13087,8 +13099,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 0,
-          "clock": "45'+1'",
+          "ag": 1,
+          "clock": "45'+4'",
           "ht": false,
           "events": [
             {
@@ -13096,6 +13108,12 @@
               "player": "Andreas Schjelderup",
               "team": "Norway",
               "minute": "36'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jude Bellingham",
+              "team": "England",
+              "minute": "45'+2'"
             }
           ]
         },
