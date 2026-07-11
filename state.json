@@ -9133,7 +9133,12 @@
             "away": 0.6333556348367458,
             "pick": "England"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "2'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "100",
@@ -9155,7 +9160,21 @@
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "99",
+      "home": "Norway",
+      "away": "England",
+      "date": "2026-07-11",
+      "venue": "Miami (Miami Gardens)",
+      "kickoff_utc": "2026-07-11T21:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "2'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -13052,7 +13071,12 @@
             "away": 0.6333556348367458,
             "pick": "England"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "2'",
+          "ht": false,
+          "events": []
         },
         {
           "id": "100",
