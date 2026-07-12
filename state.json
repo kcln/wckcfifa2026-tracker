@@ -9217,11 +9217,18 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "8'",
+          "clock": "12'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Alexis Mac Allister",
+              "team": "Argentina",
+              "minute": "10'"
+            }
+          ]
         }
       ]
     }
@@ -9234,11 +9241,18 @@
       "date": "2026-07-11",
       "venue": "Kansas City",
       "kickoff_utc": "2026-07-12T01:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "8'",
-      "events": []
+      "clock": "12'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Alexis Mac Allister",
+          "team": "Argentina",
+          "minute": "10'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -13179,11 +13193,18 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "8'",
+          "clock": "12'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Alexis Mac Allister",
+              "team": "Argentina",
+              "minute": "10'"
+            }
+          ]
         }
       ]
     },
