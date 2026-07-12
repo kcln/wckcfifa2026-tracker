@@ -9227,8 +9227,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 0,
-          "clock": "66'",
+          "ag": 1,
+          "clock": "69'",
           "ht": false,
           "events": [
             {
@@ -9236,6 +9236,12 @@
               "player": "Alexis Mac Allister",
               "team": "Argentina",
               "minute": "10'"
+            },
+            {
+              "kind": "goal",
+              "player": "Dan Ndoye",
+              "team": "Switzerland",
+              "minute": "67'"
             }
           ]
         }
@@ -9251,15 +9257,21 @@
       "venue": "Kansas City",
       "kickoff_utc": "2026-07-12T01:00:00Z",
       "hg": 1,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "66'",
+      "clock": "69'",
       "events": [
         {
           "kind": "goal",
           "player": "Alexis Mac Allister",
           "team": "Argentina",
           "minute": "10'"
+        },
+        {
+          "kind": "goal",
+          "player": "Dan Ndoye",
+          "team": "Switzerland",
+          "minute": "67'"
         }
       ]
     }
@@ -13203,8 +13215,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 0,
-          "clock": "66'",
+          "ag": 1,
+          "clock": "69'",
           "ht": false,
           "events": [
             {
@@ -13212,6 +13224,12 @@
               "player": "Alexis Mac Allister",
               "team": "Argentina",
               "minute": "10'"
+            },
+            {
+              "kind": "goal",
+              "player": "Dan Ndoye",
+              "team": "Switzerland",
+              "minute": "67'"
             }
           ]
         }
