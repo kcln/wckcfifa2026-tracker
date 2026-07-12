@@ -9226,9 +9226,9 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "109'",
+          "clock": "113'",
           "ht": false,
           "events": [
             {
@@ -9248,6 +9248,12 @@
               "player": "Breel Embolo",
               "team": "Switzerland",
               "minute": "72'"
+            },
+            {
+              "kind": "goal",
+              "player": "Julián Álvarez",
+              "team": "Argentina",
+              "minute": "112'"
             }
           ]
         }
@@ -9262,10 +9268,10 @@
       "date": "2026-07-11",
       "venue": "Kansas City",
       "kickoff_utc": "2026-07-12T01:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 1,
       "status": "LIVE",
-      "clock": "109'",
+      "clock": "113'",
       "events": [
         {
           "kind": "goal",
@@ -9284,6 +9290,12 @@
           "player": "Breel Embolo",
           "team": "Switzerland",
           "minute": "72'"
+        },
+        {
+          "kind": "goal",
+          "player": "Julián Álvarez",
+          "team": "Argentina",
+          "minute": "112'"
         }
       ]
     }
@@ -13226,9 +13238,9 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 1,
-          "clock": "109'",
+          "clock": "113'",
           "ht": false,
           "events": [
             {
@@ -13248,6 +13260,12 @@
               "player": "Breel Embolo",
               "team": "Switzerland",
               "minute": "72'"
+            },
+            {
+              "kind": "goal",
+              "player": "Julián Álvarez",
+              "team": "Argentina",
+              "minute": "112'"
             }
           ]
         }
