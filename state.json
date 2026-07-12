@@ -2478,6 +2478,24 @@
           "key": "ht-2026-07-11-100",
           "generated_at": "2026-07-11T18:50:47.074769-07:00",
           "kickoff_utc": "2026-07-12T01:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026 — Quarterfinal\nSaturday, July 11\n\nFull time:\n<b>Argentina</b> 3 - 1 Switzerland\n<b>Argentina</b> wins\nKansas City, USA\n  ⚽ 10' Alexis Mac Allister (Argentina)\n  ⚽ 67' Dan Ndoye (Switzerland)\n  ⚽ 112' Julián Álvarez (Argentina)\n  ⚽ 120'+1' Lautaro Martínez (Argentina)\n  🟥 72' Breel Embolo (Switzerland)\nOverall prediction: 59/100 (59.0%)\nPrediction ✓: Argentina",
+          "sent": true,
+          "hash": "1d6c74ff9232cd6b",
+          "key": "pm-2026-07-11-100",
+          "generated_at": "2026-07-11T20:45:27.219587-07:00",
+          "kickoff_utc": "2026-07-12T01:00:00Z"
+        },
+        {
+          "type": "daily_recap",
+          "body": "🏆 FIFA World Cup 2026 — Quarterfinal\nSaturday, July 11\n\nDaily Recap\n\nResults:\n  Norway 1 - 2 <b>England</b>\n  <b>England</b> wins\n  Miami (Miami Gardens), USA\n    ⚽ 36' Andreas Schjelderup (Norway)\n    ⚽ 45'+2' Jude Bellingham (England)\n    ⚽ 93' Jude Bellingham (England)\n  Prediction ✓: England\n\n  <b>Argentina</b> 3 - 1 Switzerland\n  <b>Argentina</b> wins\n  Kansas City, USA\n    ⚽ 10' Alexis Mac Allister (Argentina)\n    ⚽ 67' Dan Ndoye (Switzerland)\n    ⚽ 112' Julián Álvarez (Argentina)\n    ⚽ 120'+1' Lautaro Martínez (Argentina)\n    🟥 72' Breel Embolo (Switzerland)\n  Prediction ✓: Argentina\n\nOverall prediction — today 2/2 (100.0%)  ·  overall 59/100 (59.0%)",
+          "sent": true,
+          "hash": "56b343fc4da945d2",
+          "key": "dr-2026-07-11",
+          "generated_at": "2026-07-11T20:45:27.219914-07:00",
+          "kickoff_utc": "2026-07-11T21:00:00Z"
         }
       ]
     }
@@ -2894,11 +2912,10 @@
   },
   "bracket": {
     "title_odds": {
-      "Spain": 0.2804,
-      "Argentina": 0.285,
-      "France": 0.2264,
-      "England": 0.1885,
-      "Switzerland": 0.0197
+      "Argentina": 0.3569,
+      "England": 0.1649,
+      "Spain": 0.2671,
+      "France": 0.2111
     },
     "advancement": {
       "Belgium": 1.0,
@@ -5286,6 +5303,43 @@
         }
       ],
       "winner": "England"
+    },
+    "100": {
+      "home_goals": 3,
+      "away_goals": 1,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Alexis Mac Allister",
+          "team": "Argentina",
+          "minute": "10'"
+        },
+        {
+          "kind": "goal",
+          "player": "Dan Ndoye",
+          "team": "Switzerland",
+          "minute": "67'"
+        },
+        {
+          "kind": "red",
+          "player": "Breel Embolo",
+          "team": "Switzerland",
+          "minute": "72'"
+        },
+        {
+          "kind": "goal",
+          "player": "Julián Álvarez",
+          "team": "Argentina",
+          "minute": "112'"
+        },
+        {
+          "kind": "goal",
+          "player": "Lautaro Martínez",
+          "team": "Argentina",
+          "minute": "120'+1'"
+        }
+      ],
+      "winner": "Argentina"
     }
   },
   "board": [
@@ -9225,11 +9279,9 @@
             "away": 0.21839038341985448,
             "pick": "Argentina"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 3,
           "ag": 1,
-          "clock": "120'+2'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -9261,57 +9313,14 @@
               "team": "Argentina",
               "minute": "120'+1'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Argentina"
         }
       ]
     }
   ],
-  "live": [
-    {
-      "id": "100",
-      "home": "Argentina",
-      "away": "Switzerland",
-      "date": "2026-07-11",
-      "venue": "Kansas City",
-      "kickoff_utc": "2026-07-12T01:00:00Z",
-      "hg": 3,
-      "ag": 1,
-      "status": "LIVE",
-      "clock": "120'+2'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Alexis Mac Allister",
-          "team": "Argentina",
-          "minute": "10'"
-        },
-        {
-          "kind": "goal",
-          "player": "Dan Ndoye",
-          "team": "Switzerland",
-          "minute": "67'"
-        },
-        {
-          "kind": "red",
-          "player": "Breel Embolo",
-          "team": "Switzerland",
-          "minute": "72'"
-        },
-        {
-          "kind": "goal",
-          "player": "Julián Álvarez",
-          "team": "Argentina",
-          "minute": "112'"
-        },
-        {
-          "kind": "goal",
-          "player": "Lautaro Martínez",
-          "team": "Argentina",
-          "minute": "120'+1'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -13249,11 +13258,9 @@
             "away": 0.21839038341985448,
             "pick": "Argentina"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 3,
           "ag": 1,
-          "clock": "120'+2'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -13285,7 +13292,9 @@
               "team": "Argentina",
               "minute": "120'+1'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Argentina"
         }
       ]
     },
@@ -13317,17 +13326,17 @@
         {
           "id": "102",
           "home": "England",
-          "away": "W100",
+          "away": "Argentina",
           "kickoff_utc": "2026-07-15T19:00:00Z",
           "venue": "Atlanta",
           "stage": "SF",
           "slot_home": "W99",
           "slot_away": "W100",
           "pred": {
-            "home": 0.9525342236676632,
+            "home": 0.3955342436475489,
             "draw": 0.0,
-            "away": 0.04746577633233684,
-            "pick": "England"
+            "away": 0.6044657563524511,
+            "pick": "Argentina"
           },
           "status": "sched"
         }
