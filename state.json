@@ -9228,7 +9228,7 @@
           "status": "live",
           "hg": 2,
           "ag": 1,
-          "clock": "115'",
+          "clock": "118'",
           "ht": false,
           "events": [
             {
@@ -9271,7 +9271,7 @@
       "hg": 2,
       "ag": 1,
       "status": "LIVE",
-      "clock": "115'",
+      "clock": "118'",
       "events": [
         {
           "kind": "goal",
@@ -13240,7 +13240,7 @@
           "status": "live",
           "hg": 2,
           "ag": 1,
-          "clock": "115'",
+          "clock": "118'",
           "ht": false,
           "events": [
             {
