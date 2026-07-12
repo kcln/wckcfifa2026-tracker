@@ -9228,7 +9228,7 @@
           "status": "live",
           "hg": 1,
           "ag": 1,
-          "clock": "71'",
+          "clock": "75'",
           "ht": false,
           "events": [
             {
@@ -9242,6 +9242,12 @@
               "player": "Dan Ndoye",
               "team": "Switzerland",
               "minute": "67'"
+            },
+            {
+              "kind": "red",
+              "player": "Breel Embolo",
+              "team": "Switzerland",
+              "minute": "72'"
             }
           ]
         }
@@ -9259,7 +9265,7 @@
       "hg": 1,
       "ag": 1,
       "status": "LIVE",
-      "clock": "71'",
+      "clock": "75'",
       "events": [
         {
           "kind": "goal",
@@ -9272,6 +9278,12 @@
           "player": "Dan Ndoye",
           "team": "Switzerland",
           "minute": "67'"
+        },
+        {
+          "kind": "red",
+          "player": "Breel Embolo",
+          "team": "Switzerland",
+          "minute": "72'"
         }
       ]
     }
@@ -13216,7 +13228,7 @@
           "status": "live",
           "hg": 1,
           "ag": 1,
-          "clock": "71'",
+          "clock": "75'",
           "ht": false,
           "events": [
             {
@@ -13230,6 +13242,12 @@
               "player": "Dan Ndoye",
               "team": "Switzerland",
               "minute": "67'"
+            },
+            {
+              "kind": "red",
+              "player": "Breel Embolo",
+              "team": "Switzerland",
+              "minute": "72'"
             }
           ]
         }
