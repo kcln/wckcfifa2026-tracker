@@ -9226,9 +9226,9 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 1,
-          "clock": "118'",
+          "clock": "120'+2'",
           "ht": false,
           "events": [
             {
@@ -9254,6 +9254,12 @@
               "player": "Julián Álvarez",
               "team": "Argentina",
               "minute": "112'"
+            },
+            {
+              "kind": "goal",
+              "player": "Lautaro Martínez",
+              "team": "Argentina",
+              "minute": "120'+1'"
             }
           ]
         }
@@ -9268,10 +9274,10 @@
       "date": "2026-07-11",
       "venue": "Kansas City",
       "kickoff_utc": "2026-07-12T01:00:00Z",
-      "hg": 2,
+      "hg": 3,
       "ag": 1,
       "status": "LIVE",
-      "clock": "118'",
+      "clock": "120'+2'",
       "events": [
         {
           "kind": "goal",
@@ -9296,6 +9302,12 @@
           "player": "Julián Álvarez",
           "team": "Argentina",
           "minute": "112'"
+        },
+        {
+          "kind": "goal",
+          "player": "Lautaro Martínez",
+          "team": "Argentina",
+          "minute": "120'+1'"
         }
       ]
     }
@@ -13238,9 +13250,9 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 2,
+          "hg": 3,
           "ag": 1,
-          "clock": "118'",
+          "clock": "120'+2'",
           "ht": false,
           "events": [
             {
@@ -13266,6 +13278,12 @@
               "player": "Julián Álvarez",
               "team": "Argentina",
               "minute": "112'"
+            },
+            {
+              "kind": "goal",
+              "player": "Lautaro Martínez",
+              "team": "Argentina",
+              "minute": "120'+1'"
             }
           ]
         }
