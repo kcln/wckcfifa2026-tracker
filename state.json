@@ -2469,6 +2469,15 @@
           "key": "pm-2026-07-11-99",
           "generated_at": "2026-07-11T16:47:35.784626-07:00",
           "kickoff_utc": "2026-07-11T21:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026 — Quarterfinal\nSaturday, July 11\n\nHalf-time:\nArgentina 1 - 0 Switzerland\nKansas City, USA\n  ⚽ 10' Alexis Mac Allister (Argentina)\nPrediction: Argentina",
+          "sent": true,
+          "hash": "2a53461fb4d668e3",
+          "key": "ht-2026-07-11-100",
+          "generated_at": "2026-07-11T18:50:47.074769-07:00",
+          "kickoff_utc": "2026-07-12T01:00:00Z"
         }
       ]
     }
@@ -9219,8 +9228,8 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "45'+2'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -9243,8 +9252,8 @@
       "kickoff_utc": "2026-07-12T01:00:00Z",
       "hg": 1,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+2'",
+      "status": "HT",
+      "clock": "45'+4'",
       "events": [
         {
           "kind": "goal",
@@ -13195,8 +13204,8 @@
           "status": "live",
           "hg": 1,
           "ag": 0,
-          "clock": "45'+2'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": [
             {
               "kind": "goal",
