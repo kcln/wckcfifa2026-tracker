@@ -2498,6 +2498,20 @@
           "kickoff_utc": "2026-07-11T21:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-07-14",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026 — Semifinal\nTuesday, July 14\n\nMatchday Brief\n\nFrance vs Spain\n  Prediction: Spain\n  France 45.7% · Spain 54.3%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 Dallas (Arlington), USA",
+          "sent": true,
+          "hash": "8163e6bc8dfd3c09",
+          "key": "mb-2026-07-14",
+          "generated_at": "2026-07-14T00:09:00.864554-07:00",
+          "kickoff_utc": "2026-07-14T19:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -9316,6 +9330,28 @@
           ],
           "hit": true,
           "winner": "Argentina"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "matches": [
+        {
+          "id": "101",
+          "home": "France",
+          "away": "Spain",
+          "kickoff_utc": "2026-07-14T19:00:00Z",
+          "venue": "Dallas (Arlington)",
+          "stage": "SF",
+          "slot_home": "W97",
+          "slot_away": "W98",
+          "pred": {
+            "home": 0.45717424056655653,
+            "draw": 0.0,
+            "away": 0.5428257594334434,
+            "pick": "Spain"
+          },
+          "status": "sched"
         }
       ]
     }
