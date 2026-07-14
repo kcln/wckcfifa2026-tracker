@@ -2519,6 +2519,24 @@
           "key": "ht-2026-07-14-101",
           "generated_at": "2026-07-14T12:53:12.693431-07:00",
           "kickoff_utc": "2026-07-14T19:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026 — Semifinal\nTuesday, July 14\n\nFull time:\nFrance 0 - 2 <b>Spain</b>\n<b>Spain</b> wins\nDallas (Arlington), USA\n  ⚽ 22' Mikel Oyarzabal (Spain, pen)\n  ⚽ 58' Pedro Porro (Spain)\nOverall prediction: 60/101 (59.4%)\nPrediction ✓: Spain",
+          "sent": true,
+          "hash": "0d793137759f3fc9",
+          "key": "pm-2026-07-14-101",
+          "generated_at": "2026-07-14T14:01:53.951444-07:00",
+          "kickoff_utc": "2026-07-14T19:00:00Z"
+        },
+        {
+          "type": "daily_recap",
+          "body": "🏆 FIFA World Cup 2026 — Semifinal\nTuesday, July 14\n\nDaily Recap\n\nResults:\n  France 0 - 2 <b>Spain</b>\n  <b>Spain</b> wins\n  Dallas (Arlington), USA\n    ⚽ 22' Mikel Oyarzabal (Spain, pen)\n    ⚽ 58' Pedro Porro (Spain)\n  Prediction ✓: Spain\n\nOverall prediction — today 1/1 (100.0%)  ·  overall 60/101 (59.4%)",
+          "sent": true,
+          "hash": "a595a77af55fa8e1",
+          "key": "dr-2026-07-14",
+          "generated_at": "2026-07-14T14:01:53.951866-07:00",
+          "kickoff_utc": "2026-07-14T19:00:00Z"
         }
       ]
     }
@@ -2935,10 +2953,9 @@
   },
   "bracket": {
     "title_odds": {
-      "Argentina": 0.3569,
-      "England": 0.1649,
-      "Spain": 0.2671,
-      "France": 0.2111
+      "Spain": 0.4811,
+      "Argentina": 0.3478,
+      "England": 0.1711
     },
     "advancement": {
       "Norway": 1.0,
@@ -2977,30 +2994,24 @@
   },
   "season_ended": false,
   "last_result": {
-    "home": "Norway",
-    "away": "England",
-    "home_goals": 1,
+    "home": "France",
+    "away": "Spain",
+    "home_goals": 0,
     "away_goals": 2,
-    "date": "2026-07-11",
-    "venue": "Miami (Miami Gardens)",
+    "date": "2026-07-14",
+    "venue": "Dallas (Arlington)",
     "events": [
       {
-        "kind": "goal",
-        "player": "Andreas Schjelderup",
-        "team": "Norway",
-        "minute": "36'"
+        "kind": "penalty",
+        "player": "Mikel Oyarzabal",
+        "team": "Spain",
+        "minute": "22'"
       },
       {
         "kind": "goal",
-        "player": "Jude Bellingham",
-        "team": "England",
-        "minute": "45'+2'"
-      },
-      {
-        "kind": "goal",
-        "player": "Jude Bellingham",
-        "team": "England",
-        "minute": "93'"
+        "player": "Pedro Porro",
+        "team": "Spain",
+        "minute": "58'"
       }
     ]
   },
@@ -5363,6 +5374,25 @@
         }
       ],
       "winner": "Argentina"
+    },
+    "101": {
+      "home_goals": 0,
+      "away_goals": 2,
+      "events": [
+        {
+          "kind": "penalty",
+          "player": "Mikel Oyarzabal",
+          "team": "Spain",
+          "minute": "22'"
+        },
+        {
+          "kind": "goal",
+          "player": "Pedro Porro",
+          "team": "Spain",
+          "minute": "58'"
+        }
+      ],
+      "winner": "Spain"
     }
   },
   "board": [
@@ -9360,11 +9390,9 @@
             "away": 0.5428257594334434,
             "pick": "Spain"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 2,
-          "clock": "90'+6'",
-          "ht": false,
           "events": [
             {
               "kind": "penalty",
@@ -9378,39 +9406,14 @@
               "team": "Spain",
               "minute": "58'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Spain"
         }
       ]
     }
   ],
-  "live": [
-    {
-      "id": "101",
-      "home": "France",
-      "away": "Spain",
-      "date": "2026-07-14",
-      "venue": "Dallas (Arlington)",
-      "kickoff_utc": "2026-07-14T19:00:00Z",
-      "hg": 0,
-      "ag": 2,
-      "status": "LIVE",
-      "clock": "90'+6'",
-      "events": [
-        {
-          "kind": "penalty",
-          "player": "Mikel Oyarzabal",
-          "team": "Spain",
-          "minute": "22'"
-        },
-        {
-          "kind": "goal",
-          "player": "Pedro Porro",
-          "team": "Spain",
-          "minute": "58'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -13406,11 +13409,9 @@
             "away": 0.5428257594334434,
             "pick": "Spain"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 0,
           "ag": 2,
-          "clock": "90'+6'",
-          "ht": false,
           "events": [
             {
               "kind": "penalty",
@@ -13424,7 +13425,9 @@
               "team": "Spain",
               "minute": "58'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Spain"
         }
       ]
     },
@@ -13455,7 +13458,7 @@
       "matches": [
         {
           "id": "103",
-          "home": "L101",
+          "home": "France",
           "away": "L102",
           "kickoff_utc": "2026-07-18T21:00:00Z",
           "venue": "Miami (Miami Gardens)",
@@ -13463,10 +13466,10 @@
           "slot_home": "L101",
           "slot_away": "L102",
           "pred": {
-            "home": 0.5,
+            "home": 0.9621351633851132,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "L101"
+            "away": 0.03786483661488682,
+            "pick": "France"
           },
           "status": "sched"
         }
@@ -13477,7 +13480,7 @@
       "matches": [
         {
           "id": "104",
-          "home": "W101",
+          "home": "Spain",
           "away": "W102",
           "kickoff_utc": "2026-07-19T19:00:00Z",
           "venue": "New York/New Jersey (East Rutherford)",
@@ -13485,10 +13488,10 @@
           "slot_home": "W101",
           "slot_away": "W102",
           "pred": {
-            "home": 0.5,
+            "home": 0.9774779981032126,
             "draw": 0.0,
-            "away": 0.5,
-            "pick": "W101"
+            "away": 0.022522001896787436,
+            "pick": "Spain"
           },
           "status": "sched"
         }
