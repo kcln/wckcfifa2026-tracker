@@ -9363,8 +9363,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+6'",
-          "ht": true,
+          "clock": "47'",
+          "ht": false,
           "events": [
             {
               "kind": "penalty",
@@ -9387,8 +9387,8 @@
       "kickoff_utc": "2026-07-14T19:00:00Z",
       "hg": 0,
       "ag": 1,
-      "status": "HT",
-      "clock": "45'+6'",
+      "status": "LIVE",
+      "clock": "47'",
       "events": [
         {
           "kind": "penalty",
@@ -13397,8 +13397,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+6'",
-          "ht": true,
+          "clock": "47'",
+          "ht": false,
           "events": [
             {
               "kind": "penalty",
