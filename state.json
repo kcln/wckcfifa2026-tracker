@@ -9362,8 +9362,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "56'",
+          "ag": 2,
+          "clock": "59'",
           "ht": false,
           "events": [
             {
@@ -9371,6 +9371,12 @@
               "player": "Mikel Oyarzabal",
               "team": "Spain",
               "minute": "22'"
+            },
+            {
+              "kind": "goal",
+              "player": "Pedro Porro",
+              "team": "Spain",
+              "minute": "58'"
             }
           ]
         }
@@ -9386,15 +9392,21 @@
       "venue": "Dallas (Arlington)",
       "kickoff_utc": "2026-07-14T19:00:00Z",
       "hg": 0,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "56'",
+      "clock": "59'",
       "events": [
         {
           "kind": "penalty",
           "player": "Mikel Oyarzabal",
           "team": "Spain",
           "minute": "22'"
+        },
+        {
+          "kind": "goal",
+          "player": "Pedro Porro",
+          "team": "Spain",
+          "minute": "58'"
         }
       ]
     }
@@ -13396,8 +13408,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "56'",
+          "ag": 2,
+          "clock": "59'",
           "ht": false,
           "events": [
             {
@@ -13405,6 +13417,12 @@
               "player": "Mikel Oyarzabal",
               "team": "Spain",
               "minute": "22'"
+            },
+            {
+              "kind": "goal",
+              "player": "Pedro Porro",
+              "team": "Spain",
+              "minute": "58'"
             }
           ]
         }
