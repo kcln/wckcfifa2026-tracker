@@ -9351,12 +9351,31 @@
             "away": 0.5428257594334434,
             "pick": "Spain"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "101",
+      "home": "France",
+      "away": "Spain",
+      "date": "2026-07-14",
+      "venue": "Dallas (Arlington)",
+      "kickoff_utc": "2026-07-14T19:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -13352,7 +13371,12 @@
             "away": 0.5428257594334434,
             "pick": "Spain"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "3'",
+          "ht": false,
+          "events": []
         }
       ]
     },
