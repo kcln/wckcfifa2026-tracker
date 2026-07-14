@@ -9354,7 +9354,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+2'",
+          "clock": "45'+5'",
           "ht": false,
           "events": [
             {
@@ -9379,7 +9379,7 @@
       "hg": 0,
       "ag": 1,
       "status": "LIVE",
-      "clock": "45'+2'",
+      "clock": "45'+5'",
       "events": [
         {
           "kind": "penalty",
@@ -13388,7 +13388,7 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+2'",
+          "clock": "45'+5'",
           "ht": false,
           "events": [
             {
