@@ -9353,10 +9353,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "22'",
+          "ag": 1,
+          "clock": "25'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "penalty",
+              "player": "Mikel Oyarzabal",
+              "team": "Spain",
+              "minute": "22'"
+            }
+          ]
         }
       ]
     }
@@ -9370,10 +9377,17 @@
       "venue": "Dallas (Arlington)",
       "kickoff_utc": "2026-07-14T19:00:00Z",
       "hg": 0,
-      "ag": 0,
+      "ag": 1,
       "status": "LIVE",
-      "clock": "22'",
-      "events": []
+      "clock": "25'",
+      "events": [
+        {
+          "kind": "penalty",
+          "player": "Mikel Oyarzabal",
+          "team": "Spain",
+          "minute": "22'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -13373,10 +13387,17 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 0,
-          "clock": "22'",
+          "ag": 1,
+          "clock": "25'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "penalty",
+              "player": "Mikel Oyarzabal",
+              "team": "Spain",
+              "minute": "22'"
+            }
+          ]
         }
       ]
     },
