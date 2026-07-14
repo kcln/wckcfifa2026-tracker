@@ -2510,6 +2510,15 @@
           "key": "mb-2026-07-14",
           "generated_at": "2026-07-14T00:09:00.864554-07:00",
           "kickoff_utc": "2026-07-14T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026 — Semifinal\nTuesday, July 14\n\nHalf-time:\nFrance 0 - 1 Spain\nDallas (Arlington), USA\n  ⚽ 22' Mikel Oyarzabal (Spain, pen)\nPrediction: Spain",
+          "sent": true,
+          "hash": "8764783636e7f808",
+          "key": "ht-2026-07-14-101",
+          "generated_at": "2026-07-14T12:53:12.693431-07:00",
+          "kickoff_utc": "2026-07-14T19:00:00Z"
         }
       ]
     }
@@ -9354,8 +9363,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+5'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": [
             {
               "kind": "penalty",
@@ -9378,8 +9387,8 @@
       "kickoff_utc": "2026-07-14T19:00:00Z",
       "hg": 0,
       "ag": 1,
-      "status": "LIVE",
-      "clock": "45'+5'",
+      "status": "HT",
+      "clock": "45'+6'",
       "events": [
         {
           "kind": "penalty",
@@ -13388,8 +13397,8 @@
           "status": "live",
           "hg": 0,
           "ag": 1,
-          "clock": "45'+5'",
-          "ht": false,
+          "clock": "45'+6'",
+          "ht": true,
           "events": [
             {
               "kind": "penalty",
