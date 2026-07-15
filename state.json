@@ -2560,6 +2560,24 @@
           "key": "ht-2026-07-15-102",
           "generated_at": "2026-07-15T12:49:41.671046-07:00",
           "kickoff_utc": "2026-07-15T19:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026 — Semifinal\nWednesday, July 15\n\nFull time:\nEngland 1 - 2 <b>Argentina</b>\n<b>Argentina</b> wins\nAtlanta, USA\n  ⚽ 55' Anthony Gordon (England)\n  ⚽ 85' Enzo Fernández (Argentina)\n  ⚽ 90'+2' Lautaro Martínez (Argentina)\nOverall prediction: 61/102 (59.8%)\nPrediction ✓: Argentina",
+          "sent": true,
+          "hash": "1fd1d1eb0ee7b744",
+          "key": "pm-2026-07-15-102",
+          "generated_at": "2026-07-15T14:05:12.503977-07:00",
+          "kickoff_utc": "2026-07-15T19:00:00Z"
+        },
+        {
+          "type": "daily_recap",
+          "body": "🏆 FIFA World Cup 2026 — Semifinal\nWednesday, July 15\n\nDaily Recap\n\nResults:\n  England 1 - 2 <b>Argentina</b>\n  <b>Argentina</b> wins\n  Atlanta, USA\n    ⚽ 55' Anthony Gordon (England)\n    ⚽ 85' Enzo Fernández (Argentina)\n    ⚽ 90'+2' Lautaro Martínez (Argentina)\n  Prediction ✓: Argentina\n\nOverall prediction — today 1/1 (100.0%)  ·  overall 61/102 (59.8%)",
+          "sent": true,
+          "hash": "4eeef40245861986",
+          "key": "dr-2026-07-15",
+          "generated_at": "2026-07-15T14:05:12.504457-07:00",
+          "kickoff_utc": "2026-07-15T19:00:00Z"
         }
       ]
     }
@@ -2976,9 +2994,8 @@
   },
   "bracket": {
     "title_odds": {
-      "Spain": 0.4811,
-      "Argentina": 0.3478,
-      "England": 0.1711
+      "Argentina": 0.5744,
+      "Spain": 0.4256
     },
     "advancement": {
       "Portugal": 1.0,
@@ -3017,24 +3034,30 @@
   },
   "season_ended": false,
   "last_result": {
-    "home": "France",
-    "away": "Spain",
-    "home_goals": 0,
+    "home": "England",
+    "away": "Argentina",
+    "home_goals": 1,
     "away_goals": 2,
-    "date": "2026-07-14",
-    "venue": "Dallas (Arlington)",
+    "date": "2026-07-15",
+    "venue": "Atlanta",
     "events": [
       {
-        "kind": "penalty",
-        "player": "Mikel Oyarzabal",
-        "team": "Spain",
-        "minute": "22'"
+        "kind": "goal",
+        "player": "Anthony Gordon",
+        "team": "England",
+        "minute": "55'"
       },
       {
         "kind": "goal",
-        "player": "Pedro Porro",
-        "team": "Spain",
-        "minute": "58'"
+        "player": "Enzo Fernández",
+        "team": "Argentina",
+        "minute": "85'"
+      },
+      {
+        "kind": "goal",
+        "player": "Lautaro Martínez",
+        "team": "Argentina",
+        "minute": "90'+2'"
       }
     ]
   },
@@ -5416,6 +5439,31 @@
         }
       ],
       "winner": "Spain"
+    },
+    "102": {
+      "home_goals": 1,
+      "away_goals": 2,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Anthony Gordon",
+          "team": "England",
+          "minute": "55'"
+        },
+        {
+          "kind": "goal",
+          "player": "Enzo Fernández",
+          "team": "Argentina",
+          "minute": "85'"
+        },
+        {
+          "kind": "goal",
+          "player": "Lautaro Martínez",
+          "team": "Argentina",
+          "minute": "90'+2'"
+        }
+      ],
+      "winner": "Argentina"
     }
   },
   "board": [
@@ -9453,11 +9501,9 @@
             "away": 0.6044657563524511,
             "pick": "Argentina"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 2,
-          "clock": "90'+11'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -9477,45 +9523,14 @@
               "team": "Argentina",
               "minute": "90'+2'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Argentina"
         }
       ]
     }
   ],
-  "live": [
-    {
-      "id": "102",
-      "home": "England",
-      "away": "Argentina",
-      "date": "2026-07-15",
-      "venue": "Atlanta",
-      "kickoff_utc": "2026-07-15T19:00:00Z",
-      "hg": 1,
-      "ag": 2,
-      "status": "LIVE",
-      "clock": "90'+11'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Anthony Gordon",
-          "team": "England",
-          "minute": "55'"
-        },
-        {
-          "kind": "goal",
-          "player": "Enzo Fernández",
-          "team": "Argentina",
-          "minute": "85'"
-        },
-        {
-          "kind": "goal",
-          "player": "Lautaro Martínez",
-          "team": "Argentina",
-          "minute": "90'+2'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -13551,11 +13566,9 @@
             "away": 0.6044657563524511,
             "pick": "Argentina"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 2,
-          "clock": "90'+11'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -13575,7 +13588,9 @@
               "team": "Argentina",
               "minute": "90'+2'"
             }
-          ]
+          ],
+          "hit": true,
+          "winner": "Argentina"
         }
       ]
     },
@@ -13585,16 +13600,16 @@
         {
           "id": "103",
           "home": "France",
-          "away": "L102",
+          "away": "England",
           "kickoff_utc": "2026-07-18T21:00:00Z",
           "venue": "Miami (Miami Gardens)",
           "stage": "3rd",
           "slot_home": "L101",
           "slot_away": "L102",
           "pred": {
-            "home": 0.9621351633851132,
+            "home": 0.5831656606304494,
             "draw": 0.0,
-            "away": 0.03786483661488682,
+            "away": 0.4168343393695506,
             "pick": "France"
           },
           "status": "sched"
@@ -13607,17 +13622,17 @@
         {
           "id": "104",
           "home": "Spain",
-          "away": "W102",
+          "away": "Argentina",
           "kickoff_utc": "2026-07-19T19:00:00Z",
           "venue": "New York/New Jersey (East Rutherford)",
           "stage": "final",
           "slot_home": "W101",
           "slot_away": "W102",
           "pred": {
-            "home": 0.9774779981032126,
+            "home": 0.42823774630490485,
             "draw": 0.0,
-            "away": 0.022522001896787436,
-            "pick": "Spain"
+            "away": 0.5717622536950951,
+            "pick": "Argentina"
           },
           "status": "sched"
         }
