@@ -9455,8 +9455,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 1,
-          "clock": "90'+1'",
+          "ag": 2,
+          "clock": "90'+5'",
           "ht": false,
           "events": [
             {
@@ -9470,6 +9470,12 @@
               "player": "Enzo Fernández",
               "team": "Argentina",
               "minute": "85'"
+            },
+            {
+              "kind": "goal",
+              "player": "Lautaro Martínez",
+              "team": "Argentina",
+              "minute": "90'+2'"
             }
           ]
         }
@@ -9485,9 +9491,9 @@
       "venue": "Atlanta",
       "kickoff_utc": "2026-07-15T19:00:00Z",
       "hg": 1,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "90'+1'",
+      "clock": "90'+5'",
       "events": [
         {
           "kind": "goal",
@@ -9500,6 +9506,12 @@
           "player": "Enzo Fernández",
           "team": "Argentina",
           "minute": "85'"
+        },
+        {
+          "kind": "goal",
+          "player": "Lautaro Martínez",
+          "team": "Argentina",
+          "minute": "90'+2'"
         }
       ]
     }
@@ -13541,8 +13553,8 @@
           },
           "status": "live",
           "hg": 1,
-          "ag": 1,
-          "clock": "90'+1'",
+          "ag": 2,
+          "clock": "90'+5'",
           "ht": false,
           "events": [
             {
@@ -13556,6 +13568,12 @@
               "player": "Enzo Fernández",
               "team": "Argentina",
               "minute": "85'"
+            },
+            {
+              "kind": "goal",
+              "player": "Lautaro Martínez",
+              "team": "Argentina",
+              "minute": "90'+2'"
             }
           ]
         }
