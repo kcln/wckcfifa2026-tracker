@@ -2551,6 +2551,15 @@
           "key": "mb-2026-07-15",
           "generated_at": "2026-07-15T00:02:01.064947-07:00",
           "kickoff_utc": "2026-07-15T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026 — Semifinal\nWednesday, July 15\n\nHalf-time:\nEngland 0 - 0 Argentina\nAtlanta, USA\nPrediction: Argentina",
+          "sent": true,
+          "hash": "32c2bc86c3eb6d86",
+          "key": "ht-2026-07-15-102",
+          "generated_at": "2026-07-15T12:49:41.671046-07:00",
+          "kickoff_utc": "2026-07-15T19:00:00Z"
         }
       ]
     }
@@ -9447,8 +9456,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+1'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": []
         }
       ]
@@ -9464,8 +9473,8 @@
       "kickoff_utc": "2026-07-15T19:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+1'",
+      "status": "HT",
+      "clock": "45'+4'",
       "events": []
     }
   ],
@@ -13507,8 +13516,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+1'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": []
         }
       ]
