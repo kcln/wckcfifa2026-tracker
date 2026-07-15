@@ -9444,12 +9444,31 @@
             "away": 0.6044657563524511,
             "pick": "Argentina"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "2'",
+          "ht": false,
+          "events": []
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "102",
+      "home": "England",
+      "away": "Argentina",
+      "date": "2026-07-15",
+      "venue": "Atlanta",
+      "kickoff_utc": "2026-07-15T19:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "2'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -13485,7 +13504,12 @@
             "away": 0.6044657563524511,
             "pick": "Argentina"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "2'",
+          "ht": false,
+          "events": []
         }
       ]
     },
