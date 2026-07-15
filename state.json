@@ -9454,11 +9454,18 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "54'",
+          "clock": "56'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Anthony Gordon",
+              "team": "England",
+              "minute": "55'"
+            }
+          ]
         }
       ]
     }
@@ -9471,11 +9478,18 @@
       "date": "2026-07-15",
       "venue": "Atlanta",
       "kickoff_utc": "2026-07-15T19:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "54'",
-      "events": []
+      "clock": "56'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Anthony Gordon",
+          "team": "England",
+          "minute": "55'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -13514,11 +13528,18 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "54'",
+          "clock": "56'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Anthony Gordon",
+              "team": "England",
+              "minute": "55'"
+            }
+          ]
         }
       ]
     },
