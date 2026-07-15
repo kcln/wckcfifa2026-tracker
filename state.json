@@ -2539,6 +2539,20 @@
           "kickoff_utc": "2026-07-14T19:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-07-15",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026 — Semifinal\nWednesday, July 15\n\nMatchday Brief\n\nEngland vs Argentina\n  Prediction: Argentina\n  England 39.6% · Argentina 60.4%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 Atlanta, USA",
+          "sent": true,
+          "hash": "12ccda157d3159af",
+          "key": "mb-2026-07-15",
+          "generated_at": "2026-07-15T00:02:01.064947-07:00",
+          "kickoff_utc": "2026-07-15T19:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -9409,6 +9423,28 @@
           ],
           "hit": true,
           "winner": "Spain"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "matches": [
+        {
+          "id": "102",
+          "home": "England",
+          "away": "Argentina",
+          "kickoff_utc": "2026-07-15T19:00:00Z",
+          "venue": "Atlanta",
+          "stage": "SF",
+          "slot_home": "W99",
+          "slot_away": "W100",
+          "pred": {
+            "home": 0.3955342436475489,
+            "draw": 0.0,
+            "away": 0.6044657563524511,
+            "pick": "Argentina"
+          },
+          "status": "sched"
         }
       ]
     }
