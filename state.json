@@ -2592,6 +2592,15 @@
           "key": "mb-2026-07-18",
           "generated_at": "2026-07-18T00:01:13.726377-07:00",
           "kickoff_utc": "2026-07-18T21:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026 — Third Place\nSaturday, July 18\n\nHalf-time:\nFrance 0 - 4 England\nMiami (Miami Gardens), USA\n  ⚽ 3' Declan Rice (England)\n  ⚽ 18' Ezri Konsa (England)\n  ⚽ 37' Bukayo Saka (England)\n  ⚽ 45'+1' Bukayo Saka (England)\nPrediction: France",
+          "sent": true,
+          "hash": "7dab07b87d3fbce9",
+          "key": "ht-2026-07-18-103",
+          "generated_at": "2026-07-18T14:53:08.431095-07:00",
+          "kickoff_utc": "2026-07-18T21:00:00Z"
         }
       ]
     }
@@ -9565,7 +9574,7 @@
           "hg": 0,
           "ag": 4,
           "clock": "45'+5'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
@@ -9606,7 +9615,7 @@
       "kickoff_utc": "2026-07-18T21:00:00Z",
       "hg": 0,
       "ag": 4,
-      "status": "LIVE",
+      "status": "HT",
       "clock": "45'+5'",
       "events": [
         {
@@ -13721,7 +13730,7 @@
           "hg": 0,
           "ag": 4,
           "clock": "45'+5'",
-          "ht": false,
+          "ht": true,
           "events": [
             {
               "kind": "goal",
