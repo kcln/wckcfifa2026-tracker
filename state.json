@@ -9572,8 +9572,8 @@
           },
           "status": "live",
           "hg": 3,
-          "ag": 4,
-          "clock": "86'",
+          "ag": 5,
+          "clock": "89'",
           "ht": false,
           "events": [
             {
@@ -9617,6 +9617,12 @@
               "player": "Kylian Mbappé",
               "team": "France",
               "minute": "66'"
+            },
+            {
+              "kind": "penalty",
+              "player": "Bukayo Saka",
+              "team": "England",
+              "minute": "87'"
             }
           ]
         }
@@ -9632,9 +9638,9 @@
       "venue": "Miami (Miami Gardens)",
       "kickoff_utc": "2026-07-18T21:00:00Z",
       "hg": 3,
-      "ag": 4,
+      "ag": 5,
       "status": "LIVE",
-      "clock": "86'",
+      "clock": "89'",
       "events": [
         {
           "kind": "goal",
@@ -9677,6 +9683,12 @@
           "player": "Kylian Mbappé",
           "team": "France",
           "minute": "66'"
+        },
+        {
+          "kind": "penalty",
+          "player": "Bukayo Saka",
+          "team": "England",
+          "minute": "87'"
         }
       ]
     }
@@ -13764,8 +13776,8 @@
           },
           "status": "live",
           "hg": 3,
-          "ag": 4,
-          "clock": "86'",
+          "ag": 5,
+          "clock": "89'",
           "ht": false,
           "events": [
             {
@@ -13809,6 +13821,12 @@
               "player": "Kylian Mbappé",
               "team": "France",
               "minute": "66'"
+            },
+            {
+              "kind": "penalty",
+              "player": "Bukayo Saka",
+              "team": "England",
+              "minute": "87'"
             }
           ]
         }
