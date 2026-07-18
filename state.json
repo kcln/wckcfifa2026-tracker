@@ -9563,8 +9563,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 2,
-          "clock": "34'",
+          "ag": 3,
+          "clock": "37'",
           "ht": false,
           "events": [
             {
@@ -9578,6 +9578,12 @@
               "player": "Ezri Konsa",
               "team": "England",
               "minute": "18'"
+            },
+            {
+              "kind": "goal",
+              "player": "Bukayo Saka",
+              "team": "England",
+              "minute": "37'"
             }
           ]
         }
@@ -9593,9 +9599,9 @@
       "venue": "Miami (Miami Gardens)",
       "kickoff_utc": "2026-07-18T21:00:00Z",
       "hg": 0,
-      "ag": 2,
+      "ag": 3,
       "status": "LIVE",
-      "clock": "34'",
+      "clock": "37'",
       "events": [
         {
           "kind": "goal",
@@ -9608,6 +9614,12 @@
           "player": "Ezri Konsa",
           "team": "England",
           "minute": "18'"
+        },
+        {
+          "kind": "goal",
+          "player": "Bukayo Saka",
+          "team": "England",
+          "minute": "37'"
         }
       ]
     }
@@ -13695,8 +13707,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 2,
-          "clock": "34'",
+          "ag": 3,
+          "clock": "37'",
           "ht": false,
           "events": [
             {
@@ -13710,6 +13722,12 @@
               "player": "Ezri Konsa",
               "team": "England",
               "minute": "18'"
+            },
+            {
+              "kind": "goal",
+              "player": "Bukayo Saka",
+              "team": "England",
+              "minute": "37'"
             }
           ]
         }
