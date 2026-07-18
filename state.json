@@ -9561,12 +9561,45 @@
             "away": 0.4168343393695506,
             "pick": "France"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 1,
+          "clock": "3'",
+          "ht": false,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Declan Rice",
+              "team": "England",
+              "minute": "3'"
+            }
+          ]
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "103",
+      "home": "France",
+      "away": "England",
+      "date": "2026-07-18",
+      "venue": "Miami (Miami Gardens)",
+      "kickoff_utc": "2026-07-18T21:00:00Z",
+      "hg": 0,
+      "ag": 1,
+      "status": "LIVE",
+      "clock": "3'",
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Declan Rice",
+          "team": "England",
+          "minute": "3'"
+        }
+      ]
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -13648,7 +13681,19 @@
             "away": 0.4168343393695506,
             "pick": "France"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 1,
+          "clock": "3'",
+          "ht": false,
+          "events": [
+            {
+              "kind": "goal",
+              "player": "Declan Rice",
+              "team": "England",
+              "minute": "3'"
+            }
+          ]
         }
       ]
     },
