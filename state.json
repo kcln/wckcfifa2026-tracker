@@ -2580,6 +2580,20 @@
           "kickoff_utc": "2026-07-15T19:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-07-18",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026 — Third Place\nSaturday, July 18\n\nMatchday Brief\n\nFrance vs England\n  Prediction: France\n  France 58.3% · England 41.7%\n  🕐 2:00pm PT / 4:00pm CT / 5:00pm ET / 2:30am IST (+1d)\n  📍 Miami (Miami Gardens), USA",
+          "sent": true,
+          "hash": "44ae1e37db7273ef",
+          "key": "mb-2026-07-18",
+          "generated_at": "2026-07-18T00:01:13.726377-07:00",
+          "kickoff_utc": "2026-07-18T21:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -9526,6 +9540,28 @@
           ],
           "hit": true,
           "winner": "Argentina"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "matches": [
+        {
+          "id": "103",
+          "home": "France",
+          "away": "England",
+          "kickoff_utc": "2026-07-18T21:00:00Z",
+          "venue": "Miami (Miami Gardens)",
+          "stage": "3rd",
+          "slot_home": "L101",
+          "slot_away": "L102",
+          "pred": {
+            "home": 0.5831656606304494,
+            "draw": 0.0,
+            "away": 0.4168343393695506,
+            "pick": "France"
+          },
+          "status": "sched"
         }
       ]
     }
