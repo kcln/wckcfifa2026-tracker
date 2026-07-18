@@ -2601,6 +2601,24 @@
           "key": "ht-2026-07-18-103",
           "generated_at": "2026-07-18T14:53:08.431095-07:00",
           "kickoff_utc": "2026-07-18T21:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026 — Third Place\nSaturday, July 18\n\nFull time:\nFrance 4 - 6 <b>England</b>\n<b>England</b> wins\nMiami (Miami Gardens), USA\n  ⚽ 3' Declan Rice (England)\n  ⚽ 18' Ezri Konsa (England)\n  ⚽ 37' Bukayo Saka (England)\n  ⚽ 45'+1' Bukayo Saka (England)\n  ⚽ 48' Kylian Mbappé (France)\n  ⚽ 54' Bradley Barcola (France)\n  ⚽ 66' Kylian Mbappé (France)\n  ⚽ 87' Bukayo Saka (England, pen)\n  ⚽ 90'+6' Ousmane Dembélé (France)\n  ⚽ 90'+8' Jude Bellingham (England)\nOverall prediction: 61/103 (59.2%)\nPrediction ✗: France",
+          "sent": true,
+          "hash": "a2a535bcd79cd51e",
+          "key": "pm-2026-07-18-103",
+          "generated_at": "2026-07-18T16:04:48.346147-07:00",
+          "kickoff_utc": "2026-07-18T21:00:00Z"
+        },
+        {
+          "type": "daily_recap",
+          "body": "🏆 FIFA World Cup 2026 — Third Place\nSaturday, July 18\n\nDaily Recap\n\nResults:\n  France 4 - 6 <b>England</b>\n  <b>England</b> wins\n  Miami (Miami Gardens), USA\n    ⚽ 3' Declan Rice (England)\n    ⚽ 18' Ezri Konsa (England)\n    ⚽ 37' Bukayo Saka (England)\n    ⚽ 45'+1' Bukayo Saka (England)\n    ⚽ 48' Kylian Mbappé (France)\n    ⚽ 54' Bradley Barcola (France)\n    ⚽ 66' Kylian Mbappé (France)\n    ⚽ 87' Bukayo Saka (England, pen)\n    ⚽ 90'+6' Ousmane Dembélé (France)\n    ⚽ 90'+8' Jude Bellingham (England)\n  Prediction ✗: France\n\nOverall prediction — today 0/1 (0.0%)  ·  overall 61/103 (59.2%)",
+          "sent": true,
+          "hash": "3ecc38b8a2c0d899",
+          "key": "dr-2026-07-18",
+          "generated_at": "2026-07-18T16:04:48.346533-07:00",
+          "kickoff_utc": "2026-07-18T21:00:00Z"
         }
       ]
     }
@@ -3017,8 +3035,8 @@
   },
   "bracket": {
     "title_odds": {
-      "Argentina": 0.5744,
-      "Spain": 0.4256
+      "Spain": 0.4235,
+      "Argentina": 0.5765
     },
     "advancement": {
       "Croatia": 1.0,
@@ -3057,30 +3075,72 @@
   },
   "season_ended": false,
   "last_result": {
-    "home": "England",
-    "away": "Argentina",
-    "home_goals": 1,
-    "away_goals": 2,
-    "date": "2026-07-15",
-    "venue": "Atlanta",
+    "home": "France",
+    "away": "England",
+    "home_goals": 4,
+    "away_goals": 6,
+    "date": "2026-07-18",
+    "venue": "Miami (Miami Gardens)",
     "events": [
       {
         "kind": "goal",
-        "player": "Anthony Gordon",
+        "player": "Declan Rice",
         "team": "England",
-        "minute": "55'"
+        "minute": "3'"
       },
       {
         "kind": "goal",
-        "player": "Enzo Fernández",
-        "team": "Argentina",
-        "minute": "85'"
+        "player": "Ezri Konsa",
+        "team": "England",
+        "minute": "18'"
       },
       {
         "kind": "goal",
-        "player": "Lautaro Martínez",
-        "team": "Argentina",
-        "minute": "90'+2'"
+        "player": "Bukayo Saka",
+        "team": "England",
+        "minute": "37'"
+      },
+      {
+        "kind": "goal",
+        "player": "Bukayo Saka",
+        "team": "England",
+        "minute": "45'+1'"
+      },
+      {
+        "kind": "goal",
+        "player": "Kylian Mbappé",
+        "team": "France",
+        "minute": "48'"
+      },
+      {
+        "kind": "goal",
+        "player": "Bradley Barcola",
+        "team": "France",
+        "minute": "54'"
+      },
+      {
+        "kind": "goal",
+        "player": "Kylian Mbappé",
+        "team": "France",
+        "minute": "66'"
+      },
+      {
+        "kind": "penalty",
+        "player": "Bukayo Saka",
+        "team": "England",
+        "minute": "87'"
+      },
+      {
+        "kind": "goal",
+        "player": "Ousmane Dembélé",
+        "team": "France",
+        "minute": "90'+6'"
+      },
+      {
+        "kind": "goal",
+        "player": "Jude Bellingham",
+        "team": "England",
+        "minute": "90'+8'"
       }
     ]
   },
@@ -5487,6 +5547,73 @@
         }
       ],
       "winner": "Argentina"
+    },
+    "103": {
+      "home_goals": 4,
+      "away_goals": 6,
+      "events": [
+        {
+          "kind": "goal",
+          "player": "Declan Rice",
+          "team": "England",
+          "minute": "3'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ezri Konsa",
+          "team": "England",
+          "minute": "18'"
+        },
+        {
+          "kind": "goal",
+          "player": "Bukayo Saka",
+          "team": "England",
+          "minute": "37'"
+        },
+        {
+          "kind": "goal",
+          "player": "Bukayo Saka",
+          "team": "England",
+          "minute": "45'+1'"
+        },
+        {
+          "kind": "goal",
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "minute": "48'"
+        },
+        {
+          "kind": "goal",
+          "player": "Bradley Barcola",
+          "team": "France",
+          "minute": "54'"
+        },
+        {
+          "kind": "goal",
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "minute": "66'"
+        },
+        {
+          "kind": "penalty",
+          "player": "Bukayo Saka",
+          "team": "England",
+          "minute": "87'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ousmane Dembélé",
+          "team": "France",
+          "minute": "90'+6'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jude Bellingham",
+          "team": "England",
+          "minute": "90'+8'"
+        }
+      ],
+      "winner": "England"
     }
   },
   "board": [
@@ -9570,11 +9697,9 @@
             "away": 0.4168343393695506,
             "pick": "France"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 4,
           "ag": 6,
-          "clock": "90'+8'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -9636,87 +9761,14 @@
               "team": "England",
               "minute": "90'+8'"
             }
-          ]
+          ],
+          "hit": false,
+          "winner": "England"
         }
       ]
     }
   ],
-  "live": [
-    {
-      "id": "103",
-      "home": "France",
-      "away": "England",
-      "date": "2026-07-18",
-      "venue": "Miami (Miami Gardens)",
-      "kickoff_utc": "2026-07-18T21:00:00Z",
-      "hg": 4,
-      "ag": 6,
-      "status": "LIVE",
-      "clock": "90'+8'",
-      "events": [
-        {
-          "kind": "goal",
-          "player": "Declan Rice",
-          "team": "England",
-          "minute": "3'"
-        },
-        {
-          "kind": "goal",
-          "player": "Ezri Konsa",
-          "team": "England",
-          "minute": "18'"
-        },
-        {
-          "kind": "goal",
-          "player": "Bukayo Saka",
-          "team": "England",
-          "minute": "37'"
-        },
-        {
-          "kind": "goal",
-          "player": "Bukayo Saka",
-          "team": "England",
-          "minute": "45'+1'"
-        },
-        {
-          "kind": "goal",
-          "player": "Kylian Mbappé",
-          "team": "France",
-          "minute": "48'"
-        },
-        {
-          "kind": "goal",
-          "player": "Bradley Barcola",
-          "team": "France",
-          "minute": "54'"
-        },
-        {
-          "kind": "goal",
-          "player": "Kylian Mbappé",
-          "team": "France",
-          "minute": "66'"
-        },
-        {
-          "kind": "penalty",
-          "player": "Bukayo Saka",
-          "team": "England",
-          "minute": "87'"
-        },
-        {
-          "kind": "goal",
-          "player": "Ousmane Dembélé",
-          "team": "France",
-          "minute": "90'+6'"
-        },
-        {
-          "kind": "goal",
-          "player": "Jude Bellingham",
-          "team": "England",
-          "minute": "90'+8'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -13798,11 +13850,9 @@
             "away": 0.4168343393695506,
             "pick": "France"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 4,
           "ag": 6,
-          "clock": "90'+8'",
-          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -13864,7 +13914,9 @@
               "team": "England",
               "minute": "90'+8'"
             }
-          ]
+          ],
+          "hit": false,
+          "winner": "England"
         }
       ]
     },
