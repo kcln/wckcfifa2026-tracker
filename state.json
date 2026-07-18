@@ -9563,8 +9563,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "19'",
+          "ag": 2,
+          "clock": "21'",
           "ht": false,
           "events": [
             {
@@ -9572,6 +9572,12 @@
               "player": "Declan Rice",
               "team": "England",
               "minute": "3'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ezri Konsa",
+              "team": "England",
+              "minute": "18'"
             }
           ]
         }
@@ -9587,15 +9593,21 @@
       "venue": "Miami (Miami Gardens)",
       "kickoff_utc": "2026-07-18T21:00:00Z",
       "hg": 0,
-      "ag": 1,
+      "ag": 2,
       "status": "LIVE",
-      "clock": "19'",
+      "clock": "21'",
       "events": [
         {
           "kind": "goal",
           "player": "Declan Rice",
           "team": "England",
           "minute": "3'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ezri Konsa",
+          "team": "England",
+          "minute": "18'"
         }
       ]
     }
@@ -13683,8 +13695,8 @@
           },
           "status": "live",
           "hg": 0,
-          "ag": 1,
-          "clock": "19'",
+          "ag": 2,
+          "clock": "21'",
           "ht": false,
           "events": [
             {
@@ -13692,6 +13704,12 @@
               "player": "Declan Rice",
               "team": "England",
               "minute": "3'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ezri Konsa",
+              "team": "England",
+              "minute": "18'"
             }
           ]
         }
