@@ -9571,10 +9571,10 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 4,
-          "clock": "45'+5'",
-          "ht": true,
+          "clock": "49'",
+          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -9599,6 +9599,12 @@
               "player": "Bukayo Saka",
               "team": "England",
               "minute": "45'+1'"
+            },
+            {
+              "kind": "goal",
+              "player": "Kylian Mbappé",
+              "team": "France",
+              "minute": "48'"
             }
           ]
         }
@@ -9613,10 +9619,10 @@
       "date": "2026-07-18",
       "venue": "Miami (Miami Gardens)",
       "kickoff_utc": "2026-07-18T21:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 4,
-      "status": "HT",
-      "clock": "45'+5'",
+      "status": "LIVE",
+      "clock": "49'",
       "events": [
         {
           "kind": "goal",
@@ -9641,6 +9647,12 @@
           "player": "Bukayo Saka",
           "team": "England",
           "minute": "45'+1'"
+        },
+        {
+          "kind": "goal",
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "minute": "48'"
         }
       ]
     }
@@ -13727,10 +13739,10 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 4,
-          "clock": "45'+5'",
-          "ht": true,
+          "clock": "49'",
+          "ht": false,
           "events": [
             {
               "kind": "goal",
@@ -13755,6 +13767,12 @@
               "player": "Bukayo Saka",
               "team": "England",
               "minute": "45'+1'"
+            },
+            {
+              "kind": "goal",
+              "player": "Kylian Mbappé",
+              "team": "France",
+              "minute": "48'"
             }
           ]
         }
