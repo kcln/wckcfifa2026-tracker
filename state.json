@@ -9571,9 +9571,9 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 3,
-          "ag": 5,
-          "clock": "90'+5'",
+          "hg": 4,
+          "ag": 6,
+          "clock": "90'+8'",
           "ht": false,
           "events": [
             {
@@ -9623,6 +9623,18 @@
               "player": "Bukayo Saka",
               "team": "England",
               "minute": "87'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ousmane Dembélé",
+              "team": "France",
+              "minute": "90'+6'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jude Bellingham",
+              "team": "England",
+              "minute": "90'+8'"
             }
           ]
         }
@@ -9637,10 +9649,10 @@
       "date": "2026-07-18",
       "venue": "Miami (Miami Gardens)",
       "kickoff_utc": "2026-07-18T21:00:00Z",
-      "hg": 3,
-      "ag": 5,
+      "hg": 4,
+      "ag": 6,
       "status": "LIVE",
-      "clock": "90'+5'",
+      "clock": "90'+8'",
       "events": [
         {
           "kind": "goal",
@@ -9689,6 +9701,18 @@
           "player": "Bukayo Saka",
           "team": "England",
           "minute": "87'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ousmane Dembélé",
+          "team": "France",
+          "minute": "90'+6'"
+        },
+        {
+          "kind": "goal",
+          "player": "Jude Bellingham",
+          "team": "England",
+          "minute": "90'+8'"
         }
       ]
     }
@@ -13775,9 +13799,9 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 3,
-          "ag": 5,
-          "clock": "90'+5'",
+          "hg": 4,
+          "ag": 6,
+          "clock": "90'+8'",
           "ht": false,
           "events": [
             {
@@ -13827,6 +13851,18 @@
               "player": "Bukayo Saka",
               "team": "England",
               "minute": "87'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ousmane Dembélé",
+              "team": "France",
+              "minute": "90'+6'"
+            },
+            {
+              "kind": "goal",
+              "player": "Jude Bellingham",
+              "team": "England",
+              "minute": "90'+8'"
             }
           ]
         }
