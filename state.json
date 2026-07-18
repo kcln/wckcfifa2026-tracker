@@ -9571,9 +9571,9 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 4,
-          "clock": "52'",
+          "clock": "55'",
           "ht": false,
           "events": [
             {
@@ -9605,6 +9605,12 @@
               "player": "Kylian Mbappé",
               "team": "France",
               "minute": "48'"
+            },
+            {
+              "kind": "goal",
+              "player": "Bradley Barcola",
+              "team": "France",
+              "minute": "54'"
             }
           ]
         }
@@ -9619,10 +9625,10 @@
       "date": "2026-07-18",
       "venue": "Miami (Miami Gardens)",
       "kickoff_utc": "2026-07-18T21:00:00Z",
-      "hg": 1,
+      "hg": 2,
       "ag": 4,
       "status": "LIVE",
-      "clock": "52'",
+      "clock": "55'",
       "events": [
         {
           "kind": "goal",
@@ -9653,6 +9659,12 @@
           "player": "Kylian Mbappé",
           "team": "France",
           "minute": "48'"
+        },
+        {
+          "kind": "goal",
+          "player": "Bradley Barcola",
+          "team": "France",
+          "minute": "54'"
         }
       ]
     }
@@ -13739,9 +13751,9 @@
             "pick": "France"
           },
           "status": "live",
-          "hg": 1,
+          "hg": 2,
           "ag": 4,
-          "clock": "52'",
+          "clock": "55'",
           "ht": false,
           "events": [
             {
@@ -13773,6 +13785,12 @@
               "player": "Kylian Mbappé",
               "team": "France",
               "minute": "48'"
+            },
+            {
+              "kind": "goal",
+              "player": "Bradley Barcola",
+              "team": "France",
+              "minute": "54'"
             }
           ]
         }
