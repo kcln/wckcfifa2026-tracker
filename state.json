@@ -3133,12 +3133,6 @@
         "player": "Ferran Torres",
         "team": "Spain",
         "minute": "106'"
-      },
-      {
-        "kind": "red",
-        "player": "Leandro Paredes",
-        "team": "Argentina",
-        "minute": "120'+6'"
       }
     ]
   },
@@ -5628,12 +5622,6 @@
           "player": "Ferran Torres",
           "team": "Spain",
           "minute": "106'"
-        },
-        {
-          "kind": "red",
-          "player": "Leandro Paredes",
-          "team": "Argentina",
-          "minute": "120'+6'"
         }
       ],
       "winner": "Spain"
@@ -9823,12 +9811,6 @@
               "player": "Ferran Torres",
               "team": "Spain",
               "minute": "106'"
-            },
-            {
-              "kind": "red",
-              "player": "Leandro Paredes",
-              "team": "Argentina",
-              "minute": "120'+6'"
             }
           ],
           "hit": false,
@@ -14022,12 +14004,6 @@
               "player": "Ferran Torres",
               "team": "Spain",
               "minute": "106'"
-            },
-            {
-              "kind": "red",
-              "player": "Leandro Paredes",
-              "team": "Argentina",
-              "minute": "120'+6'"
             }
           ],
           "hit": false,
