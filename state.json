@@ -9799,12 +9799,31 @@
             "away": 0.5717622536950951,
             "pick": "Argentina"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         }
       ]
     }
   ],
-  "live": [],
+  "live": [
+    {
+      "id": "104",
+      "home": "Spain",
+      "away": "Argentina",
+      "date": "2026-07-19",
+      "venue": "New York/New Jersey (East Rutherford)",
+      "kickoff_utc": "2026-07-19T19:00:00Z",
+      "hg": 0,
+      "ag": 0,
+      "status": "LIVE",
+      "clock": "1'",
+      "events": []
+    }
+  ],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -13974,7 +13993,12 @@
             "away": 0.5717622536950951,
             "pick": "Argentina"
           },
-          "status": "sched"
+          "status": "live",
+          "hg": 0,
+          "ag": 0,
+          "clock": "1'",
+          "ht": false,
+          "events": []
         }
       ]
     }
