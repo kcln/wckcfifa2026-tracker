@@ -119,10 +119,56 @@ def build_announcement() -> str:
     ])
 
 
+def build_farewell() -> str:
+    """Tournament-closing broadcast: champion, official awards, model record.
+    Numbers verified against state.json (61/104 overall, 22/30 knockout) and
+    FIFA's announced award winners on 2026-07-19."""
+    return "\n".join([
+        "🏆 <b>FIFA World Cup 2026 — That's a wrap!</b>",
+        "",
+        "🇪🇸 <b>Spain are world champions!</b> Ferran Torres's goal beat "
+        "Argentina 1–0 in today's final in New York.",
+        "",
+        "📅 <b>The run:</b> 39 days, 104 matches, June 11 → July 19. Spain "
+        "shut out France 2–0 in one semifinal, Argentina edged England 2–1 "
+        "in the other — and England took third in an absurd 6–4 goal-fest "
+        "over France.",
+        "",
+        "🏅 <b>The individual honours:</b>",
+        "• Golden Ball: Rodrigo \"Rodri\" Hernández 🇪🇸",
+        "• Golden Boot: Kylian Mbappé 🇫🇷 — 10 goals, now the all-time World "
+        "Cup top scorer with 22",
+        "• Golden Glove: Unai Simón 🇪🇸 — a record 650 minutes without "
+        "conceding",
+        "• Young Player: Pau Cubarsí 🇪🇸",
+        "• Fair Play: Netherlands 🇳🇱",
+        "",
+        "🔮 <b>How the prediction engine finished:</b>",
+        "• Overall: <b>61/104</b> correct (59%)",
+        "• Group stage: 39/72",
+        "• Knockout rounds: <b>22/30</b> (73%) — including a perfect "
+        "quarterfinal (4/4) and semifinal (2/2) sweep",
+        "• The final? We picked Argentina. Spain had other plans. ⚽",
+        "",
+        "🙏 Thanks for following along — every matchday brief, half-time "
+        "ping, result and recap. This was the tracker's first tournament "
+        "and you were part of it.",
+        "",
+        "📪 <b>This is the tracker's final message.</b> Broadcasts stop "
+        "today and the bot goes offline. The live tracker archive stays up "
+        "if you ever want to relive the run.",
+        "",
+        "<b>See you in 2030 for the next World Cup coverage.</b> 👋",
+    ])
+
+
 def main() -> None:
     state = json.loads((ROOT / "state.json").read_text())
 
-    if "--brief" in sys.argv:
+    if "--farewell" in sys.argv:
+        # Tournament-closing message; KC-only unless --broadcast is passed.
+        msgs = [("farewell", build_farewell())]
+    elif "--brief" in sys.argv:
         # Today's matchday brief alone — previews header/format changes.
         msgs = [("brief", build_brief(state))]
     elif "--announce" in sys.argv:
