@@ -1,9 +1,9 @@
 {
-  "run_date": "2026-07-18",
-  "n_tournament_matches": 102,
-  "n_gate": 102,
-  "frozen_logloss": 0.83674,
-  "retrained_logloss": 0.86534,
+  "run_date": "2026-07-19",
+  "n_tournament_matches": 103,
+  "n_gate": 103,
+  "frozen_logloss": 0.84164,
+  "retrained_logloss": 0.86742,
   "gate_passed": false,
   "features": [
     "elo_diff",
