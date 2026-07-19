@@ -9809,9 +9809,9 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "105'+3'",
+          "clock": "109'",
           "ht": false,
           "events": [
             {
@@ -9819,6 +9819,12 @@
               "player": "Enzo Fernández",
               "team": "Argentina",
               "minute": "90'+3'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ferran Torres",
+              "team": "Spain",
+              "minute": "106'"
             }
           ]
         }
@@ -9833,16 +9839,22 @@
       "date": "2026-07-19",
       "venue": "New York/New Jersey (East Rutherford)",
       "kickoff_utc": "2026-07-19T19:00:00Z",
-      "hg": 0,
+      "hg": 1,
       "ag": 0,
       "status": "LIVE",
-      "clock": "105'+3'",
+      "clock": "109'",
       "events": [
         {
           "kind": "red",
           "player": "Enzo Fernández",
           "team": "Argentina",
           "minute": "90'+3'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ferran Torres",
+          "team": "Spain",
+          "minute": "106'"
         }
       ]
     }
@@ -14017,9 +14029,9 @@
             "pick": "Argentina"
           },
           "status": "live",
-          "hg": 0,
+          "hg": 1,
           "ag": 0,
-          "clock": "105'+3'",
+          "clock": "109'",
           "ht": false,
           "events": [
             {
@@ -14027,6 +14039,12 @@
               "player": "Enzo Fernández",
               "team": "Argentina",
               "minute": "90'+3'"
+            },
+            {
+              "kind": "goal",
+              "player": "Ferran Torres",
+              "team": "Spain",
+              "minute": "106'"
             }
           ]
         }
