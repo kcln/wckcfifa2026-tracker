@@ -2642,6 +2642,24 @@
           "key": "ht-2026-07-19-104",
           "generated_at": "2026-07-19T12:56:48.197169-07:00",
           "kickoff_utc": "2026-07-19T19:00:00Z"
+        },
+        {
+          "type": "post_match",
+          "body": "🏆 FIFA World Cup 2026 — Final\nSunday, July 19\n\nFull time:\n<b>Spain</b> 1 - 0 Argentina\n<b>Spain</b> wins\nNew York/New Jersey (East Rutherford), USA\n  ⚽ 106' Ferran Torres (Spain)\n  🟥 90'+3' Enzo Fernández (Argentina)\n  🟥 120'+6' Leandro Paredes (Argentina)\nOverall prediction: 61/104 (58.7%)\nPrediction ✗: Argentina",
+          "sent": true,
+          "hash": "55420535a398c1d8",
+          "key": "pm-2026-07-19-104",
+          "generated_at": "2026-07-19T15:08:53.984917-07:00",
+          "kickoff_utc": "2026-07-19T19:00:00Z"
+        },
+        {
+          "type": "daily_recap",
+          "body": "🏆 FIFA World Cup 2026 — Final\nSunday, July 19\n\nDaily Recap\n\nResults:\n  <b>Spain</b> 1 - 0 Argentina\n  <b>Spain</b> wins\n  New York/New Jersey (East Rutherford), USA\n    ⚽ 106' Ferran Torres (Spain)\n    🟥 90'+3' Enzo Fernández (Argentina)\n    🟥 120'+6' Leandro Paredes (Argentina)\n  Prediction ✗: Argentina\n\nOverall prediction — today 0/1 (0.0%)  ·  overall 61/104 (58.7%)",
+          "sent": true,
+          "hash": "aac7773edd07c283",
+          "key": "dr-2026-07-19",
+          "generated_at": "2026-07-19T15:08:53.985354-07:00",
+          "kickoff_utc": "2026-07-19T19:00:00Z"
         }
       ]
     }
@@ -3058,8 +3076,7 @@
   },
   "bracket": {
     "title_odds": {
-      "Spain": 0.4235,
-      "Argentina": 0.5765
+      "Spain": 1.0
     },
     "advancement": {
       "Bosnia & Herzegovina": 1.0,
@@ -3098,72 +3115,30 @@
   },
   "season_ended": false,
   "last_result": {
-    "home": "France",
-    "away": "England",
-    "home_goals": 4,
-    "away_goals": 6,
-    "date": "2026-07-18",
-    "venue": "Miami (Miami Gardens)",
+    "home": "Spain",
+    "away": "Argentina",
+    "home_goals": 1,
+    "away_goals": 0,
+    "date": "2026-07-19",
+    "venue": "New York/New Jersey (East Rutherford)",
     "events": [
       {
-        "kind": "goal",
-        "player": "Declan Rice",
-        "team": "England",
-        "minute": "3'"
+        "kind": "red",
+        "player": "Enzo Fernández",
+        "team": "Argentina",
+        "minute": "90'+3'"
       },
       {
         "kind": "goal",
-        "player": "Ezri Konsa",
-        "team": "England",
-        "minute": "18'"
+        "player": "Ferran Torres",
+        "team": "Spain",
+        "minute": "106'"
       },
       {
-        "kind": "goal",
-        "player": "Bukayo Saka",
-        "team": "England",
-        "minute": "37'"
-      },
-      {
-        "kind": "goal",
-        "player": "Bukayo Saka",
-        "team": "England",
-        "minute": "45'+1'"
-      },
-      {
-        "kind": "goal",
-        "player": "Kylian Mbappé",
-        "team": "France",
-        "minute": "48'"
-      },
-      {
-        "kind": "goal",
-        "player": "Bradley Barcola",
-        "team": "France",
-        "minute": "54'"
-      },
-      {
-        "kind": "goal",
-        "player": "Kylian Mbappé",
-        "team": "France",
-        "minute": "66'"
-      },
-      {
-        "kind": "penalty",
-        "player": "Bukayo Saka",
-        "team": "England",
-        "minute": "87'"
-      },
-      {
-        "kind": "goal",
-        "player": "Ousmane Dembélé",
-        "team": "France",
-        "minute": "90'+6'"
-      },
-      {
-        "kind": "goal",
-        "player": "Jude Bellingham",
-        "team": "England",
-        "minute": "90'+8'"
+        "kind": "red",
+        "player": "Leandro Paredes",
+        "team": "Argentina",
+        "minute": "120'+6'"
       }
     ]
   },
@@ -5637,6 +5612,31 @@
         }
       ],
       "winner": "England"
+    },
+    "104": {
+      "home_goals": 1,
+      "away_goals": 0,
+      "events": [
+        {
+          "kind": "red",
+          "player": "Enzo Fernández",
+          "team": "Argentina",
+          "minute": "90'+3'"
+        },
+        {
+          "kind": "goal",
+          "player": "Ferran Torres",
+          "team": "Spain",
+          "minute": "106'"
+        },
+        {
+          "kind": "red",
+          "player": "Leandro Paredes",
+          "team": "Argentina",
+          "minute": "120'+6'"
+        }
+      ],
+      "winner": "Spain"
     }
   },
   "board": [
@@ -9808,11 +9808,9 @@
             "away": 0.5717622536950951,
             "pick": "Argentina"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 0,
-          "clock": "120'+1'",
-          "ht": false,
           "events": [
             {
               "kind": "red",
@@ -9825,40 +9823,21 @@
               "player": "Ferran Torres",
               "team": "Spain",
               "minute": "106'"
+            },
+            {
+              "kind": "red",
+              "player": "Leandro Paredes",
+              "team": "Argentina",
+              "minute": "120'+6'"
             }
-          ]
+          ],
+          "hit": false,
+          "winner": "Spain"
         }
       ]
     }
   ],
-  "live": [
-    {
-      "id": "104",
-      "home": "Spain",
-      "away": "Argentina",
-      "date": "2026-07-19",
-      "venue": "New York/New Jersey (East Rutherford)",
-      "kickoff_utc": "2026-07-19T19:00:00Z",
-      "hg": 1,
-      "ag": 0,
-      "status": "LIVE",
-      "clock": "120'+1'",
-      "events": [
-        {
-          "kind": "red",
-          "player": "Enzo Fernández",
-          "team": "Argentina",
-          "minute": "90'+3'"
-        },
-        {
-          "kind": "goal",
-          "player": "Ferran Torres",
-          "team": "Spain",
-          "minute": "106'"
-        }
-      ]
-    }
-  ],
+  "live": [],
   "schedule": [
     {
       "date": "2026-06-11",
@@ -14028,11 +14007,9 @@
             "away": 0.5717622536950951,
             "pick": "Argentina"
           },
-          "status": "live",
+          "status": "FT",
           "hg": 1,
           "ag": 0,
-          "clock": "120'+1'",
-          "ht": false,
           "events": [
             {
               "kind": "red",
@@ -14045,8 +14022,16 @@
               "player": "Ferran Torres",
               "team": "Spain",
               "minute": "106'"
+            },
+            {
+              "kind": "red",
+              "player": "Leandro Paredes",
+              "team": "Argentina",
+              "minute": "120'+6'"
             }
-          ]
+          ],
+          "hit": false,
+          "winner": "Spain"
         }
       ]
     }
