@@ -9811,9 +9811,16 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "90'+1'",
+          "clock": "90'+4'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "red",
+              "player": "Enzo Fernández",
+              "team": "Argentina",
+              "minute": "90'+3'"
+            }
+          ]
         }
       ]
     }
@@ -9829,8 +9836,15 @@
       "hg": 0,
       "ag": 0,
       "status": "LIVE",
-      "clock": "90'+1'",
-      "events": []
+      "clock": "90'+4'",
+      "events": [
+        {
+          "kind": "red",
+          "player": "Enzo Fernández",
+          "team": "Argentina",
+          "minute": "90'+3'"
+        }
+      ]
     }
   ],
   "schedule": [
@@ -14005,9 +14019,16 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "90'+1'",
+          "clock": "90'+4'",
           "ht": false,
-          "events": []
+          "events": [
+            {
+              "kind": "red",
+              "player": "Enzo Fernández",
+              "team": "Argentina",
+              "minute": "90'+3'"
+            }
+          ]
         }
       ]
     }
