@@ -2621,6 +2621,20 @@
           "kickoff_utc": "2026-07-18T21:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-07-19",
+      "messages": [
+        {
+          "type": "morning_brief",
+          "body": "🏆 FIFA World Cup 2026 — Final\nSunday, July 19\n\nMatchday Brief\n\nSpain vs Argentina\n  Prediction: Argentina\n  Spain 42.8% · Argentina 57.2%\n  🕐 12:00pm PT / 2:00pm CT / 3:00pm ET / 12:30am IST (+1d)\n  📍 New York/New Jersey (East Rutherford), USA",
+          "sent": true,
+          "hash": "2081a886138df2a9",
+          "key": "mb-2026-07-19",
+          "generated_at": "2026-07-19T00:05:03.936964-07:00",
+          "kickoff_utc": "2026-07-19T19:00:00Z"
+        }
+      ]
     }
   ],
   "groups": {
@@ -9764,6 +9778,28 @@
           ],
           "hit": false,
           "winner": "England"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "matches": [
+        {
+          "id": "104",
+          "home": "Spain",
+          "away": "Argentina",
+          "kickoff_utc": "2026-07-19T19:00:00Z",
+          "venue": "New York/New Jersey (East Rutherford)",
+          "stage": "final",
+          "slot_home": "W101",
+          "slot_away": "W102",
+          "pred": {
+            "home": 0.42823774630490485,
+            "draw": 0.0,
+            "away": 0.5717622536950951,
+            "pick": "Argentina"
+          },
+          "status": "sched"
         }
       ]
     }
