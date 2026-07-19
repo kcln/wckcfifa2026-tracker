@@ -2633,6 +2633,15 @@
           "key": "mb-2026-07-19",
           "generated_at": "2026-07-19T00:05:03.936964-07:00",
           "kickoff_utc": "2026-07-19T19:00:00Z"
+        },
+        {
+          "type": "half_time",
+          "body": "🏆 FIFA World Cup 2026 — Final\nSunday, July 19\n\nHalf-time:\nSpain 0 - 0 Argentina\nNew York/New Jersey (East Rutherford), USA\nPrediction: Argentina",
+          "sent": true,
+          "hash": "daa0cde95d5b1947",
+          "key": "ht-2026-07-19-104",
+          "generated_at": "2026-07-19T12:56:48.197169-07:00",
+          "kickoff_utc": "2026-07-19T19:00:00Z"
         }
       ]
     }
@@ -9802,8 +9811,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+3'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": []
         }
       ]
@@ -9819,8 +9828,8 @@
       "kickoff_utc": "2026-07-19T19:00:00Z",
       "hg": 0,
       "ag": 0,
-      "status": "LIVE",
-      "clock": "45'+3'",
+      "status": "HT",
+      "clock": "45'+4'",
       "events": []
     }
   ],
@@ -13996,8 +14005,8 @@
           "status": "live",
           "hg": 0,
           "ag": 0,
-          "clock": "45'+3'",
-          "ht": false,
+          "clock": "45'+4'",
+          "ht": true,
           "events": []
         }
       ]
